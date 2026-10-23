@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="theme-color" content="#f7efe1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,800;1,400;1,800&family=Gaegu:wght@700&family=Young+Serif&display=swap">
+<style>
+{{kit_css}}
+{{page_css}}
+</style>
+</head>
+<body>
+<!-- Built from src/ by tools/build.py. Edit the source, not this file. -->
+{{defs}}
+<header class="bar">
+  <div class="bar-inner">
+    <div class="mark"><b>The Liquor Cabinet</b><span>{{label}}</span></div>
+    <button class="motion" id="motion" type="button" aria-pressed="false">Pause motion</button>
+  </div>
+  <div class="progress" aria-hidden="true"><i id="fill"></i></div>
+</header>
+
+<main>
+<article class="story">
+{{story}}
+</article>
+</main>
+
+<script>
+{{kit_js}}
+</script>
+</body>
+</html>

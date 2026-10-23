@@ -1,0 +1,66 @@
+<svg id="defs" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Crayon line: a little wobble on every stroke -->
+    <filter id="crayon" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="2" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <!-- Character lines "boil" like hand-drawn animation -->
+    <filter id="boil" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="1" result="n">
+        <animate attributeName="seed" values="1;4;7" dur="0.45s" calcMode="discrete" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <!-- Watercolor wash: soft, uneven edges and a little paper grain -->
+    <filter id="wash" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="5" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="8" xChannelSelector="R" yChannelSelector="G" result="shape"/>
+      <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="9" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  .8 0 0 0 .42" result="ga"/>
+      <feComposite in="shape" in2="ga" operator="in"/>
+    </filter>
+
+    <!-- The yeast buddy. The little bump is a bud: yeast really do multiply by budding. -->
+    <symbol id="yeast" viewBox="0 0 124 134">
+      <g filter="url(#wash)" transform="translate(2 2)">
+        <path d="M22 72 C18 42 36 22 62 22 C90 22 104 44 102 74 C100 102 84 118 60 118 C36 118 24 100 22 72Z" fill="#efc163"/>
+        <circle cx="90" cy="26" r="11" fill="#efc163"/>
+        <ellipse cx="40" cy="86" rx="7" ry="4.5" fill="#e48b7c" opacity=".65"/>
+        <ellipse cx="83" cy="86" rx="7" ry="4.5" fill="#e48b7c" opacity=".65"/>
+      </g>
+      <g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 72 C18 42 36 22 62 22 C90 22 104 44 102 74 C100 102 84 118 60 118 C36 118 24 100 22 72Z"/>
+        <path d="M79.5 29 A11 11 0 1 1 100.6 30"/>
+        <path d="M51 88 Q62 98 73 88"/>
+        <path d="M24 86 Q12 92 9 104"/><path d="M100 86 Q112 92 115 104"/>
+        <path d="M48 117 L45 129"/><path d="M72 117 L75 129"/>
+        <ellipse cx="49" cy="70" rx="4.2" ry="5.4" fill="#3b2233" stroke="none"/>
+        <ellipse cx="74" cy="70" rx="4.2" ry="5.4" fill="#3b2233" stroke="none"/>
+      </g>
+    </symbol>
+    <symbol id="yeast-thumb" viewBox="0 0 146 134">
+      <g filter="url(#wash)" transform="translate(2 2)">
+        <path d="M22 72 C18 42 36 22 62 22 C90 22 104 44 102 74 C100 102 84 118 60 118 C36 118 24 100 22 72Z" fill="#efc163"/>
+        <circle cx="90" cy="26" r="11" fill="#efc163"/>
+        <rect x="110" y="44" width="22" height="22" rx="8" fill="#efc163"/>
+        <path d="M117 46 L117 31 Q118 26 123 27 Q127 28 126 33 L125 46Z" fill="#efc163"/>
+        <ellipse cx="40" cy="86" rx="7" ry="4.5" fill="#e48b7c" opacity=".65"/>
+        <ellipse cx="83" cy="86" rx="7" ry="4.5" fill="#e48b7c" opacity=".65"/>
+      </g>
+      <g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 72 C18 42 36 22 62 22 C90 22 104 44 102 74 C100 102 84 118 60 118 C36 118 24 100 22 72Z"/>
+        <path d="M79.5 29 A11 11 0 1 1 100.6 30"/>
+        <path d="M51 88 Q61 100 73 88"/>
+        <path d="M24 86 Q12 92 9 104"/>
+        <path d="M100 82 Q112 76 116 66"/>
+        <rect x="110" y="44" width="22" height="22" rx="8"/>
+        <path d="M117 46 L117 31 Q118 26 123 27 Q127 28 126 33 L125 46"/>
+        <path d="M115 53 L127 53 M115 59 L127 59" stroke-width="1.8"/>
+        <path d="M48 117 L45 129"/><path d="M72 117 L75 129"/>
+        <ellipse cx="49" cy="70" rx="4.2" ry="5.4" fill="#3b2233" stroke="none"/>
+        <ellipse cx="74" cy="70" rx="4.2" ry="5.4" fill="#3b2233" stroke="none"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
