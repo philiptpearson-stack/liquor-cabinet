@@ -1,0 +1,4 @@
+# Only the built pages are served. Source, tools and notes stay in the repo.
+src
+tools
+README.md
