@@ -7,8 +7,8 @@
 Maker's Mark.
 Oh hey. You found the one with the drippy red wax. It's a classic.
 Good eye!
-This is Maker's Mark. And honestly? You can't tell the story of bourbon without it.
-So let's open some doors, shall we?
+This is Maker's Mark. And you can't tell the story of bourbon without it.
+So let's find out more, shall we?
 The Founder's Gamble
 Margie Samuels: One of Whiskey's Most Iconic Women
 Coming soon
@@ -23,7 +23,7 @@ Star Hill Farm, Loretto, Kentucky (a National Historic Landmark since 1980)
 Founded
 1953, by Bill and Margie Samuels; first bottle in 1958
 Independent?
-Yes, family-owned from 1953 to 1981
+Family owned from 1953 to 1981
 Sold
 1981, to Hiram Walker & Sons, reportedly to spare the family estate taxes
 Owners since
