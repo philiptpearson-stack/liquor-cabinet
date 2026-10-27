@@ -480,12 +480,40 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
     });
   } catch (e) {}
 
-  // "Back to the bottle" on a shared page (like Fermentation) returns to whichever bottle sent you.
-  // Without a referrer it goes to the link's own default.
+  // "Back to the bottle" on a shared page (like Fermentation) returns to whichever bottle sent you,
+  // to the spot you left (like the back button). Without a referrer it goes to the link's own default.
   try {
     const from = document.referrer && new URL(document.referrer);
     if (from && from.origin === location.origin && from.pathname !== location.pathname)
-      document.querySelectorAll('a[data-back]').forEach(a => { a.href = from.href; });
+      document.querySelectorAll('a[data-back]').forEach(a => {
+        a.href = from.href;
+        a.addEventListener('click', e => { if (history.length > 1) { e.preventDefault(); history.back(); } });
+      });
+  } catch (e) {}
+
+  // Following a link into another page starts you at the top of it. Some viewers (the private
+  // preview, for one) carry the last page's scroll position over, which dropped readers mid-story.
+  // The back button and "Back to the bottle" still return you to where you were.
+  const FRESH = 'lc:fresh';
+  document.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('a[href]');
+    if (!a || e.defaultPrevented || a.hasAttribute('data-back') || a.target === '_blank' || a.getAttribute('href').startsWith('#')) return;
+    try {
+      const to = new URL(a.href, location.href);
+      if (to.origin === location.origin && to.pathname !== location.pathname) sessionStorage.setItem(FRESH, to.pathname);
+    } catch (err) {}
+  });
+  try {
+    if (sessionStorage.getItem(FRESH) === location.pathname) {
+      sessionStorage.removeItem(FRESH);
+      let hold = true;
+      const top = () => { if (hold) window.scrollTo(0, 0); };
+      ['wheel', 'touchstart', 'keydown'].forEach(t => window.addEventListener(t, () => { hold = false; }, { once: true, passive: true }));
+      top();
+      requestAnimationFrame(top);
+      window.addEventListener('load', top, { once: true });
+      [100, 300, 700].forEach(ms => setTimeout(top, ms));
+    }
   } catch (e) {}
 
   // A door that points at a tucked-away card (like the Cabinet Card) opens it
