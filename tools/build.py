@@ -18,10 +18,12 @@ a labelled placeholder instead. Inside a crayon scene, <!--swap:name|x y w h-->d
 puts the photo in that box, and keeps the crayon drawing if there's no photo.
 Photos aren't licensed yet: the site is for friends, not for the public (see robots.txt).
 
+A link written href="@home" goes to the page the site opens on (src/site.json).
+
 The build refuses to write a page whose words don't match copy.md exactly,
 so copy can't drift. Run:  python3 tools/build.py
 """
-import base64, html, json, mimetypes, re, sys
+import base64, html, json, mimetypes, posixpath, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -114,7 +116,7 @@ def cast_for(d: Path) -> str:
     return '\n'.join(reversed(parts))
 
 
-def build_page(d: Path, template: str, kit: dict) -> list[str]:
+def build_page(d: Path, template: str, kit: dict, home: str) -> list[str]:
     slug = d.relative_to(PAGES).as_posix()
     meta = json.loads((d / 'page.json').read_text())
     story = (d / 'story.html').read_text()
@@ -128,6 +130,8 @@ def build_page(d: Path, template: str, kit: dict) -> list[str]:
             problems.append(f'{slug}: page words differ from copy.md\n{diff}')
     else:
         problems.append(f'{slug}: no copy.md, so the copy check was skipped')
+    # href="@home" = the page the site opens on (src/site.json), as a path from this page
+    story = story.replace('href="@home"', 'href="' + posixpath.relpath(home + '/index.html', slug) + '"')
     story, missing = place_scenes(story, d)
     if missing:
         problems.append(f'{slug}: missing scene file(s): {", ".join(missing)}')
@@ -168,7 +172,7 @@ def main() -> int:
     site = json.loads((ROOT / 'src' / 'site.json').read_text())
     problems = []
     for d in sorted(p.parent for p in PAGES.rglob('page.json')):
-        problems += build_page(d, template, kit)
+        problems += build_page(d, template, kit, site['home'].strip('/'))
     home = site['home'].strip('/') + '/index.html'
     (ROOT / 'index.html').write_text(redirect(home))
     for p in problems:

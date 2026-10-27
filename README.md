@@ -38,6 +38,10 @@ tools/
 6. **Plain web files.** No Vercel-only features, so the app can move hosts or be wrapped for the App Store later.
 7. **Friends only, for now.** The brand photos aren't licensed yet, so pages ask search engines to stay away (`robots.txt`, `noindex`). Get permissions before launch.
 
+## Things to check on
+
+`TODO.md` keeps open items that come up along the way (the title page, photo permissions, launch switches).
+
 ## Building and checking
 
 ```
