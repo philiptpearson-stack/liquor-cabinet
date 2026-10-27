@@ -16,6 +16,8 @@ Photos we don't have permission for yet (the Maker's Mark ad, product shots) liv
 in src/private/, which is never committed. Place one with <!--asset:name|alt text-->.
 The public build (what Vercel serves) shows a labelled placeholder there; the review
 build (review/, for private review links) shows the real image.
+Inside a crayon scene, <!--swap:name|x y w h-->drawing<!--/swap--> keeps the drawing in
+the public build and puts the real photo in that box in the review build.
 
 The build refuses to write a page whose words don't match copy.md exactly,
 so copy can't drift. Run:  python3 tools/build.py
@@ -69,11 +71,25 @@ def place_assets(story: str, review: bool) -> str:
         name, alt = m.group(1), m.group(2) or ''
         p = find_private(name) if review else None
         if p:
-            mime = mimetypes.guess_type(p.name)[0] or 'image/jpeg'
-            data = base64.b64encode(p.read_bytes()).decode()
-            return f'<img class="asset" src="data:{mime};base64,{data}" alt="{html.escape(alt)}">'
+            return f'<img class="asset" src="{data_uri(p)}" alt="{html.escape(alt)}">'
         return f'<div class="asset placeholder" role="img" aria-label="{html.escape(alt)}"><span>{html.escape(alt)}</span><small>Photo pending permission</small></div>'
     return re.sub(r'<!--asset:([\w-]+)(?:\|([^>]*?))?-->', sub, story)
+
+
+def data_uri(p: Path) -> str:
+    mime = mimetypes.guess_type(p.name)[0] or ('image/webp' if p.suffix == '.webp' else 'image/jpeg')
+    return f'data:{mime};base64,' + base64.b64encode(p.read_bytes()).decode()
+
+
+def place_swaps(story: str, review: bool) -> str:
+    def sub(m):
+        name, box, drawing = m.group(1), m.group(2).split(), m.group(3)
+        p = find_private(name) if review else None
+        if not p:
+            return drawing
+        x, y, w, h = box
+        return f'<image href="{data_uri(p)}" x="{x}" y="{y}" width="{w}" height="{h}" preserveAspectRatio="xMidYMax meet"/>'
+    return re.sub(r'<!--swap:([\w-]+)\|([^>]*?)-->(.*?)<!--/swap-->', sub, story, flags=re.S)
 
 
 def place_scenes(story: str, d: Path) -> tuple[str, list[str]]:
@@ -129,7 +145,7 @@ def build_page(d: Path, template: str, kit: dict) -> list[str]:
             'title': html.escape(meta['title']), 'description': html.escape(meta.get('description', '')),
             'label': html.escape(meta['label']), 'kit_css': kit['css'],
             'page_css': (d / 'page.css').read_text() if (d / 'page.css').exists() else '',
-            'defs': defs, 'story': place_assets(story, review).rstrip(), 'kit_js': kit['js'].rstrip(),
+            'defs': defs, 'story': place_swaps(place_assets(story, review), review).rstrip(), 'kit_js': kit['js'].rstrip(),
         }.items():
             out = out.replace('{{' + key + '}}', value)
         if '{{' in out:
