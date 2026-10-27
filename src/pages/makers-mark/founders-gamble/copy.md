@@ -6,7 +6,7 @@
 
 The Founder's Gamble.
 Meet Bill Sr!
-In 1953, a guy named Bill Samuels Sr. bought a tiny, run-down distillery near Loretto, Kentucky.
+In 1953, a guy named Bill Samuels Sr. and his wife Margie bought a tiny, run-down distillery near Loretto, Kentucky.
 Price tag? $35,000.
 Now, Bill wasn't new to distilling. His family had been making whiskey a looong time. In fact, ancestor Robert Samuels was running a distilling operation all the way back in 1779!
 But by the time Bill Sr. was running the show, the world had *changed*. First, Prohibition had shut down the T.W. Samuels Distillery. Then World War II shut it down again. And by 1943, Bill had had enough. He sold the whole thing. Family name and all.
