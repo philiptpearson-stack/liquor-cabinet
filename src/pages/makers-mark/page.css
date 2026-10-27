@@ -3,3 +3,18 @@
 .photo.product .asset:not(.placeholder){width:auto;max-width:100%;max-height:min(25rem,62vh);margin:0 auto;border-radius:0;
   filter:drop-shadow(0 12px 14px #3a253233)}
 .product .asset.placeholder{min-height:17rem}
+
+/* The Cabinet Card rides right under the bottle, like a tag; the basics show while it's folded */
+#cabinet{margin-top:-.2rem}
+.cc-head{display:block}
+.cc-name{font-family:var(--hand);font-weight:700;font-size:1.5rem;line-height:1}
+.cc-quick{display:inline-block;margin-top:.3rem;font:800 .86rem/1.3 var(--body);letter-spacing:.02em;color:#6b4632}
+.cabinet-card summary{align-items:center}
+
+/* The story you can open now gets the whole row; coming-soon doors sit side by side below */
+.doors .door.feature{grid-column:1/-1;flex-direction:row;justify-content:flex-start;gap:1rem;min-height:0;padding:1rem 1.2rem;text-align:left;transform:rotate(-.6deg)}
+.doors .door.feature .door-icon{width:88px;height:88px}
+.doors .door.feature .door-label{font-size:1.35rem}
+.doors .door.soon:nth-child(2){transform:rotate(.9deg)}
+.doors .door.soon:nth-child(3){transform:rotate(-.8deg)}
+.cc-quick > span{white-space:nowrap}
