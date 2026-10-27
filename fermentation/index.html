@@ -660,6 +660,10 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
     </svg></div>
   </figure>
   <p class="end">END OF STORY · KEEP GETTING CURIOUS ✳</p>
+
+  <nav class="end-doors" aria-label="Where next">
+    <p class="back"><a href="../makers-mark/index.html" data-back>← Back to the bottle</a></p>
+  </nav>
 </div>
 </article>
 </main>
@@ -702,6 +706,14 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
     document.querySelectorAll('a.door:not([href^="#"])').forEach(a => {
       if (seen.has(clean(new URL(a.getAttribute('href'), location.href).pathname))) a.classList.add('visited');
     });
+  } catch (e) {}
+
+  // "Back to the bottle" on a shared page (like Fermentation) returns to whichever bottle sent you.
+  // Without a referrer it goes to the link's own default.
+  try {
+    const from = document.referrer && new URL(document.referrer);
+    if (from && from.origin === location.origin && from.pathname !== location.pathname)
+      document.querySelectorAll('a[data-back]').forEach(a => { a.href = from.href; });
   } catch (e) {}
 
   // A door that points at a tucked-away card (like the Cabinet Card) opens it

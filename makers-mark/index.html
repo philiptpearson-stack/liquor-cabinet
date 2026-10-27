@@ -365,6 +365,14 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
     });
   } catch (e) {}
 
+  // "Back to the bottle" on a shared page (like Fermentation) returns to whichever bottle sent you.
+  // Without a referrer it goes to the link's own default.
+  try {
+    const from = document.referrer && new URL(document.referrer);
+    if (from && from.origin === location.origin && from.pathname !== location.pathname)
+      document.querySelectorAll('a[data-back]').forEach(a => { a.href = from.href; });
+  } catch (e) {}
+
   // A door that points at a tucked-away card (like the Cabinet Card) opens it
   document.querySelectorAll('a.door[href^="#"]').forEach(a => a.addEventListener('click', () => {
     const t = document.querySelector(a.getAttribute('href'));
