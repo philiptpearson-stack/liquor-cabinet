@@ -2,6 +2,3 @@ tools/shots/
 __pycache__/
 .DS_Store
 node_modules/
-# photos waiting on permission, and the review build that shows them
-src/private/
-review/

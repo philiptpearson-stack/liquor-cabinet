@@ -13,8 +13,7 @@ const crypto = require('crypto');
 const ROOT = path.resolve(__dirname, '..');
 const SHOTS = path.join(__dirname, 'shots');
 const exe = fs.existsSync('/opt/pw-browsers/chromium') ? '/opt/pw-browsers/chromium' : undefined;
-// REVIEW=1 checks the private review build (real photos) instead of the public one.
-const BUILT = process.env.REVIEW ? path.join(ROOT, 'review') : ROOT;
+const BUILT = ROOT;
 function findPages(dir, rel = '') {
   return fs.readdirSync(dir, { withFileTypes: true }).filter(e => e.isDirectory()).flatMap(e => {
     const r = rel ? rel + '/' + e.name : e.name, d = path.join(dir, e.name);

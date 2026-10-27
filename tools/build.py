@@ -12,12 +12,11 @@ Each page folder holds:
   scenes/      crayon scenes as .svg files, placed with <!--scene:name-->
   cast.svg     character drawings (<symbol>s), shared with every page nested below
 
-Photos we don't have permission for yet (the Maker's Mark ad, product shots) live
-in src/private/, which is never committed. Place one with <!--asset:name|alt text-->.
-The public build (what Vercel serves) shows a labelled placeholder there; the review
-build (review/, for private review links) shows the real image.
-Inside a crayon scene, <!--swap:name|x y w h-->drawing<!--/swap--> keeps the drawing in
-the public build and puts the real photo in that box in the review build.
+Real photos (the Maker's Mark ad, product shots) live in src/photos/ and are baked into
+the page. Place one with <!--asset:name|alt text-->; if the file is missing, the page shows
+a labelled placeholder instead. Inside a crayon scene, <!--swap:name|x y w h-->drawing<!--/swap-->
+puts the photo in that box, and keeps the crayon drawing if there's no photo.
+Photos aren't licensed yet: the site is for friends, not for the public (see robots.txt).
 
 The build refuses to write a page whose words don't match copy.md exactly,
 so copy can't drift. Run:  python3 tools/build.py
@@ -28,8 +27,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 KIT = ROOT / 'src' / 'kit'
 PAGES = ROOT / 'src' / 'pages'
-PRIVATE = ROOT / 'src' / 'private'
-REVIEW = ROOT / 'review'
+PHOTOS = ROOT / 'src' / 'photos'
 
 BLOCK = r'p|h1|h2|h3|h4|div|section|nav|li|a|summary|details|dl|dt|dd|figcaption'
 
@@ -58,18 +56,18 @@ def approved_words(copy_md: str) -> list[str]:
     return lines
 
 
-def find_private(name: str):
+def find_photo(name: str):
     for ext in ('.webp', '.jpg', '.jpeg', '.png'):
-        p = PRIVATE / (name + ext)
+        p = PHOTOS / (name + ext)
         if p.exists():
             return p
     return None
 
 
-def place_assets(story: str, review: bool) -> str:
+def place_assets(story: str) -> str:
     def sub(m):
         name, alt = m.group(1), m.group(2) or ''
-        p = find_private(name) if review else None
+        p = find_photo(name)
         if p:
             return f'<img class="asset" src="{data_uri(p)}" alt="{html.escape(alt)}">'
         return f'<div class="asset placeholder" role="img" aria-label="{html.escape(alt)}"><span>{html.escape(alt)}</span><small>Photo pending permission</small></div>'
@@ -81,10 +79,10 @@ def data_uri(p: Path) -> str:
     return f'data:{mime};base64,' + base64.b64encode(p.read_bytes()).decode()
 
 
-def place_swaps(story: str, review: bool) -> str:
+def place_swaps(story: str) -> str:
     def sub(m):
         name, box, drawing = m.group(1), m.group(2).split(), m.group(3)
-        p = find_private(name) if review else None
+        p = find_photo(name)
         if not p:
             return drawing
         x, y, w, h = box
@@ -139,23 +137,22 @@ def build_page(d: Path, template: str, kit: dict) -> list[str]:
         defs = defs.replace('  </defs>', cast + '\n  </defs>')
     if any(p for p in problems if 'differ' in p or 'missing scene' in p):
         return problems
-    for review in (False, True):
+    for _ in (1,):
         out = template
         for key, value in {
             'title': html.escape(meta['title']), 'description': html.escape(meta.get('description', '')),
             'label': html.escape(meta['label']), 'kit_css': kit['css'],
             'page_css': (d / 'page.css').read_text() if (d / 'page.css').exists() else '',
-            'defs': defs, 'story': place_swaps(place_assets(story, review), review).rstrip(), 'kit_js': kit['js'].rstrip(),
+            'defs': defs, 'story': place_swaps(place_assets(story)).rstrip(), 'kit_js': kit['js'].rstrip(),
         }.items():
             out = out.replace('{{' + key + '}}', value)
         if '{{' in out:
             problems.append(f'{slug}: unfilled placeholder in the template')
             return problems
-        dest = (REVIEW if review else ROOT) / slug
+        dest = ROOT / slug
         dest.mkdir(parents=True, exist_ok=True)
         (dest / 'index.html').write_text(out)
-        if not review:
-            print(f'built {slug}/index.html ({len(out) // 1024} KB)')
+        print(f'built {slug}/index.html ({len(out) // 1024} KB)')
     return problems
 
 
@@ -174,8 +171,6 @@ def main() -> int:
         problems += build_page(d, template, kit)
     home = site['home'].strip('/') + '/index.html'
     (ROOT / 'index.html').write_text(redirect(home))
-    REVIEW.mkdir(exist_ok=True)
-    (REVIEW / 'index.html').write_text(redirect(home))
     for p in problems:
         print('PROBLEM:', p, file=sys.stderr)
     return 1 if any('differ' in p or 'placeholder' in p or 'missing scene' in p for p in problems) else 0

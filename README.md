@@ -13,11 +13,14 @@ src/
     defs.svg      crayon / watercolor / "boil" filters and the character drawings (yeast-bud, ...)
     kit.js        optional extras: Pause button, reading bar, pausing scenes that are off screen
     page.html     the page template
-  pages/<slug>/   one folder per story
+  pages/<slug>/   one folder per story (folders nest: makers-mark/founders-gamble/)
     page.json     title, link-preview description, top-bar label
     story.html    the page: copy + crayon scenes
     page.css      that page's own scene motion
     copy.md       the approved copy, one line per line of text
+    scenes/       crayon scenes as .svg files, placed with <!--scene:name-->
+    cast.svg      character drawings shared with every page below this folder
+  photos/         real photos (product shots, old ads), baked into the pages
   site.json       which page the site opens on
 tools/
   build.py        builds src/ into <slug>/index.html (one self-contained file per page)
@@ -33,6 +36,7 @@ tools/
 4. **One file per page.** Each built page works on its own: on Vercel, as a review link, or opened from a phone's Files app.
 5. **Characters are drawn once.** Shared characters live in `defs.svg` so they look the same on every page.
 6. **Plain web files.** No Vercel-only features, so the app can move hosts or be wrapped for the App Store later.
+7. **Friends only, for now.** The brand photos aren't licensed yet, so pages ask search engines to stay away (`robots.txt`, `noindex`). Get permissions before launch.
 
 ## Building and checking
 

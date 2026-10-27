@@ -174,3 +174,9 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8' preserveAspectRatio='none'%3E%3Cpath d='M2 5 Q30 2 60 4.6 T118 3.6' fill='none' stroke='%23b9792c' stroke-width='3' stroke-linecap='round' opacity='.8'/%3E%3C/svg%3E") left bottom/7.5rem 8px no-repeat}
 .flow > h2 em{color:var(--accent)}
 .flow > h2:first-child{margin-top:.2rem}
+
+/* A beat that steps down the page, one line at a time ("On himself. / His product. / ...") */
+.beat.stack{gap:.6rem;font-family:var(--display);font-size:1.4rem;line-height:1.22;text-wrap:balance}
+.beat.stack p:nth-child(2){padding-left:1.2rem}
+.beat.stack p:nth-child(3){padding-left:2.4rem}
+.beat.stack em{color:var(--accent);font-style:italic}
