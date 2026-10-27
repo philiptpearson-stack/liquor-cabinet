@@ -13,8 +13,16 @@ const crypto = require('crypto');
 const ROOT = path.resolve(__dirname, '..');
 const SHOTS = path.join(__dirname, 'shots');
 const exe = fs.existsSync('/opt/pw-browsers/chromium') ? '/opt/pw-browsers/chromium' : undefined;
+// REVIEW=1 checks the private review build (real photos) instead of the public one.
+const BUILT = process.env.REVIEW ? path.join(ROOT, 'review') : ROOT;
+function findPages(dir, rel = '') {
+  return fs.readdirSync(dir, { withFileTypes: true }).filter(e => e.isDirectory()).flatMap(e => {
+    const r = rel ? rel + '/' + e.name : e.name, d = path.join(dir, e.name);
+    return (fs.existsSync(path.join(d, 'page.json')) ? [r] : []).concat(findPages(d, r));
+  });
+}
 const pages = process.argv.slice(2).length ? process.argv.slice(2)
-  : fs.readdirSync(path.join(ROOT, 'src', 'pages')).filter(d => fs.existsSync(path.join(ROOT, d, 'index.html')));
+  : findPages(path.join(ROOT, 'src', 'pages')).filter(d => fs.existsSync(path.join(BUILT, d, 'index.html')));
 
 const md5 = b => crypto.createHash('md5').update(b).digest('hex').slice(0, 8);
 
@@ -25,7 +33,8 @@ const md5 = b => crypto.createHash('md5').update(b).digest('hex').slice(0, 8);
   const fail = (slug, msg) => { failures++; console.log(`  FAIL ${slug}: ${msg}`); };
 
   for (const slug of pages) {
-    const url = 'file://' + path.join(ROOT, slug, 'index.html');
+    const url = 'file://' + path.join(BUILT, slug, 'index.html');
+    const shot = slug.replace(/\//g, '_');
     console.log(`\n${slug}`);
 
     // 1. Scripts on, normal motion
@@ -53,7 +62,7 @@ const md5 = b => crypto.createHash('md5').update(b).digest('hex').slice(0, 8);
       for (const id of info.figs) {
         await page.evaluate(id => document.getElementById(id).scrollIntoView({ block: 'center' }), id);
         await page.waitForTimeout(250);
-        await page.locator('#' + id).screenshot({ path: path.join(SHOTS, `${slug}_${id}.png`) });
+        await page.locator('#' + id).screenshot({ path: path.join(SHOTS, `${shot}_${id}.png`) });
       }
 
       if (info.figs.includes('rewind')) {
@@ -89,7 +98,10 @@ const md5 = b => crypto.createHash('md5').update(b).digest('hex').slice(0, 8);
       await page.goto(url);
       await page.waitForTimeout(400);
       const moving = [];
-      for (const id of ['rewind', 's-bear', 's-ancestor', 's-yeast']) {
+      // every scene that has motion in it should still move with scripts off
+      const animated = await page.evaluate(() => [...document.querySelectorAll('.fig')]
+        .filter(f => f.id && [...f.querySelectorAll('*')].some(el => getComputedStyle(el).animationName !== 'none')).map(f => f.id));
+      for (const id of animated) {
         const loc = page.locator('#' + id);
         if (!(await loc.count())) continue;
         await loc.scrollIntoViewIfNeeded();

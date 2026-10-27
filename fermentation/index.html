@@ -125,6 +125,68 @@ html:not(.js) .motion{visibility:hidden}
   .progress i{animation:read linear both;animation-timeline:scroll(root)}
   @keyframes read{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 }
+
+/* ---------- Doors: the "pick a story" row on bottle pages, and the way out of every chapter */
+.doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;margin:.5rem -2px}
+.door{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:.5rem;
+  min-height:11.5rem;padding:.9rem .7rem 1rem;border-radius:18px 14px 20px 15px;background:var(--card);color:#3a2532;
+  text-decoration:none;text-align:center;border:2.5px solid #5b2c4c;box-shadow:3px 4px 0 #5b2c4c22;
+  transform:rotate(-.8deg);transition:transform .2s ease,box-shadow .2s ease}
+.door:nth-child(2n){transform:rotate(.9deg)}
+.door:nth-child(3n){transform:rotate(-.3deg)}
+a.door:hover,a.door:focus-visible{transform:rotate(0) translateY(-3px);box-shadow:4px 7px 0 #5b2c4c33}
+a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.door-icon{width:76px;height:76px;flex:none}
+.door-label{font-family:var(--display);font-size:1.02rem;line-height:1.2;text-wrap:balance}
+.door-label em{color:#8b3a63}
+.door.soon{border-style:dashed;border-color:#8a6a78;box-shadow:none;color:#6f5a64;cursor:default}
+.door.soon .door-icon{opacity:.55;filter:grayscale(.4)}
+.door.visited::after{content:"";position:absolute;top:-10px;right:-8px;width:34px;height:34px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Ccircle cx='17' cy='17' r='14' fill='%23f2c776'/%3E%3Cpath d='M9 18 L15 24 L26 10' fill='none' stroke='%235b2c4c' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.stamp{display:inline-block;font:800 .62rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#8b3a63;
+  border:1.5px solid currentColor;border-radius:4px;padding:.32rem .45rem .28rem;transform:rotate(-5deg);background:#fffaf1}
+.door.soon .stamp{margin-top:auto}
+
+/* In-text clickthroughs: "→ Need a refresher on ...?" */
+.go{font-size:1.08rem;line-height:1.45;font-weight:800}
+.go a{color:var(--accent);text-decoration:none;border-bottom:2px solid currentColor}
+.go.soon{color:var(--muted);font-weight:700;display:flex;flex-wrap:wrap;align-items:center;gap:.35rem .6rem}
+.go.soon .stamp{font-weight:800}
+.end-doors{border-top:1.5px dashed var(--rule);padding-top:1.4rem;margin-top:.8rem;display:flex;flex-direction:column;gap:.9rem}
+.end-doors h2{font-family:var(--hand);font-size:1.5rem;font-weight:700;margin:0;color:var(--accent)}
+.back{font-weight:800;font-size:1.02rem}
+.back a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--rule)}
+
+/* ---------- Cabinet Card: the brand basics, tucked into a tap-to-open index card */
+.cabinet-card{background:#f5e1b6;color:#4a3426;border-radius:6px 10px 8px 12px;transform:rotate(-.7deg);
+  box-shadow:2px 3px 0 #4a342622;margin:.4rem 2px;background-image:repeating-linear-gradient(#f5e1b6 0 27px,#e7c9a0 27px 28px)}
+.cabinet-card summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:.6rem;
+  padding:.8rem 1rem .75rem;font-family:var(--hand);font-weight:700;font-size:1.5rem;line-height:1}
+.cabinet-card summary::-webkit-details-marker{display:none}
+.cabinet-card summary::after{content:"+";flex:none;display:grid;place-items:center;width:1.8rem;height:1.8rem;border-radius:50%;
+  border:2px solid #4a3426;font:800 1.1rem/1 var(--body)}
+.cabinet-card[open] summary::after{content:"\2013"}
+.cabinet-card summary:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+.cabinet-card dl{margin:0;padding:.2rem 1rem 1.1rem;display:grid;grid-template-columns:minmax(5.2rem,auto) 1fr;gap:.55rem .85rem}
+.cabinet-card dt{font:800 .7rem/1.5 var(--body);letter-spacing:.1em;text-transform:uppercase;color:#8a5a3c;padding-top:.12rem}
+.cabinet-card dd{margin:0;font-size:1rem;line-height:1.45}
+
+/* ---------- Real photos (product shots, old ads) dropped into the crayon world */
+.photo{margin:.6rem auto;max-width:21rem;position:relative}
+.photo .asset{display:block;width:100%;height:auto;border-radius:6px}
+.clipping{background:#f4efe3;padding:10px;box-shadow:2px 3px 0 #3a253222,0 8px 18px #3a253218;transform:rotate(-1.6deg)}
+.clipping::before,.clipping::after{content:"";position:absolute;width:70px;height:22px;background:#f2c776b8;top:-9px}
+.clipping::before{left:18px;transform:rotate(-8deg)}.clipping::after{right:18px;transform:rotate(7deg)}
+.asset.placeholder{display:grid;place-content:center;gap:.35rem;min-height:12rem;padding:1rem;border:2.5px dashed #8a6a78;
+  border-radius:10px;text-align:center;color:#6f5a64;font-family:var(--hand);font-size:1.25rem;line-height:1.2;background:#fffaf1}
+.asset.placeholder small{font:800 .62rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#8b3a63}
+
+/* ---------- Chapter headings inside a long door */
+.flow > h2{font-family:var(--display);font-weight:400;font-size:1.8rem;line-height:1.12;letter-spacing:-.01em;margin:1.6rem 0 -.1rem;
+  text-wrap:balance;padding-bottom:.45rem;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8' preserveAspectRatio='none'%3E%3Cpath d='M2 5 Q30 2 60 4.6 T118 3.6' fill='none' stroke='%23b9792c' stroke-width='3' stroke-linecap='round' opacity='.8'/%3E%3C/svg%3E") left bottom/7.5rem 8px no-repeat}
+.flow > h2 em{color:var(--accent)}
+.flow > h2:first-child{margin-top:.2rem}
 /* Fermentation: scene motion */
 .bear{animation:blonk 4.2s ease-in-out -2.1s infinite}
 @keyframes blonk{0%,30%{transform:translateX(-14px)}42%{transform:translateX(8px)}48%{transform:translateX(2px) rotate(-1.5deg)}56%,100%{transform:translateX(4px)}}
@@ -227,6 +289,9 @@ html:not(.js) .motion{visibility:hidden}
         <ellipse cx="74" cy="70" rx="4.2" ry="5.4" fill="#3b2233" stroke="none"/>
       </g>
     </symbol>
+    <!-- Generic door icons -->
+    <symbol id="newspaper-icon" viewBox="0 0 120 120"><g filter="url(#wash)"><path d="M14 30 L98 20 L106 92 L22 102Z" fill="#f4efe3"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 30 L98 20 L106 92 L22 102Z"/><path d="M60 25 L64 97" stroke-width="1.6"/><path d="M24 42 L54 38 M25 52 L55 48 M26 62 L56 58 M27 72 L57 68 M28 82 L58 78 M70 36 L96 33 M71 46 L97 43 M72 56 L98 53 M73 66 L99 63 M74 76 L100 73 M75 86 L101 83" stroke-width="1.5" stroke="#8a6a78"/></g></symbol>
+    <symbol id="bottle-icon" viewBox="0 0 120 120"><g transform="translate(60 108) scale(1.3 1.3)"><g><g filter="url(#wash)"><path d="M-13 0 L-13 -38 Q-13 -46 -6 -50 L-5 -62 L5 -62 L6 -50 Q13 -46 13 -38 L13 0Z" fill="#c98a3c"/><rect x="-10" y="-30" width="20" height="16" rx="2" fill="#fbf3e3"/><rect x="-5.5" y="-68" width="11" height="7" rx="1.5" fill="#7a5f4a"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-13 0 L-13 -38 Q-13 -46 -6 -50 L-5 -62 L5 -62 L6 -50 Q13 -46 13 -38 L13 0Z"/><rect x="-10" y="-30" width="20" height="16" rx="2" stroke-width="1.8"/><rect x="-5.5" y="-68" width="11" height="7" rx="1.5" stroke-width="1.8"/></g></g></g></symbol>
   </defs>
 </svg>
 <header class="bar">
@@ -620,6 +685,23 @@ html:not(.js) .motion{visibility:hidden}
   } else {
     figs.forEach(f => f.classList.add('on'));
   }
+
+  // Doors you've opened get a crayon check mark (remembered on this device only)
+  try {
+    const key = 'lc:visited', clean = p => p.replace(/index\.html$/, '');
+    const seen = new Set(JSON.parse(localStorage.getItem(key) || '[]'));
+    seen.add(clean(location.pathname));
+    localStorage.setItem(key, JSON.stringify([...seen]));
+    document.querySelectorAll('a.door:not([href^="#"])').forEach(a => {
+      if (seen.has(clean(new URL(a.getAttribute('href'), location.href).pathname))) a.classList.add('visited');
+    });
+  } catch (e) {}
+
+  // A door that points at a tucked-away card (like the Cabinet Card) opens it
+  document.querySelectorAll('a.door[href^="#"]').forEach(a => a.addEventListener('click', () => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t && t.tagName === 'DETAILS') t.open = true;
+  }));
 
   // Pause / play everything, including the crayon line boil
   function setStill(v) {

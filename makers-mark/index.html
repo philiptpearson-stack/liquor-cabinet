@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="theme-color" content="#f7efe1">
+<title>Maker&#x27;s Mark · The Liquor Cabinet</title>
+<meta name="description" content="This is Maker&#x27;s Mark. And honestly? You can&#x27;t tell the story of bourbon without it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,800;1,400;1,800&family=Gaegu:wght@700&family=Young+Serif&display=swap">
+<style>
+/* The Liquor Cabinet: house crayon kit. Every page is built from this plus its own scenes.
+   Look: plum crayon lines over watercolor washes on warm paper. */
+:root{
+  --paper:#f7efe1; --ink:#3a2532; --muted:#7c6570; --accent:#8b3a63; --gold:#b9792c;
+  --rule:#e2d1c5; --card:#f7efe1; --note:#f5e1b6; --note-ink:#4a3426; --bar:#f7efe1ea;
+  --chip:#fffaf1; --chip-line:#dcc6bb; --chip-ink:#6b3354; --focus:#b0668d;
+  --display:"Young Serif", Georgia, "Times New Roman", serif;
+  --body:"Alegreya Sans", "Gill Sans", "Segoe UI", system-ui, sans-serif;
+  --hand:"Gaegu", "Chalkboard SE", "Comic Sans MS", cursive;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#1d161b; --ink:#f0e4d4; --muted:#b8a4ac; --accent:#e594b9; --gold:#e6b264;
+    --rule:#3b2d36; --card:#efe5d1; --note:#3a2f24; --note-ink:#f0e4d4; --bar:#1d161be8;
+    --chip:#fffaf1; --chip-line:#dcc6bb; --chip-ink:#6b3354; --focus:#e594b9; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#1d161b; --ink:#f0e4d4; --muted:#b8a4ac; --accent:#e594b9; --gold:#e6b264;
+  --rule:#3b2d36; --card:#efe5d1; --note:#3a2f24; --note-ink:#f0e4d4; --bar:#1d161be8;
+  --chip:#fffaf1; --chip-line:#dcc6bb; --chip-ink:#6b3354; --focus:#e594b9; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .35 0 0 0 0 .4 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color:var(--ink); font-family:var(--body); font-size:16px;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bar)}
+button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+
+/* Cabinet bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bar);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.bar-inner{max-width:30rem;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px 9px}
+.mark{display:flex;flex-direction:column;gap:2px;min-width:0}
+.mark b{font-family:var(--display);font-weight:400;font-size:1rem;letter-spacing:.01em;color:var(--accent)}
+.mark span{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.motion{font:800 .75rem/1 var(--body);letter-spacing:.04em;color:var(--accent);background:transparent;
+  border:1.5px solid var(--rule);border-radius:999px;padding:.55rem .8rem;cursor:pointer;white-space:nowrap}
+.progress{max-width:30rem;margin:0 auto;height:3px;background:var(--rule);border-radius:3px;overflow:hidden;margin-bottom:-1px}
+.progress i{display:block;height:100%;background:var(--accent);transform-origin:0 50%;transform:scaleX(0)}
+
+/* Story column */
+main{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:1.75rem 3.5rem}
+.story{max-width:30rem;margin:0 auto}
+.kicker{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--muted);margin:0}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,11.5vw,3.4rem);line-height:1;letter-spacing:-.02em;margin:.6rem 0 0;text-wrap:balance}
+h1 span{color:var(--accent)}
+p{margin:0}
+.flow{display:flex;flex-direction:column;gap:1.15rem;margin-top:1.4rem}
+.t{font-size:1.15rem;line-height:1.62;max-width:34rem}
+.t strong{font-weight:800;color:var(--accent)}
+.t em{font-style:italic;font-weight:800}
+.beat{display:flex;flex-direction:column;gap:.1rem;font-size:1.15rem;line-height:1.55}
+.punch{font-family:var(--display);font-size:1.6rem;line-height:1.2;letter-spacing:-.01em;text-wrap:balance}
+.punch .hl{color:var(--accent)}
+.punch.big{font-size:2.05rem}
+
+/* Illustrations sit on open paper; in dark mode they get their sheet of paper back. */
+.fig{margin:.6rem -6px;position:relative}
+.sheet{background:var(--card);border-radius:14px;overflow:hidden;position:relative}
+.fig svg{display:block;width:100%;height:auto;max-width:100%}
+figcaption{font-family:var(--hand);font-size:1.15rem;color:var(--muted);text-align:center;margin-top:.35rem}
+
+.note{background:var(--note);color:var(--note-ink);border-radius:10px;padding:1rem 1.1rem 1.05rem;transform:rotate(-1deg);margin:.4rem 2px}
+.note h2{font-family:var(--hand);font-size:1.4rem;line-height:1;margin:0 0 .35rem;color:var(--note-ink)}
+.note p{font-size:1.02rem;line-height:1.55}
+.eq{font-family:var(--display);font-size:1.45rem;line-height:1.35;text-wrap:balance}
+.eq b{font-weight:400;color:var(--accent)}
+.epilogue{border-top:1.5px dashed var(--rule);padding-top:1.6rem;margin-top:.6rem;display:flex;flex-direction:column;gap:.9rem}
+.closing{font-family:var(--display);font-size:1.55rem;line-height:1.3;text-wrap:balance}
+.closing em{color:var(--accent);font-style:normal}
+.end{text-align:center;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--muted);margin-top:1.4rem}
+
+/* Rewind overlay chips */
+.chip{position:absolute;z-index:2;font:800 .68rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;
+  color:var(--chip-ink);background:var(--chip);border:1.5px solid var(--chip-line);border-radius:999px;padding:.5rem .7rem}
+.chip.head{top:10px;left:10px}
+.chip.era{bottom:10px;right:10px;min-width:6.5rem;text-align:center}
+
+/* SVG drawing vocabulary */
+.letter{font-family:var(--hand);font-weight:700;fill:#7d2f58}
+.letter.soft{fill:#8a6a78}
+
+/* Motion runs on CSS alone, so pages animate even where scripts are blocked (phone file previews).
+   With scripts on, kit.js pauses scenes that are off screen, and the Pause button stills everything. */
+.bubbles circle{transform-box:fill-box;transform-origin:center;animation:rise 2.8s ease-in infinite}
+.bubbles circle:nth-child(2){animation-delay:-.7s}.bubbles circle:nth-child(3){animation-delay:-1.4s}
+.bubbles circle:nth-child(4){animation-delay:-2.1s}.bubbles circle:nth-child(5){animation-delay:-1.05s}
+@keyframes rise{0%{transform:translateY(6px) scale(.6);opacity:0}18%{opacity:1}100%{transform:translateY(-60px) scale(1.15);opacity:0}}
+.wiggle{transform-box:fill-box;transform-origin:50% 100%;animation:wiggle 1.6s ease-in-out infinite alternate}
+.wiggle.b{animation-delay:-.8s}
+@keyframes wiggle{from{transform:rotate(-4deg)}to{transform:rotate(4deg) translateY(-2px)}}
+.dance{transform-box:fill-box;transform-origin:50% 100%;animation:dance .9s ease-in-out infinite alternate}
+@keyframes dance{from{transform:rotate(-5deg)}to{transform:rotate(5deg) translateY(-4px)}}
+.flame{transform-box:fill-box;transform-origin:50% 100%;animation:flick .7s ease-in-out infinite alternate}
+@keyframes flick{to{transform:scale(.92,1.1) rotate(2deg)}}
+.wave{transform-box:fill-box;transform-origin:10% 90%;animation:wave .8s ease-in-out infinite alternate}
+@keyframes wave{to{transform:rotate(-16deg)}}
+.cheer{transform-box:fill-box;transform-origin:20% 95%;animation:cheer 1.3s ease-in-out infinite alternate}
+.cheer.r{transform-origin:80% 95%;animation-delay:-.65s}
+@keyframes cheer{to{transform:rotate(-7deg) translateY(-3px)}}
+.js .fig:not(.on) *, .still .fig *{animation-play-state:paused!important}
+@media (prefers-reduced-motion: reduce){.fig *{animation:none!important}}
+
+/* Controls that need scripts stay out of the way without them */
+html:not(.js) .motion{visibility:hidden}
+/* Reading progress without scripts, where the browser supports scroll-linked animation */
+@supports (animation-timeline: scroll()){
+  .progress i{animation:read linear both;animation-timeline:scroll(root)}
+  @keyframes read{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+}
+
+/* ---------- Doors: the "pick a story" row on bottle pages, and the way out of every chapter */
+.doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;margin:.5rem -2px}
+.door{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:.5rem;
+  min-height:11.5rem;padding:.9rem .7rem 1rem;border-radius:18px 14px 20px 15px;background:var(--card);color:#3a2532;
+  text-decoration:none;text-align:center;border:2.5px solid #5b2c4c;box-shadow:3px 4px 0 #5b2c4c22;
+  transform:rotate(-.8deg);transition:transform .2s ease,box-shadow .2s ease}
+.door:nth-child(2n){transform:rotate(.9deg)}
+.door:nth-child(3n){transform:rotate(-.3deg)}
+a.door:hover,a.door:focus-visible{transform:rotate(0) translateY(-3px);box-shadow:4px 7px 0 #5b2c4c33}
+a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.door-icon{width:76px;height:76px;flex:none}
+.door-label{font-family:var(--display);font-size:1.02rem;line-height:1.2;text-wrap:balance}
+.door-label em{color:#8b3a63}
+.door.soon{border-style:dashed;border-color:#8a6a78;box-shadow:none;color:#6f5a64;cursor:default}
+.door.soon .door-icon{opacity:.55;filter:grayscale(.4)}
+.door.visited::after{content:"";position:absolute;top:-10px;right:-8px;width:34px;height:34px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Ccircle cx='17' cy='17' r='14' fill='%23f2c776'/%3E%3Cpath d='M9 18 L15 24 L26 10' fill='none' stroke='%235b2c4c' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.stamp{display:inline-block;font:800 .62rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#8b3a63;
+  border:1.5px solid currentColor;border-radius:4px;padding:.32rem .45rem .28rem;transform:rotate(-5deg);background:#fffaf1}
+.door.soon .stamp{margin-top:auto}
+
+/* In-text clickthroughs: "→ Need a refresher on ...?" */
+.go{font-size:1.08rem;line-height:1.45;font-weight:800}
+.go a{color:var(--accent);text-decoration:none;border-bottom:2px solid currentColor}
+.go.soon{color:var(--muted);font-weight:700;display:flex;flex-wrap:wrap;align-items:center;gap:.35rem .6rem}
+.go.soon .stamp{font-weight:800}
+.end-doors{border-top:1.5px dashed var(--rule);padding-top:1.4rem;margin-top:.8rem;display:flex;flex-direction:column;gap:.9rem}
+.end-doors h2{font-family:var(--hand);font-size:1.5rem;font-weight:700;margin:0;color:var(--accent)}
+.back{font-weight:800;font-size:1.02rem}
+.back a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--rule)}
+
+/* ---------- Cabinet Card: the brand basics, tucked into a tap-to-open index card */
+.cabinet-card{background:#f5e1b6;color:#4a3426;border-radius:6px 10px 8px 12px;transform:rotate(-.7deg);
+  box-shadow:2px 3px 0 #4a342622;margin:.4rem 2px;background-image:repeating-linear-gradient(#f5e1b6 0 27px,#e7c9a0 27px 28px)}
+.cabinet-card summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:.6rem;
+  padding:.8rem 1rem .75rem;font-family:var(--hand);font-weight:700;font-size:1.5rem;line-height:1}
+.cabinet-card summary::-webkit-details-marker{display:none}
+.cabinet-card summary::after{content:"+";flex:none;display:grid;place-items:center;width:1.8rem;height:1.8rem;border-radius:50%;
+  border:2px solid #4a3426;font:800 1.1rem/1 var(--body)}
+.cabinet-card[open] summary::after{content:"\2013"}
+.cabinet-card summary:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+.cabinet-card dl{margin:0;padding:.2rem 1rem 1.1rem;display:grid;grid-template-columns:minmax(5.2rem,auto) 1fr;gap:.55rem .85rem}
+.cabinet-card dt{font:800 .7rem/1.5 var(--body);letter-spacing:.1em;text-transform:uppercase;color:#8a5a3c;padding-top:.12rem}
+.cabinet-card dd{margin:0;font-size:1rem;line-height:1.45}
+
+/* ---------- Real photos (product shots, old ads) dropped into the crayon world */
+.photo{margin:.6rem auto;max-width:21rem;position:relative}
+.photo .asset{display:block;width:100%;height:auto;border-radius:6px}
+.clipping{background:#f4efe3;padding:10px;box-shadow:2px 3px 0 #3a253222,0 8px 18px #3a253218;transform:rotate(-1.6deg)}
+.clipping::before,.clipping::after{content:"";position:absolute;width:70px;height:22px;background:#f2c776b8;top:-9px}
+.clipping::before{left:18px;transform:rotate(-8deg)}.clipping::after{right:18px;transform:rotate(7deg)}
+.asset.placeholder{display:grid;place-content:center;gap:.35rem;min-height:12rem;padding:1rem;border:2.5px dashed #8a6a78;
+  border-radius:10px;text-align:center;color:#6f5a64;font-family:var(--hand);font-size:1.25rem;line-height:1.2;background:#fffaf1}
+.asset.placeholder small{font:800 .62rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#8b3a63}
+
+/* ---------- Chapter headings inside a long door */
+.flow > h2{font-family:var(--display);font-weight:400;font-size:1.8rem;line-height:1.12;letter-spacing:-.01em;margin:1.6rem 0 -.1rem;
+  text-wrap:balance;padding-bottom:.45rem;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8' preserveAspectRatio='none'%3E%3Cpath d='M2 5 Q30 2 60 4.6 T118 3.6' fill='none' stroke='%23b9792c' stroke-width='3' stroke-linecap='round' opacity='.8'/%3E%3C/svg%3E") left bottom/7.5rem 8px no-repeat}
+.flow > h2 em{color:var(--accent)}
+.flow > h2:first-child{margin-top:.2rem}
+/* Maker's Mark welcome page */
+.product{max-width:15rem}
+.product .asset{filter:drop-shadow(0 10px 14px #3a253233)}
+.product .asset.placeholder{min-height:17rem}
+
+</style>
+</head>
+<body>
+<!-- Built from src/ by tools/build.py. Edit the source, not this file. -->
+<svg id="defs" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Crayon line: a little wobble on every stroke -->
+    <filter id="crayon" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="2" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <!-- Character lines "boil" like hand-drawn animation -->
+    <filter id="boil" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="1" result="n">
+        <animate attributeName="seed" values="1;4;7" dur="0.45s" calcMode="discrete" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <!-- Watercolor wash: soft, uneven edges and a little paper grain -->
+    <filter id="wash" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="5" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="8" xChannelSelector="R" yChannelSelector="G" result="shape"/>
+      <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="9" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  .8 0 0 0 .42" result="ga"/>
+      <feComposite in="shape" in2="ga" operator="in"/>
+    </filter>
+
+    <!-- The yeast buddy. The little bump is a bud: yeast really do multiply by budding. -->
+    <symbol id="yeast" viewBox="0 0 124 134">
+      <g filter="url(#wash)" transform="translate(2 2)">
+        <path d="M22 72 C18 42 36 22 62 22 C90 22 104 44 102 74 C100 102 84 118 60 118 C36 118 24 100 22 72Z" fill="#efc163"/>
+        <circle cx="90" cy="26" r="11" fill="#efc163"/>
+        <ellipse cx="40" cy="86" rx="7" ry="4.5" fill="#e48b7c" opacity=".65"/>
+        <ellipse cx="83" cy="86" rx="7" ry="4.5" fill="#e48b7c" opacity=".65"/>
+      </g>
+      <g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 72 C18 42 36 22 62 22 C90 22 104 44 102 74 C100 102 84 118 60 118 C36 118 24 100 22 72Z"/>
+        <path d="M79.5 29 A11 11 0 1 1 100.6 30"/>
+        <path d="M51 88 Q62 98 73 88"/>
+        <path d="M24 86 Q12 92 9 104"/><path d="M100 86 Q112 92 115 104"/>
+        <path d="M48 117 L45 129"/><path d="M72 117 L75 129"/>
+        <ellipse cx="49" cy="70" rx="4.2" ry="5.4" fill="#3b2233" stroke="none"/>
+        <ellipse cx="74" cy="70" rx="4.2" ry="5.4" fill="#3b2233" stroke="none"/>
+      </g>
+    </symbol>
+    <symbol id="yeast-thumb" viewBox="0 0 146 134">
+      <g filter="url(#wash)" transform="translate(2 2)">
+        <path d="M22 72 C18 42 36 22 62 22 C90 22 104 44 102 74 C100 102 84 118 60 118 C36 118 24 100 22 72Z" fill="#efc163"/>
+        <circle cx="90" cy="26" r="11" fill="#efc163"/>
+        <rect x="110" y="44" width="22" height="22" rx="8" fill="#efc163"/>
+        <path d="M117 46 L117 31 Q118 26 123 27 Q127 28 126 33 L125 46Z" fill="#efc163"/>
+        <ellipse cx="40" cy="86" rx="7" ry="4.5" fill="#e48b7c" opacity=".65"/>
+        <ellipse cx="83" cy="86" rx="7" ry="4.5" fill="#e48b7c" opacity=".65"/>
+      </g>
+      <g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 72 C18 42 36 22 62 22 C90 22 104 44 102 74 C100 102 84 118 60 118 C36 118 24 100 22 72Z"/>
+        <path d="M79.5 29 A11 11 0 1 1 100.6 30"/>
+        <path d="M51 88 Q61 100 73 88"/>
+        <path d="M24 86 Q12 92 9 104"/>
+        <path d="M100 82 Q112 76 116 66"/>
+        <rect x="110" y="44" width="22" height="22" rx="8"/>
+        <path d="M117 46 L117 31 Q118 26 123 27 Q127 28 126 33 L125 46"/>
+        <path d="M115 53 L127 53 M115 59 L127 59" stroke-width="1.8"/>
+        <path d="M48 117 L45 129"/><path d="M72 117 L75 129"/>
+        <ellipse cx="49" cy="70" rx="4.2" ry="5.4" fill="#3b2233" stroke="none"/>
+        <ellipse cx="74" cy="70" rx="4.2" ry="5.4" fill="#3b2233" stroke="none"/>
+      </g>
+    </symbol>
+    <!-- Generic door icons -->
+    <symbol id="newspaper-icon" viewBox="0 0 120 120"><g filter="url(#wash)"><path d="M14 30 L98 20 L106 92 L22 102Z" fill="#f4efe3"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 30 L98 20 L106 92 L22 102Z"/><path d="M60 25 L64 97" stroke-width="1.6"/><path d="M24 42 L54 38 M25 52 L55 48 M26 62 L56 58 M27 72 L57 68 M28 82 L58 78 M70 36 L96 33 M71 46 L97 43 M72 56 L98 53 M73 66 L99 63 M74 76 L100 73 M75 86 L101 83" stroke-width="1.5" stroke="#8a6a78"/></g></symbol>
+    <symbol id="bottle-icon" viewBox="0 0 120 120"><g transform="translate(60 108) scale(1.3 1.3)"><g><g filter="url(#wash)"><path d="M-13 0 L-13 -38 Q-13 -46 -6 -50 L-5 -62 L5 -62 L6 -50 Q13 -46 13 -38 L13 0Z" fill="#c98a3c"/><rect x="-10" y="-30" width="20" height="16" rx="2" fill="#fbf3e3"/><rect x="-5.5" y="-68" width="11" height="7" rx="1.5" fill="#7a5f4a"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-13 0 L-13 -38 Q-13 -46 -6 -50 L-5 -62 L5 -62 L6 -50 Q13 -46 13 -38 L13 0Z"/><rect x="-10" y="-30" width="20" height="16" rx="2" stroke-width="1.8"/><rect x="-5.5" y="-68" width="11" height="7" rx="1.5" stroke-width="1.8"/></g></g></g></symbol>
+<!-- Maker's Mark cast: door icons -->
+    <symbol id="bill-icon" viewBox="-38 -182 76 76"><g style="transform-origin:-22px -113px"><g filter="url(#wash)"><path d="M-27.4 -114.1 L-32 -88.3 L-29.5 -65.6 L-20.5 -66.4 L-22 -87.7 L-16.6 -111.9Z" fill="#6d7f99"/><circle cx="-25" cy="-66" r="5.2" fill="#f0c39d"/></g><g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-27.4 -114.1 L-32 -88.3 L-29.5 -65.6 L-20.5 -66.4 L-22 -87.7 L-16.6 -111.9Z"/><circle cx="-25" cy="-66" r="5.2"/></g></g><g><g filter="url(#wash)"><ellipse cx="-11" cy="-3.5" rx="10.5" ry="4.6" fill="#4a3426"/><ellipse cx="11" cy="-3.5" rx="10.5" ry="4.6" fill="#4a3426"/><path d="M-17 -64 L-15 -7 L-4 -7 L-1.5 -58 L1.5 -58 L4 -7 L15 -7 L17 -64Z" fill="#6d7f99"/><path d="M-24 -116 Q-27 -90 -22 -58 L22 -58 Q27 -90 24 -116 Q12 -124 0 -122 Q-12 -124 -24 -116Z" fill="#6d7f99"/><path d="M-9 -121 L0 -97 L9 -121Z" fill="#fbf3e3"/><path d="M-3 -119 L3 -119 L5 -93 L0 -85 L-5 -93Z" fill="#8b3a63"/></g><g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="-11" cy="-3.5" rx="10.5" ry="4.6"/><ellipse cx="11" cy="-3.5" rx="10.5" ry="4.6"/><path d="M-17 -64 L-15 -7 L-4 -7 L-1.5 -58 M1.5 -58 L4 -7 L15 -7 L17 -64"/><path d="M-24 -116 Q-27 -90 -22 -58 L22 -58 Q27 -90 24 -116 Q12 -124 0 -122 Q-12 -124 -24 -116Z"/><path d="M-9 -121 L0 -97 L9 -121" stroke-width="2"/><path d="M-3 -119 L3 -119 L5 -93 L0 -85 L-5 -93Z" stroke-width="1.8"/><circle cx="0" cy="-76" r="1.6" fill="#3b2233" stroke="none"/><circle cx="0" cy="-67" r="1.6" fill="#3b2233" stroke="none"/></g></g><g style="transform-origin:0px -125px"><g filter="url(#wash)"><rect x="-5" y="-129" width="10" height="9" fill="#f0c39d"/><ellipse cx="0" cy="-141" rx="15" ry="16.5" fill="#f0c39d"/><ellipse cx="-14" cy="-140" rx="3" ry="4.4" fill="#f0c39d"/><ellipse cx="14" cy="-140" rx="3" ry="4.4" fill="#f0c39d"/><ellipse cx="-8.5" cy="-135" rx="4" ry="2.6" fill="#e48b7c" opacity=".6"/><ellipse cx="8.5" cy="-135" rx="4" ry="2.6" fill="#e48b7c" opacity=".6"/><path d="M-6 -133.5 q6 -4 12 0 q-6 2.5 -12 0Z" fill="#cfc6bd"/><path d="M-15.5 -148 q-1 6 1 9 M15.5 -148 q1 6 -1 9" fill="none" stroke="#cfc6bd" stroke-width="3"/><ellipse cx="0" cy="-155" rx="24" ry="4.8" fill="#7a5f4a"/><path d="M-14.5 -155 Q-16 -171 -6 -173 Q0 -169 6 -173 Q16 -171 14.5 -155Z" fill="#7a5f4a"/></g><g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="0" cy="-141" rx="15" ry="16.5"/><path d="M-14.5 -143 q-3.5 3 0 7"/><path d="M14.5 -143 q3.5 3 0 7"/><circle cx="-6" cy="-142" r="1.6" fill="#3b2233" stroke="none"/><circle cx="6" cy="-142" r="1.6" fill="#3b2233" stroke="none"/><circle cx="-6" cy="-142" r="4.8" stroke-width="1.7"/><circle cx="6" cy="-142" r="4.8" stroke-width="1.7"/><path d="M-1.2 -142 h2.4 M-10.8 -142.6 L-14 -144 M10.8 -142.6 L14 -144" stroke-width="1.6"/><path d="M-6 -133.5 q6 -4 12 0" stroke-width="1.8"/><path d="M-4.5 -131.5 q4.5 4 9 0" stroke-width="2"/><ellipse cx="0" cy="-155" rx="24" ry="4.8"/><path d="M-14.5 -155 Q-16 -171 -6 -173 Q0 -169 6 -173 Q16 -171 14.5 -155"/><path d="M-14.3 -159.5 L14.3 -159.5" stroke="#3b2233" stroke-width="3.2"/></g></g><g style="transform-origin:22px -113px"><g filter="url(#wash)"><path d="M16.6 -111.9 L22 -87.7 L20.5 -66.4 L29.5 -65.6 L32 -88.3 L27.4 -114.1Z" fill="#6d7f99"/><circle cx="25" cy="-66" r="5.2" fill="#f0c39d"/></g><g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16.6 -111.9 L22 -87.7 L20.5 -66.4 L29.5 -65.6 L32 -88.3 L27.4 -114.1Z"/><circle cx="25" cy="-66" r="5.2"/></g></g></symbol>
+    <symbol id="margie-icon" viewBox="-38 -80 76 76"><g><g filter="url(#wash)"><path d="M-34 0 Q-34 -26 -14 -32 L14 -32 Q34 -26 34 0Z" fill="#c25c86"/><path d="M-10 -33 L0 -20 L10 -33Z" fill="#fbf3e3"/></g><g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-34 0 Q-34 -26 -14 -32 L14 -32 Q34 -26 34 0"/><path d="M-10 -33 L0 -20 L10 -33" stroke-width="2"/></g></g><g><g filter="url(#wash)"><rect x="-5" y="-40" width="10" height="9" fill="#f0c39d"/><ellipse cx="0" cy="-52" rx="15" ry="16.5" fill="#f0c39d"/><ellipse cx="-14" cy="-51" rx="3" ry="4.4" fill="#f0c39d"/><ellipse cx="14" cy="-51" rx="3" ry="4.4" fill="#f0c39d"/><ellipse cx="-8.5" cy="-46" rx="4" ry="2.6" fill="#e48b7c" opacity=".6"/><ellipse cx="8.5" cy="-46" rx="4" ry="2.6" fill="#e48b7c" opacity=".6"/><circle cx="-10" cy="-32.0" r="2.4" fill="#fffaf1"/><circle cx="-5" cy="-32.5" r="2.4" fill="#fffaf1"/><circle cx="0" cy="-33.0" r="2.4" fill="#fffaf1"/><circle cx="5" cy="-32.5" r="2.4" fill="#fffaf1"/><circle cx="10" cy="-32.0" r="2.4" fill="#fffaf1"/><circle cx="-15" cy="-46" r="2.6" fill="#fffaf1"/><circle cx="15" cy="-46" r="2.6" fill="#fffaf1"/><circle cx="-17" cy="-58" r="6.5" fill="#7a4a34"/><circle cx="-16" cy="-66" r="6.5" fill="#7a4a34"/><circle cx="-10" cy="-71" r="6.5" fill="#7a4a34"/><circle cx="-2" cy="-73" r="6.5" fill="#7a4a34"/><circle cx="6" cy="-72" r="6.5" fill="#7a4a34"/><circle cx="13" cy="-68" r="6.5" fill="#7a4a34"/><circle cx="17" cy="-61" r="6.5" fill="#7a4a34"/></g><g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="0" cy="-52" rx="15" ry="16.5"/><path d="M-14.5 -54 q-3.5 3 0 7"/><path d="M14.5 -54 q3.5 3 0 7"/><path d="M-8.5 -52 q2.5 -3.5 5 0 M3.5 -52 q2.5 -3.5 5 0" stroke-width="1.9"/><path d="M-4.5 -42.5 q4.5 4 9 0" stroke-width="2"/><circle cx="-10" cy="-32.0" r="2.4" stroke-width="1"/><circle cx="-5" cy="-32.5" r="2.4" stroke-width="1"/><circle cx="0" cy="-33.0" r="2.4" stroke-width="1"/><circle cx="5" cy="-32.5" r="2.4" stroke-width="1"/><circle cx="10" cy="-32.0" r="2.4" stroke-width="1"/><path d="M-22 -56 a5.5 5.5 0 1 1 10 0" stroke-width="2"/><path d="M-21 -64 a5.5 5.5 0 1 1 10 0" stroke-width="2"/><path d="M-15 -69 a5.5 5.5 0 1 1 10 0" stroke-width="2"/><path d="M-7 -71 a5.5 5.5 0 1 1 10 0" stroke-width="2"/><path d="M1 -70 a5.5 5.5 0 1 1 10 0" stroke-width="2"/><path d="M8 -66 a5.5 5.5 0 1 1 10 0" stroke-width="2"/><path d="M12 -59 a5.5 5.5 0 1 1 10 0" stroke-width="2"/><path d="M-4 -41.5 q4 3 8 0" stroke="#c0583c" stroke-width="2.4"/></g></g></symbol>
+  </defs>
+</svg>
+<header class="bar">
+  <div class="bar-inner">
+    <div class="mark"><b>The Liquor Cabinet</b><span>Maker&#x27;s Mark</span></div>
+    <button class="motion" id="motion" type="button" aria-pressed="false">Pause motion</button>
+  </div>
+  <div class="progress" aria-hidden="true"><i id="fill"></i></div>
+</header>
+
+<main>
+<article class="story">
+<h1>Maker's <span>Mark.</span></h1>
+
+<div class="flow">
+  <p class="t">Oh hey. You found the one with the drippy red wax. It's a classic.</p>
+  <p class="punch">Good eye!</p>
+
+  <figure class="fig" id="s-bottle"><div class="photo product"><div class="asset placeholder" role="img" aria-label="A bottle of Maker&#x27;s Mark, red wax creeping down its neck"><span>A bottle of Maker&#x27;s Mark, red wax creeping down its neck</span><small>Photo pending permission</small></div></div></figure>
+
+  <p class="t">This is Maker's Mark. And honestly? You can't tell the story of bourbon without it.</p>
+  <p class="punch">So let's open some doors, shall we?</p>
+
+  <nav class="doors" aria-label="Pick a story">
+    <a class="door" href="founders-gamble/index.html"><svg class="door-icon" aria-hidden="true"><use href="#bill-icon"/></svg><span class="door-label">The Founder's Gamble</span></a>
+    <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#margie-icon"/></svg><span class="door-label">Margie Samuels: One of Whiskey's Most Iconic Women</span><span class="stamp">Coming soon</span></div>
+    <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#newspaper-icon"/></svg><span class="door-label">The Wall Street Journal Article that Changed <em>Everything</em></span><span class="stamp">Coming soon</span></div>
+    <a class="door" href="#cabinet"><svg class="door-icon" aria-hidden="true"><use href="#bottle-icon"/></svg><span class="door-label">Cabinet Card</span></a>
+  </nav>
+
+  <details class="cabinet-card" id="cabinet">
+    <summary>Cabinet Card</summary>
+    <dl>
+      <dt>Style</dt><dd>Wheated Kentucky straight bourbon: soft red winter wheat instead of rye, 90 proof</dd>
+      <dt>Made at</dt><dd>Star Hill Farm, Loretto, Kentucky (a National Historic Landmark since 1980)</dd>
+      <dt>Founded</dt><dd>1953, by Bill and Margie Samuels; first bottle in 1958</dd>
+      <dt>Independent?</dt><dd>Yes, family-owned from 1953 to 1981</dd>
+      <dt>Sold</dt><dd>1981, to Hiram Walker &amp; Sons, reportedly to spare the family estate taxes</dd>
+      <dt>Owners since</dt><dd>Allied Domecq (2001), Fortune Brands (2005), Beam (2011), Beam Suntory (2014), renamed Suntory Global Spirits (2024)</dd>
+      <dt>Family today</dt><dd>Bill Jr. took over in the mid-1970s (his father's advice: "Don't screw up the whisky") and ran it until 2011. His son Rob is Whiskey Maker &amp; Managing Director, the eighth generation.</dd>
+    </dl>
+  </details>
+</div>
+</article>
+</main>
+
+<script>
+// The Liquor Cabinet: page extras. Everything here is optional polish.
+// The pages animate on CSS alone; this file only adds the Pause button,
+// the reading bar, and pausing scenes while they're off screen.
+(() => {
+  const root = document.documentElement;
+  root.classList.add('js');
+  const btn = document.getElementById('motion');
+  const defs = document.getElementById('defs');
+  const fill = document.getElementById('fill');
+
+  // Reading progress
+  function progress() {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    fill.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, window.scrollY / max) : 1) + ')';
+  }
+  window.addEventListener('scroll', progress, { passive: true });
+  window.addEventListener('resize', progress);
+  progress();
+
+  // Scenes only move while they're on screen, so each one starts fresh when you arrive
+  const figs = [...document.querySelectorAll('.fig')];
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => e.target.classList.toggle('on', e.isIntersecting)), { threshold: 0.35 });
+    figs.forEach(f => io.observe(f));
+  } else {
+    figs.forEach(f => f.classList.add('on'));
+  }
+
+  // Doors you've opened get a crayon check mark (remembered on this device only)
+  try {
+    const key = 'lc:visited', clean = p => p.replace(/index\.html$/, '');
+    const seen = new Set(JSON.parse(localStorage.getItem(key) || '[]'));
+    seen.add(clean(location.pathname));
+    localStorage.setItem(key, JSON.stringify([...seen]));
+    document.querySelectorAll('a.door:not([href^="#"])').forEach(a => {
+      if (seen.has(clean(new URL(a.getAttribute('href'), location.href).pathname))) a.classList.add('visited');
+    });
+  } catch (e) {}
+
+  // A door that points at a tucked-away card (like the Cabinet Card) opens it
+  document.querySelectorAll('a.door[href^="#"]').forEach(a => a.addEventListener('click', () => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t && t.tagName === 'DETAILS') t.open = true;
+  }));
+
+  // Pause / play everything, including the crayon line boil
+  function setStill(v) {
+    root.classList.toggle('still', v);
+    btn.textContent = v ? 'Play motion' : 'Pause motion';
+    btn.setAttribute('aria-pressed', String(v));
+    try { v ? defs.pauseAnimations() : defs.unpauseAnimations(); } catch (e) {}
+  }
+  btn.addEventListener('click', () => setStill(!root.classList.contains('still')));
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) setStill(true);
+})();
+</script>
+</body>
+</html>

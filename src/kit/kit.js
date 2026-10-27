@@ -26,6 +26,23 @@
     figs.forEach(f => f.classList.add('on'));
   }
 
+  // Doors you've opened get a crayon check mark (remembered on this device only)
+  try {
+    const key = 'lc:visited', clean = p => p.replace(/index\.html$/, '');
+    const seen = new Set(JSON.parse(localStorage.getItem(key) || '[]'));
+    seen.add(clean(location.pathname));
+    localStorage.setItem(key, JSON.stringify([...seen]));
+    document.querySelectorAll('a.door:not([href^="#"])').forEach(a => {
+      if (seen.has(clean(new URL(a.getAttribute('href'), location.href).pathname))) a.classList.add('visited');
+    });
+  } catch (e) {}
+
+  // A door that points at a tucked-away card (like the Cabinet Card) opens it
+  document.querySelectorAll('a.door[href^="#"]').forEach(a => a.addEventListener('click', () => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t && t.tagName === 'DETAILS') t.open = true;
+  }));
+
   // Pause / play everything, including the crayon line boil
   function setStill(v) {
     root.classList.toggle('still', v);
