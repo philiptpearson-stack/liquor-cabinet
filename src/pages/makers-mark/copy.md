@@ -31,5 +31,7 @@ Margie Samuels: One of Whiskey's Most Iconic Women
 Coming soon
 The Wall Street Journal Article that Changed *Everything*
 Coming soon
+The Bartender's Perspective
+Coming soon
 Common Spirits Questions
 → What is fermentation, anyway??

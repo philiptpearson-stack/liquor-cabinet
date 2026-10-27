@@ -11,10 +11,8 @@
 .cc-quick{display:inline-block;margin-top:.3rem;font:800 .86rem/1.3 var(--body);letter-spacing:.02em;color:#6b4632}
 .cabinet-card summary{align-items:center}
 
-/* The story you can open now gets the whole row; coming-soon doors sit side by side below */
-.doors .door.feature{grid-column:1/-1;flex-direction:row;justify-content:flex-start;gap:1rem;min-height:0;padding:1rem 1.2rem;text-align:left;transform:rotate(-.6deg)}
-.doors .door.feature .door-icon{width:88px;height:88px}
-.doors .door.feature .door-label{font-size:1.35rem}
+/* Door order: the open story first, full width; coming-soon pairs below; cocktails last, full width */
 .doors .door.soon:nth-child(2){transform:rotate(.9deg)}
 .doors .door.soon:nth-child(3){transform:rotate(-.8deg)}
+.doors .door.wide:last-child{transform:rotate(.5deg)}
 .cc-quick > span{white-space:nowrap}

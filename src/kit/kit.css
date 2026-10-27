@@ -180,3 +180,10 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .beat.stack p:nth-child(2){padding-left:1.2rem}
 .beat.stack p:nth-child(3){padding-left:2.4rem}
 .beat.stack em{color:var(--accent);font-style:italic}
+
+/* A door that takes the whole row: icon beside the label (the open story, or a door every bottle shares) */
+.doors .door.wide{grid-column:1/-1;flex-direction:row;justify-content:flex-start;gap:1rem;min-height:0;padding:1rem 1.2rem;text-align:left;transform:rotate(-.6deg)}
+.doors .door.wide .door-icon{width:88px;height:88px}
+.doors .door.wide .door-label{font-size:1.35rem}
+.door-text{display:flex;flex-direction:column;align-items:flex-start;gap:.55rem}
+.door.soon.wide .stamp{margin-top:0}
