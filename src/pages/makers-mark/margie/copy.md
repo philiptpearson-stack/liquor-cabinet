@@ -11,7 +11,7 @@ One of Whiskey's Most Iconic Women
 Meet Margie!
 Before she married Bill Samuels Sr. in 1937, Margie Mattingly was a chemist!
 (No fooling. She earned a chemistry degree from the University of Louisville. In 1933! There weren't a lot of women chemists walking around in 1933.)
-And when she and Bill bought the run-down distillery in Loretto, Kentucky that would become Maker's Mark, Margie got to work.
+And when she and Bill bought the run-down distillery that would become Maker's Mark, Margie got to work.
 That iconic Maker's Mark flavor?
 That was Margie.
 Bill wanted their distillery to make a softer, "wheated" bourbon. But there was a problem. You can't just make a dozen test bourbons and wait years to taste them.
