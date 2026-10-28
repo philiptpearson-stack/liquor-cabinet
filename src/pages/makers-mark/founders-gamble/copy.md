@@ -24,7 +24,7 @@ Because bourbon had a *reputation* problem. By the 1950s, it was widely consider
 So Bill ditched the rye and used soft winter wheat as the "small grain."
 And made a **BIG** bet on the idea that bourbon's reputation could *change.*
 It tastes expensive... and is.
-So now here comes Bill with his new-fangled whiskey and this crazy idea that bourbon could actually be *good.*
+So here comes Bill with his new-fangled whiskey and this crazy idea that bourbon could actually be *good.*
 Not "good for a bourbon," good.
 Good, good. Period.
 And *expensive*, too.
