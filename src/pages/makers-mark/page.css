@@ -4,15 +4,10 @@
   filter:drop-shadow(0 12px 14px #3a253233)}
 .product .asset.placeholder{min-height:17rem}
 
-/* The Cabinet Card rides right under the bottle, like a tag; the basics show while it's folded */
+/* The Cabinet Card rides right under the bottle, like a tag */
 #cabinet{margin-top:-.2rem}
-.cc-head{display:block}
-.cc-name{font-family:var(--hand);font-weight:700;font-size:1.5rem;line-height:1}
-.cc-quick{display:inline-block;margin-top:.3rem;font:800 .86rem/1.3 var(--body);letter-spacing:.02em;color:#6b4632}
-.cabinet-card summary{align-items:center}
 
 /* Door order: the open story first, full width; coming-soon pairs below; cocktails last, full width */
 .doors .door.soon:nth-child(2){transform:rotate(.9deg)}
 .doors .door.soon:nth-child(3){transform:rotate(-.8deg)}
 .doors .door.wide:last-child{transform:rotate(.5deg)}
-.cc-quick > span{white-space:nowrap}

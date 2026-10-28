@@ -123,7 +123,9 @@ def cast_for(d: Path) -> str:
 
 def questions_for(slug: str, kit: dict) -> str:
     """The shared footer, minus this page's own entry; '' when nothing is left."""
-    block = re.sub(rf'\s*<p class="go" data-page="{re.escape(slug)}">.*?</p>', '', kit['questions'], flags=re.S)
+    def own(m):   # this page, or a page above it (a story inside the topic it answers)
+        return '' if slug == m.group(1) or slug.startswith(m.group(1) + '/') else m.group(0)
+    block = re.sub(r'\s*<p class="go" data-page="([\w/-]+)">.*?</p>', own, kit['questions'], flags=re.S)
     return block if 'data-page=' in block else ''
 
 

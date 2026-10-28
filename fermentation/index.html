@@ -6,7 +6,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="theme-color" content="#f7efe1">
 <title>Fermentation · The Liquor Cabinet</title>
-<meta name="description" content="Where does alcohol come from, anyway?">
+<meta name="description" content="Every drink in the cabinet starts the same way: yeast, sugar and a little time.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -212,39 +212,21 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .bio-card dl{grid-column:1/-1;margin:0;padding-top:.7rem;border-top:1.5px dashed #d9c3b4;display:grid;grid-template-columns:auto 1fr;gap:.45rem .85rem}
 .bio-card dt{font:800 .68rem/1.5 var(--body);letter-spacing:.1em;text-transform:uppercase;color:#8a5a3c;padding-top:.08rem}
 .bio-card dd{margin:0;font-size:.98rem;line-height:1.4}
-/* Fermentation: scene motion */
-.bear{animation:blonk 4.2s ease-in-out -2.1s infinite}
-@keyframes blonk{0%,30%{transform:translateX(-14px)}42%{transform:translateX(8px)}48%{transform:translateX(2px) rotate(-1.5deg)}56%,100%{transform:translateX(4px)}}
-.pow{transform-box:fill-box;transform-origin:center;animation:pow 4.2s ease-out -2.1s infinite}
-@keyframes pow{0%,38%{transform:scale(.2) rotate(-14deg);opacity:0}46%{transform:scale(1.18) rotate(-6deg);opacity:1}54%,86%{transform:scale(1) rotate(-8deg);opacity:1}100%{transform:scale(1) rotate(-8deg);opacity:0}}
-.grapes{transform-box:fill-box;transform-origin:50% 0;animation:swing 4.2s ease-in-out -2.1s infinite}
-@keyframes swing{0%,42%{transform:rotate(0)}50%{transform:rotate(7deg)}60%{transform:rotate(-5deg)}70%,100%{transform:rotate(0)}}
-.hand{transform-box:view-box;transform-origin:200px 108px;animation:spin 3.5s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
 
-/* Rewind: ONE CSS clock (12.9s) pans the strip and swaps the era chip, so picture and label can't drift.
-   Holds 1.1s on each era, pans 1.4s between them, lingers 2.2s in the prehistoric forest, then fades back to the city.
-   The chip switches halfway through each pan, when the next era is centred. */
-#strip{animation:pan 12.9s ease-in-out infinite}
-@keyframes pan{
-  0%,8.527%{transform:translateX(0);opacity:1}
-  19.380%,27.907%{transform:translateX(-400px)}
-  38.760%,47.287%{transform:translateX(-800px)}
-  58.140%,66.667%{transform:translateX(-1200px)}
-  77.519%,94.574%{transform:translateX(-1600px);opacity:1}
-  97.280%{transform:translateX(-1600px);opacity:0}
-  97.290%{transform:translateX(0);opacity:0}
-  100%{transform:translateX(0);opacity:1}
-}
-.chip.era{display:grid}
-.chip.era b{grid-area:1/1;font-weight:inherit;opacity:0;animation-duration:12.9s;animation-timing-function:linear;animation-iteration-count:infinite}
-.chip.era .e4{opacity:1} /* resting frame (reduced motion): the prehistoric forest, same as the strip */
-.chip.era .e0{animation-name:era0}.chip.era .e1{animation-name:era1}.chip.era .e2{animation-name:era2}.chip.era .e3{animation-name:era3}.chip.era .e4{animation-name:era4}
-@keyframes era0{0%,13.95%{opacity:1}13.96%,97.28%{opacity:0}97.29%,100%{opacity:1}}
-@keyframes era1{0%,13.95%{opacity:0}13.96%,33.33%{opacity:1}33.34%,100%{opacity:0}}
-@keyframes era2{0%,33.33%{opacity:0}33.34%,52.71%{opacity:1}52.72%,100%{opacity:0}}
-@keyframes era3{0%,52.71%{opacity:0}52.72%,72.09%{opacity:1}72.10%,100%{opacity:0}}
-@keyframes era4{0%,72.09%{opacity:0}72.10%,97.28%{opacity:1}97.29%,100%{opacity:0}}
+/* A folded card's name and its one-line summary (Cabinet Card, Short Version) */
+.cabinet-card summary{align-items:center}
+.cc-head{display:block}
+.cc-name{font-family:var(--hand);font-weight:700;font-size:1.5rem;line-height:1}
+.cc-quick{display:inline-block;margin-top:.3rem;font:800 .86rem/1.3 var(--body);letter-spacing:.02em;color:#6b4632}
+.cc-quick > span{white-space:nowrap}
+/* Fermentation hub */
+.bubble-up{animation:bubbleup 2.6s ease-in infinite}
+.bubble-up.d2{animation-delay:-.9s}.bubble-up.d3{animation-delay:-1.7s}
+@keyframes bubbleup{0%{transform:translateY(6px);opacity:0}20%{opacity:1}100%{transform:translateY(-34px);opacity:0}}
+.yeast-bob{animation:yeastbob 1.6s ease-in-out infinite alternate}
+@keyframes yeastbob{to{transform:translateY(-4px)}}
+#short-version{margin-top:-.2rem}
+@media (prefers-reduced-motion: reduce){.bubble-up{opacity:1}}
 
 </style>
 </head>
@@ -318,6 +300,7 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
     <symbol id="newspaper-icon" viewBox="0 0 120 120"><g filter="url(#wash)"><path d="M14 30 L98 20 L106 92 L22 102Z" fill="#f4efe3"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 30 L98 20 L106 92 L22 102Z"/><path d="M60 25 L64 97" stroke-width="1.6"/><path d="M24 42 L54 38 M25 52 L55 48 M26 62 L56 58 M27 72 L57 68 M28 82 L58 78 M70 36 L96 33 M71 46 L97 43 M72 56 L98 53 M73 66 L99 63 M74 76 L100 73 M75 86 L101 83" stroke-width="1.5" stroke="#8a6a78"/></g></symbol>
     <symbol id="bottle-icon" viewBox="0 0 120 120"><g transform="translate(60 108) scale(1.3 1.3)"><g><g filter="url(#wash)"><path d="M-13 0 L-13 -38 Q-13 -46 -6 -50 L-5 -62 L5 -62 L6 -50 Q13 -46 13 -38 L13 0Z" fill="#c98a3c"/><rect x="-10" y="-30" width="20" height="16" rx="2" fill="#fbf3e3"/><rect x="-5.5" y="-68" width="11" height="7" rx="1.5" fill="#7a5f4a"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-13 0 L-13 -38 Q-13 -46 -6 -50 L-5 -62 L5 -62 L6 -50 Q13 -46 13 -38 L13 0Z"/><rect x="-10" y="-30" width="20" height="16" rx="2" stroke-width="1.8"/><rect x="-5.5" y="-68" width="11" height="7" rx="1.5" stroke-width="1.8"/></g></g></g></symbol>
     <symbol id="bartender-icon" viewBox="-40 -190 90 90"><g><g class="" style="transform-origin:-21px -109px"><g filter="url(#wash)"><path d="M-26.4 -110.2 L-31 -86.3 L-28.5 -63.6 L-19.5 -64.4 L-21 -85.7 L-15.6 -107.8Z" fill="#4a3e4f"/><circle cx="-24" cy="-64" r="5.2" fill="#f0c39d"/></g><g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-26.4 -110.2 L-31 -86.3 L-28.5 -63.6 L-19.5 -64.4 L-21 -85.7 L-15.6 -107.8Z"/><circle cx="-24" cy="-64" r="5.2"/></g></g><g><g filter="url(#wash)"><ellipse cx="-11" cy="-3.5" rx="10" ry="4.6" fill="#5a4636"/><ellipse cx="11" cy="-3.5" rx="10" ry="4.6" fill="#5a4636"/><path d="M-16 -62 L-14 -7 L-4 -7 L-1.5 -56 L1.5 -56 L4 -7 L14 -7 L16 -62Z" fill="#8c7a6b"/><path d="M-23 -112 Q-27 -86 -21 -56 L21 -56 Q27 -86 23 -112 Q12 -119 0 -118 Q-12 -119 -23 -112Z" fill="#4a3e4f"/><path d="M-8 -117 L0 -100 L8 -117Z" fill="#fbf3e3"/><path d="M-8 -121 L-1 -117 L-8 -113Z M8 -121 L1 -117 L8 -113Z" fill="#c0583c"/></g><g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="-11" cy="-3.5" rx="10" ry="4.6"/><ellipse cx="11" cy="-3.5" rx="10" ry="4.6"/><path d="M-16 -62 L-14 -7 L-4 -7 L-1.5 -56 M1.5 -56 L4 -7 L14 -7 L16 -62"/><path d="M-23 -112 Q-27 -86 -21 -56 L21 -56 Q27 -86 23 -112 Q12 -119 0 -118 Q-12 -119 -23 -112Z"/><path d="M-8 -117 L0 -100 L8 -117 M0 -100 L0 -58" stroke-width="2"/><circle cx="3.5" cy="-92" r="1.5" fill="#3b2233" stroke="none"/><circle cx="3.5" cy="-80" r="1.5" fill="#3b2233" stroke="none"/><circle cx="3.5" cy="-68" r="1.5" fill="#3b2233" stroke="none"/><path d="M-8 -121 L-1 -117 L-8 -113Z M8 -121 L1 -117 L8 -113Z" stroke-width="1.6"/></g></g><g><g filter="url(#wash)"><rect x="-5" y="-125" width="10" height="8" fill="#f0c39d"/><ellipse cx="0" cy="-137" rx="15.5" ry="16" fill="#f0c39d"/><ellipse cx="-14.5" cy="-136" rx="3" ry="4.4" fill="#f0c39d"/><ellipse cx="14.5" cy="-136" rx="3" ry="4.4" fill="#f0c39d"/><ellipse cx="-8.5" cy="-131" rx="4" ry="2.6" fill="#e48b7c" opacity=".6"/><ellipse cx="8.5" cy="-131" rx="4" ry="2.6" fill="#e48b7c" opacity=".6"/><ellipse cx="2" cy="-139" rx="3.4" ry="4.2" fill="#e9a982"/><path d="M-16 -140 Q-19 -160 0 -158 Q19 -160 16 -140 Q14 -150 4 -151 Q-2 -146 -9 -150 Q-14 -148 -16 -140Z" fill="#3b2a22"/></g><g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="0" cy="-137" rx="15.5" ry="16"/><path d="M-15.0 -139 q-3.5 3 0 7"/><path d="M15.0 -139 q3.5 3 0 7"/><path d="M-8.5 -137 q2.5 -3.5 5 0 M3.5 -137 q2.5 -3.5 5 0" stroke-width="1.9"/><path d="M-4.5 -127.5 q4.5 4 9 0" stroke-width="2"/><path d="M0 -142 q5 3 2 8" stroke-width="1.8"/><path d="M-16 -140 Q-19 -160 0 -158 Q19 -160 16 -140"/></g></g><g class="" style="transform-origin:21px -109px"><g filter="url(#wash)"><path d="M24.6 -104.9 L42.8 -122.7 L35.3 -147.4 L26.7 -144.6 L33.2 -125.3 L17.4 -113.1Z" fill="#4a3e4f"/><circle cx="31" cy="-146" r="5.2" fill="#f0c39d"/></g><g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24.6 -104.9 L42.8 -122.7 L35.3 -147.4 L26.7 -144.6 L33.2 -125.3 L17.4 -113.1Z"/><circle cx="31" cy="-146" r="5.2"/></g><g filter="url(#wash)"><path d="M24 -150 L38 -150 L36 -172 L26 -172Z" fill="#c9c3b8"/><path d="M26.5 -172 L35.5 -172 L34 -181 L28 -181Z" fill="#a9a29a"/><rect x="29" y="-185" width="4" height="4" rx="1" fill="#a9a29a"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 -150 L38 -150 L36 -172 L26 -172Z"/><path d="M26.5 -172 L35.5 -172 L34 -181 L28 -181Z" stroke-width="2"/><rect x="29" y="-185" width="4" height="4" rx="1" stroke-width="1.6"/><path d="M27 -164 h8" stroke="#fffaf1" stroke-width="1.6"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M44 -178 q4 3 0 6 M47 -168 q4 3 0 6 M18 -180 q-4 3 0 6" stroke="#8a6a78" stroke-width="1.8"/></g></g></g></symbol>
+    <symbol id="crock-icon" viewBox="0 0 120 120"><g filter="url(#wash)"><path d="M34 52 Q22 70 26 92 Q30 108 60 108 Q90 108 94 92 Q98 70 86 52Z" fill="#c98a5c"/><path d="M36 40 Q60 30 84 40 L86 52 Q60 58 34 52Z" fill="#f6e6c8"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M34 52 Q22 70 26 92 Q30 108 60 108 Q90 108 94 92 Q98 70 86 52"/><path d="M36 40 Q60 30 84 40 L86 52 Q60 58 34 52Z"/><path d="M33 53 Q60 60 87 53" stroke-width="3.2" stroke="#7a5f4a"/><path d="M36 76 Q60 84 86 76" stroke="#8d5f4b" stroke-width="2"/></g><g filter="url(#wash)"><circle cx="52" cy="24" r="4" fill="#fffaf1"/><circle cx="64" cy="16" r="5" fill="#fffaf1"/><circle cx="74" cy="26" r="3.2" fill="#fffaf1"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="52" cy="24" r="4"/><circle cx="64" cy="16" r="5"/><circle cx="74" cy="26" r="3.2"/></g></symbol>
   </defs>
 </svg>
 <header class="bar">
@@ -333,348 +316,36 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 <h1>Fermen<span>tation.</span></h1>
 
 <div class="flow">
+  <p class="t">Every bottle in the cabinet starts the same way. With yeast, sugar and a little bit of time.</p>
+  <p class="t">It's called fermentation. And it's way older than we are.</p>
 
-  <figure class="fig on" id="s-barrel"><div class="sheet">
-    <svg viewBox="0 0 400 236" role="img" aria-label="A little wine barrel bubbling all on its own, with the yeast buddy sitting on the rim">
-      <g filter="url(#wash)" transform="translate(2 3)">
-        <path d="M154 82 C140 112 140 168 154 200 L246 200 C260 168 260 112 246 82 Z" fill="#b97852"/>
-        <ellipse cx="200" cy="82" rx="46" ry="12" fill="#7d3a62"/>
-        <ellipse cx="200" cy="141" rx="35" ry="17" fill="#f6ead0"/>
-        <g fill="#7b4a7a"><circle cx="292" cy="178" r="10"/><circle cx="310" cy="180" r="10"/><circle cx="300" cy="194" r="10"/><circle cx="283" cy="194" r="9"/></g>
-        <path d="M297 168 Q306 152 324 154 Q318 168 300 169Z" fill="#9db08a"/>
-      </g>
-      <g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M18 202 Q120 193 200 201 T384 198"/>
-        <path d="M154 82 C140 112 140 168 154 200 L246 200 C260 168 260 112 246 82"/>
-        <ellipse cx="200" cy="82" rx="46" ry="12"/>
-        <path d="M146 107 Q200 119 254 107" stroke="#6b3d36" stroke-width="5"/>
-        <path d="M143 174 Q200 186 257 174" stroke="#6b3d36" stroke-width="5"/>
-        <path d="M178 95 Q172 146 180 199 M222 95 Q228 146 220 199" stroke-width="1.6"/>
-        <ellipse cx="200" cy="141" rx="35" ry="17"/>
-        <circle cx="292" cy="178" r="10"/><circle cx="310" cy="180" r="10"/><circle cx="300" cy="194" r="10"/><circle cx="283" cy="194" r="9"/>
-        <path d="M300 168 Q306 158 318 156"/>
-      </g>
-      <text class="letter" x="200" y="149" text-anchor="middle" font-size="22">WINE!</text>
-      <g class="bubbles" fill="#fffaf0" stroke="#5b2c4c" stroke-width="1.8">
-        <circle cx="190" cy="66" r="5"/><circle cx="207" cy="62" r="4"/><circle cx="216" cy="70" r="6"/><circle cx="198" cy="72" r="3.5"/><circle cx="224" cy="62" r="3"/>
-      </g>
-      <use href="#yeast" x="128" y="40" width="40" height="44"/>
+  <figure class="fig" id="s-crock"><div class="sheet">
+    <svg viewBox="0 0 400 190" role="img" aria-label="Our yeast-bud sits on top of a bubbling clay crock">
+      <g transform="translate(128 50) scale(1.1)"><use href="#crock-icon" width="120" height="120"/></g>
+      <g class="bubble-up"><circle cx="176" cy="84" r="5" fill="#fffaf1" stroke="#5b2c4c" stroke-width="1.8"/></g>
+      <g class="bubble-up d2"><circle cx="206" cy="76" r="6.5" fill="#fffaf1" stroke="#5b2c4c" stroke-width="1.8"/></g>
+      <g class="bubble-up d3"><circle cx="232" cy="86" r="4" fill="#fffaf1" stroke="#5b2c4c" stroke-width="1.8"/></g>
+      <g class="yeast-bob"><use href="#yeast" x="246" y="117" width="52" height="56"/></g>
+      <path d="M40 176 Q160 168 220 174 T370 172" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" filter="url(#crayon)"/>
     </svg></div>
   </figure>
-  <p class="t">You’ve heard of fermentation, right? The process by which beer, wine and all of their little cousins are born? It’s sort of the <strong>birds and bees</strong> of alcohol!</p>
-  <p class="t">Basically, a super-tiny microorganism called <strong>yeast</strong> turns sugar from plants into alcohol.</p>
-  <p class="t">Yeast has one job in life. It eats sugar. And then it <em>secretes</em> alcohol. (Plus a little CO₂. That’s the bubbles.)</p>
-  <p class="punch">Thanks, Yeast!</p>
 
-  <figure class="fig" id="s-yeast"><div class="sheet">
-    <svg viewBox="0 0 400 236" role="img" aria-label="The yeast buddy gives a big thumbs-up between a pile of sugar cubes and his two products: CO2 bubbles and a drop of alcohol">
-      <g filter="url(#wash)" transform="translate(2 3)">
-        <rect x="44" y="150" width="34" height="34" rx="4" fill="#fbf3e3" transform="rotate(-10 61 167)"/>
-        <rect x="80" y="172" width="23" height="23" rx="3" fill="#fbf3e3" transform="rotate(12 91 183)"/>
-        <path d="M330 124 C340 139 346 150 346 160 A16 16 0 0 1 314 160 C314 150 320 139 330 124Z" fill="#8a3f6a"/>
-      </g>
-      <g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M18 202 Q120 194 200 201 T384 199"/>
-        <rect x="44" y="150" width="34" height="34" rx="4" transform="rotate(-10 61 167)"/>
-        <rect x="80" y="172" width="23" height="23" rx="3" transform="rotate(12 91 183)"/>
-        <path d="M40 140 l-6 -6 M62 134 l0 -8 M84 140 l6 -6" stroke-width="1.8"/>
-        <path d="M330 124 C340 139 346 150 346 160 A16 16 0 0 1 314 160 C314 150 320 139 330 124Z"/>
-        <path d="M324 150 Q322 158 326 164" stroke="#fbf3e3" stroke-width="2.2"/>
-        <path d="M290 150 Q300 152 306 158" stroke-width="1.8"/>
-        <path d="M296 112 Q306 102 316 96" stroke-width="1.8"/>
-      </g>
-      <text class="letter" x="30" y="124" font-size="19">sugar!</text>
-      <text class="letter" x="322" y="62" font-size="22">CO₂</text>
-      <text class="letter" x="330" y="200" text-anchor="middle" font-size="19">alcohol</text>
-      <g class="bubbles" fill="#fffaf0" stroke="#5b2c4c" stroke-width="1.8">
-        <circle cx="322" cy="96" r="5"/><circle cx="338" cy="90" r="4"/><circle cx="350" cy="100" r="6"/><circle cx="330" cy="108" r="3.5"/><circle cx="356" cy="84" r="3"/>
-      </g>
-      <g class="wiggle"><use href="#yeast-thumb" x="112" y="38" width="176" height="162"/></g>
-    </svg></div>
-  </figure>
-  <p class="t">Our yeast-buds are everywhere. Hanging around on grape skins and tree leaves. Even floating in the air. Just waiting to find some sugar to turn into yummy booze.</p>
-  <p class="t">But wait. Beer and wine? When do <em>humans</em> get involved??</p>
-  <p class="t">Well, let’s back up…</p>
-  <p class="punch">Like, <span class="hl">waaaay up.</span></p>
+  <details class="cabinet-card" id="short-version">
+    <summary><span class="cc-head"><span class="cc-name">The Short Version</span><br><span class="cc-quick">Yeast + Sugar = CO₂ + Alcohol</span></span></summary>
+    <dl>
+      <dt>What happens</dt><dd>Yeast, a tiny microorganism, eats sugar. It gives off alcohol, plus carbon dioxide (the bubbles).</dd>
+      <dt>The sugar</dt><dd>Comes from plants: fruit, grain, honey, sugarcane, agave. Grapes make wine. Grain makes beer.</dd>
+      <dt>And spirits?</dt><dd>Every spirit starts as something fermented. Distill it, and you get whiskey, brandy, rum or tequila.</dd>
+      <dt>How old?</dt><dd>It happens in nature all on its own. People have been making fermented drinks on purpose for at least 9,000 years.</dd>
+    </dl>
+  </details>
 
-  <figure class="fig" id="rewind"><div class="sheet">
-    <span class="chip head" aria-hidden="true">↶ Rewind the clock</span>
-    <span class="chip era" aria-hidden="true"><b class="e0">City</b><b class="e1">Village</b><b class="e2">Farm</b><b class="e3">Forest</b><b class="e4">Prehistoric Forest</b></span>
-    <svg viewBox="0 0 400 236" role="img" aria-label="One long crayon line rewinds time: a city, then a village, a farm, a forest, and finally a prehistoric forest where an ancestor waves hello">
-      <g filter="url(#wash)" opacity=".9"><circle cx="330" cy="62" r="24" fill="#f2c776"/></g>
-      <g id="strip" transform="translate(-1600 0)">
-        <g filter="url(#wash)" transform="translate(2 3)">
-          <!-- city -->
-          <g fill="#c8a6c3"><rect x="34" y="96" width="58" height="104"/><rect x="104" y="62" width="56" height="138"/><rect x="172" y="104" width="50" height="96"/><rect x="234" y="78" width="66" height="122"/><rect x="312" y="114" width="52" height="86"/></g>
-          <!-- village -->
-          <g fill="#c99b72"><rect x="452" y="160" width="56" height="40"/><rect x="566" y="150" width="72" height="50"/><rect x="700" y="166" width="46" height="34"/></g>
-          <g fill="#dcb47c"><path d="M440 163 L480 116 L520 163Z"/><path d="M552 153 L602 98 L652 153Z"/><path d="M690 168 L723 130 L756 168Z"/></g>
-          <!-- farm -->
-          <path d="M820 200 L820 168 L868 168 L868 200Z M812 170 L844 138 L876 170Z" fill="#cfa275"/>
-          <g fill="#e2b04f"><ellipse cx="912" cy="162" rx="5" ry="10"/><ellipse cx="940" cy="158" rx="5" ry="10"/><ellipse cx="968" cy="162" rx="5" ry="10"/><ellipse cx="996" cy="158" rx="5" ry="10"/><ellipse cx="1024" cy="162" rx="5" ry="10"/><ellipse cx="1052" cy="158" rx="5" ry="10"/><ellipse cx="1080" cy="162" rx="5" ry="10"/><ellipse cx="1108" cy="158" rx="5" ry="10"/></g>
-          <!-- forest -->
-          <g fill="#a5b892"><circle cx="1240" cy="96" r="38"/><circle cx="1272" cy="80" r="30"/><circle cx="1352" cy="104" r="34"/><circle cx="1440" cy="86" r="40"/><circle cx="1476" cy="104" r="28"/><circle cx="1556" cy="98" r="34"/></g>
-          <!-- prehistoric forest -->
-          <g fill="#7f9a6c"><path d="M1640 200 Q1626 150 1660 108 Q1652 152 1664 200Z"/><path d="M1668 200 Q1690 140 1730 120 Q1700 160 1690 200Z"/><path d="M1972 200 Q1984 156 2000 146 L2000 200Z"/></g>
-          <ellipse cx="1912" cy="166" rx="34" ry="24" fill="#9b7663"/><circle cx="1878" cy="158" r="16" fill="#9b7663"/><g stroke="#8c6955" stroke-width="10" stroke-linecap="round"><path d="M1896 184 V198"/><path d="M1930 184 V198"/></g>
-          <path d="M1788 150 Q1810 140 1832 150 L1838 196 L1782 196Z" fill="#9a7a60"/>
-          <ellipse cx="1810" cy="126" rx="18" ry="20" fill="#c99572"/>
-          <path d="M1790 128 Q1786 100 1808 100 Q1834 98 1830 128 Q1822 114 1810 114 Q1798 114 1790 128Z" fill="#5a3f36"/>
-        </g>
-        <g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-          <!-- the one continuous ground line -->
-          <path d="M0 200 Q100 192 200 199 T400 198 T600 199 T800 196 T1000 200 T1200 197 T1400 199 T1600 196 T1800 199 T2000 197"/>
-          <!-- city -->
-          <rect x="34" y="96" width="58" height="104"/><rect x="104" y="62" width="56" height="138"/><rect x="172" y="104" width="50" height="96"/><rect x="234" y="78" width="66" height="122"/><rect x="312" y="114" width="52" height="86"/>
-          <path d="M46 112h12M70 112h12M46 132h12M70 132h12M46 152h12M70 152h12 M116 80h12M138 80h12M116 102h12M138 102h12M116 124h12M138 124h12M116 146h12M138 146h12 M184 120h10M202 120h10M184 142h10M202 142h10 M248 96h14M274 96h14M248 120h14M274 120h14M248 144h14M274 144h14 M324 130h10M344 130h10M324 152h10M344 152h10" stroke-width="3"/>
-          <!-- village -->
-          <path d="M452 200 V160 H508 V200 M566 200 V150 H638 V200 M700 200 V166 H746 V200"/>
-          <path d="M440 163 L480 116 L520 163Z M552 153 L602 98 L652 153Z M690 168 L723 130 L756 168Z"/>
-          <path d="M474 200 V180 H486 V200 M594 200 V174 H610 V200"/>
-          <path d="M622 92 q-8 -10 0 -20 q8 -10 0 -20" stroke-width="1.8"/>
-          <!-- farm -->
-          <path d="M820 200 V168 H868 V200 M812 170 L844 138 L876 170Z M838 200 V184 H850 V200"/>
-          <path d="M912 200 V172 M940 200 V168 M968 200 V172 M996 200 V168 M1024 200 V172 M1052 200 V168 M1080 200 V172 M1108 200 V168"/>
-          <ellipse cx="912" cy="162" rx="5" ry="10"/><ellipse cx="940" cy="158" rx="5" ry="10"/><ellipse cx="968" cy="162" rx="5" ry="10"/><ellipse cx="996" cy="158" rx="5" ry="10"/><ellipse cx="1024" cy="162" rx="5" ry="10"/><ellipse cx="1052" cy="158" rx="5" ry="10"/><ellipse cx="1080" cy="162" rx="5" ry="10"/><ellipse cx="1108" cy="158" rx="5" ry="10"/>
-          <path d="M1140 200 V170 M1170 200 V170 M1134 180 H1180 M1134 192 H1180" stroke-width="2"/>
-          <!-- forest -->
-          <path d="M1244 200 V120 M1352 200 V128 M1444 200 V116 M1556 200 V124" stroke="#6e4e3e" stroke-width="7"/>
-          <circle cx="1240" cy="96" r="38"/><circle cx="1352" cy="104" r="34"/><circle cx="1440" cy="86" r="40"/><circle cx="1556" cy="98" r="34"/>
-          <path d="M1296 200 q10 -16 20 0 M1500 200 q10 -14 20 0" stroke-width="2"/>
-          <!-- prehistoric forest: ferns, a mammoth, an ancestor -->
-          <path d="M1660 200 Q1650 150 1660 108 M1690 200 Q1700 156 1730 120"/>
-          <path d="M1656 170 l-12 -6 M1658 150 l-12 -8 M1660 130 l-10 -8 M1700 170 l12 -4 M1708 152 l12 -6 M1718 136 l10 -8" stroke-width="2"/>
-          <path d="M1878 146 Q1900 138 1918 142 Q1946 146 1946 170 Q1944 188 1922 190 M1866 166 Q1858 178 1862 194 M1896 186 V200 M1930 186 V200"/>
-          <path d="M1880 172 Q1870 186 1884 190" stroke="#f6ead0" stroke-width="3.5"/>
-          <path d="M1904 148 l-3 -6 M1914 146 l-1 -7 M1924 148 l2 -6" stroke-width="1.6"/>
-          <circle cx="1874" cy="154" r="2" fill="#5b2c4c"/>
-          <path d="M1788 150 Q1810 140 1832 150 L1838 196 L1782 196Z M1796 196 v6 M1824 196 v6"/>
-          <path d="M1786 186 L1794 178 L1802 188 L1810 178 L1818 188 L1826 178 L1834 186" stroke-width="1.8"/>
-          <ellipse cx="1810" cy="126" rx="18" ry="20"/>
-          <path d="M1803 135 Q1810 140 1817 135"/>
-          <circle cx="1804" cy="125" r="1.8" fill="#5b2c4c"/><circle cx="1816" cy="125" r="1.8" fill="#5b2c4c"/>
-          <path d="M1786 156 Q1772 166 1770 182" stroke="#c99572" stroke-width="7"/>
-        </g>
-        <g class="wave"><path d="M1832 154 Q1846 140 1850 120" fill="none" stroke="#c99572" stroke-width="7" stroke-linecap="round"/><circle cx="1851" cy="116" r="5.5" fill="#c99572" stroke="#5b2c4c" stroke-width="2"/></g>
-        <text class="letter soft" x="1838" y="96" font-size="17">hi!</text>
-      </g>
-    </svg></div>
-  </figure>
-  <p class="t">Turns out, our yeast-buds were making booze way before humans were doing human-stuff.</p>
-  <p class="t">Imagine an ancient bear goes sauntering past some grapevines. He kind of <strong>blonks</strong> into the grapes and smooshes them.</p>
-  <p class="t">Now those sugary grape-insides are wide open. And guess who’s been hanging around on the vines? Our little buddies, the yeast!</p>
+  <p class="punch">So where do you want to start?</p>
 
-  <figure class="fig" id="s-bear"><div class="sheet">
-    <svg viewBox="0 0 400 236" role="img" aria-label="A bear blonks head-first into a grapevine, and tiny yeast buddies riding on the grapes cheer">
-      <g filter="url(#wash)" transform="translate(2 3)">
-        <g fill="#9db08a"><path d="M276 52 Q290 34 308 46 Q296 60 276 52Z"/><path d="M336 44 Q352 28 368 42 Q354 56 336 44Z"/><path d="M372 60 Q388 46 398 62 Q384 72 372 60Z"/></g>
-      </g>
-      <g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M16 204 Q120 196 200 202 T386 200"/>
-        <path d="M340 38 V202" stroke="#7a5a48" stroke-width="5"/>
-        <path d="M262 50 Q320 36 398 50"/>
-        <path d="M276 52 Q290 34 308 46 Q296 60 276 52Z M336 44 Q352 28 368 42 Q354 56 336 44Z"/>
-      </g>
-      <g class="grapes">
-        <g filter="url(#wash)" transform="translate(2 3)" fill="#7b4a7a"><circle cx="292" cy="72" r="8"/><circle cx="306" cy="72" r="8"/><circle cx="286" cy="86" r="8"/><circle cx="300" cy="86" r="8"/><circle cx="314" cy="86" r="8"/><circle cx="293" cy="100" r="8"/><circle cx="307" cy="100" r="8"/><circle cx="300" cy="113" r="8"/></g>
-        <g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.2"><path d="M300 52 V64"/><circle cx="292" cy="72" r="8"/><circle cx="306" cy="72" r="8"/><circle cx="286" cy="86" r="8"/><circle cx="300" cy="86" r="8"/><circle cx="314" cy="86" r="8"/><circle cx="293" cy="100" r="8"/><circle cx="307" cy="100" r="8"/><circle cx="300" cy="113" r="8"/></g>
-        <use href="#yeast" x="296" y="58" width="15" height="16"/>
-        <use href="#yeast" x="283" y="93" width="14" height="15"/>
-      </g>
-      <g filter="url(#wash)" transform="translate(2 3)" fill="#7b4a7a"><circle cx="360" cy="78" r="7"/><circle cx="372" cy="78" r="7"/><circle cx="366" cy="90" r="7"/><circle cx="356" cy="90" r="7"/><circle cx="363" cy="102" r="7"/></g>
-      <g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.2"><path d="M366 50 V70"/><circle cx="360" cy="78" r="7"/><circle cx="372" cy="78" r="7"/><circle cx="366" cy="90" r="7"/><circle cx="356" cy="90" r="7"/><circle cx="363" cy="102" r="7"/></g>
-      <use href="#yeast" x="366" y="96" width="14" height="15"/>
-      <g class="bear">
-        <g filter="url(#wash)" transform="translate(2 3)">
-          <g stroke="#8d5f4b" stroke-width="16" stroke-linecap="round"><path d="M98 184 L94 204"/><path d="M134 190 L133 206"/><path d="M184 188 L187 205"/><path d="M210 180 L216 203"/></g>
-          <ellipse cx="150" cy="158" rx="78" ry="40" fill="#a8725a"/>
-          <circle cx="232" cy="124" r="34" fill="#a8725a"/>
-          <circle cx="210" cy="94" r="11" fill="#a8725a"/><circle cx="252" cy="94" r="11" fill="#a8725a"/>
-          <ellipse cx="256" cy="134" rx="18" ry="13" fill="#d8ab8b"/>
-        </g>
-        <g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M76 160 Q74 120 140 116 Q190 112 204 128 M224 156 Q214 190 150 198 Q90 200 76 160"/>
-          <circle cx="232" cy="124" r="34"/>
-          <path d="M200 98 A11 11 0 0 1 216 85 M246 85 A11 11 0 0 1 262 98"/>
-          <ellipse cx="256" cy="134" rx="18" ry="13"/>
-          <ellipse cx="268" cy="128" rx="6" ry="4.5" fill="#3b2233" stroke="none"/>
-          <circle cx="236" cy="116" r="3.6" fill="#3b2233" stroke="none"/>
-          <path d="M250 146 Q258 152 266 145"/>
-          <path d="M92 196 L94 206 M131 200 L132 207 M186 198 L188 206 M214 196 L217 204" stroke-width="2"/>
-        </g>
-      </g>
-      <g fill="#8a3f6a" filter="url(#wash)"><circle cx="279" cy="104" r="4"/><circle cx="272" cy="96" r="2.6"/><circle cx="285" cy="118" r="3"/></g>
-      <g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2" stroke-linecap="round"><path d="M270 78 l-8 -8 M262 92 l-10 -2 M276 66 l-2 -10"/></g>
-      <text class="letter pow" x="170" y="66" font-size="30">BLONK!</text>
-    </svg></div>
-  </figure>
-  <div class="beat"><span>A couple of days go by and our yeast-buds get to work.</span><span>Consuming sugars…</span><span>Releasing CO₂…</span><span><em>Secreting</em> alcohol…</span></div>
-
-  <figure class="fig" id="s-time"><div class="sheet">
-    <svg viewBox="0 0 400 236" role="img" aria-label="A clock ticks by while two yeast buddies work on a puddle of smooshed grapes. Day 1, day 2, day 3.">
-      <g filter="url(#wash)" transform="translate(2 3)">
-        <circle cx="200" cy="108" r="56" fill="#fbf0d8"/>
-        <ellipse cx="88" cy="198" rx="64" ry="13" fill="#8a3f6a"/>
-        <g fill="#7b4a7a"><circle cx="60" cy="190" r="10"/><circle cx="86" cy="186" r="10"/><circle cx="112" cy="191" r="10"/></g>
-      </g>
-      <g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M16 206 Q120 198 200 204 T386 202"/>
-        <circle cx="200" cy="108" r="56"/>
-        <path d="M200 62 V56 M223 68.2 L226 63 M239.8 85 L245 82 M246 108 H252 M239.8 131 L245 134 M223 147.8 L226 153 M200 154 V160 M177 147.8 L174 153 M160.2 131 L155 134 M154 108 H148 M160.2 85 L155 82 M177 68.2 L174 63" stroke-width="2.2"/>
-        <path d="M200 108 L224 120" stroke-width="4"/>
-        <ellipse cx="88" cy="198" rx="64" ry="13"/>
-        <circle cx="60" cy="190" r="10"/><circle cx="86" cy="186" r="10"/><circle cx="112" cy="191" r="10"/>
-      </g>
-      <g class="hand"><path d="M200 108 V68" stroke="#5b2c4c" stroke-width="3.6" stroke-linecap="round"/></g>
-      <circle cx="200" cy="108" r="5" fill="#5b2c4c"/>
-      <text class="letter" x="200" y="34" text-anchor="middle" font-size="22">TIME PASSES</text>
-      <text class="letter soft" x="292" y="92" font-size="18">day 1…</text>
-      <text class="letter soft" x="306" y="128" font-size="18">day 2…</text>
-      <text class="letter" x="320" y="164" font-size="20">day 3!</text>
-      <g class="bubbles" fill="#fffaf0" stroke="#5b2c4c" stroke-width="1.8">
-        <circle cx="70" cy="168" r="4"/><circle cx="92" cy="160" r="5"/><circle cx="116" cy="166" r="3.5"/><circle cx="80" cy="150" r="3"/><circle cx="104" cy="146" r="4"/>
-      </g>
-      <g class="wiggle"><use href="#yeast" x="36" y="144" width="36" height="39"/></g>
-      <g class="wiggle b"><use href="#yeast" x="98" y="140" width="36" height="39"/></g>
-    </svg></div>
-  </figure>
-  <p class="punch">And would you look at that? <span class="hl">Fermentation happens!</span> All on its own.</p>
-  <p class="punch">Thanks, Bear!!<br>Thanks, Yeast!!</p>
-
-  <figure class="fig" id="s-duo"><div class="sheet">
-    <svg viewBox="0 0 400 236" role="img" aria-label="The bear and the yeast buddy sit side by side, both giving a thumbs-up">
-      <g filter="url(#wash)" transform="translate(2 3)">
-        <path d="M70 202 C60 160 80 128 120 126 C160 124 182 158 176 202 Z" fill="#a8725a"/>
-        <path d="M152 158 Q178 148 182 112 L198 112 Q196 160 162 176 Z" fill="#a8725a"/>
-        <circle cx="190" cy="104" r="12" fill="#a8725a"/>
-        <path d="M187 94 L187 80 Q189 74 194 76 Q197 78 196 84 L195 94Z" fill="#a8725a"/>
-        <circle cx="120" cy="100" r="34" fill="#a8725a"/>
-        <circle cx="98" cy="72" r="11" fill="#a8725a"/><circle cx="144" cy="72" r="11" fill="#a8725a"/>
-        <ellipse cx="122" cy="112" rx="16" ry="11" fill="#d8ab8b"/>
-        <ellipse cx="122" cy="176" rx="30" ry="22" fill="#c48f74"/>
-      </g>
-      <g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M16 204 Q120 196 200 202 T386 200"/>
-        <path d="M70 202 C60 160 82 132 104 128 M138 128 C150 132 156 140 160 150 M176 202 C178 186 174 174 166 170"/>
-        <path d="M152 158 Q178 148 182 112 M198 112 Q196 160 162 176"/>
-        <circle cx="190" cy="104" r="12"/>
-        <path d="M187 94 L187 80 Q189 74 194 76 Q197 78 196 84 L195 94"/>
-        <circle cx="120" cy="100" r="34"/>
-        <path d="M88 76 A11 11 0 0 1 104 63 M138 63 A11 11 0 0 1 154 76"/>
-        <ellipse cx="122" cy="112" rx="16" ry="11"/>
-        <ellipse cx="122" cy="106" rx="5" ry="3.8" fill="#3b2233" stroke="none"/>
-        <circle cx="108" cy="94" r="3.5" fill="#3b2233" stroke="none"/><circle cx="136" cy="94" r="3.5" fill="#3b2233" stroke="none"/>
-        <path d="M114 120 Q122 127 130 120"/>
-        <ellipse cx="122" cy="176" rx="30" ry="22" stroke-width="1.8"/>
-        <path d="M206 72 l8 -10 M214 92 l12 -4 M200 56 l2 -12" stroke-width="2"/>
-      </g>
-      <g class="wiggle"><use href="#yeast-thumb" x="224" y="62" width="152" height="140"/></g>
-    </svg></div>
-  </figure>
-  <p class="punch">And this is where <span class="hl">humans</span> come in.</p>
-  <p class="t">Picture a quiet day in the prehistoric forest. Along comes one of our extremely ancient ancestors, following that rich, sweet smell.</p>
-  <div class="beat"><span>He finds the fermented fruit.</span><span>He <em>eats</em> the fermented fruit.</span><span><strong>And bazonga!</strong></span></div>
-  <p class="punch big">Primitive <span class="hl">Drunkenness!!</span></p>
-
-  <figure class="fig" id="s-ancestor"><div class="sheet">
-    <svg viewBox="0 0 400 236" role="img" aria-label="A shaggy ancestor in a tiny party hat dances in the forest, holding up a bunch of fermented grapes">
-      <g filter="url(#wash)" transform="translate(2 3)">
-        <g fill="#a5b892"><circle cx="14" cy="34" r="42"/><circle cx="66" cy="18" r="34"/><circle cx="386" cy="30" r="46"/><circle cx="340" cy="12" r="30"/></g>
-      </g>
-      <g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M16 206 Q120 198 200 204 T386 202"/>
-        <path d="M34 60 V204 M370 70 V204" stroke="#6e4e3e" stroke-width="8"/>
-        <path d="M150 40 q6 -10 14 -4 q6 8 -2 12 q-8 2 -6 -6 M242 34 q6 -10 14 -4 q6 8 -2 12 q-8 2 -6 -6" stroke-width="1.8"/>
-      </g>
-      <g class="dance">
-        <g filter="url(#wash)" transform="translate(2 3)">
-          <g stroke="#c99572" stroke-width="11" stroke-linecap="round" fill="none"><path d="M186 192 L180 212"/><path d="M214 192 L222 212"/><path d="M174 140 Q150 124 140 96"/><path d="M226 140 Q252 122 262 92"/></g>
-          <path d="M168 134 Q200 120 232 134 L240 196 L228 188 L216 198 L204 188 L192 198 L180 188 L166 196 Z" fill="#9a7a60"/>
-          <ellipse cx="200" cy="102" rx="28" ry="30" fill="#c99572"/>
-          <path d="M168 106 Q160 68 186 64 Q200 52 216 64 Q242 66 234 106 Q228 88 214 86 Q200 80 186 86 Q174 88 168 106Z" fill="#5a3f36"/>
-          <path d="M178 110 Q182 138 200 140 Q218 138 222 110 Q212 122 200 122 Q188 122 178 110Z" fill="#5a3f36"/>
-          <path d="M190 68 L204 32 L218 66Z" fill="#c25a86"/>
-          <circle cx="204" cy="30" r="5.5" fill="#efc163"/>
-          <g fill="#7b4a7a"><circle cx="262" cy="80" r="7"/><circle cx="274" cy="82" r="7"/><circle cx="266" cy="92" r="7"/><circle cx="278" cy="94" r="7"/><circle cx="271" cy="104" r="7"/></g>
-        </g>
-        <g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M168 134 Q200 120 232 134 L240 196 L228 188 L216 198 L204 188 L192 198 L180 188 L166 196 Z"/>
-          <ellipse cx="200" cy="102" rx="28" ry="30"/>
-          <path d="M168 106 Q160 68 186 64 Q200 52 216 64 Q242 66 234 106"/>
-          <path d="M184 100 Q190 95 196 100 M204 100 Q210 95 216 100"/>
-          <path d="M192 116 Q200 124 208 116"/>
-          <path d="M190 68 L204 32 L218 66Z"/>
-          <circle cx="140" cy="94" r="6"/>
-          <circle cx="262" cy="80" r="7"/><circle cx="274" cy="82" r="7"/><circle cx="266" cy="92" r="7"/><circle cx="278" cy="94" r="7"/><circle cx="271" cy="104" r="7"/>
-          <path d="M270 74 Q272 66 282 64" stroke-width="2"/>
-        </g>
-      </g>
-      <text class="letter" x="256" y="166" font-size="25" transform="rotate(8 256 166)">BAZONGA!</text>
-    </svg></div>
-  </figure>
-  <p class="t">So here’s everything you need to know about fermentation:</p>
-  <p class="eq"><b>Yeast</b> + <b>Sugar</b> = <b>CO₂</b> + <b>Alcohol</b></p>
-  <p class="t">And <strong>Alcohol</strong> + <strong>People</strong> eventually = beer, wine, pulque and sake. Then, thousands of years later, every spirit in the cabinet. Whiskey, brandy, rum, even tequila!</p>
-  <p class="t">So fermented alcohol isn’t some weird side note in history.</p>
-  <p class="punch">It’s human history. <span class="hl">Our</span> history.</p>
-  <p class="t">In fact, some archaeologists even think it’s what helped us go from wandering little weirdos to settled farmers!</p>
-  <section class="epilogue"><p class="t">Long before spirits.</p>
-  <p class="t">And long before bartenders.</p>
-  <p class="t">And long, <em>long</em> before cocktails and wine lists.</p>
-  <p class="closing">There was yeast, sugar, and the beautiful human realization that spoiled fruit might actually be <em>FUN</em>.</p>
-  </section>
-
-  <figure class="fig" id="s-fire"><div class="sheet">
-    <svg viewBox="0 0 400 236" role="img" aria-label="Two prehistoric friends, a bearded man and a woman with long hair, raise cups to each other across a campfire at dusk while a tiny yeast buddy watches">
-      <g filter="url(#wash)">
-        <rect x="0" y="0" width="400" height="236" fill="#e4d0de" opacity=".85"/>
-        <circle cx="332" cy="46" r="16" fill="#f5df9e"/>
-        <path d="M0 190 Q120 170 200 186 T400 180 V236 H0Z" fill="#b6c7a0"/>
-        <circle cx="200" cy="186" r="48" fill="#f2bf62" opacity=".5"/>
-      </g>
-      <g fill="#e6b264"><path d="M60 40 l2 -6 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2Z"/><path d="M150 24 l1.5 -4.5 l1.5 4.5 l4.5 1.5 l-4.5 1.5 l-1.5 4.5 l-1.5 -4.5 l-4.5 -1.5Z"/><path d="M262 30 l1.5 -4.5 l1.5 4.5 l4.5 1.5 l-4.5 1.5 l-1.5 4.5 l-1.5 -4.5 l-4.5 -1.5Z"/></g>
-      <g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M0 190 Q120 170 200 186 T400 180"/>
-        <path d="M168 214 L232 196 M168 196 L232 214" stroke="#6e4e3e" stroke-width="9"/>
-      </g>
-      <g class="flame">
-        <g filter="url(#wash)"><path d="M200 200 Q176 180 189 158 Q195 168 198 148 Q214 170 214 158 Q228 182 207 200Z" fill="#ea8d3a"/><path d="M201 198 Q192 186 200 174 Q211 187 205 198Z" fill="#f8d779"/></g>
-        <path d="M200 200 Q176 180 189 158 Q195 168 198 148 Q214 170 214 158 Q228 182 207 200Z" fill="none" stroke="#5b2c4c" stroke-width="2.4" stroke-linejoin="round" filter="url(#crayon)"/>
-      </g>
-      <!-- friend on the left -->
-      <g filter="url(#wash)" transform="translate(2 3)">
-        <path d="M58 220 Q58 172 96 166 Q134 172 134 220Z" fill="#9a7a60"/>
-        <ellipse cx="96" cy="138" rx="24" ry="25" fill="#c99572"/>
-        <path d="M72 140 Q66 110 92 110 Q122 108 120 140 Q112 124 96 124 Q80 124 72 140Z" fill="#5a3f36"/>
-        <path d="M78 146 Q82 170 96 170 Q112 170 116 146 Q108 156 96 156 Q84 156 78 146Z" fill="#5a3f36"/>
-      </g>
-      <g class="cheer"><path d="M124 180 Q140 166 148 140" fill="none" stroke="#c99572" stroke-width="11" stroke-linecap="round"/><path d="M138 112 H160 L157 136 H141Z" fill="#c2876a" stroke="#5b2c4c" stroke-width="2.4" stroke-linejoin="round" filter="url(#crayon)"/></g>
-      <g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M58 220 Q58 172 96 166 Q134 172 134 220"/>
-        <ellipse cx="96" cy="138" rx="24" ry="25"/>
-        <circle cx="88" cy="136" r="2.6" fill="#3b2233" stroke="none"/><circle cx="105" cy="136" r="2.6" fill="#3b2233" stroke="none"/>
-        <path d="M89 150 Q96 156 103 150" stroke="#f3dcc0" stroke-width="2.4"/>
-      </g>
-      <!-- friend on the right -->
-      <g filter="url(#wash)" transform="translate(2 3)">
-        <path d="M276 140 Q272 104 302 104 Q334 104 332 140 L338 184 Q326 174 322 152 Q316 128 304 126 Q292 128 286 152 Q282 174 270 184 Z" fill="#4a332e"/>
-        <path d="M266 220 Q266 172 304 166 Q342 172 342 220Z" fill="#b38a6b"/>
-        <ellipse cx="304" cy="138" rx="22" ry="24" fill="#b98563"/>
-        <path d="M282 134 Q284 110 304 110 Q326 110 326 134 Q316 120 304 120 Q292 120 282 134Z" fill="#4a332e"/>
-      </g>
-      <g class="cheer r"><path d="M280 180 Q264 166 256 140" fill="none" stroke="#b98563" stroke-width="11" stroke-linecap="round"/><path d="M244 112 H266 L263 136 H247Z" fill="#c2876a" stroke="#5b2c4c" stroke-width="2.4" stroke-linejoin="round" filter="url(#crayon)"/></g>
-      <g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M266 220 Q266 172 304 166 Q342 172 342 220"/>
-        <ellipse cx="304" cy="138" rx="22" ry="24"/>
-        <path d="M276 140 Q272 104 302 104 Q334 104 332 140 L338 184 M270 184 Q282 174 286 152"/>
-        <circle cx="296" cy="137" r="2.6" fill="#3b2233" stroke="none"/><circle cx="312" cy="137" r="2.6" fill="#3b2233" stroke="none"/>
-        <path d="M297 149 Q304 155 311 149"/>
-      </g>
-      <g fill="#e6b264" stroke="#5b2c4c" stroke-width="1.4"><circle cx="292" cy="176" r="3.2"/><circle cx="300" cy="179" r="3.2"/><circle cx="308" cy="179" r="3.2"/><circle cx="316" cy="176" r="3.2"/></g>
-      <g class="wiggle"><use href="#yeast" x="352" y="186" width="26" height="28"/></g>
-    </svg></div>
-  </figure>
-  <p class="end">END OF STORY · KEEP GETTING CURIOUS ✳</p>
+  <nav class="doors" aria-label="Pick a story">
+    <a class="door wide" href="prehistory/index.html"><svg class="door-icon" aria-hidden="true" viewBox="0 0 124 134"><use href="#yeast"/></svg><span class="door-label">Fermentation in Pre-History</span></a>
+    <div class="door soon wide" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#crock-icon"/></svg><span class="door-text"><span class="door-label">But how did HUMANS Harness Fermentation?</span><span class="stamp">Coming soon</span></span></div>
+  </nav>
 
   <nav class="end-doors" aria-label="Where next">
     <p class="back"><a href="../makers-mark/index.html" data-back>← Back to the bottle</a></p>

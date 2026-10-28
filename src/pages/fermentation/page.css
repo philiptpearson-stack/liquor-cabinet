@@ -1,33 +1,8 @@
-/* Fermentation: scene motion */
-.bear{animation:blonk 4.2s ease-in-out -2.1s infinite}
-@keyframes blonk{0%,30%{transform:translateX(-14px)}42%{transform:translateX(8px)}48%{transform:translateX(2px) rotate(-1.5deg)}56%,100%{transform:translateX(4px)}}
-.pow{transform-box:fill-box;transform-origin:center;animation:pow 4.2s ease-out -2.1s infinite}
-@keyframes pow{0%,38%{transform:scale(.2) rotate(-14deg);opacity:0}46%{transform:scale(1.18) rotate(-6deg);opacity:1}54%,86%{transform:scale(1) rotate(-8deg);opacity:1}100%{transform:scale(1) rotate(-8deg);opacity:0}}
-.grapes{transform-box:fill-box;transform-origin:50% 0;animation:swing 4.2s ease-in-out -2.1s infinite}
-@keyframes swing{0%,42%{transform:rotate(0)}50%{transform:rotate(7deg)}60%{transform:rotate(-5deg)}70%,100%{transform:rotate(0)}}
-.hand{transform-box:view-box;transform-origin:200px 108px;animation:spin 3.5s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-
-/* Rewind: ONE CSS clock (12.9s) pans the strip and swaps the era chip, so picture and label can't drift.
-   Holds 1.1s on each era, pans 1.4s between them, lingers 2.2s in the prehistoric forest, then fades back to the city.
-   The chip switches halfway through each pan, when the next era is centred. */
-#strip{animation:pan 12.9s ease-in-out infinite}
-@keyframes pan{
-  0%,8.527%{transform:translateX(0);opacity:1}
-  19.380%,27.907%{transform:translateX(-400px)}
-  38.760%,47.287%{transform:translateX(-800px)}
-  58.140%,66.667%{transform:translateX(-1200px)}
-  77.519%,94.574%{transform:translateX(-1600px);opacity:1}
-  97.280%{transform:translateX(-1600px);opacity:0}
-  97.290%{transform:translateX(0);opacity:0}
-  100%{transform:translateX(0);opacity:1}
-}
-.chip.era{display:grid}
-.chip.era b{grid-area:1/1;font-weight:inherit;opacity:0;animation-duration:12.9s;animation-timing-function:linear;animation-iteration-count:infinite}
-.chip.era .e4{opacity:1} /* resting frame (reduced motion): the prehistoric forest, same as the strip */
-.chip.era .e0{animation-name:era0}.chip.era .e1{animation-name:era1}.chip.era .e2{animation-name:era2}.chip.era .e3{animation-name:era3}.chip.era .e4{animation-name:era4}
-@keyframes era0{0%,13.95%{opacity:1}13.96%,97.28%{opacity:0}97.29%,100%{opacity:1}}
-@keyframes era1{0%,13.95%{opacity:0}13.96%,33.33%{opacity:1}33.34%,100%{opacity:0}}
-@keyframes era2{0%,33.33%{opacity:0}33.34%,52.71%{opacity:1}52.72%,100%{opacity:0}}
-@keyframes era3{0%,52.71%{opacity:0}52.72%,72.09%{opacity:1}72.10%,100%{opacity:0}}
-@keyframes era4{0%,72.09%{opacity:0}72.10%,97.28%{opacity:1}97.29%,100%{opacity:0}}
+/* Fermentation hub */
+.bubble-up{animation:bubbleup 2.6s ease-in infinite}
+.bubble-up.d2{animation-delay:-.9s}.bubble-up.d3{animation-delay:-1.7s}
+@keyframes bubbleup{0%{transform:translateY(6px);opacity:0}20%{opacity:1}100%{transform:translateY(-34px);opacity:0}}
+.yeast-bob{animation:yeastbob 1.6s ease-in-out infinite alternate}
+@keyframes yeastbob{to{transform:translateY(-4px)}}
+#short-version{margin-top:-.2rem}
+@media (prefers-reduced-motion: reduce){.bubble-up{opacity:1}}

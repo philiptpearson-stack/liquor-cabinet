@@ -198,3 +198,10 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .bio-card dl{grid-column:1/-1;margin:0;padding-top:.7rem;border-top:1.5px dashed #d9c3b4;display:grid;grid-template-columns:auto 1fr;gap:.45rem .85rem}
 .bio-card dt{font:800 .68rem/1.5 var(--body);letter-spacing:.1em;text-transform:uppercase;color:#8a5a3c;padding-top:.08rem}
 .bio-card dd{margin:0;font-size:.98rem;line-height:1.4}
+
+/* A folded card's name and its one-line summary (Cabinet Card, Short Version) */
+.cabinet-card summary{align-items:center}
+.cc-head{display:block}
+.cc-name{font-family:var(--hand);font-weight:700;font-size:1.5rem;line-height:1}
+.cc-quick{display:inline-block;margin-top:.3rem;font:800 .86rem/1.3 var(--body);letter-spacing:.02em;color:#6b4632}
+.cc-quick > span{white-space:nowrap}
