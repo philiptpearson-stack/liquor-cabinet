@@ -20,11 +20,11 @@
 @keyframes walkaway{0%{transform:translateX(-14px);opacity:0}8%{opacity:1}82%{opacity:1}96%,100%{transform:translateX(150px);opacity:0}}
 .bob{animation:bob .32s ease-in-out infinite alternate}
 @keyframes bob{to{transform:translateY(-3px)}}
-.tear-l{animation:tearl 1s ease-in infinite}
-.tear-r{animation:tearr 1s ease-in infinite}
-@keyframes tearl{0%{transform:translate(0,0);opacity:0}10%{opacity:1}100%{transform:translate(-30px,30px);opacity:0}}
-@keyframes tearr{0%{transform:translate(0,0);opacity:0}10%{opacity:1}100%{transform:translate(30px,30px);opacity:0}}
-.tear-fall{animation:tearfall 1s ease-in infinite}
+.tear-l{animation:tearl .72s ease-out infinite}
+.tear-r{animation:tearr .72s ease-out infinite}
+@keyframes tearl{0%{transform:translate(0,0);opacity:0}8%{opacity:1}100%{transform:translate(-34px,34px);opacity:0}}
+@keyframes tearr{0%{transform:translate(0,0);opacity:0}8%{opacity:1}100%{transform:translate(34px,34px);opacity:0}}
+.tear-fall{animation:tearfall .7s ease-in infinite}
 @keyframes tearfall{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(34px);opacity:0}}
 
 /* 3. Eureka */
