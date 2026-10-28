@@ -30,7 +30,7 @@ Good, good. Period.
 And *expensive*, too.
 Five words. Maybe the cheekiest ad in bourbon history.
 But think about it!
-Other bourbons were bragging about being cheap. Maker's Mark walked in and said, nah, man. Fuck that. We cost more.
+Other bourbons were bragging about being cheap. Maker's Mark walked in and said, nah. Fuck that. We cost more.
 **On purpose.**
 But the magic didn't happen in the ad. It happened at the liquor store!
 Let's say a customer walks into the liquor store planning to grab his usual bottle of blended scotch. But, wait. Isn't that Maker's Mark — the one from those crazy ads?
