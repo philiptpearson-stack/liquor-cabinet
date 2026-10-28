@@ -4,6 +4,7 @@
 # The build refuses to publish the page if its words drift from this file.
 # From Philip's Word doc Makers_Founders_Gamble.docx, Oct 27 2026 (one typo fixed: "Th most" -> "The most").
 # The door links (bourbon refresher, WSJ, Keep exploring, Back) aren't in the Word doc; they're kept from before.
+# Bio Card, Oct 28 2026: years only, from the common record (died 1992 at 82; Hall of Fame 2002).
 
 The Founder's Gamble.
 Meet Bill Sr!
@@ -47,6 +48,14 @@ Bill Sr.'s son, Bill Jr., had a buddy who now wrote for *The Wall Street Journal
 And almost overnight, Maker's Mark became a national sensation.
 → The Wall Street Journal Article that Changed *Everything*
 Coming soon
+Bio Card
+T. William "Bill" Samuels Sr.
+Born
+c. 1910
+Died
+1992
+Hall of Fame
+Kentucky Bourbon Hall of Fame, 2002
 Keep exploring
 → Margie Samuels: One of Whiskey's Most Iconic Women
 ← Back to the bottle
