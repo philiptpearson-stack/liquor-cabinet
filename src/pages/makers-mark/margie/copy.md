@@ -34,7 +34,6 @@ She took over the basement for her wax experiments.
 And in May of 1958, Margie melted red sealing wax in her deep fryer and dipped the very first bottle.
 (And we just want to say: we *love* the thought of Margie the chemist, experimenting away in her basement and inventing the identity of freaking *Maker's Mark.* (!!!))
 Every bottle of Maker's Mark is still dipped by hand today.
-As whiskey writer Fred Minnick put it: Maker's Mark was "the beautiful red dress in a sea of boring gray dresses."
 But Margie didn't stop at the bottle.
 That distillery in Loretto was old. *Victorian* old.
 Money was tight, and plenty of folks would have just knocked the old buildings down and started over.
