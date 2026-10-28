@@ -13,6 +13,7 @@ src/
     defs.svg      crayon / watercolor / "boil" filters and the character drawings (yeast-bud, ...)
     kit.js        optional extras: Pause button, reading bar, pausing scenes that are off screen
     page.html     the page template
+    questions.html  the Common Spirits Questions footer every page ends with (copy in questions.md)
   pages/<slug>/   one folder per story (folders nest: makers-mark/founders-gamble/)
     page.json     title, link-preview description, top-bar label
     story.html    the page: copy + crayon scenes

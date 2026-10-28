@@ -33,5 +33,3 @@ The Wall Street Journal Article that Changed *Everything*
 Coming soon
 The Bartender's Perspective
 Coming soon
-Common Spirits Questions
-→ What is fermentation, anyway??

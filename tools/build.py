@@ -18,7 +18,12 @@ a labelled placeholder instead. Inside a crayon scene, <!--swap:name|x y w h-->d
 puts the photo in that box, and keeps the crayon drawing if there's no photo.
 Photos aren't licensed yet: the site is for friends, not for the public (see robots.txt).
 
-A link written href="@home" goes to the page the site opens on (src/site.json).
+A link written href="@home" goes to the page the site opens on (src/site.json), and
+href="@page:<slug>" goes to that page, as a path from wherever the link sits.
+
+Every page ends with the Common Spirits Questions footer (src/kit/questions.html, its copy
+in src/kit/questions.md). A page never lists itself, and a page whose footer would be empty
+gets none. A page can opt out with "questions": false in its page.json.
 
 The build refuses to write a page whose words don't match copy.md exactly,
 so copy can't drift. Run:  python3 tools/build.py
@@ -116,6 +121,12 @@ def cast_for(d: Path) -> str:
     return '\n'.join(reversed(parts))
 
 
+def questions_for(slug: str, kit: dict) -> str:
+    """The shared footer, minus this page's own entry; '' when nothing is left."""
+    block = re.sub(rf'\s*<p class="go" data-page="{re.escape(slug)}">.*?</p>', '', kit['questions'], flags=re.S)
+    return block if 'data-page=' in block else ''
+
+
 def build_page(d: Path, template: str, kit: dict, home: str) -> list[str]:
     slug = d.relative_to(PAGES).as_posix()
     meta = json.loads((d / 'page.json').read_text())
@@ -130,8 +141,15 @@ def build_page(d: Path, template: str, kit: dict, home: str) -> list[str]:
             problems.append(f'{slug}: page words differ from copy.md\n{diff}')
     else:
         problems.append(f'{slug}: no copy.md, so the copy check was skipped')
-    # href="@home" = the page the site opens on (src/site.json), as a path from this page
+    # the shared footer goes at the end of the story's main column
+    if meta.get('questions', True):
+        footer = questions_for(slug, kit)
+        if footer:
+            i = story.rstrip().rfind('</div>')
+            story = story[:i].rstrip() + '\n\n  ' + footer.strip() + '\n' + story[i:]
+    # href="@home" = the page the site opens on (src/site.json); href="@page:<slug>" = that page
     story = story.replace('href="@home"', 'href="' + posixpath.relpath(home + '/index.html', slug) + '"')
+    story = re.sub(r'href="@page:([\w/-]+)"', lambda m: 'href="' + posixpath.relpath(m.group(1) + '/index.html', slug) + '"', story)
     story, missing = place_scenes(story, d)
     if missing:
         problems.append(f'{slug}: missing scene file(s): {", ".join(missing)}')
@@ -167,10 +185,13 @@ def redirect(target: str) -> str:
 
 
 def main() -> int:
-    kit = {'css': (KIT / 'kit.css').read_text().rstrip(), 'defs': (KIT / 'defs.svg').read_text().rstrip(), 'js': (KIT / 'kit.js').read_text()}
+    kit = {'css': (KIT / 'kit.css').read_text().rstrip(), 'defs': (KIT / 'defs.svg').read_text().rstrip(), 'js': (KIT / 'kit.js').read_text(),
+           'questions': (KIT / 'questions.html').read_text()}
     template = (KIT / 'page.html').read_text()
     site = json.loads((ROOT / 'src' / 'site.json').read_text())
     problems = []
+    if page_words(kit['questions']) != approved_words((KIT / 'questions.md').read_text()):
+        problems.append('kit: Common Spirits Questions words differ from src/kit/questions.md')
     for d in sorted(p.parent for p in PAGES.rglob('page.json')):
         problems += build_page(d, template, kit, site['home'].strip('/'))
     home = site['home'].strip('/') + '/index.html'
