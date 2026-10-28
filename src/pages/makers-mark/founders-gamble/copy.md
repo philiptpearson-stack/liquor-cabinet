@@ -37,7 +37,6 @@ He checks the price. And yeah. It *is* expensive. For a bourbon.
 But compared to the imported bottle of scotch he came in for? Right in the same ballpark. In fact, it's even a little cheaper!
 So he buys it. Takes it home. Pours a glass.
 And, wait a minute! It's actually... *smooth!* Even a little sweet.
-Kentucky's best-kept secret
 And for the next 20-some years, that was the whole recipe.
 Make it soft. Make it slow. Price it proud. Dip every bottle in red wax.
 People who found it loved it.
