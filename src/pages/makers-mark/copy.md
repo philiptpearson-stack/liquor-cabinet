@@ -28,7 +28,6 @@ This is Maker's Mark. And you can't tell the story of bourbon without it.
 So let's find out more, shall we?
 The Founder's Gamble
 Margie Samuels: One of Whiskey's Most Iconic Women
-Coming soon
 The Wall Street Journal Article that Changed *Everything*
 Coming soon
 The Bartender's Perspective

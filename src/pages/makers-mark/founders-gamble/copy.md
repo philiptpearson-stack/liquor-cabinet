@@ -49,5 +49,4 @@ And almost overnight, Maker's Mark became a national sensation.
 Coming soon
 Keep exploring
 → Margie Samuels: One of Whiskey's Most Iconic Women
-Coming soon
 ← Back to the bottle

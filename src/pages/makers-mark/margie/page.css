@@ -1,0 +1,53 @@
+/* Margie Samuels: scene motion. Every loop runs on CSS alone. */
+.kicker.sub{margin-top:.55rem}
+
+/* shared beats */
+.pop{transform-box:view-box;animation:pop 2.4s ease-in-out infinite}
+@keyframes pop{0%,100%{transform:scale(1) rotate(-4deg)}50%{transform:scale(1.14) rotate(4deg)}}
+.twinkle{animation:twinkle 1.6s ease-in-out infinite}
+.twinkle.d2{animation-delay:-.55s}.twinkle.d3{animation-delay:-1.1s}
+@keyframes twinkle{0%,100%{transform:scale(.55) rotate(0);opacity:.35}50%{transform:scale(1.15) rotate(20deg);opacity:1}}
+.float{animation:float 3.2s ease-in-out infinite alternate}
+@keyframes float{to{transform:translateY(-4px)}}
+.bob{animation:bob .4s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(-3px)}}
+
+/* 1. Meet Margie */
+.wave-arm{animation:wavearm .62s ease-in-out infinite alternate}
+@keyframes wavearm{from{transform:rotate(12deg)}to{transform:rotate(-16deg)}}
+
+/* 2. The bread test: steam off the loaves, Bill chewing */
+.steam{animation:steam 2.4s ease-in-out infinite}
+@keyframes steam{0%{transform:translateY(4px);opacity:0}30%{opacity:.9}100%{transform:translateY(-10px);opacity:0}}
+.bite{animation:bite .9s ease-in-out infinite alternate}
+@keyframes bite{to{transform:translateY(-2px)}}
+
+/* 3. The pewter mark: Margie leans in for a closer look */
+.peer{animation:peer 2.8s ease-in-out infinite alternate}
+@keyframes peer{to{transform:translateX(3px)}}
+
+/* 4. The wax kitchen: dip... ta-da! */
+.wax-bubble{animation:waxbub 1.6s ease-in infinite}
+@keyframes waxbub{0%{transform:translateY(2px);opacity:0}25%{opacity:1}100%{transform:translateY(-9px);opacity:0}}
+.pose-a{animation:posea 6s step-end infinite}
+@keyframes posea{0%{opacity:1}50%{opacity:0}}
+.pose-b{opacity:0;animation:poseb 6s step-end infinite}
+@keyframes poseb{0%{opacity:0}50%{opacity:1}}
+
+/* 5. The restored distillery: visitors stroll up the path */
+.stroll{animation:stroll 10s linear infinite}
+@keyframes stroll{0%{transform:translateX(-20px);opacity:0}6%{opacity:1}88%{opacity:1}100%{transform:translateX(250px);opacity:0}}
+
+/* 6. The wax, up close (a real photo): a slow creep in */
+.photo.neck{max-width:13rem;overflow:hidden;border-radius:10px;
+  -webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
+.photo.neck .asset{animation:creep 12s ease-in-out infinite alternate;transform-origin:50% 40%}
+@keyframes creep{from{transform:scale(1)}to{transform:scale(1.1) translateY(2%)}}
+.js .fig.neck:not(.on) .asset, .still .fig.neck .asset{animation-play-state:paused}
+
+/* Reduced motion: each scene rests on its best frame */
+@media (prefers-reduced-motion: reduce){
+  .pose-a{opacity:0}
+  .pose-b{opacity:1}
+  .stroll{transform:translateX(var(--rest))}
+}
