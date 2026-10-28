@@ -2,13 +2,9 @@
 
 # One line per line of text on the page, in order. Illustrations are not included.
 # The build refuses to publish the page if its words drift from this file.
-# Approved by Philip: v18, Oct 23 2026.
+# Approved by Philip: v18, Oct 23 2026. Cuts Oct 27 2026: the opening welcome, "Seriously! It's so simple...", and the "yeast-buds are getting their sugar" line.
 
 Fermentation.
-Yay!
-You made it.
-Now we can have some fun and get boozy.
-It’s time to talk about fermentation!
 You’ve heard of fermentation, right? The process by which beer, wine and all of their little cousins are born? It’s sort of the birds and bees of alcohol!
 Basically, a super-tiny microorganism called yeast turns sugar from plants into alcohol.
 Yeast has one job in life. It eats sugar. And then it secretes alcohol. (Plus a little CO₂. That’s the bubbles.)
@@ -18,13 +14,10 @@ But wait. Beer and wine? When do humans get involved??
 Well, let’s back up…
 Like, waaaay up.
 Turns out, our yeast-buds were making booze way before humans were doing human-stuff.
-Seriously!
-It’s so simple, it happens without anybody lifting a finger.
 Imagine an ancient bear goes sauntering past some grapevines. He kind of blonks into the grapes and smooshes them.
 Now those sugary grape-insides are wide open. And guess who’s been hanging around on the vines? Our little buddies, the yeast!
 A couple of days go by and our yeast-buds get to work.Consuming sugars…Releasing CO₂…Secreting alcohol…
 And would you look at that? Fermentation happens! All on its own.
-The yeast-buds are getting their sugar, and the grapes are getting a little boozy. They’re on their way to becoming wine!
 Thanks, Bear!!
 Thanks, Yeast!!
 And this is where humans come in.
