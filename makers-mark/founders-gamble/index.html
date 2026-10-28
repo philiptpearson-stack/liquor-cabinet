@@ -201,6 +201,17 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .doors .door.wide .door-label{font-size:1.35rem}
 .door-text{display:flex;flex-direction:column;align-items:flex-start;gap:.55rem}
 .door.soon.wide .stamp{margin-top:0}
+
+/* ---------- Bio Card: the vital stats for a person we feature, set apart from the story */
+.bio-card{display:grid;grid-template-columns:auto 1fr;gap:.8rem .9rem;align-items:center;margin:1rem 2px .4rem;padding:1rem 1rem 1.1rem;
+  background:#fffaf1;color:#3a2532;border:2.5px solid #5b2c4c;border-radius:16px 12px 18px 13px;box-shadow:3px 4px 0 #5b2c4c22;transform:rotate(.6deg)}
+.bio-face{width:68px;height:68px;border-radius:50%;background:#f5e1b6;border:2px solid #5b2c4c}
+.bio-head{min-width:0}
+.bio-kicker{font:800 .62rem/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:#8b3a63;margin:.15rem 0 .35rem}
+.bio-name{font-family:var(--hand);font-weight:700;font-size:1.45rem;line-height:1.05;margin:0;text-wrap:balance}
+.bio-card dl{grid-column:1/-1;margin:0;padding-top:.7rem;border-top:1.5px dashed #d9c3b4;display:grid;grid-template-columns:auto 1fr;gap:.45rem .85rem}
+.bio-card dt{font:800 .68rem/1.5 var(--body);letter-spacing:.1em;text-transform:uppercase;color:#8a5a3c;padding-top:.08rem}
+.bio-card dd{margin:0;font-size:.98rem;line-height:1.4}
 /* Door 1, The Founder's Gamble: scene motion. Every loop runs on CSS alone. */
 
 /* shared beats */

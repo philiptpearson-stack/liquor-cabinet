@@ -4,6 +4,7 @@
 # The build refuses to publish the page if its words drift from this file.
 # From Philip's Word doc Margie_Icons_of_Whiskey.docx, Oct 27 2026. The title and kicker come from
 # her door's name; the links at the end (Keep exploring, Back) aren't in the Word doc.
+# New ending from Philip, Oct 28 2026. Bio Card facts: Claude's research (birth year: Find a Grave, 1913).
 
 Margie Samuels.
 One of Whiskey's Most Iconic Women
@@ -34,15 +35,24 @@ And in May of 1958, Margie melted red sealing wax in her deep fryer and dipped t
 Every bottle of Maker's Mark is still dipped by hand today.
 As whiskey writer Fred Minnick put it: Maker's Mark was "the beautiful red dress in a sea of boring gray dresses."
 But Margie didn't stop at the bottle.
-That distillery in Loretto was old. *Victorian* old. Money was tight, and plenty of folks would have just knocked the old buildings down and started over.
+That distillery in Loretto was old. *Victorian* old.
+Money was tight, and plenty of folks would have just knocked the old buildings down and started over.
 Margie said no.
 Every building would be saved. And restored. Faithfully.
-***It paid off.***
-In 1980, Maker's Mark became the first distillery in America to be named a National Historic Landmark.
-Today, hundreds of thousands of people visit every year. Some folks even say Margie planted the seed for the whole Kentucky Bourbon Trail.
-She passed away in 1985. In 2014, she was inducted into the Kentucky Bourbon Hall of Fame. The first woman directly connected to a distillery to get in.
+And look at the place now.
+A National Historic Landmark. The first distillery in America to earn that designation, back in 1980.
+Today, hundreds of thousands of people visit every year. Walking the grounds of that old distillery Margie wouldn't let them tear down.
+Some folks even say she planted the seed for the whole Kentucky Bourbon Trail.
 So next time you see that red wax creeping down the neck of a bottle...
 That's Margie's mark.
+Bio Card
+Marjorie "Margie" Mattingly Samuels
+Born
+1913
+Died
+1985
+Hall of Fame
+Kentucky Bourbon Hall of Fame, 2014. The first woman directly connected to a distillery to be inducted.
 Keep exploring
 → The Founder's Gamble
 → The Wall Street Journal Article that Changed *Everything*
