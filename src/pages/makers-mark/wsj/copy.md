@@ -6,8 +6,8 @@
 # The links at the end (Keep exploring, Back) aren't in the Word doc.
 
 The WSJ article that changed ***EVERYTHING***
-August 1, 1980, was the day that Maker's Mark became a *real* company.
-At least, that's what company founder Bill Samuels Sr. said later on anyway.
+On August 1, 1980, Maker's Mark became a *real* company.
+At least, that's what company founder Bill Samuels Sr. said anyway.
 Because that was the day *The Wall Street Journal* ran a **front-page feature** on Maker's Mark. And nothing was the same for the company, or the Samuels family, ever again.
 It told the story of the smallest distillery in America, doing everything backwards. Making whiskey slow. In small batches. And charging *more* for it, while the rest of the bourbon industry was battling to be cheapest.
 Then the phones rang.

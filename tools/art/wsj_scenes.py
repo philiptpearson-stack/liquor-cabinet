@@ -35,9 +35,12 @@ ring = lambda x, d: (f'<g class="ring" style="animation-delay:{d}s;transform-ori
 desk = ('<rect x="52" y="152" width="296" height="54" fill="#d8c0a4"/>'
         + wash('<rect x="40" y="150" width="320" height="10" fill="#9b7663"/><rect x="52" y="160" width="296" height="46" fill="#b08463"/>')
         + lines('<path d="M40 150 H360 V160 H40Z M52 160 V206 M348 160 V206"/><path d="M190 172 h20 M190 190 h20" stroke-width="2"/>', boil=False, width=2.2))
-receiver = (wash('<path d="M-3 -152 q-6 -2 -8 6 l-2 16 q0 8 8 8 Z" fill="#3b2233"/>') + lines('<path d="M-3 -152 q-6 -2 -8 6 l-2 16 q0 8 8 8" stroke-width="1.8"/><path d="M-12 -126 q-14 30 6 56" stroke="#3b2233" stroke-width="1.6"/>', boil=False))
+# the handset sits against his ear, beside the face (not across it), its cord curling down to the desk
+HS = 'M-16 -156 q-9 0 -9 8 l0 24 q0 8 9 8 l3 0 l0 -7 q-5 0 -5 -4 l0 -18 q0 -4 5 -4 l0 -7Z'
+receiver = (wash(f'<path d="{HS}" fill="#3b2233"/>') + lines(f'<path d="{HS}" stroke-width="1.8"/>', boil=False)
+            + lines('<path d="M-24 -122 q-10 12 -4 22 q6 10 -4 20 q-10 10 -2 22" stroke="#3b2233" stroke-width="1.6"/>', boil=False))
 junior = everyman(mood='o', eyes='dot', top='#5f6f8c', pants='#8c7a6b', tie='#8b3a63', hat='hair',
-                  arm_l=[(-21, -109), (-30, -128), (-16, -142)], arm_r=[(21, -109), (34, -96), (46, -104)])
+                  arm_l=[(-21, -109), (-34, -124), (-23, -140)], arm_r=[(21, -109), (34, -96), (46, -104)])
 flying = ''.join(f'<g class="fly-in" style="animation-delay:{d}s">{envelope(x, y, 22, t)}</g>' for x, y, t, d in ((14, 40, -14, 0), (40, 70, 10, -1.1), (6, 96, -6, -2.2), (60, 30, 18, -3.3)))
 save('letters', wall + place(junior + receiver, 200, 206, .95) + desk + pile(70, 6) + pile(250, 8) + pile(300, 4, 24) + ring(126, 0) + ring(276, -.4) + flying,
      'Bill Jr. at a desk buried in piles of letters, a phone at his ear while two more phones ring, and more letters flying in')
