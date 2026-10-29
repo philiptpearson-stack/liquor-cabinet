@@ -12,9 +12,10 @@ Open items that aren't today's work but mustn't get lost. Newest at the bottom.
 - [ ] **What IS bourbon, anyway** (shared; Door 1 links to it)
 - [ ] **But how did HUMANS Harness Fermentation?** (the second fermentation story; the hub shows it as coming soon)
 - [ ] **Distillation hub**, built like the Fermentation hub, when we get there
+- [ ] **WSJ page, premium shelf: real bottle photos.** The "Fast." shelf is wired for them: drop `blantons-bottle`, `bookers-bottle`, `knob-creek-bottle` and `woodford-bottle` (webp, jpg or png) into `src/photos/` and the build swaps them in for the crayon decanters. If photos don't work out, rethink that graphic. *(Philip, Oct 29 2026)*
 - [ ] **The Bartender's Perspective**: common cocktails. A shared door any bottle page can carry when it should point to cocktails. The door and its bartender icon live in the kit (`#bartender-icon`), so a new bottle page just adds the door.
 
 ## Before anyone outside friends sees it
-- [ ] **Photo permissions.** The Maker's Mark bottle shot and the 1966 "It tastes expensive... and is." ad (`src/photos/`) belong to Suntory Global Spirits. Get permission before launch; Philip has friends there for intros.
+- [ ] **Photo permissions.** The Maker's Mark bottle shot and the 1966 "It tastes expensive... and is." ad (`src/photos/`) belong to Suntory Global Spirits (so would any other brands' bottle photos we add). Get permission before launch; Philip has friends there for intros.
 - [ ] **The repo is public**, so those photos are visible on GitHub. Philip chose this knowingly (Oct 27 2026). Revisit if anything changes.
 - [ ] **Search engines.** Pages carry `noindex` (`src/kit/page.html`) and `robots.txt` blocks crawlers. Remove both at launch.

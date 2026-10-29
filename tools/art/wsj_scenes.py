@@ -1,5 +1,5 @@
 """The WSJ door's scenes."""
-import pathlib, shutil
+import math, pathlib
 from art import *
 from shelves import *
 
@@ -14,9 +14,52 @@ def save(name, inner, label):
     (D / f'{name}.svg').write_text(OUT[name] + '\n')
 
 
-# ---------------------------------------------------------------- 1. THWAP (the same paper that lands at the end of Bill's door)
-shutil.copy(REPO / 'src/pages/makers-mark/founders-gamble/scenes/thwap.svg', D / 'thwap.svg')
-OUT['thwap'] = 'copied'
+# ---------------------------------------------------------------- 1. Everybody reads it, everybody thinks the same thing
+def cloud(cx, cy, rx, ry, n=9):
+    """A bumpy thought cloud: n bulges around an ellipse."""
+    ring_ = [(cx + rx * math.cos(2 * math.pi * k / n - math.pi / 2), cy + ry * math.sin(2 * math.pi * k / n - math.pi / 2)) for k in range(n)]
+    d = f'M{f(ring_[0][0])} {f(ring_[0][1])}'
+    for k in range(n):
+        a = 2 * math.pi * (k + .5) / n - math.pi / 2
+        x2, y2 = ring_[(k + 1) % n]
+        d += f' Q{f(cx + rx * 1.42 * math.cos(a))} {f(cy + ry * 1.42 * math.sin(a))} {f(x2)} {f(y2)}'
+    return d + 'Z'
+
+
+town = wash('<rect x="0" y="0" width="400" height="220" fill="#eef3f6" opacity=".7"/>'
+            '<path d="M0 220 V120 H34 V96 H70 V132 H96 V84 H136 V118 H166 V100 H214 V126 H240 V78 H284 V112 H316 V94 H352 V124 H400 V220Z" fill="#d9cfe0" opacity=".55"/>')
+paper_d = 'M-36 -121 L36 -123 L37 -64 L-35 -62Z'
+paper = (wash(f'<path d="{paper_d}" fill="#fffaf1"/><rect x="-31" y="-118" width="62" height="6" fill="#3b2233" opacity=".8"/>')
+         + lines(f'<path d="{paper_d}" stroke-width="2"/><path d="M0.5 -122 L1 -63" stroke-width="1.3"/>'
+                 '<path d="M-30 -107 h26 M-30 -102 h22 M5 -107 h26 M5 -102 h18" stroke-width="2.4"/>'
+                 '<path d="M-30 -96 h12 M-15 -96 h11 M-30 -91 h12 M-15 -91 h11 M-30 -86 h12 M-15 -86 h11 M-30 -81 h12 M-15 -81 h8 M-30 -76 h12 M-15 -76 h11 M-30 -71 h9'
+                 ' M5 -96 h12 M20 -96 h11 M5 -91 h12 M20 -91 h11 M5 -86 h12 M20 -86 h11 M5 -81 h12 M20 -81 h9 M5 -76 h12 M20 -76 h11 M5 -71 h10" stroke-width="1.1"/>', boil=False)
+         + '<text class="letter" x="0" y="-113.6" font-size="4.4" text-anchor="middle" style="fill:#fffaf1">AUGUST 1, 1980</text>')
+thumbs = wash(f'<circle cx="-36" cy="-96" r="5" fill="{SKIN}"/><circle cx="36" cy="-98" r="5" fill="{SKIN}"/>') + lines('<circle cx="-36" cy="-96" r="5"/><circle cx="36" cy="-98" r="5"/>', width=2)
+
+
+def reader(top, hat, hair, mood, tie, k):
+    p = everyman(mood=mood, eyes='dot', top=top, tie=tie, hat=hat, hair=hair, parts=True,
+                 arm_l=[(-21, -109), (-30, -102), (-35, -96)], arm_r=[(21, -109), (30, -104), (35, -98)])
+    return p['left'] + p['right'] + p['body'] + p['head'] + f'<g class="rustle" style="transform-origin:0 -92px;animation-delay:{-k * .7:.1f}s">{paper}{thumbs}</g>'
+
+
+people = [(46, 220, .68, '#9db08a', 'cap', '#6b4632', 'o', '#c0583c'), (124, 216, .71, '#c25c86', 'hair', '#3b2a22', 'smile', '#5b8aa6'),
+          (202, 221, .68, '#6d7f99', 'fedora', '#6b4632', 'o', '#8b3a63'), (279, 216, .72, '#e6b264', 'hair', '#b9792c', 'smile', '#7f9a6c'),
+          (356, 220, .68, '#b9a3c8', 'cap', '#3b2a22', 'o', '#c0583c')]
+crowd, bubbles = '', ''
+for k, (x, y, sc, top, hat, hair, mood, tie) in enumerate(people):
+    crowd += place(reader(top, hat, hair, mood, tie, k), x, y, sc)
+    head_top = y - 160 * sc
+    cy = 40 + (k % 2) * 8
+    trail = (wash(f'<circle cx="{x + 4}" cy="{f(head_top - 7)}" r="3" fill="#fffaf1"/><circle cx="{x + 8}" cy="{f(head_top - 17)}" r="4.4" fill="#fffaf1"/>')
+             + lines(f'<circle cx="{x + 4}" cy="{f(head_top - 7)}" r="3"/><circle cx="{x + 8}" cy="{f(head_top - 17)}" r="4.4"/>', boil=False, width=1.7))
+    cl = cloud(x, cy, 25, 21)
+    bub = wash(f'<path d="{cl}" fill="#fffaf1"/>') + lines(f'<path d="{cl}"/>', boil=False, width=2)
+    bottle = f'<g class="think-b k{k + 1}" style="transform-origin:{x}px {cy + 18}px">{generic_bottle(x, cy + 18, .5, swap="makers-bottle-sm")}</g>'
+    bubbles += f'<g class="think k{k + 1}" style="transform-origin:{x + 4}px {f(head_top - 4)}px">{trail}{bub}{bottle}</g>'
+save('readers', town + ground(220) + crowd + bubbles,
+     "A crowd of people reading the August 1, 1980 newspaper, and one by one a bottle of Maker's Mark pops into a thought bubble over each of their heads")
 
 # ---------------------------------------------------------------- 2. Bill Jr., buried in letters, phones ringing
 wall = wash('<rect x="0" y="30" width="400" height="176" fill="#ead8c6" opacity=".5"/>')
@@ -35,15 +78,16 @@ ring = lambda x, d: (f'<g class="ring" style="animation-delay:{d}s;transform-ori
 desk = ('<rect x="52" y="152" width="296" height="54" fill="#d8c0a4"/>'
         + wash('<rect x="40" y="150" width="320" height="10" fill="#9b7663"/><rect x="52" y="160" width="296" height="46" fill="#b08463"/>')
         + lines('<path d="M40 150 H360 V160 H40Z M52 160 V206 M348 160 V206"/><path d="M190 172 h20 M190 190 h20" stroke-width="2"/>', boil=False, width=2.2))
-# the handset sits against his ear, beside the face (not across it), its cord curling down to the desk
-HS = 'M-16 -156 q-9 0 -9 8 l0 24 q0 8 9 8 l3 0 l0 -7 q-5 0 -5 -4 l0 -18 q0 -4 5 -4 l0 -7Z'
-receiver = (wash(f'<path d="{HS}" fill="#3b2233"/>') + lines(f'<path d="{HS}" stroke-width="1.8"/>', boil=False)
-            + lines('<path d="M-24 -122 q-10 12 -4 22 q6 10 -4 20 q-10 10 -2 22" stroke="#3b2233" stroke-width="1.6"/>', boil=False))
-junior = everyman(mood='o', eyes='dot', top='#5f6f8c', pants='#8c7a6b', tie='#8b3a63', hat='hair',
-                  arm_l=[(-21, -109), (-34, -124), (-23, -140)], arm_r=[(21, -109), (34, -96), (46, -104)])
+# overwhelmed: both hands clutching his head, mouth open, sweat flying
+jr = everyman(mood='o', eyes='dot', top='#5f6f8c', pants='#8c7a6b', tie='#8b3a63', hat='hair', parts=True,
+              arm_l=[(-21, -109), (-39, -126), (-18, -150)], arm_r=[(21, -109), (39, -126), (18, -150)])
+sweat_drop = lambda x, y: f'<path d="M{x} {y - 5} q-4 5.5 0 8.8 q4 -3.3 0 -8.8Z" fill="#8ecae6" stroke="#5b8aa6" stroke-width="1.2"/>'
+sweat = ''.join(f'<g class="sweat {c}" style="animation-delay:{d}s">{sweat_drop(x, y)}</g>' for x, y, c, d in ((-27, -160, 'l', 0), (27, -162, 'r', -.5), (-31, -142, 'l', -.9), (31, -146, 'r', -1.3)))
+brows = lines('<path d="M-11 -142 L-3 -146 M11 -142 L3 -146" stroke-width="2.2"/>')
+junior = jr['body'] + jr['head'] + brows + jr['left'] + jr['right'] + sweat
 flying = ''.join(f'<g class="fly-in" style="animation-delay:{d}s">{envelope(x, y, 22, t)}</g>' for x, y, t, d in ((14, 40, -14, 0), (40, 70, 10, -1.1), (6, 96, -6, -2.2), (60, 30, 18, -3.3)))
-save('letters', wall + place(junior + receiver, 200, 206, .95) + desk + pile(70, 6) + pile(250, 8) + pile(300, 4, 24) + ring(126, 0) + ring(276, -.4) + flying,
-     'Bill Jr. at a desk buried in piles of letters, a phone at his ear while two more phones ring, and more letters flying in')
+save('letters', wall + place(junior, 200, 206, .95) + desk + pile(70, 6) + pile(250, 8) + pile(300, 4, 24) + ring(126, 0) + ring(276, -.4) + flying,
+     'Bill Jr. at a desk buried in piles of letters, clutching his head, while two phones ring and more letters fly in')
 
 # ---------------------------------------------------------------- 3. Sold out: a Maker's-shaped gap on the top shelf
 gap_x = 217
@@ -78,18 +122,69 @@ for i, (top, hat) in enumerate(looks):   # single file from the door, running of
     x = 240 - i * 30
     person = everyman(mood='o' if i % 3 == 0 else 'smile', eyes='side', top=top, hat=hat, hair=('#6b4632', '#3b2a22', '#b9792c')[i % 3])
     crowd += f'<g class="shuffle" style="animation-delay:{-i * .37:.2f}s">{place(person, x, 206, .5)}</g>'
-back_row = ''
 bangs = '<text class="letter pop" x="150" y="64" font-size="20" style="transform-origin:156px 56px">!!</text>'
-save('line', ground() + store + case + shine + back_row + crowd + bangs,
+save('line', ground() + store + case + shine + crowd + bangs,
      "A long line of people wrapped around a liquor store, every one of them staring at one bottle of Maker's Mark in a glass case in the window")
 
 # ---------------------------------------------------------------- 5. The top shelf fills up, year by year
 makers = generic_bottle(180, TOP, .68, swap='makers-bottle-sm')
-newcomers = [(224, '1984', decanter(224, TOP, w=24, h=34, color='#c98a3c')), (264, '1988', decanter(264, TOP, w=22, h=38, color='#a0522d')),
-             (304, '1992', decanter(304, TOP, w=26, h=32, color='#7f9a6c')), (346, '1996', decanter(346, TOP, w=24, h=36, color='#b9792c'))]
+photo = lambda name, x, drawing: f'<!--swap:{name}|{f(x - 16)} {TOP - 52} 32 52-->{drawing}<!--/swap-->'   # a real bottle photo, once there is one
+newcomers = [(224, '1984', photo('blantons-bottle', 224, decanter(224, TOP, w=24, h=34, color='#c98a3c'))),
+             (264, '1988', photo('bookers-bottle', 264, decanter(264, TOP, w=22, h=38, color='#a0522d'))),
+             (304, '1992', photo('knob-creek-bottle', 304, decanter(304, TOP, w=26, h=32, color='#7f9a6c'))),
+             (346, '1996', photo('woodford-bottle', 346, decanter(346, TOP, w=24, h=36, color='#b9792c')))]
 arrivals = ''.join(f'<g class="arrive a{i + 1}">{b}{shelf_label(x, TOP, yr, size=10.5, tilt=(-3, 3)[i % 2])}{sparkle(x + 12, 40, 5, "twinkle")}</g>' for i, (x, yr, b) in enumerate(newcomers))
 first = shelf_label(180, TOP, '1958', size=10.5)
 save('premium', shelf_unit() + ground() + makers + first + arrivals + middle_row() + bottom_shelf(),
      "The liquor store shelf again: Maker's Mark, since 1958, on the top shelf, and one fancy new bourbon after another arriving next to it: 1984, 1988, 1992, 1996. The cheap jugs still sit on the bottom shelf")
+
+# ---------------------------------------------------------------- 6. Out the door, onto the truck, again and again
+# Timing (page.css): each truck runs a 16 s loop, the second one 8 s behind the first. A truck backs in
+# (0-1.2 s), loads (1.2-6.4 s), drives off (6.4-7.6 s). Bottle k leaves the door at starts[k] in every
+# 8 s turn, lands 0.8 s later, and its twin in the truck bed switches on at that moment.
+sky = wash('<rect x="0" y="0" width="400" height="206" fill="#eef3f6" opacity=".7"/><path d="M120 206 Q200 150 290 170 T400 150 V206Z" fill="#cfe0c4" opacity=".6"/>')
+plant = (wash('<path d="M-6 74 L64 30 L134 74Z" fill="#7a4a34"/><rect x="0" y="72" width="128" height="134" fill="#9b6a4c"/>'
+              '<rect x="72" y="118" width="50" height="88" fill="#3b2233"/><rect x="12" y="92" width="30" height="34" fill="#f6e6c8"/><rect x="76" y="86" width="42" height="18" fill="#fffaf1"/>')
+         + lines('<path d="M-6 74 L64 30 L134 74"/><rect x="0" y="72" width="128" height="134"/><rect x="72" y="118" width="50" height="88"/>'
+                 '<rect x="12" y="92" width="30" height="34"/><path d="M27 92 V126 M12 109 H42" stroke-width="1.6"/><rect x="76" y="86" width="42" height="18" stroke-width="1.6"/>'
+                 '<path d="M6 150 h14 M30 170 h12 M10 188 h10 M46 140 h10 M50 196 h12" stroke-width="1.5"/>', boil=False, width=2.2)
+         + '<text class="letter" x="97" y="99" font-size="8.6" text-anchor="middle">SHIPPING</text>')
+waiting = ''.join(generic_bottle(x, 178, .5, swap='makers-bottle-sm') for x in (80, 92))   # more where those came from
+belt = (wash('<rect x="88" y="178" width="64" height="5" fill="#8a8f96"/>')
+        + lines('<path d="M88 178 H152 M88 183 H152 M96 183 V206 M144 183 V206" stroke-width="2"/>'
+                + ''.join(f'<circle cx="{x}" cy="180.5" r="1.6" stroke-width="1.2"/>' for x in range(92, 152, 8)), boil=False))
+X0, Y0 = 104, 178
+back = [(266 - 20 * i, 172) for i in range(6)]
+front = [(256 - 20 * i, 179) for i in range(6)]
+slots = [p for pair in zip(back, front) for p in pair]   # fills from the cab end toward the tailgate
+starts = [1.0 + .42 * k for k in range(len(slots))]      # seconds into each 8 s loading turn
+
+
+def truck(color, cls, delay):
+    bed = ''.join(f'<g class="stow{" late" if k >= 8 else ""}" style="animation-delay:{f(t + .8 - 8 + delay)}s">{generic_bottle(x, y, .6, swap="makers-bottle-sm")}</g>'
+                  for k, (x, y), t in sorted(zip(range(len(slots)), slots, starts), key=lambda st: st[1][1]))   # back row first; "late" = still in transit in the still frame
+    body = (wash('<rect x="150" y="176" width="190" height="10" fill="#5a4636"/>'
+                 f'<path d="M278 186 L278 132 Q278 124 286 124 L312 124 Q318 124 322 132 L334 150 Q340 152 340 160 L340 186Z" fill="{color}"/>'
+                 '<path d="M286 132 L311 132 L319 150 L286 150Z" fill="#e7f1fb"/>')
+            + lines('<path d="M278 186 L278 132 Q278 124 286 124 L312 124 Q318 124 322 132 L334 150 Q340 152 340 160 L340 186Z"/>'
+                    '<path d="M286 132 L311 132 L319 150 L286 150Z" stroke-width="1.8"/><path d="M298 156 h8" stroke-width="2"/><rect x="338" y="168" width="6" height="12" rx="1.5" stroke-width="1.8"/>'
+                    '<path d="M150 176 H278 M150 186 H340"/>', boil=False, width=2.2))
+    rails = (wash(f'<rect x="150" y="164" width="128" height="14" fill="{color}"/>')
+             + lines('<rect x="150" y="164" width="128" height="14"/><path d="M152 178 V136 M194 164 V136 M236 164 V136 M276 178 V136 M150 137 H278" stroke-width="2.2"/>', boil=False, width=2.2))
+    wheel = lambda cx: (f'<g class="wheel" style="transform-origin:{cx}px 192px;animation-delay:{delay}s">'
+                        + wash(f'<circle cx="{cx}" cy="192" r="14" fill="#3b2233"/><circle cx="{cx}" cy="192" r="6" fill="#e6d3bd"/>')
+                        + lines(f'<circle cx="{cx}" cy="192" r="14"/><path d="M{cx - 6} 192 H{cx + 6} M{cx} 186 V198" stroke="#3b2233" stroke-width="1.6"/>', boil=False, width=2)
+                        + '</g>')
+    return f'<g class="truck {cls}" style="animation-delay:{delay}s">{body}{bed}{rails}{wheel(182)}{wheel(312)}</g>'
+
+
+fleet = truck('#6f86a6', 'truck-a', 0) + truck('#e6b264', 'truck-b', -8)
+moving = ''.join(f'<g class="convey{" p1" if k == 8 else " p2" if k == 10 else ""}" style="--dx:{f(x - X0)}px;--dy:{f(y - Y0)}px;animation-delay:{f(t - 8)}s">'
+                 f'{generic_bottle(X0, Y0, .6, swap="makers-bottle-sm")}</g>'
+                 for k, ((x, y), t) in enumerate(zip(slots, starts)))
+puffs = ''.join(wash(f'<path d="{cloud(x, y, rx, ry, 7)}" fill="#fffaf1"/>') + lines(f'<path d="{cloud(x, y, rx, ry, 7)}"/>', boil=False, width=1.6, color='#b9a3c8')
+                for x, y, rx, ry in ((214, 44, 22, 11), (330, 70, 17, 9)))
+save('trucks', sky + puffs + plant + waiting + belt + ground() + fleet + moving,
+     "Bottle after bottle of Maker's Mark rolls out the distillery's shipping door and onto a waiting truck. The full truck drives off, the next one backs in, and the loading starts all over again")
 
 print('scenes:', ', '.join(OUT))

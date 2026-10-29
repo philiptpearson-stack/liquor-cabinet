@@ -86,15 +86,23 @@ def data_uri(p: Path) -> str:
     return f'data:{mime};base64,' + base64.b64encode(p.read_bytes()).decode()
 
 
-def place_swaps(story: str) -> str:
+def place_swaps(story: str) -> tuple[str, str]:
+    """Swap marked drawings for real photos. Each photo is embedded once per page, as a
+    <symbol> in the shared defs, and every scene that shows it points there with <use>."""
+    symbols = {}
     def sub(m):
         name, box, drawing = m.group(1), m.group(2).split(), m.group(3)
         p = find_photo(name)
         if not p:
             return drawing
         x, y, w, h = box
-        return f'<image href="{data_uri(p)}" x="{x}" y="{y}" width="{w}" height="{h}" preserveAspectRatio="xMidYMax meet"/>'
-    return re.sub(r'<!--swap:([\w-]+)\|([^>]*?)-->(.*?)<!--/swap-->', sub, story, flags=re.S)
+        key = f'photo-{name}-' + f'{w}x{h}'.replace('.', '_')
+        if key not in symbols:
+            symbols[key] = (f'<symbol id="{key}" viewBox="0 0 {w} {h}" preserveAspectRatio="xMidYMax meet">'
+                            f'<image href="{data_uri(p)}" width="{w}" height="{h}" preserveAspectRatio="xMidYMax meet"/></symbol>')
+        return f'<use href="#{key}" x="{x}" y="{y}" width="{w}" height="{h}"/>'
+    story = re.sub(r'<!--swap:([\w-]+)\|([^>]*?)-->(.*?)<!--/swap-->', sub, story, flags=re.S)
+    return story, ''.join(symbols.values())
 
 
 def place_scenes(story: str, d: Path) -> tuple[str, list[str]]:
@@ -161,13 +169,16 @@ def build_page(d: Path, template: str, kit: dict, home: str) -> list[str]:
         defs = defs.replace('  </defs>', cast + '\n  </defs>')
     if any(p for p in problems if 'differ' in p or 'missing scene' in p):
         return problems
+    story, photo_defs = place_swaps(place_assets(story))
+    if photo_defs:
+        defs = defs.replace('  </defs>', photo_defs + '\n  </defs>')
     for _ in (1,):
         out = template
         for key, value in {
             'title': html.escape(meta['title']), 'description': html.escape(meta.get('description', '')),
             'label': html.escape(meta['label']), 'kit_css': kit['css'],
             'page_css': (d / 'page.css').read_text() if (d / 'page.css').exists() else '',
-            'defs': defs, 'story': place_swaps(place_assets(story)).rstrip(), 'kit_js': kit['js'].rstrip(),
+            'defs': defs, 'story': story.rstrip(), 'kit_js': kit['js'].rstrip(),
         }.items():
             out = out.replace('{{' + key + '}}', value)
         if '{{' in out:
