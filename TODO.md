@@ -15,6 +15,9 @@ Open items that aren't today's work but mustn't get lost. Newest at the bottom.
 - [x] **WSJ page, premium shelf: real bottle photos.** Philip sent Blanton's, Booker's, Knob Creek and Woodford Reserve, cut out and on the shelf Oct 29 2026.
 - [ ] **The Bartender's Perspective**: common cocktails. A shared door any bottle page can carry when it should point to cocktails. The door and its bartender icon live in the kit (`#bartender-icon`), so a new bottle page just adds the door.
 
+## Once more pages exist
+- [ ] **Pepper in rabbit-hole links.** Go back through the early pages (Maker's Mark and its three doors, Fermentation) and add links inside the story itself, wherever a line touches something that has its own page: wheated bourbon, what bourbon is, aging, the other bottles on the premium shelf, and so on. The links at the end stay; these would be extra. *(Philip, Oct 29 2026)*
+
 ## Before anyone outside friends sees it
 - [ ] **Photo permissions.** The Maker's Mark bottle shot and the 1966 "It tastes expensive... and is." ad (`src/photos/`) belong to Suntory Global Spirits (as do the Blanton's, Booker's, Knob Creek and Woodford Reserve bottle shots on the WSJ page: Sazerac, Suntory Global Spirits again, and Brown-Forman). Get permission before launch; Philip has friends there for intros.
 - [ ] **The repo is public**, so those photos are visible on GitHub. Philip chose this knowingly (Oct 27 2026). Revisit if anything changes.
