@@ -19,6 +19,6 @@ Open items that aren't today's work but mustn't get lost. Newest at the bottom.
 - [ ] **Pepper in rabbit-hole links.** Go back through the early pages (Maker's Mark and its three doors, Fermentation) and add links inside the story itself, wherever a line touches something that has its own page: wheated bourbon, what bourbon is, aging, the other bottles on the premium shelf, and so on. The links at the end stay; these would be extra. *(Philip, Oct 29 2026)*
 
 ## Before anyone outside friends sees it
-- [ ] **Photo permissions.** The Maker's Mark bottle shot and the 1966 "It tastes expensive... and is." ad (`src/photos/`) belong to Suntory Global Spirits (as do the Blanton's, Booker's, Knob Creek and Woodford Reserve bottle shots on the WSJ page: Sazerac, Suntory Global Spirits again, and Brown-Forman). Get permission before launch; Philip has friends there for intros.
+- [ ] **Photo permissions.** Everything in `src/photos/` belongs to the brands. Suntory Global Spirits: the Maker's Mark bottle shots, the 1966 "It tastes expensive... and is." ad, Booker's and Knob Creek. Sazerac: Blanton's. Brown-Forman: Woodford Reserve. Get permission before launch; Philip has friends at Suntory for intros.
 - [ ] **The repo is public**, so those photos are visible on GitHub. Philip chose this knowingly (Oct 27 2026). Revisit if anything changes.
 - [ ] **Search engines.** Pages carry `noindex` (`src/kit/page.html`) and `robots.txt` blocks crawlers. Remove both at launch.
