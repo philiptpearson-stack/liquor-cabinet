@@ -9,8 +9,9 @@ D.mkdir(parents=True, exist_ok=True)
 OUT = {}
 
 
-def save(name, inner, label):
-    OUT[name] = svg(inner, label)
+def save(name, inner, label, view=None):
+    OUT[name] = svg(inner, label) if not view else f'<svg viewBox="{view}" role="img" aria-label="{label}">{inner}</svg>'
+
     (D / f'{name}.svg').write_text(OUT[name] + '\n')
 
 
@@ -128,15 +129,17 @@ save('line', ground() + store + case + shine + crowd + bangs,
 
 # ---------------------------------------------------------------- 5. The top shelf fills up, year by year
 makers = generic_bottle(180, TOP, .68, swap='makers-bottle-sm')
-photo = lambda name, x, drawing: f'<!--swap:{name}|{f(x - 16)} {TOP - 52} 32 52-->{drawing}<!--/swap-->'   # a real bottle photo, once there is one
-newcomers = [(224, '1984', photo('blantons-bottle', 224, decanter(224, TOP, w=24, h=34, color='#c98a3c'))),
-             (264, '1988', photo('bookers-bottle', 264, decanter(264, TOP, w=22, h=38, color='#a0522d'))),
-             (304, '1992', photo('knob-creek-bottle', 304, decanter(304, TOP, w=26, h=32, color='#7f9a6c'))),
-             (346, '1996', photo('woodford-bottle', 346, decanter(346, TOP, w=24, h=36, color='#b9792c')))]
+# real bottle photos (src/photos), about as tall as the Maker's beside them; the crayon decanters stand in without them
+photo = lambda name, x, h, drawing: f'<!--swap:{name}|{f(x - 16)} {TOP - h} 32 {h}-->{drawing}<!--/swap-->'
+newcomers = [(224, '1984', photo('blantons-bottle', 224, 42, decanter(224, TOP, w=24, h=34, color='#c98a3c'))),
+             (264, '1988', photo('bookers-bottle', 264, 49, decanter(264, TOP, w=22, h=38, color='#a0522d'))),
+             (304, '1992', photo('knob-creek-bottle', 304, 44, decanter(304, TOP, w=26, h=32, color='#7f9a6c'))),
+             (346, '1996', photo('woodford-bottle', 346, 46, decanter(346, TOP, w=24, h=36, color='#b9792c')))]
 arrivals = ''.join(f'<g class="arrive a{i + 1}">{b}{shelf_label(x, TOP, yr, size=10.5, tilt=(-3, 3)[i % 2])}{sparkle(x + 12, 40, 5, "twinkle")}</g>' for i, (x, yr, b) in enumerate(newcomers))
 first = shelf_label(180, TOP, '1958', size=10.5)
 save('premium', shelf_unit() + ground() + makers + first + arrivals + middle_row() + bottom_shelf(),
-     "The liquor store shelf again: Maker's Mark, since 1958, on the top shelf, and one fancy new bourbon after another arriving next to it: 1984, 1988, 1992, 1996. The cheap jugs still sit on the bottom shelf")
+     "The liquor store shelf again: Maker's Mark, since 1958, on the top shelf, and one premium bourbon after another arriving next to it: Blanton's in 1984, Booker's in 1988, Knob Creek in 1992, Woodford Reserve in 1996. The cheap jugs still sit on the bottom shelf",
+     view='138 0 270 222')   # framed tight on the shelf so the bottles read on a phone
 
 # ---------------------------------------------------------------- 6. Out the door, onto the truck, again and again
 # Timing (page.css): each truck runs a 16 s loop, the second one 8 s behind the first. A truck backs in
