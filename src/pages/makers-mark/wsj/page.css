@@ -1,5 +1,7 @@
 /* The WSJ article: scene motion. Every loop runs on CSS alone. */
 h1 em{font-style:italic}
+/* a hair smaller and tighter, so this header still sits on one line on a laptop with its period */
+.flow > h2.snug{font-size:1.75rem;letter-spacing:-.015em}
 
 /* the 1984-1996 list */
 .years{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.55rem;font-size:1.05rem;line-height:1.45}
