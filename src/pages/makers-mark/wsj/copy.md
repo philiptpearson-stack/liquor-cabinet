@@ -11,13 +11,13 @@ On August 1, 1980, Maker's Mark became a *real* company.
 At least, that's what company founder Bill Samuels Sr. said later on.
 Because August 1st, 1980, was the day *The Wall Street Journal* ran a **front-page feature** on Maker's Mark. And nothing was the same for the company, or the Samuels family, ever again.
 It told the story of the smallest distillery in America, doing everything backwards. Making whiskey slow. In small batches. And charging *more* for it, while the rest of the bourbon industry was battling to be cheapest.
-Then the phones rang.
-Within days, letters and phone calls were pouring in from *all over the country*. The distillery had to add more phone lines. And Bill Sr., along with his son, Bill Jr., answered letters every weekend.
+Within days, letters and phone calls were pouring in from *all over the country.*
+The distillery had to add more phone lines. And Bill Sr., along with his son, Bill Jr., answered letters every weekend.
 For over a year.
 Because everybody wanted to know:
 *Where can I buy this stuff??*
 And there was one big problem.
-There wasn't enough to go around
+There wasn't enough to go around.
 You see, Maker's Mark usually ages for six or seven years before it goes in a bottle.
 That means every bottle available in 1980 went into a barrel back around 1974. When ***nobody*** saw this coming.
 So even if every truck in America had been lined up at Maker's Mark's gate on August 2nd, 1980, there wasn't enough whiskey to ship.
