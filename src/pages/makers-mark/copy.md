@@ -21,7 +21,7 @@ Family owned from 1953 to 1981
 Sold
 1981, to Hiram Walker & Sons, reportedly to spare the family estate taxes
 Owners since
-Allied Domecq (2001), Fortune Brands (2005), Beam (2011), Beam Suntory (2014), renamed Suntory Global Spirits (2024)
+Allied-Lyons (1987; later Allied Domecq), Fortune Brands (2005), Beam (2011), Beam Suntory (2014), renamed Suntory Global Spirits (2024)
 Family today
 Bill Jr. took over in the mid-1970s (his father's advice: "Don't screw up the whisky") and ran it until 2011. His son Rob is Whiskey Maker & Managing Director, the eighth generation.
 This is Maker's Mark. And you can't tell the story of bourbon without it.
