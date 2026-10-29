@@ -2,3 +2,4 @@ tools/shots/
 __pycache__/
 .DS_Store
 node_modules/
+tools/art/out/

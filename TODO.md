@@ -8,7 +8,7 @@ Open items that aren't today's work but mustn't get lost. Newest at the bottom.
 
 ## Pages waiting to be built (they show as "Coming soon" now)
 - [x] **Margie Samuels: One of Whiskey's Most Iconic Women** (Maker's Mark door): built Oct 27 2026
-- [ ] **The Wall Street Journal Article that Changed *Everything*** (Maker's Mark door; Door 1 links to it too)
+- [x] **The Wall Street Journal Article that Changed *Everything*** (Maker's Mark door): built Oct 29 2026
 - [ ] **What IS bourbon, anyway** (shared; Door 1 links to it)
 - [ ] **But how did HUMANS Harness Fermentation?** (the second fermentation story; the hub shows it as coming soon)
 - [ ] **Distillation hub**, built like the Fermentation hub, when we get there

@@ -47,7 +47,6 @@ Then, in 1980, **everything changed.**
 Bill Sr.'s son, Bill Jr., had a buddy who now wrote for *The Wall Street Journal.* The writer came for a visit. And stayed three whole days.
 And almost overnight, Maker's Mark became a national sensation.
 → The Wall Street Journal Article that Changed *Everything*
-Coming soon
 Bio Card
 T. William "Bill" Samuels Sr.
 Born

@@ -29,6 +29,5 @@ So let's find out more, shall we?
 The Founder's Gamble
 Margie Samuels: One of Whiskey's Most Iconic Women
 The Wall Street Journal Article that Changed *Everything*
-Coming soon
 The Bartender's Perspective
 Coming soon
