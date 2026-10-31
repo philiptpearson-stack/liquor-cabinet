@@ -14,6 +14,7 @@ Open items that aren't today's work but mustn't get lost. Newest at the bottom.
 - [ ] **Distillation hub**, built like the Fermentation hub, when we get there
 - [x] **WSJ page, premium shelf: real bottle photos.** Philip sent Blanton's, Booker's, Knob Creek and Woodford Reserve, cut out and on the shelf Oct 29 2026.
 - [ ] **The Bartender's Perspective** (concept agreed Oct 30 2026). The bartender is Phil. Maker's Mark's is built (Oct 30, late) from Philip's copy: a shot of Maker's on its own, then a Whiskey Sour from the Cocktail Menu. Waiting on Philip: the lines Claude added (recipe card kicker, a how-to line after each step title, "→ The Cocktail Menu", and the "If you like Maker's" section kept from his earlier notes). The Old Fashioned build animation is parked in `tools/art/drafts/` for the Old Fashioned's own page.
+  - **Title:** "The Bartender's Perspective:" in small type over the bottle's name, styled the way it is on the bottle's own page (`h1 .h1-lead` in the kit).
   - **"How would I drink it?"**: his honest take.
   - **A cocktail suggestion** from the Cocktail Menu (Maker's: the Whiskey Sour), with a complete how-to, linking to that cocktail's own page.
   - **"If you like this…"**: bottles to try next, as links.

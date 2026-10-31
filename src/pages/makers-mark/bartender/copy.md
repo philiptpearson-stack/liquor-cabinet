@@ -6,7 +6,7 @@
 #   the recipe card's kicker and "Makes 1 drink" line; one line of how-to after each step title;
 #   "→ The Cocktail Menu"; and the "If you like Maker's" section, kept from Philip's earlier notes.
 
-The Bartender's ***Perspective***
+The Bartender's Perspective: Maker's ***Mark.***
 Ooo Maker's Mark?
 Hell yes.
 Wheated bourbons can be excellent in cocktails!
