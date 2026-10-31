@@ -48,6 +48,17 @@
       });
   } catch (e) {}
 
+  // A "Back" link (at the end of the story, or up in the bar) that points at the page you just came
+  // from works like the back button: you land where you left off, not at the top.
+  try {
+    const from = document.referrer && new URL(document.referrer), clean = p => p.replace(/index\.html$/, '');
+    if (from && from.origin === location.origin)
+      document.querySelectorAll('.back a:not([data-back]), a.bar-back:not([data-back])').forEach(a => {
+        if (clean(new URL(a.href, location.href).pathname) === clean(from.pathname))
+          a.addEventListener('click', e => { if (history.length > 1) { e.preventDefault(); history.back(); } });
+      });
+  } catch (e) {}
+
   // Following a link into another page starts you at the top of it. Some viewers (the private
   // preview, for one) carry the last page's scroll position over, which dropped readers mid-story.
   // The back button and "Back to the bottle" still return you to where you were.
@@ -82,7 +93,8 @@
   // Pause / play everything, including the crayon line boil
   function setStill(v) {
     root.classList.toggle('still', v);
-    btn.textContent = v ? 'Play motion' : 'Pause motion';
+    btn.innerHTML = (v ? 'Play' : 'Pause') + '<span class="long"> motion</span>';
+    btn.setAttribute('aria-label', v ? 'Play motion' : 'Pause motion');
     btn.setAttribute('aria-pressed', String(v));
     try { v ? defs.pauseAnimations() : defs.unpauseAnimations(); } catch (e) {}
   }

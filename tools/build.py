@@ -160,6 +160,12 @@ def build_page(d: Path, template: str, kit: dict, home: str) -> list[str]:
     # href="@home" = the page the site opens on (src/site.json); href="@page:<slug>" = that page
     story = story.replace('href="@home"', 'href="' + posixpath.relpath(home + '/index.html', slug) + '"')
     story = re.sub(r'href="@page:([\w/-]+)"', lambda m: 'href="' + posixpath.relpath(m.group(1) + '/index.html', slug) + '"', story)
+    # the page's "Back to…" link also rides along in the sticky bar, so it's never a scroll away
+    m = re.search(r'<p class="back"><a ([^>]*)>(.*?)</a></p>', story, flags=re.S)
+    bar_back = ''
+    if m:
+        label = html.escape(re.sub(r'<[^>]+>|^\W+', '', m.group(2)).strip(), quote=True)
+        bar_back = f'<a class="bar-back" {m.group(1)} aria-label="{label}" title="{label}"><span aria-hidden="true">←</span> Back</a>'
     story, missing = place_scenes(story, d)
     if missing:
         problems.append(f'{slug}: missing scene file(s): {", ".join(missing)}')
@@ -176,9 +182,10 @@ def build_page(d: Path, template: str, kit: dict, home: str) -> list[str]:
         out = template
         for key, value in {
             'title': html.escape(meta['title']), 'description': html.escape(meta.get('description', '')),
-            'label': html.escape(meta['label']), 'kit_css': kit['css'],
+            # with Back in the bar, the bar names just this page ("The WSJ Article", not the whole trail)
+            'label': html.escape(meta['label'].split(' / ')[-1] if bar_back else meta['label']), 'kit_css': kit['css'],
             'page_css': (d / 'page.css').read_text() if (d / 'page.css').exists() else '',
-            'defs': defs, 'story': story.rstrip(), 'kit_js': kit['js'].rstrip(),
+            'defs': defs, 'story': story.rstrip(), 'bar_back': bar_back, 'kit_js': kit['js'].rstrip(),
         }.items():
             out = out.replace('{{' + key + '}}', value)
         if '{{' in out:
