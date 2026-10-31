@@ -98,6 +98,8 @@ def face(cx, cy, rx=15, ry=16.5, mood='smile', glasses=False, mustache=False, bl
         line += f'<path d="M{cx - 8.5} {ey + 1} q2.5 -3.5 5 0 M{cx + 3.5} {ey + 1} q2.5 -3.5 5 0" stroke-width="1.9"/>'
     elif eyes == 'squeeze':   # screwed shut: > <
         line += f'<path d="M{cx - 8.5} {ey - 2.8} l4.6 2.8 l-4.6 2.8 M{cx + 8.5} {ey - 2.8} l-4.6 2.8 l4.6 2.8" stroke-width="1.9"/>'
+    elif eyes == 'wink':      # his right eye shut, the other wide open
+        line += f'<path d="M{cx - 8.5} {ey} q2.5 2 5 0" stroke-width="1.9"/><circle cx="{cx + 6}" cy="{ey}" r="1.8" fill="{DARK}" stroke="none"/>'
     elif eyes == 'side':
         line += f'<circle cx="{cx - 4}" cy="{ey}" r="1.6" fill="{DARK}" stroke="none"/><circle cx="{cx + 8}" cy="{ey}" r="1.6" fill="{DARK}" stroke="none"/>'
     if glasses:
