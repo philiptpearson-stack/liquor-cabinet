@@ -2,15 +2,18 @@
 
 # One line per line of text on the page, in order. Illustrations are not included.
 # The build refuses to publish the page if its words drift from this file.
-# Oct 30 2026, late: Philip's copy from chat. Claude's additions, waiting on Philip:
+# Oct 30 2026, late: Philip's copy from chat. Oct 31: his new opening (the bold "if it's a cocktail you're after" line went with it). Claude's additions, waiting on Philip:
 #   the recipe card's kicker and "Makes 1 drink" line; one line of how-to after each step title;
 #   "→ The Cocktail Menu"; and the "If you like Maker's" section, kept from Philip's earlier notes.
 
 The Bartender's ***Perspective***
 Ooo Maker's Mark?
 Hell yes.
-Wheated bourbons can be excellent for cocktails, depending on how assertive you want your whiskey profile to be. But for me? I just like to drink it on its own.
-**But if it's a cocktail you're after, here's a fun suggestion that Maker's Mark is perfect for.**
+Wheated bourbons can be excellent in cocktails!
+They're soft, sweet, and they play nicely with other ingredients.
+Now, if what you want is a very assertive bourbon profile for your cocktail, Maker's is probably not the right choice.
+But for the cocktail I'd like to share with you today, Maker's is perfect.
+Now, for my favorite part. *tasting the ingredients!*
 From the Cocktail Menu
 Classic Whiskey Sour
 Makes − 1 + drink
