@@ -224,7 +224,7 @@ shaker = (wash('<path d="M24 -150 L38 -150 L36 -172 L26 -172Z" fill="#c9c3b8"/><
                   '<path d="M27 -164 h8" stroke="#fffaf1" stroke-width="1.6"/>', boil=False)
           + lines('<path d="M44 -178 q4 3 0 6 M47 -168 q4 3 0 6 M18 -180 q-4 3 0 6" stroke="#8a6a78" stroke-width="1.8"/>', boil=False))
 from bartender import bartender, PLAID   # Philip, our bartender
-barkeep = bartender(eyes='happy', arm_r=[(23, -110), (40, -124), (33, -146)], holding=shaker)
+barkeep = bartender(eyes='happy', beard=None, arm_r=[(23, -110), (40, -124), (33, -146)], holding=shaker)   # no stubble: at icon size it reads as a full beard
 bartender_icon = f'<g>{barkeep}</g>'
 # But how did HUMANS harness fermentation? A clay crock, cloth tied over the top, bubbling away
 crock = (wash('<path d="M34 52 Q22 70 26 92 Q30 108 60 108 Q90 108 94 92 Q98 70 86 52Z" fill="#c98a5c"/><path d="M36 40 Q60 30 84 40 L86 52 Q60 58 34 52Z" fill="#f6e6c8"/>')

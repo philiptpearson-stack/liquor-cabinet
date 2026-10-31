@@ -89,46 +89,72 @@ save('welcome', backbar + place(waving, 200, 206) + counter + on_bar,
      'Philip, the bartender, behind his bar: beard, plaid shirt, loose black tie, rolled sleeves. He waves hello. A bottle of Maker\'s Mark and an Old Fashioned sit on the bar',
      view=BAR_VIEW)
 
-# ---------------------------------------------------------------- 2. A shot, a grin, a little buzz (8 s flipbook)
+# ---------------------------------------------------------------- 2. "I don't drink while I'm working." ... one shot (12 s flipbook)
 X = 200
-bottle_on_bar = generic_bottle(300, COUNTER, .62, swap='makers-bottle-sm')
-# beat 1: pour the shot (the glass fills)
-p1 = bartender(eyes='dot', mood='smile', parts=True, arm_l=[(-23, -110), (-36, -86), (-31, -60)], arm_r=[(23, -110), (34, -88), (2, -94)])
+bottle_on_bar = generic_bottle(262, COUNTER, .62, swap='makers-bottle-sm')
+
+
+def bubble(x0, y0, w, h, tail, text, size=12.5, cls='', first=None):
+    """A speech bubble at (x0, y0), its tail pointing at tail=(x, y); text is a list of lines."""
+    x1, y1 = x0 + w, y0 + h
+    tx, ty = tail
+    bx = min(max(tx - 10, x0 + 10), x1 - 22)
+    d = (f'M{x0 + 8} {y0} H{x1 - 8} Q{x1} {y0} {x1} {y0 + 8} V{y1 - 8} Q{x1} {y1} {x1 - 8} {y1} H{bx + 20} L{tx} {ty} L{bx + 6} {y1} '
+         f'H{x0 + 8} Q{x0} {y1} {x0} {y1 - 8} V{y0 + 8} Q{x0} {y0} {x0 + 8} {y0}Z')
+    lh = size * 1.25
+    top = y0 + (h - lh * len(text)) / 2 + size * .95
+    words = ''.join(f'<text class="letter" x="{f(x0 + w / 2)}" y="{f(top + k * lh)}" font-size="{(first if (first and k == 0) else size)}" text-anchor="middle">{t}</text>' for k, t in enumerate(text))
+    c = f' class="{cls}" style="transform-origin:{tx}px {ty}px"' if cls else ''
+    return f'<g{c}>' + wash(f'<path d="{d}" fill="#fffaf1"/>') + lines(f'<path d="{d}" stroke-width="2"/>', boil=False) + words + '</g>'
+
+
+# beat 1: "Oh no, usually I don't drink while I'm working." (hands up, polite)
+p1 = bartender(eyes='dot', mood='smile', parts=True, arm_l=[(-23, -110), (-40, -100), (-31, -124)], arm_r=[(23, -110), (40, -100), (31, -124)])
+no_thanks = bubble(72, 26, 120, 56, (180, 70), ['Oh no, usually', "I don't drink while", "I'm working."], 11.5, cls='pop-in')
+beat1 = place(p1['body'] + p1['head'] + p1['left'] + p1['right'], X, 206) + counter + shot_glass(172, COUNTER) + bottle_on_bar + no_thanks
+# beat 2: "Well... just one couldn't hurt." (a wink, a hand on the bottle)
+p2 = bartender(eyes='wink', mood='smug', parts=True, arm_l=[(-23, -110), (-36, -86), (-31, -60)], arm_r=[(23, -110), (46, -96), (58, -80)])
+one = bubble(72, 30, 122, 46, (182, 72), ['Well...', "just one couldn't hurt."], 11, cls='pop-in')
+beat2 = place(p2['left'] + p2['body'] + p2['head'], X, 206) + counter + shot_glass(172, COUNTER) + bottle_on_bar + place(p2['right'], X, 206) + one
+# beat 3: pour it (the glass fills)
+p3 = bartender(eyes='dot', mood='smile', parts=True, arm_l=[(-23, -110), (-36, -86), (-31, -60)], arm_r=[(23, -110), (34, -88), (2, -94)])
 pour = makers_poured(176, 120)
 stream = lines('<path d="M175 121 q-2 6 -3 13" stroke="#c9782c" stroke-width="3"/>', boil=False)
 fill_shot = '<g class="shot-fill" style="transform-origin:172px 146px"><path d="M166.4 135 L177.6 135 L176.8 146 L167.2 146Z" fill="#c9782c" opacity=".9"/></g>'
 glug = '<text class="letter" x="132" y="96" font-size="15" text-anchor="middle">glug glug</text>'
-beat1 = (place(p1['left'] + p1['body'] + p1['head'], X, 206) + counter + shot_glass(172, COUNTER) + fill_shot
-         + place(p1['right'], X, 206) + pour + stream + glug)
-# beat 2: throw it back
-p2 = bartender(eyes='closed', mood='flat', head_tilt=-18, parts=True, arm_l=[(-23, -110), (-38, -122), (-15, -135)], arm_r=[(23, -110), (36, -86), (33, -60)])
+beat3 = (place(p3['left'] + p3['body'] + p3['head'], X, 206) + counter + shot_glass(172, COUNTER) + fill_shot
+         + place(p3['right'], X, 206) + pour + stream + glug)
+# beat 4: throw it back
+p4 = bartender(eyes='closed', mood='flat', head_tilt=-18, parts=True, arm_l=[(-23, -110), (-38, -122), (-15, -135)], arm_r=[(23, -110), (36, -86), (33, -60)])
 held = shot_glass(X - 10.5, 206 - 141, full=False, rot=150)
 gulp = '<text class="letter" x="246" y="62" font-size="16" text-anchor="middle">gulp!</text>' + lines('<path d="M226 70 l8 -4 M228 80 l9 0" stroke-width="2"/>', boil=False)
-beat2 = place(p2['body'] + p2['head'] + p2['right'], X, 206) + counter + bottle_on_bar + place(p2['left'], X, 206) + held + gulp
-# beat 3: slam it down, grin, feel that little buzz
-p3 = bartender(eyes='happy', mood='grin', parts=True, arm_l=[(-23, -110), (-36, -88), (-26, -62)], arm_r=[(23, -110), (36, -86), (33, -60)])
+beat4 = place(p4['body'] + p4['head'] + p4['right'], X, 206) + counter + bottle_on_bar + place(p4['left'], X, 206) + held + gulp
+# beat 5: slam it down, grin, a little buzz. "Whew! I needed that!"
+p5 = bartender(eyes='happy', mood='grin', parts=True, arm_l=[(-23, -110), (-36, -88), (-26, -62)], arm_r=[(23, -110), (36, -86), (33, -60)])
 flush = '<ellipse cx="-9.5" cy="-131" rx="5.4" ry="3.2" fill="#e8737a" opacity=".55"/><ellipse cx="9.5" cy="-131" rx="5.4" ry="3.2" fill="#e8737a" opacity=".55"/>'
-buzzing = f'<g class="buzz" style="transform-origin:0 -118px">{p3["head"]}{flush}</g>'
+buzzing = f'<g class="buzz" style="transform-origin:0 -118px">{p5["head"]}{flush}</g>'
 stars = (f'<g class="orbit" style="transform-origin:{X}px 66px">' + sparkle(X - 26, 50, 5) + sparkle(X + 28, 56, 4.4, fill='#f6c27a') + sparkle(X + 4, 36, 4) + '</g>')
-bub = 'M84 28 H182 Q190 28 190 36 V60 Q190 68 182 68 H168 L176 82 L156 68 H84 Q76 68 76 60 V36 Q76 28 84 28Z'
-speech = ('<g class="pop-in" style="transform-origin:170px 74px">' + wash(f'<path d="{bub}" fill="#fffaf1"/>') + lines(f'<path d="{bub}" stroke-width="2"/>', boil=False)
-          + '<text class="letter" x="133" y="45" font-size="15" text-anchor="middle">Whew!</text>'
-          + '<text class="letter" x="133" y="61" font-size="12.5" text-anchor="middle">I needed that!</text></g>')
-beat3 = (place(p3['left'] + p3['body'] + buzzing + p3['right'], X, 206) + counter + shot_glass(174, COUNTER, upside=True) + bottle_on_bar + stars + speech)
-save('shot', backbar + ''.join(f'<g class="b{k}{" poster" if k == 3 else ""}">{b}</g>' for k, b in enumerate((beat1, beat2, beat3), 1)),
-     "Phil pours a shot of Maker's Mark, throws it back, then grins with rosy cheeks and a little buzz: Whew! I needed that!",
+whew = bubble(76, 28, 114, 40, (176, 82), ['Whew!', 'I needed that!'], 12.5, cls='pop-in', first=15)
+beat5 = (place(p5['left'] + p5['body'] + buzzing + p5['right'], X, 206) + counter + shot_glass(174, COUNTER, upside=True) + bottle_on_bar + stars + whew)
+BEATS = [(0, 22), (22, 40), (40, 60), (60, 72), (72, 100)]   # percent of 12 s
+save('shot', backbar + ''.join(f'<g class="b{k}">{b}</g>' for k, b in enumerate((beat1, beat2, beat3, beat4, beat5), 1)),
+     "Phil holds up his hands: Oh no, usually I don't drink while I'm working. Then a wink and a hand on the bottle: Well... just one couldn't hurt. "
+     "He pours a shot of Maker's Mark, throws it back, and grins with rosy cheeks and a little buzz: Whew! I needed that!",
      view=BAR_VIEW)
-CSS.append('/* 2. A shot (8 s flipbook): pour and fill, throw it back, grin with a buzz. Still frame: the grin. */\n'
-           '.b1,.b2{opacity:0}\n.b1,.b2,.b3{animation:8s step-end infinite}\n.b1{animation-name:b1}.b2{animation-name:b2}.b3{animation-name:b3}\n'
-           + kf('b1', [(0, 'opacity:1'), (36, 'opacity:0'), (100, 'opacity:0')]) + '\n'
-           + kf('b2', [(0, 'opacity:0'), (36, 'opacity:1'), (54, 'opacity:0'), (100, 'opacity:0')]) + '\n'
-           + kf('b3', [(0, 'opacity:0'), (54, 'opacity:1'), (100, 'opacity:1')]) + '\n'
-           '.shot-fill{animation:shot-fill 8s linear infinite}\n'
-           + kf('shot-fill', [(0, 'transform:scaleY(0)'), (6, 'transform:scaleY(0)'), (30, 'transform:scaleY(1)'), (100, 'transform:scaleY(1)')]) + '\n'
-           '.buzz{animation:buzz 1.1s ease-in-out infinite alternate}\n' + kf('buzz', [(0, 'transform:rotate(-5deg)'), (100, 'transform:rotate(5deg)')]) + '\n'
-           '.orbit{animation:orbit 2.6s linear infinite}\n' + kf('orbit', [(0, 'transform:rotate(0)'), (100, 'transform:rotate(360deg)')]) + '\n'
-           '.pop-in{animation:pop-in 8s ease-out infinite}\n'
-           + kf('pop-in', [(0, 'transform:scale(0)'), (58, 'transform:scale(0)'), (63, 'transform:scale(1.12)'), (66, 'transform:scale(1)'), (100, 'transform:scale(1)')]))
+sh = ['/* 2. "I don\'t drink while I\'m working" (12 s flipbook): no thanks, just one, pour, gulp, whew. Still frame: the whew. */',
+      '.b1,.b2,.b3,.b4{opacity:0}', '.b1,.b2,.b3,.b4,.b5{animation:12s step-end infinite}']
+for k, (a, b) in enumerate(BEATS, 1):
+    sh += [f'.b{k}{{animation-name:b{k}}}', kf(f'b{k}', [(0, f'opacity:{1 if a == 0 else 0}')] + ([(a, 'opacity:1')] if a else []) + ([(b, 'opacity:0')] if b < 100 else []) + [(100, f'opacity:{1 if b == 100 else 0}')])]
+pop = lambda a: [(0, 'transform:scale(0)'), (a, 'transform:scale(0)'), (a + 3, 'transform:scale(1.1)'), (a + 5, 'transform:scale(1)'), (100, 'transform:scale(1)')]
+sh += ['.shot-fill{animation:shot-fill 12s linear infinite}',
+       kf('shot-fill', [(0, 'transform:scaleY(0)'), (43, 'transform:scaleY(0)'), (57, 'transform:scaleY(1)'), (100, 'transform:scaleY(1)')]),
+       '.buzz{animation:buzz 1.1s ease-in-out infinite alternate}', kf('buzz', [(0, 'transform:rotate(-5deg)'), (100, 'transform:rotate(5deg)')]),
+       '.orbit{animation:orbit 2.6s linear infinite}', kf('orbit', [(0, 'transform:rotate(0)'), (100, 'transform:rotate(360deg)')]),
+       '.pop-in{animation:12s ease-out infinite}',
+       '.b1 .pop-in{animation-name:pop-1}', kf('pop-1', pop(1)),
+       '.b2 .pop-in{animation-name:pop-2}', kf('pop-2', pop(23)),
+       '.b5 .pop-in{animation-name:pop-5}', kf('pop-5', pop(75))]
+CSS.append('\n'.join(sh))
 
 # ---------------------------------------------------------------- 3. The Cocktail Menu opens, flips, lands on the Whiskey Sour (8 s)
 SP = 200          # the spine
