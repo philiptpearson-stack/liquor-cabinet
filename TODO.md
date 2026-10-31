@@ -13,8 +13,8 @@ Open items that aren't today's work but mustn't get lost. Newest at the bottom.
 - [ ] **But how did HUMANS Harness Fermentation?** (the second fermentation story; the hub shows it as coming soon)
 - [ ] **Distillation hub**, built like the Fermentation hub, when we get there
 - [x] **WSJ page, premium shelf: real bottle photos.** Philip sent Blanton's, Booker's, Knob Creek and Woodford Reserve, cut out and on the shelf Oct 29 2026.
-- [ ] **The Bartender's Perspective** (concept agreed Oct 30 2026; first draft of the character drawn, waiting on Philip's notes). Philip is the bartender and the app's host, talking to you across the bar. A shared door any bottle page can carry; the door and its bartender icon live in the kit (`#bartender-icon`). Each bottle's door, kept phone-essay tight:
-  - **"Would I drink this straight?"**: his honest take.
+- [ ] **The Bartender's Perspective** (concept agreed Oct 30 2026). Maker's Mark's is built as a draft (Oct 30): copy is Claude's draft from Philip's notes, the Old Fashioned spec is a standard classic waiting on Philip's own recipe, and the bartender's name is still open. Next: the Old Fashioned's own page (the first Cocktail Menu entry). Philip is the bartender and the app's host, talking to you across the bar. A shared door any bottle page can carry; the door and its bartender icon live in the kit (`#bartender-icon`). Each bottle's door, kept phone-essay tight:
+  - **"How would I drink it?"**: his honest take.
   - **Dealer's choice:** the drink he'd make with this bottle today, with a complete how-to, linking to that cocktail's own page.
   - **"If you like this…"**: bottles to try next, as links.
   - Maybe: the Door 1 cast (flat cap guy, the posh lady, the working man) as his regulars.

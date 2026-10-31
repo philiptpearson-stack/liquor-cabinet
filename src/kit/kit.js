@@ -90,6 +90,29 @@
     if (t && t.tagName === 'DETAILS') t.open = true;
   }));
 
+  // Recipe cards: change how many drinks and every amount follows (amounts in quarter ounces)
+  const quarters = q => {
+    const t = Math.round(q * 4), w = Math.floor(t / 4), r = ['', '¼', '½', '¾'][t % 4];
+    return w && r ? w + ' ' + r : (w ? String(w) : r || '0');
+  };
+  document.querySelectorAll('.recipe-card').forEach(card => {
+    const n = card.querySelector('.rc-n'), unit = card.querySelector('.rc-unit');
+    const less = card.querySelector('.rc-step[data-d="-1"]'), more = card.querySelector('.rc-step[data-d="1"]');
+    if (!n || !less || !more) return;
+    const set = k => {
+      n.textContent = k;
+      unit.textContent = k === 1 ? 'drink' : 'drinks';
+      less.disabled = k <= 1; more.disabled = k >= 12;
+      card.querySelectorAll('.amt').forEach(a => {
+        const q = parseFloat(a.dataset.q) * k, u = a.dataset.u || '';
+        a.textContent = u === 'oz' ? quarters(q) + ' oz' : u === 'dash' ? q + (q === 1 ? ' dash' : ' dashes') : String(q);
+      });
+    };
+    let k = 1;
+    [less, more].forEach(b => b.addEventListener('click', () => { k = Math.min(12, Math.max(1, k + Number(b.dataset.d))); set(k); }));
+    set(k);
+  });
+
   // Pause / play everything, including the crayon line boil
   function setStill(v) {
     root.classList.toggle('still', v);

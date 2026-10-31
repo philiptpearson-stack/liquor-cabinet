@@ -218,13 +218,13 @@ newspaper_icon = (wash('<path d="M14 30 L98 20 L106 92 L22 102Z" fill="#f4efe3"/
                   + lines('<path d="M14 30 L98 20 L106 92 L22 102Z"/><path d="M60 25 L64 97" stroke-width="1.6"/>'
                           '<path d="M24 42 L54 38 M25 52 L55 48 M26 62 L56 58 M27 72 L57 68 M28 82 L58 78 M70 36 L96 33 M71 46 L97 43 M72 56 L98 53 M73 66 L99 63 M74 76 L100 73 M75 86 L101 83" stroke-width="1.5" stroke="#8a6a78"/>', boil=False))
 bottle_icon = generic_bottle(60, 108, 1.32)
-# The Bartender's Perspective: a bartender in a vest and bow tie, shaker up by his ear
+# The Bartender's Perspective: Philip, shaker up by his ear
 shaker = (wash('<path d="M24 -150 L38 -150 L36 -172 L26 -172Z" fill="#c9c3b8"/><path d="M26.5 -172 L35.5 -172 L34 -181 L28 -181Z" fill="#a9a29a"/><rect x="29" y="-185" width="4" height="4" rx="1" fill="#a9a29a"/>')
           + lines('<path d="M24 -150 L38 -150 L36 -172 L26 -172Z"/><path d="M26.5 -172 L35.5 -172 L34 -181 L28 -181Z" stroke-width="2"/><rect x="29" y="-185" width="4" height="4" rx="1" stroke-width="1.6"/>'
                   '<path d="M27 -164 h8" stroke="#fffaf1" stroke-width="1.6"/>', boil=False)
           + lines('<path d="M44 -178 q4 3 0 6 M47 -168 q4 3 0 6 M18 -180 q-4 3 0 6" stroke="#8a6a78" stroke-width="1.8"/>', boil=False))
-barkeep = everyman(mood='smile', eyes='happy', top='#4a3e4f', tie='#c0583c', hat='hair', hair='#3b2a22',
-                   arm_r=[(21, -109), (38, -124), (31, -146)], holding_r=shaker)
+from bartender import bartender, PLAID   # Philip, our bartender
+barkeep = bartender(eyes='happy', arm_r=[(23, -110), (40, -124), (33, -146)], holding=shaker)
 bartender_icon = f'<g>{barkeep}</g>'
 # But how did HUMANS harness fermentation? A clay crock, cloth tied over the top, bubbling away
 crock = (wash('<path d="M34 52 Q22 70 26 92 Q30 108 60 108 Q90 108 94 92 Q98 70 86 52Z" fill="#c98a5c"/><path d="M36 40 Q60 30 84 40 L86 52 Q60 58 34 52Z" fill="#f6e6c8"/>')
@@ -233,6 +233,7 @@ crock = (wash('<path d="M34 52 Q22 70 26 92 Q30 108 60 108 Q90 108 94 92 Q98 70 
          + wash('<circle cx="52" cy="24" r="4" fill="#fffaf1"/><circle cx="64" cy="16" r="5" fill="#fffaf1"/><circle cx="74" cy="26" r="3.2" fill="#fffaf1"/>')
          + lines('<circle cx="52" cy="24" r="4"/><circle cx="64" cy="16" r="5"/><circle cx="74" cy="26" r="3.2"/>', boil=False, width=1.8))
 kit_icons = ('    <!-- Generic door icons -->\n'
+             f'    {PLAID}\n'
              f'    <symbol id="newspaper-icon" viewBox="0 0 120 120">{newspaper_icon}</symbol>\n'
              f'    <symbol id="bottle-icon" viewBox="0 0 120 120">{bottle_icon}</symbol>\n'
              f'    <symbol id="bartender-icon" viewBox="-40 -190 90 90">{bartender_icon}</symbol>\n'

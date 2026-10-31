@@ -22,4 +22,3 @@ The Founder's Gamble
 Margie Samuels: One of Whiskey's Most Iconic Women
 The Wall Street Journal Article that Changed *Everything*
 The Bartender's Perspective
-Coming soon

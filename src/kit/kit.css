@@ -212,3 +212,23 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .cc-name{font-family:var(--hand);font-weight:700;font-size:1.5rem;line-height:1}
 .cc-quick{display:inline-block;margin-top:.3rem;font:800 .86rem/1.3 var(--body);letter-spacing:.02em;color:#6b4632}
 .cc-quick > span{white-space:nowrap}
+
+/* ---------- Recipe card (a bartender's dealer's choice): an index card; the + and - change how many drinks */
+.recipe-card{background:#fffaf1;color:#3a2532;border-radius:8px 6px 10px 7px;transform:rotate(.6deg);margin:.4rem 2px;padding:.9rem 1.05rem 1rem;
+  box-shadow:2px 3px 0 #4a342622;background-image:linear-gradient(#fffaf1 0 3.7rem,#d9867f 3.7rem 3.85rem,transparent 3.85rem),repeating-linear-gradient(#fffaf1 0 27px,#cfe0ea 27px 28px)}
+.rc-kicker{margin:0;font:800 .7rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#b14b45}
+.rc-name{margin:.25rem 0 .9rem;font-family:var(--hand);font-weight:700;font-size:1.7rem;line-height:1}
+.rc-serves{margin:0 0 .5rem;display:flex;align-items:center;gap:.45rem;font:800 .95rem/1 var(--body)}
+.rc-step{display:none;width:2rem;height:2rem;border-radius:50%;border:2px solid #3a2532;background:transparent;color:#3a2532;
+  font:800 1.1rem/1 var(--body);cursor:pointer;place-items:center;padding:0}
+.js .rc-step{display:grid}
+.rc-step:disabled{opacity:.3;cursor:default}
+.rc-n{min-width:1.2ch;text-align:center;font-size:1.15rem}
+.rc-list{list-style:none;margin:0;padding:0;font-size:1.08rem;line-height:28px}
+.rc-list .amt{font-weight:800;display:inline-block;min-width:5.2rem}
+.rc-glass{margin:.35rem 0 0;font-size:.95rem;line-height:28px;color:#6b5a62}
+ol.steps{list-style:none;counter-reset:step;margin:0;padding:0;display:flex;flex-direction:column;gap:.8rem}
+ol.steps li{counter-increment:step;position:relative;padding-left:2.6rem;font-size:1.12rem;line-height:1.55}
+ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;width:1.85rem;height:1.85rem;border-radius:50%;
+  display:grid;place-items:center;background:var(--accent);color:var(--paper);font:800 .95rem/1 var(--body)}
+

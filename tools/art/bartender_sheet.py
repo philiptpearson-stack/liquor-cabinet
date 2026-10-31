@@ -28,7 +28,7 @@ mixing = (wash('<path d="M2 -104 L20 -104 L18 -78 L4 -78Z" fill="#e7f1fb" opacit
 st = bartender(mood='smug', eyes='wink', parts=True, arm_l=[(-23, -110), (-28, -92), (-2, -112)], arm_r=[(23, -110), (32, -90), (17, -84)])
 stir = st['body'] + st['head'] + mixing + st['left'] + st['right']
 thumb = wash(f'<rect x="-15.8" y="-112" width="5.6" height="11" rx="2.8" fill="{SKIN}"/>') + lines('<rect x="-15.8" y="-112" width="5.6" height="11" rx="2.8" stroke-width="1.8"/>')
-g = bartender(hat='googly', parts=True, arm_l=[(-23, -110), (-38, -92), (-13, -98)], arm_r=[(23, -110), (40, -90), (25, -72)])
+g = bartender(hat='bat', parts=True, arm_l=[(-23, -110), (-38, -92), (-13, -98)], arm_r=[(23, -110), (40, -90), (25, -72)])
 goof = g['body'] + g['head'] + g['left'] + thumb + g['right']   # thumbs-up arm crosses in front of him
 looks = wash('<rect x="0" y="0" width="400" height="236" fill="#f3e6d4"/>') + ground(224) + place(hello, 72, 224, 1.05) + place(stir, 196, 224, 1.05) + place(goof, 316, 224, 1.05)
 

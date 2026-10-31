@@ -2,7 +2,7 @@
 
 Short swept-up brown hair, full beard, big grin. Grey-blue plaid shirt with the sleeves
 rolled, a skinny black tie worn a little loose, black bar apron, dark jeans, and a
-tattoo sleeve on his right forearm. For when he's being ridiculous: the googly-eyed hat.
+tattoo sleeve on his right forearm. For when he's being ridiculous: the bat hat, googly eyes and all.
 Feet at (0, 0), up is negative y, same scale as the rest of the cast.
 """
 from art import *
@@ -14,7 +14,8 @@ PLAID = (f'<pattern id="{PLAID_ID}" width="7" height="7" patternUnits="userSpace
          '<path d="M0 3.5h7M3.5 0v7" stroke="#8796aa" stroke-width="1.9" opacity=".6"/>'
          '<path d="M0 .8h7M.8 0v7" stroke="#e3e9ef" stroke-width=".7" opacity=".8"/></pattern>')
 HAIR = '#7a4a2c'
-BEARD = '#8a5a3a'
+BEARD = '#a06a42'
+BEARD_LINE = '#6b4228'
 TIE = '#2b2730'
 APRON = '#302a33'
 DENIM = '#4b5a73'
@@ -36,17 +37,23 @@ def rolled_arm(points, tattoo=False):
     fill = (f'<path d="{fore}" fill="{SKIN}"/><circle cx="{f(hx)}" cy="{f(hy)}" r="5.4" fill="{SKIN}"/>'
             f'<path d="{upper}" fill="url(#{PLAID_ID})"/><path d="{cuff}" fill="url(#{PLAID_ID})"/>')
     line = f'<path d="{fore}"/><circle cx="{f(hx)}" cy="{f(hy)}" r="5.4"/><path d="{upper}"/><path d="{cuff}" stroke-width="2"/>'
-    if tattoo:   # a few inky doodles down the forearm
+    if tattoo:   # a sleeve: an ink tint down the forearm, two bands at the elbow, a heart, a star at the wrist
+        fill += f'<path d="{fore}" fill="#5f8494" opacity=".28"/>'
+        at = lambda t, a=0, b=0: (ex + dx * t + nx * a + ux * b, ey + dy * t + ny * a + uy * b)
         ink = ''
-        for t, mark in ((.32, 'star'), (.55, 'wave'), (.78, 'dot')):
-            px, py = ex + dx * t, ey + dy * t
-            if mark == 'star':
-                ink += f'<path d="M{f(px - 2.6)} {f(py)} h5.2 M{f(px)} {f(py - 2.6)} v5.2 M{f(px - 1.8)} {f(py - 1.8)} l3.6 3.6 M{f(px + 1.8)} {f(py - 1.8)} l-3.6 3.6"/>'
-            elif mark == 'wave':
-                ink += f'<path d="M{f(px - 3 * nx - 2 * ux)} {f(py - 3 * ny - 2 * uy)} q{f(2 * ux + 1.5 * nx)} {f(2 * uy + 1.5 * ny)} {f(3 * nx)} {f(3 * ny)} t{f(3 * nx)} {f(3 * ny)}"/>'
-            else:
-                ink += f'<circle cx="{f(px)}" cy="{f(py)}" r="1.5"/>'
-        line += f'<g stroke="{TATTOO}" stroke-width="1.3">{ink}</g>'
+        for t in (.16, .27):   # bands wrapping the arm
+            (x1, y1), (x2, y2) = at(t, -4.6), at(t, 4.6)
+            ink += f'<path d="M{f(x1)} {f(y1)} L{f(x2)} {f(y2)}" stroke-width="1.7"/>'
+        hx_, hy_ = at(.5)
+        heart = (f'M{f(hx_ + ux * 2.6)} {f(hy_ + uy * 2.6)} '
+                 f'C{f(hx_ - ux * 1 + nx * 4.6)} {f(hy_ - uy * 1 + ny * 4.6)} {f(hx_ - ux * 4 + nx * 1.8)} {f(hy_ - uy * 4 + ny * 1.8)} {f(hx_ - ux * 1.6)} {f(hy_ - uy * 1.6)} '
+                 f'C{f(hx_ - ux * 4 - nx * 1.8)} {f(hy_ - uy * 4 - ny * 1.8)} {f(hx_ - ux * 1 - nx * 4.6)} {f(hy_ - uy * 1 - ny * 4.6)} {f(hx_ + ux * 2.6)} {f(hy_ + uy * 2.6)}Z')
+        ink += f'<path d="{heart}" fill="#b4485a" stroke-width="1.3"/>'
+        sx_, sy_ = at(.77)
+        star = ' '.join(f'{f(sx_ + (2.9 if k % 2 == 0 else 1.2) * math.cos(math.pi / 2 + k * math.pi / 5 + math.atan2(uy, ux)))} '
+                        f'{f(sy_ + (2.9 if k % 2 == 0 else 1.2) * math.sin(math.pi / 2 + k * math.pi / 5 + math.atan2(uy, ux)))}' for k in range(10))
+        ink += f'<path d="M{star}Z" fill="{TATTOO}" stroke-width="1"/>'
+        line += f'<g stroke="{TATTOO}">{ink}</g>'
     return fill, line
 
 
@@ -80,25 +87,36 @@ def bartender(mood='grin', eyes='happy', arm_l=None, arm_r=None, hat=None, holdi
     hf = f'<rect x="-5.5" y="-125" width="11" height="9" fill="{SKIN}"/>' + hf
     hf += '<ellipse cx="2" cy="-139" rx="3.4" ry="4.2" fill="#e9a982"/>'
     hl += '<path d="M0 -142 q5 3 2 8" stroke-width="1.8"/>'
-    beard = 'M-15.8 -140 Q-17.5 -126 -10 -119 Q0 -113.5 10 -119 Q17.5 -126 15.8 -140 L13 -137 Q12 -129 6.5 -130.5 Q0 -132.5 -6.5 -130.5 Q-12 -129 -13 -137Z'
-    hf += f'<path d="{beard}" fill="{BEARD}"/>'
-    hl += '<path d="M-15.8 -140 Q-17.5 -126 -10 -119 Q0 -113.5 10 -119 Q17.5 -126 15.8 -140" stroke-width="2"/>'
-    hl += ''.join(f'<path d="M{x} {y} l{dx} 2" stroke="#6b4228" stroke-width="1.1"/>' for x, y, dx in ((-12, -128, 1.5), (-9, -123, 1), (9, -123, -1), (12, -128, -1.5), (-3, -119, .5), (3, -119, -.5)))
-    if mood == 'grin':   # a big toothy grin, on top of the beard
+    # a short full beard: lighter than his hair, soft-edged, hugging the jaw, with a mustache over the grin
+    beard = 'M-15.6 -138 Q-17 -126 -9.5 -119.5 Q0 -114.5 9.5 -119.5 Q17 -126 15.6 -138 L13.6 -135.5 Q12.5 -128.5 8 -128 L-8 -128 Q-12.5 -128.5 -13.6 -135.5Z'
+    hf += f'<path d="{beard}" fill="{BEARD}" opacity=".9"/>'
+    hl += f'<path d="M-15.6 -138 Q-17 -126 -9.5 -119.5 Q0 -114.5 9.5 -119.5 Q17 -126 15.6 -138" stroke="{BEARD_LINE}" stroke-width="2"/>'
+    hl += ''.join(f'<path d="M{x} {y} l{dx} 2.2" stroke="{BEARD_LINE}" stroke-width="1.1"/>' for x, y, dx in ((-12.5, -129, 1.2), (-10, -124, 1), (10, -124, -1), (12.5, -129, -1.2), (-4, -118.5, .4), (4, -118.5, -.4)))
+    if mood == 'grin':   # a big toothy grin (solid, so the beard doesn't show through)
         hl += '<path d="M-7.5 -130 q7.5 10 15 0Z" fill="#fbf3e3" stroke-width="2"/><path d="M-6.4 -128.4 h12.8" stroke-width="1"/>'
+    stache = 'M-9 -128.6 Q-6 -133.2 -1 -131.6 Q0 -131 1 -131.6 Q6 -133.2 9 -128.6 Q4.5 -130.2 0 -129.6 Q-4.5 -130.2 -9 -128.6Z'
+    hl += f'<path d="{stache}" fill="{BEARD}" stroke="{BEARD_LINE}" stroke-width="1.4"/>'
     # brows
     if eyes == 'wink':
         hl += f'<path d="M-10.5 -142.5 q4 1 8 0 M2.5 -146 q4.5 -3.4 8.5 -.5" stroke="{HAIR}" stroke-width="2.4"/>'
     else:
         hl += f'<path d="M-10.5 -145 q4 -2.4 8 -.6 M2.5 -145.6 q4 -1.8 8 .6" stroke="{HAIR}" stroke-width="2.4"/>'
-    if hat == 'googly':   # the hat from the bar: a big black floppy creature with googly eyes
-        tail = limb([(13, -165), (27, -170), (37, -160), (41, -142), (38, -124)], 14, 8)   # floppy, flopped down past his ear
-        dome = 'M-19.5 -141 Q-23 -171 -2 -174 Q19 -176 19.5 -142 Q9 -148 0 -147.5 Q-10 -148 -19.5 -141Z'
-        hf += f'<path d="{tail}" fill="#262229"/><path d="{dome}" fill="#262229"/>'
-        hf += '<circle cx="-7" cy="-160" r="5" fill="#fffaf1"/><circle cx="6" cy="-161" r="5" fill="#fffaf1"/>'
-        hl += f'<path d="{tail}"/><path d="{dome}"/><circle cx="-7" cy="-160" r="5" stroke-width="1.6"/><circle cx="6" cy="-161" r="5" stroke-width="1.6"/>'
-        hl += ('<g class="googly" style="transform-origin:-7px -160px"><circle cx="-5.4" cy="-158.6" r="2.3" fill="#262229" stroke="none"/></g>'
-               '<g class="googly g2" style="transform-origin:6px -161px"><circle cx="7.8" cy="-159.4" r="2.3" fill="#262229" stroke="none"/></g>')
+    if hat == 'bat':   # the hat from the bar: a plush black bat, wings out, googly eyes
+        BAT = '#262229'
+        dome = 'M-18 -142 Q-21 -167 0 -169.5 Q21 -167 18 -142 Q9 -147 0 -146.5 Q-9 -147 -18 -142Z'
+        ears = 'M-12 -164 L-15 -179 L-4 -168Z M4 -168 L14 -180 L12 -164Z'
+        wing = lambda m: (f'M{m * 15} -161 Q{m * 30} -173 {m * 47} -166 Q{m * 44} -158 {m * 49} -150 Q{m * 41} -153 {m * 38} -144 '
+                          f'Q{m * 32} -151 {m * 26} -143 Q{m * 22} -150 {m * 16.5} -147Z')
+        ribs = lambda m: f'M{m * 18} -158 L{m * 47} -166 M{m * 19} -155 L{m * 38} -144 M{m * 18} -152 L{m * 26} -143'
+        for m, cls in ((-1, 'flap'), (1, 'flap r')):
+            hf += f'<path d="{wing(m)}" fill="{BAT}"/>'
+        hf += f'<path d="{dome}" fill="{BAT}"/><path d="{ears}" fill="{BAT}"/>'
+        hf += '<circle cx="-6.5" cy="-157.5" r="4.8" fill="#fffaf1"/><circle cx="6.5" cy="-157.5" r="4.8" fill="#fffaf1"/>'
+        hf += '<path d="M-3.4 -151.4 l1.4 3.2 l1.4 -3.2Z M0.6 -151.4 l1.4 3.2 l1.4 -3.2Z" fill="#fffaf1"/>'
+        hl += f'<path d="{wing(-1)}"/><path d="{wing(1)}"/><path d="{ribs(-1)} {ribs(1)}" stroke="#5c5560" stroke-width="1.2"/>'
+        hl += f'<path d="{dome}"/><path d="{ears}"/><circle cx="-6.5" cy="-157.5" r="4.8" stroke-width="1.6"/><circle cx="6.5" cy="-157.5" r="4.8" stroke-width="1.6"/>'
+        hl += ('<g class="googly" style="transform-origin:-6.5px -157.5px"><circle cx="-5" cy="-156.2" r="2.2" fill="#262229" stroke="none"/></g>'
+               '<g class="googly g2" style="transform-origin:6.5px -157.5px"><circle cx="8" cy="-156.6" r="2.2" fill="#262229" stroke="none"/></g>')
     else:
         hair = 'M-15.8 -142 Q-17.5 -154 -10 -158 Q-4 -163 5 -162 Q15 -161 16.5 -151 Q17 -146 15.8 -142 Q14 -149 8 -151.5 Q2 -150 -4 -152 Q-10 -150 -13 -150.5 Q-15 -147 -15.8 -142Z'
         hf += f'<path d="{hair}" fill="{HAIR}"/>'
