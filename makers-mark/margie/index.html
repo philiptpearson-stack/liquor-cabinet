@@ -579,7 +579,8 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
       less.disabled = k <= 1; more.disabled = k >= 12;
       card.querySelectorAll('.amt').forEach(a => {
         const q = parseFloat(a.dataset.q) * k, u = a.dataset.u || '';
-        a.textContent = u === 'oz' ? quarters(q) + ' oz' : u === 'dash' ? q + (q === 1 ? ' dash' : ' dashes') : String(q);
+        a.textContent = u === 'oz' ? quarters(q) + ' oz' : u === 'dash' ? q + (q === 1 ? ' dash' : ' dashes')
+          : u ? q + ' ' + (q === 1 ? u : (a.dataset.us || u + 's')) : String(q);   // "1 egg white", "2 egg whites"
       });
     };
     let k = 1;

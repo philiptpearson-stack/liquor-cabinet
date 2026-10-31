@@ -10,7 +10,7 @@ OUT = {}
 
 
 def save(name, inner, label, view=None):
-    OUT[name] = svg(inner, label) if not view else f'<svg viewBox="{view}" role="img" aria-label="{label}">{inner}</svg>'
+    OUT[name] = svg(inner, label) if not view else svg_view(inner, label, view)
 
     (D / f'{name}.svg').write_text(OUT[name] + '\n')
 

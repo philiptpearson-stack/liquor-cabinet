@@ -57,7 +57,7 @@ def rolled_arm(points, tattoo=False):
     return fill, line
 
 
-def bartender(mood='grin', eyes='happy', arm_l=None, arm_r=None, hat=None, holding='', parts=False, head_tilt=0):
+def bartender(mood='grin', eyes='happy', arm_l=None, arm_r=None, hat=None, holding='', parts=False, head_tilt=0, beard='stubble'):
     """arm_l is on the viewer's left (his right arm, the tattooed one)."""
     fill, line = '', ''
     # shoes, jeans, apron
@@ -87,15 +87,15 @@ def bartender(mood='grin', eyes='happy', arm_l=None, arm_r=None, hat=None, holdi
     hf = f'<rect x="-5.5" y="-125" width="11" height="9" fill="{SKIN}"/>' + hf
     hf += '<ellipse cx="2" cy="-139" rx="3.4" ry="4.2" fill="#e9a982"/>'
     hl += '<path d="M0 -142 q5 3 2 8" stroke-width="1.8"/>'
-    # a short full beard: lighter than his hair, soft-edged, hugging the jaw, with a mustache over the grin
-    beard = 'M-15.6 -138 Q-17 -126 -9.5 -119.5 Q0 -114.5 9.5 -119.5 Q17 -126 15.6 -138 L13.6 -135.5 Q12.5 -128.5 8 -128 L-8 -128 Q-12.5 -128.5 -13.6 -135.5Z'
-    hf += f'<path d="{beard}" fill="{BEARD}" opacity=".9"/>'
-    hl += f'<path d="M-15.6 -138 Q-17 -126 -9.5 -119.5 Q0 -114.5 9.5 -119.5 Q17 -126 15.6 -138" stroke="{BEARD_LINE}" stroke-width="2"/>'
-    hl += ''.join(f'<path d="M{x} {y} l{dx} 2.2" stroke="{BEARD_LINE}" stroke-width="1.1"/>' for x, y, dx in ((-12.5, -129, 1.2), (-10, -124, 1), (10, -124, -1), (12.5, -129, -1.2), (-4, -118.5, .4), (4, -118.5, -.4)))
-    if mood == 'grin':   # a big toothy grin (solid, so the beard doesn't show through)
+    # facial hair: 'stubble' (a soft shadow along the jaw, no outline) or None (clean shaven)
+    if beard == 'stubble':
+        jaw = 'M-15.4 -137 Q-16.4 -126 -9.5 -120 Q0 -115.5 9.5 -120 Q16.4 -126 15.4 -137 Q12.5 -131 8 -128.5 L-8 -128.5 Q-12.5 -131 -15.4 -137Z'
+        hf += f'<path d="{jaw}" fill="{BEARD}" opacity=".55"/>'
+        hf += '<path d="M-8.5 -129.4 Q-4.5 -132.4 0 -131 Q4.5 -132.4 8.5 -129.4 Q4.5 -130.2 0 -129.8 Q-4.5 -130.2 -8.5 -129.4Z" fill="#8a5a3a" opacity=".75"/>'
+        hl += ''.join(f'<circle cx="{x}" cy="{y}" r=".55" fill="{BEARD_LINE}" stroke="none"/>' for x, y in
+                      ((-12, -128), (-10, -124), (-7, -121), (-3, -119), (3, -119), (7, -121), (10, -124), (12, -128), (-5, -124), (5, -124), (0, -121.5), (-13.5, -132), (13.5, -132)))
+    if mood == 'grin':   # a big toothy grin (solid, so nothing shows through)
         hl += '<path d="M-7.5 -130 q7.5 10 15 0Z" fill="#fbf3e3" stroke-width="2"/><path d="M-6.4 -128.4 h12.8" stroke-width="1"/>'
-    stache = 'M-9 -128.6 Q-6 -133.2 -1 -131.6 Q0 -131 1 -131.6 Q6 -133.2 9 -128.6 Q4.5 -130.2 0 -129.6 Q-4.5 -130.2 -9 -128.6Z'
-    hl += f'<path d="{stache}" fill="{BEARD}" stroke="{BEARD_LINE}" stroke-width="1.4"/>'
     # brows
     if eyes == 'wink':
         hl += f'<path d="M-10.5 -142.5 q4 1 8 0 M2.5 -146 q4.5 -3.4 8.5 -.5" stroke="{HAIR}" stroke-width="2.4"/>'

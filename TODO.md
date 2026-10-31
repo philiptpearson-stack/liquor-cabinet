@@ -13,9 +13,9 @@ Open items that aren't today's work but mustn't get lost. Newest at the bottom.
 - [ ] **But how did HUMANS Harness Fermentation?** (the second fermentation story; the hub shows it as coming soon)
 - [ ] **Distillation hub**, built like the Fermentation hub, when we get there
 - [x] **WSJ page, premium shelf: real bottle photos.** Philip sent Blanton's, Booker's, Knob Creek and Woodford Reserve, cut out and on the shelf Oct 29 2026.
-- [ ] **The Bartender's Perspective** (concept agreed Oct 30 2026). Maker's Mark's is built as a draft (Oct 30): copy is Claude's draft from Philip's notes, the Old Fashioned spec is a standard classic waiting on Philip's own recipe, and the bartender's name is still open. Next: the Old Fashioned's own page (the first Cocktail Menu entry). Philip is the bartender and the app's host, talking to you across the bar. A shared door any bottle page can carry; the door and its bartender icon live in the kit (`#bartender-icon`). Each bottle's door, kept phone-essay tight:
+- [ ] **The Bartender's Perspective** (concept agreed Oct 30 2026). The bartender is Phil. Maker's Mark's is built (Oct 30, late) from Philip's copy: a shot of Maker's on its own, then a Whiskey Sour from the Cocktail Menu. Waiting on Philip: the lines Claude added (recipe card kicker, a how-to line after each step title, "→ The Cocktail Menu", and the "If you like Maker's" section kept from his earlier notes). The Old Fashioned build animation is parked in `tools/art/drafts/` for the Old Fashioned's own page.
   - **"How would I drink it?"**: his honest take.
-  - **Dealer's choice:** the drink he'd make with this bottle today, with a complete how-to, linking to that cocktail's own page.
+  - **A cocktail suggestion** from the Cocktail Menu (Maker's: the Whiskey Sour), with a complete how-to, linking to that cocktail's own page.
   - **"If you like this…"**: bottles to try next, as links.
   - Maybe: the Door 1 cast (flat cap guy, the posh lady, the working man) as his regulars.
   - Not sold yet: "Behind the stick" (one thing only a bartender knows).

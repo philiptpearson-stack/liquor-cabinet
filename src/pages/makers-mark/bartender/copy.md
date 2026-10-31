@@ -2,31 +2,28 @@
 
 # One line per line of text on the page, in order. Illustrations are not included.
 # The build refuses to publish the page if its words drift from this file.
-# Oct 30 2026: CLAUDE'S DRAFT built from Philip's notes in chat (his own words are kept where he gave them:
-# the neat-with-a-beer lines and the try-next lines). The Old Fashioned spec and steps are a standard
-# classic, waiting on Philip's own recipe. Waiting on Philip's edits.
+# Oct 30 2026, late: Philip's copy from chat. Claude's additions, waiting on Philip:
+#   the recipe card's kicker and "Makes 1 drink" line; one line of how-to after each step title;
+#   "→ The Cocktail Menu"; and the "If you like Maker's" section, kept from Philip's earlier notes.
 
 The Bartender's ***Perspective***
-Pull up a stool.
-So you've got a bottle of Maker's Mark. Here's what I'd do with it.
-How would I drink it?
-I'd drink Maker's neat, with a nice cold beer next to it.
-But I'm an animal like that.
-Dealer's choice: the Old Fashioned
-If you're leaving it up to me, I'm making you a classic Old Fashioned.
-Dealer's choice
-Old Fashioned
+Ooo Maker's Mark?
+Hell yes.
+Wheated bourbons can be excellent for cocktails, depending on how assertive you want your whiskey profile to be. But for me? I just like to drink it on its own.
+**But if it's a cocktail you're after, here's a fun suggestion that Maker's Mark is perfect for.**
+From the Cocktail Menu
+Classic Whiskey Sour
 Makes − 1 + drink
 2 oz Maker's Mark
-¼ oz simple syrup
-2 dashes Angostura bitters
-1 orange peel
-In a rocks glass, over one big ice cube
-Add the simple syrup and bitters to a rocks glass.
-Pour in the Maker's.
-Add one big ice cube and stir for about 20 seconds, until the glass feels cold.
-Squeeze the orange peel over the drink, skin side down, so its oils mist across the top. Rub it around the rim and drop it in.
-→ Everything you'd want to know about the Old Fashioned
+1 oz lemon juice (fresh squeezed or pasteurized)
+1 oz simple syrup
+1 egg white (optional)
+**Combine ingredients.** Add everything to your shaker.
+**Dry shake.** Shake hard, without ice, for about 15 seconds. That's what whips the egg white into foam.
+**Wet shake.** Add ice and shake again, until the shaker is frosty cold.
+**Serve up** (with a nice egg white foam). Strain into a chilled coupe, no ice.
+Not in the mood for a whiskey sour? Choose your own adventure with our interactive cocktail menu:
+→ The Cocktail Menu
 Coming soon
 If you like Maker's, try…
 Maker's fans should try **W.L. Weller** or **Larceny** for another excellent wheated bourbon.

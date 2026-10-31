@@ -308,6 +308,13 @@ def svg(inner, label, w=400, h=236):
     return (f'<svg viewBox="0 0 {w} {h}" role="img" aria-label="{label}">' + inner + '</svg>')
 
 
+def svg_view(inner, label, view):
+    """A scene framed on part of the 400 x 236 stage ("x y w h"): the drawing shifts so the frame starts at 0 0."""
+    x, y, w, h = view.split()
+    return (f'<svg viewBox="0 0 {w} {h}" role="img" aria-label="{label}"><g transform="translate({-float(x):g} {-float(y):g})">'
+            + inner + '</g></svg>')
+
+
 def margie_bust():
     """Margie Samuels, head and shoulders, for her door: 1950s curls, pearls, a sly smile."""
     fill, line = '', ''

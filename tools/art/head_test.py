@@ -3,9 +3,9 @@ import sys, pathlib, subprocess, json, importlib
 from art import *
 import bartender as B
 REPO = pathlib.Path('/home/claude/liquor-cabinet')
-variants = [dict(), dict(eyes='dot'), dict(mood='smug', eyes='wink'), dict(hat='bat'), dict(hat='bat', eyes='dot')]
+variants = [dict(eyes='dot'), dict(eyes='dot', beard=None), dict(mood='smug', eyes='wink'), dict(mood='smug', eyes='wink', beard=None), dict(hat='bat')]
 inner = ''.join(place(B.bartender(**v, arm_l=[(-23, -110), (-29, -86), (-14, -70)]), 40 + i * 80, 236, 1.25) for i, v in enumerate(variants))
-s = f'<svg viewBox="0 30 400 120" role="img" aria-label="heads">{inner}</svg>'
+s = f'<svg viewBox="0 10 400 140" role="img" aria-label="heads">{inner}</svg>'
 kit = (REPO / 'src/kit/kit.css').read_text()
 defs = (REPO / 'src/kit/defs.svg').read_text().replace('  </defs>', B.PLAID + '\n  </defs>')
 out = pathlib.Path('out'); out.mkdir(exist_ok=True)

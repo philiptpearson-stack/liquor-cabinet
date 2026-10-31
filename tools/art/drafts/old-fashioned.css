@@ -1,0 +1,55 @@
+/* 3. The Old Fashioned builds itself (12 s): syrup + bitters, Maker's, ice + stir, orange peel, cheers.
+   Still frame: the finished drink. The props (jigger, bitters, bottle, spoon, peel) only show mid-loop. */
+.of-contents,.of-syrup,.of-whiskey,.of-rise,.of-ice,.of-peel-in,.of-jigger,.of-syrup-pour,.of-bitters,.of-dash,.of-makers,.of-makers-pour,
+.of-splash,.of-spoon,.of-peel,.of-mist,.of-cheers,.of-cap{animation:12s linear infinite}
+.of-jigger,.of-syrup-pour,.of-bitters,.of-dash,.of-makers,.of-makers-pour,.of-splash,.of-spoon,.of-peel,.of-mist,.of-cap{opacity:0}
+.of-cap.c5{opacity:1}
+.of-contents{animation-name:of-contents}
+@keyframes of-contents{0%,90%{opacity:1}95%,100%{opacity:0}}
+.of-syrup{animation-name:of-syrup}
+@keyframes of-syrup{0%,10%{transform:scaleY(0)}15%,100%{transform:scaleY(1)}}
+.of-whiskey{animation-name:of-whiskey}
+@keyframes of-whiskey{0%,25%{transform:scaleY(0)}37%,100%{transform:scaleY(1)}}
+.of-rise{animation-name:of-rise}
+@keyframes of-rise{0%,43.5%{transform:scaleY(0)}45.5%,100%{transform:scaleY(1)}}
+.of-ice{animation-name:of-ice}
+@keyframes of-ice{0%,40%{transform:translateY(-190px);opacity:0}40.2%{transform:translateY(-190px);opacity:1;animation-timing-function:ease-in}
+  44%{transform:translateY(0)}45.5%{transform:translateY(-6px)}47%,100%{transform:translateY(0);opacity:1}}
+.of-peel-in{animation-name:of-peel-in}
+@keyframes of-peel-in{0%,69.9%{opacity:0}70%,100%{opacity:1}}
+.of-jigger{animation-name:of-jigger}
+@keyframes of-jigger{0%,7.9%{opacity:0;transform:rotate(0)}8%{opacity:1;transform:rotate(0)}10.5%,14%{opacity:1;transform:rotate(100deg)}15.5%{opacity:1;transform:rotate(0)}16%,100%{opacity:0}}
+.of-syrup-pour{animation-name:of-syrup-pour}
+@keyframes of-syrup-pour{0%,10.5%{opacity:0}11%,14%{opacity:1}14.5%,100%{opacity:0}}
+.of-bitters{animation-name:of-bitters}
+@keyframes of-bitters{0%,15.4%{opacity:0}15.5%,21.5%{opacity:1}22%,100%{opacity:0}}
+.of-shake{animation:of-shake .5s ease-in-out infinite}
+@keyframes of-shake{0%,100%{transform:rotate(0)}50%{transform:rotate(14deg)}}
+.of-dash.d1{animation-name:of-dash1}.of-dash.d2{animation-name:of-dash2}
+@keyframes of-dash1{0%,16.4%{opacity:0;transform:translateY(0)}16.5%{opacity:1;transform:translateY(0)}18.5%{opacity:1;transform:translateY(100px)}18.6%,100%{opacity:0}}
+@keyframes of-dash2{0%,19.4%{opacity:0;transform:translateY(0)}19.5%{opacity:1;transform:translateY(0)}21.5%{opacity:1;transform:translateY(100px)}21.6%,100%{opacity:0}}
+.of-makers{animation-name:of-makers}
+@keyframes of-makers{0%,21.9%{opacity:0;transform:rotate(25deg)}22%{opacity:1;transform:rotate(25deg)}25%,36%{opacity:1;transform:rotate(0)}39%{opacity:1;transform:rotate(25deg)}40%,100%{opacity:0}}
+.of-makers-pour{animation-name:of-makers-pour}
+@keyframes of-makers-pour{0%,25%{opacity:0}25.5%,36%{opacity:1}36.5%,100%{opacity:0}}
+.of-splash{animation-name:of-splash}
+@keyframes of-splash{0%,43.9%{opacity:0}44%,47%{opacity:1}48%,100%{opacity:0}}
+.of-spoon{animation-name:of-spoon}
+@keyframes of-spoon{0%,46.9%{opacity:0}47%,57%{opacity:1}58%,100%{opacity:0}}
+.of-stir{animation:of-stir .7s ease-in-out infinite}
+@keyframes of-stir{0%,100%{transform:translateX(-8px) rotate(-3deg)}50%{transform:translateX(8px) rotate(3deg)}}
+.of-peel{animation-name:of-peel;transform-origin:200px 64px}
+@keyframes of-peel{0%,57.9%{opacity:0;transform:translateY(-20px)}58%{opacity:1;transform:translateY(-20px)}60%,66%{opacity:1;transform:translateY(0)}
+  69.5%{opacity:1;transform:translate(36px,46px) rotate(60deg)}70%,100%{opacity:0;transform:translate(36px,46px) rotate(60deg)}}
+.of-twist{animation:of-twist .6s ease-in-out infinite}
+@keyframes of-twist{0%,100%{transform:scaleY(1)}50%{transform:scaleY(-.55)}}
+.of-mist{animation-name:of-mist}
+@keyframes of-mist{0%,60.9%{opacity:0}61%,67%{opacity:1}68%,100%{opacity:0}}
+.of-cheers{animation-name:of-cheers}
+@keyframes of-cheers{0%,75.9%{opacity:0}76%,91%{opacity:1}92%,100%{opacity:0}}
+.of-cap.c1{animation-name:of-c1}.of-cap.c2{animation-name:of-c2}.of-cap.c3{animation-name:of-c3}.of-cap.c4{animation-name:of-c4}.of-cap.c5{animation-name:of-c5}
+@keyframes of-c1{0%,7.9%{opacity:0}8%,21.9%{opacity:1}22%,100%{opacity:0}}
+@keyframes of-c2{0%,21.9%{opacity:0}22%,39.9%{opacity:1}40%,100%{opacity:0}}
+@keyframes of-c3{0%,39.9%{opacity:0}40%,57.9%{opacity:1}58%,100%{opacity:0}}
+@keyframes of-c4{0%,57.9%{opacity:0}58%,75.9%{opacity:1}76%,100%{opacity:0}}
+@keyframes of-c5{0%,75.9%{opacity:0}76%,91%{opacity:1}92%,100%{opacity:0}}
