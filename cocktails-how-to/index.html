@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="theme-color" content="#f7efe1">
+<title>Cocktails How-To · The Liquor Cabinet</title>
+<meta name="description" content="Build better cocktails at home. Start with the formula behind the classics.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,800;1,400;1,800&family=Gaegu:wght@700&family=Young+Serif&display=swap">
+<style>
+/* The Liquor Cabinet: house crayon kit. Every page is built from this plus its own scenes.
+   Look: plum crayon lines over watercolor washes on warm paper. */
+:root{
+  --paper:#f7efe1; --ink:#3a2532; --muted:#7c6570; --accent:#8b3a63; --gold:#b9792c;
+  --rule:#e2d1c5; --card:#f7efe1; --note:#f5e1b6; --note-ink:#4a3426; --bar:#f7efe1ea;
+  --chip:#fffaf1; --chip-line:#dcc6bb; --chip-ink:#6b3354; --focus:#b0668d;
+  --display:"Young Serif", Georgia, "Times New Roman", serif;
+  --body:"Alegreya Sans", "Gill Sans", "Segoe UI", system-ui, sans-serif;
+  --hand:"Gaegu", "Chalkboard SE", "Comic Sans MS", cursive;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#1d161b; --ink:#f0e4d4; --muted:#b8a4ac; --accent:#e594b9; --gold:#e6b264;
+    --rule:#3b2d36; --card:#efe5d1; --note:#3a2f24; --note-ink:#f0e4d4; --bar:#1d161be8;
+    --chip:#fffaf1; --chip-line:#dcc6bb; --chip-ink:#6b3354; --focus:#e594b9; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#1d161b; --ink:#f0e4d4; --muted:#b8a4ac; --accent:#e594b9; --gold:#e6b264;
+  --rule:#3b2d36; --card:#efe5d1; --note:#3a2f24; --note-ink:#f0e4d4; --bar:#1d161be8;
+  --chip:#fffaf1; --chip-line:#dcc6bb; --chip-ink:#6b3354; --focus:#e594b9; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .35 0 0 0 0 .4 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color:var(--ink); font-family:var(--body); font-size:16px;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bar)}
+button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+
+/* Cabinet bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bar);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.bar-inner{max-width:30rem;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px 9px}
+.mark{display:flex;flex-direction:column;gap:2px;min-width:0}
+.bar-back{flex:none;display:inline-flex;align-items:center;gap:.3rem;font:800 .78rem/1 var(--body);letter-spacing:.03em;color:var(--accent);
+  text-decoration:none;border:1.5px solid var(--rule);border-radius:999px;padding:.55rem .75rem .55rem .6rem;white-space:nowrap}
+.bar-back span{font-size:1rem;line-height:.6}
+.bar-back + .mark{flex:1}
+.bar-back + .mark b{white-space:nowrap}
+.bar-back ~ .motion .long{display:none}   /* room for Back: the button just says Pause / Play */
+.bar-back + .mark span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mark b{font-family:var(--display);font-weight:400;font-size:1rem;letter-spacing:.01em;color:var(--accent)}
+.mark span{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.motion{font:800 .75rem/1 var(--body);letter-spacing:.04em;color:var(--accent);background:transparent;
+  border:1.5px solid var(--rule);border-radius:999px;padding:.55rem .8rem;cursor:pointer;white-space:nowrap}
+.progress{max-width:30rem;margin:0 auto;height:3px;background:var(--rule);border-radius:3px;overflow:hidden;margin-bottom:-1px}
+.progress i{display:block;height:100%;background:var(--accent);transform-origin:0 50%;transform:scaleX(0)}
+
+/* Story column */
+main{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:1.75rem 3.5rem}
+.story{max-width:30rem;margin:0 auto}
+.kicker{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--muted);margin:0}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,11.5vw,3.4rem);line-height:1;letter-spacing:-.02em;margin:.6rem 0 0;text-wrap:balance}
+h1 span{color:var(--accent)}
+/* a small line over a bottle's name: "The Bartender's Perspective:" / Maker's Mark. */
+h1 .h1-lead{display:block;font-size:.46em;line-height:1.15;letter-spacing:-.01em;color:var(--ink);margin-bottom:.12em}
+p{margin:0}
+.flow{display:flex;flex-direction:column;gap:1.15rem;margin-top:1.4rem}
+.t{font-size:1.15rem;line-height:1.62;max-width:34rem}
+.t strong{font-weight:800;color:var(--accent)}
+.t em{font-style:italic;font-weight:800}
+.beat{display:flex;flex-direction:column;gap:.1rem;font-size:1.15rem;line-height:1.55}
+.punch{font-family:var(--display);font-size:1.6rem;line-height:1.2;letter-spacing:-.01em;text-wrap:balance}
+.punch .hl{color:var(--accent)}
+.punch.big{font-size:2.05rem}
+
+/* Illustrations sit on open paper; in dark mode they get their sheet of paper back. */
+.fig{margin:.6rem -6px;position:relative}
+.sheet{background:var(--card);border-radius:14px;overflow:hidden;position:relative}
+.fig svg{display:block;width:100%;height:auto;max-width:100%}
+figcaption{font-family:var(--hand);font-size:1.15rem;color:var(--muted);text-align:center;margin-top:.35rem}
+
+.note{background:var(--note);color:var(--note-ink);border-radius:10px;padding:1rem 1.1rem 1.05rem;transform:rotate(-1deg);margin:.4rem 2px}
+.note h2{font-family:var(--hand);font-size:1.4rem;line-height:1;margin:0 0 .35rem;color:var(--note-ink)}
+.note p{font-size:1.02rem;line-height:1.55}
+.eq{font-family:var(--display);font-size:1.45rem;line-height:1.35;text-wrap:balance}
+.eq b{font-weight:400;color:var(--accent)}
+.epilogue{border-top:1.5px dashed var(--rule);padding-top:1.6rem;margin-top:.6rem;display:flex;flex-direction:column;gap:.9rem}
+.closing{font-family:var(--display);font-size:1.55rem;line-height:1.3;text-wrap:balance}
+.closing em{color:var(--accent);font-style:normal}
+.end{text-align:center;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--muted);margin-top:1.4rem}
+
+/* Rewind overlay chips */
+.chip{position:absolute;z-index:2;font:800 .68rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;
+  color:var(--chip-ink);background:var(--chip);border:1.5px solid var(--chip-line);border-radius:999px;padding:.5rem .7rem}
+.chip.head{top:10px;left:10px}
+.chip.era{bottom:10px;right:10px;min-width:6.5rem;text-align:center}
+
+/* SVG drawing vocabulary */
+.letter{font-family:var(--hand);font-weight:700;fill:#7d2f58}
+.letter.soft{fill:#8a6a78}
+
+/* Motion runs on CSS alone, so pages animate even where scripts are blocked (phone file previews).
+   With scripts on, kit.js pauses scenes that are off screen, and the Pause button stills everything. */
+.bubbles circle{transform-box:fill-box;transform-origin:center;animation:rise 2.8s ease-in infinite}
+.bubbles circle:nth-child(2){animation-delay:-.7s}.bubbles circle:nth-child(3){animation-delay:-1.4s}
+.bubbles circle:nth-child(4){animation-delay:-2.1s}.bubbles circle:nth-child(5){animation-delay:-1.05s}
+@keyframes rise{0%{transform:translateY(6px) scale(.6);opacity:0}18%{opacity:1}100%{transform:translateY(-60px) scale(1.15);opacity:0}}
+.wiggle{transform-box:fill-box;transform-origin:50% 100%;animation:wiggle 1.6s ease-in-out infinite alternate}
+.wiggle.b{animation-delay:-.8s}
+@keyframes wiggle{from{transform:rotate(-4deg)}to{transform:rotate(4deg) translateY(-2px)}}
+.dance{transform-box:fill-box;transform-origin:50% 100%;animation:dance .9s ease-in-out infinite alternate}
+@keyframes dance{from{transform:rotate(-5deg)}to{transform:rotate(5deg) translateY(-4px)}}
+.flame{transform-box:fill-box;transform-origin:50% 100%;animation:flick .7s ease-in-out infinite alternate}
+@keyframes flick{to{transform:scale(.92,1.1) rotate(2deg)}}
+.wave{transform-box:fill-box;transform-origin:10% 90%;animation:wave .8s ease-in-out infinite alternate}
+@keyframes wave{to{transform:rotate(-16deg)}}
+.cheer{transform-box:fill-box;transform-origin:20% 95%;animation:cheer 1.3s ease-in-out infinite alternate}
+.cheer.r{transform-origin:80% 95%;animation-delay:-.65s}
+@keyframes cheer{to{transform:rotate(-7deg) translateY(-3px)}}
+.js .fig:not(.on) *, .still .fig *{animation-play-state:paused!important}
+@media (prefers-reduced-motion: reduce){.fig *{animation:none!important}}
+
+/* Controls that need scripts stay out of the way without them */
+html:not(.js) .motion{visibility:hidden}
+/* Reading progress without scripts, where the browser supports scroll-linked animation */
+@supports (animation-timeline: scroll()){
+  .progress i{animation:read linear both;animation-timeline:scroll(root)}
+  @keyframes read{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+}
+
+/* ---------- Doors: the "pick a story" row on bottle pages, and the way out of every chapter */
+.doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;margin:.5rem -2px}
+.door{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:.5rem;
+  min-height:11.5rem;padding:.9rem .7rem 1rem;border-radius:18px 14px 20px 15px;background:var(--card);color:#3a2532;
+  text-decoration:none;text-align:center;border:2.5px solid #5b2c4c;box-shadow:3px 4px 0 #5b2c4c22;
+  transform:rotate(-.8deg);transition:transform .2s ease,box-shadow .2s ease}
+.door:nth-child(2n){transform:rotate(.9deg)}
+.door:nth-child(3n){transform:rotate(-.3deg)}
+a.door:hover,a.door:focus-visible{transform:rotate(0) translateY(-3px);box-shadow:4px 7px 0 #5b2c4c33}
+a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.door-icon{width:76px;height:76px;flex:none}
+.door-label{font-family:var(--display);font-size:1.02rem;line-height:1.2;text-wrap:balance}
+.door-label em{color:#8b3a63}
+.door.soon{border-style:dashed;border-color:#8a6a78;box-shadow:none;color:#6f5a64;cursor:default}
+.door.soon .door-icon{opacity:.55;filter:grayscale(.4)}
+.door.visited::after{content:"";position:absolute;top:-10px;right:-8px;width:34px;height:34px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Ccircle cx='17' cy='17' r='14' fill='%23f2c776'/%3E%3Cpath d='M9 18 L15 24 L26 10' fill='none' stroke='%235b2c4c' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.stamp{display:inline-block;font:800 .62rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#8b3a63;
+  border:1.5px solid currentColor;border-radius:4px;padding:.32rem .45rem .28rem;transform:rotate(-5deg);background:#fffaf1}
+.door.soon .stamp{margin-top:auto}
+
+/* In-text clickthroughs: "→ Need a refresher on ...?" */
+.go{font-size:1.08rem;line-height:1.45;font-weight:800}
+.go a{color:var(--accent);text-decoration:none;border-bottom:2px solid currentColor}
+.go.soon{color:var(--muted);font-weight:700;display:flex;flex-wrap:wrap;align-items:center;gap:.35rem .6rem}
+.go.soon .stamp{font-weight:800}
+.end-doors{border-top:1.5px dashed var(--rule);padding-top:1.4rem;margin-top:.8rem;display:flex;flex-direction:column;gap:.9rem}
+.end-doors h2{font-family:var(--hand);font-size:1.5rem;font-weight:700;margin:0;color:var(--accent)}
+.back{font-weight:800;font-size:1.02rem}
+.back a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--rule)}
+
+/* ---------- Cabinet Card: the brand basics, tucked into a tap-to-open index card */
+.cabinet-card{background:#f5e1b6;color:#4a3426;border-radius:6px 10px 8px 12px;transform:rotate(-.7deg);
+  box-shadow:2px 3px 0 #4a342622;margin:.4rem 2px;background-image:repeating-linear-gradient(#f5e1b6 0 27px,#e7c9a0 27px 28px)}
+.cabinet-card summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:.6rem;
+  padding:.8rem 1rem .75rem;font-family:var(--hand);font-weight:700;font-size:1.5rem;line-height:1}
+.cabinet-card summary::-webkit-details-marker{display:none}
+.cabinet-card summary::after{content:"+";flex:none;display:grid;place-items:center;width:1.8rem;height:1.8rem;border-radius:50%;
+  border:2px solid #4a3426;font:800 1.1rem/1 var(--body)}
+.cabinet-card[open] summary::after{content:"\2013"}
+.cabinet-card summary:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+.cabinet-card dl{margin:0;padding:.2rem 1rem 1.1rem;display:grid;grid-template-columns:minmax(5.2rem,auto) 1fr;gap:.55rem .85rem}
+.cabinet-card dt{font:800 .7rem/1.5 var(--body);letter-spacing:.1em;text-transform:uppercase;color:#8a5a3c;padding-top:.12rem}
+.cabinet-card dd{margin:0;font-size:1rem;line-height:1.45}
+
+/* ---------- Real photos (product shots, old ads) dropped into the crayon world */
+.photo{margin:.6rem auto;max-width:21rem;position:relative}
+.photo .asset{display:block;width:100%;height:auto;border-radius:6px}
+.clipping{background:#f4efe3;padding:10px;box-shadow:2px 3px 0 #3a253222,0 8px 18px #3a253218;transform:rotate(-1.6deg)}
+.clipping::before,.clipping::after{content:"";position:absolute;width:70px;height:22px;background:#f2c776b8;top:-9px}
+.clipping::before{left:18px;transform:rotate(-8deg)}.clipping::after{right:18px;transform:rotate(7deg)}
+.asset.placeholder{display:grid;place-content:center;gap:.35rem;min-height:12rem;padding:1rem;border:2.5px dashed #8a6a78;
+  border-radius:10px;text-align:center;color:#6f5a64;font-family:var(--hand);font-size:1.25rem;line-height:1.2;background:#fffaf1}
+.asset.placeholder small{font:800 .62rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#8b3a63}
+
+/* ---------- Chapter headings inside a long door */
+.flow > h2{font-family:var(--display);font-weight:400;font-size:1.8rem;line-height:1.12;letter-spacing:-.01em;margin:1.6rem 0 -.1rem;
+  text-wrap:balance;padding-bottom:.45rem;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8' preserveAspectRatio='none'%3E%3Cpath d='M2 5 Q30 2 60 4.6 T118 3.6' fill='none' stroke='%23b9792c' stroke-width='3' stroke-linecap='round' opacity='.8'/%3E%3C/svg%3E") left bottom/7.5rem 8px no-repeat}
+.flow > h2 em{color:var(--accent)}
+.flow > h2:first-child{margin-top:.2rem}
+
+/* A beat that steps down the page, one line at a time ("On himself. / His product. / ...") */
+.beat.stack{gap:.6rem;font-family:var(--display);font-size:1.4rem;line-height:1.22;text-wrap:balance}
+.beat.stack p:nth-child(2){padding-left:1.2rem}
+.beat.stack p:nth-child(3){padding-left:2.4rem}
+.beat.stack em{color:var(--accent);font-style:italic}
+
+/* A door that takes the whole row: icon beside the label (the open story, or a door every bottle shares) */
+.doors .door.wide{grid-column:1/-1;flex-direction:row;justify-content:flex-start;gap:1rem;min-height:0;padding:1rem 1.2rem;text-align:left;transform:rotate(-.6deg)}
+.doors .door.wide .door-icon{width:88px;height:88px}
+.doors .door.wide .door-label{font-size:1.35rem}
+.door-text{display:flex;flex-direction:column;align-items:flex-start;gap:.55rem}
+.door.soon.wide .stamp{margin-top:0}
+
+/* ---------- Bio Card: the vital stats for a person we feature, set apart from the story */
+.bio-card{display:grid;grid-template-columns:auto 1fr;gap:.8rem .9rem;align-items:center;margin:1rem 2px .4rem;padding:1rem 1rem 1.1rem;
+  background:#fffaf1;color:#3a2532;border:2.5px solid #5b2c4c;border-radius:16px 12px 18px 13px;box-shadow:3px 4px 0 #5b2c4c22;transform:rotate(.6deg)}
+.bio-face{width:68px;height:68px;border-radius:50%;background:#f5e1b6;border:2px solid #5b2c4c}
+.bio-head{min-width:0}
+.bio-kicker{font:800 .62rem/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:#8b3a63;margin:.15rem 0 .35rem}
+.bio-name{font-family:var(--hand);font-weight:700;font-size:1.45rem;line-height:1.05;margin:0;text-wrap:balance}
+.bio-card dl{grid-column:1/-1;margin:0;padding-top:.7rem;border-top:1.5px dashed #d9c3b4;display:grid;grid-template-columns:auto 1fr;gap:.45rem .85rem}
+.bio-card dt{font:800 .68rem/1.5 var(--body);letter-spacing:.1em;text-transform:uppercase;color:#8a5a3c;padding-top:.08rem}
+.bio-card dd{margin:0;font-size:.98rem;line-height:1.4}
+
+/* A folded card's name and its one-line summary (Cabinet Card, Short Version) */
+.cabinet-card summary{align-items:center}
+.cc-head{display:block}
+.cc-name{font-family:var(--hand);font-weight:700;font-size:1.5rem;line-height:1}
+.cc-quick{display:inline-block;margin-top:.3rem;font:800 .86rem/1.3 var(--body);letter-spacing:.02em;color:#6b4632}
+.cc-quick > span{white-space:nowrap}
+
+/* ---------- Recipe card (a bartender's dealer's choice): an index card; the + and - change how many drinks */
+.recipe-card{background:#fffaf1;color:#3a2532;border-radius:8px 6px 10px 7px;transform:rotate(.6deg);margin:.4rem 2px;padding:.9rem 1.05rem 1rem;
+  box-shadow:2px 3px 0 #4a342622;background-image:linear-gradient(#fffaf1 0 3.7rem,#d9867f 3.7rem 3.85rem,transparent 3.85rem),repeating-linear-gradient(#fffaf1 0 27px,#cfe0ea 27px 28px)}
+.rc-kicker{margin:0;font:800 .7rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#b14b45}
+.rc-name{margin:.25rem 0 .9rem;font-family:var(--hand);font-weight:700;font-size:1.7rem;line-height:1}
+.rc-serves{margin:0 0 .5rem;display:flex;align-items:center;gap:.45rem;font:800 .95rem/1 var(--body)}
+.rc-step{display:none;width:2rem;height:2rem;border-radius:50%;border:2px solid #3a2532;background:transparent;color:#3a2532;
+  font:800 1.1rem/1 var(--body);cursor:pointer;place-items:center;padding:0}
+.js .rc-step{display:grid}
+.rc-step:disabled{opacity:.3;cursor:default}
+.rc-n{min-width:1.2ch;text-align:center;font-size:1.15rem}
+.rc-list{list-style:none;margin:0;padding:0;font-size:1.08rem;line-height:28px}
+.rc-list li{display:flex;gap:.4rem}   /* a long ingredient wraps under itself, not under the amount */
+.rc-list .amt{font-weight:800;flex:none;min-width:5.2rem}
+.rc-glass{margin:.35rem 0 0;font-size:.95rem;line-height:28px;color:#6b5a62}
+.rc-glass b{color:#3a2532}
+.rc-note{margin:.35rem 0 0;font-size:.86rem;line-height:1.45;color:#6b5a62;font-style:italic}
+ol.steps{list-style:none;counter-reset:step;margin:0;padding:0;display:flex;flex-direction:column;gap:.8rem}
+ol.steps li{counter-increment:step;position:relative;padding-left:2.6rem;font-size:1.12rem;line-height:1.55}
+ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;width:1.85rem;height:1.85rem;border-radius:50%;
+  display:grid;place-items:center;background:var(--accent);color:var(--paper);font:800 .95rem/1 var(--body)}
+
+/* ---------- Set-apart boxes: an offer that sits beside the conversation instead of interrupting it */
+.callout{border:2px solid var(--accent);border-radius:16px 12px 18px 13px;padding:1rem 1.1rem 1.05rem;display:flex;flex-direction:column;gap:.65rem;
+  background:color-mix(in srgb,var(--accent) 6%,transparent);margin:.3rem 0}
+.callout p{margin:0;font-size:1.1rem;line-height:1.5}
+.note .go{margin-top:.5rem}
+/* a Cabinet Card that holds a few paragraphs instead of a fact list */
+.cc-body{padding:.15rem 1rem 1.1rem;display:flex;flex-direction:column;gap:.7rem}
+.cc-body p{margin:0;font-size:1.04rem;line-height:1.5}
+/* a how-to drawing with its steps written underneath; each step lights up as the drawing reaches it */
+.howto figcaption{font-family:var(--body);font-size:inherit;text-align:left;color:var(--ink);margin-top:1rem}
+.howto-steps{--step-hl:color-mix(in srgb,var(--accent) 13%,transparent);gap:.35rem}
+.howto-steps li{border-radius:10px;padding:.4rem .5rem .4rem 2.85rem}
+.howto-steps li::before{left:.45rem;top:.35rem}
+
+/* ---------- A formula table: one ratio, many drinks (a dl, so each cell reads as its own line) */
+.formula{margin:.2rem 0;display:flex;flex-direction:column;gap:.3rem;font-size:.95rem;line-height:1.25}
+.formula .f-row{display:grid;grid-template-columns:minmax(6.4rem,1.3fr) 1fr 1fr 1fr;gap:.3rem;align-items:stretch}
+.formula dt{font-weight:800;align-self:center}
+.formula dd{margin:0;padding:.42rem .45rem;border-radius:8px;display:flex;align-items:center}
+.formula .f-row dd:nth-of-type(1){background:color-mix(in srgb,var(--gold) 20%,transparent)}
+.formula .f-row dd:nth-of-type(2){background:color-mix(in srgb,var(--accent) 13%,transparent)}
+.formula .f-row dd:nth-of-type(3){background:color-mix(in srgb,#b9c34a 24%,transparent)}
+.formula .f-head dt,.formula .f-head dd{font:800 .7rem/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.formula .f-head dd{background:none!important;padding-block:.1rem;gap:.3rem}
+.formula .f-head b{font-size:1.05rem;letter-spacing:0;color:var(--ink)}
+/* Cocktails How-To: scene motion. Written by tools/art/howto_scenes.py; edit it there. */
+.twinkle{animation:twinkle 1.6s ease-in-out infinite}
+.twinkle.d2{animation-delay:-.55s}.twinkle.d3{animation-delay:-1.1s}
+@keyframes twinkle{0%,100%{transform:scale(.55) rotate(0);opacity:.35}50%{transform:scale(1.15) rotate(20deg);opacity:1}}
+
+</style>
+</head>
+<body>
+<!-- Built from src/ by tools/build.py. Edit the source, not this file. -->
+<svg id="defs" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Crayon line: a little wobble on every stroke -->
+    <filter id="crayon" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="2" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <!-- Character lines "boil" like hand-drawn animation -->
+    <filter id="boil" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="1" result="n">
+        <animate attributeName="seed" values="1;4;7" dur="0.45s" calcMode="discrete" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <!-- Watercolor wash: soft, uneven edges and a little paper grain -->
+    <filter id="wash" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="5" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="8" xChannelSelector="R" yChannelSelector="G" result="shape"/>
+      <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="9" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  .8 0 0 0 .42" result="ga"/>
+      <feComposite in="shape" in2="ga" operator="in"/>
+    </filter>
+
+    <!-- The yeast buddy. The little bump is a bud: yeast really do multiply by budding. -->
+    <symbol id="yeast" viewBox="0 0 124 134">
+      <g filter="url(#wash)" transform="translate(2 2)">
+        <path d="M22 72 C18 42 36 22 62 22 C90 22 104 44 102 74 C100 102 84 118 60 118 C36 118 24 100 22 72Z" fill="#efc163"/>
+        <circle cx="90" cy="26" r="11" fill="#efc163"/>
+        <ellipse cx="40" cy="86" rx="7" ry="4.5" fill="#e48b7c" opacity=".65"/>
+        <ellipse cx="83" cy="86" rx="7" ry="4.5" fill="#e48b7c" opacity=".65"/>
+      </g>
+      <g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 72 C18 42 36 22 62 22 C90 22 104 44 102 74 C100 102 84 118 60 118 C36 118 24 100 22 72Z"/>
+        <path d="M79.5 29 A11 11 0 1 1 100.6 30"/>
+        <path d="M51 88 Q62 98 73 88"/>
+        <path d="M24 86 Q12 92 9 104"/><path d="M100 86 Q112 92 115 104"/>
+        <path d="M48 117 L45 129"/><path d="M72 117 L75 129"/>
+        <ellipse cx="49" cy="70" rx="4.2" ry="5.4" fill="#3b2233" stroke="none"/>
+        <ellipse cx="74" cy="70" rx="4.2" ry="5.4" fill="#3b2233" stroke="none"/>
+      </g>
+    </symbol>
+    <symbol id="yeast-thumb" viewBox="0 0 146 134">
+      <g filter="url(#wash)" transform="translate(2 2)">
+        <path d="M22 72 C18 42 36 22 62 22 C90 22 104 44 102 74 C100 102 84 118 60 118 C36 118 24 100 22 72Z" fill="#efc163"/>
+        <circle cx="90" cy="26" r="11" fill="#efc163"/>
+        <rect x="110" y="44" width="22" height="22" rx="8" fill="#efc163"/>
+        <path d="M117 46 L117 31 Q118 26 123 27 Q127 28 126 33 L125 46Z" fill="#efc163"/>
+        <ellipse cx="40" cy="86" rx="7" ry="4.5" fill="#e48b7c" opacity=".65"/>
+        <ellipse cx="83" cy="86" rx="7" ry="4.5" fill="#e48b7c" opacity=".65"/>
+      </g>
+      <g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 72 C18 42 36 22 62 22 C90 22 104 44 102 74 C100 102 84 118 60 118 C36 118 24 100 22 72Z"/>
+        <path d="M79.5 29 A11 11 0 1 1 100.6 30"/>
+        <path d="M51 88 Q61 100 73 88"/>
+        <path d="M24 86 Q12 92 9 104"/>
+        <path d="M100 82 Q112 76 116 66"/>
+        <rect x="110" y="44" width="22" height="22" rx="8"/>
+        <path d="M117 46 L117 31 Q118 26 123 27 Q127 28 126 33 L125 46"/>
+        <path d="M115 53 L127 53 M115 59 L127 59" stroke-width="1.8"/>
+        <path d="M48 117 L45 129"/><path d="M72 117 L75 129"/>
+        <ellipse cx="49" cy="70" rx="4.2" ry="5.4" fill="#3b2233" stroke="none"/>
+        <ellipse cx="74" cy="70" rx="4.2" ry="5.4" fill="#3b2233" stroke="none"/>
+      </g>
+    </symbol>
+    <!-- Generic door icons -->
+    <pattern id="plaid" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#b4c0cd"/><path d="M0 3.5h7M3.5 0v7" stroke="#8796aa" stroke-width="1.9" opacity=".6"/><path d="M0 .8h7M.8 0v7" stroke="#e3e9ef" stroke-width=".7" opacity=".8"/></pattern>
+    <symbol id="newspaper-icon" viewBox="0 0 120 120"><g filter="url(#wash)"><path d="M14 30 L98 20 L106 92 L22 102Z" fill="#f4efe3"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 30 L98 20 L106 92 L22 102Z"/><path d="M60 25 L64 97" stroke-width="1.6"/><path d="M24 42 L54 38 M25 52 L55 48 M26 62 L56 58 M27 72 L57 68 M28 82 L58 78 M70 36 L96 33 M71 46 L97 43 M72 56 L98 53 M73 66 L99 63 M74 76 L100 73 M75 86 L101 83" stroke-width="1.5" stroke="#8a6a78"/></g></symbol>
+    <symbol id="bottle-icon" viewBox="0 0 120 120"><g transform="translate(60 108) scale(1.3 1.3)"><g><g filter="url(#wash)"><path d="M-13 0 L-13 -38 Q-13 -46 -6 -50 L-5 -62 L5 -62 L6 -50 Q13 -46 13 -38 L13 0Z" fill="#c98a3c"/><rect x="-10" y="-30" width="20" height="16" rx="2" fill="#fbf3e3"/><rect x="-5.5" y="-68" width="11" height="7" rx="1.5" fill="#7a5f4a"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-13 0 L-13 -38 Q-13 -46 -6 -50 L-5 -62 L5 -62 L6 -50 Q13 -46 13 -38 L13 0Z"/><rect x="-10" y="-30" width="20" height="16" rx="2" stroke-width="1.8"/><rect x="-5.5" y="-68" width="11" height="7" rx="1.5" stroke-width="1.8"/></g></g></g></symbol>
+    <symbol id="bartender-icon" viewBox="-40 -190 90 90"><g><g><g filter="url(#wash)"><path d="M-33.8 -85.4 L-30.2 -63.4 L-21.8 -64.6 L-24.2 -86.6Z" fill="#f0c39d"/><circle cx="-26" cy="-64" r="5.4" fill="#f0c39d"/><path d="M-28.8 -111.5 L-34.3 -87.3 L-23.7 -84.7 L-17.2 -108.5Z" fill="url(#plaid)"/><path d="M-22.2 -87.6 L-36 -85.7 L-35.2 -79.4 L-21.3 -81.3Z" fill="url(#plaid)"/><path d="M-33.8 -85.4 L-30.2 -63.4 L-21.8 -64.6 L-24.2 -86.6Z" fill="#5f8494" opacity=".28"/></g><g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-33.8 -85.4 L-30.2 -63.4 L-21.8 -64.6 L-24.2 -86.6Z"/><circle cx="-26" cy="-64" r="5.4"/><path d="M-28.8 -111.5 L-34.3 -87.3 L-23.7 -84.7 L-17.2 -108.5Z"/><path d="M-22.2 -87.6 L-36 -85.7 L-35.2 -79.4 L-21.3 -81.3Z" stroke-width="2"/><g stroke="#355866"><path d="M-24 -83.1 L-33.1 -81.9" stroke-width="1.7"/><path d="M-23.6 -80.7 L-32.7 -79.4" stroke-width="1.7"/><path d="M-27.1 -72.4 C-32.2 -75.4 -29.8 -78.7 -27.7 -76.6 C-26.3 -79.2 -23.1 -76.6 -27.1 -72.4Z" fill="#b4485a" stroke-width="1.3"/><path d="M-29.6 -68.7 -27.7 -69.6 -28 -71.7 -26.5 -70.2 -24.6 -71.1 -25.5 -69.2 -24.1 -67.7 -26.2 -68 -27.2 -66.2 -27.6 -68.2Z" fill="#355866" stroke-width="1"/></g></g></g><g><g filter="url(#wash)"><ellipse cx="-11" cy="-3.5" rx="10.5" ry="4.6" fill="#3b2a22"/><ellipse cx="11" cy="-3.5" rx="10.5" ry="4.6" fill="#3b2a22"/><path d="M-17 -62 L-15 -7 L-4 -7 L-1.5 -56 L1.5 -56 L4 -7 L15 -7 L17 -62Z" fill="#4b5a73"/><path d="M-25 -113 Q-29 -86 -22 -58 L22 -58 Q29 -86 25 -113 Q12 -120 0 -119 Q-12 -120 -25 -113Z" fill="url(#plaid)"/><path d="M-3 -114 L3 -114 L2.5 -109 L-2.5 -109Z M-2.5 -109 L2.5 -109 L5 -84 L1.5 -78 L-2 -84Z" fill="#2b2730"/><path d="M-10 -120 L-3 -110 L-1 -117Z M10 -120 L3 -110 L1 -117Z" fill="url(#plaid)"/><path d="M-25 -66 L25 -66 L26.5 -30 Q0 -25 -26.5 -30Z" fill="#302a33"/><path d="M14 -66 L22 -66 L21 -40 L15 -42Z" fill="#f4ede0"/></g><g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="-11" cy="-3.5" rx="10.5" ry="4.6"/><ellipse cx="11" cy="-3.5" rx="10.5" ry="4.6"/><path d="M-17 -62 L-15 -7 L-4 -7 L-1.5 -56 M1.5 -56 L4 -7 L15 -7 L17 -62"/><path d="M-25 -113 Q-29 -86 -22 -58 L22 -58 Q29 -86 25 -113 Q12 -120 0 -119 Q-12 -120 -25 -113Z"/><path d="M-2.5 -109 L2.5 -109 L5 -84 L1.5 -78 L-2 -84Z" stroke-width="1.8"/><path d="M-10 -120 L-3 -110 L-1 -117 M10 -120 L3 -110 L1 -117" stroke-width="1.8"/><path d="M-25 -66 L25 -66 L26.5 -30 Q0 -25 -26.5 -30Z"/><path d="M-25 -66 H25" stroke-width="3.2"/><path d="M-8 -52 h14 v12 h-14Z" stroke="#56505a" stroke-width="1.5"/><path d="M14 -66 L22 -66 L21 -40 L15 -42Z" stroke-width="1.6"/><path d="M-25 -64 q-6 6 -3 14 M-25 -64 q-2 8 2 13" stroke-width="1.8"/></g></g><g><g filter="url(#wash)"><rect x="-5.5" y="-125" width="11" height="9" fill="#f0c39d"/><ellipse cx="0" cy="-137" rx="15.5" ry="16" fill="#f0c39d"/><ellipse cx="-14.5" cy="-136" rx="3" ry="4.4" fill="#f0c39d"/><ellipse cx="14.5" cy="-136" rx="3" ry="4.4" fill="#f0c39d"/><ellipse cx="-8.5" cy="-131" rx="4" ry="2.6" fill="#e48b7c" opacity=".6"/><ellipse cx="8.5" cy="-131" rx="4" ry="2.6" fill="#e48b7c" opacity=".6"/><ellipse cx="2" cy="-139" rx="3.4" ry="4.2" fill="#e9a982"/><path d="M-15.8 -142 Q-17.5 -154 -10 -158 Q-4 -163 5 -162 Q15 -161 16.5 -151 Q17 -146 15.8 -142 Q14 -149 8 -151.5 Q2 -150 -4 -152 Q-10 -150 -13 -150.5 Q-15 -147 -15.8 -142Z" fill="#7a4a2c"/></g><g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="0" cy="-137" rx="15.5" ry="16"/><path d="M-15.0 -139 q-3.5 3 0 7"/><path d="M15.0 -139 q3.5 3 0 7"/><path d="M-8.5 -137 q2.5 -3.5 5 0 M3.5 -137 q2.5 -3.5 5 0" stroke-width="1.9"/><path d="M-4 -127 h8" stroke-width="2"/><path d="M0 -142 q5 3 2 8" stroke-width="1.8"/><path d="M-7.5 -130 q7.5 10 15 0Z" fill="#fbf3e3" stroke-width="2"/><path d="M-6.4 -128.4 h12.8" stroke-width="1"/><path d="M-10.5 -145 q4 -2.4 8 -.6 M2.5 -145.6 q4 -1.8 8 .6" stroke="#7a4a2c" stroke-width="2.4"/><path d="M-15.8 -142 Q-17.5 -154 -10 -158 Q-4 -163 5 -162 Q15 -161 16.5 -151 Q17 -146 15.8 -142"/><path d="M-3 -158.5 q5 -3 11 -1.5 M0 -155 q4 -2.4 9 -1" stroke-width="1.5"/></g></g><g><g filter="url(#wash)"><path d="M44.6 -125.5 L37 -147.3 L29 -144.7 L35.4 -122.5Z" fill="#f0c39d"/><circle cx="33" cy="-146" r="5.4" fill="#f0c39d"/><path d="M26.8 -105.4 L43.5 -119.8 L36.5 -128.2 L19.2 -114.6Z" fill="url(#plaid)"/><path d="M33.5 -121.2 L46.9 -125.5 L44.9 -131.6 L31.6 -127.3Z" fill="url(#plaid)"/></g><g filter="url(#boil)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M44.6 -125.5 L37 -147.3 L29 -144.7 L35.4 -122.5Z"/><circle cx="33" cy="-146" r="5.4"/><path d="M26.8 -105.4 L43.5 -119.8 L36.5 -128.2 L19.2 -114.6Z"/><path d="M33.5 -121.2 L46.9 -125.5 L44.9 -131.6 L31.6 -127.3Z" stroke-width="2"/></g></g><g filter="url(#wash)"><path d="M24 -150 L38 -150 L36 -172 L26 -172Z" fill="#c9c3b8"/><path d="M26.5 -172 L35.5 -172 L34 -181 L28 -181Z" fill="#a9a29a"/><rect x="29" y="-185" width="4" height="4" rx="1" fill="#a9a29a"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 -150 L38 -150 L36 -172 L26 -172Z"/><path d="M26.5 -172 L35.5 -172 L34 -181 L28 -181Z" stroke-width="2"/><rect x="29" y="-185" width="4" height="4" rx="1" stroke-width="1.6"/><path d="M27 -164 h8" stroke="#fffaf1" stroke-width="1.6"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M44 -178 q4 3 0 6 M47 -168 q4 3 0 6 M18 -180 q-4 3 0 6" stroke="#8a6a78" stroke-width="1.8"/></g></g></symbol>
+    <symbol id="crock-icon" viewBox="0 0 120 120"><g filter="url(#wash)"><path d="M34 52 Q22 70 26 92 Q30 108 60 108 Q90 108 94 92 Q98 70 86 52Z" fill="#c98a5c"/><path d="M36 40 Q60 30 84 40 L86 52 Q60 58 34 52Z" fill="#f6e6c8"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M34 52 Q22 70 26 92 Q30 108 60 108 Q90 108 94 92 Q98 70 86 52"/><path d="M36 40 Q60 30 84 40 L86 52 Q60 58 34 52Z"/><path d="M33 53 Q60 60 87 53" stroke-width="3.2" stroke="#7a5f4a"/><path d="M36 76 Q60 84 86 76" stroke="#8d5f4b" stroke-width="2"/></g><g filter="url(#wash)"><circle cx="52" cy="24" r="4" fill="#fffaf1"/><circle cx="64" cy="16" r="5" fill="#fffaf1"/><circle cx="74" cy="26" r="3.2" fill="#fffaf1"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="52" cy="24" r="4"/><circle cx="64" cy="16" r="5"/><circle cx="74" cy="26" r="3.2"/></g></symbol>
+<!-- Cocktails How-To: door icons -->
+    <symbol id="scale-icon" viewBox="0 0 120 120"><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M60 102 V36 M42 104 H78 M18 40 H102" stroke-width="3"/><path d="M60 30 l-6 8 h12Z" fill="#e6b264"/><path d="M24 40 L14 70 M24 40 L34 70 M96 40 L86 70 M96 40 L106 70" stroke-width="1.6"/></g><g filter="url(#wash)"><path d="M10 70 Q24 82 38 70Z M82 70 Q96 82 110 70Z" fill="#e6b264"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 70 Q24 82 38 70Z M82 70 Q96 82 110 70Z" stroke-width="2"/></g><text class="letter" x="60" y="22" font-size="17" text-anchor="middle">2:1:1</text></symbol>
+    <symbol id="shaker-icon" viewBox="0 0 120 120"><g transform="translate(48 108) scale(1)"><g filter="url(#wash)"><path d="M-13 0 L-16 -46 L16 -46 L13 0Z" fill="#c9c3b8"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-13 0 L-16 -46 L16 -46 L13 0Z" stroke-width="2"/><path d="M-10 -40 L-8 -6" stroke="#f4f4f2" stroke-width="2.6"/></g></g><g transform="translate(48 62) scale(1)"><g transform="scale(1 -1)"><g filter="url(#wash)"><path d="M-11 0 L-14 30 L14 30 L11 0Z" fill="#e7f1fb" opacity=".8"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-11 0 L-14 30 L14 30 L11 0Z" stroke-width="2"/></g></g></g><g transform="translate(88 108) rotate(12) scale(1)"><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0 L0 -74" stroke="#a9a29a" stroke-width="2.6"/><path d="M-2 -10 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -19 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -28 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -37 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -46 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -55 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -64 l4 2" stroke="#8a8f96" stroke-width="1.3"/><circle cx="0" cy="-77" r="3.4" fill="#c9c3b8"/><ellipse cx="0" cy="2" rx="4" ry="2.4" fill="#c9c3b8"/></g></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 30 q-6 6 0 12 M78 22 q6 6 0 12" stroke="#8a6a78" stroke-width="2"/></g></symbol>
+    <symbol id="syrup-icon" viewBox="0 0 120 120"><g transform="translate(46 108) scale(1.5)"><g filter="url(#wash)"><path d="M-11 0 L-11 -26 Q-11 -32 -5 -34 L-5 -42 L5 -42 L5 -34 Q11 -32 11 -26 L11 0Z" fill="#f3e3a8" opacity=".9"/><rect x="-8.5" y="-22" width="17" height="11" rx="1.5" fill="#fffaf1"/><rect x="-6" y="-47" width="12" height="5" rx="1" fill="#c25c86"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-11 0 L-11 -26 Q-11 -32 -5 -34 L-5 -42 L5 -42 L5 -34 Q11 -32 11 -26 L11 0Z" stroke-width="2"/><rect x="-8.5" y="-22" width="17" height="11" rx="1.5" stroke-width="1.4"/><rect x="-6" y="-47" width="12" height="5" rx="1" stroke-width="1.4"/></g><text class="letter" x="0" y="-13.6" font-size="6.6" text-anchor="middle">syrup</text></g><g filter="url(#wash)"><rect x="78" y="80" width="18" height="18" rx="2" fill="#fffaf1"/><rect x="86" y="92" width="18" height="18" rx="2" fill="#fffaf1"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="78" y="80" width="18" height="18" rx="2" stroke-width="1.8"/><rect x="86" y="92" width="18" height="18" rx="2" stroke-width="1.8"/></g></symbol>
+    <symbol id="ice-icon" viewBox="0 0 120 120"><g transform="translate(46 104) scale(1.3)"><g filter="url(#wash)"><rect x="-16" y="-32" width="32" height="32" rx="6" fill="#eef8ff"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="-16" y="-32" width="32" height="32" rx="6" stroke="#5b8aa6" stroke-width="2.2"/><path d="M-10 -24 h9 M-10 -18 h5" stroke="#fffaf1" stroke-width="2.6"/></g></g><g transform="translate(84 106) scale(0.8)"><g filter="url(#wash)"><rect x="-16" y="-32" width="32" height="32" rx="6" fill="#eef8ff"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="-16" y="-32" width="32" height="32" rx="6" stroke="#5b8aa6" stroke-width="2.2"/><path d="M-10 -24 h9 M-10 -18 h5" stroke="#fffaf1" stroke-width="2.6"/></g></g><g style="transform-origin:96px 40px"><path d="M96 33 L98 38 L103 40 L98 42 L96 47 L94 42 L89 40 L94 38Z" fill="#f2c776" stroke="#5b2c4c" stroke-width="1.6" stroke-linejoin="round"/></g><g style="transform-origin:24px 32px"><path d="M24 27 L25.4 30.6 L29 32 L25.4 33.4 L24 37 L22.6 33.4 L19 32 L22.6 30.6Z" fill="#f2c776" stroke="#5b2c4c" stroke-width="1.6" stroke-linejoin="round"/></g></symbol>
+    <symbol id="glasses-icon" viewBox="0 0 120 120"><g transform="translate(30 98) scale(1)"><g filter="url(#wash)"><path d="M-12 -22 L12 -22 L10.5 0 L-10.5 0Z" fill="#e7f1fb" opacity=".7"/><path d="M-11.5 -14 L11.5 -14 L10.5 0 L-10.5 0Z" fill="#c98a3c"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-12 -22 L12 -22 L10.5 0 L-10.5 0Z" stroke-width="2"/></g></g><g transform="translate(62 98) scale(1)"><g filter="url(#wash)"><path d="M-12 -24 L12 -24 L10.5 0 L-10.5 0Z" fill="#e7f1fb" opacity=".7"/><path d="M-11.6 -18 L11.6 -18 L10.5 0 L-10.5 0Z" fill="#c98a3c"/><rect x="-7" y="-22" width="13" height="12" rx="2" fill="#f4fbff" opacity=".85"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-12 -24 L12 -24 L10.5 0 L-10.5 0Z" stroke-width="2"/><rect x="-7" y="-22" width="13" height="12" rx="2" stroke="#8ecae6" stroke-width="1.3"/></g></g><g transform="translate(95 98) scale(1)"><g filter="url(#wash)"><path d="M-17 -40 Q0 -14 17 -40Z" fill="#c98a3c"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-19 -42 Q0 -10 19 -42 M0 -26 V-3 M-10 0 Q0 -4 10 0" stroke-width="2"/></g></g></symbol>
+    <symbol id="tools-icon" viewBox="0 0 120 120"><g transform="translate(32 108) scale(1.3)"><g filter="url(#wash)"><path d="M-9 -32 L9 -32 L3 -16 L9 0 L-9 0 L-3 -16Z" fill="#c9c3b8"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-9 -32 L9 -32 L3 -16 L9 0 L-9 0 L-3 -16Z M-3 -16 H3" stroke-width="2"/></g></g><g transform="translate(64 112) rotate(8) scale(1)"><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0 L0 -84" stroke="#a9a29a" stroke-width="2.6"/><path d="M-2 -10 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -19 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -28 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -37 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -46 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -55 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -64 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -73 l4 2" stroke="#8a8f96" stroke-width="1.3"/><circle cx="0" cy="-87" r="3.4" fill="#c9c3b8"/><ellipse cx="0" cy="2" rx="4" ry="2.4" fill="#c9c3b8"/></g></g><g transform="translate(92 70) rotate(-30) scale(1)"><g filter="url(#wash)"><circle cx="0" cy="0" r="13" fill="#d8d3cb"/><rect x="12" y="-3" width="22" height="6" rx="3" fill="#c9c3b8"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="0" cy="0" r="13" stroke-width="2"/><rect x="12" y="-3" width="22" height="6" rx="3" stroke-width="1.8"/><path d="M-10 4 q2.5 3 5 0 q2.5 -3 5 0 q2.5 3 5 0 q2.5 -3 5 0" stroke="#8a8f96" stroke-width="1.4"/></g></g></symbol>
+  </defs>
+</svg>
+<header class="bar">
+  <div class="bar-inner">
+    <a class="bar-back" href="../makers-mark/index.html" data-back aria-label="Back to the bottle" title="Back to the bottle"><span aria-hidden="true">←</span> Back</a><div class="mark"><b>The Liquor Cabinet</b><span>Cocktails How-To</span></div>
+    <button class="motion" id="motion" type="button" aria-pressed="false" aria-label="Pause motion">Pause<span class="long"> motion</span></button>
+  </div>
+  <div class="progress" aria-hidden="true"><i id="fill"></i></div>
+</header>
+
+<main>
+<article class="story">
+<h1>Cocktails <span>How-To.</span></h1>
+
+<div class="flow">
+  <figure class="fig" id="s-tools"><div class="sheet"><svg viewBox="0 0 340 196" role="img" aria-label="A bar top laid out for cocktails: a shaker tin, a jigger, a bar spoon, simple syrup, a lemon and a bottle of spirit"><g transform="translate(-30 -20)"><g filter="url(#wash)"><rect x="0" y="0" width="400" height="236" fill="#efe3d0"/><rect x="0" y="178" width="400" height="58" fill="#7a5340"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M0 178 H400"/></g><g transform="translate(96 178) scale(1.5)"><g filter="url(#wash)"><path d="M-13 0 L-16 -46 L16 -46 L13 0Z" fill="#c9c3b8"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-13 0 L-16 -46 L16 -46 L13 0Z" stroke-width="2"/><path d="M-10 -40 L-8 -6" stroke="#f4f4f2" stroke-width="2.6"/></g></g><g transform="translate(150 178) scale(1.4)"><g filter="url(#wash)"><path d="M-9 -32 L9 -32 L3 -16 L9 0 L-9 0 L-3 -16Z" fill="#c9c3b8"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-9 -32 L9 -32 L3 -16 L9 0 L-9 0 L-3 -16Z M-3 -16 H3" stroke-width="2"/></g></g><g transform="translate(200 178) scale(1.6)"><g filter="url(#wash)"><path d="M-11 0 L-11 -26 Q-11 -32 -5 -34 L-5 -42 L5 -42 L5 -34 Q11 -32 11 -26 L11 0Z" fill="#f3e3a8" opacity=".9"/><rect x="-8.5" y="-22" width="17" height="11" rx="1.5" fill="#fffaf1"/><rect x="-6" y="-47" width="12" height="5" rx="1" fill="#c25c86"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-11 0 L-11 -26 Q-11 -32 -5 -34 L-5 -42 L5 -42 L5 -34 Q11 -32 11 -26 L11 0Z" stroke-width="2"/><rect x="-8.5" y="-22" width="17" height="11" rx="1.5" stroke-width="1.4"/><rect x="-6" y="-47" width="12" height="5" rx="1" stroke-width="1.4"/></g><text class="letter" x="0" y="-13.6" font-size="6.6" text-anchor="middle">syrup</text></g><g transform="translate(258 178) scale(1.5)"><g filter="url(#wash)"><ellipse cx="0" cy="-11" rx="15" ry="11" fill="#f2d24a"/><path d="M14 -13 l5 -2 l-1 4Z" fill="#f2d24a"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="0" cy="-11" rx="15" ry="11" stroke-width="2"/><path d="M14 -13 l5 -2 l-1 4" stroke-width="1.6"/><path d="M-7 -16 q4 -3 9 -2" stroke="#fff6c8" stroke-width="2"/></g></g><g transform="translate(322 178) scale(1.3)"><g filter="url(#wash)"><path d="M-13 0 L-13 -38 Q-13 -46 -6 -50 L-5 -62 L5 -62 L6 -50 Q13 -46 13 -38 L13 0Z" fill="#c98a3c"/><rect x="-10" y="-30" width="20" height="16" rx="2" fill="#fbf3e3"/><rect x="-5.5" y="-68" width="11" height="7" rx="1.5" fill="#7a5f4a"/></g><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M-13 0 L-13 -38 Q-13 -46 -6 -50 L-5 -62 L5 -62 L6 -50 Q13 -46 13 -38 L13 0Z" stroke-width="2"/><rect x="-10" y="-30" width="20" height="16" rx="2" stroke-width="1.6"/><rect x="-5.5" y="-68" width="11" height="7" rx="1.5" stroke-width="1.6"/></g><text class="letter" x="0" y="-19.4" font-size="6.8" text-anchor="middle">spirit</text></g><g transform="translate(126 120) rotate(-14) scale(1)"><g filter="url(#crayon)" fill="none" stroke="#5b2c4c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0 L0 -80" stroke="#a9a29a" stroke-width="2.6"/><path d="M-2 -10 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -19 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -28 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -37 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -46 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -55 l4 2" stroke="#8a8f96" stroke-width="1.3"/><path d="M-2 -64 l4 2" stroke="#8a8f96" stroke-width="1.3"/><circle cx="0" cy="-83" r="3.4" fill="#c9c3b8"/><ellipse cx="0" cy="2" rx="4" ry="2.4" fill="#c9c3b8"/></g></g><g class="twinkle" style="transform-origin:60px 60px"><path d="M60 53 L62 58 L67 60 L62 62 L60 67 L58 62 L53 60 L58 58Z" fill="#f2c776" stroke="#5b2c4c" stroke-width="1.6" stroke-linejoin="round"/></g><g class="twinkle d2" style="transform-origin:352px 52px"><path d="M352 46 L353.7 50.3 L358 52 L353.7 53.7 L352 58 L350.3 53.7 L346 52 L350.3 50.3Z" fill="#f2c776" stroke="#5b2c4c" stroke-width="1.6" stroke-linejoin="round"/></g><g class="twinkle d3" style="transform-origin:220px 40px"><path d="M220 35 L221.4 38.6 L225 40 L221.4 41.4 L220 45 L218.6 41.4 L215 40 L218.6 38.6Z" fill="#f2c776" stroke="#5b2c4c" stroke-width="1.6" stroke-linejoin="round"/></g></g></svg></div></figure>
+
+  <details class="cabinet-card" id="short-version">
+    <summary><span class="cc-head"><span class="cc-name">The Short Version</span><br><span class="cc-quick">2 : 1 : 1 · spirit : sweet : sour</span></span></summary>
+    <dl>
+      <dt>The formula</dt><dd>Two parts spirit, one part sweet, one part sour. It's behind most of the classics.</dd>
+      <dt>The goal</dt><dd>Balance. Sweet balances the spirit; sour balances the sweet.</dd>
+      <dt>Shake or stir?</dt><dd>Shake anything with citrus, egg or cream. Stir anything that's all spirits.</dd>
+    </dl>
+  </details>
+
+  <p class="punch">So what do you want to learn?</p>
+
+  <nav class="doors" aria-label="Pick a technique">
+    <a class="door wide" href="golden-ratio/index.html"><svg class="door-icon" aria-hidden="true"><use href="#scale-icon"/></svg><span class="door-text"><span class="door-label">The Golden Ratio</span></span></a>
+    <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#shaker-icon"/></svg><span class="door-label">Shake or Stir?</span><span class="stamp">Coming soon</span></div>
+    <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#syrup-icon"/></svg><span class="door-label">Simple Syrup in Two Minutes</span><span class="stamp">Coming soon</span></div>
+    <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#ice-icon"/></svg><span class="door-label">All About Ice</span><span class="stamp">Coming soon</span></div>
+    <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#glasses-icon"/></svg><span class="door-label">Neat, Rocks or Up?</span><span class="stamp">Coming soon</span></div>
+    <div class="door soon wide" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#tools-icon"/></svg><span class="door-text"><span class="door-label">The Tools You Actually Need</span><span class="stamp">Coming soon</span></span></div>
+  </nav>
+
+  <nav class="end-doors" aria-label="Where next">
+    <p class="back"><a href="../makers-mark/index.html" data-back>← Back to the bottle</a></p>
+  </nav>
+
+  <nav class="end-doors questions" aria-label="Common spirits questions">
+    <h2>Common Spirits Questions</h2>
+    <p class="go" data-page="fermentation"><a href="../fermentation/index.html">→ What is fermentation, anyway??</a></p>
+  </nav>
+</div>
+</article>
+</main>
+
+<script>
+// The Liquor Cabinet: page extras. Everything here is optional polish.
+// The pages animate on CSS alone; this file only adds the Pause button,
+// the reading bar, and pausing scenes while they're off screen.
+(() => {
+  const root = document.documentElement;
+  root.classList.add('js');
+  const btn = document.getElementById('motion');
+  const defs = document.getElementById('defs');
+  const fill = document.getElementById('fill');
+
+  // Reading progress
+  function progress() {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    fill.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, window.scrollY / max) : 1) + ')';
+  }
+  window.addEventListener('scroll', progress, { passive: true });
+  window.addEventListener('resize', progress);
+  progress();
+
+  // Scenes only move while they're on screen, so each one starts fresh when you arrive
+  const figs = [...document.querySelectorAll('.fig')];
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => e.target.classList.toggle('on', e.isIntersecting)), { threshold: 0.35 });
+    figs.forEach(f => io.observe(f));
+  } else {
+    figs.forEach(f => f.classList.add('on'));
+  }
+
+  // Doors you've opened get a crayon check mark (remembered on this device only)
+  try {
+    const key = 'lc:visited', clean = p => p.replace(/index\.html$/, '');
+    const seen = new Set(JSON.parse(localStorage.getItem(key) || '[]'));
+    seen.add(clean(location.pathname));
+    localStorage.setItem(key, JSON.stringify([...seen]));
+    document.querySelectorAll('a.door:not([href^="#"])').forEach(a => {
+      if (seen.has(clean(new URL(a.getAttribute('href'), location.href).pathname))) a.classList.add('visited');
+    });
+  } catch (e) {}
+
+  // Every page notes its own name for this visit, so a shared page's Back link can say where it goes.
+  const cleanPath = p => p.replace(/index\.html$/, '');
+  let names = {};
+  try {
+    names = JSON.parse(sessionStorage.getItem('lc:names') || '{}');
+    const me = document.querySelector('.mark span');
+    if (me && me.textContent.trim()) { names[cleanPath(location.pathname)] = me.textContent.trim(); sessionStorage.setItem('lc:names', JSON.stringify(names)); }
+  } catch (e) {}
+
+  // The Back link on a shared page (like Fermentation) returns to whichever page sent you, to the spot
+  // you left (like the back button), and says so: "Back to The Founder's Gamble". Without a referrer
+  // it keeps its own default ("Back to the bottle").
+  try {
+    const from = document.referrer && new URL(document.referrer);
+    if (from && from.origin === location.origin && from.pathname !== location.pathname) {
+      const name = names[cleanPath(from.pathname)], label = name ? 'Back to ' + name : 'Back';
+      document.querySelectorAll('a[data-back]').forEach(a => {
+        a.href = from.href;
+        if (a.classList.contains('bar-back')) { a.setAttribute('aria-label', label); a.title = label; }
+        else a.textContent = '← ' + label;
+        a.addEventListener('click', e => { if (history.length > 1) { e.preventDefault(); history.back(); } });
+      });
+    }
+  } catch (e) {}
+
+  // A "Back" link (at the end of the story, or up in the bar) that points at the page you just came
+  // from works like the back button: you land where you left off, not at the top.
+  try {
+    const from = document.referrer && new URL(document.referrer), clean = p => p.replace(/index\.html$/, '');
+    if (from && from.origin === location.origin)
+      document.querySelectorAll('.back a:not([data-back]), a.bar-back:not([data-back])').forEach(a => {
+        if (clean(new URL(a.href, location.href).pathname) === clean(from.pathname))
+          a.addEventListener('click', e => { if (history.length > 1) { e.preventDefault(); history.back(); } });
+      });
+  } catch (e) {}
+
+  // Following a link into another page starts you at the top of it. Some viewers (the private
+  // preview, for one) carry the last page's scroll position over, which dropped readers mid-story.
+  // The back button and "Back to the bottle" still return you to where you were.
+  const FRESH = 'lc:fresh';
+  document.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('a[href]');
+    if (!a || e.defaultPrevented || a.hasAttribute('data-back') || a.target === '_blank' || a.getAttribute('href').startsWith('#')) return;
+    try {
+      const to = new URL(a.href, location.href);
+      if (to.origin === location.origin && to.pathname !== location.pathname) sessionStorage.setItem(FRESH, to.pathname);
+    } catch (err) {}
+  });
+  try {
+    if (sessionStorage.getItem(FRESH) === location.pathname) {
+      sessionStorage.removeItem(FRESH);
+      let hold = true;
+      const top = () => { if (hold) window.scrollTo(0, 0); };
+      ['wheel', 'touchstart', 'keydown'].forEach(t => window.addEventListener(t, () => { hold = false; }, { once: true, passive: true }));
+      top();
+      requestAnimationFrame(top);
+      window.addEventListener('load', top, { once: true });
+      [100, 300, 700].forEach(ms => setTimeout(top, ms));
+    }
+  } catch (e) {}
+
+  // A door that points at a tucked-away card (like the Cabinet Card) opens it
+  document.querySelectorAll('a.door[href^="#"]').forEach(a => a.addEventListener('click', () => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t && t.tagName === 'DETAILS') t.open = true;
+  }));
+
+  // Recipe cards: change how many drinks and every amount follows (amounts in quarter ounces)
+  const quarters = q => {
+    const t = Math.round(q * 4), w = Math.floor(t / 4), r = ['', '¼', '½', '¾'][t % 4];
+    return w && r ? w + ' ' + r : (w ? String(w) : r || '0');
+  };
+  document.querySelectorAll('.recipe-card').forEach(card => {
+    const n = card.querySelector('.rc-n'), unit = card.querySelector('.rc-unit');
+    const less = card.querySelector('.rc-step[data-d="-1"]'), more = card.querySelector('.rc-step[data-d="1"]');
+    if (!n || !less || !more) return;
+    const set = k => {
+      n.textContent = k;
+      unit.textContent = k === 1 ? 'drink' : 'drinks';
+      less.disabled = k <= 1; more.disabled = k >= 12;
+      card.querySelectorAll('.amt').forEach(a => {
+        const q = parseFloat(a.dataset.q) * k, u = a.dataset.u || '';
+        a.textContent = u === 'oz' ? quarters(q) + ' oz' : u === 'dash' ? q + (q === 1 ? ' dash' : ' dashes')
+          : u ? q + ' ' + (q === 1 ? u : (a.dataset.us || u + 's')) : String(q);   // "1 egg white", "2 egg whites"
+      });
+    };
+    let k = 1;
+    [less, more].forEach(b => b.addEventListener('click', () => { k = Math.min(12, Math.max(1, k + Number(b.dataset.d))); set(k); }));
+    set(k);
+  });
+
+  // Pause / play everything, including the crayon line boil
+  function setStill(v) {
+    root.classList.toggle('still', v);
+    btn.innerHTML = (v ? 'Play' : 'Pause') + '<span class="long"> motion</span>';
+    btn.setAttribute('aria-label', v ? 'Play motion' : 'Pause motion');
+    btn.setAttribute('aria-pressed', String(v));
+    try { v ? defs.pauseAnimations() : defs.unpauseAnimations(); } catch (e) {}
+  }
+  btn.addEventListener('click', () => setStill(!root.classList.contains('still')));
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) setStill(true);
+})();
+</script>
+</body>
+</html>

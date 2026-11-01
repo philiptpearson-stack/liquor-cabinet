@@ -18,7 +18,6 @@ This cocktail is fun because it uses what's called *The Golden Ratio* for buildi
 That means you start with a simple 2:1:1 ratio for your spirits, sweetener, and sour.
 *Check out our Cocktails How-To page for more details on building perfect mixed drinks right in your own kitchen, at home.*
 → Cocktails How-To
-Coming soon
 So a Classic Whiskey Sour made with The Golden Ratio would look like this:
 From the Cocktail Menu
 Classic Whiskey Sour
