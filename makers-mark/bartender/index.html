@@ -269,13 +269,19 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
 .formula{margin:.2rem 0;display:flex;flex-direction:column;gap:.3rem;font-size:.95rem;line-height:1.25}
 .formula .f-row{display:grid;grid-template-columns:6.7rem repeat(3,minmax(0,1fr));gap:.3rem;align-items:stretch}
 .formula dt{font-weight:800;align-self:center}
-.formula dd{margin:0;padding:.42rem .45rem;border-radius:8px;display:flex;align-items:center}
+.formula dd{margin:0;padding:.42rem .36rem;border-radius:8px;display:flex;align-items:center;-webkit-hyphens:auto;hyphens:auto;min-width:0}
 .formula .f-row dd:nth-of-type(1){background:color-mix(in srgb,var(--gold) 20%,transparent)}
 .formula .f-row dd:nth-of-type(2){background:color-mix(in srgb,var(--accent) 13%,transparent)}
 .formula .f-row dd:nth-of-type(3){background:color-mix(in srgb,#b9c34a 24%,transparent)}
 .formula .f-head dt,.formula .f-head dd{font:800 .7rem/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .formula .f-head dd{background:none!important;padding-block:.1rem;flex-direction:column;align-items:flex-start;gap:.1rem}   /* SPIRIT over 2 oz */
 .formula .f-head b{font-size:1.05rem;letter-spacing:0;text-transform:none;white-space:nowrap;color:var(--ink)}
+/* on a phone, each drink's name sits above its three chips, so the chips get the full width */
+@media (max-width:440px){
+  .formula .f-row{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .formula .f-row dt{grid-column:1/-1;margin-top:.45rem}
+  .formula .f-head dt{display:none}
+}
 /* The Bartender's Perspective (Maker's Mark): scene motion. Every loop runs on CSS alone.
    Written by tools/art/bartender_scenes.py, next to the drawings; edit it there. */
 .pop{transform-box:view-box;animation:pop 2.4s ease-in-out infinite}

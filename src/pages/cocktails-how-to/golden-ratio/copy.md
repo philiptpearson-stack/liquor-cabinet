@@ -37,7 +37,7 @@ lemon
 Cosmopolitan
 citrus vodka
 orange liqueur
-lime
+lime + cranberry
 Negroni
 gin
 sweet vermouth
