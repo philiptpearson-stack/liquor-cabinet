@@ -9,16 +9,17 @@
 
 The Bartender's Perspective: Maker's ***Mark.***
 Hey there!
-Welcome to our little bar corner. Where we talk cocktails!
+Welcome to our little bar. Where we talk cocktails!
 Maker's Mark is great for cocktails.
 It's soft, sweet, and it plays nicely with other ingredients.
 And for the recipe I want to show you today, playing nicely with other ingredients is a must!
-That's because we're featuring Maker's Mark in a **Classic Whiskey Sour.**
+Because tonight we're featuring Maker's Mark in a **Classic Whiskey Sour.**
 This cocktail is fun because it uses what's called *The Golden Ratio* for building balanced drinks.
+That means you start with a simple 2:1:1 ratio for your spirits, sweetener, and sour.
 *Check out our Cocktails How-To page for more details on building perfect mixed drinks right in your own kitchen, at home.*
 → Cocktails How-To
 Coming soon
-That means you start with a simple 2:1:1 ratio for your spirits, sweetener, and sour. Like so:
+So a Classic Whiskey Sour made according to The Golden Ratio would look like this:
 From the Cocktail Menu
 Classic Whiskey Sour
 Makes − 1 + drink
