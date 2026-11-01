@@ -87,7 +87,7 @@ top_row = (decanter(180, TOP, color='#c98a3c', label='Scotch') + decanter(214, T
            + decanter(328, TOP, color='#a0522d', label='Scotch') + decanter(364, TOP, w=22, h=36, color='#7f9a6c'))
 top_tag = shelf_label(182, TOP, '$$$', size=12.5) + shelf_label(252, TOP, '$$$', size=12.5, tilt=3)
 shine = sparkle(196, 40, 6, 'twinkle') + sparkle(272, 36, 7.5, 'twinkle d2') + sparkle(346, 42, 6, 'twinkle d3')
-lady = place(posh(arm_r=[(19, -106), (33, -126), (48, -142)], arm_cls='reach-up', skin='deep', hair=HAIRS['black']), 122, 206, .95)
+lady = place(posh(arm_r=[(19, -106), (33, -126), (48, -142)], arm_cls='reach-up'), 122, 206, .95)
 hmph = '<text class="letter pop" x="66" y="56" font-size="20" text-anchor="middle" style="transform-origin:66px 50px">Hmph!</text>'
 save('reputation', shelf_unit() + ground() + top_row + top_tag + shine + middle_row() + bottom_shelf() + lady + hmph,
      'At the liquor store, a hoity-toity lady reaches for the fancy imported Scotch on the top shelf. '
@@ -108,10 +108,9 @@ glass_l = ('<g>' + wash('<path d="M-6 -10 L6 -10 L5 4 L-5 4Z" fill="#f6e6c8"/><p
 # pose to pose: (a) glass out for the pour, (b) head back, glass at his lips, (c) glass down, big grin
 glass_out = f'<g transform="translate(-50 -92)">{glass_l}</g>'
 glass_up = f'<g transform="translate(-13 -133) rotate(-52)">{glass_l}</g>'
-CONSUMER = dict(skin='brown', hair=HAIRS['black'])   # our lovely consumer, the same person in every scene
-wait = everyman(mood='flat', **CONSUMER, arm_l=[(-21, -109), (-38, -92), (-50, -84)], holding_l=glass_out, parts=True)
-sip = everyman(mood='smile', eyes='closed', **CONSUMER, head_tilt=14, arm_l=[(-21, -109), (-36, -100), (-18, -126)], holding_l=glass_up, parts=True)
-grin = everyman(mood='grin', eyes='happy', parts=True, **CONSUMER)
+wait = everyman(mood='flat', arm_l=[(-21, -109), (-38, -92), (-50, -84)], holding_l=glass_out, parts=True)
+sip = everyman(mood='smile', eyes='closed', head_tilt=14, arm_l=[(-21, -109), (-36, -100), (-18, -126)], holding_l=glass_up, parts=True)
+grin = everyman(mood='grin', eyes='happy', parts=True)
 cust = (wait['body'] + '<g class="pose-a">' + wait['left'] + '</g>' + '<g class="pose-b">' + sip['left'] + '</g>'
         + '<g class="head-a">' + wait['head'] + '</g>' + '<g class="pose-b">' + sip['head'] + '</g>' + '<g class="pose-c">' + grin['head'] + '</g>' + wait['right'])
 sip_word = '<text class="letter pose-b" x="236" y="66" font-size="17" text-anchor="middle">sip...</text>'
@@ -126,7 +125,7 @@ store_top = (decanter(180, TOP, color='#c98a3c', label='Scotch') + generic_bottl
              + decanter(328, TOP, w=22, h=36, color='#c98a3c') + decanter(364, TOP, color='#a0522d', label='Scotch'))
 store_tags = shelf_label(178, TOP, '$$$', size=12) + shelf_label(218, TOP, '$$$', size=12, tilt=3)
 wink = sparkle(232, 40, 8, 'twinkle') + sparkle(202, 46, 4.5, 'twinkle d2')
-reacher = everyman(mood='o', eyes='side', **CONSUMER, arm_r=[(21, -109), (35, -126), (48, -142)], arm_cls=('', 'reach'))
+reacher = everyman(mood='o', eyes='side', arm_r=[(21, -109), (35, -126), (48, -142)], arm_cls=('', 'reach'))
 think_bub = ('<g class="float">' + wash('<path d="M10 30 Q6 8 32 8 Q48 -2 70 6 Q92 -2 108 10 Q128 12 124 32 Q132 50 110 54 Q96 66 70 58 Q46 66 30 56 Q4 54 10 30Z" fill="#fffaf1"/>')
              + lines('<path d="M10 30 Q6 8 32 8 Q48 -2 70 6 Q92 -2 108 10 Q128 12 124 32 Q132 50 110 54 Q96 66 70 58 Q46 66 30 56 Q4 54 10 30Z"/>', boil=False)
              + '<text class="letter" x="66" y="28" font-size="11.5" text-anchor="middle">"It tastes expensive...</text>'

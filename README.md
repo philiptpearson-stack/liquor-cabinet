@@ -38,7 +38,7 @@ tools/
 5. **Characters are drawn once.** Shared characters live in `defs.svg` so they look the same on every page.
 6. **Plain web files.** No Vercel-only features, so the app can move hosts or be wrapped for the App Store later.
 7. **Friends only, for now.** The brand photos aren't licensed yet, so pages ask search engines to stay away (`robots.txt`, `noindex`). Get permissions before launch.
-8. **Crowds look like the world.** Any generic person (a crowd, a shopper, the regulars) varies in skin tone, hair and features: use `variety(i)` from `tools/art/art.py` for the i-th person in a crowd, and give one-off characters a look of their own. Real people (Bill, Margie, Bill Jr., Phil) are drawn as themselves. *(Philip, Nov 1 2026)*
+8. **Crowds look like the world they're in.** Inclusive without being heavy-handed: a natural mix of people that fits the era and the place. Use `variety(i)` from `tools/art/art.py` for the i-th person in a crowd. Real people (Bill, Margie, Bill Jr., Phil) are drawn as themselves. *(Philip, Nov 1 2026)*
 
 ## Things to check on
 

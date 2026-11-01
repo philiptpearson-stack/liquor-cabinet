@@ -118,7 +118,7 @@ path_ = wash('<path d="M0 222 Q120 214 180 208 L250 206 L232 214 Q120 226 0 236Z
 gleam = sparkle(176, 92, 6, 'twinkle') + sparkle(300, 70, 7, 'twinkle d2') + sparkle(372, 106, 5, 'twinkle d3') + sparkle(214, 128, 4, 'twinkle d2')
 walkers = ''
 for i, (top, pants, hat) in enumerate((('#9db08a', '#8c7a6b', 'cap'), ('#c25c86', '#6f6760', 'hair'), ('#6d7f99', '#8c7a6b', 'fedora'), ('#e6b264', '#5a4636', 'cap'))):
-    person = everyman(mood='smile', top=top, pants=pants, **variety((3, 0, 6, 10)[i]))   # a mixed crowd (house rule)
+    person = everyman(mood='smile', top=top, pants=pants, **variety((3, 4, 6, 0)[i]))   # a natural mix (house rule)
     walkers += f'<g class="stroll" style="animation-delay:{-i * 2.5}s;--rest:{24 + i * 38}px">{place(f"<g class=\"bob\">{person}</g>", 0, 214, .42)}</g>'
 save('restore', path_ + town + cupola + ground() + gleam + walkers,
      'The old Victorian distillery buildings, restored: dark brown with red shutters, gleaming, while a little line of visitors walks up the path')

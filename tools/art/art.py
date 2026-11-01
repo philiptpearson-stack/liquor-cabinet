@@ -11,8 +11,8 @@ DARK = '#3b2233'
 SKIN = '#f0c39d'
 BLUSH = '#e48b7c'
 
-# House rule: crowds and any generic (non-real) person vary in skin tone, hair and features.
-# Use variety(i) for the i-th person in a crowd; give a one-off character a skin= of its own.
+# House rule: crowds look like the real world they're set in. Inclusive, not heavy-handed: a natural mix
+# that fits the era and the place. Use variety(i) for the i-th person in a crowd.
 SKINS = {   # skin, a deeper shade (nose), blush
     'light':  ('#f0c39d', '#e9a982', '#e48b7c'),
     'peach':  ('#e8b48a', '#d99c72', '#e0806e'),
@@ -29,11 +29,11 @@ def tone(skin):
     return SKINS.get(skin) or (skin, '#e9a982', BLUSH)
 
 
-VARIETY = [   # skin, hair style, hair color, glasses: neighbours never match
-    ('brown', 'curls', 'black', False), ('light', 'cap', 'brown', False), ('deep', 'bald', 'black', True),
-    ('tan', 'long', 'dark', False), ('peach', 'fedora', 'auburn', False), ('deeper', 'bun', 'black', False),
-    ('light', 'hair', 'blond', True), ('tan', 'cap', 'black', False), ('brown', 'long', 'dark', False),
-    ('peach', 'hair', 'gray', True), ('deep', 'curls', 'black', False), ('light', 'long', 'auburn', False),
+VARIETY = [   # skin, hair style, hair color, glasses: a natural mix, and neighbours never match
+    ('light', 'cap', 'brown', False), ('peach', 'long', 'auburn', False), ('tan', 'hair', 'black', True),
+    ('light', 'fedora', 'dark', False), ('brown', 'curls', 'black', False), ('peach', 'bun', 'brown', False),
+    ('light', 'hair', 'blond', True), ('tan', 'cap', 'dark', False), ('light', 'long', 'brown', False),
+    ('deep', 'bald', 'black', False), ('peach', 'hair', 'gray', True), ('light', 'curls', 'auburn', False),
 ]
 
 

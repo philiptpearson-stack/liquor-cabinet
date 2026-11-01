@@ -40,7 +40,7 @@ thumbs = wash(f'<circle cx="-36" cy="-96" r="5" fill="{SKIN}"/><circle cx="36" c
 
 
 def reader(top, hat, hair, mood, tie, k):
-    look = variety((0, 3, 6, 2, 5)[k])   # a mixed crowd: skin, hair and glasses vary (house rule)
+    look = variety((0, 1, 4, 6, 7)[k])   # a natural mix (house rule)
     p = everyman(mood=mood, eyes='dot', top=top, tie=tie, parts=True, **look,
                  arm_l=[(-21, -109), (-30, -102), (-35, -96)], arm_r=[(21, -109), (30, -104), (35, -98)])
     return p['left'] + p['right'] + p['body'] + p['head'] + f'<g class="rustle" style="transform-origin:0 -92px;animation-delay:{-k * .7:.1f}s">{paper}{thumbs}</g>'
@@ -122,7 +122,7 @@ crowd = ''
 looks = [('#9db08a', 'cap'), ('#c25c86', 'hair'), ('#6d7f99', 'fedora'), ('#e6b264', 'cap'), ('#b9a3c8', 'hair'), ('#7f9a6c', 'fedora'), ('#c0583c', 'cap'), ('#8a8f96', 'hair'), ('#c98a3c', 'fedora')]
 for i, (top, hat) in enumerate(looks):   # single file from the door, running off the left edge
     x = 240 - i * 30
-    person = everyman(mood='o' if i % 3 == 0 else 'smile', eyes='side', top=top, **variety(i + 1))   # everyone different (house rule)
+    person = everyman(mood='o' if i % 3 == 0 else 'smile', eyes='side', top=top, **variety(i + 1))   # a natural mix (house rule)
     crowd += f'<g class="shuffle" style="animation-delay:{-i * .37:.2f}s">{place(person, x, 206, .5)}</g>'
 bangs = '<text class="letter pop" x="150" y="64" font-size="20" style="transform-origin:156px 56px">!!</text>'
 save('line', ground() + store + case + shine + crowd + bangs,
