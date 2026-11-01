@@ -58,6 +58,45 @@ def rocks(x, base=COUNTER, s=1.0, full=True):
     return f'<g transform="translate({f(x)} {f(base)}) scale({f(s)})">{g}</g>'
 
 
+def coupe(kind='sour'):
+    """A coupe on its foot at (0, 0): 'sour' (gold, thick egg-white foam, a cherry) or 'daiquiri' (cloudy pale lime, a lime wheel)."""
+    bowl = 'M-22 -42 Q0 -10 22 -42'
+    liquid = {'sour': '#e3a94a', 'daiquiri': '#e6ebbd'}[kind]
+    g = wash(f'<path d="M-20 -40 Q0 -12 20 -40Z" fill="{liquid}"/>')
+    g += lines(f'<path d="{bowl}" stroke-width="2"/><path d="M-22 -42 Q0 -45 22 -42" stroke-width="1.4"/><path d="M0 -26 V-3 M-12 0 Q0 -5 12 0" stroke-width="2"/>', boil=False)
+    if kind == 'sour':   # a proper head of egg-white foam, a cherry on top
+        foam = 'M-21.4 -41.5 Q0 -45 21.4 -41.5 L19.2 -35.5 Q0 -32 -19.2 -35.5Z'
+        g += f'<path d="{foam}" fill="#fff8e6" stroke="{INK}" stroke-width="1.3"/>'
+        g += ''.join(f'<circle cx="{x}" cy="{y}" r="1" fill="none" stroke="#d9c7a8" stroke-width=".8"/>' for x, y in ((-12, -38.5), (-5, -37), (3, -38.8), (11, -37.6), (15, -39.6)))
+        g += wash('<circle cx="6" cy="-47" r="4" fill="#b3202a"/>') + lines('<circle cx="6" cy="-47" r="4" stroke-width="1.6"/><path d="M7 -50.6 q2 -6 7 -8" stroke="#6b4228" stroke-width="1.6"/>', boil=False)
+    else:
+        g += wash('<circle cx="19" cy="-44" r="6" fill="#b9d36c"/>') + lines('<circle cx="19" cy="-44" r="6" stroke-width="1.6"/><path d="M19 -49 V-39 M14 -44 H24 M15.5 -47.5 L22.5 -40.5 M22.5 -47.5 L15.5 -40.5" stroke="#7f9a3c" stroke-width=".9"/>', boil=False)
+    return g
+
+
+def margarita():
+    """The sombrero glass: salt on the rim, pale lime, a lime wheel."""
+    out = 'M-26 -46 Q-21 -34 -8 -31 Q-11 -22 -3 -18 L-2 -2 M2 -2 L3 -18 Q11 -22 8 -31 Q21 -34 26 -46'
+    g = wash('<path d="M-24 -44 L24 -44 Q19 -35 8 -32.5 Q0 -31.5 -8 -32.5 Q-19 -35 -24 -44Z M-7 -30 Q0 -29 7 -30 Q8 -23 3 -20 L-3 -20 Q-8 -23 -7 -30Z" fill="#d6ea9a"/>')
+    g += lines(f'<path d="{out}" stroke-width="2"/><path d="M-26 -46 H26" stroke-width="1.4"/><path d="M-12 0 Q0 -5 12 0" stroke-width="2"/>', boil=False)
+    g += ''.join(f'<circle cx="{x}" cy="-46.6" r="1.3" fill="#fffaf1" stroke="#a9a29a" stroke-width=".7"/>' for x in range(-24, 25, 4))
+    g += wash('<circle cx="24" cy="-49" r="7" fill="#b9d36c"/>') + lines('<circle cx="24" cy="-49" r="7" stroke-width="1.6"/><path d="M24 -55 V-43 M18 -49 H30 M19.8 -53.2 L28.2 -44.8 M28.2 -53.2 L19.8 -44.8" stroke="#7f9a3c" stroke-width=".9"/>', boil=False)
+    return g
+
+
+def negroni():
+    """A rocks glass, big cube, bright red-orange, an orange half-wheel."""
+    g = wash('<path d="M-18 -30 L18 -30 L16.4 0 L-16.4 0Z" fill="#e7f1fb" opacity=".6"/><path d="M-17.5 -22 L17.5 -22 L16.4 0 L-16.4 0Z" fill="#c42f2f"/>'
+             '<rect x="-9" y="-27" width="18" height="17" rx="2.5" fill="#f4fbff" opacity=".7"/>')
+    g += lines('<path d="M-18 -30 L18 -30 L16.4 0 L-16.4 0Z" stroke-width="2"/><rect x="-9" y="-27" width="18" height="17" rx="2.5" stroke="#8ecae6" stroke-width="1.3"/>', boil=False)
+    g += wash('<path d="M4 -30 A10 10 0 0 1 24 -30Z" fill="#f29a3a"/>') + lines('<path d="M4 -30 A10 10 0 0 1 24 -30Z" stroke-width="1.6"/><path d="M14 -30 L14 -38 M14 -30 L8 -36 M14 -30 L20 -36" stroke="#d9772a" stroke-width=".9"/>', boil=False)
+    return g
+
+
+def drink(svg_, x, base, s=1.0):
+    return f'<g transform="translate({f(x)} {f(base)}) scale({f(s)})">{svg_}</g>'
+
+
 def shot_glass(x, y, s=1.0, full=False, upside=False, rot=0):
     body = 'M-6 -15 L6 -15 L4.8 0 L-4.8 0Z' if not upside else 'M-4.8 -15 L4.8 -15 L6 0 L-6 0Z'
     g = wash(f'<path d="{body}" fill="#e7f1fb" opacity=".75"/>' + ('<path d="M-5.6 -10 L5.6 -10 L4.8 0 L-4.8 0Z" fill="#c9782c"/>' if full else ''))
@@ -84,9 +123,9 @@ def makers_poured(mx, my, s=.62, angle=-118):
 wave_r = [(23, -110), (40, -124), (43, -150)]
 p = bartender(eyes='dot', parts=True, arm_l=[(-23, -110), (-36, -84), (-33, -58)], arm_r=wave_r)
 waving = p['left'] + p['body'] + p['head'] + f'<g class="hi-wave" style="transform-origin:23px -110px">{p["right"]}</g>'   # not .wave: the kit's .wave pivots on its own box
-on_bar = generic_bottle(268, COUNTER, .62, swap='makers-bottle-sm') + rocks(300)
+on_bar = generic_bottle(268, COUNTER, .62, swap='makers-bottle-sm') + drink(coupe('sour'), 300, COUNTER, .8)
 save('welcome', backbar + place(waving, 200, 206) + counter + on_bar,
-     'Philip, the bartender, behind his bar: beard, plaid shirt, loose black tie, rolled sleeves. He waves hello. A bottle of Maker\'s Mark and an Old Fashioned sit on the bar',
+     'Philip, the bartender, behind his bar: beard, plaid shirt, loose black tie, rolled sleeves. He waves hello. A bottle of Maker\'s Mark and a whiskey sour sit on the bar',
      view=BAR_VIEW)
 
 # ---------------------------------------------------------------- 2. "I don't drink while I'm working." ... one shot (12 s flipbook)
@@ -171,27 +210,21 @@ def half(side, inner, fill=paper, cls='', origin=True):
 scribble = lambda x0, y0, n: lines(''.join(f'<path d="M{x0} {y0 + i * 9} h{58 - (i * 13) % 22}" stroke="#b9a3c8" stroke-width="2"/>' for i in range(n)), boil=False)
 def drink_page(name, glass, x0):
     return (f'<text class="letter" x="{x0 + 49}" y="{T + 24}" font-size="13" text-anchor="middle">{name}</text>' + glass + scribble(x0 + 20, T + 116, 4))
-coupe_d = lambda cx, cy, s=1.0: (f'<g transform="translate({cx} {cy}) scale({s})">' + wash('<path d="M-20 -22 Q0 6 20 -22Z" fill="#f2d48a"/>')
-                                + lines('<path d="M-22 -24 Q0 8 22 -24 M0 -9 V18 M-11 20 Q0 16 11 20" stroke-width="2"/>', boil=False) + '</g>')
-rocks_d = lambda cx, cy: rocks(cx, cy, 1.5)
-marg = (f'<g transform="translate({SP + 49} {T + 74})">' + wash('<path d="M-22 -26 L22 -26 L4 -6 L4 0 L-4 0 L-4 -6Z" fill="#cfe6a8"/>')
-        + lines('<path d="M-24 -28 L24 -28 L4 -6 V20 M-4 -6 V20 M-12 22 H12" stroke-width="2"/>', boil=False) + '</g>')
 cover_front = half('R', '<rect x="210" y="46" width="78" height="138" rx="3" fill="none" stroke="#e6b264" stroke-width="2"/>'
                    '<text class="letter" x="249" y="104" font-size="15" text-anchor="middle" style="fill:#f2c776">Cocktail</text>'
                    '<text class="letter" x="249" y="122" font-size="15" text-anchor="middle" style="fill:#f2c776">Menu</text>'
                    + sparkle(249, 146, 6), fill='#6b2f3a', cls='mf-cover')
 cover_in = half('L', '<text class="letter" x="151" y="110" font-size="12" text-anchor="middle" style="fill:#8a6a78">Cheers!</text>', cls='mf-cover-in')
-p1f = half('R', drink_page('Margarita', marg, SP), cls='mf-p1')
+p1f = half('R', drink_page('Margarita', drink(margarita(), SP + 49, T + 100, 1.25), SP), cls='mf-p1')
 p1b = half('L', scribble(SP - 80, T + 30, 9), cls='mf-p1b')
-p2f = half('R', drink_page('Negroni', rocks(SP + 49, T + 96, 1.5), SP), cls='mf-p2')
+p2f = half('R', drink_page('Negroni', drink(negroni(), SP + 49, T + 98, 1.45), SP), cls='mf-p2')
 p2b = half('L', scribble(SP - 80, T + 30, 9), cls='mf-p2b')
-p3f = half('R', drink_page('Daiquiri', coupe_d(SP + 49, T + 74, 1.2), SP), cls='mf-p3')
-sour_glass = (f'<g transform="translate({SP - 49} {T + 86}) scale(1.5)">' + wash('<path d="M-20 -22 Q0 6 20 -22Z" fill="#e7b85c"/><path d="M-20.5 -22 Q0 -26 20.5 -22 L19 -18 Q0 -14 -19 -18Z" fill="#fffaf1"/>')
-              + lines('<path d="M-22 -24 Q0 8 22 -24 M0 -9 V18 M-11 20 Q0 16 11 20" stroke-width="1.6"/>', boil=False) + '</g>')
+p3f = half('R', drink_page('Daiquiri', drink(coupe('daiquiri'), SP + 49, T + 100, 1.3), SP), cls='mf-p3')
+sour_glass = drink(coupe('sour'), SP - 49, T + 132, 1.22)
 p3b = half('L', f'<text class="letter" x="{SP - 49}" y="{T + 20}" font-size="11.5" text-anchor="middle">Classic</text>'
                 f'<text class="letter" x="{SP - 49}" y="{T + 36}" font-size="13.5" text-anchor="middle">Whiskey Sour</text>' + sour_glass
                 + sparkle(SP - 82, T + 70, 4.5, 'twinkle') + sparkle(SP - 14, T + 62, 4, 'twinkle d2'), cls='mf-p3b')
-recipe_lines = ["2 oz Maker's Mark", '1 oz lemon juice', '1 oz simple syrup', '1 egg white']
+recipe_lines = ["2 oz Maker's Mark", '1 oz simple syrup', '1 oz lemon juice', '1 egg white']
 final_r = half('R', ''.join(f'<text class="letter" x="{SP + 12}" y="{T + 34 + i * 20}" font-size="10.5">{t}</text>' for i, t in enumerate(recipe_lines))
                + lines(f'<path d="M{SP + 12} {T + 116} h70 M{SP + 12} {T + 126} h52" stroke="#b9a3c8" stroke-width="2"/>', boil=False), cls='mf-final', origin=False)
 bar_strip = wash('<rect x="0" y="200" width="400" height="36" fill="#7a5340"/>') + lines('<path d="M0 200 H400"/>', boil=False)
@@ -244,20 +277,25 @@ CB = 'M262 128 Q290 162 318 128Z'
 coupe_full = (f'<g class="ws-coupe">' + wash(f'<path d="{CB}" fill="#e7f1fb" opacity=".35"/>')
               + f'<clipPath id="ws-bowl"><path d="{CB}"/></clipPath>'
               + f'<g clip-path="url(#ws-bowl)" filter="url(#wash)"><g class="ws-c-fill" style="transform-origin:290px 154px"><rect x="258" y="128" width="64" height="30" fill="#ddb064"/></g>'
-              + '<g class="ws-c-foam"><rect x="258" y="126" width="64" height="8" fill="#fffaf1"/></g></g>'
+              + '</g>'
               + lines(f'<path d="M260 126 Q290 166 320 126" stroke-width="2.4"/><path d="M260 126 Q290 122 320 126" stroke-width="1.6"/><path d="M290 145 V190 M274 194 Q290 188 306 194" stroke-width="2.4"/>', boil=False) + '</g>')
 s_tin = (wash('<path d="M-30 -14 L30 -10 L30 10 L-30 14Z" fill="#c9c3b8"/>') + lines('<path d="M-30 -14 L30 -10 L30 10 L-30 14Z" stroke-width="2.2"/><path d="M30 -10 Q36 0 30 10" stroke="#8a8f96" stroke-width="2"/>'
          '<path d="M31 -7 q3 2 0 4 q3 2 0 4 q3 2 0 4" stroke="#8a8f96" stroke-width="1.4"/>', boil=False))
 strain = (f'<g class="ws-strain"><g transform="translate(244 84) rotate(28)">{s_tin}</g></g>'
           + lines('<path d="M272 104 Q284 116 289 136" stroke="#ddb064" stroke-width="3.4"/>', boil=False, extra=' class="ws-strain-pour"'))
+foam_d = 'M262.6 128.5 Q290 124 317.4 128.5 L314.8 134.5 Q290 138 265.2 134.5Z'
+ws_foam = (f'<g class="ws-c-foam"><path d="{foam_d}" fill="#fff8e6" stroke="{INK}" stroke-width="1.6"/>'
+           + ''.join(f'<circle cx="{x}" cy="{y}" r="1.2" fill="none" stroke="#d9c7a8" stroke-width=".9"/>' for x, y in ((272, 131), (281, 133), (292, 130.5), (301, 132.5), (309, 130.5))) + '</g>')
+ws_cherry = ('<g class="ws-cherry">' + wash('<circle cx="296" cy="122" r="5" fill="#b3202a"/>')
+             + lines('<circle cx="296" cy="122" r="5" stroke-width="1.8"/><path d="M297 117.6 q2 -7 8 -10" stroke="#6b4228" stroke-width="1.8"/>', boil=False) + '</g>')
 ws_cheers = f'<g class="ws-cheers">{sparkle(254, 112, 6, "twinkle")}{sparkle(328, 108, 6, "twinkle d2")}{sparkle(322, 150, 4.5, "twinkle d3")}</g>'
-ws_caps = [('1', 'Combine'), ('2', 'Dry shake (no ice!)'), ('3', 'Wet shake (with ice)'), ('4', 'Serve up'), ('5', 'Cheers!')]
-caps_ws = ''.join(f'<text class="letter ws-cap c{n}" x="112" y="38" font-size="16">{(n + ". ") if n != "5" else ""}{t}</text>' for n, t in ws_caps)
+# the steps themselves are written out under the drawing (an HTML list that lights up in step with it)
+caps_ws = '<text class="letter ws-cap c5" x="112" y="38" font-size="16">Cheers!</text>'
 save('whiskey-sour', f'<defs>{ws_clip}</defs>' + wash('<rect x="0" y="0" width="400" height="236" fill="#f3e6d4"/><rect x="0" y="196" width="400" height="40" fill="#7a5340"/>')
      + lines('<path d="M0 196 H400"/>', boil=False) + shaker + ws_mm + ws_mm_pour + ws_jig('ws-jig1') + ws_pour('ws-pour1', '#f1d75a') + lemon
-     + ws_jig('ws-jig2') + ws_pour('ws-pour2', '#f3e3a8') + syr + egg + coupe_full + strain + ws_cheers + caps_ws,
+     + ws_jig('ws-jig2') + ws_pour('ws-pour2', '#f3e3a8') + syr + egg + coupe_full + ws_foam + ws_cherry + strain + ws_cheers + caps_ws,
      "A Whiskey Sour, step by step: Maker's Mark, lemon juice, simple syrup and an egg white go into the shaker; a hard dry shake with no ice; "
-     "a wet shake with ice; then it's strained into a coupe, served up with a nice egg white foam. Cheers!",
+     "a wet shake with ice; then it's strained into a coupe, served up with a nice egg white foam and a cherry. Cheers!",
      view='104 16 240 202')
 
 
@@ -271,7 +309,7 @@ def shake(stops_from, stops_to, amp=16, n=10):
 
 ws = ['/* 4. The Whiskey Sour (12 s): combine, dry shake, wet shake, strain and serve up. Still frame: the finished coupe. */',
       '.ws-shaker,.ws-tin,.ws-shake,.ws-mm,.ws-mm-pour,.ws-jig1,.ws-jig2,.ws-pour1,.ws-pour2,.ws-lemon-tag,.ws-syrup-tag,.ws-egg,.ws-egg-t,.ws-egg-b,.ws-white,'
-      '.ws-l1,.ws-l2,.ws-l3,.ws-l4,.ws-mixed,.ws-ice,.ws-frost,.ws-coupe,.ws-c-fill,.ws-c-foam,.ws-strain,.ws-strain-pour,.ws-cheers,.ws-cap{animation:12s linear infinite}',
+      '.ws-l1,.ws-l2,.ws-l3,.ws-l4,.ws-mixed,.ws-ice,.ws-frost,.ws-coupe,.ws-c-fill,.ws-c-foam,.ws-cherry,.ws-strain,.ws-strain-pour,.ws-cheers,.ws-cap,.howto-steps li{animation:12s linear infinite}',
       # the still frame: just the coupe, full, with its foam, and Cheers!
       '.ws-shaker,.ws-mm,.ws-mm-pour,.ws-jig1,.ws-jig2,.ws-pour1,.ws-pour2,.ws-lemon-tag,.ws-syrup-tag,.ws-egg,.ws-white,.ws-strain,.ws-strain-pour,.ws-cap{opacity:0}',
       '.ws-cap.c5{opacity:1}',
@@ -310,12 +348,15 @@ ws = ['/* 4. The Whiskey Sour (12 s): combine, dry shake, wet shake, strain and 
       '.ws-strain{animation-name:ws-strain}', window('ws-strain', 77, 87),
       '.ws-strain-pour{animation-name:ws-strain-pour}', window('ws-strain-pour', 78.5, 86),
       '.ws-c-fill{animation-name:ws-c-fill}', kf('ws-c-fill', [(0, 'transform:scaleY(0)'), (79, 'transform:scaleY(0)'), (86, 'transform:scaleY(1)'), (100, 'transform:scaleY(1)')]),
-      '.ws-c-foam{animation-name:ws-c-foam}', window('ws-c-foam', 85, 100, fade=2),
+      '.ws-c-foam{animation-name:ws-c-foam}', window('ws-c-foam', 85, 94, fade=1.5),
       '.ws-cheers{animation-name:ws-cheers}', window('ws-cheers', 88, 94),
-      '.ws-cap.c1{animation-name:ws-c1}', window('ws-c1', 5, 34.5),
-      '.ws-cap.c2{animation-name:ws-c2}', window('ws-c2', 35, 55),
-      '.ws-cap.c3{animation-name:ws-c3}', window('ws-c3', 55.5, 75.5),
-      '.ws-cap.c4{animation-name:ws-c4}', window('ws-c4', 76, 87.5),
+      '.ws-cherry{animation-name:ws-cherry}', kf('ws-cherry', [(0, 'opacity:0;transform:translateY(-60px)'), (87, 'opacity:0;transform:translateY(-60px)'), (87.5, 'opacity:1;transform:translateY(-60px)'),
+                                                          (89.5, 'opacity:1;transform:translateY(0)'), (94, 'opacity:1;transform:translateY(0)'), (95.5, 'opacity:0;transform:translateY(0)'), (100, 'opacity:0')]),
+      # the written steps under the drawing light up one at a time, in step with it (all lit when the motion is off)
+      '.howto-steps li.s1{animation-name:hs1}', kf('hs1', [(0, 'opacity:.35'), (4, 'opacity:.35'), (5, 'opacity:1'), (34, 'opacity:1'), (35, 'opacity:.35'), (100, 'opacity:.35')]),
+      '.howto-steps li.s2{animation-name:hs2}', kf('hs2', [(0, 'opacity:.35'), (34.5, 'opacity:.35'), (35.5, 'opacity:1'), (54.5, 'opacity:1'), (55.5, 'opacity:.35'), (100, 'opacity:.35')]),
+      '.howto-steps li.s3{animation-name:hs3}', kf('hs3', [(0, 'opacity:.35'), (55, 'opacity:.35'), (56, 'opacity:1'), (75, 'opacity:1'), (76, 'opacity:.35'), (100, 'opacity:.35')]),
+      '.howto-steps li.s4{animation-name:hs4}', kf('hs4', [(0, 'opacity:.35'), (75.5, 'opacity:.35'), (76.5, 'opacity:1'), (94, 'opacity:1'), (95, 'opacity:.35'), (100, 'opacity:.35')]),
       '.ws-cap.c5{animation-name:ws-c5}', window('ws-c5', 88, 94)]
 CSS.append('\n'.join(ws))
 

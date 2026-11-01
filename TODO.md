@@ -17,11 +17,11 @@ Open items that aren't today's work but mustn't get lost. Newest at the bottom.
   - **Title:** "The Bartender's Perspective:" in small type over the bottle's name, styled the way it is on the bottle's own page (`h1 .h1-lead` in the kit).
   - **"How would I drink it?"**: his honest take.
   - **A cocktail suggestion** from the Cocktail Menu (Maker's: the Whiskey Sour), with a complete how-to, linking to that cocktail's own page.
-  - **"If you like this…"**: bottles to try next, as links.
+  - **"Want some suggestions of other bourbons to try?"**: a card that opens, with bottles to try next (as links, once they have pages).
   - Maybe: the Door 1 cast (flat cap guy, the posh lady, the working man) as his regulars.
   - Not sold yet: "Behind the stick" (one thing only a bartender knows).
 - [ ] **Cocktail Menu**: not tied to any bottle; the front door to the whole cocktail / recipe / how-to side of the app. Each cocktail (Old Fashioned, Paper Plane, …) gets its own page.
-- [ ] **Ask the Bartender**: shared how-tos any page can link to (neat, rocks or up; shaken or stirred; simple syrup …).
+- [ ] **Cocktails How-To**: shared how-tos any page can link to (the Golden Ratio, neat / rocks / up, shaken or stirred, simple syrup …). The Maker's bartender page already links to it as "coming soon". (Earlier working name: Ask the Bartender.)
 - [ ] **Front page idea:** "Welcome to my bar, ask me about a bottle." Not a shelf of every bottle (too many to draw); later, point the phone camera at a bottle and get its page.
 
 ## Once more pages exist
