@@ -7,6 +7,14 @@
 # "three dashes for every 1/4 oz of syrup" starting point, and the Trinidad Sour aside.
 
 Cocktails How-To: The Golden ***Ratio.***
+The Short Version
+2 : 1 : 1 · spirit : sweet : sour
+The formula
+Two parts spirit, one part sweet, one part sour. It's behind most of the classics.
+The goal
+Balance. Sweet balances the spirit; sour balances the sweet.
+Same formula
+A Collins is a sour with bubbles. A Negroni trades the sour for a bitter: Campari.
 Here's a little bartender secret:
 Cocktails are formulas.
 Learn one, and you can make a whole menu.

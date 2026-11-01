@@ -5,14 +5,6 @@
 # Oct 31 2026: CLAUDE'S DRAFT, waiting on Philip. The door names are working titles.
 
 Cocktails ***How-To.***
-The Short Version
-2 : 1 : 1 · spirit : sweet : sour
-The formula
-Two parts spirit, one part sweet, one part sour. It's behind most of the classics.
-The goal
-Balance. Sweet balances the spirit; sour balances the sweet.
-Shake or stir?
-Shake anything with citrus, egg or cream. Stir anything that's all spirits.
 So what do you want to learn?
 The Golden Ratio
 Shake or Stir?
