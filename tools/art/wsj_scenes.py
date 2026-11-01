@@ -40,7 +40,8 @@ thumbs = wash(f'<circle cx="-36" cy="-96" r="5" fill="{SKIN}"/><circle cx="36" c
 
 
 def reader(top, hat, hair, mood, tie, k):
-    p = everyman(mood=mood, eyes='dot', top=top, tie=tie, hat=hat, hair=hair, parts=True,
+    look = variety((0, 3, 6, 2, 5)[k])   # a mixed crowd: skin, hair and glasses vary (house rule)
+    p = everyman(mood=mood, eyes='dot', top=top, tie=tie, parts=True, **look,
                  arm_l=[(-21, -109), (-30, -102), (-35, -96)], arm_r=[(21, -109), (30, -104), (35, -98)])
     return p['left'] + p['right'] + p['body'] + p['head'] + f'<g class="rustle" style="transform-origin:0 -92px;animation-delay:{-k * .7:.1f}s">{paper}{thumbs}</g>'
 
@@ -102,7 +103,7 @@ sign = ('<g transform="rotate(-5 217 104)">'
         + wash('<rect x="166" y="83" width="22" height="9" fill="#f2c776" opacity=".85" transform="rotate(-20 177 87)"/><rect x="248" y="83" width="22" height="9" fill="#f2c776" opacity=".85" transform="rotate(18 259 87)"/>')
         + '<text class="letter" x="218" y="106" font-size="15" text-anchor="middle" style="fill:#c0392b">SOLD OUT.</text>'
         + '<text class="letter" x="218" y="121" font-size="10.5" text-anchor="middle">Ask us next week!</text></g>')
-shopper = everyman(mood='sad', eyes='side')
+shopper = everyman(mood='sad', eyes='side', **variety(7))
 huh = '<text class="letter pop" x="120" y="40" font-size="26" style="transform-origin:126px 32px">?!</text>'
 save('soldout', shelf_unit() + ground() + sold_top + middle_row() + bottom_shelf() + sign + place(shopper, 104, 206, .92) + huh,
      "A liquor store shelf with a Maker's-shaped gap on the top shelf and a handwritten sign taped to the edge: SOLD OUT. Ask us next week! A customer stares at it")
@@ -121,7 +122,7 @@ crowd = ''
 looks = [('#9db08a', 'cap'), ('#c25c86', 'hair'), ('#6d7f99', 'fedora'), ('#e6b264', 'cap'), ('#b9a3c8', 'hair'), ('#7f9a6c', 'fedora'), ('#c0583c', 'cap'), ('#8a8f96', 'hair'), ('#c98a3c', 'fedora')]
 for i, (top, hat) in enumerate(looks):   # single file from the door, running off the left edge
     x = 240 - i * 30
-    person = everyman(mood='o' if i % 3 == 0 else 'smile', eyes='side', top=top, hat=hat, hair=('#6b4632', '#3b2a22', '#b9792c')[i % 3])
+    person = everyman(mood='o' if i % 3 == 0 else 'smile', eyes='side', top=top, **variety(i + 1))   # everyone different (house rule)
     crowd += f'<g class="shuffle" style="animation-delay:{-i * .37:.2f}s">{place(person, x, 206, .5)}</g>'
 bangs = '<text class="letter pop" x="150" y="64" font-size="20" style="transform-origin:156px 56px">!!</text>'
 save('line', ground() + store + case + shine + crowd + bangs,

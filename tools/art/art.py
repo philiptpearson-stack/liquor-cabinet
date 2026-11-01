@@ -11,6 +11,37 @@ DARK = '#3b2233'
 SKIN = '#f0c39d'
 BLUSH = '#e48b7c'
 
+# House rule: crowds and any generic (non-real) person vary in skin tone, hair and features.
+# Use variety(i) for the i-th person in a crowd; give a one-off character a skin= of its own.
+SKINS = {   # skin, a deeper shade (nose), blush
+    'light':  ('#f0c39d', '#e9a982', '#e48b7c'),
+    'peach':  ('#e8b48a', '#d99c72', '#e0806e'),
+    'tan':    ('#d09a6c', '#bd855a', '#c96f5c'),
+    'brown':  ('#a9714b', '#93603e', '#b9584a'),
+    'deep':   ('#7c5136', '#68432c', '#9c4a3e'),
+    'deeper': ('#5c3b28', '#4c3020', '#8a4236'),
+}
+HAIRS = {'black': '#231816', 'dark': '#3b2a22', 'brown': '#6b4632', 'auburn': '#94452a', 'blond': '#c9a15a', 'gray': '#a9a29a'}
+
+
+def tone(skin):
+    """(skin, nose, blush) for a SKINS name or a plain hex."""
+    return SKINS.get(skin) or (skin, '#e9a982', BLUSH)
+
+
+VARIETY = [   # skin, hair style, hair color, glasses: neighbours never match
+    ('brown', 'curls', 'black', False), ('light', 'cap', 'brown', False), ('deep', 'bald', 'black', True),
+    ('tan', 'long', 'dark', False), ('peach', 'fedora', 'auburn', False), ('deeper', 'bun', 'black', False),
+    ('light', 'hair', 'blond', True), ('tan', 'cap', 'black', False), ('brown', 'long', 'dark', False),
+    ('peach', 'hair', 'gray', True), ('deep', 'curls', 'black', False), ('light', 'long', 'auburn', False),
+]
+
+
+def variety(i):
+    """everyman() keyword arguments for the i-th person in a crowd."""
+    skin, hat, hair, glasses = VARIETY[i % len(VARIETY)]
+    return dict(skin=skin, hat=hat, hair=HAIRS[hair], glasses=glasses)
+
 
 def f(n):
     return ('%.1f' % n).rstrip('0').rstrip('.')
@@ -80,11 +111,11 @@ def place(inner, x, y, s=1.0, cls='', origin=None, flip=False):
 
 # ---------------------------------------------------------------- people
 
-def face(cx, cy, rx=15, ry=16.5, mood='smile', glasses=False, mustache=False, blush=True, skin=SKIN, eyes='dot'):
+def face(cx, cy, rx=15, ry=16.5, mood='smile', glasses=False, mustache=False, blush=True, skin=SKIN, eyes='dot', blush_color=BLUSH, mustache_color='#cfc6bd'):
     fill = f'<ellipse cx="{cx}" cy="{cy}" rx="{rx}" ry="{ry}" fill="{skin}"/>'
     fill += f'<ellipse cx="{cx - rx + 1}" cy="{cy + 1}" rx="3" ry="4.4" fill="{skin}"/><ellipse cx="{cx + rx - 1}" cy="{cy + 1}" rx="3" ry="4.4" fill="{skin}"/>'
     if blush:
-        fill += f'<ellipse cx="{cx - 8.5}" cy="{cy + 6}" rx="4" ry="2.6" fill="{BLUSH}" opacity=".6"/><ellipse cx="{cx + 8.5}" cy="{cy + 6}" rx="4" ry="2.6" fill="{BLUSH}" opacity=".6"/>'
+        fill += f'<ellipse cx="{cx - 8.5}" cy="{cy + 6}" rx="4" ry="2.6" fill="{blush_color}" opacity=".6"/><ellipse cx="{cx + 8.5}" cy="{cy + 6}" rx="4" ry="2.6" fill="{blush_color}" opacity=".6"/>'
     line = f'<ellipse cx="{cx}" cy="{cy}" rx="{rx}" ry="{ry}"/>'
     line += f'<path d="M{cx - rx + .5} {cy - 2} q-3.5 3 0 7"/><path d="M{cx + rx - .5} {cy - 2} q3.5 3 0 7"/>'
     ey = cy - 1
@@ -106,7 +137,7 @@ def face(cx, cy, rx=15, ry=16.5, mood='smile', glasses=False, mustache=False, bl
         line += (f'<circle cx="{cx - 6}" cy="{ey}" r="4.8" stroke-width="1.7"/><circle cx="{cx + 6}" cy="{ey}" r="4.8" stroke-width="1.7"/>'
                  f'<path d="M{cx - 1.2} {ey} h2.4 M{cx - 10.8} {ey - .6} L{cx - rx + 1} {ey - 2} M{cx + 10.8} {ey - .6} L{cx + rx - 1} {ey - 2}" stroke-width="1.6"/>')
     if mustache:
-        fill += f'<path d="M{cx - 6} {cy + 7.5} q6 -4 12 0 q-6 2.5 -12 0Z" fill="#cfc6bd"/>'
+        fill += f'<path d="M{cx - 6} {cy + 7.5} q6 -4 12 0 q-6 2.5 -12 0Z" fill="{mustache_color}"/>'
         line += f'<path d="M{cx - 6} {cy + 7.5} q6 -4 12 0" stroke-width="1.8"/>'
     if mood == 'smile':
         line += f'<path d="M{cx - 4.5} {cy + 9.5} q4.5 4 9 0" stroke-width="2"/>'
@@ -167,8 +198,11 @@ def bill(pose='stand', mood='smile', head_tilt=0, arm_l=None, arm_r=None, suit='
 
 
 def everyman(mood='smile', arm_l=None, arm_r=None, arm_cls=('', ''), head_cls='', head_tilt=0, eyes='dot', holding_r='',
-             top='#9db08a', pants='#8c7a6b', tie='#c0583c', hat='cap', hair='#6b4632', press=False, extra_head='', holding_l='', parts=False):
-    """Our lovely consumer: flat cap, bow tie, green cardigan. Re-dressed, he plays Bill Jr. and the reporter."""
+             top='#9db08a', pants='#8c7a6b', tie='#c0583c', hat='cap', hair='#6b4632', press=False, extra_head='', holding_l='', parts=False,
+             skin='light', glasses=False, mustache=False):
+    """Our lovely consumer: flat cap, bow tie, green cardigan. Re-dressed, he plays Bill Jr., the reporter and every crowd.
+    hat: cap, fedora, hair, curls, long, bun or bald. skin: a SKINS name (see variety() for crowds)."""
+    sk, nose, blush = tone(skin)
     fill, line = '', ''
     fill += '<ellipse cx="-11" cy="-3.5" rx="10" ry="4.6" fill="#5a4636"/><ellipse cx="11" cy="-3.5" rx="10" ry="4.6" fill="#5a4636"/>'
     fill += f'<path d="M-16 -62 L-14 -7 L-4 -7 L-1.5 -56 L1.5 -56 L4 -7 L14 -7 L16 -62Z" fill="{pants}"/>'
@@ -182,9 +216,12 @@ def everyman(mood='smile', arm_l=None, arm_r=None, arm_cls=('', ''), head_cls=''
     fill += f'<path d="M-8 -121 L-1 -117 L-8 -113Z M8 -121 L1 -117 L8 -113Z" fill="{tie}"/>'
     line += '<path d="M-8 -121 L-1 -117 L-8 -113Z M8 -121 L1 -117 L8 -113Z" stroke-width="1.6"/>'
     body = part(fill, line)
-    hf, hl = face(0, -137, rx=15.5, ry=16, mood=mood, eyes=eyes)
-    hf = '<rect x="-5" y="-125" width="10" height="8" fill="#f0c39d"/>' + hf
-    hf += '<ellipse cx="2" cy="-139" rx="3.4" ry="4.2" fill="#e9a982"/>'
+    hf, hl = face(0, -137, rx=15.5, ry=16, mood=mood, eyes=eyes, skin=sk, blush_color=blush, glasses=glasses, mustache=mustache, mustache_color=hair)
+    behind = ''
+    if hat == 'long':   # long hair falls behind the head, to the shoulders
+        behind = f'<path d="M-16 -146 Q-21 -126 -20 -112 L-10 -113 Q-13 -128 -11 -144Z M16 -146 Q21 -126 20 -112 L10 -113 Q13 -128 11 -144Z" fill="{hair}"/>'
+    hf = behind + f'<rect x="-5" y="-125" width="10" height="8" fill="{sk}"/>' + hf
+    hf += f'<ellipse cx="2" cy="-139" rx="3.4" ry="4.2" fill="{nose}"/>'
     hl += '<path d="M0 -142 q5 3 2 8" stroke-width="1.8"/>'
     if hat == 'cap':
         hf += '<path d="M-16 -146 Q-15 -160 2 -160 Q17 -159 16 -147 Q24 -146 25 -142 Q8 -142 -16 -146Z" fill="#9b7663"/>'
@@ -197,15 +234,24 @@ def everyman(mood='smile', arm_l=None, arm_r=None, arm_cls=('', ''), head_cls=''
             hf += '<rect x="2" y="-166" width="12" height="9" fill="#fffaf1" transform="rotate(8 8 -161)"/>'
             hl += '<rect x="2" y="-166" width="12" height="9" stroke-width="1.2" transform="rotate(8 8 -161)"/>'
             hl += '<text class="letter" x="8" y="-159.4" font-size="4.6" text-anchor="middle" stroke="none" transform="rotate(8 8 -161)">PRESS</text>'
-    elif hat == 'hair':
+    elif hat in ('hair', 'long', 'bun'):
         hf += f'<path d="M-16 -140 Q-19 -160 0 -158 Q19 -160 16 -140 Q14 -150 4 -151 Q-2 -146 -9 -150 Q-14 -148 -16 -140Z" fill="{hair}"/>'
         hl += '<path d="M-16 -140 Q-19 -160 0 -158 Q19 -160 16 -140"/>'
+        if hat == 'bun':
+            hf += f'<circle cx="0" cy="-163" r="6.5" fill="{hair}"/>'
+            hl += '<circle cx="0" cy="-163" r="6.5" stroke-width="2"/>'
+    elif hat == 'curls':   # a crown of tight curls
+        curls = [(-15, -144), (-14, -152), (-8, -158), (0, -160), (8, -158), (14, -152), (15, -144)]
+        hf += ''.join(f'<circle cx="{x}" cy="{y}" r="6.6" fill="{hair}"/>' for x, y in curls)
+        hl += ''.join(f'<path d="M{x - 5} {y + 2} a5.6 5.6 0 1 1 10 0" stroke-width="1.9"/>' for x, y in curls)
+    elif hat == 'bald':
+        hl += '<path d="M-6 -149 q5 -3 10 -1" stroke="#fffaf1" stroke-width="2.2"/>'
     hf += extra_head
     head = part(hf, hl, cls=head_cls, origin=(0, -122), extra=f' transform="rotate({head_tilt} 0 -122)"' if head_tilt else '')
     al = arm_l or [(-21, -109), (-26, -86), (-24, -64)]
     ar = arm_r or [(21, -109), (26, -86), (24, -64)]
-    af, aL = arm(al, top)
-    bf, bL = arm(ar, top)
+    af, aL = arm(al, top, skin=sk)
+    bf, bL = arm(ar, top, skin=sk)
     left = f'<g class="{arm_cls[0]}" style="transform-origin:{f(al[0][0])}px {f(al[0][1])}px">{wash(af)}{lines(aL)}{holding_l}</g>'
     right = f'<g class="{arm_cls[1]}" style="transform-origin:{f(ar[0][0])}px {f(ar[0][1])}px">{wash(bf)}{lines(bL)}{holding_r}</g>'
     if parts:
@@ -213,7 +259,7 @@ def everyman(mood='smile', arm_l=None, arm_r=None, arm_cls=('', ''), head_cls=''
     return left + body + head + right
 
 
-def posh(eyes='closed', mood='smug', arm_r=None, arm_cls=''):
+def posh(eyes='closed', mood='smug', arm_r=None, arm_cls='', skin='light', hair='#6b4632'):
     """The hoity-toity consumer: pearls, fur stole, nose in the air, martini in hand."""
     fill, line = '', ''
     fill += '<path d="M-7 -4 l-4 -14 h7Z M7 -4 l4 -14 h-7Z" fill="#3b2233"/>'
@@ -224,21 +270,22 @@ def posh(eyes='closed', mood='smug', arm_r=None, arm_cls=''):
     line += '<path d="M-24 -112 Q0 -96 24 -112 Q28 -100 20 -94 Q0 -86 -20 -94 Q-28 -100 -24 -112Z" stroke-width="2.2"/>'
     line += '<path d="M-18 -104 q3 2 5 0 M-6 -99 q3 2 5 0 M6 -100 q3 2 5 0 M16 -105 q3 2 5 0" stroke-width="1.5"/>'
     body = part(fill, line)
-    hf, hl = face(0, -133, rx=14, ry=15.5, mood=mood, eyes=eyes)
-    hf = '<rect x="-4.5" y="-122" width="9" height="8" fill="#f0c39d"/>' + hf
+    sk, nose, blush = tone(skin)
+    hf, hl = face(0, -133, rx=14, ry=15.5, mood=mood, eyes=eyes, skin=sk, blush_color=blush)
+    hf = f'<rect x="-4.5" y="-122" width="9" height="8" fill="{sk}"/>' + hf
     hf += ''.join(f'<circle cx="{x}" cy="{-119 + abs(x) * .12}" r="2.3" fill="#fffaf1"/>' for x in (-8, -4, 0, 4, 8))
     hl += ''.join(f'<circle cx="{x}" cy="{-119 + abs(x) * .12}" r="2.3" stroke-width="1"/>' for x in (-8, -4, 0, 4, 8))
-    hf += '<path d="M-15 -138 Q-17 -154 0 -153 Q17 -154 15 -138 Q12 -147 0 -147 Q-12 -147 -15 -138Z" fill="#6b4632"/><circle cx="2" cy="-158" r="7.5" fill="#6b4632"/>'
+    hf += f'<path d="M-15 -138 Q-17 -154 0 -153 Q17 -154 15 -138 Q12 -147 0 -147 Q-12 -147 -15 -138Z" fill="{hair}"/><circle cx="2" cy="-158" r="7.5" fill="{hair}"/>'
     hl += '<path d="M-15 -138 Q-17 -154 0 -153 Q17 -154 15 -138"/><circle cx="2" cy="-158" r="7.5"/>'
     hf += '<path d="M4 -136 q7 2 9 -3" fill="none"/>'
     hl += '<path d="M0 -137 q9 1 9 5 q-4 2 -8 0" stroke-width="1.8"/>'
     head = part(hf, hl, cls='posh-head', origin=(0, -118), extra=' transform="rotate(-14 0 -118)"')
     # arm with martini (her left, raised), other hand on hip
-    af, aL = arm([(-19, -106), (-30, -84), (-14, -70)], '#b9a3c8')
+    af, aL = arm([(-19, -106), (-30, -84), (-14, -70)], '#b9a3c8', skin=sk)
     if arm_r:   # reaching for something instead of holding her martini
-        bf, bL = arm(arm_r, '#b9a3c8')
+        bf, bL = arm(arm_r, '#b9a3c8', skin=sk)
         return part(af, aL) + body + head + part(bf, bL, cls=arm_cls, origin=arm_r[0])
-    bf, bL = arm([(19, -106), (32, -98), (40, -118)], '#b9a3c8')
+    bf, bL = arm([(19, -106), (32, -98), (40, -118)], '#b9a3c8', skin=sk)
     glass = lines('<path d="M33 -138 L47 -138 L40 -128 Z M40 -128 L40 -119 M35 -119 L45 -119" stroke-width="2"/>', boil=False)
     glass = wash('<path d="M34 -137 L46 -137 L40 -129Z" fill="#cfe2d6"/><circle cx="38" cy="-134" r="1.7" fill="#7f9a6c"/>') + glass
     return part(af, aL) + body + head + part(bf, bL) + glass
