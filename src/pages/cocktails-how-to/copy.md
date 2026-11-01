@@ -17,4 +17,7 @@ Neat, Rocks or Up?
 Coming soon
 The Tools You Actually Need
 Coming soon
+**Choose your own adventure with our interactive cocktail menu:**
+→ The Cocktail Menu
+Coming soon
 ← Back to the bottle
