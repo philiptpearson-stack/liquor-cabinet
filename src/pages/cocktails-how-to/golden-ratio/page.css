@@ -21,6 +21,8 @@
 .sc-bitter{animation-name:sc-bitter}
 @keyframes sc-bitter{0%{opacity:0;transform:translateY(-60px)}63%{opacity:0;transform:translateY(-60px)}63.5%{opacity:1;transform:translateY(-60px)}65.5%{opacity:1;transform:translateY(0)}94%{opacity:1;transform:translateY(0)}97%{opacity:0}100%{opacity:0}}
 .sc-cap{opacity:0}.sc-cap.c6,.sc-ok{opacity:1}
+.cap-bob{animation:cap-bob 1.8s ease-in-out infinite alternate}
+@keyframes cap-bob{0%{transform:translateY(-1.5px)}100%{transform:translateY(1.5px)}}
 .sc-cap.c1{animation-name:sc-c1}
 @keyframes sc-c1{0%{opacity:0}4.5%{opacity:0}5%{opacity:1}21.5%{opacity:1}22%{opacity:0}100%{opacity:0}}
 .sc-cap.c2{animation-name:sc-c2}

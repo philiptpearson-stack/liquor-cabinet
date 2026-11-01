@@ -150,7 +150,7 @@ sweet = f'<g class="sc-sweet">{at(R, PY + 66, syrup_bottle(), 1.05)}</g>'
 scale_svg = f'<g class="beam" style="transform-origin:{PX}px {PY}px">{beam}{pan(-1, spirit + sour + bitter)}{pan(1, sweet)}</g>'
 caps = [('c1', 'Start with the spirit...'), ('c2', 'The sweetener balances the spirit...'), ('c3', '...and the acid balances the sweet.'),
         ('c4', 'Balance!'), ('c5', 'Or let the bitters do it...'), ('c6', 'Balance!')]
-captions = ''.join(f'<text class="letter sc-cap {c}" x="200" y="34" font-size="17" text-anchor="middle">{t}</text>' for c, t in caps)
+captions = '<g class="cap-bob">' + ''.join(f'<text class="letter sc-cap {c}" x="200" y="34" font-size="17" text-anchor="middle">{t}</text>' for c, t in caps) + '</g>'   # a gentle bob, so it's never fully still
 ok = f'<g class="sc-ok">{sparkle(120, 52, 7, "twinkle")}{sparkle(286, 48, 6, "twinkle d2")}{sparkle(200, 214, 5, "twinkle d3")}</g>'
 save(GR, 'balance', wash('<rect x="0" y="0" width="400" height="236" fill="#f3e6d4"/>') + stand + scale_svg + captions + ok,
      'A balance scale. A bottle of spirit tips it down on one side. Simple syrup on the other side tips it too far the other way. '
@@ -173,6 +173,7 @@ CSS['gr'] += [
     '.sc-sour{opacity:0;animation-name:sc-sour}', drop('sc-sour', 39.5, lift=58),
     '.sc-bitter{animation-name:sc-bitter}', drop('sc-bitter', 63),
     '.sc-cap{opacity:0}.sc-cap.c6,.sc-ok{opacity:1}',
+    '.cap-bob{animation:cap-bob 1.8s ease-in-out infinite alternate}', kf('cap-bob', [(0, 'transform:translateY(-1.5px)'), (100, 'transform:translateY(1.5px)')]),
     '.sc-cap.c1{animation-name:sc-c1}', window('sc-c1', 5, 21.5),
     '.sc-cap.c2{animation-name:sc-c2}', window('sc-c2', 22, 39.5),
     '.sc-cap.c3{animation-name:sc-c3}', window('sc-c3', 40, 49.5),
