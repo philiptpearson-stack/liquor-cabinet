@@ -5,26 +5,33 @@
 /* 1. Phil taps the chalkboard */
 .tap{animation:tap 1.4s ease-in-out infinite}
 @keyframes tap{0%{transform:rotate(0)}50%{transform:rotate(-7deg)}100%{transform:rotate(0)}}
-/* 2. The balance (12 s): spirit tips it, sweet tips it back too far, sour levels it. Still frame: level, all three on. */
-.beam,.pan,.sc-spirit,.sc-sweet,.sc-sour,.sc-cap,.sc-ok{animation:12s ease-in-out infinite}
+/* 2. The balance (16 s): spirit tips it, sweet tips it back too far, the acid levels it; then the lemon comes off and bitters do the job.
+   Still frame: level, with the spirit, the syrup and the bitters on. */
+.beam,.pan,.sc-spirit,.sc-sweet,.sc-sour,.sc-bitter,.sc-cap,.sc-ok{animation:16s ease-in-out infinite}
 .beam{animation-name:beam}
-@keyframes beam{0%{transform:rotate(0deg)}3%{transform:rotate(2.5deg)}6%{transform:rotate(-1.5deg)}8%{transform:rotate(0deg)}11%{transform:rotate(-13deg)}30%{transform:rotate(-13deg)}33.5%{transform:rotate(9deg)}55%{transform:rotate(9deg)}58.5%{transform:rotate(0deg)}100%{transform:rotate(0deg)}}
+@keyframes beam{0%{transform:rotate(0deg)}2%{transform:rotate(2.5deg)}4%{transform:rotate(-1.5deg)}5%{transform:rotate(0deg)}8%{transform:rotate(-13deg)}22%{transform:rotate(-13deg)}25%{transform:rotate(9deg)}40%{transform:rotate(9deg)}43%{transform:rotate(0deg)}58%{transform:rotate(0deg)}61%{transform:rotate(9deg)}64%{transform:rotate(9deg)}67%{transform:rotate(0deg)}100%{transform:rotate(0deg)}}
 .pan{animation-name:pan}
-@keyframes pan{0%{transform:rotate(0deg)}3%{transform:rotate(-2.5deg)}6%{transform:rotate(1.5deg)}8%{transform:rotate(0deg)}11%{transform:rotate(13deg)}30%{transform:rotate(13deg)}33.5%{transform:rotate(-9deg)}55%{transform:rotate(-9deg)}58.5%{transform:rotate(0deg)}100%{transform:rotate(0deg)}}
+@keyframes pan{0%{transform:rotate(0deg)}2%{transform:rotate(-2.5deg)}4%{transform:rotate(1.5deg)}5%{transform:rotate(0deg)}8%{transform:rotate(13deg)}22%{transform:rotate(13deg)}25%{transform:rotate(-9deg)}40%{transform:rotate(-9deg)}43%{transform:rotate(0deg)}58%{transform:rotate(0deg)}61%{transform:rotate(-9deg)}64%{transform:rotate(-9deg)}67%{transform:rotate(0deg)}100%{transform:rotate(0deg)}}
 .sc-spirit{animation-name:sc-spirit}
-@keyframes sc-spirit{0%{opacity:0;transform:translateY(-60px)}6%{opacity:0;transform:translateY(-60px)}6.5%{opacity:1;transform:translateY(-60px)}9%{opacity:1;transform:translateY(0)}94%{opacity:1;transform:translateY(0)}97%{opacity:0}100%{opacity:0}}
+@keyframes sc-spirit{0%{opacity:0;transform:translateY(-60px)}4.5%{opacity:0;transform:translateY(-60px)}5%{opacity:1;transform:translateY(-60px)}7%{opacity:1;transform:translateY(0)}94%{opacity:1;transform:translateY(0)}97%{opacity:0}100%{opacity:0}}
 .sc-sweet{animation-name:sc-sweet}
-@keyframes sc-sweet{0%{opacity:0;transform:translateY(-60px)}30%{opacity:0;transform:translateY(-60px)}30.5%{opacity:1;transform:translateY(-60px)}33%{opacity:1;transform:translateY(0)}94%{opacity:1;transform:translateY(0)}97%{opacity:0}100%{opacity:0}}
-.sc-sour{animation-name:sc-sour}
-@keyframes sc-sour{0%{opacity:0;transform:translateY(-60px)}55%{opacity:0;transform:translateY(-60px)}55.5%{opacity:1;transform:translateY(-60px)}58%{opacity:1;transform:translateY(0)}94%{opacity:1;transform:translateY(0)}97%{opacity:0}100%{opacity:0}}
-.sc-cap{opacity:0}.sc-cap.c4,.sc-ok{opacity:1}
+@keyframes sc-sweet{0%{opacity:0;transform:translateY(-60px)}21.5%{opacity:0;transform:translateY(-60px)}22%{opacity:1;transform:translateY(-60px)}24%{opacity:1;transform:translateY(0)}94%{opacity:1;transform:translateY(0)}97%{opacity:0}100%{opacity:0}}
+.sc-sour{opacity:0;animation-name:sc-sour}
+@keyframes sc-sour{0%{opacity:0;transform:translateY(-60px)}39.5%{opacity:0;transform:translateY(-60px)}40%{opacity:1;transform:translateY(-60px)}42%{opacity:1;transform:translateY(0)}58%{opacity:1;transform:translateY(0)}60.5%{opacity:0;transform:translateY(-60px)}100%{opacity:0;transform:translateY(-60px)}}
+.sc-bitter{animation-name:sc-bitter}
+@keyframes sc-bitter{0%{opacity:0;transform:translateY(-60px)}63%{opacity:0;transform:translateY(-60px)}63.5%{opacity:1;transform:translateY(-60px)}65.5%{opacity:1;transform:translateY(0)}94%{opacity:1;transform:translateY(0)}97%{opacity:0}100%{opacity:0}}
+.sc-cap{opacity:0}.sc-cap.c6,.sc-ok{opacity:1}
 .sc-cap.c1{animation-name:sc-c1}
-@keyframes sc-c1{0%{opacity:0}5.5%{opacity:0}6%{opacity:1}29.5%{opacity:1}30%{opacity:0}100%{opacity:0}}
+@keyframes sc-c1{0%{opacity:0}4.5%{opacity:0}5%{opacity:1}21.5%{opacity:1}22%{opacity:0}100%{opacity:0}}
 .sc-cap.c2{animation-name:sc-c2}
-@keyframes sc-c2{0%{opacity:0}29.5%{opacity:0}30%{opacity:1}54.5%{opacity:1}55%{opacity:0}100%{opacity:0}}
+@keyframes sc-c2{0%{opacity:0}21.5%{opacity:0}22%{opacity:1}39.5%{opacity:1}40%{opacity:0}100%{opacity:0}}
 .sc-cap.c3{animation-name:sc-c3}
-@keyframes sc-c3{0%{opacity:0}54.5%{opacity:0}55%{opacity:1}74.5%{opacity:1}75%{opacity:0}100%{opacity:0}}
+@keyframes sc-c3{0%{opacity:0}39.5%{opacity:0}40%{opacity:1}49.5%{opacity:1}50%{opacity:0}100%{opacity:0}}
 .sc-cap.c4{animation-name:sc-c4}
-@keyframes sc-c4{0%{opacity:0}74.5%{opacity:0}75%{opacity:1}94%{opacity:1}94.5%{opacity:0}100%{opacity:0}}
+@keyframes sc-c4{0%{opacity:0}49.5%{opacity:0}50%{opacity:1}57.5%{opacity:1}58%{opacity:0}100%{opacity:0}}
+.sc-cap.c5{animation-name:sc-c5}
+@keyframes sc-c5{0%{opacity:0}57.5%{opacity:0}58%{opacity:1}74.5%{opacity:1}75%{opacity:0}100%{opacity:0}}
+.sc-cap.c6{animation-name:sc-c6}
+@keyframes sc-c6{0%{opacity:0}74.5%{opacity:0}75%{opacity:1}94%{opacity:1}94.5%{opacity:0}100%{opacity:0}}
 .sc-ok{animation-name:sc-ok}
-@keyframes sc-ok{0%{opacity:0}74.5%{opacity:0}75%{opacity:1}94%{opacity:1}94.5%{opacity:0}100%{opacity:0}}
+@keyframes sc-ok{0%{opacity:0}49.5%{opacity:0}50%{opacity:1}57.5%{opacity:1}58%{opacity:0}74.5%{opacity:0}75%{opacity:1}94%{opacity:1}94.5%{opacity:0}100%{opacity:0}}

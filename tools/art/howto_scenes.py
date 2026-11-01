@@ -119,8 +119,9 @@ counter = ('<rect x="0" y="176" width="400" height="60" fill="#6e4b39"/>' + wash
 save(GR, 'chalkboard', wall + board + place(phil, 104, 236, .95) + counter + sparkle(330, 50, 6, 'twinkle'),
      'Phil, the bartender, winks and points at a chalkboard that reads 2 : 1 : 1, spirit, sweet, sour', view='20 14 360 196')
 
-# ---------------------------------------------------------------- Golden Ratio 2: the balance (12 s)
-# a scale: the spirit tips it, the sweet tips it back too far, the sour brings it level
+# ---------------------------------------------------------------- Golden Ratio 2: the balance (16 s)
+# a scale: the spirit tips it, the sweetener tips it back too far, the acid brings it level.
+# Then the lemon comes off, and a bitter does the same job.
 PX, PY, ARM = 200, 70, 110
 beam = (wash(f'<rect x="{PX - ARM - 4}" y="{PY - 3}" width="{2 * ARM + 8}" height="6" rx="3" fill="#9b7663"/>')   # a rod, not a bare line: a flat line's crayon filter has no height to draw in
         + lines(f'<rect x="{PX - ARM - 4}" y="{PY - 3}" width="{2 * ARM + 8}" height="6" rx="3" stroke-width="2"/>', boil=False)) + wash(f'<circle cx="{PX}" cy="{PY}" r="5" fill="#e6b264"/>') + lines(f'<circle cx="{PX}" cy="{PY}" r="5" stroke-width="2"/>', boil=False)
@@ -131,36 +132,54 @@ def pan(side, contents):
     hang = (lines(f'<path d="M{x} {PY} L{x - 24} {PY + 64} M{x} {PY} L{x + 24} {PY + 64}" stroke-width="1.6"/>', boil=False)
             + wash(f'<path d="M{x - 30} {PY + 64} Q{x} {PY + 82} {x + 30} {PY + 64}Z" fill="#e6b264"/>') + lines(f'<path d="M{x - 30} {PY + 64} Q{x} {PY + 82} {x + 30} {PY + 64}Z" stroke-width="2"/>', boil=False))
     return f'<g class="pan" style="transform-origin:{x}px {PY}px">{hang}{contents}</g>'
+
+
+def bitters_bottle():
+    """A tall bottle of something red and bitter (no brand)."""
+    d = 'M-9 0 L-9 -34 Q-9 -40 -4 -42 L-4 -54 L4 -54 L4 -42 Q9 -40 9 -34 L9 0Z'
+    return (wash(f'<path d="{d}" fill="#c42f2f"/><rect x="-7.5" y="-28" width="15" height="13" rx="1.5" fill="#fbf3e3"/><rect x="-5" y="-59" width="10" height="5" rx="1" fill="#3b2233"/>')
+            + lines(f'<path d="{d}" stroke-width="2"/><rect x="-7.5" y="-28" width="15" height="13" rx="1.5" stroke-width="1.4"/><rect x="-5" y="-59" width="10" height="5" rx="1" stroke-width="1.4"/>', boil=False)
+            + '<text class="letter" x="0" y="-18.6" font-size="5.6" text-anchor="middle">bitters</text>')
+
+
 L, R = PX - ARM, PX + ARM
-spirit = f'<g class="sc-spirit">{at(L - 8, PY + 66, spirit_bottle(), .78)}</g>'
+spirit = f'<g class="sc-spirit">{at(L - 10, PY + 66, spirit_bottle(), .78)}</g>'
 sour = f'<g class="sc-sour">{at(L + 15, PY + 66, lemon(), .8)}</g>'
+bitter = f'<g class="sc-bitter">{at(L + 14, PY + 66, bitters_bottle(), .85)}</g>'
 sweet = f'<g class="sc-sweet">{at(R, PY + 66, syrup_bottle(), 1.05)}</g>'
-scale_svg = f'<g class="beam" style="transform-origin:{PX}px {PY}px">{beam}{pan(-1, spirit + sour)}{pan(1, sweet)}</g>'
-caps = [('c1', 'Start with the spirit...'), ('c2', 'Sweet balances the spirit...'), ('c3', '...and sour balances the sweet.'), ('c4', 'Balance!')]
+scale_svg = f'<g class="beam" style="transform-origin:{PX}px {PY}px">{beam}{pan(-1, spirit + sour + bitter)}{pan(1, sweet)}</g>'
+caps = [('c1', 'Start with the spirit...'), ('c2', 'The sweetener balances the spirit...'), ('c3', '...and the acid balances the sweet.'),
+        ('c4', 'Balance!'), ('c5', 'Or let the bitters do it...'), ('c6', 'Balance!')]
 captions = ''.join(f'<text class="letter sc-cap {c}" x="200" y="34" font-size="17" text-anchor="middle">{t}</text>' for c, t in caps)
 ok = f'<g class="sc-ok">{sparkle(120, 52, 7, "twinkle")}{sparkle(286, 48, 6, "twinkle d2")}{sparkle(200, 214, 5, "twinkle d3")}</g>'
 save(GR, 'balance', wash('<rect x="0" y="0" width="400" height="236" fill="#f3e6d4"/>') + stand + scale_svg + captions + ok,
      'A balance scale. A bottle of spirit tips it down on one side. Simple syrup on the other side tips it too far the other way. '
-     'A lemon added next to the spirit brings it level: balance', view='40 6 320 222')
-TILT = [(0, 0), (3, 2.5), (6, -1.5), (8, 0), (11, -13),   # a little idle wobble first, so it's alive from the first frame
-        (30, -13), (33.5, 9), (55, 9), (58.5, 0), (100, 0)]   # (percent, degrees); negative = the spirit side down
+     'A lemon added next to the spirit brings it level: balance. Then the lemon comes off, a bottle of bitters goes on, and it balances again',
+     view='40 6 320 222')
+TILT = [(0, 0), (2, 2.5), (4, -1.5), (5, 0), (8, -13),   # a little idle wobble first, so it's alive from the first frame
+        (22, -13), (25, 9), (40, 9), (43, 0), (58, 0), (61, 9), (64, 9), (67, 0), (100, 0)]   # (percent, degrees); negative = the spirit side down
+drop = lambda name, a, off=94, lift=None: kf(name, [(0, 'opacity:0;transform:translateY(-60px)'), (a, 'opacity:0;transform:translateY(-60px)'), (a + .5, 'opacity:1;transform:translateY(-60px)'),
+                                                     (a + 2.5, 'opacity:1;transform:translateY(0)')]
+                                         + ([(lift, 'opacity:1;transform:translateY(0)'), (lift + 2.5, 'opacity:0;transform:translateY(-60px)'), (100, 'opacity:0;transform:translateY(-60px)')] if lift else
+                                            [(off, 'opacity:1;transform:translateY(0)'), (off + 3, 'opacity:0'), (100, 'opacity:0')]))
 CSS['gr'] += [
-    '/* 2. The balance (12 s): spirit tips it, sweet tips it back too far, sour levels it. Still frame: level, all three on. */',
-    '.beam,.pan,.sc-spirit,.sc-sweet,.sc-sour,.sc-cap,.sc-ok{animation:12s ease-in-out infinite}',
+    '/* 2. The balance (16 s): spirit tips it, sweet tips it back too far, the acid levels it; then the lemon comes off and bitters do the job.',
+    '   Still frame: level, with the spirit, the syrup and the bitters on. */',
+    '.beam,.pan,.sc-spirit,.sc-sweet,.sc-sour,.sc-bitter,.sc-cap,.sc-ok{animation:16s ease-in-out infinite}',
     '.beam{animation-name:beam}', kf('beam', [(p, f'transform:rotate({d}deg)') for p, d in TILT]),
     '.pan{animation-name:pan}', kf('pan', [(p, f'transform:rotate({-d}deg)') for p, d in TILT]),
-    '.sc-spirit{animation-name:sc-spirit}', kf('sc-spirit', [(0, 'opacity:0;transform:translateY(-60px)'), (6, 'opacity:0;transform:translateY(-60px)'), (6.5, 'opacity:1;transform:translateY(-60px)'),
-                                                             (9, 'opacity:1;transform:translateY(0)'), (94, 'opacity:1;transform:translateY(0)'), (97, 'opacity:0'), (100, 'opacity:0')]),
-    '.sc-sweet{animation-name:sc-sweet}', kf('sc-sweet', [(0, 'opacity:0;transform:translateY(-60px)'), (30, 'opacity:0;transform:translateY(-60px)'), (30.5, 'opacity:1;transform:translateY(-60px)'),
-                                                          (33, 'opacity:1;transform:translateY(0)'), (94, 'opacity:1;transform:translateY(0)'), (97, 'opacity:0'), (100, 'opacity:0')]),
-    '.sc-sour{animation-name:sc-sour}', kf('sc-sour', [(0, 'opacity:0;transform:translateY(-60px)'), (55, 'opacity:0;transform:translateY(-60px)'), (55.5, 'opacity:1;transform:translateY(-60px)'),
-                                                       (58, 'opacity:1;transform:translateY(0)'), (94, 'opacity:1;transform:translateY(0)'), (97, 'opacity:0'), (100, 'opacity:0')]),
-    '.sc-cap{opacity:0}.sc-cap.c4,.sc-ok{opacity:1}',
-    '.sc-cap.c1{animation-name:sc-c1}', window('sc-c1', 6, 29.5),
-    '.sc-cap.c2{animation-name:sc-c2}', window('sc-c2', 30, 54.5),
-    '.sc-cap.c3{animation-name:sc-c3}', window('sc-c3', 55, 74.5),
-    '.sc-cap.c4{animation-name:sc-c4}', window('sc-c4', 75, 94),
-    '.sc-ok{animation-name:sc-ok}', window('sc-ok', 75, 94),
+    '.sc-spirit{animation-name:sc-spirit}', drop('sc-spirit', 4.5),
+    '.sc-sweet{animation-name:sc-sweet}', drop('sc-sweet', 21.5),
+    '.sc-sour{opacity:0;animation-name:sc-sour}', drop('sc-sour', 39.5, lift=58),
+    '.sc-bitter{animation-name:sc-bitter}', drop('sc-bitter', 63),
+    '.sc-cap{opacity:0}.sc-cap.c6,.sc-ok{opacity:1}',
+    '.sc-cap.c1{animation-name:sc-c1}', window('sc-c1', 5, 21.5),
+    '.sc-cap.c2{animation-name:sc-c2}', window('sc-c2', 22, 39.5),
+    '.sc-cap.c3{animation-name:sc-c3}', window('sc-c3', 40, 49.5),
+    '.sc-cap.c4{animation-name:sc-c4}', window('sc-c4', 50, 57.5),
+    '.sc-cap.c5{animation-name:sc-c5}', window('sc-c5', 58, 74.5),
+    '.sc-cap.c6{animation-name:sc-c6}', window('sc-c6', 75, 94),
+    '.sc-ok{animation-name:sc-ok}', kf('sc-ok', [(0, 'opacity:0'), (49.5, 'opacity:0'), (50, 'opacity:1'), (57.5, 'opacity:1'), (58, 'opacity:0'), (74.5, 'opacity:0'), (75, 'opacity:1'), (94, 'opacity:1'), (94.5, 'opacity:0'), (100, 'opacity:0')]),
 ]
 CSS['gr'] = ['/* Cocktails How-To / The Golden Ratio: scene motion. Written by tools/art/howto_scenes.py; edit it there. */',
              '.twinkle{animation:twinkle 1.6s ease-in-out infinite}', '.twinkle.d2{animation-delay:-.55s}.twinkle.d3{animation-delay:-1.1s}',
