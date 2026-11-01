@@ -353,11 +353,11 @@ ws = ['/* 4. The Whiskey Sour (12 s): combine, dry shake, wet shake, strain and 
       '.ws-cheers{animation-name:ws-cheers}', window('ws-cheers', 88, 94),
       '.ws-cherry{animation-name:ws-cherry}', kf('ws-cherry', [(0, 'opacity:0;transform:translateY(-60px)'), (87, 'opacity:0;transform:translateY(-60px)'), (87.5, 'opacity:1;transform:translateY(-60px)'),
                                                           (89.5, 'opacity:1;transform:translateY(0)'), (94, 'opacity:1;transform:translateY(0)'), (95.5, 'opacity:0;transform:translateY(0)'), (100, 'opacity:0')]),
-      # the written steps under the drawing light up one at a time, in step with it (all lit when the motion is off)
-      '.howto-steps li.s1{animation-name:hs1}', kf('hs1', [(0, 'opacity:.35'), (4, 'opacity:.35'), (5, 'opacity:1'), (34, 'opacity:1'), (35, 'opacity:.35'), (100, 'opacity:.35')]),
-      '.howto-steps li.s2{animation-name:hs2}', kf('hs2', [(0, 'opacity:.35'), (34.5, 'opacity:.35'), (35.5, 'opacity:1'), (54.5, 'opacity:1'), (55.5, 'opacity:.35'), (100, 'opacity:.35')]),
-      '.howto-steps li.s3{animation-name:hs3}', kf('hs3', [(0, 'opacity:.35'), (55, 'opacity:.35'), (56, 'opacity:1'), (75, 'opacity:1'), (76, 'opacity:.35'), (100, 'opacity:.35')]),
-      '.howto-steps li.s4{animation-name:hs4}', kf('hs4', [(0, 'opacity:.35'), (75.5, 'opacity:.35'), (76.5, 'opacity:1'), (94, 'opacity:1'), (95, 'opacity:.35'), (100, 'opacity:.35')]),
+      # the written steps under the drawing stay readable; the one the drawing is on gets a soft highlight
+      '.howto-steps li.s1{animation-name:hs1}', kf('hs1', [(0, 'background-color:transparent'), (4, 'background-color:transparent'), (5, 'background-color:var(--step-hl)'), (34, 'background-color:var(--step-hl)'), (35, 'background-color:transparent'), (100, 'background-color:transparent')]),
+      '.howto-steps li.s2{animation-name:hs2}', kf('hs2', [(0, 'background-color:transparent'), (34.5, 'background-color:transparent'), (35.5, 'background-color:var(--step-hl)'), (54.5, 'background-color:var(--step-hl)'), (55.5, 'background-color:transparent'), (100, 'background-color:transparent')]),
+      '.howto-steps li.s3{animation-name:hs3}', kf('hs3', [(0, 'background-color:transparent'), (55, 'background-color:transparent'), (56, 'background-color:var(--step-hl)'), (75, 'background-color:var(--step-hl)'), (76, 'background-color:transparent'), (100, 'background-color:transparent')]),
+      '.howto-steps li.s4{animation-name:hs4}', kf('hs4', [(0, 'background-color:transparent'), (75.5, 'background-color:transparent'), (76.5, 'background-color:var(--step-hl)'), (94, 'background-color:var(--step-hl)'), (95, 'background-color:transparent'), (100, 'background-color:transparent')]),
       '.ws-cap.c5{animation-name:ws-c5}', window('ws-c5', 88, 94)]
 CSS.append('\n'.join(ws))
 

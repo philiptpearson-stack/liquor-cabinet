@@ -4,7 +4,7 @@ Open items that aren't today's work but mustn't get lost. Newest at the bottom.
 
 ## When the app's title page exists
 - [ ] **Point the site's home at it.** Change `"home"` in `src/site.json` from `makers-mark` to the title page's folder. The site's front door follows, and so does every `href="@home"` link.
-- [ ] **Check "← Back to the bottle" on shared hubs (Fermentation).** It returns readers to the bottle that sent them. When the page can't tell where they came from (a shared link, a fresh tab), it falls back to `@home`. That's Maker's Mark today and becomes the title page once `site.json` changes. Then decide whether the label should read differently in that case, since it would no longer land on a bottle. *(Philip, Oct 27 2026)*
+- [x] **"← Back to the bottle" on shared hubs (Fermentation).** It now says where it actually goes ("Back to The Founder's Gamble", "Back to Maker's Mark"); each page notes its name for the visit (sessionStorage). Opened fresh, it still says "Back to the bottle" and goes to `@home`. When the title page becomes home, that fallback label will need changing. *(Philip, Oct 27 and 31 2026)*
 
 ## Pages waiting to be built (they show as "Coming soon" now)
 - [x] **Margie Samuels: One of Whiskey's Most Iconic Women** (Maker's Mark door): built Oct 27 2026

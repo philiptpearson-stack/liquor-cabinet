@@ -37,15 +37,29 @@
     });
   } catch (e) {}
 
-  // "Back to the bottle" on a shared page (like Fermentation) returns to whichever bottle sent you,
-  // to the spot you left (like the back button). Without a referrer it goes to the link's own default.
+  // Every page notes its own name for this visit, so a shared page's Back link can say where it goes.
+  const cleanPath = p => p.replace(/index\.html$/, '');
+  let names = {};
+  try {
+    names = JSON.parse(sessionStorage.getItem('lc:names') || '{}');
+    const me = document.querySelector('.mark span');
+    if (me && me.textContent.trim()) { names[cleanPath(location.pathname)] = me.textContent.trim(); sessionStorage.setItem('lc:names', JSON.stringify(names)); }
+  } catch (e) {}
+
+  // The Back link on a shared page (like Fermentation) returns to whichever page sent you, to the spot
+  // you left (like the back button), and says so: "Back to The Founder's Gamble". Without a referrer
+  // it keeps its own default ("Back to the bottle").
   try {
     const from = document.referrer && new URL(document.referrer);
-    if (from && from.origin === location.origin && from.pathname !== location.pathname)
+    if (from && from.origin === location.origin && from.pathname !== location.pathname) {
+      const name = names[cleanPath(from.pathname)], label = name ? 'Back to ' + name : 'Back';
       document.querySelectorAll('a[data-back]').forEach(a => {
         a.href = from.href;
+        if (a.classList.contains('bar-back')) { a.setAttribute('aria-label', label); a.title = label; }
+        else a.textContent = '← ' + label;
         a.addEventListener('click', e => { if (history.length > 1) { e.preventDefault(); history.back(); } });
       });
+    }
   } catch (e) {}
 
   // A "Back" link (at the end of the story, or up in the bar) that points at the page you just came

@@ -247,4 +247,7 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
 .cc-body p{margin:0;font-size:1.04rem;line-height:1.5}
 /* a how-to drawing with its steps written underneath; each step lights up as the drawing reaches it */
 .howto figcaption{font-family:var(--body);font-size:inherit;text-align:left;color:var(--ink);margin-top:1rem}
+.howto-steps{--step-hl:color-mix(in srgb,var(--accent) 13%,transparent);gap:.35rem}
+.howto-steps li{border-radius:10px;padding:.4rem .5rem .4rem 2.85rem}
+.howto-steps li::before{left:.45rem;top:.35rem}
 
