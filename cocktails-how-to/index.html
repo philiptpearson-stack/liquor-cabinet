@@ -267,15 +267,15 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
 
 /* ---------- A formula table: one ratio, many drinks (a dl, so each cell reads as its own line) */
 .formula{margin:.2rem 0;display:flex;flex-direction:column;gap:.3rem;font-size:.95rem;line-height:1.25}
-.formula .f-row{display:grid;grid-template-columns:minmax(6.4rem,1.3fr) 1fr 1fr 1fr;gap:.3rem;align-items:stretch}
+.formula .f-row{display:grid;grid-template-columns:6.7rem repeat(3,minmax(0,1fr));gap:.3rem;align-items:stretch}
 .formula dt{font-weight:800;align-self:center}
 .formula dd{margin:0;padding:.42rem .45rem;border-radius:8px;display:flex;align-items:center}
 .formula .f-row dd:nth-of-type(1){background:color-mix(in srgb,var(--gold) 20%,transparent)}
 .formula .f-row dd:nth-of-type(2){background:color-mix(in srgb,var(--accent) 13%,transparent)}
 .formula .f-row dd:nth-of-type(3){background:color-mix(in srgb,#b9c34a 24%,transparent)}
 .formula .f-head dt,.formula .f-head dd{font:800 .7rem/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.formula .f-head dd{background:none!important;padding-block:.1rem;gap:.3rem}
-.formula .f-head b{font-size:1.05rem;letter-spacing:0;color:var(--ink)}
+.formula .f-head dd{background:none!important;padding-block:.1rem;flex-direction:column;align-items:flex-start;gap:.1rem}   /* SPIRIT over 2 oz */
+.formula .f-head b{font-size:1.05rem;letter-spacing:0;text-transform:none;white-space:nowrap;color:var(--ink)}
 /* Cocktails How-To: scene motion. Written by tools/art/howto_scenes.py; edit it there. */
 .twinkle{animation:twinkle 1.6s ease-in-out infinite}
 .twinkle.d2{animation-delay:-.55s}.twinkle.d3{animation-delay:-1.1s}

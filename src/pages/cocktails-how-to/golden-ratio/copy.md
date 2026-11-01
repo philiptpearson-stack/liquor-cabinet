@@ -2,28 +2,27 @@
 
 # One line per line of text on the page, in order. Illustrations are not included.
 # The build refuses to publish the page if its words drift from this file.
-# Oct 31 2026: CLAUDE'S DRAFT from Philip's notes in chat, waiting on his edits. Lines that are
-# Claude's facts rather than Philip's ideas, to check: the Negroni equal-parts aside, the
+# Oct 31 2026, late: Philip's edits to the Short Version, the opening and the formula table (Negroni and
+# Boulevardier at 2:1:1, so the equal-parts aside went). Earlier: CLAUDE'S DRAFT from Philip's notes in chat, waiting on his edits. Lines that are
+# Claude's facts rather than Philip's ideas, to check: the
 # "three dashes for every 1/4 oz of syrup" starting point, and the Trinidad Sour aside.
 
 Cocktails How-To: The Golden ***Ratio.***
 The Short Version
 2 : 1 : 1 · spirit : sweet : sour
 The formula
-Two parts spirit, one part sweet, one part sour. It's behind most of the classics.
+Two parts spirit, one part sweetener, one part sour/bitter. It's the formula behind most of the classics.
 The goal
-Balance. Sweet balances the spirit; sour balances the sweet.
-Same formula
-A Collins is a sour with bubbles. A Negroni trades the sour for a bitter: Campari.
+To achieve perfect balance. The sweetener balances the harshness of the spirit; while the sour balances out the sweet.
 Here's a little bartender secret:
-Cocktails are formulas.
-Learn one, and you can make a whole menu.
+Cocktails are not just recipes. They're *formulas*.
+Make the formula flawlessly, and you can make a whole menu.
 2 : 1 : 1
-The Golden Ratio is the formula behind most of the classics: two parts spirit, one part sweet, one part sour.
+The Golden Ratio is the formula behind most of the classics: two parts spirit, one part sweetener, one part sour/bitter.
 The formula
-Spirit **2**
-Sweet **1**
-Sour **1**
+Spirit **2 oz**
+Sweet **1 oz**
+Sour **1 oz**
 Whiskey Sour
 whiskey
 simple syrup
@@ -31,10 +30,6 @@ lemon
 Margarita
 tequila
 orange liqueur
-lime
-Daiquiri
-rum
-simple syrup
 lime
 Lemon Drop
 vodka
@@ -44,6 +39,14 @@ Cosmopolitan
 citrus vodka
 orange liqueur
 lime
+Negroni
+gin
+sweet vermouth
+Campari
+Boulevardier
+rye
+sweet vermouth
+Campari
 See the pattern? If you can make an excellent margarita, you can make an excellent whiskey sour. Or a lemon drop. Or a cosmopolitan. Or any other sour.
 It's all about balance
 Every recipe is working toward the same thing: **balance.**
@@ -53,7 +56,6 @@ One formula, whole families
 Once you know the formula, you'll start seeing it everywhere.
 A Collins? That's just a sour with bubbles. Gin, lemon and simple syrup, topped with soda water.
 A Negroni? Same formula, but it trades the acid for a *potable bitter*: Campari. Gin is the spirit, sweet vermouth is the sweet, and Campari's bitterness does the balancing.
-(It's mixed in equal parts, since Campari and sweet vermouth are both lighter and sweeter than a straight spirit.)
 Bitters that pour, bitters that dash
 Campari is made to be sipped, so you pour it by the ounce, and it slots right into the formula.
 Concentrated bitters, like Angostura, are different. They're closer to a seasoning. You don't pour them. You dash them.

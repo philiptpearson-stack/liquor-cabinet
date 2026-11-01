@@ -21,7 +21,7 @@ Open items that aren't today's work but mustn't get lost. Newest at the bottom.
   - Maybe: the Door 1 cast (flat cap guy, the posh lady, the working man) as his regulars.
   - Not sold yet: "Behind the stick" (one thing only a bartender knows).
 - [ ] **Cocktail Menu**: not tied to any bottle; the front door to the whole cocktail / recipe / how-to side of the app. Each cocktail (Old Fashioned, Paper Plane, …) gets its own page.
-- [ ] **Cocktails How-To** (`cocktails-how-to/`): built Oct 31 2026 as a hub like Fermentation (a Short Version card, a door per technique). **The Golden Ratio** is drafted from Philip's notes and waiting on his edits; to check in it: the Negroni equal-parts aside, the "three dashes per ¼ oz of syrup" starting point, the Trinidad Sour aside. Still to come: Shake or Stir?, Simple Syrup in Two Minutes, All About Ice, Neat / Rocks / Up, The Tools You Actually Need. The Maker's bartender page's note links here.
+- [ ] **Cocktails How-To** (`cocktails-how-to/`): built Oct 31 2026 as a hub like Fermentation (a door per technique; the Short Version card lives on the Golden Ratio page). **The Golden Ratio** is drafted from Philip's notes and waiting on his edits; to check in it: the "three dashes per ¼ oz of syrup" starting point and the Trinidad Sour aside. (Philip set the Negroni and Boulevardier at 2:1:1, so the equal-parts aside is gone.) Still to come: Shake or Stir?, Simple Syrup in Two Minutes, All About Ice, Neat / Rocks / Up, The Tools You Actually Need. The Maker's bartender page's note links here.
 - [ ] **Front page idea:** "Welcome to my bar, ask me about a bottle." Not a shelf of every bottle (too many to draw); later, point the phone camera at a bottle and get its page.
 
 ## Once more pages exist
