@@ -227,8 +227,11 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .rc-step:disabled{opacity:.3;cursor:default}
 .rc-n{min-width:1.2ch;text-align:center;font-size:1.15rem}
 .rc-list{list-style:none;margin:0;padding:0;font-size:1.08rem;line-height:28px}
-.rc-list .amt{font-weight:800;display:inline-block;min-width:5.2rem}
+.rc-list li{display:flex;gap:.4rem}   /* a long ingredient wraps under itself, not under the amount */
+.rc-list .amt{font-weight:800;flex:none;min-width:5.2rem}
 .rc-glass{margin:.35rem 0 0;font-size:.95rem;line-height:28px;color:#6b5a62}
+.rc-glass b{color:#3a2532}
+.rc-note{margin:.35rem 0 0;font-size:.86rem;line-height:1.45;color:#6b5a62;font-style:italic}
 ol.steps{list-style:none;counter-reset:step;margin:0;padding:0;display:flex;flex-direction:column;gap:.8rem}
 ol.steps li{counter-increment:step;position:relative;padding-left:2.6rem;font-size:1.12rem;line-height:1.55}
 ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;width:1.85rem;height:1.85rem;border-radius:50%;
