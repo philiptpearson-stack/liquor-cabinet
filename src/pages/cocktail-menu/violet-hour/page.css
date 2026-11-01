@@ -1,0 +1,28 @@
+/* The Cocktail Menu / Violet Hour: scene motion. Written by tools/art/menu_pages.py; edit it there. */
+.twinkle{animation:twinkle 1.6s ease-in-out infinite}
+.twinkle.d2{animation-delay:-.55s}.twinkle.d3{animation-delay:-1.1s}
+@keyframes twinkle{0%,100%{transform:scale(.55) rotate(0);opacity:.35}50%{transform:scale(1.15) rotate(20deg);opacity:1}}
+.bub{animation:bub 2.4s linear infinite}.bub.u1{animation-delay:-.8s}.bub.u2{animation-delay:-1.6s}
+@keyframes bub{0%{transform:translateY(0);opacity:0}15%{opacity:.9}85%{opacity:.9}100%{transform:translateY(-34px);opacity:0}}
+/* the build, step by step (8.85 s). Still frame: the finished drink. */
+.btl7,.pour8,.cap9,.jig10,.pour11,.cap12,.btl13,.pour14,.cap15,.cheer17{opacity:0}
+.band1{animation:band1 8.85s linear infinite}@keyframes band1{0%{transform:scaleY(0)}10.73%{transform:scaleY(0)}15.82%{transform:scaleY(1)}100%{transform:scaleY(1)}}
+.band2{animation:band2 8.85s linear infinite}@keyframes band2{0%{transform:scaleY(0)}24.29%{transform:scaleY(0)}28.81%{transform:scaleY(1)}100%{transform:scaleY(1)}}
+.band3{animation:band3 8.85s linear infinite}@keyframes band3{0%{transform:scaleY(0)}37.29%{transform:scaleY(0)}50.28%{transform:scaleY(1)}100%{transform:scaleY(1)}}
+.mixd4{animation:mixd4 8.85s linear infinite}@keyframes mixd4{0%{opacity:0}51.41%{opacity:0}57.06%{opacity:1}100%{opacity:1}}
+.gc5{animation:gc5 8.85s linear infinite}@keyframes gc5{0%{opacity:1}90.96%{opacity:1}97.18%{opacity:0}100%{opacity:0}}
+.garn6{animation:garn6 8.85s linear infinite}@keyframes garn6{0%{opacity:0;transform:translateY(-60px)}54.8%{opacity:0;transform:translateY(-60px)}55.37%{opacity:1;transform:translateY(-60px)}61.58%{opacity:1;transform:translateY(0)}90.96%{opacity:1;transform:translateY(0)}97.18%{opacity:0;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
+.btl7{animation:btl7 8.85s linear infinite}@keyframes btl7{0%{opacity:0;transform:rotate(25deg)}5.65%{opacity:0;transform:rotate(25deg)}6.21%{opacity:1;transform:rotate(25deg)}9.6%{opacity:1;transform:rotate(0)}15.82%{opacity:1;transform:rotate(0)}18.31%{opacity:1;transform:rotate(25deg)}19.21%{opacity:0;transform:rotate(25deg)}100%{opacity:0;transform:rotate(25deg)}}
+.pour8{animation:pour8 8.85s linear infinite}@keyframes pour8{0%{opacity:0}8.59%{opacity:0}9.94%{opacity:1}15.82%{opacity:1}17.18%{opacity:0}100%{opacity:0}}
+.cap9{animation:cap9 8.85s linear infinite}@keyframes cap9{0%{opacity:0}4.86%{opacity:0}6.21%{opacity:1}18.08%{opacity:1}19.44%{opacity:0}100%{opacity:0}}
+.jig10{animation:jig10 8.85s linear infinite}@keyframes jig10{0%{opacity:0;transform:rotate(0)}19.21%{opacity:0;transform:rotate(0)}19.77%{opacity:1;transform:rotate(0)}23.16%{opacity:1;transform:rotate(100deg)}28.25%{opacity:1;transform:rotate(100deg)}31.07%{opacity:1;transform:rotate(0)}32.2%{opacity:0;transform:rotate(0)}100%{opacity:0;transform:rotate(0)}}
+.pour11{animation:pour11 8.85s linear infinite}@keyframes pour11{0%{opacity:0}22.15%{opacity:0}23.5%{opacity:1}27.91%{opacity:1}29.27%{opacity:0}100%{opacity:0}}
+.cap12{animation:cap12 8.85s linear infinite}@keyframes cap12{0%{opacity:0}18.42%{opacity:0}19.77%{opacity:1}31.07%{opacity:1}32.43%{opacity:0}100%{opacity:0}}
+.btl13{animation:btl13 8.85s linear infinite}@keyframes btl13{0%{opacity:0;transform:rotate(25deg)}32.2%{opacity:0;transform:rotate(25deg)}32.77%{opacity:1;transform:rotate(25deg)}36.16%{opacity:1;transform:rotate(0)}50.28%{opacity:1;transform:rotate(0)}52.77%{opacity:1;transform:rotate(25deg)}53.67%{opacity:0;transform:rotate(25deg)}100%{opacity:0;transform:rotate(25deg)}}
+.pour14{animation:pour14 8.85s linear infinite}@keyframes pour14{0%{opacity:0}35.14%{opacity:0}36.5%{opacity:1}50.28%{opacity:1}51.64%{opacity:0}100%{opacity:0}}
+.cap15{animation:cap15 8.85s linear infinite}@keyframes cap15{0%{opacity:0}31.41%{opacity:0}32.77%{opacity:1}52.54%{opacity:1}53.9%{opacity:0}100%{opacity:0}}
+.cap16{animation:cap16 8.85s linear infinite}@keyframes cap16{0%{opacity:0}61.58%{opacity:0}62.71%{opacity:1}93.22%{opacity:1}94.92%{opacity:0}100%{opacity:0}}
+.cheer17{animation:cheer17 8.85s linear infinite}@keyframes cheer17{0%{opacity:0}60.23%{opacity:0}61.58%{opacity:1}94.35%{opacity:1}95.71%{opacity:0}100%{opacity:0}}
+.howto-steps li.s1{animation:hs1 8.85s linear infinite}@keyframes hs1{0%{background-color:transparent}5.05%{background-color:transparent}5.65%{background-color:var(--step-hl)}32.2%{background-color:var(--step-hl)}32.8%{background-color:transparent}100%{background-color:transparent}}
+.howto-steps li.s2{animation:hs2 8.85s linear infinite}@keyframes hs2{0%{background-color:transparent}31.6%{background-color:transparent}32.2%{background-color:var(--step-hl)}53.67%{background-color:var(--step-hl)}54.27%{background-color:transparent}100%{background-color:transparent}}
+.howto-steps li.s3{animation:hs3 8.85s linear infinite}@keyframes hs3{0%{background-color:transparent}53.07%{background-color:transparent}53.67%{background-color:var(--step-hl)}68.36%{background-color:var(--step-hl)}68.96%{background-color:transparent}100%{background-color:transparent}}

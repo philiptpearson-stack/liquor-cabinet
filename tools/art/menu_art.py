@@ -1,0 +1,332 @@
+"""The Cocktail Menu: glasses, garnishes, bottles and ingredients.
+
+Glasses are drawn in their own coordinates with the foot at (0, 0) and up negative, like the characters.
+glass() draws one finished (full, iced, garnished) for heroes and door icons; the build scenes
+(menu_build.py) use the same pieces, split up so each can move.
+"""
+import math
+from art import *
+
+# ---------------------------------------------------------------- glasses
+# out: the crayon outline; back: the glass tint, behind the drink; inner: the inside (clip path);
+# bottom / top: where the drink sits (inside bottom, full line); rim: (y, half width)
+GLASS = {
+    'coupe': dict(
+        out='<path d="M-30 -68 Q0 -28 30 -68" stroke-width="2.4"/><path d="M-30 -68 Q0 -72 30 -68" stroke-width="1.6"/><path d="M0 -49 V-4 M-16 0 Q0 -6 16 0" stroke-width="2.4"/>',
+        back='<path d="M-30 -68 Q0 -28 30 -68Z" fill="#e7f1fb" opacity=".35"/>',
+        inner='M-28 -66 Q0 -32 28 -66Z', bottom=-49, top=-65, rim=(-68, 30),
+        foam='M-27.4 -65.5 Q0 -70 27.4 -65.5 L24.6 -59.5 Q0 -55.5 -24.6 -59.5Z'),
+    'martini': dict(
+        out='<path d="M-34 -80 L0 -44 L34 -80" stroke-width="2.4"/><path d="M-34 -80 Q0 -84 34 -80" stroke-width="1.6"/><path d="M0 -44 V-4 M-17 0 Q0 -6 17 0" stroke-width="2.4"/>',
+        back='<path d="M-34 -80 L0 -44 L34 -80Z" fill="#e7f1fb" opacity=".35"/>',
+        inner='M-31 -78 L0 -46.5 L31 -78Z', bottom=-47, top=-74, rim=(-80, 34)),
+    'rocks': dict(
+        out='<path d="M-32 -60 L32 -60 L29 0 L-29 0Z" stroke-width="2.4"/><path d="M-28.6 -8 H28.6" stroke-width="1.6"/><path d="M-25.6 -52 L-26.4 -16" stroke="#fffaf1" stroke-width="2.6"/>',
+        back='<path d="M-32 -60 L32 -60 L29 0 L-29 0Z" fill="#e7f1fb" opacity=".35"/>',
+        inner='M-30 -58 L30 -58 L28.6 -8 L-28.6 -8Z', bottom=-8, top=-40, rim=(-60, 32)),
+    'highball': dict(
+        out='<path d="M-22 -104 L22 -104 L20 0 L-20 0Z" stroke-width="2.4"/><path d="M-19.6 -7 H19.6" stroke-width="1.6"/><path d="M-16.4 -94 L-15.4 -20" stroke="#fffaf1" stroke-width="2.6"/>',
+        back='<path d="M-22 -104 L22 -104 L20 0 L-20 0Z" fill="#e7f1fb" opacity=".35"/>',
+        inner='M-20 -102 L20 -102 L18.4 -7 L-18.4 -7Z', bottom=-7, top=-92, rim=(-104, 22)),
+    'flute': dict(
+        out='<path d="M-12 -112 Q-14 -64 0 -46 Q14 -64 12 -112" stroke-width="2.2"/><path d="M-12 -112 Q0 -114 12 -112" stroke-width="1.4"/><path d="M0 -46 V-4 M-15 0 Q0 -5 15 0" stroke-width="2.2"/>',
+        back='<path d="M-12 -112 Q-14 -64 0 -46 Q14 -64 12 -112Z" fill="#e7f1fb" opacity=".35"/>',
+        inner='M-10.4 -110 Q-12.2 -64 0 -48.6 Q12.2 -64 10.4 -110Z', bottom=-49, top=-100, rim=(-112, 12)),
+}
+
+# ice, inside the glass: one big cube in a rocks glass, a stack in a highball
+ICE = {
+    'rocks': [(-14, -37, 28, 0)],
+    'highball': [(-17.5, -23, 15, -6), (1.5, -22.5, 15, 5), (-12, -39, 15, 8), (3, -38.5, 15, -4), (-16, -55, 15, 3), (1, -54, 15, -7), (-8, -71, 15, 6)],
+}
+
+
+def cube(x, y, w, rot=0, cls=''):
+    """An ice cube, top-left (x, y); see-through, so the drink shows."""
+    c = f' class="{cls}"' if cls else ''
+    r = f' transform="rotate({rot} {f(x + w / 2)} {f(y + w / 2)})"' if rot else ''
+    return (f'<g{c}><g{r}>' + wash(f'<rect x="{f(x)}" y="{f(y)}" width="{f(w)}" height="{f(w)}" rx="{f(w * .18)}" fill="#f4fbff" opacity=".5"/>')
+            + lines(f'<rect x="{f(x)}" y="{f(y)}" width="{f(w)}" height="{f(w)}" rx="{f(w * .18)}" stroke="#7fb8d6" stroke-width="1.5"/>'
+                    f'<path d="M{f(x + w * .22)} {f(y + w * .3)} h{f(w * .3)}" stroke="#fffaf1" stroke-width="2"/>', boil=False) + '</g></g>')
+
+
+def ice(kind):
+    return ''.join(cube(x, y, w, r) for x, y, w, r in ICE.get(kind, []))
+
+
+# ---------------------------------------------------------------- garnishes (each at its own (0, 0))
+CITRUS = {   # flesh, rind
+    'lemon': ('#f6e27a', '#e9c63a'), 'lime': ('#c9df7a', '#7f9a3c'), 'orange': ('#f6b25a', '#e8892c'), 'grapefruit': ('#f4a49a', '#e9845c'),
+}
+
+
+def wheel(fruit, r=8.5):
+    """A citrus wheel, standing on edge with a slit over the rim."""
+    flesh, rind = CITRUS[fruit]
+    seg = ' '.join(f'M0 0 L{f(r * .72 * math.cos(a * math.pi / 4))} {f(r * .72 * math.sin(a * math.pi / 4))}' for a in range(8))
+    return (wash(f'<circle r="{f(r)}" fill="{rind}"/><circle r="{f(r - 1.8)}" fill="{flesh}"/>')
+            + lines(f'<circle r="{f(r)}" stroke-width="1.7"/><path d="{seg}" stroke="{rind}" stroke-width=".9"/>', boil=False))
+
+
+def wedge(fruit):
+    """A wedge perched on the rim (flat side up, tilted)."""
+    flesh, rind = CITRUS[fruit]
+    d = 'M-10 0 A10 10 0 0 0 10 0Z'
+    return ('<g transform="rotate(-24)">' + wash(f'<path d="{d}" fill="{flesh}"/>')
+            + lines(f'<path d="M-10 0 A10 10 0 0 0 10 0" stroke="{rind}" stroke-width="3.4"/><path d="{d}" stroke-width="1.7"/>'
+                    f'<path d="M0 0 L-5 7 M0 0 L0 8.6 M0 0 L5 7" stroke="{rind}" stroke-width=".9"/>', boil=False) + '</g>')
+
+
+def twist(fruit):
+    """A long curl of peel hanging over the rim."""
+    rind = CITRUS[fruit][1]
+    d = 'M-3 -2 C4 -9 11 -4 9 3 C7 10 0 9 2 15 C3 19 8 20 10 18'
+    return (lines(f'<path d="{d}" stroke-width="6"/>', boil=False) + f'<path d="{d}" fill="none" stroke="{rind}" stroke-width="3.4" stroke-linecap="round"/>'
+            + f'<path d="M-1 -3 C4 -7 8 -4 8 0" fill="none" stroke="#fff3c8" stroke-width="1" stroke-linecap="round" opacity=".8"/>')
+
+
+def peel(fruit):
+    """A wide swath of peel, expressed and dropped in (leaning on the rim)."""
+    flesh, rind = CITRUS[fruit]
+    d = 'M-7 -12 Q5 -10 7 4 Q6 13 1 17 Q3 4 -7 -12Z'
+    return wash(f'<path d="{d}" fill="{rind}"/>') + lines(f'<path d="{d}" stroke-width="1.7"/><path d="M-3 -8 Q3 -4 3 6" stroke="{flesh}" stroke-width="1.2"/>', boil=False)
+
+
+def cherry(stem=True):
+    return (wash('<circle r="4.6" fill="#b3202a"/>') + lines('<circle r="4.6" stroke-width="1.7"/>'
+            + ('<path d="M1 -4.2 q2 -6 7 -9" stroke="#6b4228" stroke-width="1.7"/>' if stem else ''), boil=False)
+            + '<circle cx="-1.6" cy="-1.6" r="1.1" fill="#f6b8b8"/>')
+
+
+def olives():
+    """Two olives on a pick, leaning across the glass."""
+    o = lambda x, y: (wash(f'<ellipse cx="{x}" cy="{y}" rx="5" ry="4" fill="#8a9a3c"/>') + lines(f'<ellipse cx="{x}" cy="{y}" rx="5" ry="4" stroke-width="1.6"/>', boil=False)
+                      + f'<circle cx="{x + 2.6}" cy="{y}" r="1.4" fill="#c0392b"/>')
+    return (lines('<path d="M14 -20 L-14 22" stroke="#8a6a3c" stroke-width="2"/><circle cx="14.5" cy="-21" r="2.2" fill="#c0583c"/>', boil=False)
+            + '<g transform="rotate(-56)">' + o(-4, 0) + o(7, 0) + '</g>')
+
+
+def mint():
+    """A sprig of mint standing up out of the glass."""
+    leaf = lambda x, y, r, s=1: (f'<g transform="translate({x} {y}) rotate({r}) scale({s})">' + wash('<path d="M0 0 Q5 -6 0 -14 Q-5 -6 0 0Z" fill="#6fae4f"/>')
+                                 + lines('<path d="M0 0 Q5 -6 0 -14 Q-5 -6 0 0Z M0 -1 V-12" stroke-width="1.3"/>', boil=False) + '</g>')
+    return (lines('<path d="M0 8 Q1 -4 0 -16" stroke="#4f7a3a" stroke-width="2"/>', boil=False)
+            + leaf(0, -14, 0) + leaf(0, -9, -48, .9) + leaf(0, -8, 48, .9) + leaf(0, -2, -70, .8) + leaf(0, -1, 70, .8))
+
+
+def mint_leaf(x, y, r=0):
+    return (f'<g transform="translate({f(x)} {f(y)}) rotate({r})">' + wash('<path d="M0 0 Q4 -5 0 -11 Q-4 -5 0 0Z" fill="#6fae4f"/>')
+            + lines('<path d="M0 0 Q4 -5 0 -11 Q-4 -5 0 0Z" stroke-width="1.2"/>', boil=False) + '</g>')
+
+
+def flower():
+    """An edible flower, floating."""
+    petals = ''.join(f'<ellipse cx="0" cy="-5" rx="3.4" ry="5" transform="rotate({a * 72})"/>' for a in range(5))
+    return (wash(f'<g fill="#a77bd1">{petals}</g>') + lines(f'<g stroke-width="1.3">{petals}</g>', boil=False)
+            + '<circle r="2.2" fill="#f2c776" stroke="#5b2c4c" stroke-width="1"/>')
+
+
+def grapefruit_wedge():
+    return wedge('grapefruit')
+
+
+# where each garnish sits on each glass: (drawing, x, y, rotation)
+def garnish(kind, glass):
+    g = GLASS[glass]
+    ry, hw = g['rim']
+    if kind == 'cherry':
+        spot = {'coupe': (5, -69), 'martini': (4, -76), 'rocks': (9, -42), 'highball': (7, -95), 'flute': (0, -103)}[glass]
+        return at(*spot, cherry())
+    if kind == 'olives':
+        return at(6, ry + 18, olives())
+    if kind == 'mint':
+        return at(7, ry - 2, mint())
+    if kind == 'flower':
+        return at(-4, g['top'] - 2.5, flower(), 1.1)
+    if kind.endswith('-wheel'):
+        return at(hw - 5, ry - 1, wheel(kind.split('-')[0]))
+    if kind.endswith('-wedge'):
+        return at(hw - 3, ry - 1, wedge(kind.split('-')[0]))
+    if kind.endswith('-twist'):
+        return at(hw - 3, ry, twist(kind.split('-')[0]))
+    if kind.endswith('-peel'):
+        return at(hw - 8, ry + 6, peel(kind.split('-')[0]), 1, -8)
+    raise ValueError(kind)
+
+
+def garnishes(kinds, glass):
+    return ''.join(garnish(k, glass) for k in kinds)
+
+
+def at(x, y, inner, s=1.0, rot=0):
+    r = f' rotate({rot})' if rot else ''
+    sc = f' scale({f(s)})' if s != 1 else ''
+    return f'<g transform="translate({f(x)} {f(y)}){r}{sc}">{inner}</g>'
+
+
+# ---------------------------------------------------------------- bottles (feet at 0, 0), no brands: a word on a plain label
+SHAPES = {   # outline, height, label box (y, h)
+    'spirit': ('M-13 0 L-13 -38 Q-13 -46 -6 -50 L-5 -62 L5 -62 L6 -50 Q13 -46 13 -38 L13 0Z', 68, (-31, 15), 'M-5.5 -68 h11 v7 h-11Z'),
+    'tall': ('M-11 0 L-11 -46 Q-11 -53 -5 -56 L-4.5 -66 L4.5 -66 L5 -56 Q11 -53 11 -46 L11 0Z', 72, (-33, 15), 'M-5 -72 h10 v7 h-10Z'),
+    'wine': ('M-11 0 L-11 -36 Q-11 -48 -4 -54 L-4 -68 L4 -68 L4 -54 Q11 -48 11 -36 L11 0Z', 74, (-28, 15), 'M-4.6 -74 h9.2 v8 h-9.2Z'),
+    'liqueur': ('M-14 0 L-14 -28 Q-14 -37 -5 -40 L-4 -50 L4 -50 L5 -40 Q14 -37 14 -28 L14 0Z', 56, (-24, 14), 'M-5 -56 h10 v7 h-10Z'),
+    'soda': ('M-8.5 0 L-8.5 -30 Q-8.5 -36 -3.5 -40 L-3.5 -50 L3.5 -50 L3.5 -40 Q8.5 -36 8.5 -30 L8.5 0Z', 54, (-24, 13), 'M-4.4 -54 h8.8 v5 h-8.8Z'),
+}
+
+
+def bottle(shape, glass_color, word, cap='#7a5f4a', foil=False):
+    d, h, (ly, lh), capd = SHAPES[shape]
+    w = {'spirit': 22, 'tall': 19, 'wine': 19, 'liqueur': 24, 'soda': 14}[shape]
+    fs = 7 if len(word) <= 6 else (6 if len(word) <= 8 else 5.2)
+    if shape == 'soda':
+        fs = min(fs, 5.4)
+    fill = wash(f'<path d="{d}" fill="{glass_color}"/><rect x="{-w / 2:g}" y="{ly}" width="{w}" height="{lh}" rx="1.6" fill="#fbf3e3"/><path d="{capd}" fill="{cap}"/>'
+                + (f'<path d="M-4.6 -74 h9.2 l1 16 h-11.2Z" fill="#d9b44a"/>' if foil else ''))
+    line = lines(f'<path d="{d}" stroke-width="2"/><rect x="{-w / 2:g}" y="{ly}" width="{w}" height="{lh}" rx="1.6" stroke-width="1.5"/><path d="{capd}" stroke-width="1.5"/>'
+                 + ('<path d="M-4.6 -74 h9.2 l1 16 h-11.2Z" stroke-width="1.4"/>' if foil else ''), boil=False)
+    return fill + line + f'<text class="letter" x="0" y="{ly + lh / 2 + fs * .36:g}" font-size="{fs}" text-anchor="middle">{word}</text>'
+
+
+def bitters():
+    """A dasher bottle of bitters (no brand)."""
+    return (wash('<path d="M-9 -8 Q-9 -14 -4 -14 L-4 -20 L4 -20 L4 -14 Q9 -14 9 -8 L9 18 L-9 18Z" fill="#7d2f2a"/><rect x="-11" y="-2" width="22" height="14" rx="1.5" fill="#fbf3e3"/><rect x="-2.5" y="-25" width="5" height="5" fill="#c9c3b8"/>')
+            + lines('<path d="M-9 -8 Q-9 -14 -4 -14 L-4 -20 L4 -20 L4 -14 Q9 -14 9 -8 L9 18 L-9 18Z"/><rect x="-11" y="-2" width="22" height="14" rx="1.5" stroke-width="1.5"/><rect x="-2.5" y="-25" width="5" height="5" stroke-width="1.4"/>', boil=False, width=2)
+            + '<text class="letter" x="0" y="7.6" font-size="6.2" text-anchor="middle">bitters</text>')
+
+
+def jigger():
+    d = 'M-9 -16 L9 -16 L3 0 L9 16 L-9 16 L-3 0Z'
+    return wash(f'<path d="{d}" fill="#c9c3b8"/>') + lines(f'<path d="{d} M-3 0 H3" stroke-width="2"/>', boil=False)
+
+
+def fruit(kind, half=False):
+    """A whole citrus (or a half, cut side out), resting at (0, 0)."""
+    flesh, rind = CITRUS[kind]
+    r = {'lemon': 13, 'lime': 11, 'orange': 15, 'grapefruit': 17}[kind]
+    if half:
+        seg = ' '.join(f'M0 {-r} L{f(r * .74 * math.cos(a * math.pi / 4))} {f(-r + r * .74 * math.sin(a * math.pi / 4))}' for a in range(8))
+        return (wash(f'<circle cx="0" cy="{-r}" r="{r}" fill="{rind}"/><circle cx="0" cy="{-r}" r="{r - 2.4}" fill="{flesh}"/>')
+                + lines(f'<circle cx="0" cy="{-r}" r="{r}" stroke-width="2"/><path d="{seg}" stroke="{rind}" stroke-width="1"/>', boil=False))
+    rx = r * (1.25 if kind == 'lemon' else 1)
+    return (wash(f'<ellipse cx="0" cy="{-r}" rx="{f(rx)}" ry="{r}" fill="{rind}"/>' + (f'<path d="M{f(rx - 1)} {-r - 2} l5 -2 l-1 4Z" fill="{rind}"/>' if kind == 'lemon' else ''))
+            + lines(f'<ellipse cx="0" cy="{-r}" rx="{f(rx)}" ry="{r}" stroke-width="2"/><path d="M{f(-rx * .45)} {f(-r * 1.5)} q{f(rx * .3)} -3 {f(rx * .6)} -2" stroke="#fff6c8" stroke-width="2"/>'
+                    + (f'<path d="M{f(rx - 1)} {-r - 2} l5 -2 l-1 4" stroke-width="1.6"/>' if kind == 'lemon' else ''), boil=False))
+
+
+def mint_bunch():
+    return at(-8, 0, mint(), 1.3, -12) + at(8, 0, mint(), 1.2, 14)
+
+
+def honey_jar():
+    return (wash('<path d="M-13 0 Q-15 -14 -12 -26 L12 -26 Q15 -14 13 0Z" fill="#e9b949"/><rect x="-13" y="-33" width="26" height="7" rx="2" fill="#c98a3c"/><rect x="-9" y="-19" width="18" height="10" rx="1.5" fill="#fbf3e3"/>')
+            + lines('<path d="M-13 0 Q-15 -14 -12 -26 L12 -26 Q15 -14 13 0Z" stroke-width="2"/><rect x="-13" y="-33" width="26" height="7" rx="2" stroke-width="1.8"/><rect x="-9" y="-19" width="18" height="10" rx="1.5" stroke-width="1.4"/>', boil=False)
+            + '<text class="letter" x="0" y="-11.6" font-size="6.6" text-anchor="middle">honey</text>')
+
+
+def egg():
+    return (wash('<ellipse cx="0" cy="-12" rx="9.5" ry="12" fill="#f6ead2"/>') + lines('<ellipse cx="0" cy="-12" rx="9.5" ry="12" stroke-width="2"/><path d="M-4 -19 q2 -3 5 -3" stroke="#fffaf1" stroke-width="2"/>', boil=False))
+
+
+def syrup_jar(word, color):
+    """A small bottle of syrup or juice with a word on it."""
+    return bottle('soda', color, word, cap='#c25c86')
+
+
+def pear():
+    return (wash('<path d="M0 0 Q-15 0 -13 -14 Q-11 -22 -6 -26 Q-4 -36 0 -37 Q4 -36 6 -26 Q11 -22 13 -14 Q15 0 0 0Z" fill="#cfd96a"/>')
+            + lines('<path d="M0 0 Q-15 0 -13 -14 Q-11 -22 -6 -26 Q-4 -36 0 -37 Q4 -36 6 -26 Q11 -22 13 -14 Q15 0 0 0Z" stroke-width="2"/><path d="M0 -37 q1 -5 4 -7" stroke="#6b4228" stroke-width="2"/>', boil=False)
+            + wash('<path d="M4 -42 q7 -4 10 1 q-6 3 -10 -1Z" fill="#6fae4f"/>'))
+
+
+# ---------------------------------------------------------------- ingredients
+# key: caption (what the build scene says as it pours), how it goes in, the drink's color,
+#      and for bottles: (shape, glass color, the word on the label)
+ING = {
+    'bourbon':        ('bourbon', 'bottle', '#c9782c', ('spirit', '#c98a3c', 'bourbon')),
+    'rye':            ('rye', 'bottle', '#c47a30', ('spirit', '#c98a3c', 'rye')),
+    'whiskey':        ('whiskey', 'bottle', '#c9782c', ('spirit', '#c98a3c', 'whiskey')),
+    'scotch':         ('Scotch', 'bottle', '#d08a34', ('spirit', '#d49a48', 'scotch')),
+    'cognac':         ('cognac', 'bottle', '#b8621f', ('liqueur', '#b8621f', 'cognac')),
+    'gin':            ('gin', 'bottle', '#eef3f0', ('tall', '#cfe6df', 'gin')),
+    'white-rum':      ('white rum', 'bottle', '#f1ecd8', ('tall', '#e3eee6', 'rum')),
+    'dark-rum':       ('dark rum', 'bottle', '#5a2e14', ('spirit', '#6b3a1c', 'rum')),
+    'tequila':        ('tequila', 'bottle', '#f3efd9', ('tall', '#e3eedd', 'tequila')),
+    'applejack':      ('applejack', 'bottle', '#d39a4a', ('spirit', '#d8a256', 'apple')),
+    'sweet-vermouth': ('sweet vermouth', 'bottle', '#7a2a2a', ('wine', '#6b3326', 'vermouth')),
+    'dry-vermouth':   ('dry vermouth', 'bottle', '#f2ecc8', ('wine', '#a9c49a', 'dry')),
+    'campari':        ('Campari', 'bottle', '#c42f2f', ('tall', '#c42f2f', 'bitter')),
+    'orange-liqueur': ('orange liqueur', 'bottle', '#f3e2b0', ('liqueur', '#f0d79a', 'orange')),
+    'benedictine':    ('Bénédictine', 'bottle', '#d9a640', ('liqueur', '#8a5a2a', 'herbal')),
+    'cassis':         ('crème de cassis', 'bottle', '#5a1b3a', ('liqueur', '#4a1830', 'cassis')),
+    'violette':       ('crème de violette', 'bottle', '#8a64b4', ('liqueur', '#7d5aa6', 'violette')),
+    'lemon':          ('lemon', 'jigger', '#f1e58a', None),
+    'lime':           ('lime', 'jigger', '#cfe39a', None),
+    'simple':         ('simple syrup', 'jigger', '#f3e9c4', None),
+    'honey':          ('honey syrup', 'jigger', '#e9b949', None),
+    'grenadine':      ('grenadine', 'jigger', '#b3202a', None),
+    'pear':           ('pear nectar', 'jigger', '#e9df9f', None),
+    'angostura':      ('Angostura bitters', 'dash', '#5a1f1a', None),
+    'orange-bitters': ('orange bitters', 'dash', '#c8661e', None),
+    'peychauds':      ("Peychaud's bitters", 'dash', '#c0283a', None),
+    'egg':            ('egg white', 'egg', '#fffaf1', None),
+    'mint':           ('mint leaves', 'mint', '#6fae4f', None),
+    'salt':           ('a pinch of salt', 'salt', '#ffffff', None),
+    'ginger-beer':    ('ginger beer', 'bottle', '#e9d49a', ('soda', '#b9783c', 'ginger')),
+    'soda':           ('soda water', 'bottle', '#eaf6fb', ('soda', '#bfe0ea', 'soda')),
+    'grapefruit-soda': ('grapefruit soda', 'bottle', '#f6d9cf', ('soda', '#f2b8a6', 'grapefruit')),
+    'champagne':      ('Champagne', 'bottle', '#f3e6a6', ('wine', '#3f6b3a', 'bubbly')),
+}
+FIZZY = {'ginger-beer', 'soda', 'grapefruit-soda', 'champagne'}
+
+
+def ing_bottle(key):
+    shape, glass_color, word = ING[key][3]
+    return bottle(shape, glass_color, word, foil=(key == 'champagne'))
+
+
+def bottle_height(key):
+    return SHAPES[ING[key][3][0]][1]
+
+
+# ---------------------------------------------------------------- a finished drink, in one piece (heroes, icons)
+def glass(kind, uid, color, garnish_kinds=(), iced=False, foam=False, layers=None, bubbles=False, top=None, cls_bubble='bub'):
+    """A full glass with its foot at (0, 0). layers: [(from_frac, to_frac, color)] of the fill (0 = bottom, 1 = full line), drawn over color."""
+    g = GLASS[kind]
+    top = g['top'] if top is None else top
+    span = g['bottom'] - top
+    fill = f'<rect x="-40" y="{f(top)}" width="80" height="{f(span + 2)}" fill="{color}"/>'
+    for a, b, c in (layers or []):
+        fill += f'<rect x="-40" y="{f(g["bottom"] + 2 - (span + 2) * b)}" width="80" height="{f((span + 2) * (b - a))}" fill="{c}"/>'
+    bub = ''
+    if bubbles:
+        bub = bubbles_in(kind, top)
+    inside = f'<clipPath id="{uid}"><path d="{g["inner"]}"/></clipPath><g clip-path="url(#{uid})">{wash(fill)}{bub}{ice(kind) if iced else ""}</g>'
+    out = wash(g['back']) + inside
+    if foam and 'foam' in g:
+        out += foam_on(kind)
+    out += lines(g['out'], boil=False)
+    out += garnishes(garnish_kinds, kind)
+    return out
+
+
+def foam_on(kind):
+    g = GLASS[kind]
+    dots = ''.join(f'<circle cx="{x}" cy="{y}" r="1.2" fill="none" stroke="#d9c7a8" stroke-width=".9"/>' for x, y in ((-18, -63), (-9, -61), (2, -63.5), (11, -61.6), (19, -63.4)))
+    return f'<path d="{g["foam"]}" fill="#fff8e6" stroke="{INK}" stroke-width="1.5"/>' + dots
+
+
+def bubbles_in(kind, top, cls='bub'):
+    """Little bubbles rising through the drink (they loop on their own)."""
+    g = GLASS[kind]
+    hw = {'highball': 15, 'flute': 6, 'coupe': 16, 'rocks': 22, 'martini': 12}[kind]
+    out = ''
+    for i, (fx, fy) in enumerate(((-.7, .15), (.1, .55), (.6, .3), (-.3, .8), (.35, .9), (-.55, .45))):
+        x, y = fx * hw, max(g['bottom'] - (g['bottom'] - top) * fy * .6 - 3, top + 36)
+        out += f'<circle class="{cls} u{i % 3}" cx="{f(x)}" cy="{f(y)}" r="{1.3 if i % 2 else 1.7}" fill="#fffaf1" stroke="#c9b98a" stroke-width=".6"/>'
+    return out
+
+
+BUBBLE_CSS = ('.bub{animation:bub 2.4s linear infinite}.bub.u1{animation-delay:-.8s}.bub.u2{animation-delay:-1.6s}\n'
+              '@keyframes bub{0%{transform:translateY(0);opacity:0}15%{opacity:.9}85%{opacity:.9}100%{transform:translateY(-34px);opacity:0}}')
+TWINKLE_CSS = ('.twinkle{animation:twinkle 1.6s ease-in-out infinite}\n.twinkle.d2{animation-delay:-.55s}.twinkle.d3{animation-delay:-1.1s}\n'
+               '@keyframes twinkle{0%,100%{transform:scale(.55) rotate(0);opacity:.35}50%{transform:scale(1.15) rotate(20deg);opacity:1}}')

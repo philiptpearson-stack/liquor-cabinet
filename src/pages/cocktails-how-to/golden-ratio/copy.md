@@ -75,5 +75,4 @@ In an Old Fashioned, start with three to four good dashes, stir well, taste, and
 Bitter-bitter, stir-stir-stir makes a great drink!
 **Choose your own adventure with our interactive cocktail menu:**
 → The Cocktail Menu
-Coming soon
 ← Back to Cocktails How-To
