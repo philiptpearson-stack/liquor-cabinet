@@ -37,7 +37,7 @@ And now for my favorite part. Tasting the ingredients!
 **Not in the mood for a whiskey sour? Choose your own adventure with our interactive cocktail menu:**
 → The Cocktail Menu
 Coming soon
-Want Some Other Bourbon Suggestions to Try?
+Want Some Other Bourbon Suggestions?
 Maker's fans should try **W.L. Weller** or **Larceny** for another excellent wheated bourbon.
 Or, for a wonderful change of pace that keeps the sweeter, more nuanced balance: **Woodford Reserve Double Oaked**.
 Keep exploring
