@@ -13,9 +13,9 @@ Welcome to our little bar corner. Where we talk cocktails!
 Maker's Mark is great for cocktails.
 It's soft, sweet, and it plays nicely with other ingredients.
 And for the recipe I want to show you today, playing nicely with other ingredients is a must!
-Tonight, we're featuring Maker's Mark in a **Classic Whiskey Sour.**
+That's because we're featuring Maker's Mark in a **Classic Whiskey Sour.**
 This cocktail is fun because it uses what's called *The Golden Ratio* for building balanced drinks.
-Check out our Cocktails How-To page for more details on building the perfect mixed drinks right there in your kitchen, at home.
+*Check out our Cocktails How-To page for more details on building perfect mixed drinks right in your own kitchen, at home.*
 → Cocktails How-To
 Coming soon
 That means you start with a simple 2:1:1 ratio for your spirits, sweetener, and sour. Like so:
@@ -30,11 +30,11 @@ Makes − 1 + drink
 **Dry shake.** Shake hard, without ice, for about 15 seconds. That's what whips the egg white into foam.
 **Wet shake.** Add ice and shake again, until the shaker is frosty cold.
 **Serve up** (with a nice egg white foam). Strain into a chilled coupe, no ice.
-Now, for my favorite part. *tasting the ingredients!*
+And now for my favorite part. Tasting the ingredients!
 **Not in the mood for a whiskey sour? Choose your own adventure with our interactive cocktail menu:**
 → The Cocktail Menu
 Coming soon
-Want Some Suggestions of Other Bourbons to Try?
+Want Some Other Bourbon Suggestions to Try?
 Maker's fans should try **W.L. Weller** or **Larceny** for another excellent wheated bourbon.
 Or, for a wonderful change of pace that keeps the sweeter, more nuanced balance: **Woodford Reserve Double Oaked**.
 Keep exploring

@@ -75,12 +75,13 @@ def coupe(kind='sour'):
 
 
 def margarita():
-    """The sombrero glass: salt on the rim, pale lime, a lime wheel."""
-    out = 'M-26 -46 Q-21 -34 -8 -31 Q-11 -22 -3 -18 L-2 -2 M2 -2 L3 -18 Q11 -22 8 -31 Q21 -34 26 -46'
-    g = wash('<path d="M-24 -44 L24 -44 Q19 -35 8 -32.5 Q0 -31.5 -8 -32.5 Q-19 -35 -24 -44Z M-7 -30 Q0 -29 7 -30 Q8 -23 3 -20 L-3 -20 Q-8 -23 -7 -30Z" fill="#d6ea9a"/>')
-    g += lines(f'<path d="{out}" stroke-width="2"/><path d="M-26 -46 H26" stroke-width="1.4"/><path d="M-12 0 Q0 -5 12 0" stroke-width="2"/>', boil=False)
-    g += ''.join(f'<circle cx="{x}" cy="-46.6" r="1.3" fill="#fffaf1" stroke="#a9a29a" stroke-width=".7"/>' for x in range(-24, 25, 4))
-    g += wash('<circle cx="24" cy="-49" r="7" fill="#b9d36c"/>') + lines('<circle cx="24" cy="-49" r="7" stroke-width="1.6"/><path d="M24 -55 V-43 M18 -49 H30 M19.8 -53.2 L28.2 -44.8 M28.2 -53.2 L19.8 -44.8" stroke="#7f9a3c" stroke-width=".9"/>', boil=False)
+    """On the rocks: a rocks glass, a salted rim, pale lime, ice, a lime wheel."""
+    g = wash('<path d="M-18 -30 L18 -30 L16.4 0 L-16.4 0Z" fill="#e7f1fb" opacity=".6"/><path d="M-17.6 -24 L17.6 -24 L16.4 0 L-16.4 0Z" fill="#d6ea9a"/>'
+             '<rect x="-12" y="-26" width="12" height="11" rx="2" fill="#f4fbff" opacity=".75"/><rect x="2" y="-20" width="11" height="10" rx="2" fill="#f4fbff" opacity=".75"/>')
+    g += lines('<path d="M-18 -30 L18 -30 L16.4 0 L-16.4 0Z" stroke-width="2"/><rect x="-12" y="-26" width="12" height="11" rx="2" stroke="#8ecae6" stroke-width="1.2"/>'
+               '<rect x="2" y="-20" width="11" height="10" rx="2" stroke="#8ecae6" stroke-width="1.2"/>', boil=False)
+    g += ''.join(f'<circle cx="{x}" cy="-30.6" r="1.3" fill="#fffaf1" stroke="#a9a29a" stroke-width=".7"/>' for x in range(-17, 18, 4))
+    g += wash('<circle cx="17" cy="-33" r="7" fill="#b9d36c"/>') + lines('<circle cx="17" cy="-33" r="7" stroke-width="1.6"/><path d="M17 -39 V-27 M11 -33 H23 M12.8 -37.2 L21.2 -28.8 M21.2 -37.2 L12.8 -28.8" stroke="#7f9a3c" stroke-width=".9"/>', boil=False)
     return g
 
 
@@ -130,7 +131,7 @@ save('welcome', backbar + place(waving, 200, 206) + counter + on_bar,
 
 # ---------------------------------------------------------------- 2. "I don't drink while I'm working." ... one shot (12 s flipbook)
 X = 200
-bottle_on_bar = generic_bottle(262, COUNTER, .62, swap='makers-bottle-sm')
+bottle_on_bar = generic_bottle(262, COUNTER, .62, swap='makers-bottle-sm') + drink(coupe('sour'), 302, COUNTER, .8)   # the drink he just made
 
 
 def bubble(x0, y0, w, h, tail, text, size=12.5, cls='', first=None):
@@ -161,7 +162,7 @@ pour = makers_poured(176, 120)
 stream = lines('<path d="M175 121 q-2 6 -3 13" stroke="#c9782c" stroke-width="3"/>', boil=False)
 fill_shot = '<g class="shot-fill" style="transform-origin:172px 146px"><path d="M166.4 135 L177.6 135 L176.8 146 L167.2 146Z" fill="#c9782c" opacity=".9"/></g>'
 glug = '<text class="letter" x="132" y="96" font-size="15" text-anchor="middle">glug glug</text>'
-beat3 = (place(p3['left'] + p3['body'] + p3['head'], X, 206) + counter + shot_glass(172, COUNTER) + fill_shot
+beat3 = (place(p3['left'] + p3['body'] + p3['head'], X, 206) + counter + shot_glass(172, COUNTER) + fill_shot + drink(coupe('sour'), 302, COUNTER, .8)
          + place(p3['right'], X, 206) + pour + stream + glug)
 # beat 4: throw it back
 p4 = bartender(eyes='closed', mood='flat', head_tilt=-18, parts=True, arm_l=[(-23, -110), (-38, -122), (-15, -135)], arm_r=[(23, -110), (36, -86), (33, -60)])
@@ -177,7 +178,7 @@ whew = bubble(76, 28, 114, 40, (176, 82), ['Whew!', 'I needed that!'], 12.5, cls
 beat5 = (place(p5['left'] + p5['body'] + buzzing + p5['right'], X, 206) + counter + shot_glass(174, COUNTER, upside=True) + bottle_on_bar + stars + whew)
 BEATS = [(0, 22), (22, 40), (40, 60), (60, 72), (72, 100)]   # percent of 12 s
 save('shot', backbar + ''.join(f'<g class="b{k}">{b}</g>' for k, b in enumerate((beat1, beat2, beat3, beat4, beat5), 1)),
-     "Phil holds up his hands: Oh no, usually I don't drink while I'm working. Then a wink and a hand on the bottle: Well... just one couldn't hurt. "
+     "The whiskey sour is made and sitting on the bar. Phil holds up his hands: Oh no, usually I don't drink while I'm working. Then a wink and a hand on the bottle: Well... just one couldn't hurt. "
      "He pours a shot of Maker's Mark, throws it back, and grins with rosy cheeks and a little buzz: Whew! I needed that!",
      view=BAR_VIEW)
 sh = ['/* 2. "I don\'t drink while I\'m working" (12 s flipbook): no thanks, just one, pour, gulp, whew. Still frame: the whew. */',
@@ -215,7 +216,7 @@ cover_front = half('R', '<rect x="210" y="46" width="78" height="138" rx="3" fil
                    '<text class="letter" x="249" y="122" font-size="15" text-anchor="middle" style="fill:#f2c776">Menu</text>'
                    + sparkle(249, 146, 6), fill='#6b2f3a', cls='mf-cover')
 cover_in = half('L', '<text class="letter" x="151" y="110" font-size="12" text-anchor="middle" style="fill:#8a6a78">Cheers!</text>', cls='mf-cover-in')
-p1f = half('R', drink_page('Margarita', drink(margarita(), SP + 49, T + 100, 1.25), SP), cls='mf-p1')
+p1f = half('R', drink_page('Margarita', drink(margarita(), SP + 49, T + 98, 1.45), SP), cls='mf-p1')
 p1b = half('L', scribble(SP - 80, T + 30, 9), cls='mf-p1b')
 p2f = half('R', drink_page('Negroni', drink(negroni(), SP + 49, T + 98, 1.45), SP), cls='mf-p2')
 p2b = half('L', scribble(SP - 80, T + 30, 9), cls='mf-p2b')
