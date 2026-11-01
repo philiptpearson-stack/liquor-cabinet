@@ -10,7 +10,7 @@
 .hi-wave{animation:hi-wave 1.3s ease-in-out infinite alternate}
 @keyframes hi-wave{from{transform:rotate(-10deg)}to{transform:rotate(12deg)}}
 
-/* 2. "I don't drink while I'm working" (12 s flipbook): no thanks, just one, pour, gulp, whew. Still frame: the whew. */
+/* 2. "I don't drink while I'm working" (12 s flipbook): no thanks, just one, pour, gulp, Bazonga! Still frame: the party hat. */
 .b1,.b2,.b3,.b4{opacity:0}
 .b1,.b2,.b3,.b4,.b5{animation:12s step-end infinite}
 .b1{animation-name:b1}
@@ -39,7 +39,7 @@
 
 /* 3. The Cocktail Menu (8 s): the cover opens, three pages flip, it lands on the Whiskey Sour. Still frame: that spread. */
 .mf-book{animation:mf-book 8s linear infinite}
-@keyframes mf-book{0%{opacity:0}3%{opacity:1}93%{opacity:1}98%{opacity:0}100%{opacity:0}}
+@keyframes mf-book{0%{opacity:1}93%{opacity:1}97%{opacity:0}100%{opacity:0}}
 .mf-cover,.mf-p1,.mf-p2,.mf-p3,.mf-cover-in,.mf-p1b,.mf-p2b{opacity:0}
 .mf-cover{animation:mf-cover 8s linear infinite}
 @keyframes mf-cover{0%{transform:scaleX(1);opacity:1}12%{transform:scaleX(1);opacity:1}16%{transform:scaleX(0);opacity:1}16.1%{opacity:0}100%{opacity:0}}
@@ -63,7 +63,7 @@
 .ws-shaker,.ws-mm,.ws-mm-pour,.ws-jig1,.ws-jig2,.ws-pour1,.ws-pour2,.ws-lemon-tag,.ws-syrup-tag,.ws-egg,.ws-white,.ws-strain,.ws-strain-pour,.ws-cap{opacity:0}
 .ws-cap.c5{opacity:1}
 .ws-shaker{animation-name:ws-shaker}
-@keyframes ws-shaker{0%{opacity:0}1.7%{opacity:0}2%{opacity:1}76%{opacity:1}76.3%{opacity:0}100%{opacity:0}}
+@keyframes ws-shaker{0%{opacity:1}75.7%{opacity:1}76.2%{opacity:0}96%{opacity:0}99.5%{opacity:1}100%{opacity:1}}
 .ws-l1{animation-name:ws-l1}
 @keyframes ws-l1{0%{transform:scaleY(0)}7%{transform:scaleY(0)}14%{transform:scaleY(1)}100%{transform:scaleY(1)}}
 .ws-l2{animation-name:ws-l2}
@@ -103,8 +103,8 @@
 .ws-shake{animation-name:ws-shake}
 @keyframes ws-shake{0%{transform:rotate(0)}39.5%{transform:rotate(0deg)}40.75%{transform:rotate(16deg)}42%{transform:rotate(-16deg)}43.25%{transform:rotate(16deg)}44.5%{transform:rotate(-16deg)}45.75%{transform:rotate(16deg)}47%{transform:rotate(-16deg)}48.25%{transform:rotate(16deg)}49.5%{transform:rotate(-16deg)}50.75%{transform:rotate(16deg)}52%{transform:rotate(0deg)}65.5%{transform:rotate(0deg)}66.25%{transform:rotate(16deg)}67%{transform:rotate(-16deg)}67.75%{transform:rotate(16deg)}68.5%{transform:rotate(-16deg)}69.25%{transform:rotate(16deg)}70%{transform:rotate(-16deg)}70.75%{transform:rotate(16deg)}71.5%{transform:rotate(-16deg)}72.25%{transform:rotate(16deg)}73%{transform:rotate(0deg)}100%{transform:rotate(0)}}
 .ws-ice{animation-name:ws-ice}
-@keyframes ws-ice{0%{opacity:0;transform:translateY(-110px)}58.5%{opacity:0;transform:translateY(-110px)}59%{opacity:1;transform:translateY(-110px)}61.5%{opacity:1;transform:translateY(0)}100%{opacity:1;transform:translateY(0)}}
-.ws-ice.i1{animation-delay:-.1s}.ws-ice.i2{animation-delay:.12s}
+@keyframes ws-ice{0%{opacity:0;transform:translateY(-110px)}58.5%{opacity:0;transform:translateY(-110px)}59%{opacity:1;transform:translateY(-110px)}61.5%{opacity:1;transform:translateY(0)}95%{opacity:1;transform:translateY(0)}95.5%{opacity:0;transform:translateY(0)}100%{opacity:0;transform:translateY(-110px)}}
+.ws-ice.i1{animation-delay:-.1s}.ws-ice.i2{animation-delay:-11.88s}
 .ws-frost{animation-name:ws-frost}
 @keyframes ws-frost{0%{opacity:0}66.7%{opacity:0}67%{opacity:1}75%{opacity:1}75.3%{opacity:0}100%{opacity:0}}
 .ws-coupe{animation-name:ws-coupe}

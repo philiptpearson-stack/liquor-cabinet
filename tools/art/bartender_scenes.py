@@ -169,19 +169,19 @@ p4 = bartender(eyes='closed', mood='flat', head_tilt=-18, parts=True, arm_l=[(-2
 held = shot_glass(X - 10.5, 206 - 141, full=False, rot=150)
 gulp = '<text class="letter" x="246" y="62" font-size="16" text-anchor="middle">gulp!</text>' + lines('<path d="M226 70 l8 -4 M228 80 l9 0" stroke-width="2"/>', boil=False)
 beat4 = place(p4['body'] + p4['head'] + p4['right'], X, 206) + counter + bottle_on_bar + place(p4['left'], X, 206) + held + gulp
-# beat 5: slam it down, grin, a little buzz. "Whew! I needed that!"
-p5 = bartender(eyes='happy', mood='grin', parts=True, arm_l=[(-23, -110), (-36, -88), (-26, -62)], arm_r=[(23, -110), (36, -86), (33, -60)])
+# beat 5: slam it down, and suddenly he's in the Flat Bat party hat. "Bazonga! Party time!"
+p5 = bartender(eyes='happy', mood='grin', hat='bat', parts=True, arm_l=[(-23, -110), (-36, -88), (-26, -62)], arm_r=[(23, -110), (36, -86), (33, -60)])
 flush = '<ellipse cx="-9.5" cy="-131" rx="5.4" ry="3.2" fill="#e8737a" opacity=".55"/><ellipse cx="9.5" cy="-131" rx="5.4" ry="3.2" fill="#e8737a" opacity=".55"/>'
 buzzing = f'<g class="buzz" style="transform-origin:0 -118px">{p5["head"]}{flush}</g>'
 stars = (f'<g class="orbit" style="transform-origin:{X}px 66px">' + sparkle(X - 26, 50, 5) + sparkle(X + 28, 56, 4.4, fill='#f6c27a') + sparkle(X + 4, 36, 4) + '</g>')
-whew = bubble(76, 28, 114, 40, (176, 82), ['Whew!', 'I needed that!'], 12.5, cls='pop-in', first=15)
+whew = bubble(250, 22, 78, 42, (232, 72), ['Bazonga!', 'Party time!'], 12, cls='pop-in', first=14.5)   # on the right, clear of the bat's wings
 beat5 = (place(p5['left'] + p5['body'] + buzzing + p5['right'], X, 206) + counter + shot_glass(174, COUNTER, upside=True) + bottle_on_bar + stars + whew)
 BEATS = [(0, 22), (22, 40), (40, 60), (60, 72), (72, 100)]   # percent of 12 s
 save('shot', backbar + ''.join(f'<g class="b{k}">{b}</g>' for k, b in enumerate((beat1, beat2, beat3, beat4, beat5), 1)),
      "The whiskey sour is made and sitting on the bar. Phil holds up his hands: Oh no, usually I don't drink while I'm working. Then a wink and a hand on the bottle: Well... just one couldn't hurt. "
-     "He pours a shot of Maker's Mark, throws it back, and grins with rosy cheeks and a little buzz: Whew! I needed that!",
+     "He pours a shot of Maker's Mark, throws it back, and suddenly he's grinning in his Flat Bat party hat: Bazonga! Party time!",
      view=BAR_VIEW)
-sh = ['/* 2. "I don\'t drink while I\'m working" (12 s flipbook): no thanks, just one, pour, gulp, whew. Still frame: the whew. */',
+sh = ['/* 2. "I don\'t drink while I\'m working" (12 s flipbook): no thanks, just one, pour, gulp, Bazonga! Still frame: the party hat. */',
       '.b1,.b2,.b3,.b4{opacity:0}', '.b1,.b2,.b3,.b4,.b5{animation:12s step-end infinite}']
 for k, (a, b) in enumerate(BEATS, 1):
     sh += [f'.b{k}{{animation-name:b{k}}}', kf(f'b{k}', [(0, f'opacity:{1 if a == 0 else 0}')] + ([(a, 'opacity:1')] if a else []) + ([(b, 'opacity:0')] if b < 100 else []) + [(100, f'opacity:{1 if b == 100 else 0}')])]
@@ -239,7 +239,7 @@ fold = lambda name, a, b: kf(name, [(0, 'transform:scaleX(1);opacity:1'), (a, 't
 unfold = lambda name, a, b: kf(name, [(0, 'transform:scaleX(0);opacity:0'), (a - .1, 'transform:scaleX(0);opacity:0'), (a, 'transform:scaleX(0);opacity:1'), (b, 'transform:scaleX(1);opacity:1'), (100, 'transform:scaleX(1);opacity:1')])
 flips = [('mf-cover', 'mf-cover-in', 12), ('mf-p1', 'mf-p1b', 30), ('mf-p2', 'mf-p2b', 42), ('mf-p3', 'mf-p3b', 54)]
 mf = ['/* 3. The Cocktail Menu (8 s): the cover opens, three pages flip, it lands on the Whiskey Sour. Still frame: that spread. */',
-      '.mf-book{animation:mf-book 8s linear infinite}', kf('mf-book', [(0, 'opacity:0'), (3, 'opacity:1'), (93, 'opacity:1'), (98, 'opacity:0'), (100, 'opacity:0')]),
+      '.mf-book{animation:mf-book 8s linear infinite}', kf('mf-book', [(0, 'opacity:1'), (93, 'opacity:1'), (97, 'opacity:0'), (100, 'opacity:0')]),   # the closed menu is there from the first frame
       '.mf-cover,.mf-p1,.mf-p2,.mf-p3,.mf-cover-in,.mf-p1b,.mf-p2b{opacity:0}']
 for front, back, t in flips:
     mf += [f'.{front}{{animation:{front} 8s linear infinite}}', fold(front, t, t + 4), f'.{back}{{animation:{back} 8s linear infinite}}', unfold(back, t + 4, t + 8)]
@@ -314,7 +314,7 @@ ws = ['/* 4. The Whiskey Sour (12 s): combine, dry shake, wet shake, strain and 
       # the still frame: just the coupe, full, with its foam, and Cheers!
       '.ws-shaker,.ws-mm,.ws-mm-pour,.ws-jig1,.ws-jig2,.ws-pour1,.ws-pour2,.ws-lemon-tag,.ws-syrup-tag,.ws-egg,.ws-white,.ws-strain,.ws-strain-pour,.ws-cap{opacity:0}',
       '.ws-cap.c5{opacity:1}',
-      '.ws-shaker{animation-name:ws-shaker}', window('ws-shaker', 2, 76),
+      '.ws-shaker{animation-name:ws-shaker}', kf('ws-shaker', [(0, 'opacity:1'), (75.7, 'opacity:1'), (76.2, 'opacity:0'), (96, 'opacity:0'), (99.5, 'opacity:1'), (100, 'opacity:1')]),   # on screen from the first frame
       '.ws-l1{animation-name:ws-l1}', kf('ws-l1', [(0, 'transform:scaleY(0)'), (7, 'transform:scaleY(0)'), (14, 'transform:scaleY(1)'), (100, 'transform:scaleY(1)')]),
       '.ws-l2{animation-name:ws-l2}', kf('ws-l2', [(0, 'transform:scaleY(0)'), (16, 'transform:scaleY(0)'), (21, 'transform:scaleY(1)'), (100, 'transform:scaleY(1)')]),
       '.ws-l3{animation-name:ws-l3}', kf('ws-l3', [(0, 'transform:scaleY(0)'), (23, 'transform:scaleY(0)'), (27, 'transform:scaleY(1)'), (100, 'transform:scaleY(1)')]),
@@ -342,8 +342,8 @@ ws = ['/* 4. The Whiskey Sour (12 s): combine, dry shake, wet shake, strain and 
                                                     (76, 'opacity:1;transform:translateY(-120px)'), (76.5, 'opacity:0'), (100, 'opacity:0')]),
       '.ws-shake{animation-name:ws-shake}', kf('ws-shake', [(0, 'transform:rotate(0)')] + shake(39.5, 52) + shake(65.5, 73) + [(100, 'transform:rotate(0)')]),
       '.ws-ice{animation-name:ws-ice}', kf('ws-ice', [(0, 'opacity:0;transform:translateY(-110px)'), (58.5, 'opacity:0;transform:translateY(-110px)'), (59, 'opacity:1;transform:translateY(-110px)'),
-                                                    (61.5, 'opacity:1;transform:translateY(0)'), (100, 'opacity:1;transform:translateY(0)')]),
-      '.ws-ice.i1{animation-delay:-.1s}.ws-ice.i2{animation-delay:.12s}',
+                                                    (61.5, 'opacity:1;transform:translateY(0)'), (95, 'opacity:1;transform:translateY(0)'), (95.5, 'opacity:0;transform:translateY(0)'), (100, 'opacity:0;transform:translateY(-110px)')]),
+      '.ws-ice.i1{animation-delay:-.1s}.ws-ice.i2{animation-delay:-11.88s}',   # staggered, but never a cube in the empty glass
       '.ws-frost{animation-name:ws-frost}', window('ws-frost', 67, 75),
       '.ws-coupe{animation-name:ws-coupe}', window('ws-coupe', 76, 94, fade=1.5),
       '.ws-strain{animation-name:ws-strain}', window('ws-strain', 77, 87),
