@@ -22,7 +22,7 @@ The Golden Ratio is the formula behind most of the classics: two parts spirit, o
 The formula
 Spirit **2 oz**
 Sweet **1 oz**
-Sour **1 oz**
+Sour / Bitter **1 oz**
 Whiskey Sour
 whiskey
 simple syrup
