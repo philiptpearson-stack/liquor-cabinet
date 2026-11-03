@@ -57,6 +57,20 @@ spoon = lines('<path d="M0 0 L0 -84" stroke="#a9a29a" stroke-width="2.6"/>' + ''
               + '<circle cx="0" cy="-87" r="3.4" fill="#c9c3b8"/><ellipse cx="0" cy="2" rx="4" ry="2.4" fill="#c9c3b8"/>', boil=False, width=1.8)
 icons['howto-icon'] = (at(34, 110, wash(f'<path d="{tin}" fill="#c9c3b8"/>') + lines(f'<path d="{tin}" stroke-width="2"/><path d="M-10 -40 L-8 -6" stroke="#f4f4f2" stroke-width="2.6"/>', boil=False), 1.25)
                        + at(70, 92, jigger(), 1.3) + at(96, 112, spoon, 1, 10) + at(70, 30, wheel('lemon', 9)) + sparkle(22, 30, 5.5))
+# Dealer's Choice: a fanned hand of cards; the top one is the drink the bartender picked for you
+def card(face):
+    d = 'M-17 -50 h34 q4 0 4 4 v42 q0 4 -4 4 h-34 q-4 0 -4 -4 v-42 q0 -4 4 -4Z'
+    if face:
+        inner = (wash(f'<path d="{d}" fill="#fffaf1"/>') + lines(f'<path d="{d}" stroke-width="2"/>', boil=False)
+                 + at(0, -12, glass('coupe', 'bar-deal-ic', '#ddb064', ['cherry'], foam=True), .5)
+                 + '<text class="letter" x="-14" y="-38" font-size="9">?</text><text class="letter" x="14" y="-6" font-size="9" text-anchor="end">?</text>')
+    else:
+        inner = (wash(f'<path d="{d}" fill="#6b2f3a"/>') + lines(f'<path d="{d}" stroke-width="2"/><path d="M-13 -46 h26 v38 h-26Z" stroke="#e6b264" stroke-width="1.4"/>', boil=False)
+                 + sparkle(0, -27, 5, fill='#f2c776'))
+    return inner
+icons['deal-icon'] = (at(56, 110, card(False), 1.45, -22) + at(58, 110, card(False), 1.45, -8) + at(62, 110, card(True), 1.45, 9)
+                      + sparkle(100, 22, 6, 'twinkle') + sparkle(18, 40, 4.5, 'twinkle d2'))
+
 (D / 'cast.svg').write_text('    <!-- The Bar (front page): door icons -->\n' + ''.join(f'    <symbol id="{k}" viewBox="0 0 120 120">{v}</symbol>\n' for k, v in icons.items()))
 
 # the Maker's Mark door shows the bottle itself (a photo in the review build): story.html places it with <!--scene:makers-door-->

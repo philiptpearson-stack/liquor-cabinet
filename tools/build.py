@@ -161,6 +161,14 @@ def build_page(d: Path, template: str, kit: dict, home: str) -> list[str]:
     # href="@home" = the page the site opens on (src/site.json); href="@page:<slug>" = that page
     story = story.replace('href="@home"', 'href="' + posixpath.relpath(home + '/index.html', slug) + '"')
     story = re.sub(r'href="@page:([\w/-]+)"', lambda m: 'href="' + posixpath.relpath(m.group(1) + '/index.html', slug) + '"', story)
+    # href="@deal" = Dealer's Choice: kit.js picks one of the pages in src/site.json's "dealers_choice" list
+    # (never the page you're on, never one you were just dealt); with scripts off it goes to the first one
+    if 'href="@deal"' in story:
+        missing_deal = [p for p in kit['deal'] if not (PAGES / p / 'page.json').exists()]
+        if missing_deal:
+            problems.append(f'{slug}: Dealer\'s Choice lists pages that don\'t exist: {", ".join(missing_deal)}')
+        picks = [posixpath.relpath(p + '/index.html', slug) for p in kit['deal'] if p not in missing_deal]
+        story = story.replace('href="@deal"', f'href="{picks[0]}" data-deal="{" ".join(picks)}"')
     # the page's "Back to…" link also rides along in the sticky bar, so it's never a scroll away
     m = re.search(r'<p class="back"><a ([^>]*)>(.*?)</a></p>', story, flags=re.S)
     bar_back = ''
@@ -210,6 +218,7 @@ def main() -> int:
            'questions': (KIT / 'questions.html').read_text()}
     template = (KIT / 'page.html').read_text()
     site = json.loads((ROOT / 'src' / 'site.json').read_text())
+    kit['deal'] = site.get('dealers_choice', [])
     problems = []
     if page_words(kit['questions']) != approved_words((KIT / 'questions.md').read_text()):
         problems.append('kit: Common Spirits Questions words differ from src/kit/questions.md')

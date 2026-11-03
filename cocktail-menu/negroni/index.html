@@ -534,10 +534,25 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
     const seen = new Set(JSON.parse(localStorage.getItem(key) || '[]'));
     seen.add(clean(location.pathname));
     localStorage.setItem(key, JSON.stringify([...seen]));
-    document.querySelectorAll('a.door:not([href^="#"])').forEach(a => {
+    document.querySelectorAll('a.door:not([href^="#"]):not([data-deal])').forEach(a => {
       if (seen.has(clean(new URL(a.getAttribute('href'), location.href).pathname))) a.classList.add('visited');
     });
   } catch (e) {}
+
+  // Dealer's Choice: the bartender picks a page for you. Never the one you're on, and nothing you've
+  // already been dealt until you've seen them all.
+  document.querySelectorAll('a[data-deal]').forEach(a => a.addEventListener('click', e => {
+    try {
+      const all = a.dataset.deal.split(' '), at = h => new URL(h, location.href).pathname.replace(/index\.html$/, '');
+      const here = at(location.href), dealt = JSON.parse(sessionStorage.getItem('lc:dealt') || '[]');
+      let pool = all.filter(h => at(h) !== here && !dealt.includes(at(h)));
+      if (!pool.length) pool = all.filter(h => at(h) !== here);
+      const pick = pool[Math.floor(Math.random() * pool.length)];
+      sessionStorage.setItem('lc:dealt', JSON.stringify(dealt.concat(at(pick)).slice(-(all.length - 1))));
+      e.preventDefault();
+      location.href = pick;
+    } catch (err) {}
+  }));
 
   // Every page notes its own name for this visit, so a shared page's Back link can say where it goes.
   const cleanPath = p => p.replace(/index\.html$/, '');

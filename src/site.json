@@ -1,1 +1,31 @@
-{ "home": "bar" }
+{
+  "home": "bar",
+  "dealers_choice": [
+    "makers-mark",
+    "makers-mark/founders-gamble",
+    "makers-mark/margie",
+    "makers-mark/wsj",
+    "makers-mark/bartender",
+    "fermentation/prehistory",
+    "cocktails-how-to/golden-ratio",
+    "cocktail-menu/boulevardier",
+    "cocktail-menu/daiquiri",
+    "cocktail-menu/dark-and-stormy",
+    "cocktail-menu/el-diablo",
+    "cocktail-menu/french-75",
+    "cocktail-menu/gold-rush",
+    "cocktail-menu/mamie-taylor",
+    "cocktail-menu/manhattan",
+    "cocktail-menu/martini",
+    "cocktail-menu/negroni",
+    "cocktail-menu/old-fashioned",
+    "cocktail-menu/paloma",
+    "cocktail-menu/pink-lady",
+    "cocktail-menu/sidecar",
+    "cocktail-menu/southside-fizz",
+    "cocktail-menu/tom-collins",
+    "cocktail-menu/vieux-carre",
+    "cocktail-menu/violet-hour",
+    "cocktail-menu/whiskey-sour"
+  ]
+}
