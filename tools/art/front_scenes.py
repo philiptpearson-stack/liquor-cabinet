@@ -1,4 +1,4 @@
-"""The Bar, the app's front page: Phil waving from behind the bar, and the door icons.
+"""The Bar (the app's front page) and the Spirits List: Phil waving from behind the bar, the shelf, and the door icons.
 
     python3 tools/art/front_scenes.py
 """
@@ -10,7 +10,9 @@ from shelves import plain_bottle
 
 REPO = pathlib.Path('/home/claude/liquor-cabinet')
 D = REPO / 'src/pages/bar'
-(D / 'scenes').mkdir(parents=True, exist_ok=True)
+SL = REPO / 'src/pages/spirits-list'
+for _d in (D, SL):
+    (_d / 'scenes').mkdir(parents=True, exist_ok=True)
 
 # ---------------------------------------------------------------- the bar (the same bar as The Bartender's Perspective)
 COUNTER = 146
@@ -26,21 +28,26 @@ counter = ('<rect x="0" y="146" width="400" height="90" fill="#6e4b39"/>'
 # Phil, waving hello
 p = bartender(eyes='happy', mood='grin', parts=True, arm_l=[(-23, -110), (-36, -84), (-33, -58)], arm_r=[(23, -110), (40, -124), (43, -150)])
 phil = p['left'] + p['body'] + p['head'] + f'<g class="hi-wave" style="transform-origin:23px -110px">{p["right"]}</g>'
-# on the bar: Maker's Mark (the real bottle, in the review build) in a little pool of light, and three bottles still to come
-glow = wash(f'<ellipse cx="128" cy="{COUNTER - 22}" rx="26" ry="34" fill="#f6e3a8" opacity=".55"/>')
-makers = generic_bottle(128, COUNTER, .72, swap='makers-bottle-sm')
+# on the bar: the bottle and the bartender's tools. A cocktail and a shaker on one side, three bottles waiting to be asked about on the other
+tin_d = 'M-13 0 L-16 -46 L16 -46 L13 0Z'
+shaker = at(108, COUNTER, wash(f'<path d="{tin_d}" fill="#c9c3b8"/>') + lines(f'<path d="{tin_d}" stroke-width="2"/><path d="M-10 -40 L-8 -6" stroke="#f4f4f2" stroke-width="2.6"/>', boil=False), .78)
+sour = at(136, COUNTER, glass('coupe', 'bar-hero-sour', '#ddb064', ['cherry'], foam=True), .62)
 mystery = ''.join(at(x, COUNTER, bottle(shape, color, '?'), s) for x, shape, color, s in
                   ((262, 'tall', '#cfe6df', .62), (290, 'spirit', '#c98a3c', .6), (318, 'liqueur', '#b8621f', .64)))
 sp = sparkle(104, 92, 5.5, 'twinkle') + sparkle(156, 86, 4.5, 'twinkle d2') + sparkle(326, 44, 5, 'twinkle d3') + sparkle(88, 40, 4, 'twinkle d2')
-scene = svg_view(backbar + place(phil, 200, 206) + counter + glow + makers + mystery + sp,
-                 "Phil, the bartender, waves hello from behind his bar. On the bar: a bottle of Maker's Mark in a little pool of light, "
-                 'and three more bottles with question marks on their labels', '74 24 252 164')
+scene = svg_view(backbar + place(phil, 200, 206) + counter + shaker + sour + mystery + sp,
+                 "Phil, the bartender, waves hello from behind his bar. On the bar: a shaker and a whiskey sour on one side, "
+                 'and three bottles with question marks on their labels on the other', '74 24 252 164')
 (D / 'scenes' / 'bar.svg').write_text(scene + '\n')
 
 # ---------------------------------------------------------------- door icons (120 x 120)
 icons = {}
-icons['more-bottles-icon'] = (at(30, 108, bottle('tall', '#cfe6df', '?'), 1.15) + at(60, 112, bottle('spirit', '#c98a3c', '?'), 1.3)
-                              + at(92, 108, bottle('liqueur', '#b8621f', '?'), 1.15))
+shelf_icon = (lines('<path d="M8 100 H112 M8 106 H112" stroke="#6aa59a" stroke-width="2"/>', boil=False)
+              + at(24, 100, bottle('tall', '#cfe6df', '?'), .95) + at(48, 100, bottle('spirit', '#c98a3c', '?'), 1.0) + at(73, 100, bottle('wine', '#6b3326', '?'), .95)
+              + at(98, 100, bottle('liqueur', '#b8621f', '?'), .95) + sparkle(104, 18, 5.5) + sparkle(14, 30, 4))
+icons['spirits-icon'] = shelf_icon
+more_bottles = (at(30, 108, bottle('tall', '#cfe6df', '?'), 1.15) + at(60, 112, bottle('spirit', '#c98a3c', '?'), 1.3)
+                + at(92, 108, bottle('liqueur', '#b8621f', '?'), 1.15))
 phone = 'M-24 -50 Q-24 -56 -18 -56 L18 -56 Q24 -56 24 -50 L24 50 Q24 56 18 56 L-18 56 Q-24 56 -24 50Z'
 corners = 'M-14 -30 v-8 h8 M6 -38 h8 v8 M14 22 v8 h-8 M-6 30 h-8 v-8'
 icons['camera-icon'] = at(60, 60, wash(f'<path d="{phone}" fill="#3b2233"/><rect x="-19" y="-46" width="38" height="86" rx="3" fill="#cfe0dc"/>')
@@ -73,10 +80,23 @@ icons['deal-icon'] = (at(56, 110, card(False), 1.45, -22) + at(58, 110, card(Fal
 
 (D / 'cast.svg').write_text('    <!-- The Bar (front page): door icons -->\n' + ''.join(f'    <symbol id="{k}" viewBox="0 0 120 120">{v}</symbol>\n' for k, v in icons.items()))
 
+# ---------------------------------------------------------------- the Spirits List: the shelf, and a door per bottle
 # the Maker's Mark door shows the bottle itself (a photo in the review build): story.html places it with <!--scene:makers-door-->
 halo = wash('<ellipse cx="60" cy="74" rx="34" ry="42" fill="#f6e3a8" opacity=".6"/>')
-(D / 'scenes' / 'makers-door.svg').write_text(f'<svg class="door-icon" viewBox="0 0 120 120" aria-hidden="true">{halo}{generic_bottle(60, 114, 1.5, swap="makers-bottle-sm")}'
-                                              f'{sparkle(98, 30, 6)}{sparkle(22, 50, 4.5)}</svg>\n')
+(SL / 'scenes' / 'makers-door.svg').write_text(f'<svg class="door-icon" viewBox="0 0 120 120" aria-hidden="true">{halo}{generic_bottle(60, 114, 1.5, swap="makers-bottle-sm")}'
+                                               f'{sparkle(98, 30, 6)}{sparkle(22, 50, 4.5)}</svg>\n')
+(SL / 'cast.svg').write_text('    <!-- The Spirits List: door icons -->\n' + f'    <symbol id="more-bottles-icon" viewBox="0 0 120 120">{more_bottles}</symbol>\n')
+# the shelf: Maker's Mark in a little pool of light on the bar, the rest of the back bar still to be asked about
+glow = wash(f'<ellipse cx="200" cy="{COUNTER - 26}" rx="34" ry="44" fill="#f6e3a8" opacity=".6"/>')
+makers = generic_bottle(200, COUNTER, .95, swap='makers-bottle-sm')
+waiting = ''.join(at(x, COUNTER, bottle(shape, color, '?'), sc) for x, shape, color, sc in
+                  ((116, 'wine', '#6b3326', .7), (146, 'tall', '#cfe6df', .72), (254, 'spirit', '#c98a3c', .7), (286, 'liqueur', '#b8621f', .74)))
+shelf_sp = sparkle(166, 70, 5.5, 'twinkle') + sparkle(236, 62, 5, 'twinkle d2') + sparkle(228, 116, 4, 'twinkle d3')
+(SL / 'scenes' / 'shelf.svg').write_text(svg_view(backbar + counter + glow + makers + waiting + shelf_sp,
+                                                   "The back bar's shelves of bottles. On the bar in front, a bottle of Maker's Mark sits in a little pool of light, "
+                                                   'with four more bottles beside it, question marks on their labels', '84 24 232 150') + '\n')
+(SL / 'page.css').write_text('/* The Spirits List: scene motion. Written by tools/art/front_scenes.py; edit it there. */\n' + TWINKLE_CSS + '\n'
+                             '.flow .doors .door-icon{width:96px;height:96px}.flow .doors .door.wide .door-icon{width:96px;height:96px}\n')
 
 (D / 'page.css').write_text('/* The Bar (front page): scene motion. Written by tools/art/front_scenes.py; edit it there. */\n' + TWINKLE_CSS + '\n'
                             '.hi-wave{animation:hi-wave 1.3s ease-in-out infinite alternate}\n'
@@ -84,4 +104,4 @@ halo = wash('<ellipse cx="60" cy="74" rx="34" ry="42" fill="#f6e3a8" opacity=".6
                             '/* the front door: bigger pictures on the doors, like the Classics */\n'
                             '.flow .doors .door-icon{width:96px;height:96px}.flow .doors .door.wide .door-icon{width:96px;height:96px}\n'
                             '.flow .doors .door{min-height:10rem}\n')
-print('bar scenes written')
+print('bar and spirits list scenes written')

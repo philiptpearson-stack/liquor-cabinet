@@ -1,4 +1,4 @@
-"""Crayon art helpers for The Liquor Cabinet (house style: watercolor washes + plum crayon lines).
+"""Crayon art helpers for Bottle and the Bartender (house style: watercolor washes + plum crayon lines).
 
 Every drawing is plain SVG. Fills go through the kit's #wash filter, lines through #boil
 (characters, they "boil" like hand-drawn animation) or #crayon (props and scenery).

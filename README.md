@@ -1,4 +1,6 @@
-# The Liquor Cabinet
+# Bottle and the Bartender
+
+*(Called "The Liquor Cabinet" until Nov 3 2026; the repo and the Vercel address still use the old name.)*
 
 Little stories. Big spirits. A scroll-story app about what's in the bottle, drawn in a plum-crayon house style.
 

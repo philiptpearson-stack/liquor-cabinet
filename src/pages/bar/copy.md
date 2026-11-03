@@ -2,20 +2,17 @@
 
 # One line per line of text on the page, in order. Illustrations are not included.
 # The build refuses to publish the page if its words drift from this file.
-# Nov 3 2026: "Welcome to my bar" and "Ask me about a bottle" are Philip's (his front page idea, Oct 30).
-# CLAUDE'S DRAFT, waiting on Philip: "Or let's make a drink!", "More bottles", "Point your camera at a bottle" (his camera idea, Claude's words), "Can't decide?".
-# "Dealer's Choice" is Philip's (Nov 3): a door that takes you to a page picked for you (the list is "dealers_choice" in src/site.json).
+# Nov 3 2026: Philip's copy from chat, and the app's new name, Bottle and the Bartender (his, the same day).
+# Dealer's Choice: a door that deals you a page picked for you (the deck is "dealers_choice" in src/site.json).
 
-The Liquor ***Cabinet.***
+Bottle and the ***Bartender.***
+HI! I'm Phil.
 Welcome to my bar!
-Ask me about a bottle.
-Maker's Mark
-More bottles
-Coming soon
+I love when folks want to learn about spirits and cocktails. How can I help **YOU** today?
+Peek at the Spirits List
 Point your camera at a bottle
-Coming soon
-Or let's make a drink!
-The Cocktail Menu
-Cocktails How-To
-Can't decide?
+Coming soon!
+Check out the Cocktail Menu
+Cocktail Basics and How-To's
+*Just show me something FUN!*
 Dealer's Choice
