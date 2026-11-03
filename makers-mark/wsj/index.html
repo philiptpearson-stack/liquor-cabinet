@@ -576,6 +576,7 @@ h1 em{font-style:italic}
       if (!pool.length) pool = all.filter(h => at(h) !== here);
       const pick = pool[Math.floor(Math.random() * pool.length)];
       sessionStorage.setItem('lc:dealt', JSON.stringify(dealt.concat(at(pick)).slice(-(all.length - 1))));
+      sessionStorage.setItem('lc:fresh', new URL(pick, location.href).pathname);   // start the dealt page at the top, like any other link
       e.preventDefault();
       location.href = pick;
     } catch (err) {}
