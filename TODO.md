@@ -3,8 +3,8 @@
 Open items that aren't today's work but mustn't get lost. Newest at the bottom.
 
 ## When the app's title page exists
-- [ ] **Point the site's home at it.** Change `"home"` in `src/site.json` from `makers-mark` to the title page's folder. The site's front door follows, and so does every `href="@home"` link.
-- [x] **"← Back to the bottle" on shared hubs (Fermentation).** It now says where it actually goes ("Back to The Founder's Gamble", "Back to Maker's Mark"); each page notes its name for the visit (sessionStorage). Opened fresh, it still says "Back to the bottle" and goes to `@home`. When the title page becomes home, that fallback label will need changing. *(Philip, Oct 27 and 31 2026)*
+- [x] **Point the site's home at it.** Done Nov 3 2026: the front page is **The Bar** (`bar/`), and `src/site.json` points there, so the site's front door and every `href="@home"` link go to it. Maker's Mark has its own "← Back to The Bar" now.
+- [x] **"← Back to the bottle" on shared hubs (Fermentation).** It now says where it actually goes ("Back to The Founder's Gamble", "Back to Maker's Mark"); each page notes its name for the visit (sessionStorage). Opened fresh, it still says "Back to the bottle" and goes to `@home`. Now that The Bar is home, the fallback reads "← Back to The Bar". *(Philip, Oct 27 and 31 2026)*
 
 ## Pages waiting to be built (they show as "Coming soon" now)
 - [x] **Margie Samuels: One of Whiskey's Most Iconic Women** (Maker's Mark door): built Oct 27 2026
@@ -25,7 +25,7 @@ Open items that aren't today's work but mustn't get lost. Newest at the bottom.
   - **Genres still to come** (doors on Classics): Modern Variations, Arcane Oddities, Tiki & Tropical, Low & No-Proof, Warm & Cozy, Punches for a Crowd.
   - The Old Fashioned build in `tools/art/drafts/` is superseded by the menu's own; the Maker's page still makes its own Whiskey Sour.
 - [ ] **Cocktails How-To** (`cocktails-how-to/`): built Oct 31 2026 (Golden Ratio rewritten by Philip the same night; it now ends on the Cocktail Menu invitation) as a hub like Fermentation (a door per technique; the Short Version card lives on the Golden Ratio page). **The Golden Ratio** is drafted from Philip's notes and waiting on his edits; Philip rewrote the bitters advice and cut the Trinidad Sour; the Negroni and Boulevardier are 2:1:1. Still to come: Shake or Stir?, Simple Syrup in Two Minutes, All About Ice, Neat / Rocks / Up, The Tools You Actually Need. The Maker's bartender page's note links here.
-- [ ] **Front page idea:** "Welcome to my bar, ask me about a bottle." Not a shelf of every bottle (too many to draw); later, point the phone camera at a bottle and get its page.
+- [ ] **The Bar, the front page** (`bar/`): built Nov 3 2026 from Philip's idea, "Welcome to my bar, ask me about a bottle." Phil waves from behind the bar; doors for Maker's Mark, More bottles (soon), Point your camera at a bottle (soon), The Cocktail Menu and Cocktails How-To. Waiting on Philip: the lines Claude added. Later: point the phone camera at a bottle and get its page. Art in `tools/art/front_scenes.py`.
 
 ## Once more pages exist
 - [ ] **Pepper in rabbit-hole links.** Go back through the early pages (Maker's Mark and its three doors, Fermentation) and add links inside the story itself, wherever a line touches something that has its own page: wheated bourbon, what bourbon is, aging, the other bottles on the premium shelf, and so on. The links at the end stay; these would be extra. *(Philip, Oct 29 2026)*

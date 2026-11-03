@@ -265,7 +265,7 @@ def write_menu():
         '  <h2>More on the menu</h2>',
         '  <nav class="doors" aria-label="More on the menu">'] + soon + ['  </nav>', '',
         '  <nav class="end-doors" aria-label="Where next">',
-        '    <p class="back"><a href="@home" data-back>← Back to the bottle</a></p>',
+        '    <p class="back"><a href="@home" data-back>← Back to The Bar</a></p>',
         '  </nav>', '</div>', ''])
     (MENU / 'story.html').write_text(story)
     write_copy(MENU / 'copy.md', 'The Cocktail Menu (Classics)', story,

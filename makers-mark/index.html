@@ -377,7 +377,7 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
 </svg>
 <header class="bar">
   <div class="bar-inner">
-    <div class="mark"><b>The Liquor Cabinet</b><span>Maker&#x27;s Mark</span></div>
+    <a class="bar-back" href="../bar/index.html" aria-label="Back to The Bar" title="Back to The Bar"><span aria-hidden="true">←</span> Back</a><div class="mark"><b>The Liquor Cabinet</b><span>Maker&#x27;s Mark</span></div>
     <button class="motion" id="motion" type="button" aria-pressed="false" aria-label="Pause motion">Pause<span class="long"> motion</span></button>
   </div>
   <div class="progress" aria-hidden="true"><i id="fill"></i></div>
@@ -410,6 +410,10 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
     <a class="door" href="margie/index.html"><svg class="door-icon" aria-hidden="true"><use href="#margie-icon"/></svg><span class="door-label">Margie Samuels: One of Whiskey's Most Iconic Women</span></a>
     <a class="door" href="wsj/index.html"><svg class="door-icon" aria-hidden="true"><use href="#newspaper-icon"/></svg><span class="door-label">The Wall Street Journal Article that Changed <em>Everything</em></span></a>
     <a class="door wide" href="bartender/index.html"><svg class="door-icon" aria-hidden="true"><use href="#bartender-icon"/></svg><span class="door-text"><span class="door-label">The Bartender's Perspective</span></span></a>
+  </nav>
+
+  <nav class="end-doors" aria-label="Where next">
+    <p class="back"><a href="../bar/index.html">← Back to The Bar</a></p>
   </nav>
 
   <nav class="end-doors questions" aria-label="Common spirits questions">
