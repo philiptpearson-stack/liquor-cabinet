@@ -227,7 +227,7 @@ def write_drink(d):
     write_copy(folder / 'copy.md', f'The Cocktail Menu / {html.unescape(d["name"])}', story,
                d.get('copy_note', "Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps.") + ' Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.')
     (folder / 'page.json').write_text(json.dumps({
-        'title': f'{html.unescape(d["name"])} · The Cocktail Menu · Bottle and the Bartender',
+        'title': f'{html.unescape(d["name"])} · The Cocktail Menu · The Bottle and the Bartender',
         'description': f'How to make {a_an(html.unescape(d["name"]))}: the recipe, a step-by-step how-to, and a little history.',
         'label': f'The Cocktail Menu / {html.unescape(d["name"])}'}, indent=2, ensure_ascii=False) + '\n')
     (folder / 'page.css').write_text(f'/* The Cocktail Menu / {html.unescape(d["name"])}: scene motion. Written by tools/art/menu_pages.py; edit it there. */\n'
@@ -272,7 +272,7 @@ def write_menu():
                "Nov 3 2026: Philip's copy from chat: the intro, and the note (which now goes to Cocktails How-To; the Golden Ratio is one step of many). "
                "The drink list is Philip's (his Classics, Oct 31). Claude's, waiting on Philip: \"More on the menu\" and the genres still to come (working titles).")
     (MENU / 'page.json').write_text(json.dumps({
-        'title': 'Classics · The Cocktail Menu · Bottle and the Bartender',
+        'title': 'Classics · The Cocktail Menu · The Bottle and the Bartender',
         'description': 'The classic cocktails, each with its recipe and a step-by-step how-to.',
         'label': 'The Cocktail Menu / Classics'}, indent=2, ensure_ascii=False) + '\n')
     (MENU / 'page.css').write_text('/* The Cocktail Menu (Classics): scene motion. Written by tools/art/menu_pages.py; edit it there. */\n' + TWINKLE_CSS + '\n'

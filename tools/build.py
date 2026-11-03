@@ -209,8 +209,8 @@ def build_page(d: Path, template: str, kit: dict, home: str) -> list[str]:
 
 def redirect(target: str) -> str:
     return ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
-            f'<meta http-equiv="refresh" content="0; url={target}"><title>Bottle and the Bartender</title></head>'
-            f'<body><a href="{target}">Bottle and the Bartender</a></body></html>\n')
+            f'<meta http-equiv="refresh" content="0; url={target}"><title>The Bottle and the Bartender</title></head>'
+            f'<body><a href="{target}">The Bottle and the Bartender</a></body></html>\n')
 
 
 def main() -> int:

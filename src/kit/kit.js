@@ -1,4 +1,4 @@
-// Bottle and the Bartender: page extras. Everything here is optional polish.
+// The Bottle and the Bartender: page extras. Everything here is optional polish.
 // The pages animate on CSS alone; this file only adds the Pause button,
 // the reading bar, and pausing scenes while they're off screen.
 (() => {
