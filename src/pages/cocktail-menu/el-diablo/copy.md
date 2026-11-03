@@ -9,7 +9,7 @@ The Cocktail Menu: El ***Diablo.***
 A little devil.
 Trader Vic printed this one way back in 1946: tequila, lime and ginger, with a splash of blackcurrant liqueur.
 Pour the crème de cassis in last. It sinks to the bottom in a deep purple swirl.
-Here's how to make one:
+Here's how you make one:
 The Cocktail Menu · Classics
 El Diablo
 Makes − 1 + drink

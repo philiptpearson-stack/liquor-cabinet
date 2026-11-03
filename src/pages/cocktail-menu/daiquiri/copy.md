@@ -11,7 +11,7 @@ The real Daiquiri is named for a beach near Santiago, Cuba, and it's just three 
 Cold, bright and tart. Bartenders love it, because there's nowhere for a sloppy drink to hide.
 *It's The Golden Ratio at its simplest: two parts rum, one part simple syrup, one part lime.*
 → The Golden Ratio
-Here's how to make one:
+Here's how you make one:
 The Cocktail Menu · Classics
 Daiquiri
 Makes − 1 + drink

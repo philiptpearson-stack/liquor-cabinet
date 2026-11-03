@@ -11,7 +11,7 @@ Legend ties the Southside to Chicago's South Side during Prohibition. Nobody's p
 Gin, lime and fresh mint, shaken, then topped with soda water.
 *Under the bubbles, it's The Golden Ratio: two parts gin, one part simple syrup, one part lime.*
 → The Golden Ratio
-Here's how to make one:
+Here's how you make one:
 The Cocktail Menu · Classics
 Southside Fizz
 Makes − 1 + drink

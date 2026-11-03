@@ -51,19 +51,19 @@ def prop(spec):
         return at(0, -18 * 1.5, bitters(), 1.5), 'a bottle of bitters'
     if spec == 'pear':
         return at(0, 0, pear(), 1.4), 'a pear'
-    return at(0, 0, ing_bottle(spec), 1.3), f'a bottle of {ING[spec][0]}'
+    return at(0, 0, ing_bottle(spec), 1.55), f'a bottle of {ING[spec][0]}'
 
 
 def hero(d):
     left, right = d['hero']
     out = wash('<rect x="0" y="0" width="400" height="236" fill="#efe3d0"/>' + f'<ellipse cx="200" cy="118" rx="98" ry="86" fill="{d["color"]}" opacity=".32"/>'
-               + '<rect x="0" y="182" width="400" height="54" fill="#7a5340"/>') + lines('<path d="M0 182 H400"/>', boil=False)
+               ) + countertop(182)
     words = []
-    for spec, x in zip(left, (84, 124)[-len(left):]):
+    for spec, x in zip(left, (78, 126)[-len(left):]):
         p, w = prop(spec)
         out += f'<g transform="translate({x} 184)">{p}</g>'
         words.append(w)
-    for spec, x in zip(right, (276, 316)):
+    for spec, x in zip(right, (274, 322)):
         p, w = prop(spec)
         out += f'<g transform="translate({x} 184)">{p}</g>'
         words.append(w)
@@ -168,13 +168,13 @@ def h1_for(name):
 
 def drink_story(d):
     s = [h1_for(d['name']), '', '<div class="flow">', '  <figure class="fig" id="s-hero"><div class="sheet"><!--scene:hero--></div></figure>',
-         f'  <p class="punch">{d["punch"]}</p>']
+         ] + ([f'  <p class="punch">{d["punch"]}</p>'] if d.get('punch') else [])
     s += [f'  <p class="t">{t}</p>' for t in d['lines']]
     if d.get('gr'):
         s += ['  <aside class="note">', f'    <p><em>{d["gr"]}</em></p>', '    <p class="go"><a href="@page:cocktails-how-to/golden-ratio">→ The Golden Ratio</a></p>', '  </aside>']
     if d.get('formula'):
         s += [f'  <p class="t">{d["formula"]}</p>']
-    s += ["  <p class=\"t\">Here's how to make one:</p>",
+    s += ["  <p class=\"t\">Here's how you make one:</p>",
           f'  <section class="recipe-card" aria-label="Recipe: {d["name"]}">',
           '    <p class="rc-kicker">The Cocktail Menu · Classics</p>',
           f'    <p class="rc-name">{d["name"]}</p>',
@@ -225,7 +225,7 @@ def write_drink(d):
     story = drink_story(d)
     (folder / 'story.html').write_text(story)
     write_copy(folder / 'copy.md', f'The Cocktail Menu / {html.unescape(d["name"])}', story,
-               "Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.")
+               d.get('copy_note', "Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps.") + ' Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.')
     (folder / 'page.json').write_text(json.dumps({
         'title': f'{html.unescape(d["name"])} · The Cocktail Menu · The Liquor Cabinet',
         'description': f'How to make {a_an(html.unescape(d["name"]))}: the recipe, a step-by-step how-to, and a little history.',
@@ -254,12 +254,12 @@ def write_menu():
         '<h1><small class="h1-lead">The Cocktail Menu:</small> <span>Classics.</span></h1>', '',
         '<div class="flow">',
         '  <figure class="fig" id="s-classics"><div class="sheet"><!--scene:classics--></div></figure>',
-        "  <p class=\"punch\">What'll it be tonight?</p>",
-        '  <p class="t">These are the classics: the drinks every good bartender knows by heart.</p>',
-        '  <p class="t">Tap one for the recipe, and a step-by-step how-to.</p>',
+        "  <p class=\"punch\">What'll it be?</p>",
+        '  <p class="t">These are the Classics: drinks every bartender should know by heart.</p>',
+        '  <p class="t">Tap any drink for its recipe, and a step-by-step how-to that will impress even your most discerning cocktail-drinking friends.</p>',
         '  <aside class="note">',
         '    <p><em>New to mixing drinks? Lots of these classics are built on one simple formula.</em></p>',
-        '    <p class="go"><a href="@page:cocktails-how-to/golden-ratio">→ The Golden Ratio</a></p>',
+        '    <p class="go"><a href="@page:cocktails-how-to">→ Cocktails How-To</a></p>',
         '  </aside>', '',
         '  <nav class="doors" aria-label="The Classics">'] + doors + ['  </nav>', '',
         '  <h2>More on the menu</h2>',
@@ -269,7 +269,8 @@ def write_menu():
         '  </nav>', '</div>', ''])
     (MENU / 'story.html').write_text(story)
     write_copy(MENU / 'copy.md', 'The Cocktail Menu (Classics)', story,
-               "Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip. The drink list is Philip's (his Classics, Oct 31); the genres still to come are working titles.")
+               "Nov 3 2026: Philip's copy from chat: the intro, and the note (which now goes to Cocktails How-To; the Golden Ratio is one step of many). "
+               "The drink list is Philip's (his Classics, Oct 31). Claude's, waiting on Philip: \"More on the menu\" and the genres still to come (working titles).")
     (MENU / 'page.json').write_text(json.dumps({
         'title': 'Classics · The Cocktail Menu · The Liquor Cabinet',
         'description': 'The classic cocktails, each with its recipe and a step-by-step how-to.',

@@ -233,16 +233,20 @@ class Build:
         cheer = f'<g class="{ch}">{sparkle(rx - 40, ry + 4, 6, "twinkle")}{sparkle(rx + 40, ry - 4, 5.5, "twinkle d2")}{sparkle(rx + 34, BAR - 40, 4.5, "twinkle d3")}</g>'
         self.window(ch, gt + .7, self.T - .5)
         always = sparkle(330, 30, 4, 'twinkle d2') + sparkle(116, 186, 3.6, 'twinkle d3')
-        bg = (wash('<rect x="0" y="0" width="400" height="236" fill="#f3e6d4"/><rect x="0" y="196" width="400" height="40" fill="#7a5340"/>')
-              + lines('<path d="M0 196 H400"/>', boil=False))
+        mat = (146, 334) if self.uses_mix else (int(self.gx - 52), int(self.gx + 52))
+        bg = wash('<rect x="0" y="0" width="400" height="236" fill="#f3e6d4"/>') + countertop(196, mat)
         inner = bg + always + mix_svg + glass_svg + ''.join(actors) + cheer + ''.join(captions)
         return svg_view(inner, d['build_alt'], VIEW)
 
     # ------------------------------------------------------------ the mixing glass, its layers, ice, tin
     def mixing_glass(self, acts, mix_t):
+        """The mixing glass: layers as they pour, a glass FULL of ice (best practice), the level rising as the
+        ice melts into the drink (a good drink is about 30% water), then it tips over the glass and pours
+        through its strainer."""
         d = self.d
         strain = next(a for a in acts if a[2] == 'strain')
-        st0 = strain[-2]
+        st0, st1 = strain[-2], strain[-1]
+        gone = st1 - .1                       # after the pour, the mixing glass steps away
         shaken = any(a[2] in ('shake', 'dry') for a in acts)
         layers, y = '', MBOT + 1
         for a in acts:
@@ -257,13 +261,23 @@ class Build:
             self.emit(c, [(0, {'opacity': 1, 'transform': 'scaleY(0)'}), (on, {'transform': 'scaleY(0)'}), (off, {'transform': 'scaleY(1)'}),
                           (mix_t, {'opacity': 1}), (mix_t + .2, {'opacity': 0})], base=None)
             y -= h
-        vol = (MBOT + 1 - y) * 1.15
+        # dilution: the drink rises by about a third as the ice melts, during the stir (or the shake with ice)
+        DIL = 1.35
+        h0 = MBOT + 1 - y
+        H = h0 * DIL
+        dil = [a for a in acts if a[1] == 'mix' and a[2] in ('stir', 'shake')]
+        d0, d1 = (dil[-1][-2] + .6, dil[-1][-1] - .5) if dil else (mix_t, mix_t + .1)
         mc = self.cls('mixed')
-        foam = ''
-        if d.get('foam'):
-            foam = f'<rect x="158" y="{f(MBOT + 1 - vol - 12)}" width="64" height="12.5" fill="#fffaf1"/>'
-        mixed = f'<g class="{mc}"><rect x="158" y="{f(MBOT + 1 - vol)}" width="64" height="{f(vol)}" fill="{d.get("base", d["color"])}"/>{foam}</g>'
-        self.emit(mc, [(0, {'opacity': 0}), (mix_t, {'opacity': 0}), (mix_t + .2, {'opacity': 1}), (st0 + .1, {'opacity': 1}), (st0 + .15, {'opacity': 0})], base=None)
+        mixed = f'<g class="{mc}" style="transform-origin:190px {f(MBOT + 1)}px"><rect x="158" y="{f(MBOT + 1 - H)}" width="64" height="{f(H)}" fill="{d.get("base", d["color"])}"/></g>'
+        sq = f'scaleY({h0 / H:.3f})'
+        self.emit(mc, [(0, {'opacity': 0, 'transform': sq}), (mix_t, {'opacity': 0}), (mix_t + .2, {'opacity': 1}), (d0, {'transform': sq}), (d1, {'transform': 'scaleY(1)'}),
+                       (st0 + .6, {'transform': 'scaleY(1)'}), (st1 - .35, {'transform': 'scaleY(.12)'}), (gone, {'opacity': 1}), (gone + .05, {'opacity': 0})], base=None)
+        if d.get('foam'):   # egg white whipped up on top, riding up with the level
+            fc = self.cls('mfoam')
+            mixed += f'<g class="{fc}"><rect x="158" y="{f(MBOT + 1 - H - 12)}" width="64" height="12.5" fill="#fffaf1"/></g>'
+            lift = f'translateY({H - h0:.1f}px)'
+            self.emit(fc, [(0, {'opacity': 0, 'transform': lift}), (mix_t, {'opacity': 0}), (mix_t + .2, {'opacity': 1}), (d0, {'transform': lift}), (d1, {'transform': 'translateY(0)'}),
+                           (st0 + .6, {'opacity': 1}), (st1 - .35, {'opacity': 0})], base=None)
         # mint, muddled in with the rest
         mint_svg = ''
         for a in acts:
@@ -273,21 +287,35 @@ class Build:
                     mint_svg += f'<g class="{c}">{mint_leaf(x, yy, r)}</g>'
                     t0 = a[-2] + .15 + k * .14
                     self.emit(c, [(0, {'opacity': 0, 'transform': 'translateY(-120px)'}), (t0, {'opacity': 0, 'transform': 'translateY(-120px)'}), (t0 + .05, {'opacity': 1}),
-                                  (t0 + .5, {'transform': 'translateY(0)'}), (st0 + .1, {'opacity': 1}), (st0 + .15, {'opacity': 0})], base=None)
-        # ice in the mixing glass
+                                  (t0 + .5, {'transform': 'translateY(0)'}), (gone, {'opacity': 1}), (gone + .05, {'opacity': 0})], base=None)
+        # ice: fill the mixing glass to the top, so the drink chills and dilutes properly
         ice_svg = ''
+        CUBES = [(169, 171), (186, 172), (200, 170), (167, 154), (184, 155), (201, 153), (170, 137), (187, 138), (202, 136),
+                 (166, 120), (183, 121), (199, 119), (176, 104), (194, 103)]
         for a in acts:
             if a[2] == 'ice' and a[1] == 'mix':
-                for k, (x, yy) in enumerate(((170, 150), (186, 160), (198, 146))):
+                for k, (x, yy) in enumerate(CUBES):
                     c = self.cls('mice')
-                    ice_svg += (f'<g class="{c}"><rect x="{x}" y="{yy}" width="17" height="17" rx="3" fill="#eef8ff" opacity=".85" stroke="#8ecae6" stroke-width="1.6"/></g>')
-                    t0 = a[-2] + .1 + k * .14
-                    self.emit(c, [(0, {'opacity': 0, 'transform': 'translateY(-110px)'}), (t0, {'opacity': 0, 'transform': 'translateY(-110px)'}), (t0 + .05, {'opacity': 1}),
-                                  (t0 + .4, {'transform': 'translateY(0)'}), (st0 + .1, {'opacity': 1}), (st0 + .15, {'opacity': 0})], base=None)
+                    ice_svg += (f'<g class="{c}" style="transform-origin:{x + 8.5}px {yy + 8.5}px"><rect x="{x}" y="{yy}" width="17" height="17" rx="3" fill="#eef8ff" opacity=".6" stroke="#8ecae6" stroke-width="1.6"/>'
+                                f'<path d="M{x + 4} {yy + 5} h5" stroke="#fffaf1" stroke-width="1.8" stroke-linecap="round"/></g>')
+                    t0 = a[-2] + .05 + k * .05
+                    self.emit(c, [(0, {'opacity': 0, 'transform': 'translateY(-110px) scale(1)'}), (t0, {'opacity': 0, 'transform': 'translateY(-110px) scale(1)'}), (t0 + .05, {'opacity': 1}),
+                                  (t0 + .35, {'transform': 'translateY(0px) scale(1)'}), (d0, {'transform': 'translateY(0px) scale(1)'}), (d1, {'transform': 'translateY(0px) scale(.8)'}),
+                                  (gone, {'opacity': 1}), (gone + .05, {'opacity': 0})], base=None)
         clip = f'{self.slug}-mx'
+        # the strainer that holds the ice back as it pours: a julep strainer for stirred drinks, a Hawthorne for shaken
+        if shaken:
+            strainer = lines('<path d="M160 96 H220" stroke="#a9a29a" stroke-width="3.4"/><path d="M162 100' + ' q3 3.4 6 0' * 10 + '" stroke="#8a8f96" stroke-width="1.5"/>'
+                             '<path d="M160 96 L136 88" stroke="#a9a29a" stroke-width="3.4"/>', boil=False)
+        else:
+            strainer = lines('<path d="M162 98 Q190 111 218 98" stroke="#a9a29a" stroke-width="3.4"/><path d="M162 98 L134 84" stroke="#a9a29a" stroke-width="3"/>'
+                             + ''.join(f'<circle cx="{x}" cy="{f(98 + 6.5 * (1 - ((x - 190) / 28) ** 2) - 1)}" r=".9" fill="#8a8f96"/>' for x in range(170, 214, 7)), boil=False)
+        stc = self.cls('strainer')
+        self.window(stc, st0 + .05, gone - .05)
         glass = (wash(f'<path d="{G_MIX}" fill="#e7f1fb" opacity=".35"/>') + f'<clipPath id="{clip}"><path d="{G_MIX_IN}"/></clipPath>'
                  + f'<g clip-path="url(#{clip})"><g filter="url(#wash)">{layers}{mixed}</g>{mint_svg}{ice_svg}</g>'
-                 + lines(f'<path d="{G_MIX}" stroke-width="2.4"/><path d="M166 189 H214" stroke-width="1.6"/><path d="M167 106 L164 160" stroke="#fffaf1" stroke-width="3"/>', boil=False))
+                 + lines(f'<path d="{G_MIX}" stroke-width="2.4"/><path d="M166 189 H214" stroke-width="1.6"/><path d="M167 106 L164 160" stroke="#fffaf1" stroke-width="3"/>', boil=False)
+                 + f'<g class="{stc}">{strainer}</g>')
         # the tin: down for each shake, then back up
         tin_svg, shake_states, tin_states = '', [(0, {'transform': 'rotate(0)'})], [(0, {'opacity': 0, 'transform': 'translateY(-120px)'})]
         frost = ''
@@ -310,9 +338,16 @@ class Build:
             self.emit(tc, tin_states)
         sc = self.cls('shk')
         self.emit(sc, shake_states + [(self.T, {'transform': 'rotate(0)'})], base=None)
+        # the pour: the mixing glass itself lifts and tips over the glass (its lip lands just above the rim)
+        gx, gy, _ = self.target('glass')
+        self.lip = (gx - 14, gy - 20)
+        dx, dy = self.lip[0] - 220, self.lip[1] - 96
+        tip = self.cls('tip')
+        rest, poured = 'translate(0px,0px) rotate(0deg)', f'translate({dx:.1f}px,{dy:.1f}px) rotate(68deg)'
+        self.emit(tip, [(0, {'transform': rest}), (st0 + .05, {'transform': rest}), (st0 + .55, {'transform': poured}), (gone + .1, {'transform': poured}), (gone + .2, {'transform': rest})], base=None)
         wrap = self.cls('mix')
-        self.emit(wrap, [(0, {'opacity': 1}), (st0, {'opacity': 1}), (st0 + .12, {'opacity': 0}), (self.T - .75, {'opacity': 0}), (self.T - .3, {'opacity': 1})])
-        return f'<g class="{wrap}"><g class="{sc}" style="transform-origin:190px 116px">{glass}{tin_svg}</g></g>'
+        self.emit(wrap, [(0, {'opacity': 1}), (gone - .1, {'opacity': 1}), (gone + .05, {'opacity': 0}), (self.T - .75, {'opacity': 0}), (self.T - .3, {'opacity': 1})])
+        return f'<g class="{wrap}"><g class="{tip}" style="transform-origin:220px 96px"><g class="{sc}" style="transform-origin:190px 116px">{glass}{tin_svg}</g></g></g>'
 
     # ------------------------------------------------------------ one action's moving parts
     def actor(self, a):
@@ -410,22 +445,13 @@ class Build:
                 st.append((t0 + .2 + (t1 - t0 - .45) * i / n, {'transform': f'rotate({0 if i in (0, n) else (7 if i % 2 else -7)}deg)'}))
             self.emit(c, st, base=None)
             return body
-        if kind == 'strain':
+        if kind == 'strain':   # the mixing glass tips (see mixing_glass); this is its pour
             gx, gy, gby = self.target('glass')
-            sx, sy = gx - 16, gy - 24
-            stirred = not any(x[2] in ('shake', 'dry') for x in self.acts)
-            vessel = ('M-30 -14 L30 -10 L30 10 L-30 14Z')
-            fill = '#c9c3b8' if not stirred else '#e7f1fb'
-            tip = (wash(f'<path d="{vessel}" fill="{fill}" opacity="{1 if not stirred else .8}"/>') + lines(f'<path d="{vessel}" stroke-width="2.2"/><path d="M30 -10 Q36 0 30 10" stroke="#8a8f96" stroke-width="2"/>'
-                   '<path d="M31 -7 q3 2 0 4 q3 2 0 4 q3 2 0 4" stroke="#8a8f96" stroke-width="1.4"/>', boil=False))
-            if stirred:   # the mixing glass, with the drink still in it
-                tip = wash(f'<path d="M-30 -12 L30 -9 L30 9 L-30 12Z" fill="{self.d.get("base", self.d["color"])}" opacity=".85"/>') + tip
-            c, sc = self.cls('strn'), self.cls('pour')
-            body = f'<g class="{c}"><g transform="translate({f(sx - 29.1)} {f(sy - 15.5)}) rotate(28)">{tip}</g></g>'
-            self.window(c, t0 + .1, t1 - .2)
-            stream = lines(f'<path d="M{f(sx)} {f(sy + 2)} Q{f(sx + 10)} {f(sy + 14)} {f(gx - 1)} {f(gby - 6)}" stroke="{self.d.get("base", self.d["color"])}" stroke-width="3.4"/>', boil=False, extra=f' class="{sc}"')
-            self.window(sc, t0 + .45, t1 - .35)
-            return body + stream
+            lx, ly = self.lip
+            sc = self.cls('pour')
+            stream = lines(f'<path d="M{f(lx + 1)} {f(ly + 2)} Q{f(lx + 8)} {f(ly + 16)} {f(gx - 1)} {f(gby - 6)}" stroke="{self.d.get("base", self.d["color"])}" stroke-width="3.4"/>', boil=False, extra=f' class="{sc}"')
+            self.window(sc, t0 + .55, t1 - .4)
+            return stream
         return ''
 
     def caption(self, a):

@@ -11,7 +11,7 @@ As the story goes, around 1919 in Florence, Count Camillo Negroni asked his bart
 It's an acquired taste. Once you've acquired it, there's no going back.
 *It's The Golden Ratio, with bitter in place of sour: two parts gin, one part sweet vermouth, one part Campari.*
 → The Golden Ratio
-Here's how to make one:
+Here's how you make one:
 The Cocktail Menu · Classics
 Negroni
 Makes − 1 + drink
@@ -20,7 +20,7 @@ Makes − 1 + drink
 1 oz Campari
 **Glass:** rocks, over one big ice cube · **Garnish:** orange peel
 **Combine ingredients.** Add the gin, sweet vermouth and Campari to a mixing glass.
-**Stir.** Fill with ice and stir for about 20 seconds, until very cold.
+**Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)
 **Strain over a big cube.** Strain into a rocks glass over one large ice cube.
 **Garnish.** Twist an orange peel over the drink, then drop it in.
 Keep exploring

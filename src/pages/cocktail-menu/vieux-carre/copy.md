@@ -10,7 +10,7 @@ New Orleans, stirred.
 *Vieux Carré* means old square: the old name for New Orleans' French Quarter. Walter Bergeron created this drink there in the 1930s, at the Hotel Monteleone.
 Rye, cognac, sweet vermouth, a little Bénédictine and two kinds of bitters. Rich, spicy and smooth.
 Think of it as a Manhattan with two spirits: two parts spirit (rye and cognac), one part sweet vermouth.
-Here's how to make one:
+Here's how you make one:
 The Cocktail Menu · Classics
 Vieux Carré
 Makes − 1 + drink
@@ -22,7 +22,7 @@ Makes − 1 + drink
 2 dashes Angostura bitters
 **Glass:** rocks, over one big ice cube · **Garnish:** lemon twist
 **Combine ingredients.** Add everything to a mixing glass.
-**Stir.** Fill with ice and stir for about 20 seconds, until very cold.
+**Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)
 **Strain over a big cube.** Strain into a rocks glass over one large ice cube.
 **Garnish.** A lemon twist.
 Keep exploring

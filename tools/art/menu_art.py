@@ -165,26 +165,42 @@ def at(x, y, inner, s=1.0, rot=0):
 
 
 # ---------------------------------------------------------------- bottles (feet at 0, 0), no brands: a word on a plain label
-SHAPES = {   # outline, height, label box (y, h)
-    'spirit': ('M-13 0 L-13 -38 Q-13 -46 -6 -50 L-5 -62 L5 -62 L6 -50 Q13 -46 13 -38 L13 0Z', 68, (-31, 15), 'M-5.5 -68 h11 v7 h-11Z'),
-    'tall': ('M-11 0 L-11 -46 Q-11 -53 -5 -56 L-4.5 -66 L4.5 -66 L5 -56 Q11 -53 11 -46 L11 0Z', 72, (-33, 15), 'M-5 -72 h10 v7 h-10Z'),
-    'wine': ('M-11 0 L-11 -36 Q-11 -48 -4 -54 L-4 -68 L4 -68 L4 -54 Q11 -48 11 -36 L11 0Z', 74, (-28, 15), 'M-4.6 -74 h9.2 v8 h-9.2Z'),
-    'liqueur': ('M-14 0 L-14 -28 Q-14 -37 -5 -40 L-4 -50 L4 -50 L5 -40 Q14 -37 14 -28 L14 0Z', 56, (-24, 14), 'M-5 -56 h10 v7 h-10Z'),
-    'soda': ('M-8.5 0 L-8.5 -30 Q-8.5 -36 -3.5 -40 L-3.5 -50 L3.5 -50 L3.5 -40 Q8.5 -36 8.5 -30 L8.5 0Z', 54, (-24, 13), 'M-4.4 -54 h8.8 v5 h-8.8Z'),
+SHAPES = {   # outline, height, label box (y, h), cap; bodies wide enough for a label you can read
+    'spirit': ('M-14 0 L-14 -38 Q-14 -46 -6.5 -50 L-5 -62 L5 -62 L6.5 -50 Q14 -46 14 -38 L14 0Z', 68, (-33, 19), 'M-5.5 -68 h11 v7 h-11Z'),
+    'tall': ('M-12 0 L-12 -46 Q-12 -53 -5 -56 L-4.5 -66 L4.5 -66 L5 -56 Q12 -53 12 -46 L12 0Z', 72, (-36, 19), 'M-5 -72 h10 v7 h-10Z'),
+    'wine': ('M-13 0 L-13 -36 Q-13 -48 -4.5 -54 L-4 -68 L4 -68 L4.5 -54 Q13 -48 13 -36 L13 0Z', 74, (-32, 19), 'M-4.6 -74 h9.2 v8 h-9.2Z'),
+    'liqueur': ('M-15 0 L-15 -28 Q-15 -37 -5 -40 L-4 -50 L4 -50 L5 -40 Q15 -37 15 -28 L15 0Z', 56, (-27, 18), 'M-5 -56 h10 v7 h-10Z'),
+    'soda': ('M-9.5 0 L-9.5 -30 Q-9.5 -36 -3.5 -40 L-3.5 -50 L3.5 -50 L3.5 -40 Q9.5 -36 9.5 -30 L9.5 0Z', 54, (-27, 17), 'M-4.4 -54 h8.8 v5 h-8.8Z'),
 }
+LABEL_W = {'spirit': 25, 'tall': 21, 'wine': 23, 'liqueur': 27, 'soda': 17}
+
+
+def label_text(words, w, ly, lh):
+    """The words on a label, one or two lines, squeezed to fit if the hand font runs long."""
+    parts = words.split(' ')
+    if len(parts) == 1:
+        rows = [words]
+    else:   # two lines, as even as the words allow
+        cut = min(range(1, len(parts)), key=lambda i: abs(len(' '.join(parts[:i])) - len(' '.join(parts[i:]))))
+        rows = [' '.join(parts[:cut]), ' '.join(parts[cut:])]
+    fs = 7.6 if len(rows) == 1 else 6.8
+    avail = w - 3
+    out = ''
+    for i, row in enumerate(rows):
+        y = ly + lh / 2 + fs * .36 + (i - (len(rows) - 1) / 2) * fs * 1.02
+        fit = f' textLength="{avail:g}" lengthAdjust="spacingAndGlyphs"' if len(row) * fs * .5 > avail else ''
+        out += f'<text class="letter" x="0" y="{y:.1f}" font-size="{fs}" text-anchor="middle"{fit}>{row}</text>'
+    return out
 
 
 def bottle(shape, glass_color, word, cap='#7a5f4a', foil=False):
     d, h, (ly, lh), capd = SHAPES[shape]
-    w = {'spirit': 22, 'tall': 19, 'wine': 19, 'liqueur': 24, 'soda': 14}[shape]
-    fs = 7 if len(word) <= 6 else (6 if len(word) <= 8 else 5.2)
-    if shape == 'soda':
-        fs = min(fs, 5.4)
+    w = LABEL_W[shape]
     fill = wash(f'<path d="{d}" fill="{glass_color}"/><rect x="{-w / 2:g}" y="{ly}" width="{w}" height="{lh}" rx="1.6" fill="#fbf3e3"/><path d="{capd}" fill="{cap}"/>'
                 + (f'<path d="M-4.6 -74 h9.2 l1 16 h-11.2Z" fill="#d9b44a"/>' if foil else ''))
     line = lines(f'<path d="{d}" stroke-width="2"/><rect x="{-w / 2:g}" y="{ly}" width="{w}" height="{lh}" rx="1.6" stroke-width="1.5"/><path d="{capd}" stroke-width="1.5"/>'
                  + ('<path d="M-4.6 -74 h9.2 l1 16 h-11.2Z" stroke-width="1.4"/>' if foil else ''), boil=False)
-    return fill + line + f'<text class="letter" x="0" y="{ly + lh / 2 + fs * .36:g}" font-size="{fs}" text-anchor="middle">{word}</text>'
+    return fill + line + label_text(word, w, ly, lh)
 
 
 def bitters():
@@ -245,20 +261,20 @@ ING = {
     'bourbon':        ('bourbon', 'bottle', '#c9782c', ('spirit', '#c98a3c', 'bourbon')),
     'rye':            ('rye', 'bottle', '#c47a30', ('spirit', '#c98a3c', 'rye')),
     'whiskey':        ('whiskey', 'bottle', '#c9782c', ('spirit', '#c98a3c', 'whiskey')),
-    'scotch':         ('Scotch', 'bottle', '#d08a34', ('spirit', '#d49a48', 'scotch')),
+    'scotch':         ('Scotch', 'bottle', '#d08a34', ('spirit', '#d49a48', 'Scotch')),
     'cognac':         ('cognac', 'bottle', '#b8621f', ('liqueur', '#b8621f', 'cognac')),
     'gin':            ('gin', 'bottle', '#eef3f0', ('tall', '#cfe6df', 'gin')),
-    'white-rum':      ('white rum', 'bottle', '#f1ecd8', ('tall', '#e3eee6', 'rum')),
-    'dark-rum':       ('dark rum', 'bottle', '#5a2e14', ('spirit', '#6b3a1c', 'rum')),
+    'white-rum':      ('white rum', 'bottle', '#f1ecd8', ('tall', '#e3eee6', 'white rum')),
+    'dark-rum':       ('dark rum', 'bottle', '#5a2e14', ('spirit', '#6b3a1c', 'dark rum')),
     'tequila':        ('tequila', 'bottle', '#f3efd9', ('tall', '#e3eedd', 'tequila')),
-    'applejack':      ('applejack', 'bottle', '#d39a4a', ('spirit', '#d8a256', 'apple')),
-    'sweet-vermouth': ('sweet vermouth', 'bottle', '#7a2a2a', ('wine', '#6b3326', 'vermouth')),
-    'dry-vermouth':   ('dry vermouth', 'bottle', '#f2ecc8', ('wine', '#a9c49a', 'dry')),
-    'campari':        ('Campari', 'bottle', '#c42f2f', ('tall', '#c42f2f', 'bitter')),
-    'orange-liqueur': ('orange liqueur', 'bottle', '#f3e2b0', ('liqueur', '#f0d79a', 'orange')),
-    'benedictine':    ('Bénédictine', 'bottle', '#d9a640', ('liqueur', '#8a5a2a', 'herbal')),
-    'cassis':         ('crème de cassis', 'bottle', '#5a1b3a', ('liqueur', '#4a1830', 'cassis')),
-    'violette':       ('crème de violette', 'bottle', '#8a64b4', ('liqueur', '#7d5aa6', 'violette')),
+    'applejack':      ('applejack', 'bottle', '#d39a4a', ('spirit', '#d8a256', 'applejack')),
+    'sweet-vermouth': ('sweet vermouth', 'bottle', '#7a2a2a', ('wine', '#6b3326', 'sweet vermouth')),
+    'dry-vermouth':   ('dry vermouth', 'bottle', '#f2ecc8', ('wine', '#a9c49a', 'dry vermouth')),
+    'campari':        ('Campari', 'bottle', '#c42f2f', ('tall', '#c42f2f', 'Campari')),
+    'orange-liqueur': ('orange liqueur', 'bottle', '#f3e2b0', ('liqueur', '#f0d79a', 'orange liqueur')),
+    'benedictine':    ('Bénédictine', 'bottle', '#d9a640', ('liqueur', '#8a5a2a', 'Bénédictine')),
+    'cassis':         ('crème de cassis', 'bottle', '#5a1b3a', ('liqueur', '#4a1830', 'crème de cassis')),
+    'violette':       ('crème de violette', 'bottle', '#8a64b4', ('liqueur', '#7d5aa6', 'crème de violette')),
     'lemon':          ('lemon', 'jigger', '#f1e58a', None),
     'lime':           ('lime', 'jigger', '#cfe39a', None),
     'simple':         ('simple syrup', 'jigger', '#f3e9c4', None),
@@ -271,10 +287,10 @@ ING = {
     'egg':            ('egg white', 'egg', '#fffaf1', None),
     'mint':           ('mint leaves', 'mint', '#6fae4f', None),
     'salt':           ('a pinch of salt', 'salt', '#ffffff', None),
-    'ginger-beer':    ('ginger beer', 'bottle', '#e9d49a', ('soda', '#b9783c', 'ginger')),
-    'soda':           ('soda water', 'bottle', '#eaf6fb', ('soda', '#bfe0ea', 'soda')),
-    'grapefruit-soda': ('grapefruit soda', 'bottle', '#f6d9cf', ('soda', '#f2b8a6', 'grapefruit')),
-    'champagne':      ('Champagne', 'bottle', '#f3e6a6', ('wine', '#3f6b3a', 'bubbly')),
+    'ginger-beer':    ('ginger beer', 'bottle', '#e9d49a', ('soda', '#b9783c', 'ginger beer')),
+    'soda':           ('soda water', 'bottle', '#eaf6fb', ('soda', '#bfe0ea', 'soda water')),
+    'grapefruit-soda': ('grapefruit soda', 'bottle', '#f6d9cf', ('soda', '#f2b8a6', 'grapefruit soda')),
+    'champagne':      ('Champagne', 'bottle', '#f3e6a6', ('wine', '#3f6b3a', 'Champagne')),
 }
 FIZZY = {'ginger-beer', 'soda', 'grapefruit-soda', 'champagne'}
 
@@ -323,6 +339,20 @@ def bubbles_in(kind, top, cls='bub'):
     for i, (fx, fy) in enumerate(((-.7, .15), (.1, .55), (.6, .3), (-.3, .8), (.35, .9), (-.55, .45))):
         x, y = fx * hw, max(g['bottom'] - (g['bottom'] - top) * fy * .6 - 3, top + 36)
         out += f'<circle class="{cls} u{i % 3}" cx="{f(x)}" cy="{f(y)}" r="{1.3 if i % 2 else 1.7}" fill="#fffaf1" stroke="#c9b98a" stroke-width=".6"/>'
+    return out
+
+
+def countertop(y, mat=None):
+    """The bar top from y down: a wood counter with a darker front edge; mat=(x0, x1) puts a rubber bar mat on it."""
+    out = (f'<rect x="0" y="{y}" width="400" height="{236 - y}" fill="#6e4b39"/>'
+           + wash(f'<rect x="0" y="{y}" width="400" height="9" fill="#9a6b4c"/><rect x="0" y="{y + 9}" width="400" height="{227 - y}" fill="#6b4634"/>')
+           + lines(f'<path d="M0 {y} H400 M0 {y + 9} H400"/>' + ''.join(f'<path d="M{x} {y + 9} V236" stroke-width="1.6"/>' for x in (64, 168, 262, 352))
+                   + ''.join(f'<path d="M{x0} {y + 3.5} h{w}" stroke="#7d5640" stroke-width="1.2"/>' for x0, w in ((22, 38), (120, 54), (230, 30), (300, 46))), boil=False, width=2.2))
+    if mat:
+        x0, x1 = mat
+        out += (f'<rect x="{x0}" y="{y - 4}" width="{x1 - x0}" height="8" rx="3" fill="#33403b"/>'
+                + ''.join(f'<path d="M{x} {y - 2.4} v4.6" stroke="#55675f" stroke-width="1.6" stroke-linecap="round"/>' for x in range(x0 + 5, x1 - 3, 6))
+                + lines(f'<rect x="{x0}" y="{y - 4}" width="{x1 - x0}" height="8" rx="3" stroke-width="1.8"/>', boil=False))
     return out
 
 

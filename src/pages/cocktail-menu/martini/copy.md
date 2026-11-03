@@ -9,7 +9,7 @@ The Cocktail Menu: ***Martini.***
 Cold. Crisp. Clean.
 Nobody agrees on who invented the Martini. Everybody agrees on how it should taste: bone dry and ice cold.
 Stir it, don't shake it. Stirring keeps it crystal clear and silky.
-Here's how to make one:
+Here's how you make one:
 The Cocktail Menu · Classics
 Martini
 Makes − 1 + drink
@@ -18,7 +18,7 @@ Makes − 1 + drink
 1 dash orange bitters (optional)
 **Glass:** martini glass · **Garnish:** olives or a lemon twist
 **Combine ingredients.** Add the gin, dry vermouth and bitters to a mixing glass.
-**Stir.** Fill with ice and stir for 20 to 30 seconds, until ice cold.
+**Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)
 **Serve up.** Strain into a chilled martini glass.
 **Garnish.** Olives on a pick, or a lemon twist.
 Like it drier? Use less vermouth. Like it dirty? Add a splash of olive brine.

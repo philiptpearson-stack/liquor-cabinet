@@ -10,7 +10,7 @@ The king of stirred whiskey drinks.
 Born in New York in the 1800s, the Manhattan is whiskey, sweet vermouth and bitters, stirred cold and silky.
 Rye gives it a spicy backbone. Bourbon makes it rounder. Both are right.
 The formula: two parts whiskey, one part sweet vermouth, two dashes of bitters.
-Here's how to make one:
+Here's how you make one:
 The Cocktail Menu · Classics
 Manhattan
 Makes − 1 + drink
@@ -19,7 +19,7 @@ Makes − 1 + drink
 2 dashes Angostura bitters
 **Glass:** coupe · **Garnish:** cherry
 **Combine ingredients.** Add the whiskey, sweet vermouth and bitters to a mixing glass.
-**Stir.** Fill with ice and stir for about 20 seconds, until very cold.
+**Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)
 **Serve up.** Strain into a chilled coupe, no ice.
 **Garnish.** A cherry.
 Keep exploring

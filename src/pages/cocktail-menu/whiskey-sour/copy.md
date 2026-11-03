@@ -11,7 +11,7 @@ The Whiskey Sour was already in print in 1862, in the very first American barten
 Bourbon, lemon and sugar, with an optional egg white for a silky foam on top.
 *It's The Golden Ratio, the classic way: two parts bourbon, one part simple syrup, one part lemon.*
 → The Golden Ratio
-Here's how to make one:
+Here's how you make one:
 The Cocktail Menu · Classics
 Whiskey Sour
 Makes − 1 + drink

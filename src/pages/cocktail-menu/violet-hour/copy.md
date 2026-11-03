@@ -9,7 +9,7 @@ The Cocktail Menu: Violet ***Hour.***
 Named for that purple light, just after sunset.
 Floral violet liqueur, sweet pear, and a glass full of Champagne.
 No shaker needed. Just pour, top and serve.
-Here's how to make one:
+Here's how you make one:
 The Cocktail Menu · Classics
 Violet Hour
 Makes − 1 + drink

@@ -9,7 +9,7 @@ The Cocktail Menu: Mamie ***Taylor.***
 The original Scotch and ginger.
 Named for a popular opera singer of the 1890s, the Mamie Taylor was a full-blown craze by 1900.
 Decades before the Moscow Mule, this was the ginger highball everybody ordered.
-Here's how to make one:
+Here's how you make one:
 The Cocktail Menu · Classics
 Mamie Taylor
 Makes − 1 + drink

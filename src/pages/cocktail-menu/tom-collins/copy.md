@@ -11,7 +11,7 @@ In 1874, a prank swept New York: friends told each other that a man named Tom Co
 There was no Tom Collins. But there is this drink.
 *Remember: a Collins is just a sour with bubbles. The Golden Ratio, topped with soda water.*
 → The Golden Ratio
-Here's how to make one:
+Here's how you make one:
 The Cocktail Menu · Classics
 Tom Collins
 Makes − 1 + drink

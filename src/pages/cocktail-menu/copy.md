@@ -3,14 +3,14 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip. The drink list is Philip's (his Classics, Oct 31); the genres still to come are working titles.
+# Nov 3 2026: Philip's copy from chat: the intro, and the note (which now goes to Cocktails How-To; the Golden Ratio is one step of many). The drink list is Philip's (his Classics, Oct 31). Claude's, waiting on Philip: "More on the menu" and the genres still to come (working titles).
 
 The Cocktail Menu: ***Classics.***
-What'll it be tonight?
-These are the classics: the drinks every good bartender knows by heart.
-Tap one for the recipe, and a step-by-step how-to.
+What'll it be?
+These are the Classics: drinks every bartender should know by heart.
+Tap any drink for its recipe, and a step-by-step how-to that will impress even your most discerning cocktail-drinking friends.
 *New to mixing drinks? Lots of these classics are built on one simple formula.*
-→ The Golden Ratio
+→ Cocktails How-To
 Boulevardier
 Daiquiri
 Dark and Stormy

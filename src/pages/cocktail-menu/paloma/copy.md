@@ -9,7 +9,7 @@ The Cocktail Menu: ***Paloma.***
 Say hello to the dove.
 *Paloma* means dove in Spanish. In Mexico, it's an everyday favorite: tequila, lime and grapefruit soda, over ice.
 A pinch of salt makes the grapefruit pop.
-Here's how to make one:
+Here's how you make one:
 The Cocktail Menu · Classics
 Paloma
 Makes − 1 + drink

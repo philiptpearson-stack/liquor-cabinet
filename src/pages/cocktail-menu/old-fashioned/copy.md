@@ -9,7 +9,7 @@ The Cocktail Menu: Old ***Fashioned.***
 The original cocktail.
 In 1806, a newspaper in upstate New York defined the word *cocktail*: spirits, sugar, water and bitters.
 Order one the old-fashioned way, and that's exactly what you get.
-Here's how to make one:
+Here's how you make one:
 The Cocktail Menu · Classics
 Old Fashioned
 Makes − 1 + drink

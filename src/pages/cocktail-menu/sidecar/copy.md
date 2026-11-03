@@ -11,7 +11,7 @@ The Sidecar showed up around the end of World War I. Paris and London both claim
 Cognac, orange liqueur and lemon: rich, bright and dangerously easy to drink.
 *It's The Golden Ratio, with brandy: two parts cognac, one part orange liqueur, one part lemon.*
 → The Golden Ratio
-Here's how to make one:
+Here's how you make one:
 The Cocktail Menu · Classics
 Sidecar
 Makes − 1 + drink

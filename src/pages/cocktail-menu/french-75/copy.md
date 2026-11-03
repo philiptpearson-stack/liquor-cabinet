@@ -11,7 +11,7 @@ The French 75 takes its name from a French field gun of World War I, because it 
 Underneath all those bubbles, it's a little gin sour.
 *It's The Golden Ratio, just smaller: one ounce of gin, a half ounce each of simple syrup and lemon. Then Champagne fills the glass.*
 → The Golden Ratio
-Here's how to make one:
+Here's how you make one:
 The Cocktail Menu · Classics
 French 75
 Makes − 1 + drink

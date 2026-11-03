@@ -11,7 +11,7 @@ Born around 2000 at Milk & Honey in New York, the Gold Rush is a whiskey sour sw
 It caught on so fast that it's already a modern classic.
 *Same Golden Ratio as a Whiskey Sour: two parts bourbon, one part honey syrup, one part lemon.*
 → The Golden Ratio
-Here's how to make one:
+Here's how you make one:
 The Cocktail Menu · Classics
 Gold Rush
 Makes − 1 + drink
