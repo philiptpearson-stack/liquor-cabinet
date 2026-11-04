@@ -3,16 +3,13 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 3 2026: Philip's copy from chat: the intro, the Golden Ratio note, "Here's how you make one:" and the first two steps (he liked the recipe card as it was). Claude's, waiting on Philip: steps 3 and 4, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 3 2026: Philip's copy from chat: the intro and the Golden Ratio note (second round, late), "Here's how you make one:" and the first two steps (he liked the recipe card as it was). Claude's, waiting on Philip: steps 3 and 4, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Boulevardier.***
 **Ever heard of a cocktail called Negroni?**
-Italian.
-Bitter.
-*Strong.*
-(Supposedly invented as a "strong" version of an Americano (Campari+Sweet Vermouth+Soda)).
-Well, the Boulevardier is Negroni's beefy American cousin. Same delightfully bitter formula. Just made with bourbon or rye, instead of gin.
-*I like a cocktail a bit on the boozier side, so I make mine with the Golden Ratio. The original recipe calls for 1:1:1. Try them both, if you like!*
+Well, the Boulevardier is Negroni's beefy American cousin. Same delightfully bitter formula. Just made with bourbon or rye instead of gin.
+*We like our cocktails a bit on the boozier side, so we use the Golden Ratio (2:1:1).*
+*The original recipe calls for 1:1:1.*
 → The Golden Ratio
 Here's how you make one:
 The Cocktail Menu · Classics

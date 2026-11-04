@@ -13,15 +13,13 @@ DRINKS = [
          glass_line=('rocks, over one big ice cube', 'orange peel'),
          punch=None,
          lines=['<strong>Ever heard of a cocktail called Negroni?</strong>',
-                'Italian.<br>Bitter.<br><em>Strong.</em>',
-                '(Supposedly invented as a "strong" version of an Americano (Campari+Sweet Vermouth+Soda)).',
-                "Well, the Boulevardier is Negroni's beefy American cousin. Same delightfully bitter formula. Just made with bourbon or rye, instead of gin."],
-         gr='I like a cocktail a bit on the boozier side, so I make mine with the Golden Ratio. The original recipe calls for 1:1:1. Try them both, if you like!',
+                "Well, the Boulevardier is Negroni's beefy American cousin. Same delightfully bitter formula. Just made with bourbon or rye instead of gin."],
+         gr=['We like our cocktails a bit on the boozier side, so we use the Golden Ratio (2:1:1).', 'The original recipe calls for 1:1:1.'],
          steps=[('<strong>Combine ingredients.</strong> Add whiskey, sweet vermouth and Campari to a mixing glass.', [('pour', 'bourbon', 2), ('pour', 'sweet-vermouth', 1), ('pour', 'campari', 1)]),
                 ('<strong>Stir.</strong> Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into <strong>balance.</strong> <em>Dilution is part of the recipe.</em>)', [('ice', 'mix'), ('stir',)]),
                 ('<strong>Strain over a big cube.</strong> Strain into a rocks glass over one large ice cube.', [('ice', 'glass'), ('strain',)]),
                 ('<strong>Garnish.</strong> Twist an orange peel over the drink, then drop it in.', [('garnish',)])],
-         copy_note=("Nov 3 2026: Philip's copy from chat: the intro, the Golden Ratio note, \"Here's how you make one:\" and the first two steps "
+         copy_note=("Nov 3 2026: Philip's copy from chat: the intro and the Golden Ratio note (second round, late), \"Here's how you make one:\" and the first two steps "
                     "(he liked the recipe card as it was). Claude's, waiting on Philip: steps 3 and 4, and Keep exploring."),
          related=['negroni', 'manhattan'], hero=(['sweet-vermouth', 'bourbon'], ['campari', 'fruit:orange'])),
 

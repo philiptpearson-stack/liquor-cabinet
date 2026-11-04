@@ -221,7 +221,8 @@ def drink_story(d):
          ] + ([f'  <p class="punch">{d["punch"]}</p>'] if d.get('punch') else [])
     s += [f'  <p class="t">{t}</p>' for t in d['lines']]
     if d.get('gr'):
-        s += ['  <aside class="note">', f'    <p><em>{d["gr"]}</em></p>', '    <p class="go"><a href="@page:cocktails-how-to/golden-ratio">→ The Golden Ratio</a></p>', '  </aside>']
+        gr = d['gr'] if isinstance(d['gr'], list) else [d['gr']]   # one line, or a few short ones
+        s += ['  <aside class="note">'] + [f'    <p><em>{g}</em></p>' for g in gr] + ['    <p class="go"><a href="@page:cocktails-how-to/golden-ratio">→ The Golden Ratio</a></p>', '  </aside>']
     if d.get('formula'):
         s += [f'  <p class="t">{d["formula"]}</p>']
     s += ["  <p class=\"t\">Here's how you make one:</p>",
