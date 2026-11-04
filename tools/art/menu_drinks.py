@@ -28,7 +28,6 @@ DRINKS = [
          glass_line=('coupe', 'lime wheel'),
          punch='Forget the blender.',
          lines=['The original Daiquiri was named for a beach near Santiago, Cuba, and it was just three ingredients: rum, lime and sugar.',
-                'Simple perfection.',
                 'Cold, bright and tart.'],
          gr="It's The Golden Ratio in its simplest form: two parts rum, one part simple syrup, one part lime juice.",
          lead='This is how you make one:',

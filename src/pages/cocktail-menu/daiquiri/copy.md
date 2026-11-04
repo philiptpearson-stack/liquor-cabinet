@@ -8,7 +8,6 @@
 The Cocktail Menu: ***Daiquiri.***
 Forget the blender.
 The original Daiquiri was named for a beach near Santiago, Cuba, and it was just three ingredients: rum, lime and sugar.
-Simple perfection.
 Cold, bright and tart.
 *It's The Golden Ratio in its simplest form: two parts rum, one part simple syrup, one part lime juice.*
 → The Golden Ratio
