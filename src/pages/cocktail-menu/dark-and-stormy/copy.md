@@ -10,7 +10,7 @@ Storm clouds, in a glass.
 Bermuda's unofficial national drink: spicy ginger beer, with dark rum floated on top like clouds rolling in.
 No shaker, no fuss. Just pour it in the right order.
 Here's how you make one:
-The Cocktail Menu · Classics
+The Cocktail Menu · Arcane Oddities
 Dark and Stormy
 Makes − 1 + drink
 2 oz dark rum
@@ -25,4 +25,4 @@ Pour the rum over the back of a spoon, and it'll sit right on top.
 Keep exploring
 → Mamie Taylor
 → El Diablo
-← Back to Classics
+← Back to Arcane Oddities

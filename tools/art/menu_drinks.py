@@ -39,7 +39,7 @@ DRINKS = [
                 ('<strong>Garnish.</strong> A lime wheel on the rim.', [('garnish',)])],
          related=['whiskey-sour', 'dark-and-stormy'], hero=(['syrup', 'white-rum'], ['fruit:lime', 'half:lime'])),
 
-    dict(slug='dark-and-stormy', name='Dark and Stormy', glass='highball', color='#e2c584', garnish=['lime-wedge'],
+    dict(slug='dark-and-stormy', name='Dark and Stormy', genre='arcane-oddities', glass='highball', color='#e2c584', garnish=['lime-wedge'],
          recipe=[(2, 'oz', 'dark rum'), (4, 'oz', 'ginger beer'), (.5, 'oz', 'lime juice')],
          glass_line=('highball, over ice', 'lime wedge'),
          punch='Storm clouds, in a glass.',
@@ -266,6 +266,8 @@ DRINKS = [
 BY_SLUG = {d['slug']: d for d in DRINKS}
 
 # the rest of the menu, still to come
+# the parts of the menu after Classics. A drink says which part it's in with genre= (Classics if it doesn't say);
+# a part goes live on the menu as soon as a drink is in it (the Dark and Stormy opened Arcane Oddities, Nov 3 2026)
 SOON = [
     ('modern-variations', 'Modern Variations'),
     ('arcane-oddities', 'Arcane Oddities'),

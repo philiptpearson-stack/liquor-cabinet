@@ -20,6 +20,11 @@ from build import page_words   # noqa: E402
 
 MENU = REPO / 'src/pages/cocktail-menu'
 REWRITE = {d['slug'] for d in DRINKS}   # drinks whose pages this script may (re)write
+GENRE_NAME = {'classics': 'Classics', **dict(SOON)}   # the parts of the menu, by folder
+
+
+def genre(d):
+    return d.get('genre', 'classics')
 GLASS_WORD = {'coupe': 'coupe', 'martini': 'martini glass', 'rocks': 'rocks glass', 'highball': 'tall glass of ice', 'flute': 'Champagne flute'}
 HERO_SCALE = {'coupe': 1.8, 'martini': 1.55, 'rocks': 1.45, 'highball': 1.3, 'flute': 1.25}
 ICON_SCALE = {'coupe': 1.35, 'martini': 1.18, 'rocks': 1.3, 'highball': .93, 'flute': .87}
@@ -190,7 +195,8 @@ def search_index():
             method = 'stirred'          # in a mixing glass, or (the Old Fashioned) right in the glass
         else:
             method = 'built'            # poured over ice and topped up, maybe a quick stir
-        words = ' '.join(extra + [d['glass_line'][0], d['glass_line'][1], method, d['glass'], 'classic classics'])
+        part = html.unescape(GENRE_NAME[genre(d)]).lower()
+        words = ' '.join(extra + [d['glass_line'][0], d['glass_line'][1], method, d['glass'], part, 'classic' if genre(d) == 'classics' else 'oddity'])
         out.append({'s': d['slug'], 'n': html.unescape(d['name']), 'h': d['slug'] + '/index.html', 'i': ' · '.join(ings), 'k': words})
     return out
 
@@ -232,7 +238,7 @@ def drink_story(d):
         s += [f'  <p class="t">{d["formula"]}</p>']
     s += [f'  <p class="t">{d.get("lead", LEAD)}</p>',
           f'  <section class="recipe-card" aria-label="Recipe: {d["name"]}">',
-          '    <p class="rc-kicker">The Cocktail Menu · Classics</p>',
+          f'    <p class="rc-kicker">The Cocktail Menu · {GENRE_NAME[genre(d)]}</p>',
           f'    <p class="rc-name">{d["name"]}</p>',
           '    <p class="rc-serves">Makes <button class="rc-step" type="button" data-d="-1" aria-label="One fewer drink">−</button> <b class="rc-n">1</b> <button class="rc-step" type="button" data-d="1" aria-label="One more drink">+</button> <span class="rc-unit">drink</span></p>',
           '    <ul class="rc-list">']
@@ -251,7 +257,7 @@ def drink_story(d):
         s += [f'    <p class="go"><a href="../{r}/index.html">→ {BY_SLUG[r]["name"]}</a></p>']
     for slug, label in d.get('extra', []):
         s += [f'    <p class="go"><a href="@page:{slug}">→ {label}</a></p>']
-    s += ['    <p class="back"><a href="../classics/index.html" data-back>← Back to Classics</a></p>', '  </nav>', '</div>', '']
+    s += [f'    <p class="back"><a href="../{genre(d)}/index.html" data-back>← Back to {GENRE_NAME[genre(d)]}</a></p>', '  </nav>', '</div>', '']
     return '\n'.join(s)
 
 
@@ -305,7 +311,9 @@ def write_menu():
     (MENU / 'cast.svg').write_text('    <!-- The Cocktail Menu: door icons (the hub, Classics and every drink page share them) -->\n'
                                    + ''.join(f'    <symbol id="{k}" viewBox="0 0 120 120">{v}</symbol>\n' for k, v in icons.items()))
     index = html.escape(json.dumps(search_index(), ensure_ascii=False), quote=True)
-    soon = [f'    <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#{k}-icon"/></svg><span class="door-label">{label}</span><span class="stamp">Coming soon</span></div>'
+    live = {genre(d) for d in DRINKS}
+    soon = [(f'    <a class="door" href="{k}/index.html"><svg class="door-icon" aria-hidden="true"><use href="#{k}-icon"/></svg><span class="door-label">{label}</span></a>' if k in live else
+             f'    <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#{k}-icon"/></svg><span class="door-label">{label}</span><span class="stamp">Coming soon</span></div>')
             for k, label in SOON]
     story = '\n'.join([
         '<h1>The Cocktail <span>Menu.</span></h1>', '',
@@ -337,6 +345,7 @@ def write_menu():
                                    '@keyframes ta-da{from{transform:rotate(-6deg)}to{transform:rotate(6deg)}}\n'
                                    '.flow .doors .door-icon{width:96px;height:96px}.flow .doors .door.wide .door-icon{width:96px;height:96px}\n')
     write_classics()
+    write_oddities()
 
 
 def write_classics():
@@ -345,8 +354,9 @@ def write_classics():
     (C / 'scenes').mkdir(parents=True, exist_ok=True)
     (C / 'scenes' / 'classics.svg').write_text(classics_lineup() + '\n')
     doors = []
-    for i, d in enumerate(DRINKS):
-        wide = i == len(DRINKS) - 1 and len(DRINKS) % 2
+    mine = [d for d in DRINKS if genre(d) == 'classics']
+    for i, d in enumerate(mine):
+        wide = i == len(mine) - 1 and len(mine) % 2
         if wide:
             doors.append(f'    <a class="door wide" href="../{d["slug"]}/index.html"><svg class="door-icon" aria-hidden="true"><use href="#{d["slug"]}-icon"/></svg><span class="door-text"><span class="door-label">{d["name"]}</span></span></a>')
         else:
@@ -378,6 +388,56 @@ def write_classics():
                                 '.flow .doors .door-icon{width:104px;height:104px}.flow .doors .door.wide .door-icon{width:96px;height:96px}\n'
                                 '.flow .doors .door{min-height:10.5rem}\n')
 
+
+
+def oddities_scene():
+    """Arcane Oddities: a dark back bar under a crescent moon, odd bottles on the shelf, the Dark and Stormy out front."""
+    COUNTER = 168
+    wall = wash('<rect x="0" y="0" width="400" height="236" fill="#3b2a45"/><rect x="40" y="10" width="320" height="150" fill="#5a4468" opacity=".45"/>')
+    shelf = wash('<rect x="40" y="96" width="320" height="4" fill="#8f7aa3"/>') + lines('<path d="M40 96 H360 M40 100 H360" stroke="#b9a3c8" stroke-width="1.6"/>', boil=False)
+    potion = 'M-14 0 Q-24 -2 -22 -20 Q-20 -34 -6 -38 L-6 -52 L6 -52 L6 -38 Q20 -34 22 -20 Q24 -2 14 0Z'
+    odd = (at(98, 96, wash(f'<path d="{potion}" fill="#6b4a8a"/><path d="M-18 -18 Q0 -10 18 -18 Q20 -6 12 -2 L-12 -2 Q-20 -6 -18 -18Z" fill="#7fd1b9" opacity=".8"/><rect x="-8" y="-60" width="16" height="9" rx="2" fill="#9b7663"/>')
+               + lines(f'<path d="{potion}" stroke="#d9c7e6" stroke-width="2"/><rect x="-8" y="-60" width="16" height="9" rx="2" stroke="#d9c7e6" stroke-width="1.6"/>', boil=False), .9)
+           + at(136, 96, bottle('wine', '#2f4a3a', '?'), .62) + at(268, 96, bottle('liqueur', '#7a2d4a', '?'), .66) + at(302, 96, bottle('tall', '#2f3f5a', '?'), .6))
+    moon = lines('<path d="M318 30 a16 16 0 1 0 16 22 a12 12 0 1 1 -16 -22Z" fill="#f2c776" stroke="#f2c776"/>', boil=False)
+    stars = (sparkle(70, 30, 4, 'twinkle') + sparkle(170, 22, 3.4, 'twinkle d2') + sparkle(230, 44, 4.4, 'twinkle d3') + sparkle(288, 70, 3.2, 'twinkle')
+             + sparkle(120, 58, 3, 'twinkle d3'))
+    d = BY_SLUG['dark-and-stormy']
+    drink = f'<g transform="translate(205 {COUNTER}) scale(1.05)">{glass("highball", "odd-ds", d["color"], d["garnish"], iced=True, layers=[(.68, 1, "#5a2e14")], bubbles=True)}</g>'
+    return svg_view(wall + moon + stars + shelf + odd + countertop(COUNTER) + drink,
+                    'A dark back bar under a crescent moon and twinkling stars. Odd bottles line the shelf, one a round purple potion bottle. '
+                    'Out front on the bar: a Dark and Stormy, dark rum floating over ginger beer', '62 14 276 174')
+
+
+def write_oddities():
+    """Arcane Oddities: the odd ones (so far, the Dark and Stormy), a door each, and room for more."""
+    C = MENU / 'arcane-oddities'
+    (C / 'scenes').mkdir(parents=True, exist_ok=True)
+    (C / 'scenes' / 'oddities.svg').write_text(oddities_scene() + '\n')
+    mine = [d for d in DRINKS if genre(d) == 'arcane-oddities']
+    doors = [f'    <a class="door" href="../{d["slug"]}/index.html"><svg class="door-icon" aria-hidden="true"><use href="#{d["slug"]}-icon"/></svg><span class="door-label">{d["name"]}</span></a>' for d in mine]
+    if len(mine) % 2:   # an odd number of oddities: the last spot is a promise
+        doors.append('    <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#arcane-oddities-icon"/></svg><span class="door-label">More oddities</span><span class="stamp">Coming soon</span></div>')
+    story = '\n'.join([
+        '<h1><small class="h1-lead">The Cocktail Menu:</small> Arcane <span>Oddities.</span></h1>', '',
+        '<div class="flow">',
+        '  <figure class="fig" id="s-oddities"><div class="sheet"><!--scene:oddities--></div></figure>',
+        '  <p class="t">These are the <em>Arcane Oddities.</em></p>',
+        '  <p class="t">Tap any drink for its recipe and step-by-step, animated how-to.</p>', '',
+        '  <nav class="doors" aria-label="The Arcane Oddities">'] + doors + ['  </nav>', '',
+        '  <nav class="end-doors" aria-label="Where next">',
+        '    <p class="back"><a href="../index.html">← Back to the Cocktail Menu</a></p>',
+        '  </nav>', '</div>', ''])
+    (C / 'story.html').write_text(story)
+    write_copy(C / 'copy.md', 'The Cocktail Menu / Arcane Oddities', story,
+               "Nov 3 2026: Philip moved the Dark and Stormy here, so Arcane Oddities opened. CLAUDE'S DRAFT, waiting on Philip: the page follows Classics "
+               "(\"These are the *Arcane Oddities.*\"; \"Tap any drink...\" is Philip's line from Classics), and \"More oddities\".")
+    (C / 'page.json').write_text(json.dumps({
+        'title': 'Arcane Oddities · The Cocktail Menu · The Bottle and the Bartender',
+        'description': 'The odd ones on the menu, each with its recipe and a step-by-step how-to.',
+        'label': 'The Cocktail Menu / Arcane Oddities'}, indent=2, ensure_ascii=False) + '\n')
+    (C / 'page.css').write_text('/* The Cocktail Menu / Arcane Oddities: scene motion. Written by tools/art/menu_pages.py; edit it there. */\n' + TWINKLE_CSS + '\n' + BUBBLE_CSS + '\n'
+                                '.flow .doors .door-icon{width:104px;height:104px}\n.flow .doors .door{min-height:10.5rem}\n')
 
 if __name__ == '__main__':
     write_menu()

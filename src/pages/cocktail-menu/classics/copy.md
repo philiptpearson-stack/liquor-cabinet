@@ -12,7 +12,6 @@ Tap any drink for its recipe and step-by-step, animated how-to.
 Check out our tips and tricks page for all the cocktail basics you need →
 Boulevardier
 Daiquiri
-Dark and Stormy
 El Diablo
 French 75
 Gold Rush

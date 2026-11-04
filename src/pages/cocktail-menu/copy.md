@@ -12,7 +12,6 @@ Classics
 Modern Variations
 Coming soon
 Arcane Oddities
-Coming soon
 Tiki & Tropical
 Coming soon
 Low & No-Proof
