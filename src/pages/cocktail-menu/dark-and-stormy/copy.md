@@ -25,4 +25,4 @@ Pour the rum over the back of a spoon, and it'll sit right on top.
 Keep exploring
 → Mamie Taylor
 → El Diablo
-← Back to the Cocktail Menu
+← Back to Classics

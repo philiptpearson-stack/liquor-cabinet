@@ -29,4 +29,4 @@ Makes − 1 + drink
 Keep exploring
 → Tom Collins
 → Daiquiri
-← Back to the Cocktail Menu
+← Back to Classics

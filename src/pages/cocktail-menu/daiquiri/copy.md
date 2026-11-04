@@ -26,4 +26,4 @@ Makes − 1 + drink
 Keep exploring
 → Whiskey Sour
 → Dark and Stormy
-← Back to the Cocktail Menu
+← Back to Classics

@@ -25,4 +25,4 @@ Don't be shy with the bitters: start with four good dashes, stir, taste, and add
 Keep exploring
 → Manhattan
 → Gold Rush
-← Back to the Cocktail Menu
+← Back to Classics

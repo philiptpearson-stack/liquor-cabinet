@@ -25,4 +25,4 @@ Like it drier? Use less vermouth. Like it dirty? Add a splash of olive brine.
 Keep exploring
 → Negroni
 → French 75
-← Back to the Cocktail Menu
+← Back to Classics

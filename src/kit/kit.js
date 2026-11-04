@@ -53,6 +53,37 @@
     } catch (err) {}
   }));
 
+  // Search (the Cocktail Menu): type a drink, or what's in it, and the list narrows as you go.
+  // Accents don't matter (vieux carre finds Vieux Carré) and every word has to match (gin lime).
+  // Whole words count, so gin isn't ginger beer; the word still being typed can be a start (neg finds Negroni).
+  document.querySelectorAll('form[data-search]').forEach(form => {
+    try {
+      const norm = t => t.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/['’]/g, '').toLowerCase();
+      const split = t => norm(t).split(/[^a-z0-9%]+/).filter(Boolean);
+      const skip = new Set(['and', 'or', 'with', 'a', 'an', 'the']);
+      const items = JSON.parse(form.dataset.search).map(it => Object.assign(it, { name: split(it.n), all: split([it.n, it.i, it.k].join(' ')) }));
+      const input = form.querySelector('input'), list = form.querySelector('.search-results'), count = form.querySelector('.search-count');
+      const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+      const has = (ws, w, start) => ws.some(x => start ? x.startsWith(w) : x === w);
+      const run = () => {
+        const words = split(input.value).filter(w => !skip.has(w));
+        if (!words.length) { list.innerHTML = ''; count.textContent = ''; return; }
+        const done = words.slice(0, -1), last = words[words.length - 1];
+        const find = start => items.filter(it => done.every(w => has(it.all, w, false)) && has(it.all, last, start));
+        let hits = find(false);
+        if (!hits.length) hits = find(true);
+        const named = it => words.every((w, i) => has(it.name, w, i === words.length - 1));
+        hits.sort((a, b) => (named(b) - named(a)) || a.n.localeCompare(b.n));
+        count.textContent = hits.length ? hits.length + (hits.length === 1 ? ' drink' : ' drinks') : (form.dataset.none || '');
+        list.innerHTML = hits.map(it => '<li><a class="result" href="' + esc(it.h) + '"><svg class="result-icon" aria-hidden="true"><use href="#' + esc(it.s) + '-icon"/></svg>'
+          + '<span><b>' + esc(it.n) + '</b><small>' + esc(it.i) + '</small></span></a></li>').join('');
+      };
+      input.addEventListener('input', run);
+      form.addEventListener('submit', e => { e.preventDefault(); const first = list.querySelector('a'); if (first) first.click(); });
+      run();
+    } catch (e) {}
+  });
+
   // Every page notes its own name for this visit, so a shared page's Back link can say where it goes.
   const cleanPath = p => p.replace(/index\.html$/, '');
   let names = {};

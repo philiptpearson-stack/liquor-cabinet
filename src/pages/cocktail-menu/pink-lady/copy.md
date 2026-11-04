@@ -28,4 +28,4 @@ Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan f
 Keep exploring
 → Whiskey Sour
 → Sidecar
-← Back to the Cocktail Menu
+← Back to Classics

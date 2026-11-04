@@ -24,4 +24,4 @@ Makes − 1 + drink
 Keep exploring
 → Dark and Stormy
 → El Diablo
-← Back to the Cocktail Menu
+← Back to Classics

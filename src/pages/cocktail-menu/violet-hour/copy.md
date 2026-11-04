@@ -23,4 +23,4 @@ Makes − 1 + drink
 Keep exploring
 → French 75
 → Pink Lady
-← Back to the Cocktail Menu
+← Back to Classics

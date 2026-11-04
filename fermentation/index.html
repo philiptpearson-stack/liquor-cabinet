@@ -53,7 +53,8 @@ button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
   text-decoration:none;border:1.5px solid var(--rule);border-radius:999px;padding:.55rem .75rem .55rem .6rem;white-space:nowrap}
 .bar-back span{font-size:1rem;line-height:.6}
 .bar-back + .mark{flex:1}
-.bar-back + .mark b{white-space:nowrap}
+.bar-back + .mark b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.82rem}   /* with Back and Pause beside it, the app's name steps down a size so it fits a phone */
+@media (min-width:430px){.bar-back + .mark b{font-size:1rem}}
 .bar-back ~ .motion .long{display:none}   /* room for Back: the button just says Pause / Play */
 .bar-back + .mark span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .mark b{font-family:var(--display);font-weight:400;font-size:1rem;letter-spacing:.01em;color:var(--accent)}
@@ -282,6 +283,25 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
   .formula .f-row dt{grid-column:1/-1;margin-top:.45rem}
   .formula .f-head dt{display:none}
 }
+
+/* ---------- Search (the Cocktail Menu). It needs scripts, so it only shows when they run */
+.search{display:none;margin:.2rem 0 .8rem}
+.js .search{display:block}
+.search label{display:block;font-family:var(--hand);font-weight:700;font-size:1.35rem;line-height:1.1;color:var(--accent);margin:0 0 .4rem .1rem}
+.search input{width:100%;box-sizing:border-box;font:inherit;font-size:1.08rem;padding:.75rem .95rem;border:2.5px solid #5b2c4c;border-radius:14px 12px 16px 13px;
+  background:var(--chip);color:#3a2532;box-shadow:3px 4px 0 #5b2c4c22;-webkit-appearance:none;appearance:none}
+.search input::placeholder{color:#8a7680}
+.search input:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.search-count{margin:.55rem .2rem 0;font-size:.92rem;color:var(--muted)}
+.search-count:empty{display:none}
+.search-results{list-style:none;margin:.45rem 0 0;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.result{display:flex;align-items:center;gap:.8rem;padding:.4rem .75rem .4rem .45rem;border-radius:13px 11px 14px 12px;background:var(--card);border:2px solid #5b2c4c;
+  color:#3a2532;text-decoration:none;box-shadow:2px 3px 0 #5b2c4c1f}
+.result:hover,.result:focus-visible{transform:translateY(-1px);box-shadow:3px 5px 0 #5b2c4c33}
+.result:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.result-icon{width:56px;height:56px;flex:none}
+.result b{display:block;font-family:var(--display);font-weight:400;font-size:1.12rem;line-height:1.15}
+.result small{display:block;margin-top:.15rem;font-size:.88rem;line-height:1.3;color:#6b5a62}
 /* Fermentation hub */
 .bubble-up{animation:bubbleup 2.6s ease-in infinite}
 .bubble-up.d2{animation-delay:-.9s}.bubble-up.d3{animation-delay:-1.7s}
@@ -474,6 +494,37 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
       location.href = pick;
     } catch (err) {}
   }));
+
+  // Search (the Cocktail Menu): type a drink, or what's in it, and the list narrows as you go.
+  // Accents don't matter (vieux carre finds Vieux Carré) and every word has to match (gin lime).
+  // Whole words count, so gin isn't ginger beer; the word still being typed can be a start (neg finds Negroni).
+  document.querySelectorAll('form[data-search]').forEach(form => {
+    try {
+      const norm = t => t.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/['’]/g, '').toLowerCase();
+      const split = t => norm(t).split(/[^a-z0-9%]+/).filter(Boolean);
+      const skip = new Set(['and', 'or', 'with', 'a', 'an', 'the']);
+      const items = JSON.parse(form.dataset.search).map(it => Object.assign(it, { name: split(it.n), all: split([it.n, it.i, it.k].join(' ')) }));
+      const input = form.querySelector('input'), list = form.querySelector('.search-results'), count = form.querySelector('.search-count');
+      const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+      const has = (ws, w, start) => ws.some(x => start ? x.startsWith(w) : x === w);
+      const run = () => {
+        const words = split(input.value).filter(w => !skip.has(w));
+        if (!words.length) { list.innerHTML = ''; count.textContent = ''; return; }
+        const done = words.slice(0, -1), last = words[words.length - 1];
+        const find = start => items.filter(it => done.every(w => has(it.all, w, false)) && has(it.all, last, start));
+        let hits = find(false);
+        if (!hits.length) hits = find(true);
+        const named = it => words.every((w, i) => has(it.name, w, i === words.length - 1));
+        hits.sort((a, b) => (named(b) - named(a)) || a.n.localeCompare(b.n));
+        count.textContent = hits.length ? hits.length + (hits.length === 1 ? ' drink' : ' drinks') : (form.dataset.none || '');
+        list.innerHTML = hits.map(it => '<li><a class="result" href="' + esc(it.h) + '"><svg class="result-icon" aria-hidden="true"><use href="#' + esc(it.s) + '-icon"/></svg>'
+          + '<span><b>' + esc(it.n) + '</b><small>' + esc(it.i) + '</small></span></a></li>').join('');
+      };
+      input.addEventListener('input', run);
+      form.addEventListener('submit', e => { e.preventDefault(); const first = list.querySelector('a'); if (first) first.click(); });
+      run();
+    } catch (e) {}
+  });
 
   // Every page notes its own name for this visit, so a shared page's Back link can say where it goes.
   const cleanPath = p => p.replace(/index\.html$/, '');

@@ -29,4 +29,4 @@ Keep exploring
 → Gold Rush
 → Daiquiri
 → The Bartender's Perspective: Maker's Mark
-← Back to the Cocktail Menu
+← Back to Classics

@@ -28,4 +28,4 @@ Makes − 1 + drink
 Keep exploring
 → Tom Collins
 → Violet Hour
-← Back to the Cocktail Menu
+← Back to Classics

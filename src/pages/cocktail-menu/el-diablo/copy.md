@@ -26,4 +26,4 @@ Makes − 1 + drink
 Keep exploring
 → Paloma
 → Dark and Stormy
-← Back to the Cocktail Menu
+← Back to Classics

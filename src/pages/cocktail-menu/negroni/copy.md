@@ -26,4 +26,4 @@ Makes − 1 + drink
 Keep exploring
 → Boulevardier
 → Martini
-← Back to the Cocktail Menu
+← Back to Classics

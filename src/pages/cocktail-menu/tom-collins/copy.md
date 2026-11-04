@@ -27,4 +27,4 @@ Makes − 1 + drink
 Keep exploring
 → French 75
 → Southside Fizz
-← Back to the Cocktail Menu
+← Back to Classics

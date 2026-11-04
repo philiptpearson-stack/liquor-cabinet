@@ -27,4 +27,4 @@ Feeling fancy? Rim the glass with sugar before you pour.
 Keep exploring
 → Daiquiri
 → Pink Lady
-← Back to the Cocktail Menu
+← Back to Classics

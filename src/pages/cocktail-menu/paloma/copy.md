@@ -25,4 +25,4 @@ Makes − 1 + drink
 Keep exploring
 → El Diablo
 → Daiquiri
-← Back to the Cocktail Menu
+← Back to Classics

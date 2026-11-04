@@ -143,6 +143,56 @@ def classics_hero():
                     '84 28 232 152')
 
 
+def classics_lineup():
+    """The Classics page: five of them lined up on the bar, close up."""
+    COUNTER = 150
+    colors = ['#c98a3c', '#a0522d', '#7f9a6c', '#e6d3bd', '#b9792c', '#c0583c', '#e7f1fb', '#8a6a3c', '#c98a3c', '#7f9a6c', '#a0522d', '#d8c3a5', '#b9792c', '#c0583c']
+    wall = wash('<rect x="0" y="0" width="400" height="236" fill="#6f5443"/><rect x="40" y="10" width="320" height="140" fill="#cfe0dc" opacity=".55"/>')
+    shelf = lambda y: wash(f'<rect x="40" y="{y}" width="320" height="4" fill="#bfe3dc" opacity=".9"/>') + lines(f'<path d="M40 {y} H360 M40 {y + 4} H360" stroke="#6aa59a" stroke-width="1.6"/>', boil=False)
+    backbar = (wall + shelf(56) + ''.join(plain_bottle(52 + i * 22.5, 56, (34, 40, 30, 38, 42, 32, 36)[i % 7], colors[i % 14]) for i in range(14))
+               + shelf(102) + ''.join(plain_bottle(56 + i * 24, 102, (30, 36, 40, 32, 38)[i % 5], colors[(i + 5) % 14]) for i in range(13)))
+    lineup = [('coupe', 'daiquiri', 108, .84), ('martini', 'martini', 157, .78), ('rocks', 'negroni', 206, .86), ('highball', 'tom-collins', 254, .76), ('flute', 'french-75', 294, .76)]
+    drinks = ''
+    for kind, slug, x, sc in lineup:
+        d = BY_SLUG[slug]
+        drinks += f'<g transform="translate({x} {COUNTER}) scale({sc})">{glass(kind, "cl-" + slug, d["color"], d["garnish"], iced=kind in ("rocks", "highball"), top=d.get("level"))}</g>'
+    sp = sparkle(96, 52, 6, 'twinkle') + sparkle(318, 44, 5.5, 'twinkle d2') + sparkle(226, 40, 4.5, 'twinkle d3')
+    return svg_view(backbar + countertop(COUNTER) + drinks + sp,
+                    'Five classics lined up on the bar: a Daiquiri, a Martini, a Negroni, a Tom Collins and a French 75', '76 34 248 150')
+
+
+def search_index():
+    """What the menu's search looks through, for each drink: its name, what's in it (shown under the name),
+    and words people might type instead (whiskey for bourbon, brandy for cognac, bubbly for Champagne)."""
+    FAMILY = {'bourbon': 'whiskey whisky', 'rye': 'whiskey whisky', 'scotch': 'whiskey whisky', 'cognac': 'brandy', 'applejack': 'brandy apple',
+              'champagne': 'sparkling wine bubbly', 'campari': 'bitter aperitivo amaro', 'soda water': 'club soda bubbles', 'egg white': 'foam',
+              'ginger beer': 'ginger', 'grapefruit soda': 'grapefruit bubbles', 'honey syrup': 'honey', 'crème de cassis': 'blackcurrant',
+              'crème de violette': 'violet floral', 'orange liqueur': 'triple sec cointreau curacao', 'sweet vermouth': 'vermouth', 'dry vermouth': 'vermouth',
+              'angostura bitters': 'bitters', "peychaud's bitters": 'bitters', 'orange bitters': 'bitters'}
+    out = []
+    for d in DRINKS:
+        ings = []
+        for q, u, text in d['recipe']:
+            name = re.sub(r'\s*\(.*?\)', '', text).strip() or u
+            name = re.sub(r', or another .*$', '', name)
+            ings.append(html.unescape(name))
+        extra = []
+        for i in ings:
+            for k, v in FAMILY.items():
+                if k in i.lower():
+                    extra.append(v)
+        acts = [a for _, acts in d['steps'] for a in acts]
+        if any(a[0] in ('shake', 'dry') for a in acts):
+            method = 'shaken'
+        elif any(a[0] == 'strain' for a in acts) or (any(a[0] == 'stir' for a in acts) and not any(a[0] == 'top' for a in acts)):
+            method = 'stirred'          # in a mixing glass, or (the Old Fashioned) right in the glass
+        else:
+            method = 'built'            # poured over ice and topped up, maybe a quick stir
+        words = ' '.join(extra + [d['glass_line'][0], d['glass_line'][1], method, d['glass'], 'classic classics'])
+        out.append({'s': d['slug'], 'n': html.unescape(d['name']), 'h': d['slug'] + '/index.html', 'i': ' · '.join(ings), 'k': words})
+    return out
+
+
 # ---------------------------------------------------------------- page writing
 def amt(q, u, text):
     qs = f'{q:g}'
@@ -195,7 +245,7 @@ def drink_story(d):
         s += [f'    <p class="go"><a href="../{r}/index.html">→ {BY_SLUG[r]["name"]}</a></p>']
     for slug, label in d.get('extra', []):
         s += [f'    <p class="go"><a href="@page:{slug}">→ {label}</a></p>']
-    s += ['    <p class="back"><a href="../index.html">← Back to the Cocktail Menu</a></p>', '  </nav>', '</div>', '']
+    s += ['    <p class="back"><a href="../classics/index.html" data-back>← Back to Classics</a></p>', '  </nav>', '</div>', '']
     return '\n'.join(s)
 
 
@@ -236,25 +286,69 @@ def write_drink(d):
 
 
 def write_menu():
+    """The Cocktail Menu (the hub): Phil's lineup, "What'll it be?", a search, and a door per part of the menu."""
     (MENU / 'scenes').mkdir(parents=True, exist_ok=True)
-    (MENU / 'scenes' / 'classics.svg').write_text(classics_hero() + '\n')
+    old = MENU / 'scenes' / 'classics.svg'
+    if old.exists():
+        old.unlink()
+    (MENU / 'scenes' / 'menu.svg').write_text(classics_hero() + '\n')
     icons = {f'{d["slug"]}-icon': icon(d) for d in DRINKS}
     icons.update({f'{k}-icon': v for k, v in soon_icons().items()})
-    (MENU / 'cast.svg').write_text('    <!-- The Cocktail Menu: door icons -->\n' + ''.join(f'    <symbol id="{k}" viewBox="0 0 120 120">{v}</symbol>\n' for k, v in icons.items()))
+    icons['classics-icon'] = (at(30, 108, glass('martini', 'clx-m', BY_SLUG['martini']['color'], ['olives']), .72) + at(62, 110, glass('rocks', 'clx-r', BY_SLUG['old-fashioned']['color'], ['orange-peel'], iced=True, top=-44), .78)
+                              + at(94, 108, glass('coupe', 'clx-c', BY_SLUG['daiquiri']['color'], ['lime-wheel']), .82) + sparkle(18, 30, 5) + sparkle(104, 24, 6))
+    (MENU / 'cast.svg').write_text('    <!-- The Cocktail Menu: door icons (the hub, Classics and every drink page share them) -->\n'
+                                   + ''.join(f'    <symbol id="{k}" viewBox="0 0 120 120">{v}</symbol>\n' for k, v in icons.items()))
+    index = html.escape(json.dumps(search_index(), ensure_ascii=False), quote=True)
+    soon = [f'    <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#{k}-icon"/></svg><span class="door-label">{label}</span><span class="stamp">Coming soon</span></div>'
+            for k, label in SOON]
+    story = '\n'.join([
+        '<h1>The Cocktail <span>Menu.</span></h1>', '',
+        '<div class="flow">',
+        '  <figure class="fig" id="s-menu"><div class="sheet"><!--scene:menu--></div></figure>',
+        "  <p class=\"punch\">What'll it be?</p>",
+        f'  <form class="search" role="search" data-search="{index}" data-none="Nothing on the menu like that yet. Try a drink, or just one ingredient.">',
+        '    <label for="menu-q">Looking for something?</label>',
+        '    <input id="menu-q" type="search" placeholder="Try “Negroni” or “gin and lime”" autocomplete="off" enterkeyhint="go">',
+        '    <p class="search-count" aria-live="polite"></p>',
+        '    <ul class="search-results"></ul>',
+        '  </form>', '',
+        '  <nav class="doors" aria-label="The menu">',
+        '    <a class="door wide" href="classics/index.html"><svg class="door-icon" aria-hidden="true"><use href="#classics-icon"/></svg><span class="door-text"><span class="door-label">Classics</span></span></a>'] + soon + ['  </nav>', '',
+        '  <nav class="end-doors" aria-label="Where next">',
+        '    <p class="back"><a href="@home" data-back>← Back to The Bar</a></p>',
+        '  </nav>', '</div>', ''])
+    (MENU / 'story.html').write_text(story)
+    write_copy(MENU / 'copy.md', 'The Cocktail Menu', story,
+               "Nov 3 2026: the menu's front door (Philip: Classics is its own door, like the rest; and a search). \"What'll it be?\" is Philip's (moved here from Classics). "
+               "CLAUDE'S DRAFT, waiting on Philip: \"Looking for something?\" (and, not checked here because they aren't page text: the search box's hint, "
+               "\"Try “Negroni” or “gin and lime”\", and its no-match line, \"Nothing on the menu like that yet. Try a drink, or just one ingredient.\"), and the genres' working titles.")
+    (MENU / 'page.json').write_text(json.dumps({
+        'title': 'The Cocktail Menu · The Bottle and the Bartender',
+        'description': "What'll it be? Search the menu, or start with the Classics.",
+        'label': 'The Cocktail Menu'}, indent=2, ensure_ascii=False) + '\n')
+    (MENU / 'page.css').write_text('/* The Cocktail Menu: scene motion. Written by tools/art/menu_pages.py; edit it there. */\n' + TWINKLE_CSS + '\n'
+                                   '.ta-da{animation:ta-da 1.5s ease-in-out infinite alternate}.ta-da.r{animation-delay:-.75s}\n'
+                                   '@keyframes ta-da{from{transform:rotate(-6deg)}to{transform:rotate(6deg)}}\n'
+                                   '.flow .doors .door-icon{width:96px;height:96px}.flow .doors .door.wide .door-icon{width:96px;height:96px}\n')
+    write_classics()
+
+
+def write_classics():
+    """Classics: Philip's 19, a door each."""
+    C = MENU / 'classics'
+    (C / 'scenes').mkdir(parents=True, exist_ok=True)
+    (C / 'scenes' / 'classics.svg').write_text(classics_lineup() + '\n')
     doors = []
     for i, d in enumerate(DRINKS):
         wide = i == len(DRINKS) - 1 and len(DRINKS) % 2
         if wide:
-            doors.append(f'    <a class="door wide" href="{d["slug"]}/index.html"><svg class="door-icon" aria-hidden="true"><use href="#{d["slug"]}-icon"/></svg><span class="door-text"><span class="door-label">{d["name"]}</span></span></a>')
+            doors.append(f'    <a class="door wide" href="../{d["slug"]}/index.html"><svg class="door-icon" aria-hidden="true"><use href="#{d["slug"]}-icon"/></svg><span class="door-text"><span class="door-label">{d["name"]}</span></span></a>')
         else:
-            doors.append(f'    <a class="door" href="{d["slug"]}/index.html"><svg class="door-icon" aria-hidden="true"><use href="#{d["slug"]}-icon"/></svg><span class="door-label">{d["name"]}</span></a>')
-    soon = [f'    <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#{k}-icon"/></svg><span class="door-label">{label}</span><span class="stamp">Coming soon</span></div>'
-            for k, label in SOON]
+            doors.append(f'    <a class="door" href="../{d["slug"]}/index.html"><svg class="door-icon" aria-hidden="true"><use href="#{d["slug"]}-icon"/></svg><span class="door-label">{d["name"]}</span></a>')
     story = '\n'.join([
         '<h1><small class="h1-lead">The Cocktail Menu:</small> <span>Classics.</span></h1>', '',
         '<div class="flow">',
         '  <figure class="fig" id="s-classics"><div class="sheet"><!--scene:classics--></div></figure>',
-        "  <p class=\"punch\">What'll it be?</p>",
         '  <p class="t">These are the Classics: drinks every bartender should know by heart.</p>',
         '  <p class="t">Tap any drink for its recipe, and a step-by-step how-to that will impress even your most discerning cocktail-drinking friends.</p>',
         '  <aside class="note">',
@@ -262,25 +356,21 @@ def write_menu():
         '    <p class="go"><a href="@page:cocktails-how-to">→ Cocktails How-To</a></p>',
         '  </aside>', '',
         '  <nav class="doors" aria-label="The Classics">'] + doors + ['  </nav>', '',
-        '  <h2>More on the menu</h2>',
-        '  <nav class="doors" aria-label="More on the menu">'] + soon + ['  </nav>', '',
         '  <nav class="end-doors" aria-label="Where next">',
-        '    <p class="back"><a href="@home" data-back>← Back to The Bar</a></p>',
+        '    <p class="back"><a href="../index.html">← Back to the Cocktail Menu</a></p>',
         '  </nav>', '</div>', ''])
-    (MENU / 'story.html').write_text(story)
-    write_copy(MENU / 'copy.md', 'The Cocktail Menu (Classics)', story,
-               "Nov 3 2026: Philip's copy from chat: the intro, and the note (which now goes to Cocktails How-To; the Golden Ratio is one step of many). "
-               "The drink list is Philip's (his Classics, Oct 31). Claude's, waiting on Philip: \"More on the menu\" and the genres still to come (working titles).")
-    (MENU / 'page.json').write_text(json.dumps({
+    (C / 'story.html').write_text(story)
+    write_copy(C / 'copy.md', 'The Cocktail Menu / Classics', story,
+               "Nov 3 2026: Philip's copy from chat: the intro, and the note (it goes to Cocktails How-To; the Golden Ratio is one step of many). "
+               "The drink list is Philip's (his Classics, Oct 31). Claude's: \"← Back to the Cocktail Menu\".")
+    (C / 'page.json').write_text(json.dumps({
         'title': 'Classics · The Cocktail Menu · The Bottle and the Bartender',
         'description': 'The classic cocktails, each with its recipe and a step-by-step how-to.',
         'label': 'The Cocktail Menu / Classics'}, indent=2, ensure_ascii=False) + '\n')
-    (MENU / 'page.css').write_text('/* The Cocktail Menu (Classics): scene motion. Written by tools/art/menu_pages.py; edit it there. */\n' + TWINKLE_CSS + '\n'
-                                   '.ta-da{animation:ta-da 1.5s ease-in-out infinite alternate}.ta-da.r{animation-delay:-.75s}\n'
-                                   '@keyframes ta-da{from{transform:rotate(-6deg)}to{transform:rotate(6deg)}}\n'
-                                   '/* the drinks are the point of this page: bigger pictures on the doors */\n'
-                                   '.flow .doors .door-icon{width:104px;height:104px}.flow .doors .door.wide .door-icon{width:96px;height:96px}\n'
-                                   '.flow .doors .door{min-height:10.5rem}\n')
+    (C / 'page.css').write_text('/* The Cocktail Menu / Classics: scene motion. Written by tools/art/menu_pages.py; edit it there. */\n' + TWINKLE_CSS + '\n'
+                                '/* the drinks are the point of this page: bigger pictures on the doors */\n'
+                                '.flow .doors .door-icon{width:104px;height:104px}.flow .doors .door.wide .door-icon{width:96px;height:96px}\n'
+                                '.flow .doors .door{min-height:10.5rem}\n')
 
 
 if __name__ == '__main__':

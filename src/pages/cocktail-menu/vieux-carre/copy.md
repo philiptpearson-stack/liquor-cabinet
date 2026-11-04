@@ -28,4 +28,4 @@ Makes − 1 + drink
 Keep exploring
 → Manhattan
 → Old Fashioned
-← Back to the Cocktail Menu
+← Back to Classics

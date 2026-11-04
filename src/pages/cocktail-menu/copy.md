@@ -1,36 +1,14 @@
-# The Cocktail Menu (Classics): copy
+# The Cocktail Menu: copy
 
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 3 2026: Philip's copy from chat: the intro, and the note (which now goes to Cocktails How-To; the Golden Ratio is one step of many). The drink list is Philip's (his Classics, Oct 31). Claude's, waiting on Philip: "More on the menu" and the genres still to come (working titles).
+# Nov 3 2026: the menu's front door (Philip: Classics is its own door, like the rest; and a search). "What'll it be?" is Philip's (moved here from Classics). CLAUDE'S DRAFT, waiting on Philip: "Looking for something?" (and, not checked here because they aren't page text: the search box's hint, "Try “Negroni” or “gin and lime”", and its no-match line, "Nothing on the menu like that yet. Try a drink, or just one ingredient."), and the genres' working titles.
 
-The Cocktail Menu: ***Classics.***
+The Cocktail ***Menu.***
 What'll it be?
-These are the Classics: drinks every bartender should know by heart.
-Tap any drink for its recipe, and a step-by-step how-to that will impress even your most discerning cocktail-drinking friends.
-*New to mixing drinks? Lots of these classics are built on one simple formula.*
-→ Cocktails How-To
-Boulevardier
-Daiquiri
-Dark and Stormy
-El Diablo
-French 75
-Gold Rush
-Mamie Taylor
-Manhattan
-Martini
-Negroni
-Old Fashioned
-Paloma
-Pink Lady
-Sidecar
-Southside Fizz
-Tom Collins
-Vieux Carré
-Violet Hour
-Whiskey Sour
-More on the menu
+Looking for something?
+Classics
 Modern Variations
 Coming soon
 Arcane Oddities

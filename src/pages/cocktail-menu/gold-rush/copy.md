@@ -27,4 +27,4 @@ Honey syrup: stir equal parts honey and hot water until smooth. It keeps in the 
 Keep exploring
 → Whiskey Sour
 → Old Fashioned
-← Back to the Cocktail Menu
+← Back to Classics

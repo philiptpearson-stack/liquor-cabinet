@@ -25,4 +25,4 @@ Makes − 1 + drink
 Keep exploring
 → Old Fashioned
 → Vieux Carré
-← Back to the Cocktail Menu
+← Back to Classics
