@@ -37,14 +37,19 @@ mystery = ''.join(at(x, COUNTER, bottle(shape, color, '?'), s) for x, shape, col
 sp = sparkle(104, 96, 5.5, 'twinkle') + sparkle(156, 90, 4.5, 'twinkle d2') + sparkle(326, 44, 5, 'twinkle d3') + sparkle(302, 100, 4, 'twinkle d2')
 
 
-def bubble(x0, y0, w, h, tail, text, size=12.5, first=None, cls=''):
+def bubble(x0, y0, w, h, tail, text, size=12.5, first=None, cls='', side='bottom'):
     """A speech bubble at (x0, y0), its tail pointing at tail=(x, y); text is a list of lines, each may hold <tspan>s.
     It pops from its tail when it has a class (see page.css)."""
     x1, y1 = x0 + w, y0 + h
     tx, ty = tail
     bx = min(max(tx - 10, x0 + 10), x1 - 22)
-    d = (f'M{x0 + 8} {y0} H{x1 - 8} Q{x1} {y0} {x1} {y0 + 8} V{y1 - 8} Q{x1} {y1} {x1 - 8} {y1} H{bx + 20} L{tx} {ty} L{bx + 6} {y1} '
-         f'H{x0 + 8} Q{x0} {y1} {x0} {y1 - 8} V{y0 + 8} Q{x0} {y0} {x0 + 8} {y0}Z')
+    if side == 'left':   # a short tail out of the left side, so it never crosses the bubble
+        ya, yb = y0 + h * .5, y0 + h * .78
+        d = (f'M{x0 + 8} {y0} H{x1 - 8} Q{x1} {y0} {x1} {y0 + 8} V{y1 - 8} Q{x1} {y1} {x1 - 8} {y1} H{x0 + 8} Q{x0} {y1} {x0} {y1 - 8} '
+             f'V{f(yb)} L{tx} {ty} L{x0} {f(ya)} V{y0 + 8} Q{x0} {y0} {x0 + 8} {y0}Z')
+    else:
+        d = (f'M{x0 + 8} {y0} H{x1 - 8} Q{x1} {y0} {x1} {y0 + 8} V{y1 - 8} Q{x1} {y1} {x1 - 8} {y1} H{bx + 20} L{tx} {ty} L{bx + 6} {y1} '
+             f'H{x0 + 8} Q{x0} {y1} {x0} {y1 - 8} V{y0 + 8} Q{x0} {y0} {x0 + 8} {y0}Z')
     lh = size * 1.25
     top = y0 + (h - lh * len(text)) / 2 + size * .95
     words = ''.join(f'<text class="letter" x="{f(x0 + w / 2)}" y="{f(top + k * lh)}" font-size="{(first if (first and k == 0) else size)}" text-anchor="middle" style="fill:{INK_TEXT}">{t}</text>'
@@ -57,7 +62,7 @@ INK_TEXT = '#3a2532'
 PLUM = '#8b3a63'
 # Phil says two things (Philip, Nov 4): hello, then the question that opens the doors below. They pop in one after the other.
 hello = (bubble(84, 28, 88, 42, (180, 66), ['Hi there!', "I'm Phil!"], 12.5, first=14, cls='hello-1')
-         + bubble(250, 58, 76, 46, (226, 92), ['How can I', f'help <tspan style="fill:{PLUM};font-size:15px">YOU</tspan>?'], 12.5, cls='hello-2'))
+         + bubble(252, 58, 74, 46, (240, 90), ['How can I', f'help <tspan style="fill:{PLUM};font-size:15px">YOU</tspan>?'], 12.5, cls='hello-2', side='left'))
 scene = svg_view(backbar + place(phil, 200, 206) + counter + shaker + sour + mystery + sp + hello,
                  "Phil, the bartender, waves hello from behind his bar and says: Hi there! I'm Phil! Then: How can I help YOU? On the bar: a shaker and a whiskey sour on one side, "
                  'and three bottles with question marks on their labels on the other', '72 22 258 166')
