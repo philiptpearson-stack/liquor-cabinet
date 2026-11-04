@@ -61,6 +61,11 @@ def prop(spec):
     return at(0, 0, ing_bottle(spec), 1.55), f'a bottle of {ING[spec][0]}'
 
 
+def iced(d):
+    """Served on ice: ice goes into the glass, or the drink is poured in with its ice (the El Diablo)."""
+    return any((a[0] == 'ice' and a[1] == 'glass') or a[0] == 'dump' for _, acts in d['steps'] for a in acts)
+
+
 def hero(d):
     left, right = d['hero']
     out = wash('<rect x="0" y="0" width="400" height="236" fill="#efe3d0"/>' + f'<ellipse cx="200" cy="118" rx="98" ry="86" fill="{d["color"]}" opacity=".32"/>'
@@ -75,7 +80,7 @@ def hero(d):
         out += f'<g transform="translate({x} 184)">{p}</g>'
         words.append(w)
     fizzy = any(a[0] == 'top' and a[1] in FIZZY for _, acts in d['steps'] for a in acts)
-    served_iced = any(a[0] == 'ice' and a[1] == 'glass' for _, acts in d['steps'] for a in acts)
+    served_iced = iced(d)
     layers = None
     if d['slug'] == 'dark-and-stormy':
         layers = [(.68, 1, '#5a2e14')]
@@ -90,7 +95,7 @@ def hero(d):
 
 
 def icon(d):
-    served_iced = any(a[0] == 'ice' and a[1] == 'glass' for _, acts in d['steps'] for a in acts)
+    served_iced = iced(d)
     layers = [(.68, 1, '#5a2e14')] if d['slug'] == 'dark-and-stormy' else None
     return at(60, 112, glass(d['glass'], f'{d["slug"]}-ic', d['color'], d['garnish'], iced=served_iced, foam=d.get('foam', False), layers=layers, top=d.get('level')),
               ICON_SCALE[d['glass']])
