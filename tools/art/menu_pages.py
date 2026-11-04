@@ -349,8 +349,7 @@ def write_classics():
         '<h1><small class="h1-lead">The Cocktail Menu:</small> <span>Classics.</span></h1>', '',
         '<div class="flow">',
         '  <figure class="fig" id="s-classics"><div class="sheet"><!--scene:classics--></div></figure>',
-        '  <p class="t">These are the Classics.</p>',
-        '  <p class="t">Drinks every bartender should know by heart.</p>',
+        '  <p class="t">These are the <em>Classics.</em></p>',
         '  <p class="t">Tap any drink for its recipe and step-by-step, animated how-to.</p>',
         '  <aside class="note">',
         '    <p><em>New to mixing drinks? Lots of these classics are built on one simple formula.</em></p>',
@@ -362,7 +361,7 @@ def write_classics():
         '  </nav>', '</div>', ''])
     (C / 'story.html').write_text(story)
     write_copy(C / 'copy.md', 'The Cocktail Menu / Classics', story,
-               "Nov 3 2026: Philip's copy from chat: the intro (second round, three lines), and the note (it goes to Cocktails How-To; the Golden Ratio is one step of many). "
+               "Nov 3 2026: Philip's copy from chat: the intro (third round), and the note (it goes to Cocktails How-To; the Golden Ratio is one step of many). "
                "The drink list is Philip's (his Classics, Oct 31). Claude's: \"← Back to the Cocktail Menu\".")
     (C / 'page.json').write_text(json.dumps({
         'title': 'Classics · The Cocktail Menu · The Bottle and the Bartender',
