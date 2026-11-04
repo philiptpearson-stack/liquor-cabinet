@@ -49,6 +49,8 @@ def prop(spec):
         return at(0, 0, mint_bunch(), 1.25), 'fresh mint'
     if spec == 'bitters':
         return at(0, -18 * 1.5, bitters(), 1.5), 'a bottle of bitters'
+    if spec == 'syrup':   # a bottle of simple syrup (Philip, Nov 3: the Daiquiri should show one)
+        return at(0, 0, bottle('tall', '#f4ecd0', 'simple syrup', cap='#c25c86'), 1.5), 'a bottle of simple syrup'
     if spec == 'pear':
         return at(0, 0, pear(), 1.4), 'a pear'
     return at(0, 0, ing_bottle(spec), 1.55), f'a bottle of {ING[spec][0]}'

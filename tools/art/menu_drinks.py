@@ -37,7 +37,7 @@ DRINKS = [
                 ('<strong>Shake.</strong> Add ice and shake hard, until the shaker is frosty cold.', [('ice', 'mix'), ('shake',)]),
                 ('<strong>Serve up.</strong> Strain into a chilled coupe, no ice.', [('strain',)]),
                 ('<strong>Garnish.</strong> A lime wheel on the rim.', [('garnish',)])],
-         related=['whiskey-sour', 'dark-and-stormy'], hero=(['white-rum'], ['fruit:lime', 'half:lime'])),
+         related=['whiskey-sour', 'dark-and-stormy'], hero=(['syrup', 'white-rum'], ['fruit:lime', 'half:lime'])),
 
     dict(slug='dark-and-stormy', name='Dark and Stormy', glass='highball', color='#e2c584', garnish=['lime-wedge'],
          recipe=[(2, 'oz', 'dark rum'), (4, 'oz', 'ginger beer'), (.5, 'oz', 'lime juice')],
