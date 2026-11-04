@@ -3,11 +3,12 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 3 2026: Philip's copy from chat: the intro, and the note (it goes to Cocktails How-To; the Golden Ratio is one step of many). The drink list is Philip's (his Classics, Oct 31). Claude's: "← Back to the Cocktail Menu".
+# Nov 3 2026: Philip's copy from chat: the intro (second round, three lines), and the note (it goes to Cocktails How-To; the Golden Ratio is one step of many). The drink list is Philip's (his Classics, Oct 31). Claude's: "← Back to the Cocktail Menu".
 
 The Cocktail Menu: ***Classics.***
-These are the Classics: drinks every bartender should know by heart.
-Tap any drink for its recipe, and a step-by-step how-to that will impress even your most discerning cocktail-drinking friends.
+These are the Classics.
+Drinks every bartender should know by heart.
+Tap any drink for its recipe and step-by-step, animated how-to.
 *New to mixing drinks? Lots of these classics are built on one simple formula.*
 → Cocktails How-To
 Boulevardier
