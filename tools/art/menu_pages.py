@@ -216,6 +216,9 @@ def h1_for(name):
     return f'<h1><small class="h1-lead">The Cocktail Menu:</small> {pre}<span>{last}.</span></h1>'
 
 
+LEAD = "Here's how you make one:"   # the line before the recipe card, unless a drink has its own
+
+
 def drink_story(d):
     s = [h1_for(d['name']), '', '<div class="flow">', '  <figure class="fig" id="s-hero"><div class="sheet"><!--scene:hero--></div></figure>',
          ] + ([f'  <p class="punch">{d["punch"]}</p>'] if d.get('punch') else [])
@@ -225,7 +228,7 @@ def drink_story(d):
         s += ['  <aside class="note">'] + [f'    <p><em>{g}</em></p>' for g in gr] + ['    <p class="go"><a href="@page:cocktails-how-to/golden-ratio">→ The Golden Ratio</a></p>', '  </aside>']
     if d.get('formula'):
         s += [f'  <p class="t">{d["formula"]}</p>']
-    s += ["  <p class=\"t\">Here's how you make one:</p>",
+    s += [f'  <p class="t">{d.get("lead", LEAD)}</p>',
           f'  <section class="recipe-card" aria-label="Recipe: {d["name"]}">',
           '    <p class="rc-kicker">The Cocktail Menu · Classics</p>',
           f'    <p class="rc-name">{d["name"]}</p>',

@@ -317,8 +317,9 @@ class Build:
                  + lines(f'<path d="{G_MIX}" stroke-width="2.4"/><path d="M166 189 H214" stroke-width="1.6"/><path d="M167 106 L164 160" stroke="#fffaf1" stroke-width="3"/>', boil=False)
                  + f'<g class="{stc}">{strainer}</g>')
         # the tin: down for each shake, then back up
-        tin_svg, shake_states, tin_states = '', [(0, {'transform': 'rotate(0)'})], [(0, {'opacity': 0, 'transform': 'translateY(-120px)'})]
-        frost = ''
+        REST = 'translate(0px,0px) rotate(0deg)'
+        tin_svg, shake_states, tin_states = '', [(0, {'transform': REST})], [(0, {'opacity': 0, 'transform': 'translateY(-120px)'})]
+        frost, whoosh = '', ''
         if shaken:
             for a in acts:
                 if a[2] not in ('shake', 'dry'):
@@ -326,8 +327,14 @@ class Build:
                 t0, t1 = a[-2], a[-1]
                 tin_states += [(t0, {'opacity': 0, 'transform': 'translateY(-120px)'}), (t0 + .05, {'opacity': 1}), (t0 + .45, {'transform': 'translateY(0)'}),
                                (t1 - .45, {'transform': 'translateY(0)'}), (t1 - .05, {'transform': 'translateY(-120px)'}), (t1, {'opacity': 0})]
-                n, s0, s1 = 10, t0 + .55, t1 - .55
-                shake_states += [(s0 - .01, {'transform': 'rotate(0)'})] + [(s0 + (s1 - s0) * i / n, {'transform': f'rotate({0 if i in (0, n) else (14 if i % 2 else -14)}deg)'}) for i in range(n + 1)]
+                # a real shake: hard and fast, up and down (Philip, Nov 3), with motion lines either side
+                n, s0, s1 = 18, t0 + .55, t1 - .55
+                up, down = 'translate(0px,-13px) rotate(-3deg)', 'translate(0px,5px) rotate(2deg)'
+                shake_states += [(s0 - .01, {'transform': REST})] + [(s0 + (s1 - s0) * i / n, {'transform': REST if i in (0, n) else (up if i % 2 else down)}) for i in range(n + 1)]
+                wc = self.cls('whoosh')
+                whoosh += (f'<g class="{wc}">' + lines('<path d="M147 66 q-7 9 0 18 M139 90 q-7 9 0 18 M147 114 q-7 9 0 18 M233 66 q7 9 0 18 M241 90 q7 9 0 18 M233 114 q7 9 0 18" '
+                                                       'stroke="#8a6a78" stroke-width="2.2"/>', boil=False) + '</g>')
+                self.window(wc, s0, s1, fade=.08)
                 if a[2] == 'shake':
                     fc = self.cls('frost')
                     frost += f'<g class="{fc}">{sparkle(172, 72, 4, "twinkle")}{sparkle(206, 84, 4.4, "twinkle d2")}{sparkle(186, 100, 3.6, "twinkle d3")}</g>'
@@ -337,7 +344,7 @@ class Build:
                        + frost + '</g>')
             self.emit(tc, tin_states)
         sc = self.cls('shk')
-        self.emit(sc, shake_states + [(self.T, {'transform': 'rotate(0)'})], base=None)
+        self.emit(sc, shake_states + [(self.T, {'transform': REST})], base=None)
         # the pour: the mixing glass itself lifts and tips over the glass (its lip lands just above the rim)
         gx, gy, _ = self.target('glass')
         self.lip = (gx - 14, gy - 20)
@@ -347,7 +354,7 @@ class Build:
         self.emit(tip, [(0, {'transform': rest}), (st0 + .05, {'transform': rest}), (st0 + .55, {'transform': poured}), (gone + .1, {'transform': poured}), (gone + .2, {'transform': rest})], base=None)
         wrap = self.cls('mix')
         self.emit(wrap, [(0, {'opacity': 1}), (gone - .1, {'opacity': 1}), (gone + .05, {'opacity': 0}), (self.T - .75, {'opacity': 0}), (self.T - .3, {'opacity': 1})])
-        return f'<g class="{wrap}"><g class="{tip}" style="transform-origin:220px 96px"><g class="{sc}" style="transform-origin:190px 116px">{glass}{tin_svg}</g></g></g>'
+        return f'<g class="{wrap}"><g class="{tip}" style="transform-origin:220px 96px"><g class="{sc}" style="transform-origin:190px 116px">{glass}{tin_svg}</g>{whoosh}</g></g>'
 
     # ------------------------------------------------------------ one action's moving parts
     def actor(self, a):
