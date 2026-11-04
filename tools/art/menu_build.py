@@ -4,6 +4,7 @@ Each step is (words under the drawing, [actions]). Actions, in order:
   ('pour', ingredient, oz)   bottle or jigger, into the shaker (before a strain) or the glass
   ('dash', ingredient, n)    ('egg',)   ('mint',)   ('salt',)
   ('ice', 'mix' | 'glass')   ('dry',) dry shake   ('shake',)   ('stir',)   ('strain',)
+  ('swirl',) a gentle swirl of the mixing glass   ('dump',) pour it all, ice and all, into the glass (no strainer)
   ('top', ingredient, oz)    ('float', ingredient, oz)   ('sink', ingredient, oz)   ('garnish',)
 The still frame (reduced motion, and what the poster shows) is the finished drink; everything
 that moves is hidden there. All motion is CSS keyframes, timed in seconds and written as percents.
@@ -17,7 +18,7 @@ G_MIX_IN = 'M162.4 99 L217.6 99 L212.3 189 L167.7 189Z'
 TIN = 'M154 114 L226 114 L220 58 L160 58Z'
 BUILD_SCALE = {'highball': 1.2, 'rocks': 1.38, 'coupe': 1.5, 'flute': 1.0, 'martini': 1.3}
 DUR = {'pour': 1.2, 'jigger': 1.15, 'dash': 1.2, 'egg': 1.3, 'mint': 1.0, 'salt': 1.0, 'ice': 1.0, 'ice-glass': 1.5,
-       'dry': 2.4, 'shake': 2.9, 'stir': 2.8, 'strain': 2.5, 'top': 1.9, 'float': 1.9, 'sink': 1.9, 'garnish': 1.3}
+       'dry': 2.4, 'shake': 2.9, 'stir': 2.8, 'strain': 2.5, 'dump': 2.4, 'swirl': 1.7, 'top': 1.9, 'float': 1.9, 'sink': 1.9, 'garnish': 1.3}
 LEAD, HOLD = .5, 2.8
 VIEW = '104 14 240 204'
 
@@ -45,7 +46,7 @@ class Build:
         for i, (_, actions) in enumerate(d['steps']):
             for a in actions:
                 acts.append([i] + list(a))
-        self.uses_mix = any(a[1] == 'strain' for a in acts)
+        self.uses_mix = any(a[1] in ('strain', 'dump') for a in acts)
         self.gx, self.gs = (290, 1.0) if self.uses_mix else (224, BUILD_SCALE[self.kind])
         # timing: every action gets a slot; a step spans its actions
         t, self.steps = LEAD, []
@@ -60,8 +61,8 @@ class Build:
                 dur = DUR[kind]
             a.append(t)            # a[-2] = start
             a.append(t + dur)      # a[-1] = end
-            a.insert(1, into if kind in ('pour', 'dash', 'egg', 'mint', 'salt', 'stir') else ('glass' if kind != 'ice' else a[2]))
-            if kind == 'strain':
+            a.insert(1, into if kind in ('pour', 'dash', 'egg', 'mint', 'salt', 'stir', 'top', 'swirl') else ('glass' if kind != 'ice' else a[2]))
+            if kind in ('strain', 'dump'):
                 into = 'glass'
             t += dur
         self.acts = acts           # [step, into, kind, *args, t0, t1]
@@ -69,7 +70,7 @@ class Build:
         for i in range(len(d['steps'])):
             mine = [a for a in acts if a[0] == i]
             self.steps.append((mine[0][-2], mine[-1][-1]))
-        self.strain_t = next((a[-2] for a in acts if a[2] == 'strain'), None)
+        self.strain_t = next((a[-2] for a in acts if a[2] in ('strain', 'dump')), None)
         self.garnish_t = next((a[-2] for a in acts if a[2] == 'garnish'), self.T - HOLD)
 
     # ------------------------------------------------------------ helpers
@@ -132,7 +133,10 @@ class Build:
                 bands.append(('pour', a[4] if a[4] else .25, ING[a[3]][2], a))
             elif k == 'strain':
                 bands.append(('strain', mix_vol * 1.2, d.get('base', d['color']), a))
-            elif k in ('top', 'float', 'sink'):
+            elif k == 'dump':   # topped and swirled in the mixing glass already: the finished drink pours in
+                topped = sum(x[4] for x in acts if x[1] == 'mix' and x[2] == 'top')
+                bands.append(('strain', mix_vol * 1.2 + topped, d['color'], a))
+            elif k in ('top', 'float', 'sink') and a[1] == 'glass':
                 bands.append((k, a[4], ING[a[3]][2], a))
         g = self.g
         top_level, bottom = d.get('level', g['top']), g['bottom']
@@ -175,7 +179,10 @@ class Build:
                        + (bubbles_in(self.kind, top_level) if fizzy else '') + '</g>')
             self.emit(c, [(0, {'opacity': 0}), (glass_mix_t, {'opacity': 0}), (glass_mix_t + .5, {'opacity': 1})], base=None)
         elif any(a[2] == 'top' and a[3] in FIZZY for a in acts):
-            overlay = bubbles_in(self.kind, top_level)
+            bc = self.cls('bubs')
+            last = max(x[0][3][-1] for x in under)
+            overlay = f'<g class="{bc}">{bubbles_in(self.kind, top_level)}</g>'
+            self.emit(bc, [(0, {'opacity': 0}), (last - .4, {'opacity': 0}), (last, {'opacity': 1})], base=None)
         sink_svg = ''
         for kind, vol, color, a in sink:
             c = self.cls('sink')
@@ -184,7 +191,7 @@ class Build:
             self.emit(c, [(0, {'opacity': 0}), (a[-2] + .7, {'opacity': 0}), (a[-1] - .2, {'opacity': 1})], base=None)
         # ice in the glass
         ice_svg = ''
-        ice_act = next((a for a in acts if a[2] == 'ice' and a[1] == 'glass'), None)
+        ice_act = next((a for a in acts if a[2] == 'ice' and a[1] == 'glass'), None) or next((a[:-2] + [a[-2] + .7, a[-1]] for a in acts if a[2] == 'dump'), None)
         if ice_act is not None or d.get('served_on_ice'):
             for k, (x, y_, w, r) in enumerate(ICE.get(self.kind, [])):
                 c = self.cls('gice')
@@ -196,7 +203,7 @@ class Build:
         foam_svg = ''
         if d.get('foam'):
             c = self.cls('foam')
-            sa = next(a for a in acts if a[2] == 'strain')
+            sa = next(a for a in acts if a[2] in ('strain', 'dump'))
             foam_svg = f'<g class="{c}">{foam_on(self.kind)}</g>'
             self.emit(c, [(0, {'opacity': 0}), (sa[-1] - .5, {'opacity': 0}), (sa[-1] - .1, {'opacity': 1})], base=None)
         contents_c = self.cls('gc')
@@ -244,8 +251,9 @@ class Build:
         ice melts into the drink (a good drink is about 30% water), then it tips over the glass and pours
         through its strainer."""
         d = self.d
-        strain = next(a for a in acts if a[2] == 'strain')
+        strain = next(a for a in acts if a[2] in ('strain', 'dump'))
         st0, st1 = strain[-2], strain[-1]
+        dumped = strain[2] == 'dump'   # poured ice and all: no strainer
         gone = st1 - .1                       # after the pour, the mixing glass steps away
         shaken = any(a[2] in ('shake', 'dry') for a in acts)
         layers, y = '', MBOT + 1
@@ -278,6 +286,22 @@ class Build:
             lift = f'translateY({H - h0:.1f}px)'
             self.emit(fc, [(0, {'opacity': 0, 'transform': lift}), (mix_t, {'opacity': 0}), (mix_t + .2, {'opacity': 1}), (d0, {'transform': lift}), (d1, {'transform': 'translateY(0)'}),
                            (st0 + .6, {'opacity': 1}), (st1 - .35, {'opacity': 0})], base=None)
+        # topped up right in the mixing glass, then swirled together (Philip's El Diablo): the top rises over the drink,
+        # and the swirl blends it all to the finished color
+        tops = [a for a in acts if a[1] == 'mix' and a[2] == 'top']
+        level = MBOT + 1 - H
+        for a in tops:
+            h = 10 * a[4]
+            c = self.cls('mtop')
+            mixed += f'<g class="{c}" style="transform-origin:190px {f(level)}px"><rect x="158" y="{f(level - h)}" width="64" height="{f(h + .5)}" fill="{ING[a[3]][2]}"/></g>'
+            self.emit(c, [(0, {'opacity': 1, 'transform': 'scaleY(0)'}), (a[-2] + .45, {'transform': 'scaleY(0)'}), (a[-1] - .3, {'transform': 'scaleY(1)'}),
+                          (st0 + .6, {'opacity': 1}), (st1 - .35, {'opacity': 0})], base=None)
+            level -= h
+        swirl = next((a for a in acts if a[1] == 'mix' and a[2] == 'swirl'), None)
+        if tops and swirl:
+            c = self.cls('mswirl')
+            mixed += f'<g class="{c}"><rect x="158" y="{f(level)}" width="64" height="{f(MBOT + 1 - level)}" fill="{d["color"]}"/></g>'
+            self.emit(c, [(0, {'opacity': 0}), (swirl[-2] + .3, {'opacity': 0}), (swirl[-1] - .3, {'opacity': 1}), (st0 + .6, {'opacity': 1}), (st1 - .35, {'opacity': 0})], base=None)
         # mint, muddled in with the rest
         mint_svg = ''
         for a in acts:
@@ -304,7 +328,9 @@ class Build:
                                   (gone, {'opacity': 1}), (gone + .05, {'opacity': 0})], base=None)
         clip = f'{self.slug}-mx'
         # the strainer that holds the ice back as it pours: a julep strainer for stirred drinks, a Hawthorne for shaken
-        if shaken:
+        if dumped:
+            strainer = ''
+        elif shaken:
             strainer = lines('<path d="M160 96 H220" stroke="#a9a29a" stroke-width="3.4"/><path d="M162 100' + ' q3 3.4 6 0' * 10 + '" stroke="#8a8f96" stroke-width="1.5"/>'
                              '<path d="M160 96 L136 88" stroke="#a9a29a" stroke-width="3.4"/>', boil=False)
         else:
@@ -343,6 +369,12 @@ class Build:
             tin_svg = (f'<g class="{tc}">' + wash(f'<path d="{TIN}" fill="#c9c3b8"/>') + lines(f'<path d="{TIN}" stroke-width="2.4"/><path d="M160 104 H220" stroke-width="1.4"/><path d="M167 66 L164 104" stroke="#f4f4f2" stroke-width="3"/>', boil=False)
                        + frost + '</g>')
             self.emit(tc, tin_states)
+        for a in acts:
+            if a[1] == 'mix' and a[2] == 'swirl':
+                n, s0, s1 = 6, a[-2] + .2, a[-1] - .2
+                shake_states += [(s0 - .01, {'transform': REST})] + [(s0 + (s1 - s0) * i / n, {'transform': REST if i in (0, n) else
+                                  ('translate(-3px,0px) rotate(-6deg)' if i % 2 else 'translate(3px,0px) rotate(6deg)')}) for i in range(n + 1)]
+        shake_states.sort(key=lambda st: st[0])
         sc = self.cls('shk')
         self.emit(sc, shake_states + [(self.T, {'transform': REST})], base=None)
         # the pour: the mixing glass itself lifts and tips over the glass (its lip lands just above the rim)
@@ -452,7 +484,7 @@ class Build:
                 st.append((t0 + .2 + (t1 - t0 - .45) * i / n, {'transform': f'rotate({0 if i in (0, n) else (7 if i % 2 else -7)}deg)'}))
             self.emit(c, st, base=None)
             return body
-        if kind == 'strain':   # the mixing glass tips (see mixing_glass); this is its pour
+        if kind in ('strain', 'dump'):   # the mixing glass tips (see mixing_glass); this is its pour
             gx, gy, gby = self.target('glass')
             lx, ly = self.lip
             sc = self.cls('pour')
@@ -470,7 +502,7 @@ class Build:
         if kind == 'dash':
             n = int(a[4])
             return f'{n} dash{"es" if n > 1 else ""} {ING[a[3]][0].replace(" bitters", "")} bitters'
-        return {'egg': '1 egg white', 'mint': 'fresh mint', 'salt': 'a pinch of salt', 'ice': 'ice', 'dry': 'dry shake', 'shake': 'shake!', 'stir': 'stir, stir, stir', 'strain': 'strain'}.get(kind)
+        return {'egg': '1 egg white', 'mint': 'fresh mint', 'salt': 'a pinch of salt', 'ice': 'ice', 'dry': 'dry shake', 'shake': 'shake!', 'stir': 'stir, stir, stir', 'strain': 'strain', 'swirl': 'swirl', 'dump': 'pour it all in'}.get(kind)
 
     def step_css(self):
         out = []

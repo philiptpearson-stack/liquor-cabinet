@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 3 2026: Philip's copy, method and amounts (1 ½ : ¾ : ¾, the Golden Ratio, topped with ginger beer). CLAUDE'S DRAFT, waiting on Philip: the step wording, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 3 2026: Philip's copy, method and amounts (1 ½ : ¾ : ¾, the Golden Ratio; topped with ginger beer in the shaker, swirled, then poured in ice and all). CLAUDE'S DRAFT, waiting on Philip: the step wording, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: El ***Diablo.***
 A bit of devilish fun!
@@ -20,8 +20,8 @@ Makes − 1 + drink
 **Glass:** highball, over ice · **Garnish:** lime wedge
 **Combine ingredients.** Add the tequila, lime juice and crème de cassis to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
-**Strain over fresh ice.** Strain into a highball glass full of fresh ice.
-**Top with ginger beer.**
+**Top with ginger beer.** Pour it right into the shaker, and give it a gentle swirl.
+**Pour it all in.** Pour everything, ice and all, into a highball glass. The drink is already chilling on that ice.
 **Garnish.** A lime wedge on the rim.
 Keep exploring
 → Paloma

@@ -60,10 +60,10 @@ DRINKS = [
                 "Today, it's popular with tequila lovers <em>everywhere.</em>"],
          steps=[('<strong>Combine ingredients.</strong> Add the tequila, lime juice and crème de cassis to your shaker.', [('pour', 'tequila', 1.5), ('pour', 'lime', .75), ('pour', 'cassis', .75)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
-                ('<strong>Strain over fresh ice.</strong> Strain into a highball glass full of fresh ice.', [('ice', 'glass'), ('strain',)]),
-                ('<strong>Top with ginger beer.</strong>', [('top', 'ginger-beer', 4)]),
+                ('<strong>Top with ginger beer.</strong> Pour it right into the shaker, and give it a gentle swirl.', [('top', 'ginger-beer', 4), ('swirl',)]),
+                ('<strong>Pour it all in.</strong> Pour everything, ice and all, into a highball glass. The drink is already chilling on that ice.', [('dump',)]),
                 ('<strong>Garnish.</strong> A lime wedge on the rim.', [('garnish',)])],
-         copy_note=("Nov 3 2026: Philip's copy, method and amounts (1 ½ : ¾ : ¾, the Golden Ratio, topped with ginger beer). "
+         copy_note=("Nov 3 2026: Philip's copy, method and amounts (1 ½ : ¾ : ¾, the Golden Ratio; topped with ginger beer in the shaker, swirled, then poured in ice and all). "
                     "CLAUDE'S DRAFT, waiting on Philip: the step wording, and Keep exploring."),
          related=['paloma', 'dark-and-stormy'], hero=(['cassis', 'tequila'], ['ginger-beer', 'fruit:lime'])),
 
