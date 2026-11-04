@@ -37,8 +37,9 @@ mystery = ''.join(at(x, COUNTER, bottle(shape, color, '?'), s) for x, shape, col
 sp = sparkle(104, 96, 5.5, 'twinkle') + sparkle(156, 90, 4.5, 'twinkle d2') + sparkle(326, 44, 5, 'twinkle d3') + sparkle(302, 100, 4, 'twinkle d2')
 
 
-def bubble(x0, y0, w, h, tail, text, size=12.5, first=None):
-    """A speech bubble at (x0, y0), its tail pointing at tail=(x, y); text is a list of lines (as on The Bartender's Perspective)."""
+def bubble(x0, y0, w, h, tail, text, size=12.5, first=None, cls=''):
+    """A speech bubble at (x0, y0), its tail pointing at tail=(x, y); text is a list of lines, each may hold <tspan>s.
+    It pops from its tail when it has a class (see page.css)."""
     x1, y1 = x0 + w, y0 + h
     tx, ty = tail
     bx = min(max(tx - 10, x0 + 10), x1 - 22)
@@ -46,15 +47,20 @@ def bubble(x0, y0, w, h, tail, text, size=12.5, first=None):
          f'H{x0 + 8} Q{x0} {y1} {x0} {y1 - 8} V{y0 + 8} Q{x0} {y0} {x0 + 8} {y0}Z')
     lh = size * 1.25
     top = y0 + (h - lh * len(text)) / 2 + size * .95
-    words = ''.join(f'<text class="letter" x="{f(x0 + w / 2)}" y="{f(top + k * lh)}" font-size="{(first if (first and k == 0) else size)}" text-anchor="middle">{t}</text>' for k, t in enumerate(text))
-    return f'<path d="{d}" fill="#fffaf1"/>' + wash(f'<path d="{d}" fill="#fffaf1"/>') + lines(f'<path d="{d}" stroke-width="2"/>', boil=False) + words
+    words = ''.join(f'<text class="letter" x="{f(x0 + w / 2)}" y="{f(top + k * lh)}" font-size="{(first if (first and k == 0) else size)}" text-anchor="middle" style="fill:{INK_TEXT}">{t}</text>'
+                    for k, t in enumerate(text))
+    c = f' class="{cls}" style="transform-origin:{tx}px {ty}px"' if cls else ''
+    return f'<g{c}><path d="{d}" fill="#fffaf1"/>' + wash(f'<path d="{d}" fill="#fffaf1"/>') + lines(f'<path d="{d}" stroke-width="2"/>', boil=False) + words + '</g>'
 
 
-# the hello lives in the drawing (Philip, Nov 3): "Hi there! I'm Phil!"
-hello = bubble(86, 30, 86, 42, (180, 66), ['Hi there!', "I'm Phil!"], 12.5, first=14)
+INK_TEXT = '#3a2532'
+PLUM = '#8b3a63'
+# Phil says two things (Philip, Nov 4): hello, then the question that opens the doors below. They pop in one after the other.
+hello = (bubble(84, 28, 88, 42, (180, 66), ['Hi there!', "I'm Phil!"], 12.5, first=14, cls='hello-1')
+         + bubble(250, 58, 76, 46, (226, 92), ['How can I', f'help <tspan style="fill:{PLUM};font-size:15px">YOU</tspan>?'], 12.5, cls='hello-2'))
 scene = svg_view(backbar + place(phil, 200, 206) + counter + shaker + sour + mystery + sp + hello,
-                 "Phil, the bartender, waves hello from behind his bar and says: Hi there! I'm Phil! On the bar: a shaker and a whiskey sour on one side, "
-                 'and three bottles with question marks on their labels on the other', '74 24 252 164')
+                 "Phil, the bartender, waves hello from behind his bar and says: Hi there! I'm Phil! Then: How can I help YOU? On the bar: a shaker and a whiskey sour on one side, "
+                 'and three bottles with question marks on their labels on the other', '72 22 258 166')
 (D / 'scenes' / 'bar.svg').write_text(scene + '\n')
 
 # ---------------------------------------------------------------- door icons (120 x 120)
@@ -118,6 +124,10 @@ shelf_sp = sparkle(166, 70, 5.5, 'twinkle') + sparkle(236, 62, 5, 'twinkle d2') 
 (D / 'page.css').write_text('/* The Bar (front page): scene motion. Written by tools/art/front_scenes.py; edit it there. */\n' + TWINKLE_CSS + '\n'
                             '.hi-wave{animation:hi-wave 1.3s ease-in-out infinite alternate}\n'
                             '@keyframes hi-wave{from{transform:rotate(-10deg)}to{transform:rotate(12deg)}}\n'
+                            '/* the two speech bubbles: hello, then the question; they hold, then start again (8 s). Still frame: both. */\n'
+                            '.hello-1,.hello-2{animation:8s ease-out infinite}.hello-1{animation-name:hello-1}.hello-2{animation-name:hello-2}\n'
+                            '@keyframes hello-1{0%{transform:scale(0);opacity:1}4%{transform:scale(1.1)}6%{transform:scale(1)}92%{transform:scale(1);opacity:1}97%{opacity:0}100%{opacity:0;transform:scale(1)}}\n'
+                            '@keyframes hello-2{0%{transform:scale(0);opacity:1}22%{transform:scale(0)}26%{transform:scale(1.1)}28%{transform:scale(1)}92%{transform:scale(1);opacity:1}97%{opacity:0}100%{opacity:0;transform:scale(1)}}\n'
                             '/* the front door: bigger pictures on the doors, like the Classics */\n'
                             '.flow .doors .door-icon{width:96px;height:96px}.flow .doors .door.wide .door-icon{width:96px;height:96px}\n'
                             '.flow .doors .door{min-height:10rem}\n')
