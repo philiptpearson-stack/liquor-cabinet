@@ -308,7 +308,7 @@ def write_menu():
         "  <p class=\"punch\">What'll it be?</p>",
         f'  <form class="search" role="search" data-search="{index}" data-none="Nothing on the menu like that yet. Try a drink, or just one ingredient.">',
         '    <label for="menu-q">Looking for something?</label>',
-        '    <input id="menu-q" type="search" placeholder="Try “Negroni” or “gin and lime”" autocomplete="off" enterkeyhint="go">',
+        '    <input id="menu-q" type="search" placeholder="Try “Negroni” or “Old Fashioned”" autocomplete="off" enterkeyhint="go">',
         '    <p class="search-count" aria-live="polite"></p>',
         '    <ul class="search-results"></ul>',
         '  </form>', '',
@@ -321,7 +321,7 @@ def write_menu():
     write_copy(MENU / 'copy.md', 'The Cocktail Menu', story,
                "Nov 3 2026: the menu's front door (Philip: Classics is its own door, like the rest; and a search). \"What'll it be?\" is Philip's (moved here from Classics). "
                "CLAUDE'S DRAFT, waiting on Philip: \"Looking for something?\" (and, not checked here because they aren't page text: the search box's hint, "
-               "\"Try “Negroni” or “gin and lime”\", and its no-match line, \"Nothing on the menu like that yet. Try a drink, or just one ingredient.\"), and the genres' working titles.")
+               "\"Try “Negroni” or “Old Fashioned”\", and its no-match line, \"Nothing on the menu like that yet. Try a drink, or just one ingredient.\"), and the genres' working titles.")
     (MENU / 'page.json').write_text(json.dumps({
         'title': 'The Cocktail Menu · The Bottle and the Bartender',
         'description': "What'll it be? Search the menu, or start with the Classics.",
