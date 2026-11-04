@@ -53,18 +53,18 @@ DRINKS = [
          related=['mamie-taylor', 'el-diablo'], hero=(['dark-rum'], ['ginger-beer', 'fruit:lime'])),
 
     dict(slug='el-diablo', name='El Diablo', glass='highball', color='#c26f86', base='#9b3b62', garnish=['lime-wedge'],
-         recipe=[(2, 'oz', 'tequila'), (.5, 'oz', 'lime juice'), (.5, 'oz', 'crème de cassis'), (4, 'oz', 'ginger beer')],
+         recipe=[(1.5, 'oz', 'tequila'), (.75, 'oz', 'lime juice'), (.75, 'oz', 'crème de cassis'), (4, 'oz', 'ginger beer')],
          glass_line=('highball, over ice', 'lime wedge'),
-         punch='A little devil.',
-         lines=['Trader Vic printed this one way back in 1946: tequila, lime and ginger, with a splash of blackcurrant liqueur.',
-                'Shake the cassis right in with the tequila and lime, and every sip comes out balanced.'],
-         steps=[('<strong>Combine ingredients.</strong> Add the tequila, lime juice and crème de cassis to your shaker.', [('pour', 'tequila', 2), ('pour', 'lime', .5), ('pour', 'cassis', .5)]),
+         punch='A bit of devilish fun!',
+         lines=['Trader Vic printed this one back in 1946: tequila, lime and ginger, and a splash of crème de cassis (blackcurrant liqueur).',
+                "Today, it's popular with tequila lovers <em>everywhere.</em>"],
+         steps=[('<strong>Combine ingredients.</strong> Add the tequila, lime juice and crème de cassis to your shaker.', [('pour', 'tequila', 1.5), ('pour', 'lime', .75), ('pour', 'cassis', .75)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
                 ('<strong>Strain over fresh ice.</strong> Strain into a highball glass full of fresh ice.', [('ice', 'glass'), ('strain',)]),
                 ('<strong>Top with ginger beer.</strong>', [('top', 'ginger-beer', 4)]),
                 ('<strong>Garnish.</strong> A lime wedge on the rim.', [('garnish',)])],
-         copy_note=("Nov 3 2026: the method is Philip's (shake the tequila, lime and cassis with ice, strain over fresh ice in a highball, top with ginger beer). "
-                    "CLAUDE'S DRAFT, waiting on Philip: the amounts, every line, and the step wording."),
+         copy_note=("Nov 3 2026: Philip's copy, method and amounts (1 ½ : ¾ : ¾, the Golden Ratio, topped with ginger beer). "
+                    "CLAUDE'S DRAFT, waiting on Philip: the step wording, and Keep exploring."),
          related=['paloma', 'dark-and-stormy'], hero=(['cassis', 'tequila'], ['ginger-beer', 'fruit:lime'])),
 
     dict(slug='french-75', name='French 75', glass='flute', color='#f1e19c', base='#ece3b0', garnish=['lemon-twist'],
