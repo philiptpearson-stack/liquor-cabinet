@@ -6,7 +6,7 @@
 # Dealer's Choice: a door that deals you a page picked for you (the deck is "dealers_choice" in src/site.json).
 
 The Bottle and the ***Bartender.***
-Hi!
+Hi there!
 I'm Phil.
 Welcome to my bar!
 How can I help **YOU**?
