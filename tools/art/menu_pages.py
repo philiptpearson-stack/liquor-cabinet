@@ -79,8 +79,6 @@ def hero(d):
     layers = None
     if d['slug'] == 'dark-and-stormy':
         layers = [(.68, 1, '#5a2e14')]
-    if d['slug'] == 'el-diablo':
-        layers = [(0, .3, '#6a2347')]
     drink = glass(d['glass'], f'{d["slug"]}-hero', d['color'], d['garnish'], iced=served_iced, foam=d.get('foam', False), layers=layers, bubbles=fizzy,
                   top=d.get('level'))
     out += f'<g transform="translate(200 184) scale({HERO_SCALE[d["glass"]]})">{drink}</g>'
@@ -93,7 +91,7 @@ def hero(d):
 
 def icon(d):
     served_iced = any(a[0] == 'ice' and a[1] == 'glass' for _, acts in d['steps'] for a in acts)
-    layers = [(.68, 1, '#5a2e14')] if d['slug'] == 'dark-and-stormy' else ([(0, .3, '#6a2347')] if d['slug'] == 'el-diablo' else None)
+    layers = [(.68, 1, '#5a2e14')] if d['slug'] == 'dark-and-stormy' else None
     return at(60, 112, glass(d['glass'], f'{d["slug"]}-ic', d['color'], d['garnish'], iced=served_iced, foam=d.get('foam', False), layers=layers, top=d.get('level')),
               ICON_SCALE[d['glass']])
 
