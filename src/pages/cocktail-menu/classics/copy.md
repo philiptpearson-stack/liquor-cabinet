@@ -8,8 +8,8 @@
 The Cocktail Menu: ***Classics.***
 These are the *Classics.*
 Tap any drink for its recipe and step-by-step, animated how-to.
-*New to mixing drinks? Lots of these classics are built on one simple formula.*
-→ Cocktails How-To
+*New to mixing drinks?*
+Check out our tips and tricks page for all the cocktail basics you need →
 Boulevardier
 Daiquiri
 Dark and Stormy
