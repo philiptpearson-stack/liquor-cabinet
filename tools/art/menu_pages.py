@@ -237,9 +237,14 @@ def drink_story(d):
     if d.get('gr'):
         gr = d['gr'] if isinstance(d['gr'], list) else [d['gr']]   # one line, or a few short ones
         s += ['  <aside class="note">'] + [f'    <p><em>{g}</em></p>' for g in gr] + [f'    <p class="go"><a href="@page:cocktails-how-to/golden-ratio">{d.get("gr_link", "→ The Golden Ratio")}</a></p>', '  </aside>']
-    if d.get('gr_ask'):   # a question in the yellow note, its answer a link to the Golden Ratio in the same line (Philip's El Diablo)
+    # a question in the yellow note, its answer a link to the Golden Ratio in the same line (Philip's El Diablo). Where the story
+    # is the point (Philip's Mamie Taylor), gr_ask_end puts it after the step-by-step instead, so it doesn't break up the story.
+    ask = []
+    if d.get('gr_ask'):
         q, link = d['gr_ask']
-        s += ['  <aside class="note">', f'    <p><em>{q}</em> <a class="inline-go" href="@page:cocktails-how-to/golden-ratio">{link}</a></p>', '  </aside>']
+        ask = ['  <aside class="note">', f'    <p><em>{q}</em> <a class="inline-go" href="@page:cocktails-how-to/golden-ratio">{link}</a></p>', '  </aside>']
+    if not d.get('gr_ask_end'):
+        s += ask
     if d.get('note_soon'):   # a pointer to a page still to come, in the yellow note
         s += ['  <aside class="note">', f'    <p class="go soon"><span>{d["note_soon"]}</span> <span class="stamp">Coming soon</span></p>', '  </aside>']
     if d.get('formula'):
@@ -260,6 +265,8 @@ def drink_story(d):
     s += ['    </ol></figcaption>', '  </figure>']
     if d.get('tip'):
         s += [f'  <p class="t">{d["tip"]}</p>']
+    if d.get('gr_ask_end'):
+        s += ask
     s += ['', '  <nav class="end-doors" aria-label="Where next">', '    <h2>Keep exploring</h2>']
     for r in d['related']:
         s += [f'    <p class="go"><a href="../{r}/index.html">→ {BY_SLUG[r]["name"]}</a></p>']

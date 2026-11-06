@@ -103,16 +103,21 @@ DRINKS = [
     dict(slug='mamie-taylor', name='Mamie Taylor', glass='highball', color='#e2bb6c', base='#c98f3e', garnish=['lime-wheel'],
          recipe=[(1.5, 'oz', 'blended Scotch'), (.75, 'oz', 'lime juice'), (.75, 'oz', 'simple syrup'), (4, 'oz', 'ginger beer')],
          glass_line=('highball, over ice', 'lime wheel'),
-         punch='The original Scotch and ginger.',
-         lines=['Named for a popular opera singer of the 1890s, the Mamie Taylor was a full-blown craze by 1900.',
-                'Decades before the Moscow Mule, this was the ginger highball everybody ordered.'],
+         punch=['The original Moscow Mule!', '<span class="hl"><em>Really.</em></span>'],
+         lines=['Named for a popular opera singer of the 1890s, the Mamie Taylor was a full-blown national craze.',
+                "By 1900, it was <em>the</em> drink of the summer. Politicians, celebrities and socialites couldn't get enough.",
+                'But like so many drink fads (the Mojito of the early 2000s, the Fireball shot of the mid-2010s), it faded just as fast.',
+                'In 1904, the New York Times was already calling it “the famous Mamie Taylor of a few years ago.” It lasted until Prohibition and never came back. '
+                'The Moscow Mule, from 1941, is basically its descendant.'],
+         gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          steps=[('<strong>Combine ingredients.</strong> Add the Scotch, lime juice and simple syrup to your shaker.', [('pour', 'scotch', 1.5), ('pour', 'lime', .75), ('pour', 'simple', .75)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
                 ('<strong>Top with ginger beer.</strong> Pour it right into the shaker, and give it a gentle swirl.', [('top', 'ginger-beer', 4), ('swirl',)]),
                 ('<strong>Pour it all in.</strong> Pour everything, ice and all, into a highball glass. The drink is already chilling on that ice.', [('dump',)]),
                 ('<strong>Garnish.</strong> A lime wheel on the rim.', [('garnish',)])],
-         copy_note=("Nov 6 2026: Philip: add simple syrup, and build it like the El Diablo (1 ½ : ¾ : ¾, the Golden Ratio; topped with ginger beer in the shaker, "
-                    "swirled, then poured in ice and all); the steps follow his El Diablo. CLAUDE'S DRAFT, waiting on Philip: the opener and intro (his story is coming), and Keep exploring."),
+         copy_note=("Nov 6 2026: Philip's copy from chat: the opener (\"Really.\" in plum, like the French 75's \"Seriously.\"), the story, and the El Diablo's balance note, "
+                    "moved below the step-by-step so it doesn't interrupt the story. Fixed: \"mid-2010s\". Philip: simple syrup, built like the El Diablo (1 ½ : ¾ : ¾; "
+                    "topped with ginger beer in the shaker, swirled, then poured in ice and all); the steps follow his El Diablo. CLAUDE'S DRAFT, waiting on Philip: Keep exploring."),
          related=['el-diablo', 'dark-and-stormy'], hero=(['syrup', 'scotch'], ['ginger-beer', 'fruit:lime'])),
 
     dict(slug='manhattan', name='Manhattan', glass='coupe', color='#8f3b1f', garnish=['cherry'],
