@@ -3,12 +3,13 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 3 2026: Philip's copy, method and amounts (1 ½ : ¾ : ¾, the Golden Ratio; topped with ginger beer in the shaker, swirled, then poured in ice and all). CLAUDE'S DRAFT, waiting on Philip: the step wording, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 6 2026: Philip's copy from chat (teach, don't trivia): the intro, and the balance note with its link to the Golden Ratio. Nov 3: Philip's copy, method and amounts (1 ½ : ¾ : ¾, the Golden Ratio; topped with ginger beer in the shaker, swirled, then poured in ice and all). CLAUDE'S DRAFT, waiting on Philip: the step wording, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: El ***Diablo.***
 A bit of devilish fun!
-Trader Vic printed this one back in 1946: tequila, lime and ginger, and a splash of crème de cassis (blackcurrant liqueur).
-Today, it's popular with tequila lovers *everywhere.*
+This tequila classic dates to 1946, and it's *perfect.*
+*Need a quick how-to on achieving balance in your at-home cocktails?*
+Click HERE.
 Here's how you make one:
 The Cocktail Menu · Classics
 El Diablo

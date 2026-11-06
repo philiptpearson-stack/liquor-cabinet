@@ -147,6 +147,8 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 /* In-text clickthroughs: "→ Need a refresher on ...?" */
 .go{font-size:1.08rem;line-height:1.45;font-weight:800}
 .go a{color:var(--accent);text-decoration:none;border-bottom:2px solid currentColor}
+/* a link that finishes a sentence in a note (El Diablo's "Click HERE."): same look as a .go link */
+.inline-go{color:var(--accent);text-decoration:none;border-bottom:2px solid currentColor;font-weight:800;white-space:nowrap}
 .go.soon{color:var(--muted);font-weight:700;display:flex;flex-wrap:wrap;align-items:center;gap:.35rem .6rem}
 .go.soon .stamp{font-weight:800}
 .end-doors{border-top:1.5px dashed var(--rule);padding-top:1.4rem;margin-top:.8rem;display:flex;flex-direction:column;gap:.9rem}
