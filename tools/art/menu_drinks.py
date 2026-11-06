@@ -26,12 +26,14 @@ DRINKS = [
     dict(slug='daiquiri', name='Daiquiri', glass='coupe', color='#e3eab4', garnish=['lime-wheel'],
          recipe=[(2, 'oz', 'white rum'), (1, 'oz', 'simple syrup'), (1, 'oz', 'lime juice (fresh squeezed)')],
          glass_line=('coupe', 'lime wheel'),
-         punch='Forget the blender.',
-         lines=['The original Daiquiri was named for a beach near Santiago, Cuba, and it was just three ingredients: rum, lime and sugar.',
+         punch='Simple and sublime.',
+         lines=['The original Daiquiri was just three ingredients: rum, lime and sugar.',
                 'Cold, bright and tart.'],
-         gr="It's The Golden Ratio in its simplest form: two parts rum, one part simple syrup, one part lime juice.",
+         gr="It's the Golden Ratio in its simplest form.",
+         gr_link='Visit our Golden Ratio page to achieve <em>balance</em> in your at-home cocktails →',
          lead='This is how you make one:',
-         copy_note=("Nov 3 2026: Philip's copy from chat: the intro, the Golden Ratio note and \"This is how you make one:\". "
+         copy_note=("Nov 6 2026: Philip's copy from chat (teach, don't trivia): the opener, the intro and the Golden Ratio note and its link. "
+                    "Nov 3: \"This is how you make one:\". "
                     "Claude's, waiting on Philip: the recipe card, the steps, and Keep exploring."),
          steps=[('<strong>Combine ingredients.</strong> Add the rum, simple syrup and lime juice to your shaker.', [('pour', 'white-rum', 2), ('pour', 'simple', 1), ('pour', 'lime', 1)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until the shaker is frosty cold.', [('ice', 'mix'), ('shake',)]),

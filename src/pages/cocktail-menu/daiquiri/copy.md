@@ -3,14 +3,14 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 3 2026: Philip's copy from chat: the intro, the Golden Ratio note and "This is how you make one:". Claude's, waiting on Philip: the recipe card, the steps, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 6 2026: Philip's copy from chat (teach, don't trivia): the opener, the intro and the Golden Ratio note and its link. Nov 3: "This is how you make one:". Claude's, waiting on Philip: the recipe card, the steps, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Daiquiri.***
-Forget the blender.
-The original Daiquiri was named for a beach near Santiago, Cuba, and it was just three ingredients: rum, lime and sugar.
+Simple and sublime.
+The original Daiquiri was just three ingredients: rum, lime and sugar.
 Cold, bright and tart.
-*It's The Golden Ratio in its simplest form: two parts rum, one part simple syrup, one part lime juice.*
-→ The Golden Ratio
+*It's the Golden Ratio in its simplest form.*
+Visit our Golden Ratio page to achieve *balance* in your at-home cocktails →
 This is how you make one:
 The Cocktail Menu · Classics
 Daiquiri
