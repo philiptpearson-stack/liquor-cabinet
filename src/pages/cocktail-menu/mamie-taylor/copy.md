@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 6 2026: Philip: add simple syrup, and build it like the El Diablo (1 ½ : ¾ : ¾, the Golden Ratio; topped with ginger beer in the shaker, swirled, then poured in ice and all); the steps follow his El Diablo. CLAUDE'S DRAFT, waiting on Philip: the opener and intro (his story is coming), and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Mamie ***Taylor.***
 The original Scotch and ginger.
@@ -13,15 +13,17 @@ Here's how you make one:
 The Cocktail Menu · Classics
 Mamie Taylor
 Makes − 1 + drink
-2 oz blended Scotch
-½ oz lime juice
+1 ½ oz blended Scotch
+¾ oz lime juice
+¾ oz simple syrup
 4 oz ginger beer
 **Glass:** highball, over ice · **Garnish:** lime wheel
-**Fill with ice.** Fill a highball glass with ice.
-**Scotch and lime.** Add the Scotch and lime juice.
-**Top with ginger beer.**
-**Garnish.** A lime wheel.
+**Combine ingredients.** Add the Scotch, lime juice and simple syrup to your shaker.
+**Shake.** Add ice and shake hard, until frosty cold.
+**Top with ginger beer.** Pour it right into the shaker, and give it a gentle swirl.
+**Pour it all in.** Pour everything, ice and all, into a highball glass. The drink is already chilling on that ice.
+**Garnish.** A lime wheel on the rim.
 Keep exploring
-→ Dark and Stormy
 → El Diablo
+→ Dark and Stormy
 ← Back to Classics
