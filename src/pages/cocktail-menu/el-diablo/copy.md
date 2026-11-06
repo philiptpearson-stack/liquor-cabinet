@@ -3,13 +3,12 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 6 2026: Philip's copy from chat (teach, don't trivia): the intro, and the balance note with its link to the Golden Ratio. Nov 3: Philip's copy, method and amounts (1 ½ : ¾ : ¾, the Golden Ratio; topped with ginger beer in the shaker, swirled, then poured in ice and all). CLAUDE'S DRAFT, waiting on Philip: the step wording, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 6 2026: Philip's copy from chat (teach, don't trivia): the opener ("Fantastic." in plum, like "Seriously."), the intro, and the balance note with its link to the Golden Ratio, below the step-by-step since it isn't part of the story. Nov 3: Philip's copy, method and amounts (1 ½ : ¾ : ¾, the Golden Ratio; topped with ginger beer in the shaker, swirled, then poured in ice and all). CLAUDE'S DRAFT, waiting on Philip: the step wording, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: El ***Diablo.***
-A bit of devilish fun!
-This tequila classic dates to 1946, and it's *perfect.*
-*Need a quick how-to on achieving balance in your at-home cocktails?*
-Click HERE.
+*“I want a drink with tequila. But not a Margarita.”*
+*Fantastic.* Can I introduce you to the El Diablo?
+This tequila classic dates to 1946, and it's *perfect*.
 Here's how you make one:
 The Cocktail Menu · Classics
 El Diablo
@@ -24,6 +23,8 @@ Makes − 1 + drink
 **Top with ginger beer.** Pour it right into the shaker, and give it a gentle swirl.
 **Pour it all in.** Pour everything, ice and all, into a highball glass. The drink is already chilling on that ice.
 **Garnish.** A lime wedge on the rim.
+*Need a quick how-to on achieving balance in your at-home cocktails?*
+Click HERE.
 Keep exploring
 → Paloma
 → Dark and Stormy

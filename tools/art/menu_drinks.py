@@ -57,15 +57,16 @@ DRINKS = [
     dict(slug='el-diablo', name='El Diablo', glass='highball', color='#c26f86', base='#9b3b62', garnish=['lime-wedge'],
          recipe=[(1.5, 'oz', 'tequila'), (.75, 'oz', 'lime juice'), (.75, 'oz', 'crème de cassis'), (4, 'oz', 'ginger beer')],
          glass_line=('highball, over ice', 'lime wedge'),
-         punch='A bit of devilish fun!',
-         lines=["This tequila classic dates to 1946, and it's <em>perfect.</em>"],
-         gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'),
+         punch=['<em>“I want a drink with tequila. But not a Margarita.”</em>', '<span class="hl"><em>Fantastic.</em></span> Can I introduce you to the El Diablo?'],
+         lines=["This tequila classic dates to 1946, and it's <em>perfect</em>."],
+         gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          steps=[('<strong>Combine ingredients.</strong> Add the tequila, lime juice and crème de cassis to your shaker.', [('pour', 'tequila', 1.5), ('pour', 'lime', .75), ('pour', 'cassis', .75)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
                 ('<strong>Top with ginger beer.</strong> Pour it right into the shaker, and give it a gentle swirl.', [('top', 'ginger-beer', 4), ('swirl',)]),
                 ('<strong>Pour it all in.</strong> Pour everything, ice and all, into a highball glass. The drink is already chilling on that ice.', [('dump',)]),
                 ('<strong>Garnish.</strong> A lime wedge on the rim.', [('garnish',)])],
-         copy_note=("Nov 6 2026: Philip's copy from chat (teach, don't trivia): the intro, and the balance note with its link to the Golden Ratio. "
+         copy_note=("Nov 6 2026: Philip's copy from chat (teach, don't trivia): the opener (\"Fantastic.\" in plum, like \"Seriously.\"), the intro, and the balance note "
+                    "with its link to the Golden Ratio, below the step-by-step since it isn't part of the story. "
                     "Nov 3: Philip's copy, method and amounts (1 ½ : ¾ : ¾, the Golden Ratio; topped with ginger beer in the shaker, swirled, then poured in ice and all). "
                     "CLAUDE'S DRAFT, waiting on Philip: the step wording, and Keep exploring."),
          related=['paloma', 'dark-and-stormy'], hero=(['cassis', 'tequila'], ['ginger-beer', 'fruit:lime'])),
