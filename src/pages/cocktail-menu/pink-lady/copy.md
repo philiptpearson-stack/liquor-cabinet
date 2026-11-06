@@ -8,7 +8,7 @@
 The Cocktail Menu: Pink ***Lady.***
 Pretty in pink. Stronger than it looks.
 Said to be named for a hit 1911 Broadway musical, the Pink Lady is gin and applejack, with lemon, grenadine and a silky egg white foam.
-*It's The Golden Ratio, too: two parts spirit (gin and applejack), one part grenadine, one part lemon.*
+*It's the Golden Ratio, too: two parts spirit (gin and applejack), one part grenadine, one part lemon.*
 → The Golden Ratio
 Here's how you make one:
 The Cocktail Menu · Classics

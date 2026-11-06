@@ -9,7 +9,7 @@ The Cocktail Menu: Whiskey ***Sour.***
 Where it all starts.
 The Whiskey Sour was already in print in 1862, in the very first American bartender's guide.
 Bourbon, lemon and sugar, with an optional egg white for a silky foam on top.
-*It's The Golden Ratio, the classic way: two parts bourbon, one part simple syrup, one part lemon.*
+*It's the Golden Ratio, the classic way: two parts bourbon, one part simple syrup, one part lemon.*
 → The Golden Ratio
 Here's how you make one:
 The Cocktail Menu · Classics

@@ -9,7 +9,7 @@ The Cocktail Menu: Southside ***Fizz.***
 Think of it as a gin Mojito, with fizz.
 Legend ties the Southside to Chicago's South Side during Prohibition. Nobody's proven it, but it's a good story.
 Gin, lime and fresh mint, shaken, then topped with soda water.
-*Under the bubbles, it's The Golden Ratio: two parts gin, one part simple syrup, one part lime.*
+*Under the bubbles, it's the Golden Ratio: two parts gin, one part simple syrup, one part lime.*
 → The Golden Ratio
 Here's how you make one:
 The Cocktail Menu · Classics

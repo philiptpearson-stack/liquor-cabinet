@@ -8,7 +8,7 @@
 The Cocktail Menu: French ***75.***
 The French 75 is a little gin sour, with bubbles on top!
 *Seriously.*
-*It's The Golden Ratio, just smaller!*
+*It's the Golden Ratio, just smaller!*
 Visit our Golden Ratio page to revisit achieving *balance* in a cocktail →
 Here's how you make one:
 The Cocktail Menu · Classics

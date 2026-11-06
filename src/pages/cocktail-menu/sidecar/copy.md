@@ -9,7 +9,7 @@ The Cocktail Menu: ***Sidecar.***
 Brandy's best sour.
 The Sidecar showed up around the end of World War I. Paris and London both claim it.
 Cognac, orange liqueur and lemon: rich, bright and dangerously easy to drink.
-*It's The Golden Ratio, with brandy: two parts cognac, one part orange liqueur, one part lemon.*
+*It's the Golden Ratio, with brandy: two parts cognac, one part orange liqueur, one part lemon.*
 → The Golden Ratio
 Here's how you make one:
 The Cocktail Menu · Classics

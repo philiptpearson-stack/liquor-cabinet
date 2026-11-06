@@ -9,7 +9,7 @@ The Cocktail Menu: ***Negroni.***
 Bitter, sweet and beautifully red.
 As the story goes, around 1919 in Florence, Count Camillo Negroni asked his bartender to make his Americano stronger, with gin instead of soda water.
 It's an acquired taste. Once you've acquired it, there's no going back.
-*It's The Golden Ratio, with bitter in place of sour: two parts gin, one part sweet vermouth, one part Campari.*
+*It's the Golden Ratio, with bitter in place of sour: two parts gin, one part sweet vermouth, one part Campari.*
 → The Golden Ratio
 Here's how you make one:
 The Cocktail Menu · Classics
