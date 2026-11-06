@@ -3,14 +3,13 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 6 2026: Philip's copy from chat: the opener, the intro and the Golden Ratio note (teach the formula; skip the trivia). Claude's, waiting on Philip: the recipe card, the steps, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: French ***75.***
-Named after a cannon. Seriously.
-The French 75 takes its name from a French field gun of World War I, because it hits just as hard.
-Underneath all those bubbles, it's a little gin sour.
-*It's The Golden Ratio, just smaller: one ounce of gin, a half ounce each of simple syrup and lemon. Then Champagne fills the glass.*
-→ The Golden Ratio
+Notice the formula. Seriously.
+The French 75 is a little gin sour. With bubbles on top.
+*It's The Golden Ratio, just smaller!*
+Visit our Golden Ratio page to revisit achieving *balance* in a cocktail →
 Here's how you make one:
 The Cocktail Menu · Classics
 French 75
