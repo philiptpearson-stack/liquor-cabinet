@@ -239,7 +239,7 @@ def drink_story(d):
         s += ['  <aside class="note">'] + [f'    <p><em>{g}</em></p>' for g in gr] + [f'    <p class="go"><a href="@page:cocktails-how-to/golden-ratio">{d.get("gr_link", "→ The Golden Ratio")}</a></p>', '  </aside>']
     if d.get('formula'):
         s += [f'  <p class="t">{d["formula"]}</p>']
-    s += [f'  <p class="t">{d.get("lead", LEAD)}</p>',
+    s += [f'  <p class="punch">{d.get("lead", LEAD)}</p>',   # in the big display type, like the opener (Philip, Nov 6)
           f'  <section class="recipe-card" aria-label="Recipe: {d["name"]}">',
           f'    <p class="rc-kicker">The Cocktail Menu · {GENRE_NAME[genre(d)]}</p>',
           f'    <p class="rc-name">{d["name"]}</p>',

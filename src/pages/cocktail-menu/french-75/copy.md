@@ -6,7 +6,8 @@
 # Nov 6 2026: Philip's copy from chat (second round): the opener, "Seriously." and the Golden Ratio note (teach the formula; skip the trivia). Claude's, waiting on Philip: the recipe card, the steps, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: French ***75.***
-The French 75 is a little gin sour. With bubbles on top!
+The French 75 is a little gin sour.
+With bubbles on top!
 Seriously.
 *It's The Golden Ratio, just smaller!*
 Visit our Golden Ratio page to revisit achieving *balance* in a cocktail →

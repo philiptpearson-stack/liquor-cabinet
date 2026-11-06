@@ -70,8 +70,8 @@ DRINKS = [
     dict(slug='french-75', name='French 75', glass='flute', color='#f1e19c', base='#ece3b0', garnish=['lemon-twist'],
          recipe=[(1, 'oz', 'gin'), (.5, 'oz', 'simple syrup'), (.5, 'oz', 'lemon juice (fresh squeezed)'), (3, 'oz', 'Champagne, or another dry sparkling wine')],
          glass_line=('Champagne flute', 'lemon twist'),
-         punch='The French 75 is a little gin sour. With bubbles on top!',
-         lines=['Seriously.'],
+         punch='The French 75 is a little gin sour.<br>With bubbles on top!<br>Seriously.',   # three lines, all in the big type (Philip, Nov 6)
+         lines=[],
          gr="It's The Golden Ratio, just smaller!",
          gr_link='Visit our Golden Ratio page to revisit achieving <em>balance</em> in a cocktail →',
          copy_note=("Nov 6 2026: Philip's copy from chat (second round): the opener, \"Seriously.\" and the Golden Ratio note (teach the formula; skip the trivia). "
