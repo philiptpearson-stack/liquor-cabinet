@@ -8,14 +8,17 @@
 The Cocktail Menu: ***Manhattan.***
 It's how the Old Fashioned got its name.
 No, *really.* It is.
-Born in New York in the 1880s, the Manhattan is a variation on the classic “Cocktail” formula of *Spirit, Sugar, and Bitters.*
+Born in New York in the 1880s, the Manhattan is a variation on the classic “Cocktail” formula of *Spirit, Sugar, Water and Bitters.*
 And remember! In those days, not every mixed drink was called “Cocktail” by default.
 A Sour was a Sour and a Julep was a Julep — and you didn't call either one a Cocktail, because Cocktail meant something specific:
 “A stimulating liquor, composed of spirits of any kind, sugar, water, and bitters.”
 — The Balance, and Columbian Repository, Hudson, New York, 1806
 But by the late 1870s, America's bar industry was booming, and bartenders were *experimenting.*
-“Improving” whiskey cocktails with absinthe, curaçao, vermouth or maraschino. And when variations like the Manhattan burst onto the scene, well...
-Drinkers who wanted a good ol' plain Cocktail started asking for it “the Old Fashioned” way.
+“Improving” whiskey cocktails.
+Adding absinthe rinses.
+Substituting curaçao, vermouth or maraschino for plain sugar.
+And when variations like the Manhattan burst onto the scene and began getting national attention, well...
+Drinkers who wanted a good ol' plain Whiskey Cocktail started asking for it “the Old Fashioned” way.
 And the rest, as they say, is history.
 Here's how you make a *fantastic* Manhattan:
 The Cocktail Menu · Classics
