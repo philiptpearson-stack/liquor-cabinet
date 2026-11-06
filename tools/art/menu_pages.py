@@ -199,7 +199,7 @@ def search_index():
         else:
             method = 'built'            # poured over ice and topped up, maybe a quick stir
         part = html.unescape(GENRE_NAME[genre(d)]).lower()
-        words = ' '.join(extra + [d['glass_line'][0], d['glass_line'][1], method, d['glass'], part, 'classic' if genre(d) == 'classics' else 'oddity'])
+        words = ' '.join(extra + [d['glass_line'][0], d['glass_line'][1], method, d['glass'], part, {'classics': 'classic', 'arcane-oddities': 'oddity odd', 'modern-variations': 'modern variation new'}.get(genre(d), '')])
         out.append({'s': d['slug'], 'n': html.unescape(d['name']), 'h': d['slug'] + '/index.html', 'i': ' · '.join(ings), 'k': words})
     return out
 
@@ -350,7 +350,9 @@ def write_menu():
                                    '@keyframes ta-da{from{transform:rotate(-6deg)}to{transform:rotate(6deg)}}\n'
                                    '.flow .doors .door-icon{width:96px;height:96px}.flow .doors .door.wide .door-icon{width:96px;height:96px}\n')
     write_classics()
-    write_oddities()
+    for g in GENRE_PAGES:
+        if any(genre(d) == g for d in DRINKS):
+            write_genre(g)
 
 
 def write_classics():
@@ -414,35 +416,68 @@ def oddities_scene():
                     'Out front on the bar: a Dark and Stormy, dark rum floating over ginger beer', '62 14 276 174')
 
 
-def write_oddities():
-    """Arcane Oddities: the odd ones (so far, the Dark and Stormy), a door each, and room for more."""
-    C = MENU / 'arcane-oddities'
+def modern_scene():
+    """Modern Variations: a bright, newer bar (clean shelves, a warm round light), the Gold Rush out front with its honey and lemon."""
+    COUNTER = 168
+    wall = wash('<rect x="0" y="0" width="400" height="236" fill="#e9dccb"/><rect x="40" y="10" width="320" height="150" fill="#f6efe4" opacity=".7"/>'
+                '<circle cx="200" cy="92" r="70" fill="#f3c9a8" opacity=".55"/>')
+    shelf = (wash('<rect x="40" y="70" width="110" height="4" fill="#d9b48a"/><rect x="250" y="70" width="110" height="4" fill="#d9b48a"/>')
+             + lines('<path d="M40 70 H150 M40 74 H150 M250 70 H360 M250 74 H360" stroke="#b98a5a" stroke-width="1.6"/>', boil=False))
+    bottles = (at(88, 70, bottle('tall', '#cfe6df', '?'), .55) + at(113, 70, bottle('liqueur', '#e9b949', '?'), .58) + at(138, 70, bottle('spirit', '#c98a3c', '?'), .55)
+               + at(262, 70, bottle('wine', '#7a2d4a', '?'), .55) + at(287, 70, bottle('soda', '#bfe0ea', '?'), .62) + at(312, 70, bottle('tall', '#e3eee6', '?'), .55))
+    d = BY_SLUG['gold-rush']
+    drink = f'<g transform="translate(200 {COUNTER}) scale(1.45)">{glass("rocks", "mod-gr", d["color"], d["garnish"], iced=True, top=d.get("level"))}</g>'
+    props = at(124, COUNTER, honey_jar(), 1.35) + at(278, COUNTER, fruit('lemon'), 1.3) + at(300, COUNTER, fruit('lemon', half=True), 1.1)
+    sp = sparkle(150, 40, 5.5, 'twinkle') + sparkle(252, 34, 5, 'twinkle d2') + sparkle(226, 120, 4, 'twinkle d3')
+    return svg_view(wall + shelf + bottles + countertop(COUNTER) + props + drink + sp,
+                    'A bright, newer bar: clean shelves of bottles and a warm round light. Out front on the bar: a Gold Rush on a big ice cube, '
+                    'with a jar of honey and a lemon beside it', '62 14 276 174')
+
+
+# the parts of the menu after Classics: each gets a page as soon as a drink is in it
+GENRE_PAGES = {
+    'modern-variations': dict(scene=modern_scene, svg='modern', intro='These are the <em>Modern Variations.</em>', more='More modern variations',
+                              description='Newer classics and twists on the old ones, each with its recipe and a step-by-step how-to.',
+                              note="Nov 6 2026: Philip moved the Gold Rush here, so Modern Variations opened."),
+    'arcane-oddities': dict(scene=oddities_scene, svg='oddities', intro='These are the <em>Arcane Oddities.</em>', more='More oddities',
+                            description='The odd ones on the menu, each with its recipe and a step-by-step how-to.',
+                            note="Nov 3 2026: Philip moved the Dark and Stormy here, so Arcane Oddities opened."),
+}
+
+
+def write_genre(key):
+    """A part of the menu after Classics: its drawing, two lines, a door per drink, and room for more."""
+    cfg = GENRE_PAGES[key]
+    name = html.unescape(GENRE_NAME[key])
+    first, last = name.rsplit(' ', 1)
+    C = MENU / key
     (C / 'scenes').mkdir(parents=True, exist_ok=True)
-    (C / 'scenes' / 'oddities.svg').write_text(oddities_scene() + '\n')
-    mine = [d for d in DRINKS if genre(d) == 'arcane-oddities']
+    (C / 'scenes' / f"{cfg['svg']}.svg").write_text(cfg['scene']() + '\n')
+    mine = [d for d in DRINKS if genre(d) == key]
     doors = [f'    <a class="door" href="../{d["slug"]}/index.html"><svg class="door-icon" aria-hidden="true"><use href="#{d["slug"]}-icon"/></svg><span class="door-label">{d["name"]}</span></a>' for d in mine]
-    if len(mine) % 2:   # an odd number of oddities: the last spot is a promise
-        doors.append('    <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#arcane-oddities-icon"/></svg><span class="door-label">More oddities</span><span class="stamp">Coming soon</span></div>')
+    if len(mine) % 2:   # an odd number of drinks: the last spot is a promise
+        doors.append(f'    <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#{key}-icon"/></svg><span class="door-label">{cfg["more"]}</span><span class="stamp">Coming soon</span></div>')
     story = '\n'.join([
-        '<h1><small class="h1-lead">The Cocktail Menu:</small> Arcane <span>Oddities.</span></h1>', '',
+        f'<h1><small class="h1-lead">The Cocktail Menu:</small> {first} <span>{last}.</span></h1>', '',
         '<div class="flow">',
-        '  <figure class="fig" id="s-oddities"><div class="sheet"><!--scene:oddities--></div></figure>',
-        '  <p class="t">These are the <em>Arcane Oddities.</em></p>',
+        f'  <figure class="fig" id="s-{cfg["svg"]}"><div class="sheet"><!--scene:{cfg["svg"]}--></div></figure>',
+        f'  <p class="t">{cfg["intro"]}</p>',
         '  <p class="t">Tap any drink for its recipe and step-by-step, animated how-to.</p>', '',
-        '  <nav class="doors" aria-label="The Arcane Oddities">'] + doors + ['  </nav>', '',
+        f'  <nav class="doors" aria-label="The {name}">'] + doors + ['  </nav>', '',
         '  <nav class="end-doors" aria-label="Where next">',
         '    <p class="back"><a href="../index.html">← Back to the Cocktail Menu</a></p>',
         '  </nav>', '</div>', ''])
     (C / 'story.html').write_text(story)
-    write_copy(C / 'copy.md', 'The Cocktail Menu / Arcane Oddities', story,
-               "Nov 3 2026: Philip moved the Dark and Stormy here, so Arcane Oddities opened. CLAUDE'S DRAFT, waiting on Philip: the page follows Classics "
-               "(\"These are the *Arcane Oddities.*\"; \"Tap any drink...\" is Philip's line from Classics), and \"More oddities\".")
+    write_copy(C / 'copy.md', f'The Cocktail Menu / {name}', story,
+               cfg['note'] + f" CLAUDE'S DRAFT, waiting on Philip: the page follows Classics (\"{html.unescape(cfg['intro']).replace('<em>', '*').replace('</em>', '*')}\"; "
+               f"\"Tap any drink...\" is Philip's line from Classics), and \"{cfg['more']}\".")
     (C / 'page.json').write_text(json.dumps({
-        'title': 'Arcane Oddities · The Cocktail Menu · The Bottle and the Bartender',
-        'description': 'The odd ones on the menu, each with its recipe and a step-by-step how-to.',
-        'label': 'The Cocktail Menu / Arcane Oddities'}, indent=2, ensure_ascii=False) + '\n')
-    (C / 'page.css').write_text('/* The Cocktail Menu / Arcane Oddities: scene motion. Written by tools/art/menu_pages.py; edit it there. */\n' + TWINKLE_CSS + '\n' + BUBBLE_CSS + '\n'
+        'title': f'{name} · The Cocktail Menu · The Bottle and the Bartender',
+        'description': cfg['description'],
+        'label': f'The Cocktail Menu / {name}'}, indent=2, ensure_ascii=False) + '\n')
+    (C / 'page.css').write_text(f'/* The Cocktail Menu / {name}: scene motion. Written by tools/art/menu_pages.py; edit it there. */\n' + TWINKLE_CSS + '\n' + BUBBLE_CSS + '\n'
                                 '.flow .doors .door-icon{width:104px;height:104px}\n.flow .doors .door{min-height:10.5rem}\n')
+
 
 if __name__ == '__main__':
     write_menu()

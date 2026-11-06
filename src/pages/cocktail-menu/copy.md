@@ -10,7 +10,6 @@ What'll it be?
 Looking for something?
 Classics
 Modern Variations
-Coming soon
 Arcane Oddities
 Tiki & Tropical
 Coming soon

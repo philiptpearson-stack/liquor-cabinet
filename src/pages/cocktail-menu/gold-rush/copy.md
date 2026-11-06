@@ -12,7 +12,7 @@ It caught on so fast that it's already a modern classic.
 *Same Golden Ratio as a Whiskey Sour: two parts bourbon, one part honey syrup, one part lemon.*
 → The Golden Ratio
 Here's how you make one:
-The Cocktail Menu · Classics
+The Cocktail Menu · Modern Variations
 Gold Rush
 Makes − 1 + drink
 2 oz bourbon
@@ -27,4 +27,4 @@ Honey syrup: stir equal parts honey and hot water until smooth. It keeps in the 
 Keep exploring
 → Whiskey Sour
 → Old Fashioned
-← Back to Classics
+← Back to Modern Variations

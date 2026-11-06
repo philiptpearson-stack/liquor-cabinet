@@ -14,7 +14,6 @@ Boulevardier
 Daiquiri
 El Diablo
 French 75
-Gold Rush
 Mamie Taylor
 Manhattan
 Martini
