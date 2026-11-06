@@ -13,8 +13,8 @@ DRINKS = [
          glass_line=('rocks, over one big ice cube', 'orange peel'),
          punch=None,
          lines=['<strong>Ever heard of a cocktail called Negroni?</strong>',
-                "Well, the Boulevardier is Negroni's beefy American cousin. Same delightfully bitter formula. Just made with bourbon or rye instead of gin."],
-         gr=['We like our cocktails a bit on the boozier side, so we use the Golden Ratio (2:1:1).', 'The original recipe calls for 1:1:1.'],
+                "Well, the Boulevardier is Negroni's beefy American cousin. Same delightfully bitter formula. Just made with whiskey instead of gin."],
+         note_soon='→ Check out our Stirred Drinks How-To page to learn the basics on Old Fashioneds, Manhattans, Martinis and all the rest!',   # same as The Golden Ratio's (Philip, Nov 6)
          steps=[('<strong>Combine ingredients.</strong> Add whiskey, sweet vermouth and Campari to a mixing glass.', [('pour', 'bourbon', 2), ('pour', 'sweet-vermouth', 1), ('pour', 'campari', 1)]),
                 ('<strong>Stir.</strong> Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into <strong>balance.</strong> <em>Dilution is part of the recipe.</em>)', [('ice', 'mix'), ('stir',)]),
                 ('<strong>Strain over a big cube.</strong> Strain into a rocks glass over one large ice cube.', [('ice', 'glass'), ('strain',)]),

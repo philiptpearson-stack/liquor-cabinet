@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included.
 # The build refuses to publish the page if its words drift from this file.
 # Oct 31 2026, late: Philip's rewrite in chat (three rounds; the last as a marked-up copy of the page).
-# Nov 6 2026: Philip's second pass in chat (teaching first: cut the restating, the taste-and-adjust lines and the dash advice; "The EXCEPTION to the rule:").
+# Nov 6 2026: Philip's second pass in chat (teaching first: cut the restating, the taste-and-adjust lines and the dash advice; "The EXCEPTION to the rule:", then "But there IS an exception to the rule:").
 # The Old Fashioned dash advice and "Bitter-bitter, stir-stir-stir makes a great drink!" are saved in TODO.md for the Stirred Drinks How-To page.
 # Claude's, to check: the callout's link name ("→ The Cocktail Menu"), and "Vieux Carré" with its accent (since cut).
 
@@ -59,7 +59,7 @@ The sweetener balances the spirit — and the acid/bitters balances the sweetnes
 Once you know the formula, you'll start seeing it everywhere.
 A Collins? That's just a sour with bubbles. Gin, lemon and simple syrup, topped with soda water.
 Or a French 75? Same deal. It's a tiny gin sour, topped with Champagne.
-The EXCEPTION to the rule:
+But there IS an exception to the rule:
 Concentrated bitters, like Angostura, are different.
 → Check out our Stirred Drinks How-To page to learn the basics on Old Fashioneds, Manhattans, Martinis and all the rest!
 Coming soon
