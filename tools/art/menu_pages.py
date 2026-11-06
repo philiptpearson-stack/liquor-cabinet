@@ -249,6 +249,9 @@ def drink_story(d):
         ask = ['  <aside class="note">', f'    <p><em>{q}</em> <a class="inline-go" href="@page:cocktails-how-to/golden-ratio">{link}</a></p>', '  </aside>']
     if not d.get('gr_ask_end'):
         s += ask
+    if d.get('note_go'):   # a pointer to another page, in the yellow note
+        text, slug = d['note_go']
+        s += ['  <aside class="note">', f'    <p class="go"><a href="@page:{slug}">{text}</a></p>', '  </aside>']
     if d.get('note_soon'):   # a pointer to a page still to come, in the yellow note
         s += ['  <aside class="note">', f'    <p class="go soon"><span>{d["note_soon"]}</span> <span class="stamp">Coming soon</span></p>', '  </aside>']
     if d.get('formula'):

@@ -11,6 +11,7 @@ No, *really.* It is.
 Born in New York in the 1880s, the Manhattan is a variation on the classic “Cocktail” formula of *Spirit, Sugar, and Bitters.*
 And remember! In those days, not every mixed drink was called “Cocktail” by default.
 A Sour was a Sour and a Julep was a Julep — and you didn't call either one a Cocktail, because Cocktail meant something specific:
+“A stimulating liquor, composed of spirits of any kind, sugar, water, and bitters.”
 — The Balance, and Columbian Repository, Hudson, New York, 1806
 Rye gives it a spicy backbone. Bourbon makes it rounder. Both are right.
 The formula: two parts whiskey, one part sweet vermouth, four dashes of bitters.

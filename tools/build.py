@@ -42,7 +42,9 @@ BLOCK = r'p|h1|h2|h3|h4|div|section|nav|li|a|summary|details|dl|dt|dd|figcaption
 def page_words(story: str) -> list[str]:
     """The text a reader sees, outside the illustrations, one entry per line."""
     # illustrations don't count, but words written under one (a <figcaption>) do
-    s = re.sub(r'<figure\b.*?</figure>', lambda m: '\n' + ''.join(re.findall(r'<figcaption\b.*?</figcaption>', m.group(0), flags=re.S)) + '\n', story, flags=re.S)
+    # (a quote box is words, not an illustration: all of it counts)
+    s = re.sub(r'<figure\b.*?</figure>', lambda m: '\n' + (m.group(0) if re.match(r'<figure class="quote"', m.group(0)) else
+                                                             ''.join(re.findall(r'<figcaption\b.*?</figcaption>', m.group(0), flags=re.S))) + '\n', story, flags=re.S)
     s = re.sub(r'<svg\b.*?</svg>', '', s, flags=re.S)          # door icons
     s = re.sub(r'<!--.*?-->', '', s, flags=re.S)
     s = re.sub(r'<br\s*/?>', '\n', s)

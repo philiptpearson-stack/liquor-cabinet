@@ -86,6 +86,10 @@ icons = {
                                               '<path d="M24 40 L14 70 M24 40 L34 70 M96 40 L86 70 M96 40 L106 70" stroke-width="1.6"/>', boil=False)
                   + wash('<path d="M10 70 Q24 82 38 70Z M82 70 Q96 82 110 70Z" fill="#e6b264"/>') + lines('<path d="M10 70 Q24 82 38 70Z M82 70 Q96 82 110 70Z" stroke-width="2"/>', boil=False)
                   + '<text class="letter" x="60" y="22" font-size="17" text-anchor="middle">2:1:1</text>',
+    'stir-icon': wash('<path d="M38 40 L82 40 L78 110 L42 110Z" fill="#e7f1fb" opacity=".45"/><path d="M40.6 84 L79.4 84 L78.2 105 L41.8 105Z" fill="#b8742e"/>')
+                 + ''.join(f'<rect x="{x}" y="{y}" width="14" height="14" rx="2.6" fill="#eef8ff" opacity=".6" stroke="#8ecae6" stroke-width="1.5"/>' for x, y in ((44, 88), (61, 89), (46, 72), (62, 71), (52, 55)))
+                 + lines('<path d="M38 40 L82 40 L78 110 L42 110Z" stroke-width="2.2"/><path d="M42 104 H78" stroke-width="1.4"/><path d="M90 16 L70 100" stroke="#a9a29a" stroke-width="2.8"/>'
+                         '<circle cx="90.6" cy="13.4" r="3.8" fill="#c9c3b8"/><ellipse cx="70" cy="102" rx="4.6" ry="2.8" fill="#c9c3b8"/>', boil=False),
     'shaker-icon': at(48, 108, tin()) + at(48, 62, '<g transform="scale(1 -1)">' + wash('<path d="M-11 0 L-14 30 L14 30 L11 0Z" fill="#e7f1fb" opacity=".8"/>') + lines('<path d="M-11 0 L-14 30 L14 30 L11 0Z" stroke-width="2"/>', boil=False) + '</g>')
                    + at(88, 108, spoon(74), 1, 12) + lines('<path d="M18 30 q-6 6 0 12 M78 22 q6 6 0 12" stroke="#8a6a78" stroke-width="2"/>', boil=False),
     'syrup-icon': at(46, 108, syrup_bottle(), 1.5) + wash('<rect x="78" y="80" width="18" height="18" rx="2" fill="#fffaf1"/><rect x="86" y="92" width="18" height="18" rx="2" fill="#fffaf1"/>')
