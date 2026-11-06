@@ -3,11 +3,11 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 6 2026: Philip's copy from chat (teach, don't trivia): the opener, the intro ("Fantastic..." in the body size, not plum), and the balance note with its link to the Golden Ratio, below the step-by-step since it isn't part of the story. Nov 3: Philip's copy, method and amounts (1 ½ : ¾ : ¾, the Golden Ratio; topped with ginger beer in the shaker, swirled, then poured in ice and all). CLAUDE'S DRAFT, waiting on Philip: the step wording, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 6 2026: Philip's copy from chat (teach, don't trivia): the opener, the intro ("Fantastic!..." plain, in the body size), and the balance note with its link to the Golden Ratio, below the step-by-step since it isn't part of the story. Nov 3: Philip's copy, method and amounts (1 ½ : ¾ : ¾, the Golden Ratio; topped with ginger beer in the shaker, swirled, then poured in ice and all). CLAUDE'S DRAFT, waiting on Philip: the step wording, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: El ***Diablo.***
 *“I want a drink with tequila. But not a Margarita.”*
-*Fantastic.* Can I introduce you to the El Diablo?
+Fantastic! Can I introduce you to the El Diablo?
 This tequila classic dates to 1946, and it's *perfect*.
 Here's how you make one:
 The Cocktail Menu · Classics
