@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 6 2026: Philip's copy from chat: the opener ("really." in plum, like "Seriously." and "Really."), the intro and the quote box, and four dashes. Fixed and flagged: the quote is the 1806 definition from The Balance, and Columbian Repository (Philip had it as Jerry Thomas's, in other words). CLAUDE'S DRAFT, waiting on Philip (he'll finish the page): "Rye gives it...", the formula line, the steps (but the stir step is his), and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 6 2026: Philip's copy from chat: the opener ("really." in plum, like "Seriously." and "Really."), the story and the quote box, "Here's how you make a *fantastic* Manhattan:", four dashes, and the Stirred Drinks link after the steps (the line is his, from the Boulevardier). Fixed and flagged: the quote is the 1806 definition from The Balance, and Columbian Repository (Philip had it as Jerry Thomas's); "curaçao". CLAUDE'S DRAFT, waiting on Philip: the steps (but the stir step is his), and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Manhattan.***
 It's how the Old Fashioned got its name.
@@ -13,9 +13,11 @@ And remember! In those days, not every mixed drink was called “Cocktail” by 
 A Sour was a Sour and a Julep was a Julep — and you didn't call either one a Cocktail, because Cocktail meant something specific:
 “A stimulating liquor, composed of spirits of any kind, sugar, water, and bitters.”
 — The Balance, and Columbian Repository, Hudson, New York, 1806
-Rye gives it a spicy backbone. Bourbon makes it rounder. Both are right.
-The formula: two parts whiskey, one part sweet vermouth, four dashes of bitters.
-Here's how you make one:
+But by the late 1870s, America's bar industry was booming, and bartenders were *experimenting.*
+“Improving” whiskey cocktails with absinthe, curaçao, vermouth or maraschino. And when variations like the Manhattan burst onto the scene, well...
+Drinkers who wanted a good ol' plain Cocktail started asking for it “the Old Fashioned” way.
+And the rest, as they say, is history.
+Here's how you make a *fantastic* Manhattan:
 The Cocktail Menu · Classics
 Manhattan
 Makes − 1 + drink
@@ -27,6 +29,7 @@ Makes − 1 + drink
 **Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)
 **Serve up.** Strain into a chilled coupe, no ice.
 **Garnish.** A cherry.
+→ Check out our Stirred Drinks How-To page for simple tips on balancing stirred cocktails!
 Keep exploring
 → Old Fashioned
 → Vieux Carré

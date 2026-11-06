@@ -130,11 +130,16 @@ DRINKS = [
                 # the first known definition of the word in print (Philip had it as Jerry Thomas's; the words are a newspaper editor's, 1806)
                 ('quote', '“A stimulating liquor, composed of spirits of any kind, sugar, water, and bitters.”',
                  '— <cite>The Balance, and Columbian Repository</cite>, Hudson, New York, 1806'),
-                'Rye gives it a spicy backbone. Bourbon makes it rounder. Both are right.'],
-         formula='The formula: two parts whiskey, one part sweet vermouth, four dashes of bitters.',
-         copy_note=("Nov 6 2026: Philip's copy from chat: the opener (\"really.\" in plum, like \"Seriously.\" and \"Really.\"), the intro and the quote box, and four dashes. "
-                    "Fixed and flagged: the quote is the 1806 definition from The Balance, and Columbian Repository (Philip had it as Jerry Thomas's, in other words). "
-                    "CLAUDE'S DRAFT, waiting on Philip (he'll finish the page): \"Rye gives it...\", the formula line, the steps (but the stir step is his), and Keep exploring."),
+                "But by the late 1870s, America's bar industry was booming, and bartenders were <em>experimenting.</em>",
+                '“Improving” whiskey cocktails with absinthe, curaçao, vermouth or maraschino. And when variations like the Manhattan burst onto the scene, well...',
+                "Drinkers who wanted a good ol' plain Cocktail started asking for it “the Old Fashioned” way.",
+                'And the rest, as they say, is history.'],
+         lead="Here's how you make a <em>fantastic</em> Manhattan:",
+         note_go_end=('→ Check out our Stirred Drinks How-To page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/stirred-drinks'),
+         copy_note=("Nov 6 2026: Philip's copy from chat: the opener (\"really.\" in plum, like \"Seriously.\" and \"Really.\"), the story and the quote box, "
+                    "\"Here's how you make a *fantastic* Manhattan:\", four dashes, and the Stirred Drinks link after the steps (the line is his, from the Boulevardier). "
+                    "Fixed and flagged: the quote is the 1806 definition from The Balance, and Columbian Repository (Philip had it as Jerry Thomas's); \"curaçao\". "
+                    "CLAUDE'S DRAFT, waiting on Philip: the steps (but the stir step is his), and Keep exploring."),
          steps=[('<strong>Combine ingredients.</strong> Add the whiskey, sweet vermouth and bitters to a mixing glass.', [('pour', 'rye', 2), ('pour', 'sweet-vermouth', 1), ('dash', 'angostura', 4)]),
                 ('<strong>Stir.</strong> Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into <strong>balance.</strong> <em>Dilution is part of the recipe.</em>)', [('ice', 'mix'), ('stir',)]),
                 ('<strong>Serve up.</strong> Strain into a chilled coupe, no ice.', [('strain',)]),

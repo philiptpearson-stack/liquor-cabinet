@@ -274,6 +274,9 @@ def drink_story(d):
         s += [f'  <p class="t">{d["tip"]}</p>']
     if d.get('gr_ask_end'):
         s += ask
+    if d.get('note_go_end'):   # a pointer to another page, after the step-by-step (Philip's Manhattan: to Stirred Drinks)
+        text, slug = d['note_go_end']
+        s += ['  <aside class="note">', f'    <p class="go"><a href="@page:{slug}">{text}</a></p>', '  </aside>']
     s += ['', '  <nav class="end-doors" aria-label="Where next">', '    <h2>Keep exploring</h2>']
     for r in d['related']:
         s += [f'    <p class="go"><a href="../{r}/index.html">→ {BY_SLUG[r]["name"]}</a></p>']
