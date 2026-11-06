@@ -241,6 +241,12 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
   display:grid;place-items:center;background:var(--accent);color:var(--paper);font:800 .95rem/1 var(--body)}
 
 /* ---------- Set-apart boxes: an offer that sits beside the conversation instead of interrupting it */
+/* a quote, set like a clipping from an old page: the recipe card's paper, a plum rule (Philip's Manhattan) */
+.quote{background:#fffaf1;color:#3a2532;border-radius:6px 8px 10px 7px;transform:rotate(-.5deg);margin:.4rem 2px;padding:1rem 1.15rem 1rem 1.45rem;box-shadow:inset 5px 0 0 #8b3a63,2px 3px 0 #4a342622}
+.quote blockquote{margin:0}
+.quote blockquote p{font-family:var(--display);font-size:1.3rem;line-height:1.38;text-wrap:pretty}
+.quote figcaption{text-align:left;margin-top:.65rem;font:600 .86rem/1.45 var(--body);color:#7c6570}
+.quote cite{font-style:italic}
 .callout{border:2px solid var(--accent);border-radius:16px 12px 18px 13px;padding:1rem 1.1rem 1.05rem;display:flex;flex-direction:column;gap:.65rem;
   background:color-mix(in srgb,var(--accent) 6%,transparent);margin:.3rem 0}
 .callout p{margin:0;font-size:1.1rem;line-height:1.5}

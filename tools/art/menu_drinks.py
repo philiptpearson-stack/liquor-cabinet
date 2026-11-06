@@ -121,13 +121,21 @@ DRINKS = [
          related=['el-diablo', 'dark-and-stormy'], hero=(['syrup', 'scotch'], ['ginger-beer', 'fruit:lime'])),
 
     dict(slug='manhattan', name='Manhattan', glass='coupe', color='#8f3b1f', garnish=['cherry'],
-         recipe=[(2, 'oz', 'rye whiskey (or bourbon)'), (1, 'oz', 'sweet vermouth'), (2, 'dash', 'Angostura bitters')],
+         recipe=[(2, 'oz', 'rye whiskey (or bourbon)'), (1, 'oz', 'sweet vermouth'), (4, 'dash', 'Angostura bitters')],
          glass_line=('coupe', 'cherry'),
-         punch='The king of stirred whiskey drinks.',
-         lines=['Born in New York in the 1800s, the Manhattan is whiskey, sweet vermouth and bitters, stirred cold and silky.',
+         punch=["It's how the Old Fashioned got its name.", 'No, <span class="hl"><em>really.</em></span> It is.'],
+         lines=['Born in New York in the 1880s, the Manhattan is a variation on the classic “Cocktail” formula of <em>Spirit, Sugar, and Bitters.</em>',
+                'And remember! In those days, not every mixed drink was called “Cocktail” by default.',
+                "A Sour was a Sour and a Julep was a Julep — and you didn't call either one a Cocktail, because Cocktail meant something specific:",
+                # the first known definition of the word in print (Philip had it as Jerry Thomas's; the words are a newspaper editor's, 1806)
+                ('quote', '“A stimulating liquor, composed of spirits of any kind, sugar, water, and bitters.”',
+                 '— <cite>The Balance, and Columbian Repository</cite>, Hudson, New York, 1806'),
                 'Rye gives it a spicy backbone. Bourbon makes it rounder. Both are right.'],
-         formula='The formula: two parts whiskey, one part sweet vermouth, two dashes of bitters.',
-         steps=[('<strong>Combine ingredients.</strong> Add the whiskey, sweet vermouth and bitters to a mixing glass.', [('pour', 'rye', 2), ('pour', 'sweet-vermouth', 1), ('dash', 'angostura', 2)]),
+         formula='The formula: two parts whiskey, one part sweet vermouth, four dashes of bitters.',
+         copy_note=("Nov 6 2026: Philip's copy from chat: the opener (\"really.\" in plum, like \"Seriously.\" and \"Really.\"), the intro and the quote box, and four dashes. "
+                    "Fixed and flagged: the quote is the 1806 definition from The Balance, and Columbian Repository (Philip had it as Jerry Thomas's, in other words). "
+                    "CLAUDE'S DRAFT, waiting on Philip (he'll finish the page): \"Rye gives it...\", the formula line, the steps (but the stir step is his), and Keep exploring."),
+         steps=[('<strong>Combine ingredients.</strong> Add the whiskey, sweet vermouth and bitters to a mixing glass.', [('pour', 'rye', 2), ('pour', 'sweet-vermouth', 1), ('dash', 'angostura', 4)]),
                 ('<strong>Stir.</strong> Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into <strong>balance.</strong> <em>Dilution is part of the recipe.</em>)', [('ice', 'mix'), ('stir',)]),
                 ('<strong>Serve up.</strong> Strain into a chilled coupe, no ice.', [('strain',)]),
                 ('<strong>Garnish.</strong> A cherry.', [('garnish',)])],

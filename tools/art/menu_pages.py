@@ -233,7 +233,11 @@ LEAD = "Here's how you make one:"   # the line before the recipe card, unless a 
 def drink_story(d):
     s = [h1_for(d['name']), '', '<div class="flow">', '  <figure class="fig" id="s-hero"><div class="sheet"><!--scene:hero--></div></figure>',
          ] + [f'  <p class="punch">{x}</p>' for x in ([d['punch']] if isinstance(d.get('punch'), str) else (d.get('punch') or []))]   # one big line, or a few
-    s += [f'  <p class="t">{t}</p>' for t in d['lines']]
+    for t in d['lines']:
+        if isinstance(t, tuple) and t[0] == 'quote':   # a quote box, set like a clipping (Philip's Manhattan)
+            s += ['  <figure class="quote">', f'    <blockquote><p>{t[1]}</p></blockquote>', f'    <figcaption>{t[2]}</figcaption>', '  </figure>']
+        else:
+            s += [f'  <p class="t">{t}</p>']
     if d.get('gr'):
         gr = d['gr'] if isinstance(d['gr'], list) else [d['gr']]   # one line, or a few short ones
         s += ['  <aside class="note">'] + [f'    <p><em>{g}</em></p>' for g in gr] + [f'    <p class="go"><a href="@page:cocktails-how-to/golden-ratio">{d.get("gr_link", "→ The Golden Ratio")}</a></p>', '  </aside>']
