@@ -70,18 +70,18 @@ DRINKS = [
     dict(slug='french-75', name='French 75', glass='flute', color='#f1e19c', base='#ece3b0', garnish=['lemon-twist'],
          recipe=[(1, 'oz', 'gin'), (.5, 'oz', 'simple syrup'), (.5, 'oz', 'lemon juice (fresh squeezed)'), (3, 'oz', 'Champagne, or another dry sparkling wine')],
          glass_line=('Champagne flute', 'lemon twist'),
-         punch='Notice the formula. Seriously.',
-         lines=['The French 75 is a little gin sour. With bubbles on top.'],
+         punch='The French 75 is a little gin sour. With bubbles on top!',
+         lines=['Seriously.'],
          gr="It's The Golden Ratio, just smaller!",
          gr_link='Visit our Golden Ratio page to revisit achieving <em>balance</em> in a cocktail →',
-         copy_note=("Nov 6 2026: Philip's copy from chat: the opener, the intro and the Golden Ratio note (teach the formula; skip the trivia). "
+         copy_note=("Nov 6 2026: Philip's copy from chat (second round): the opener, \"Seriously.\" and the Golden Ratio note (teach the formula; skip the trivia). "
                     "Claude's, waiting on Philip: the recipe card, the steps, and Keep exploring."),
          steps=[('<strong>Combine ingredients.</strong> Add the gin, simple syrup and lemon juice to your shaker.', [('pour', 'gin', 1), ('pour', 'simple', .5), ('pour', 'lemon', .5)]),
                 ('<strong>Shake.</strong> Add ice and shake until cold.', [('ice', 'mix'), ('shake',)]),
                 ('<strong>Strain into a flute.</strong>', [('strain',)]),
                 ("<strong>Top with Champagne.</strong> Pour slowly, so it doesn't foam over.", [('top', 'champagne', 3)]),
                 ('<strong>Garnish.</strong> A lemon twist.', [('garnish',)])],
-         related=['tom-collins', 'violet-hour'], hero=(['gin'], ['champagne', 'fruit:lemon'])),
+         related=['tom-collins', 'violet-hour'], hero=(['syrup', 'gin'], ['champagne', 'fruit:lemon'])),
 
     dict(slug='gold-rush', name='Gold Rush', glass='rocks', color='#e0a443', garnish=['lemon-wheel'], level=-42,
          recipe=[(2, 'oz', 'bourbon'), (1, 'oz', 'honey syrup'), (1, 'oz', 'lemon juice (fresh squeezed)')],
