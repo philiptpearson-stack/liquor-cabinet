@@ -232,7 +232,7 @@ LEAD = "Here's how you make one:"   # the line before the recipe card, unless a 
 
 def drink_story(d):
     s = [h1_for(d['name']), '', '<div class="flow">', '  <figure class="fig" id="s-hero"><div class="sheet"><!--scene:hero--></div></figure>',
-         ] + ([f'  <p class="punch">{d["punch"]}</p>'] if d.get('punch') else [])
+         ] + [f'  <p class="punch">{x}</p>' for x in ([d['punch']] if isinstance(d.get('punch'), str) else (d.get('punch') or []))]   # one big line, or a few
     s += [f'  <p class="t">{t}</p>' for t in d['lines']]
     if d.get('gr'):
         gr = d['gr'] if isinstance(d['gr'], list) else [d['gr']]   # one line, or a few short ones
