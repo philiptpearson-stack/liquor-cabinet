@@ -1,0 +1,46 @@
+/* Cocktails How-To / Shaken or Stirred?: scene motion. Written by tools/art/shaken_stirred_scenes.py; edit it there. */
+.twinkle{animation:twinkle 1.6s ease-in-out infinite}
+.twinkle.d2{animation-delay:-.55s}.twinkle.d3{animation-delay:-1.1s}
+@keyframes twinkle{0%,100%{transform:scale(.55) rotate(0);opacity:.35}50%{transform:scale(1.15) rotate(20deg);opacity:1}}
+/* 1. Phil taps the chalkboard */
+.tap{animation:tap 1.4s ease-in-out infinite}
+@keyframes tap{0%{transform:rotate(0)}50%{transform:rotate(-7deg)}100%{transform:rotate(0)}}
+/* 2. Shake and stir (12 s): the shaker shakes and the spoon stirs (8-58%); in both the ice shrinks and the drink rises;
+   the shaken one froths up; then the results show on the bar front. Still frame: both finished, results showing. */
+.ss-shaker,.ss-whoosh,.ss-spoon,.ss-ice,.ss-lvl-s,.ss-lvl-m,.ss-froth,.ss-result{animation:12s ease-in-out infinite}
+.ss-shaker{animation-name:ss-shake;animation-timing-function:linear}
+@keyframes ss-shake{0%{transform:translate(0,0) rotate(0)}8%{transform:translate(0,0) rotate(0)}9.92308%{transform:translate(0px,-10px) rotate(-3deg)}11.8462%{transform:translate(0px,4px) rotate(2deg)}13.7692%{transform:translate(0px,-10px) rotate(-3deg)}15.6923%{transform:translate(0px,4px) rotate(2deg)}17.6154%{transform:translate(0px,-10px) rotate(-3deg)}19.5385%{transform:translate(0px,4px) rotate(2deg)}21.4615%{transform:translate(0px,-10px) rotate(-3deg)}23.3846%{transform:translate(0px,4px) rotate(2deg)}25.3077%{transform:translate(0px,-10px) rotate(-3deg)}27.2308%{transform:translate(0px,4px) rotate(2deg)}29.1538%{transform:translate(0px,-10px) rotate(-3deg)}31.0769%{transform:translate(0px,4px) rotate(2deg)}33%{transform:translate(0px,-10px) rotate(-3deg)}34.9231%{transform:translate(0px,4px) rotate(2deg)}36.8462%{transform:translate(0px,-10px) rotate(-3deg)}38.7692%{transform:translate(0px,4px) rotate(2deg)}40.6923%{transform:translate(0px,-10px) rotate(-3deg)}42.6154%{transform:translate(0px,4px) rotate(2deg)}44.5385%{transform:translate(0px,-10px) rotate(-3deg)}46.4615%{transform:translate(0px,4px) rotate(2deg)}48.3846%{transform:translate(0px,-10px) rotate(-3deg)}50.3077%{transform:translate(0px,4px) rotate(2deg)}52.2308%{transform:translate(0px,-10px) rotate(-3deg)}54.1538%{transform:translate(0px,4px) rotate(2deg)}56.0769%{transform:translate(0px,-10px) rotate(-3deg)}58%{transform:translate(0,0) rotate(0)}100%{transform:translate(0,0) rotate(0)}}
+.ss-whoosh{opacity:0;animation-name:ss-whoosh}
+@keyframes ss-whoosh{0%{opacity:0}8%{opacity:0}9%{opacity:1}57%{opacity:1}58%{opacity:0}100%{opacity:0}}
+.ss-spoon{animation-name:ss-spoon}
+@keyframes ss-spoon{0%{transform:rotate(0)}8%{transform:rotate(0)}8%{transform:rotate(0deg)}12.1667%{transform:rotate(7deg)}16.3333%{transform:rotate(-7deg)}20.5%{transform:rotate(7deg)}24.6667%{transform:rotate(-7deg)}28.8333%{transform:rotate(7deg)}33%{transform:rotate(-7deg)}37.1667%{transform:rotate(7deg)}41.3333%{transform:rotate(-7deg)}45.5%{transform:rotate(7deg)}49.6667%{transform:rotate(-7deg)}53.8333%{transform:rotate(7deg)}58%{transform:rotate(0deg)}100%{transform:rotate(0)}}
+.ss-ice{transform:scale(.8);animation-name:ss-ice}
+@keyframes ss-ice{0%{transform:scale(1)}10%{transform:scale(1)}58%{transform:scale(.8)}100%{transform:scale(.8)}}
+.ss-lvl-s,.ss-lvl-m{animation-name:ss-lvl}
+@keyframes ss-lvl{0%{transform:scaleY(0.741)}10%{transform:scaleY(0.741)}58%{transform:scaleY(1)}100%{transform:scaleY(1)}}
+.ss-froth{animation-name:ss-froth}
+@keyframes ss-froth{0%{opacity:0}30%{opacity:0}56%{opacity:1}96%{opacity:1}99%{opacity:0}100%{opacity:0}}
+.ss-result{animation-name:ss-result}
+@keyframes ss-result{0%{opacity:0}60%{opacity:0}64%{opacity:1}95%{opacity:1}99%{opacity:0}100%{opacity:0}}
+/* 3. Dilution (12 s): the spoon stirs (8-62%), the ice shrinks and the drink rises, then the bracket shows the water.
+   Still frame: the finished drink, the water marked. */
+.dl-level,.dl-ice,.dl-spoon,.dl-water,.dl-cap{animation:12s ease-in-out infinite}
+.dl-level{animation-name:dl-level}
+@keyframes dl-level{0%{transform:scaleY(0.741)}10%{transform:scaleY(0.741)}60%{transform:scaleY(1)}100%{transform:scaleY(1)}}
+.dl-ice{transform:scale(.8);animation-name:dl-ice}
+@keyframes dl-ice{0%{transform:scale(1)}10%{transform:scale(1)}60%{transform:scale(.8)}100%{transform:scale(.8)}}
+.dl-spoon{animation-name:dl-spoon}
+@keyframes dl-spoon{0%{transform:rotate(0)}8%{transform:rotate(0)}8%{transform:rotate(0deg)}12.5%{transform:rotate(7deg)}17%{transform:rotate(-7deg)}21.5%{transform:rotate(7deg)}26%{transform:rotate(-7deg)}30.5%{transform:rotate(7deg)}35%{transform:rotate(-7deg)}39.5%{transform:rotate(7deg)}44%{transform:rotate(-7deg)}48.5%{transform:rotate(7deg)}53%{transform:rotate(-7deg)}57.5%{transform:rotate(7deg)}62%{transform:rotate(0deg)}100%{transform:rotate(0)}}
+.dl-water{animation-name:dl-water}
+@keyframes dl-water{0%{opacity:0}64%{opacity:0}68%{opacity:1}95%{opacity:1}99%{opacity:0}100%{opacity:0}}
+.dl-cap{opacity:0}.dl-cap.c3{opacity:1}
+.cap-bob{animation:cap-bob 1.8s ease-in-out infinite alternate}
+@keyframes cap-bob{0%{transform:translateY(-1.5px)}100%{transform:translateY(1.5px)}}
+.dl-cap.c1{animation-name:dl-c1}
+@keyframes dl-c1{0%{opacity:0}4%{opacity:0}6%{opacity:1}34%{opacity:1}36%{opacity:0}100%{opacity:0}}
+.dl-cap.c2{animation-name:dl-c2}
+@keyframes dl-c2{0%{opacity:0}35%{opacity:0}37%{opacity:1}60%{opacity:1}62%{opacity:0}100%{opacity:0}}
+.dl-cap.c3{animation-name:dl-c3}
+@keyframes dl-c3{0%{opacity:0}64%{opacity:0}66%{opacity:1}95%{opacity:1}97%{opacity:0}100%{opacity:0}}
+/* The Short Version, with nothing more to open: the card without its + */
+.cc-static{padding:.8rem 1rem .95rem}

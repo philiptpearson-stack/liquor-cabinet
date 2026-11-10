@@ -7,9 +7,7 @@
 Cocktails ***How-To.***
 So what do you want to learn?
 The Golden Ratio
-Stirred Drinks
-Shake or Stir?
-Coming soon
+Shaken or Stirred?
 Simple Syrup in Two Minutes
 Coming soon
 All About Ice
