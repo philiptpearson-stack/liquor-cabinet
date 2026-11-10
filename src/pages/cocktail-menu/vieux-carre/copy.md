@@ -6,6 +6,17 @@
 # Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Vieux ***Carré.***
+Just the recipe, please
+The Cocktail Menu · Classics
+Vieux Carré
+Makes − 1 + drink
+1 oz rye whiskey
+1 oz cognac
+1 oz sweet vermouth
+¼ oz Bénédictine
+2 dashes Peychaud's bitters
+2 dashes Angostura bitters
+**Glass:** rocks, over one big ice cube · **Garnish:** lemon twist
 New Orleans, stirred.
 *Vieux Carré* means old square: the old name for New Orleans' French Quarter. Walter Bergeron created this drink there in the 1930s, at the Hotel Monteleone.
 Rye, cognac, sweet vermouth, a little Bénédictine and two kinds of bitters. Rich, spicy and smooth.

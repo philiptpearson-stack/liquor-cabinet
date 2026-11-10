@@ -6,6 +6,17 @@
 # Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Pink ***Lady.***
+Just the recipe, please
+The Cocktail Menu · Classics
+Pink Lady
+Makes − 1 + drink
+1 ½ oz gin
+½ oz applejack (apple brandy)
+1 oz grenadine
+1 oz lemon juice (fresh squeezed)
+1 egg white (optional)
+**Glass:** coupe · **Garnish:** cherry
+Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.
 Pretty in pink. Stronger than it looks.
 Said to be named for a hit 1911 Broadway musical, the Pink Lady is gin and applejack, with lemon, grenadine and a silky egg white foam.
 *It's the Golden Ratio, too: two parts spirit (gin and applejack), one part grenadine, one part lemon.*

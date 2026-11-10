@@ -6,6 +6,14 @@
 # Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Old ***Fashioned.***
+Just the recipe, please
+The Cocktail Menu · Classics
+Old Fashioned
+Makes − 1 + drink
+2 oz bourbon or rye
+¼ oz simple syrup
+4 dashes Angostura bitters
+**Glass:** rocks, over one big ice cube · **Garnish:** orange peel
 The original cocktail.
 In 1806, a newspaper in upstate New York defined the word *cocktail*: spirits, sugar, water and bitters.
 Order one the old-fashioned way, and that's exactly what you get.

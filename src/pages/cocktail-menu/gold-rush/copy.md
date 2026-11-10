@@ -6,6 +6,14 @@
 # Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Gold ***Rush.***
+Just the recipe, please
+The Cocktail Menu · Modern Variations
+Gold Rush
+Makes − 1 + drink
+2 oz bourbon
+1 oz honey syrup
+1 oz lemon juice (fresh squeezed)
+**Glass:** rocks, over one big ice cube · **Garnish:** lemon wheel
 The new kid on the menu.
 Born around 2000 at Milk & Honey in New York, the Gold Rush is a whiskey sour sweetened with honey.
 It caught on so fast that it's already a modern classic.

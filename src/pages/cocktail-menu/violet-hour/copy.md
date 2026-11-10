@@ -6,6 +6,14 @@
 # Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Violet ***Hour.***
+Just the recipe, please
+The Cocktail Menu · Classics
+Violet Hour
+Makes − 1 + drink
+1 oz crème de violette
+1 oz pear nectar (or purée)
+3 oz Champagne, or another dry sparkling wine
+**Glass:** coupe · **Garnish:** an edible flower (optional)
 Named for that purple light, just after sunset.
 Floral violet liqueur, sweet pear, and a glass full of Champagne.
 No shaker needed. Just pour, top and serve.

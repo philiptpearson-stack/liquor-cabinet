@@ -6,6 +6,15 @@
 # Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Tom ***Collins.***
+Just the recipe, please
+The Cocktail Menu · Classics
+Tom Collins
+Makes − 1 + drink
+2 oz gin
+1 oz lemon juice (fresh squeezed)
+1 oz simple syrup
+2 oz soda water
+**Glass:** highball, over ice · **Garnish:** lemon wheel and a cherry
 Have you seen Tom Collins?
 In 1874, a prank swept New York: friends told each other that a man named Tom Collins was going around town, talking about them.
 There was no Tom Collins. But there is this drink.

@@ -6,6 +6,14 @@
 # Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Dark and ***Stormy.***
+Just the recipe, please
+The Cocktail Menu · Arcane Oddities
+Dark and Stormy
+Makes − 1 + drink
+2 oz dark rum
+4 oz ginger beer
+½ oz lime juice
+**Glass:** highball, over ice · **Garnish:** lime wedge
 Storm clouds, in a glass.
 Bermuda's unofficial national drink: spicy ginger beer, with dark rum floated on top like clouds rolling in.
 No shaker, no fuss. Just pour it in the right order.

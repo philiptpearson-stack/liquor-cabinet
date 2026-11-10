@@ -230,9 +230,28 @@ def h1_for(name):
 LEAD = "Here's how you make one:"   # the line before the recipe card, unless a drink has its own
 
 
+def recipe_card(d):
+    """The recipe at a glance: amounts (scalable), glass and garnish."""
+    c = [f'  <section class="recipe-card" aria-label="Recipe: {d["name"]}">',
+         f'    <p class="rc-kicker">The Cocktail Menu · {GENRE_NAME[genre(d)]}</p>',
+         f'    <p class="rc-name">{d["name"]}</p>',
+         '    <p class="rc-serves">Makes <button class="rc-step" type="button" data-d="-1" aria-label="One fewer drink">−</button> <b class="rc-n">1</b> <button class="rc-step" type="button" data-d="1" aria-label="One more drink">+</button> <span class="rc-unit">drink</span></p>',
+         '    <ul class="rc-list">']
+    c += ['      ' + amt(*r) for r in d['recipe']]
+    gl, gn = d['glass_line']
+    c += ['    </ul>', f'    <p class="rc-glass"><b>Glass:</b> {gl} · <b>Garnish:</b> {gn}</p>']
+    if d.get('note'):
+        c += [f'    <p class="rc-note">{d["note"]}</p>']
+    return c + ['  </section>']
+
+
 def drink_story(d):
-    s = [h1_for(d['name']), '', '<div class="flow">', '  <figure class="fig" id="s-hero"><div class="sheet"><!--scene:hero--></div></figure>',
-         ] + [f'  <p class="punch">{x}</p>' for x in ([d['punch']] if isinstance(d.get('punch'), str) else (d.get('punch') or []))]   # one big line, or a few
+    # right under the drawing, a drop-down with the recipe card in it: the recipe at a glance, without scrolling through
+    # the story (Philip, Nov 10). The card itself still sits by the step-by-step, further down.
+    drop = (['  <details class="recipe-drop">', '    <summary>Just the recipe, please</summary>']
+            + ['  ' + line for line in recipe_card(d)] + ['  </details>'])
+    s = [h1_for(d['name']), '', '<div class="flow">', '  <figure class="fig" id="s-hero"><div class="sheet"><!--scene:hero--></div></figure>'] + drop
+    s += [f'  <p class="punch">{x}</p>' for x in ([d['punch']] if isinstance(d.get('punch'), str) else (d.get('punch') or []))]   # one big line, or a few
     for t in d['lines']:
         if isinstance(t, tuple) and t[0] == 'quote':   # a quote box, set like a clipping (Philip's Manhattan)
             s += ['  <figure class="quote">', f'    <blockquote><p>{t[1]}</p></blockquote>', f'    <figcaption>{t[2]}</figcaption>', '  </figure>']
@@ -258,18 +277,9 @@ def drink_story(d):
         s += ['  <aside class="note">', f'    <p class="go soon"><span>{d["note_soon"]}</span> <span class="stamp">Coming soon</span></p>', '  </aside>']
     if d.get('formula'):
         s += [f'  <p class="t">{d["formula"]}</p>']
-    s += [f'  <p class="punch">{d.get("lead", LEAD)}</p>',   # in the big display type, like the opener (Philip, Nov 6)
-          f'  <section class="recipe-card" aria-label="Recipe: {d["name"]}">',
-          f'    <p class="rc-kicker">The Cocktail Menu · {GENRE_NAME[genre(d)]}</p>',
-          f'    <p class="rc-name">{d["name"]}</p>',
-          '    <p class="rc-serves">Makes <button class="rc-step" type="button" data-d="-1" aria-label="One fewer drink">−</button> <b class="rc-n">1</b> <button class="rc-step" type="button" data-d="1" aria-label="One more drink">+</button> <span class="rc-unit">drink</span></p>',
-          '    <ul class="rc-list">']
-    s += ['      ' + amt(*r) for r in d['recipe']]
-    gl, gn = d['glass_line']
-    s += ['    </ul>', f'    <p class="rc-glass"><b>Glass:</b> {gl} · <b>Garnish:</b> {gn}</p>']
-    if d.get('note'):
-        s += [f'    <p class="rc-note">{d["note"]}</p>']
-    s += ['  </section>', '  <figure class="fig howto" id="s-build"><div class="sheet"><!--scene:build--></div>', '    <figcaption><ol class="steps howto-steps">']
+    s += [f'  <p class="punch">{d.get("lead", LEAD)}</p>']   # in the big display type, like the opener (Philip, Nov 6)
+    s += recipe_card(d)
+    s += ['  <figure class="fig howto" id="s-build"><div class="sheet"><!--scene:build--></div>', '    <figcaption><ol class="steps howto-steps">']
     s += [f'      <li class="s{i}">{t}</li>' for i, (t, _) in enumerate(d['steps'], 1)]
     s += ['    </ol></figcaption>', '  </figure>']
     if d.get('tip'):

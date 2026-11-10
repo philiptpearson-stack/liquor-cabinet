@@ -6,6 +6,14 @@
 # Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Sidecar.***
+Just the recipe, please
+The Cocktail Menu · Classics
+Sidecar
+Makes − 1 + drink
+2 oz cognac (or another brandy)
+1 oz orange liqueur
+1 oz lemon juice (fresh squeezed)
+**Glass:** coupe · **Garnish:** orange twist
 Brandy's best sour.
 The Sidecar showed up around the end of World War I. Paris and London both claim it.
 Cognac, orange liqueur and lemon: rich, bright and dangerously easy to drink.

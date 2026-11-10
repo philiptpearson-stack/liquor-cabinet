@@ -6,6 +6,14 @@
 # Nov 6 2026: Philip's copy from chat (teach, don't trivia): the opener, the intro and the Golden Ratio note and its link. Nov 3: "This is how you make one:". Claude's, waiting on Philip: the recipe card, the steps, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Daiquiri.***
+Just the recipe, please
+The Cocktail Menu · Classics
+Daiquiri
+Makes − 1 + drink
+2 oz white rum
+1 oz simple syrup
+1 oz lime juice (fresh squeezed)
+**Glass:** coupe · **Garnish:** lime wheel
 Simple and sublime.
 The original Daiquiri was just three ingredients: rum, lime and sugar.
 Cold, bright and tart.

@@ -219,6 +219,16 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .cc-quick > span{white-space:nowrap}
 
 /* ---------- Recipe card (a bartender's dealer's choice): an index card; the + and - change how many drinks */
+/* the recipe up top, closed: "Just the recipe, please" opens the card (Philip, Nov 10); the card also sits by the step-by-step */
+.recipe-drop{margin:.1rem 0}
+.recipe-drop summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:.6rem;
+  padding:.65rem .75rem .65rem 1rem;border:2px solid var(--accent);border-radius:12px 9px 13px 10px;font:800 1rem/1.25 var(--body);color:var(--accent)}
+.recipe-drop summary::-webkit-details-marker{display:none}
+.recipe-drop summary::after{content:"+";flex:none;display:grid;place-items:center;width:1.7rem;height:1.7rem;border-radius:50%;
+  border:2px solid currentColor;font:800 1.05rem/1 var(--body)}
+.recipe-drop[open] summary::after{content:"\2013"}
+.recipe-drop summary:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.recipe-drop .recipe-card{margin-top:.9rem}
 .recipe-card{background:#fffaf1;color:#3a2532;border-radius:8px 6px 10px 7px;transform:rotate(.6deg);margin:.4rem 2px;padding:.9rem 1.05rem 1rem;
   box-shadow:2px 3px 0 #4a342622;background-image:linear-gradient(#fffaf1 0 3.7rem,#d9867f 3.7rem 3.85rem,transparent 3.85rem),repeating-linear-gradient(#fffaf1 0 27px,#cfe0ea 27px 28px)}
 .rc-kicker{margin:0;font:800 .7rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#b14b45}

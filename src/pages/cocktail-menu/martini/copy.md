@@ -6,6 +6,14 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip, on his Manhattan template: the opener, the story (sources: O.H. Byron 1884; Jerry Thomas 1887; the Dry Martini in Applegreen's and Newman's 1904 bar books; Hemingway's fifteen-to-one "Montgomery", 1950; "shaken and not stirred" in Dr. No, 1958), "Sorry, Mr. Bond.", the lead, the tip, and Keep exploring. Philip's: the stir step, and the Shaken or Stirred? link line (from the Boulevardier). Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Martini.***
+Just the recipe, please
+The Cocktail Menu · Classics
+Martini
+Makes − 1 + drink
+2 ½ oz gin
+½ oz dry vermouth
+1 dash orange bitters (optional)
+**Glass:** martini glass · **Garnish:** olives or a lemon twist
 It started out as a Manhattan.
 No, *really.* Just with gin.
 In the 1880s, bartenders were swapping the whiskey in a Manhattan for gin. The first printed recipe for the Martini's ancestor, the Martinez, barely bothered with details:

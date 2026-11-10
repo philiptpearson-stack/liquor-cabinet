@@ -6,6 +6,14 @@
 # Nov 3 2026: Philip's copy from chat: the intro and the Golden Ratio note (second round, late), "Here's how you make one:" and the first two steps (he liked the recipe card as it was). Claude's, waiting on Philip: steps 3 and 4, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Boulevardier.***
+Just the recipe, please
+The Cocktail Menu · Classics
+Boulevardier
+Makes − 1 + drink
+2 oz bourbon or rye
+1 oz sweet vermouth
+1 oz Campari
+**Glass:** rocks, over one big ice cube · **Garnish:** orange peel
 **Ever heard of a cocktail called Negroni?**
 Well, the Boulevardier is Negroni's beefy American cousin. Same delightfully bitter formula. Just made with whiskey instead of gin.
 → Check out our Shaken or Stirred? How-To page for simple tips on balancing stirred cocktails!

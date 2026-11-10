@@ -6,6 +6,15 @@
 # Nov 6 2026: Philip's copy from chat (teach, don't trivia): the opener, the intro ("Fantastic!..." plain, in the body size), and the balance note with its link to the Golden Ratio, below the step-by-step since it isn't part of the story. Nov 3: Philip's copy, method and amounts (1 ½ : ¾ : ¾, the Golden Ratio; topped with ginger beer in the shaker, swirled, then poured in ice and all). CLAUDE'S DRAFT, waiting on Philip: the step wording, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: El ***Diablo.***
+Just the recipe, please
+The Cocktail Menu · Classics
+El Diablo
+Makes − 1 + drink
+1 ½ oz tequila
+¾ oz lime juice
+¾ oz crème de cassis
+4 oz ginger beer
+**Glass:** highball, over ice · **Garnish:** lime wedge
 *“I want a drink with tequila. But not a Margarita.”*
 Fantastic! Can I introduce you to the El Diablo?
 This tequila classic dates to 1946, and it's *perfect*.

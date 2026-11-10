@@ -6,6 +6,14 @@
 # Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Negroni.***
+Just the recipe, please
+The Cocktail Menu · Classics
+Negroni
+Makes − 1 + drink
+2 oz gin
+1 oz sweet vermouth
+1 oz Campari
+**Glass:** rocks, over one big ice cube · **Garnish:** orange peel
 Bitter, sweet and beautifully red.
 As the story goes, around 1919 in Florence, Count Camillo Negroni asked his bartender to make his Americano stronger, with gin instead of soda water.
 It's an acquired taste. Once you've acquired it, there's no going back.

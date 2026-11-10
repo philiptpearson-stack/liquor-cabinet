@@ -6,6 +6,16 @@
 # Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Whiskey ***Sour.***
+Just the recipe, please
+The Cocktail Menu · Classics
+Whiskey Sour
+Makes − 1 + drink
+2 oz bourbon
+1 oz simple syrup
+1 oz lemon juice (fresh squeezed)
+1 egg white (optional)
+**Glass:** coupe · **Garnish:** cherry
+Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.
 Where it all starts.
 The Whiskey Sour was already in print in 1862, in the very first American bartender's guide.
 Bourbon, lemon and sugar, with an optional egg white for a silky foam on top.

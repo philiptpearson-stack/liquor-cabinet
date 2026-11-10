@@ -6,6 +6,15 @@
 # Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Paloma.***
+Just the recipe, please
+The Cocktail Menu · Classics
+Paloma
+Makes − 1 + drink
+2 oz tequila
+½ oz lime juice
+1 pinch salt
+4 oz grapefruit soda
+**Glass:** highball, over ice · **Garnish:** grapefruit wedge
 Say hello to the dove.
 *Paloma* means dove in Spanish. In Mexico, it's an everyday favorite: tequila, lime and grapefruit soda, over ice.
 A pinch of salt makes the grapefruit pop.
