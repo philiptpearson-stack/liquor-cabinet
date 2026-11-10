@@ -61,7 +61,7 @@ A Collins? That's just a sour with bubbles. Gin, lemon and simple syrup, topped 
 Or a French 75? Same deal. It's a tiny gin sour, topped with Champagne.
 But there IS an exception to the rule:
 Concentrated bitters, like Angostura, are different.
-→ Check out our Stirred Drinks How-To page to learn the basics on Old Fashioneds, Manhattans, Martinis and all the rest!
+→ Check out our Shaken or Stirred? How-To page to learn the basics on Old Fashioneds, Manhattans, Martinis and all the rest!
 **Or, choose your own adventure with our interactive cocktail menu!**
 → The Cocktail Menu
 ← Back to Cocktails How-To

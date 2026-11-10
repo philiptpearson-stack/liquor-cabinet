@@ -14,7 +14,7 @@ DRINKS = [
          punch=None,
          lines=['<strong>Ever heard of a cocktail called Negroni?</strong>',
                 "Well, the Boulevardier is Negroni's beefy American cousin. Same delightfully bitter formula. Just made with whiskey instead of gin."],
-         note_go=('→ Check out our Stirred Drinks How-To page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),   # Philip, Nov 6 (its own line; The Golden Ratio's stays as it was)
+         note_go=('→ Check out our Shaken or Stirred? How-To page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),   # Philip, Nov 6 (its own line; The Golden Ratio's stays as it was)
          steps=[('<strong>Combine ingredients.</strong> Add whiskey, sweet vermouth and Campari to a mixing glass.', [('pour', 'bourbon', 2), ('pour', 'sweet-vermouth', 1), ('pour', 'campari', 1)]),
                 ('<strong>Stir.</strong> Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into <strong>balance.</strong> <em>Dilution is part of the recipe.</em>)', [('ice', 'mix'), ('stir',)]),
                 ('<strong>Strain over a big cube.</strong> Strain into a rocks glass over one large ice cube.', [('ice', 'glass'), ('strain',)]),
@@ -139,7 +139,7 @@ DRINKS = [
                 "Drinkers who wanted a good ol' plain Whiskey Cocktail started asking for it “the Old Fashioned” way.",
                 'And the rest, as they say, is history.'],
          lead="Here's how you make a <em>fantastic</em> Manhattan:",
-         note_go_end=('→ Check out our Stirred Drinks How-To page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
+         note_go_end=('→ Check out our Shaken or Stirred? How-To page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
          copy_note=("Nov 6 2026: Philip's copy from chat: the opener (\"really.\" in plum, like \"Seriously.\" and \"Really.\"), the story and the quote box, "
                     "\"Here's how you make a *fantastic* Manhattan:\", four dashes, and the Stirred Drinks link after the steps (the line is his, from the Boulevardier). "
                     "Fixed and flagged: the quote is the 1806 definition from The Balance, and Columbian Repository (Philip had it as Jerry Thomas's); \"curaçao\". "

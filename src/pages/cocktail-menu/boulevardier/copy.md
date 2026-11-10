@@ -8,7 +8,7 @@
 The Cocktail Menu: ***Boulevardier.***
 **Ever heard of a cocktail called Negroni?**
 Well, the Boulevardier is Negroni's beefy American cousin. Same delightfully bitter formula. Just made with whiskey instead of gin.
-→ Check out our Stirred Drinks How-To page for simple tips on balancing stirred cocktails!
+→ Check out our Shaken or Stirred? How-To page for simple tips on balancing stirred cocktails!
 Here's how you make one:
 The Cocktail Menu · Classics
 Boulevardier

@@ -32,7 +32,7 @@ Makes − 1 + drink
 **Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)
 **Serve up.** Strain into a chilled coupe, no ice.
 **Garnish.** A cherry.
-→ Check out our Stirred Drinks How-To page for simple tips on balancing stirred cocktails!
+→ Check out our Shaken or Stirred? How-To page for simple tips on balancing stirred cocktails!
 Keep exploring
 → Old Fashioned
 → Vieux Carré
