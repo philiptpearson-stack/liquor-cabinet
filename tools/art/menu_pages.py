@@ -236,6 +236,8 @@ def drink_story(d):
     for t in d['lines']:
         if isinstance(t, tuple) and t[0] == 'quote':   # a quote box, set like a clipping (Philip's Manhattan)
             s += ['  <figure class="quote">', f'    <blockquote><p>{t[1]}</p></blockquote>', f'    <figcaption>{t[2]}</figcaption>', '  </figure>']
+        elif isinstance(t, tuple) and t[0] == 'punch':   # a line in the big type, mid-story
+            s += [f'  <p class="punch">{t[1]}</p>']
         else:
             s += [f'  <p class="t">{t}</p>']
     if d.get('gr'):
