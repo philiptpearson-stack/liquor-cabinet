@@ -27,7 +27,8 @@ GLASS = {
     'highball': dict(
         out='<path d="M-22 -104 L22 -104 L20 0 L-20 0Z" stroke-width="2.4"/><path d="M-19.6 -7 H19.6" stroke-width="1.6"/><path d="M-16.4 -94 L-15.4 -20" stroke="#fffaf1" stroke-width="2.6"/>',
         back='<path d="M-22 -104 L22 -104 L20 0 L-20 0Z" fill="#e7f1fb" opacity=".35"/>',
-        inner='M-20 -102 L20 -102 L18.4 -7 L-18.4 -7Z', bottom=-7, top=-92, rim=(-104, 22)),
+        inner='M-20 -102 L20 -102 L18.4 -7 L-18.4 -7Z', bottom=-7, top=-92, rim=(-104, 22),
+        foam='M-20.6 -96 Q-23 -112 -11 -114 Q0 -124 11 -114 Q23 -112 20.6 -96 Q0 -92 -20.6 -96Z'),
     'flute': dict(
         out='<path d="M-12 -112 Q-14 -64 0 -46 Q14 -64 12 -112" stroke-width="2.2"/><path d="M-12 -112 Q0 -114 12 -112" stroke-width="1.4"/><path d="M0 -46 V-4 M-15 0 Q0 -5 15 0" stroke-width="2.2"/>',
         back='<path d="M-12 -112 Q-14 -64 0 -46 Q14 -64 12 -112Z" fill="#e7f1fb" opacity=".35"/>',
@@ -42,6 +43,13 @@ GLASS = {
             '<path d="M-21.6 -6 H21.6" stroke-width="1.4"/><path d="M-20 -68 L-18.6 -18" stroke="#fffaf1" stroke-width="2.6"/>',
         back='<path d="M-26 -78 L26 -78 L23 -5 Q0 1 -23 -5Z" fill="#e7f1fb" opacity=".35"/>',
         inner='M-24 -76 L24 -76 L21.4 -7 L-21.4 -7Z', bottom=-7, top=-60, rim=(-78, 26)),
+    'julep-cup': dict(
+        out='<path d="M-24 -74 Q0 -82 24 -74 Q0 -66 -24 -74Z" stroke-width="2.2"/><path d="M-24 -74 L-19 -7 Q0 -1 19 -7 L24 -74" stroke-width="2.4"/>'
+            '<path d="M-16 -5 L-17 0 H17 L16 -5" stroke-width="2"/><path d="M-17 -60 L-14 -18" stroke="#ffffff" stroke-width="3"/>'
+            + ''.join(f'<circle cx="{x}" cy="{y}" r=".9" fill="#ffffff" stroke="none"/>' for x, y in ((-8, -56), (4, -48), (12, -60), (-2, -34), (10, -28), (-12, -40), (6, -18))),
+        back='<path d="M-24 -74 Q0 -82 24 -74 Q0 -66 -24 -74Z" fill="#7d858c"/>',
+        front='<path d="M-24 -74 Q0 -66 24 -74 L19 -7 Q0 -1 -19 -7Z" fill="#c9d0d6"/>',
+        inner='M-23 -90 L23 -90 L23 -74 L19 -6 L-19 -6 L-23 -74Z', bottom=-6, top=-75, rim=(-74, 24), opaque=True),
     'copper-mug': dict(
         out='<path d="M-32 -70 Q0 -79 32 -70 Q0 -61 -32 -70Z" stroke-width="2.2"/><path d="M-32 -70 L-31 -7 Q0 1 31 -7 L32 -70" stroke-width="2.4"/>'
             '<path d="M32 -60 Q49 -59 49 -40 Q49 -21 32 -20" stroke-width="5.5" stroke="#8a4a22"/><path d="M32 -60 Q49 -59 49 -40 Q49 -21 32 -20" stroke-width="2"/>'
@@ -57,6 +65,7 @@ ICE = {
     'rocks-crushed': [(-28.0, -18.0, 8, -25), (-18.8, -17.0, 7, 12), (-9.6, -16.0, 6, -1), (-0.4, -17.5, 8, -14), (8.8, -16.5, 7, 23), (18.0, -18.0, 6, 10), (-24.0, -23.1, 7, -2), (-14.8, -24.6, 6, -15), (-5.6, -23.6, 8, 22), (3.6, -22.6, 7, 9), (12.8, -24.1, 6, -4), (-28.0, -30.6, 6, 21), (-18.8, -29.6, 8, 8), (-9.6, -31.1, 7, -5), (-0.4, -30.1, 6, -18), (8.8, -29.1, 8, 19), (18.0, -30.6, 7, 6), (-24.0, -35.7, 8, -6), (-14.8, -37.2, 7, -19), (-5.6, -36.2, 6, 18), (3.6, -37.7, 8, 5), (12.8, -36.7, 7, -8), (-28.0, -43.2, 7, 17), (-18.8, -42.2, 6, 4), (-9.6, -43.7, 8, -9), (-0.4, -42.7, 7, -22), (8.8, -44.2, 6, 15), (18.0, -43.2, 8, 2), (-24.0, -50.8, 6, -10), (-14.8, -49.8, 8, -23), (-5.6, -48.8, 7, 14), (3.6, -50.3, 6, 1), (12.8, -49.3, 8, -12), (-28.0, -55.9, 8, 13), (-18.8, -57.4, 7, 0), (-9.6, -56.4, 6, -13), (-0.4, -55.4, 8, 24), (8.8, -56.9, 7, 11), (18.0, -55.9, 6, -2)],
     'highball-crushed': [(-18.0, -16.5, 7.5, -25), (-9.3, -15.5, 6.5, 12), (-0.6, -14.5, 5.5, -1), (8.1, -16.0, 7.5, -14), (-14.2, -21.1, 6.5, -2), (-5.6, -22.6, 5.5, -15), (3.1, -21.6, 7.5, 22), (-18.0, -28.3, 5.5, 21), (-9.3, -27.3, 7.5, 8), (-0.6, -28.8, 6.5, -5), (8.1, -27.8, 5.5, -18), (-14.2, -32.9, 7.5, -6), (-5.6, -34.4, 6.5, -19), (3.1, -33.4, 5.5, 18), (-18.0, -40.1, 6.5, 17), (-9.3, -39.1, 5.5, 4), (-0.6, -40.6, 7.5, -9), (8.1, -39.6, 6.5, -22), (-14.2, -47.2, 5.5, -10), (-5.6, -46.2, 7.5, -23), (3.1, -45.2, 6.5, 14), (-18.0, -51.9, 7.5, 13), (-9.3, -53.4, 6.5, 0), (-0.6, -52.4, 5.5, -13), (8.1, -51.4, 7.5, 24), (-14.2, -59.0, 6.5, -14), (-5.6, -58.0, 5.5, 23), (3.1, -59.5, 7.5, 10), (-18.0, -63.7, 5.5, 9), (-9.3, -65.2, 7.5, -4), (-0.6, -64.2, 6.5, -17), (8.1, -65.7, 5.5, 20), (-14.2, -70.8, 7.5, -18), (-5.6, -69.8, 6.5, 19), (3.1, -71.3, 5.5, 6), (-18.0, -78.0, 6.5, 5), (-9.3, -77.0, 5.5, -8), (-0.6, -76.0, 7.5, -21), (8.1, -77.5, 6.5, 16), (-14.2, -82.7, 5.5, -22), (-5.6, -84.2, 7.5, 15), (3.1, -83.2, 6.5, 2), (-18.0, -89.8, 7.5, 1), (-9.3, -88.8, 6.5, -12), (-0.6, -90.3, 5.5, -25), (8.1, -89.3, 7.5, 12), (-14.2, -94.5, 6.5, 24), (-5.6, -96.0, 5.5, 11), (3.1, -95.0, 7.5, -2)],
     'wine': [(-18, -84, 14, -6), (2, -86, 14, 5), (-8, -101, 14, 8), (-15, -72, 13, 3), (4, -72, 13, -5)],
+    'julep-cup-crushed': [(-22.0, -17.5, 7.5, -25), (-13.3, -16.5, 6.5, 12), (-4.6, -15.5, 5.5, -1), (4.1, -17.0, 7.5, -14), (12.8, -16.0, 6.5, 23), (-18.2, -22.1, 6.5, -2), (-9.6, -23.6, 5.5, -15), (-0.9, -22.6, 7.5, 22), (7.8, -21.6, 6.5, 9), (-22.0, -29.3, 5.5, 21), (-13.3, -28.3, 7.5, 8), (-4.6, -29.8, 6.5, -5), (4.1, -28.8, 5.5, -18), (12.8, -27.8, 7.5, 19), (-18.2, -33.9, 7.5, -6), (-9.6, -35.4, 6.5, -19), (-0.9, -34.4, 5.5, 18), (7.8, -35.9, 7.5, 5), (-22.0, -41.1, 6.5, 17), (-13.3, -40.1, 5.5, 4), (-4.6, -41.6, 7.5, -9), (4.1, -40.6, 6.5, -22), (12.8, -42.1, 5.5, 15), (-18.2, -48.2, 5.5, -10), (-9.6, -47.2, 7.5, -23), (-0.9, -46.2, 6.5, 14), (7.8, -47.7, 5.5, 1), (-22.0, -52.9, 7.5, 13), (-13.3, -54.4, 6.5, 0), (-4.6, -53.4, 5.5, -13), (4.1, -52.4, 7.5, 24), (12.8, -53.9, 6.5, 11), (-18.2, -60.0, 6.5, -14), (-9.6, -59.0, 5.5, 23), (-0.9, -60.5, 7.5, 10), (7.8, -59.5, 6.5, -3), (-22.0, -64.7, 5.5, 9), (-13.3, -66.2, 7.5, -4), (-4.6, -65.2, 6.5, -17), (4.1, -66.7, 5.5, 20), (12.8, -65.7, 7.5, 7), (-18.2, -71.8, 7.5, -18), (-9.6, -70.8, 6.5, 19), (-0.9, -72.3, 5.5, 6), (7.8, -71.3, 7.5, -7), (-22.0, -79.0, 6.5, 5), (-13.3, -78.0, 5.5, -8), (-4.6, -77.0, 7.5, -21), (4.1, -78.5, 6.5, 16), (12.8, -77.5, 5.5, 3), (-18.2, -83.7, 5.5, -22), (-9.6, -85.2, 7.5, 15), (-0.9, -84.2, 6.5, 2), (7.8, -83.2, 5.5, -11)],
     'copper-mug': [(-21, -80, 13, -8), (-4, -82, 13, 6), (12, -79, 12, -5)],   # only their tops show, in the mouth of the mug
     'highball': [(-17.5, -23, 15, -6), (1.5, -22.5, 15, 5), (-12, -39, 15, 8), (3, -38.5, 15, -4), (-16, -55, 15, 3), (1, -54, 15, -7), (-8, -71, 15, 6)],
 }
@@ -156,7 +165,8 @@ def garnish(kind, glass):
     g = GLASS[glass]
     ry, hw = g['rim']
     if kind == 'cherry':
-        spot = {'coupe': (5, -69), 'martini': (4, -76), 'rocks': (9, -42), 'highball': (7, -95), 'flute': (0, -103), 'wine': (6, -99), 'mug': (8, -64), 'copper-mug': (8, -72)}[glass]
+        spot = {'coupe': (5, -69), 'martini': (4, -76), 'rocks': (9, -42), 'highball': (7, -95), 'flute': (0, -103), 'wine': (6, -99), 'mug': (8, -64), 'copper-mug': (8, -72),
+                'julep-cup': (8, -80)}[glass]
         return at(*spot, cherry())
     if kind == 'olives':
         return at(6, ry + 18, olives())
@@ -174,6 +184,34 @@ def garnish(kind, glass):
         return at(hw - 8, ry + 6, peel(kind.split('-')[0]), 1, -8)
     if kind in ('salt-rim', 'sugar-rim'):
         return rim(kind, glass)
+    top = g['top']
+    if kind == 'celery':
+        return at(hw - 12, ry + 8, lines('<path d="M0 0 L8 -46" stroke="#8fbf5a" stroke-width="5"/><path d="M0 0 L8 -46" stroke="#cfe39a" stroke-width="1.6"/>', boil=False)
+                  + ''.join(mint_leaf(8 + dx, -46 + dy, r) for dx, dy, r in ((0, 2, -30), (3, 4, 30), (-2, 5, -70))))
+    if kind == 'candied-ginger':
+        return at(hw - 10, ry - 2, lines('<path d="M-14 6 L16 -10" stroke="#a9a29a" stroke-width="1.6"/>', boil=False)
+                  + wash('<rect x="2" y="-9" width="9" height="8" rx="2" fill="#e9c46a" transform="rotate(-25 6 -5)"/>')
+                  + lines('<rect x="2" y="-9" width="9" height="8" rx="2" stroke-width="1.4" transform="rotate(-25 6 -5)"/>', boil=False))
+    if kind == 'paper-plane':
+        return at(hw - 4, ry - 10, wash('<path d="M-10 0 L12 -6 L-2 4Z" fill="#fffaf1"/><path d="M-2 4 L12 -6 L0 -1Z" fill="#e7e1d6"/>')
+                  + lines('<path d="M-10 0 L12 -6 L-2 4Z M-2 4 L0 -1 L12 -6" stroke-width="1.3"/>', boil=False), 1, -12)
+    if kind == 'coffee-beans':
+        return ''.join(at(x, top - 1.5, wash('<ellipse rx="3.4" ry="2.4" fill="#4a2a18"/>') + lines('<path d="M-2.4 0 Q0 -1 2.4 0" stroke="#c99a62" stroke-width=".9"/>', boil=False), 1, r)
+                       for x, r in ((-8, -10), (0, 6), (8, -4)))
+    if kind == 'pineapple':
+        return at(hw - 4, ry - 1, wash('<path d="M-9 -2 L9 -2 L0 13Z" fill="#f6d36a"/><path d="M-9 -2 L9 -2 L8 -5 L-8 -5Z" fill="#c9a25a"/>'
+                                      '<path d="M-2 -5 L-6 -16 L0 -8 L2 -18 L3 -8 L8 -14 L4 -5Z" fill="#6f9e4a"/>')
+                  + lines('<path d="M-9 -2 L9 -2 L0 13Z M-9 -2 L-8 -5 L8 -5 L9 -2" stroke-width="1.4"/><path d="M-2 -5 L-6 -16 L0 -8 L2 -18 L3 -8 L8 -14 L4 -5" stroke-width="1.2"/>', boil=False))
+    if kind == 'bitters-drops':
+        return ''.join(f'<circle cx="{x}" cy="{f(top - 3)}" r="1.6" fill="#7d2f2a"/>' for x in (-8, -1, 6))
+    if kind == 'straw':
+        return lines(f'<path d="M-4 {f(g["bottom"] - 4)} L10 {f(ry - 26)}" stroke="#e8737a" stroke-width="3.4"/>', boil=False, width=2)
+    if kind == 'cinnamon':
+        return at(8, ry + 6, wash('<rect x="-2.6" y="-36" width="5.2" height="36" rx="2" fill="#9a5a2a"/>') + lines('<rect x="-2.6" y="-36" width="5.2" height="36" rx="2" stroke-width="1.4"/>', boil=False), 1, 12)
+    if kind == 'nutmeg':
+        return ''.join(f'<circle cx="{x}" cy="{f(top + dy)}" r=".9" fill="#8a5a2a"/>' for x, dy in ((-10, 1), (-5, 0), (-1, 1.4), (3, .4), (8, 1), (12, .2), (-14, .6)))
+    if kind == 'berries':
+        return ''.join(at(x, ry - 3, wash(f'<circle r="3.4" fill="{c}"/>') + lines('<circle r="3.4" stroke-width="1.2"/>', boil=False)) for x, c in ((-6, '#b3202a'), (1, '#4a1830'), (8, '#b3202a')))
     raise ValueError(kind)
 
 
@@ -242,11 +280,11 @@ def bottle(shape, glass_color, word, cap='#7a5f4a', foil=False):
     return fill + line + label_text(word, w, ly, lh)
 
 
-def bitters():
-    """A dasher bottle of bitters (no brand)."""
+def bitters(word='bitters'):
+    """A dasher bottle of bitters (no brand), or of another sauce: the label says what's in it."""
     return (wash('<path d="M-9 -8 Q-9 -14 -4 -14 L-4 -20 L4 -20 L4 -14 Q9 -14 9 -8 L9 18 L-9 18Z" fill="#7d2f2a"/><rect x="-11" y="-2" width="22" height="14" rx="1.5" fill="#fbf3e3"/><rect x="-2.5" y="-25" width="5" height="5" fill="#c9c3b8"/>')
             + lines('<path d="M-9 -8 Q-9 -14 -4 -14 L-4 -20 L4 -20 L4 -14 Q9 -14 9 -8 L9 18 L-9 18Z"/><rect x="-11" y="-2" width="22" height="14" rx="1.5" stroke-width="1.5"/><rect x="-2.5" y="-25" width="5" height="5" stroke-width="1.4"/>', boil=False, width=2)
-            + '<text class="letter" x="0" y="7.6" font-size="6.2" text-anchor="middle">bitters</text>')
+            + (f'<text class="letter" x="0" y="7.6" font-size="6.2" text-anchor="middle"' + (' textLength="19" lengthAdjust="spacingAndGlyphs"' if len(word) > 7 else '') + f'>{word}</text>'))
 
 
 def jigger():
@@ -313,6 +351,46 @@ ING = {
     'orgeat':         ('orgeat', 'jigger', '#f0e3c8', None),
     'water':          ('cold water', 'jigger', '#e8f3f7', None),
     'hot-water':      ('hot water', 'kettle', '#f2ece4', None),
+    'coffee':         ('hot coffee', 'kettle', '#3a2416', None),
+    'hot-milk':       ('hot milk', 'kettle', '#fbf6ea', None),
+    'mulled':         ('hot mulled wine', 'kettle', '#7a1f2a', None),
+    'absinthe':       ('absinthe', 'bottle', '#b9d99a', ('tall', '#9ec27a', 'absinthe')),
+    'islay':          ('Islay Scotch', 'bottle', '#c9a25a', ('spirit', '#b98a4a', 'Islay Scotch')),
+    'irish-whiskey':  ('Irish whiskey', 'bottle', '#c9963c', ('spirit', '#c9a25a', 'Irish whiskey')),
+    'amaro':          ('Amaro Nonino', 'bottle', '#c46a2a', ('liqueur', '#b8621f', 'Amaro Nonino')),
+    'coffee-liqueur': ('coffee liqueur', 'bottle', '#3a2416', ('liqueur', '#3a2416', 'coffee liqueur')),
+    'citrus-vodka':   ('citrus vodka', 'bottle', '#f1efd8', ('tall', '#f0ead0', 'citrus vodka')),
+    'mezcal':         ('mezcal', 'bottle', '#eef0e2', ('tall', '#dfe6d2', 'mezcal')),
+    'reposado':       ('reposado tequila', 'bottle', '#e9d29a', ('tall', '#e9d29a', 'reposado tequila')),
+    'chartreuse':     ('green Chartreuse', 'bottle', '#a9cf6a', ('liqueur', '#8fbf5a', 'green Chartreuse')),
+    'maraschino':     ('maraschino liqueur', 'bottle', '#eef2ea', ('tall', '#cfe0c8', 'maraschino')),
+    'lillet':         ('Lillet Blanc', 'bottle', '#f0dfa0', ('wine', '#e9d48a', 'Lillet Blanc')),
+    'fernet':         ('Fernet-Branca', 'bottle', '#3a3226', ('tall', '#3a3226', 'Fernet-Branca')),
+    'angostura-oz':   ('Angostura bitters', 'bottle', '#5a1f1a', ('soda', '#5a1f1a', 'Angostura bitters')),
+    'cherry-liqueur': ('cherry liqueur', 'bottle', '#7a1a2a', ('liqueur', '#7a1a2a', 'cherry liqueur')),
+    'cachaca':        ('cachaça', 'bottle', '#eef2e6', ('tall', '#dde9d6', 'cachaça')),
+    'pisco':          ('pisco', 'bottle', '#f1eedb', ('tall', '#e6eadb', 'pisco')),
+    'rhum-agricole':  ('rhum agricole', 'bottle', '#eef0e0', ('tall', '#dfe8d4', 'rhum agricole')),
+    'sherry':         ('sherry', 'bottle', '#c99a4a', ('wine', '#a8742e', 'sherry')),
+    'peach-brandy':   ('peach brandy', 'bottle', '#e9a25a', ('liqueur', '#e09a52', 'peach brandy')),
+    'red-wine':       ('red wine', 'bottle', '#6a1a2a', ('wine', '#4a1a26', 'red wine')),
+    'ginger-ale':     ('ginger ale', 'bottle', '#efe2b0', ('soda', '#d9b97a', 'ginger ale')),
+    'tomato':         ('tomato juice', 'jigger', '#c8402e', None),
+    'honey-ginger':   ('honey-ginger syrup', 'jigger', '#e2b452', None),
+    'espresso':       ('espresso', 'jigger', '#3a2416', None),
+    'cranberry':      ('cranberry juice', 'jigger', '#b3202a', None),
+    'agave':          ('agave syrup', 'jigger', '#f0d78a', None),
+    'cream':          ('heavy cream', 'jigger', '#fbf6ea', None),
+    'orange-juice':   ('orange juice', 'jigger', '#f6b25a', None),
+    'coconut':        ('cream of coconut', 'jigger', '#f6f1e6', None),
+    'pineapple':      ('pineapple juice', 'jigger', '#f6d86a', None),
+    'demerara':       ('demerara syrup', 'jigger', '#d9a65a', None),
+    'grapefruit-juice': ('grapefruit juice', 'jigger', '#f4b0a2', None),
+    'cane-syrup':     ('cane syrup', 'jigger', '#e9c97a', None),
+    'batter':         ('batter', 'jigger', '#e9c98a', None),
+    'worcestershire': ('Worcestershire sauce', 'dash', '#5a2e14', None),
+    'hot-sauce':      ('hot sauce', 'dash', '#c42f2f', None),
+    'orange-flower':  ('orange flower water', 'dash', '#efe6d2', None),
     'applejack':      ('applejack', 'bottle', '#d39a4a', ('spirit', '#d8a256', 'applejack')),
     'sweet-vermouth': ('sweet vermouth', 'bottle', '#7a2a2a', ('wine', '#6b3326', 'sweet vermouth')),
     'dry-vermouth':   ('dry vermouth', 'bottle', '#f2ecc8', ('wine', '#a9c49a', 'dry vermouth')),
@@ -338,7 +416,7 @@ ING = {
     'grapefruit-soda': ('grapefruit soda', 'bottle', '#f6d9cf', ('soda', '#f2b8a6', 'grapefruit soda')),
     'champagne':      ('Champagne', 'bottle', '#f3e6a6', ('wine', '#3f6b3a', 'Champagne')),
 }
-FIZZY = {'ginger-beer', 'soda', 'grapefruit-soda', 'champagne'}
+FIZZY = {'ginger-beer', 'soda', 'grapefruit-soda', 'champagne', 'ginger-ale', 'prosecco'}
 
 
 def ing_bottle(key):
@@ -365,7 +443,7 @@ def glass(kind, uid, color, garnish_kinds=(), iced=False, foam=False, layers=Non
     inside = f'<clipPath id="{uid}"><path d="{g["inner"]}"/></clipPath><g clip-path="url(#{uid})">{wash(fill)}{bub}{ice(kind, crushed) if iced else ""}</g>'
     out = wash(g['back']) + inside + (wash(g['front']) if 'front' in g else '')
     if foam and 'foam' in g:
-        out += foam_on(kind)
+        out += foam_on(kind, foam if isinstance(foam, str) else '#fff8e6')
     out += lines(g['out'], boil=False)
     out += garnishes(garnish_kinds, kind)
     if hot:
@@ -388,16 +466,17 @@ def kettle():
                     '<path d="M-10 -8 Q0 -24 10 -8" stroke-width="2.4" stroke="#5a4a44"/><circle cx="0" cy="-12" r="2.2" fill="#5a4a44"/><path d="M-11 3 L-9 -2" stroke="#f4f4f2" stroke-width="2.4"/>', boil=False))
 
 
-def foam_on(kind):
+def foam_on(kind, color='#fff8e6'):
     g = GLASS[kind]
-    dots = ''.join(f'<circle cx="{x}" cy="{y}" r="1.2" fill="none" stroke="#d9c7a8" stroke-width=".9"/>' for x, y in ((-18, -63), (-9, -61), (2, -63.5), (11, -61.6), (19, -63.4)))
-    return f'<path d="{g["foam"]}" fill="#fff8e6" stroke="{INK}" stroke-width="1.5"/>' + dots
+    spots = {'highball': ((-12, -104), (-4, -110), (5, -106), (13, -102))}.get(kind, ((-18, -63), (-9, -61), (2, -63.5), (11, -61.6), (19, -63.4)))
+    dots = ''.join(f'<circle cx="{x}" cy="{y}" r="1.2" fill="none" stroke="#d9c7a8" stroke-width=".9"/>' for x, y in spots)
+    return f'<path d="{g["foam"]}" fill="{color}" stroke="{INK}" stroke-width="1.5"/>' + dots
 
 
 def bubbles_in(kind, top, cls='bub'):
     """Little bubbles rising through the drink (they loop on their own)."""
     g = GLASS[kind]
-    hw = {'highball': 15, 'flute': 6, 'coupe': 16, 'rocks': 22, 'martini': 12, 'copper-mug': 22, 'wine': 16, 'mug': 18}[kind]
+    hw = {'highball': 15, 'flute': 6, 'coupe': 16, 'rocks': 22, 'martini': 12, 'copper-mug': 22, 'wine': 16, 'mug': 18, 'julep-cup': 16}[kind]
     out = ''
     for i, (fx, fy) in enumerate(((-.7, .15), (.1, .55), (.6, .3), (-.3, .8), (.35, .9), (-.55, .45))):
         x, y = fx * hw, max(g['bottom'] - (g['bottom'] - top) * fy * .6 - 3, top + 36)

@@ -9,18 +9,24 @@ The Cocktail Menu: ***Classics.***
 Tap any drink for its recipe and step-by-step, animated how-to.
 *New to mixing drinks?*
 Check out our tips and tricks page for all the cocktail basics you need →
+Bee's Knees
+Bloody Mary
 Boulevardier
 Daiquiri
 El Diablo
 French 75
+Gimlet
+Jack Rose
 Mamie Taylor
 Manhattan
 Margarita
 Martini
+Mint Julep
 Moscow Mule
 Negroni
 Old Fashioned
 Pink Lady
+Sazerac
 Sidecar
 Southside Fizz
 Tom Collins

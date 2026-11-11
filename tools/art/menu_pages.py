@@ -25,10 +25,12 @@ GENRE_NAME = {'classics': 'Classics', **dict(SOON)}   # the parts of the menu, b
 
 def genre(d):
     return d.get('genre', 'classics')
-GLASS_WORD = {'coupe': 'coupe', 'martini': 'martini glass', 'rocks': 'rocks glass', 'highball': 'tall glass of ice', 'flute': 'Champagne flute', 'copper-mug': 'copper mug', 'wine': 'wine glass', 'mug': 'warm mug'}
-HERO_SCALE = {'coupe': 1.8, 'martini': 1.55, 'rocks': 1.45, 'highball': 1.3, 'flute': 1.25, 'copper-mug': 1.3, 'wine': 1.15, 'mug': 1.35}
-ICON_SCALE = {'coupe': 1.35, 'martini': 1.18, 'rocks': 1.3, 'highball': .93, 'flute': .87, 'copper-mug': 1.2, 'wine': .9, 'mug': 1.25}
-GARNISH_WORD = {'orange-wheel': 'an orange slice', 'salt-rim': 'a salted rim', 'sugar-rim': 'a sugared rim', 'lime-wheel': 'a lime wheel', 'lemon-wheel': 'a lemon wheel', 'lime-wedge': 'a lime wedge', 'grapefruit-wedge': 'a grapefruit wedge',
+GLASS_WORD = {'coupe': 'coupe', 'martini': 'martini glass', 'rocks': 'rocks glass', 'highball': 'tall glass of ice', 'flute': 'Champagne flute', 'copper-mug': 'copper mug', 'wine': 'wine glass', 'mug': 'warm mug', 'julep-cup': 'julep cup'}
+HERO_SCALE = {'coupe': 1.8, 'martini': 1.55, 'rocks': 1.45, 'highball': 1.3, 'flute': 1.25, 'copper-mug': 1.3, 'wine': 1.15, 'mug': 1.35, 'julep-cup': 1.4}
+ICON_SCALE = {'coupe': 1.35, 'martini': 1.18, 'rocks': 1.3, 'highball': .93, 'flute': .87, 'copper-mug': 1.2, 'wine': .9, 'mug': 1.25, 'julep-cup': 1.2}
+GARNISH_WORD = {'lemon-wedge': 'a lemon wedge', 'orange-wedge': 'an orange wedge', 'lime-twist': 'a lime twist', 'lemon-peel': 'a lemon peel', 'grapefruit-twist': 'a grapefruit twist', 'celery': 'a celery stalk', 'candied-ginger': 'a piece of candied ginger', 'paper-plane': 'a little paper plane', 'coffee-beans': 'three coffee beans',
+                'pineapple': 'a pineapple wedge', 'bitters-drops': 'drops of bitters', 'straw': 'a straw', 'cinnamon': 'a cinnamon stick', 'nutmeg': 'grated nutmeg',
+                'berries': 'fresh berries', 'orange-wheel': 'an orange slice', 'salt-rim': 'a salted rim', 'sugar-rim': 'a sugared rim', 'lime-wheel': 'a lime wheel', 'lemon-wheel': 'a lemon wheel', 'lime-wedge': 'a lime wedge', 'grapefruit-wedge': 'a grapefruit wedge',
                 'lemon-twist': 'a lemon twist', 'orange-twist': 'an orange twist', 'orange-peel': 'an orange peel', 'cherry': 'a cherry',
                 'olives': 'olives', 'mint': 'a sprig of mint', 'flower': 'an edible flower'}
 
@@ -60,6 +62,9 @@ def prop(spec):
         return at(0, 0, pear(), 1.4), 'a pear'
     if spec == 'orgeat':
         return at(0, 0, bottle('tall', '#f2e8d2', 'orgeat', cap='#a87b4a'), 1.5), 'a bottle of orgeat'
+    if spec == 'tomato':
+        return at(0, 0, wash('<circle cx="0" cy="-13" r="13" fill="#d9483a"/><path d="M-6 -25 L0 -21 L6 -25 L3 -20 L0 -28 L-3 -20Z" fill="#6f9e4a"/>')
+                  + lines('<circle cx="0" cy="-13" r="13" stroke-width="2"/><path d="M-6 -25 L0 -21 L6 -25" stroke-width="1.4"/><path d="M-6 -18 q3 -3 7 -3" stroke="#f6a49a" stroke-width="2"/>', boil=False), 1.4), 'a tomato'
     if spec == 'kettle':
         return at(0, -12 * 1.6, kettle(), 1.6), 'a kettle'
     return at(0, 0, ing_bottle(spec), 1.55), f'a bottle of {ING[spec][0]}'
@@ -85,7 +90,7 @@ def hero(d):
         words.append(w)
     fizzy = any(a[0] == 'top' and a[1] in FIZZY for _, acts in d['steps'] for a in acts)
     served_iced = iced(d)
-    layers = None
+    layers = d.get('layers')
     if d['slug'] == 'dark-and-stormy':
         layers = [(.68, 1, '#5a2e14')]
     drink = glass(d['glass'], f'{d["slug"]}-hero', d['color'], d['garnish'], iced=served_iced, foam=d.get('foam', False), layers=layers, bubbles=fizzy,
@@ -100,7 +105,7 @@ def hero(d):
 
 def icon(d):
     served_iced = iced(d)
-    layers = [(.68, 1, '#5a2e14')] if d['slug'] == 'dark-and-stormy' else None
+    layers = [(.68, 1, '#5a2e14')] if d['slug'] == 'dark-and-stormy' else d.get('layers')
     return at(60, 112, glass(d['glass'], f'{d["slug"]}-ic', d['color'], d['garnish'], iced=served_iced, foam=d.get('foam', False), layers=layers, top=d.get('level'),
                              crushed=d.get('crushed', False)), ICON_SCALE[d['glass']])
 

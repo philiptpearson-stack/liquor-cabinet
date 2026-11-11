@@ -7,6 +7,7 @@ Each step is (words under the drawing, [actions]). Actions, in order:
   ('swirl',) a gentle swirl of the mixing glass   ('dump',) pour it all, ice and all, into the glass (no strainer)
   ('top', ingredient, oz)    ('float', ingredient, oz)   ('sink', ingredient, oz)   ('garnish',)
   ('rim',) salt or sugar the rim (the drink's garnish says which)   ('muddle',) press the mint, in the glass
+  ('rinse', ingredient) coat the glass, pour out the rest   ('sugar',) a spoon of sugar   ('limes',) lime wedges into the glass
 The still frame (reduced motion, and what the poster shows) is the finished drink; everything
 that moves is hidden there. All motion is CSS keyframes, timed in seconds and written as percents.
 """
@@ -17,9 +18,9 @@ MX, MRIM, MBOT = 190, 96, 189                      # the mixing glass: rim centr
 G_MIX = 'M160 96 L220 96 L214 196 L166 196Z'
 G_MIX_IN = 'M162.4 99 L217.6 99 L212.3 189 L167.7 189Z'
 TIN = 'M154 114 L226 114 L220 58 L160 58Z'
-BUILD_SCALE = {'highball': 1.2, 'rocks': 1.38, 'coupe': 1.5, 'flute': 1.0, 'martini': 1.3, 'copper-mug': 1.35, 'wine': 1.15, 'mug': 1.4}
+BUILD_SCALE = {'highball': 1.2, 'rocks': 1.38, 'coupe': 1.5, 'flute': 1.0, 'martini': 1.3, 'copper-mug': 1.35, 'wine': 1.15, 'mug': 1.4, 'julep-cup': 1.35}
 DUR = {'pour': 1.2, 'jigger': 1.15, 'dash': 1.2, 'egg': 1.3, 'mint': 1.0, 'salt': 1.0, 'ice': 1.0, 'ice-glass': 1.5,
-       'dry': 2.4, 'shake': 2.9, 'stir': 2.8, 'strain': 2.5, 'dump': 2.4, 'swirl': 1.7, 'top': 1.9, 'float': 1.9, 'sink': 1.9, 'garnish': 1.3, 'rim': 1.5, 'muddle': 2.0}
+       'dry': 2.4, 'shake': 2.9, 'stir': 2.8, 'strain': 2.5, 'dump': 2.4, 'swirl': 1.7, 'top': 1.9, 'float': 1.9, 'sink': 1.9, 'garnish': 1.3, 'rim': 1.5, 'muddle': 2.0, 'rinse': 2.2, 'sugar': 1.1, 'limes': 1.2}
 LEAD, HOLD = .5, 2.8
 VIEW = '104 14 240 204'
 
@@ -208,7 +209,7 @@ class Build:
         if d.get('foam'):
             c = self.cls('foam')
             sa = next(a for a in acts if a[2] in ('strain', 'dump'))
-            foam_svg = f'<g class="{c}">{foam_on(self.kind)}</g>'
+            foam_svg = f'<g class="{c}">{foam_on(self.kind, d["foam"] if isinstance(d["foam"], str) else "#fff8e6")}</g>'
             self.emit(c, [(0, {'opacity': 0}), (sa[-1] - .5, {'opacity': 0}), (sa[-1] - .1, {'opacity': 1})], base=None)
         contents_c = self.cls('gc')
         self.emit(contents_c, [(0, {'opacity': 1}), (self.T - .8, {'opacity': 1}), (self.T - .25, {'opacity': 0})], base=None)
@@ -409,7 +410,7 @@ class Build:
         step, into, kind = a[0], a[1], a[2]
         t0, t1 = a[-2], a[-1]
         rx, ry, by = self.target(into)
-        if kind in ('pour', 'top', 'float', 'sink') and ING[a[3]][1] == 'bottle':
+        if kind in ('pour', 'top', 'float', 'sink', 'rinse') and ING[a[3]][1] == 'bottle':
             side = -1 if (into == 'glass' and self.uses_mix) else 1
             mx, my = rx + side * 44, max(ry - 24, 44)
             s = .8
@@ -426,6 +427,12 @@ class Build:
             color = visible(ING[a[3]][2])
             stream = lines(f'<path d="M{f(mx)} {f(my + 1)} Q{f(rx + side * 16)} {f(my + (end_y - my) * .4)} {f(rx + side * 3)} {f(end_y)}" stroke="{color}" stroke-width="{3.4 if kind != "float" else 2.6}"/>',
                            boil=False, extra=f' class="{sc}"')
+            if kind == 'rinse':   # a film in the bottom of the glass, swirled around, the rest poured out
+                fc = self.cls('film')
+                film = f'<g class="{fc}"><ellipse cx="{f(rx)}" cy="{f(by - 3)}" rx="{f(12 * self.gs)}" ry="{f(2.4 * self.gs)}" fill="{color}" opacity=".85"/></g>'
+                self.emit(fc, [(0, {'opacity': 0}), (t0 + .5, {'opacity': 0}), (t0 + .7, {'opacity': 1}), (t1 - .5, {'opacity': 1}), (t1 - .1, {'opacity': 0})])
+                self.window(sc, t0 + .38, t0 + .9)
+                return body + stream + film
             self.window(sc, t0 + .38, t1 - .3)
             return body + stream
         if kind in ('pour', 'top') and ING[a[3]][1] == 'kettle':
@@ -434,10 +441,10 @@ class Build:
             body = f'<g class="{c}" style="transform-origin:{f(px)}px {f(py)}px"><g transform="translate({f(px)} {f(py)})">{kettle()}</g></g>'
             self.emit(c, [(0, {'opacity': 0, 'transform': 'rotate(0)'}), (t0, {'opacity': 0, 'transform': 'rotate(0)'}), (t0 + .05, {'opacity': 1}), (t0 + .4, {'transform': 'rotate(42deg)'}),
                           (t1 - .4, {'transform': 'rotate(42deg)'}), (t1 - .1, {'transform': 'rotate(0)'}), (t1, {'opacity': 0})])
-            stream = lines(f'<path d="M{f(px + 26)} {f(py + 12)} Q{f(rx - 8)} {f(ry)} {f(rx - 2)} {f(by - 10)}" stroke="#d9e8ee" stroke-width="3.2"/>', boil=False, extra=f' class="{sc}"')
+            stream = lines(f'<path d="M{f(px + 26)} {f(py + 12)} Q{f(rx - 8)} {f(ry)} {f(rx - 2)} {f(by - 10)}" stroke="{"#d9e8ee" if a[3] == "hot-water" else ING[a[3]][2]}" stroke-width="3.2"/>', boil=False, extra=f' class="{sc}"')
             self.window(sc, t0 + .42, t1 - .42)
             return body + stream
-        if kind == 'pour':   # a jigger: juice, syrup
+        if kind in ('pour', 'top', 'float'):   # a jigger: juice, syrup (or cream, floated)
             px, py = rx - 40, max(ry - 38, 36)
             c, sc = self.cls('jig'), self.cls('pour')
             body = f'<g class="{c}" style="transform-origin:{f(px)}px {f(py)}px"><g transform="translate({f(px)} {f(py)})">{jigger()}</g></g>'
@@ -449,7 +456,8 @@ class Build:
         if kind == 'dash':
             bx, bby = rx + 22.5, max(ry - 37.5, 40)
             c, w = self.cls('dsh'), self.cls('dshw')
-            body = (f'<g class="{w}"><g class="{c}" style="transform-origin:{f(bx)}px {f(bby)}px"><g transform="translate({f(bx)} {f(bby)}) rotate(200)">{bitters()}</g></g></g>')
+            word = {'worcestershire': 'Worcester', 'hot-sauce': 'hot sauce', 'orange-flower': 'flower water'}.get(a[3], 'bitters')
+            body = (f'<g class="{w}"><g class="{c}" style="transform-origin:{f(bx)}px {f(bby)}px"><g transform="translate({f(bx)} {f(bby)}) rotate(200)">{bitters(word)}</g></g></g>')
             self.window(w, t0 + .05, t1 - .1)
             st = [(0, {'transform': 'rotate(0)'}), (t0 + .2, {'transform': 'rotate(0)'})]
             n = max(2, min(int(a[4]), 4))
@@ -486,8 +494,8 @@ class Build:
                 c = self.cls('gleaf')
                 out += f'<g class="{c}">{mint_leaf(rx + dx, by + dy, r)}</g>'
                 tt = t0 + .15 + k * .12
-                self.emit(c, [(0, {'opacity': 0, 'transform': 'translateY(-110px)'}), (tt, {'opacity': 0, 'transform': 'translateY(-110px)'}), (tt + .05, {'opacity': 1}),
-                              (tt + .5, {'transform': 'translateY(0)'}), (self.T - .8, {'opacity': 1}), (self.T - .25, {'opacity': 0})])
+                stay = [(tt + .5, {'transform': 'translateY(0)', 'opacity': 0})] if self.g.get('opaque') else [(tt + .5, {'transform': 'translateY(0)'}), (self.T - .8, {'opacity': 1}), (self.T - .25, {'opacity': 0})]
+                self.emit(c, [(0, {'opacity': 0, 'transform': 'translateY(-110px)'}), (tt, {'opacity': 0, 'transform': 'translateY(-110px)'}), (tt + .05, {'opacity': 1})] + stay)
             return out
         if kind == 'mint':
             return ''   # the leaves themselves live in the mixing glass
@@ -504,9 +512,18 @@ class Build:
             st += [(t1, {'transform': 'translateY(-40px)'})]
             self.emit(c, st, base=None)
             return body
-        if kind == 'salt':
+        if kind == 'limes':
             out = ''
-            for i, (dx, dy) in enumerate(((-4, 0), (2, -3), (6, 2), (-1, 5))):
+            for k, (dx, dy, r) in enumerate(((-8, -5, -20), (6, -4, 25), (-1, -10, 70))):
+                c = self.cls('glime')
+                out += f'<g class="{c}">' + at(rx + dx, by + dy, wedge('lime'), 1, r) + '</g>'
+                tt = t0 + .15 + k * .14
+                self.emit(c, [(0, {'opacity': 0, 'transform': 'translateY(-110px)'}), (tt, {'opacity': 0, 'transform': 'translateY(-110px)'}), (tt + .05, {'opacity': 1}),
+                              (tt + .5, {'transform': 'translateY(0)'}), (self.T - .8, {'opacity': 1}), (self.T - .25, {'opacity': 0})])
+            return out
+        if kind in ('salt', 'sugar'):
+            out = ''
+            for i, (dx, dy) in enumerate(((-4, 0), (2, -3), (6, 2), (-1, 5)) + (((-6, 3), (4, 6), (0, -2)) if kind == 'sugar' else ())):
                 c = self.cls('salt')
                 out += f'<g class="{c}"><rect x="{f(rx + dx - 1.2)}" y="{f(ry - 30 + dy)}" width="2.4" height="2.4" fill="#fffaf1" stroke="#a9a29a" stroke-width=".6"/></g>'
                 tt = t0 + .2 + i * .08
@@ -548,10 +565,15 @@ class Build:
             return f'{oz_text(q)} {word}' if q and kind != 'top' else (f'{word}' if kind != 'top' else f'top with {word}')
         if kind == 'dash':
             n = int(a[4])
-            return f'{n} dash{"es" if n > 1 else ""} {ING[a[3]][0].replace(" bitters", "")} bitters'
+            name = ING[a[3]][0]
+            if 'bitters' not in name:   # Worcestershire, hot sauce, orange flower water
+                return f'{n} dash{"es" if n > 1 else ""} {name}'
+            return f'{n} dash{"es" if n > 1 else ""} {name.replace(" bitters", "")} bitters'
         if kind == 'rim':
             return 'salt the rim' if 'salt-rim' in self.d['garnish'] else 'sugar the rim'
-        return {'muddle': 'muddle, gently', 'egg': '1 egg white', 'mint': 'fresh mint', 'salt': 'a pinch of salt', 'ice': 'ice', 'dry': 'dry shake', 'shake': 'shake!', 'stir': 'stir, stir, stir', 'strain': 'strain', 'swirl': 'swirl', 'dump': 'pour it all in'}.get(kind)
+        if kind == 'rinse':
+            return f'rinse with {ING[a[3]][0]}'
+        return {'sugar': 'a spoon of sugar', 'limes': 'lime wedges', 'muddle': 'muddle, gently', 'egg': '1 egg white', 'mint': 'fresh mint', 'salt': 'a pinch of salt', 'ice': 'ice', 'dry': 'dry shake', 'shake': 'shake!', 'stir': 'stir, stir, stir', 'strain': 'strain', 'swirl': 'swirl', 'dump': 'pour it all in'}.get(kind)
 
     def step_css(self):
         out = []
