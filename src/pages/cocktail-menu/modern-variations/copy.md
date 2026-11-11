@@ -9,6 +9,5 @@ The Cocktail Menu: Modern ***Variations.***
 These are the *Modern Variations.*
 Tap any drink for its recipe and step-by-step, animated how-to.
 Gold Rush
-More modern variations
-Coming soon
+Paloma
 ← Back to the Cocktail Menu

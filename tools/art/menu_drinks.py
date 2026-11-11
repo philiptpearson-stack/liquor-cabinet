@@ -205,7 +205,7 @@ DRINKS = [
          tip="Don't be shy with the bitters: start with four good dashes, stir, taste, and add more if you like.",
          related=['manhattan', 'gold-rush'], hero=(['bourbon'], ['bitters', 'fruit:orange'])),
 
-    dict(slug='paloma', name='Paloma', glass='highball', color='#f3cbbb', garnish=['grapefruit-wedge'],
+    dict(slug='paloma', name='Paloma', genre='modern-variations', glass='highball', color='#f3cbbb', garnish=['grapefruit-wedge'],
          recipe=[(2, 'oz', 'tequila'), (.5, 'oz', 'lime juice'), (1, 'pinch', 'salt'), (4, 'oz', 'grapefruit soda')],
          glass_line=('highball, over ice', 'grapefruit wedge'),
          punch='Say hello to the dove.',

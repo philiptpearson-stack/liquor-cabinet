@@ -7,7 +7,7 @@
 
 The Cocktail Menu: ***Paloma.***
 Just the recipe, please
-The Cocktail Menu · Classics
+The Cocktail Menu · Modern Variations
 Paloma
 Makes − 1 + drink
 2 oz tequila
@@ -19,7 +19,7 @@ Say hello to the dove.
 *Paloma* means dove in Spanish. In Mexico, it's an everyday favorite: tequila, lime and grapefruit soda, over ice.
 A pinch of salt makes the grapefruit pop.
 Here's how you make one:
-The Cocktail Menu · Classics
+The Cocktail Menu · Modern Variations
 Paloma
 Makes − 1 + drink
 2 oz tequila
@@ -34,4 +34,4 @@ Makes − 1 + drink
 Keep exploring
 → El Diablo
 → Daiquiri
-← Back to Classics
+← Back to Modern Variations

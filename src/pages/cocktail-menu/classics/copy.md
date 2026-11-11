@@ -18,7 +18,6 @@ Manhattan
 Martini
 Negroni
 Old Fashioned
-Paloma
 Pink Lady
 Sidecar
 Southside Fizz
