@@ -62,6 +62,12 @@ def prop(spec):
         return at(0, 0, pear(), 1.4), 'a pear'
     if spec == 'orgeat':
         return at(0, 0, bottle('tall', '#f2e8d2', 'orgeat', cap='#a87b4a'), 1.5), 'a bottle of orgeat'
+    if spec == 'pineapple':   # a whole one (the Piña Colada, the Jungle Bird)
+        body = '<ellipse cx="0" cy="-15" rx="11" ry="14" fill="#e8b64a"/>'
+        crown = '<path d="M-1 -28 L-10 -42 L-3 -34 L-1 -50 L2 -34 L10 -44 L3 -28Z" fill="#6f9e4a"/>'
+        hatch = ('<path d="M-9 -22 L3 -3 M-4 -28 L9 -8 M-10 -11 L-4 -2 M9 -22 L-3 -3 M4 -28 L-9 -8 M10 -11 L4 -2" stroke="#b9842a" stroke-width="1.1"/>')
+        return at(0, 0, wash(body + crown) + lines(hatch + '<ellipse cx="0" cy="-15" rx="11" ry="14" stroke-width="2"/>'
+                                                   '<path d="M-1 -28 L-10 -42 L-3 -34 L-1 -50 L2 -34 L10 -44 L3 -28" stroke-width="1.4"/>', boil=False), 1.35), 'a pineapple'
     if spec == 'tomato':
         return at(0, 0, wash('<circle cx="0" cy="-13" r="13" fill="#d9483a"/><path d="M-6 -25 L0 -21 L6 -25 L3 -20 L0 -28 L-3 -20Z" fill="#6f9e4a"/>')
                   + lines('<circle cx="0" cy="-13" r="13" stroke-width="2"/><path d="M-6 -25 L0 -21 L6 -25" stroke-width="1.4"/><path d="M-6 -18 q3 -3 7 -3" stroke="#f6a49a" stroke-width="2"/>', boil=False), 1.4), 'a tomato'
@@ -224,7 +230,7 @@ def amt(q, u, text):
     elif u == '':
         shown, us = qs, ''
     else:
-        plural = {'pinch': 'pinches'}.get(u, u + 's')
+        plural = {'pinch': 'pinches', 'tsp': 'tsp'}.get(u, u + 's')
         shown = f'{qs} {u if q == 1 else plural}'
         us = f' data-us="{plural}"' if plural != u + 's' else ''
     du = f' data-u="{u}"' if u else ''

@@ -514,7 +514,8 @@ class Build:
             return body
         if kind == 'limes':
             out = ''
-            for k, (dx, dy, r) in enumerate(((-8, -5, -20), (6, -4, 25), (-1, -10, 70))):
+            n = a[3] if len(a) > 5 else 3          # ('limes', 1): one coin of lime (the Ti' Punch)
+            for k, (dx, dy, r) in enumerate(((-8, -5, -20), (6, -4, 25), (-1, -10, 70))[:n]):
                 c = self.cls('glime')
                 out += f'<g class="{c}">' + at(rx + dx, by + dy, wedge('lime'), 1, r) + '</g>'
                 tt = t0 + .15 + k * .14
@@ -575,6 +576,8 @@ class Build:
             return 'salt the rim' if 'salt-rim' in self.d['garnish'] else 'sugar the rim'
         if kind == 'rinse':
             return f'rinse with {ING[a[3]][0]}'
+        if kind == 'limes' and len(a) > 5 and a[3] == 1:
+            return 'a coin of lime'
         return {'sugar': 'a spoon of sugar', 'limes': 'lime wedges', 'muddle': 'muddle, gently', 'egg': '1 egg white', 'mint': 'fresh mint', 'salt': 'a pinch of salt', 'ice': 'ice', 'dry': 'dry shake', 'shake': 'shake!', 'stir': 'stir, stir, stir', 'strain': 'strain', 'swirl': 'swirl', 'dump': 'pour it all in'}.get(kind)
 
     def step_css(self):
