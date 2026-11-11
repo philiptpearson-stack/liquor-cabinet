@@ -17,7 +17,7 @@ MX, MRIM, MBOT = 190, 96, 189                      # the mixing glass: rim centr
 G_MIX = 'M160 96 L220 96 L214 196 L166 196Z'
 G_MIX_IN = 'M162.4 99 L217.6 99 L212.3 189 L167.7 189Z'
 TIN = 'M154 114 L226 114 L220 58 L160 58Z'
-BUILD_SCALE = {'highball': 1.2, 'rocks': 1.38, 'coupe': 1.5, 'flute': 1.0, 'martini': 1.3, 'copper-mug': 1.35}
+BUILD_SCALE = {'highball': 1.2, 'rocks': 1.38, 'coupe': 1.5, 'flute': 1.0, 'martini': 1.3, 'copper-mug': 1.35, 'wine': 1.15, 'mug': 1.4}
 DUR = {'pour': 1.2, 'jigger': 1.15, 'dash': 1.2, 'egg': 1.3, 'mint': 1.0, 'salt': 1.0, 'ice': 1.0, 'ice-glass': 1.5,
        'dry': 2.4, 'shake': 2.9, 'stir': 2.8, 'strain': 2.5, 'dump': 2.4, 'swirl': 1.7, 'top': 1.9, 'float': 1.9, 'sink': 1.9, 'garnish': 1.3, 'rim': 1.5, 'muddle': 2.0}
 LEAD, HOLD = .5, 2.8
@@ -196,10 +196,11 @@ class Build:
         ice_svg = ''
         ice_act = next((a for a in acts if a[2] == 'ice' and a[1] == 'glass'), None) or next((a[:-2] + [a[-2] + .7, a[-1]] for a in acts if a[2] == 'dump'), None)
         if ice_act is not None or d.get('served_on_ice'):
-            for k, (x, y_, w, r) in enumerate(ICE.get(self.kind, [])):
+            chips = ICE.get(self.kind + '-crushed', []) if d.get('crushed') else []
+            for k, (x, y_, w, r) in enumerate(chips or ICE.get(self.kind, [])):
                 c = self.cls('gice')
                 ice_svg += f'<g class="{c}">{cube(x, y_, w, r)}</g>'
-                t0 = ice_act[-2] + k * (.12 if self.kind == 'highball' else 0)
+                t0 = ice_act[-2] + (k * .025 if chips else k * (.12 if self.kind == 'highball' else 0))
                 self.emit(c, [(0, {'opacity': 0, 'transform': 'translateY(-130px)'}), (t0, {'opacity': 0, 'transform': 'translateY(-130px)'}), (t0 + .05, {'opacity': 1}),
                               (t0 + .45, {'transform': 'translateY(0)'})], base=None)
         # foam (egg white drinks): on the drink, once it's poured
@@ -227,6 +228,11 @@ class Build:
         garn = f'<g class="{gc}">{garnishes([k for k in d["garnish"] if k not in RIMS], self.kind)}</g>'
         self.emit(gc, [(0, {'opacity': 0, 'transform': 'translateY(-60px)'}), (gt + .1, {'opacity': 0, 'transform': 'translateY(-60px)'}), (gt + .15, {'opacity': 1}),
                        (gt + .7, {'transform': 'translateY(0)'}), (self.T - .8, {'opacity': 1}), (self.T - .25, {'opacity': 0})], base=None)
+        if d.get('hot'):
+            hc = self.cls('hot')
+            hot_from = max(a[-1] for a in acts if a[2] in ('pour', 'top'))
+            gl += f'<g class="{hc}">{steam(0, g["rim"][0] - 4)}</g>'
+            self.emit(hc, [(0, {'opacity': 0}), (hot_from - .3, {'opacity': 0}), (hot_from + .3, {'opacity': 1}), (self.T - .8, {'opacity': 1}), (self.T - .25, {'opacity': 0})], base=None)
         glass_svg = f'<g transform="translate({f(self.gx)} {BAR}) scale({f(self.gs)})">{gl}{garn}</g>'
 
         # ---------- the mixing glass and shaker tin
@@ -421,6 +427,15 @@ class Build:
             stream = lines(f'<path d="M{f(mx)} {f(my + 1)} Q{f(rx + side * 16)} {f(my + (end_y - my) * .4)} {f(rx + side * 3)} {f(end_y)}" stroke="{color}" stroke-width="{3.4 if kind != "float" else 2.6}"/>',
                            boil=False, extra=f' class="{sc}"')
             self.window(sc, t0 + .38, t1 - .3)
+            return body + stream
+        if kind in ('pour', 'top') and ING[a[3]][1] == 'kettle':
+            px, py = rx - 46, max(ry - 30, 40)
+            c, sc = self.cls('ktl'), self.cls('pour')
+            body = f'<g class="{c}" style="transform-origin:{f(px)}px {f(py)}px"><g transform="translate({f(px)} {f(py)})">{kettle()}</g></g>'
+            self.emit(c, [(0, {'opacity': 0, 'transform': 'rotate(0)'}), (t0, {'opacity': 0, 'transform': 'rotate(0)'}), (t0 + .05, {'opacity': 1}), (t0 + .4, {'transform': 'rotate(42deg)'}),
+                          (t1 - .4, {'transform': 'rotate(42deg)'}), (t1 - .1, {'transform': 'rotate(0)'}), (t1, {'opacity': 0})])
+            stream = lines(f'<path d="M{f(px + 26)} {f(py + 12)} Q{f(rx - 8)} {f(ry)} {f(rx - 2)} {f(by - 10)}" stroke="#d9e8ee" stroke-width="3.2"/>', boil=False, extra=f' class="{sc}"')
+            self.window(sc, t0 + .42, t1 - .42)
             return body + stream
         if kind == 'pour':   # a jigger: juice, syrup
             px, py = rx - 40, max(ry - 38, 36)

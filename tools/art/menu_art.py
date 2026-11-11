@@ -32,6 +32,16 @@ GLASS = {
         out='<path d="M-12 -112 Q-14 -64 0 -46 Q14 -64 12 -112" stroke-width="2.2"/><path d="M-12 -112 Q0 -114 12 -112" stroke-width="1.4"/><path d="M0 -46 V-4 M-15 0 Q0 -5 15 0" stroke-width="2.2"/>',
         back='<path d="M-12 -112 Q-14 -64 0 -46 Q14 -64 12 -112Z" fill="#e7f1fb" opacity=".35"/>',
         inner='M-10.4 -110 Q-12.2 -64 0 -48.6 Q12.2 -64 10.4 -110Z', bottom=-49, top=-100, rim=(-112, 12)),
+    'wine': dict(
+        out='<path d="M-26 -112 Q-31 -80 -20 -64 Q-10 -56 0 -56 Q10 -56 20 -64 Q31 -80 26 -112" stroke-width="2.4"/><path d="M-26 -112 Q0 -116 26 -112" stroke-width="1.6"/>'
+            '<path d="M0 -56 V-4 M-18 0 Q0 -6 18 0" stroke-width="2.4"/><path d="M-20 -100 Q-23 -84 -16 -72" stroke="#fffaf1" stroke-width="2.6"/>',
+        back='<path d="M-26 -112 Q-31 -80 -20 -64 Q-10 -56 0 -56 Q10 -56 20 -64 Q31 -80 26 -112Z" fill="#e7f1fb" opacity=".35"/>',
+        inner='M-24.4 -110 Q-28.6 -80 -18.6 -65.4 Q-10 -58.4 0 -58.4 Q10 -58.4 18.6 -65.4 Q28.6 -80 24.4 -110Z', bottom=-59, top=-97, rim=(-112, 26)),
+    'mug': dict(   # a clear glass mug, for hot drinks
+        out='<path d="M-26 -78 L26 -78 L23 -5 Q0 1 -23 -5Z" stroke-width="2.4"/><path d="M25.6 -66 Q42 -65 42 -46 Q42 -28 24.2 -26" stroke-width="2.4"/>'
+            '<path d="M-21.6 -6 H21.6" stroke-width="1.4"/><path d="M-20 -68 L-18.6 -18" stroke="#fffaf1" stroke-width="2.6"/>',
+        back='<path d="M-26 -78 L26 -78 L23 -5 Q0 1 -23 -5Z" fill="#e7f1fb" opacity=".35"/>',
+        inner='M-24 -76 L24 -76 L21.4 -7 L-21.4 -7Z', bottom=-7, top=-60, rim=(-78, 26)),
     'copper-mug': dict(
         out='<path d="M-32 -70 Q0 -79 32 -70 Q0 -61 -32 -70Z" stroke-width="2.2"/><path d="M-32 -70 L-31 -7 Q0 1 31 -7 L32 -70" stroke-width="2.4"/>'
             '<path d="M32 -60 Q49 -59 49 -40 Q49 -21 32 -20" stroke-width="5.5" stroke="#8a4a22"/><path d="M32 -60 Q49 -59 49 -40 Q49 -21 32 -20" stroke-width="2"/>'
@@ -44,6 +54,9 @@ GLASS = {
 # ice, inside the glass: one big cube in a rocks glass, a stack in a highball
 ICE = {
     'rocks': [(-14, -37, 28, 0)],
+    'rocks-crushed': [(-28.0, -18.0, 8, -25), (-18.8, -17.0, 7, 12), (-9.6, -16.0, 6, -1), (-0.4, -17.5, 8, -14), (8.8, -16.5, 7, 23), (18.0, -18.0, 6, 10), (-24.0, -23.1, 7, -2), (-14.8, -24.6, 6, -15), (-5.6, -23.6, 8, 22), (3.6, -22.6, 7, 9), (12.8, -24.1, 6, -4), (-28.0, -30.6, 6, 21), (-18.8, -29.6, 8, 8), (-9.6, -31.1, 7, -5), (-0.4, -30.1, 6, -18), (8.8, -29.1, 8, 19), (18.0, -30.6, 7, 6), (-24.0, -35.7, 8, -6), (-14.8, -37.2, 7, -19), (-5.6, -36.2, 6, 18), (3.6, -37.7, 8, 5), (12.8, -36.7, 7, -8), (-28.0, -43.2, 7, 17), (-18.8, -42.2, 6, 4), (-9.6, -43.7, 8, -9), (-0.4, -42.7, 7, -22), (8.8, -44.2, 6, 15), (18.0, -43.2, 8, 2), (-24.0, -50.8, 6, -10), (-14.8, -49.8, 8, -23), (-5.6, -48.8, 7, 14), (3.6, -50.3, 6, 1), (12.8, -49.3, 8, -12), (-28.0, -55.9, 8, 13), (-18.8, -57.4, 7, 0), (-9.6, -56.4, 6, -13), (-0.4, -55.4, 8, 24), (8.8, -56.9, 7, 11), (18.0, -55.9, 6, -2)],
+    'highball-crushed': [(-18.0, -16.5, 7.5, -25), (-9.3, -15.5, 6.5, 12), (-0.6, -14.5, 5.5, -1), (8.1, -16.0, 7.5, -14), (-14.2, -21.1, 6.5, -2), (-5.6, -22.6, 5.5, -15), (3.1, -21.6, 7.5, 22), (-18.0, -28.3, 5.5, 21), (-9.3, -27.3, 7.5, 8), (-0.6, -28.8, 6.5, -5), (8.1, -27.8, 5.5, -18), (-14.2, -32.9, 7.5, -6), (-5.6, -34.4, 6.5, -19), (3.1, -33.4, 5.5, 18), (-18.0, -40.1, 6.5, 17), (-9.3, -39.1, 5.5, 4), (-0.6, -40.6, 7.5, -9), (8.1, -39.6, 6.5, -22), (-14.2, -47.2, 5.5, -10), (-5.6, -46.2, 7.5, -23), (3.1, -45.2, 6.5, 14), (-18.0, -51.9, 7.5, 13), (-9.3, -53.4, 6.5, 0), (-0.6, -52.4, 5.5, -13), (8.1, -51.4, 7.5, 24), (-14.2, -59.0, 6.5, -14), (-5.6, -58.0, 5.5, 23), (3.1, -59.5, 7.5, 10), (-18.0, -63.7, 5.5, 9), (-9.3, -65.2, 7.5, -4), (-0.6, -64.2, 6.5, -17), (8.1, -65.7, 5.5, 20), (-14.2, -70.8, 7.5, -18), (-5.6, -69.8, 6.5, 19), (3.1, -71.3, 5.5, 6), (-18.0, -78.0, 6.5, 5), (-9.3, -77.0, 5.5, -8), (-0.6, -76.0, 7.5, -21), (8.1, -77.5, 6.5, 16), (-14.2, -82.7, 5.5, -22), (-5.6, -84.2, 7.5, 15), (3.1, -83.2, 6.5, 2), (-18.0, -89.8, 7.5, 1), (-9.3, -88.8, 6.5, -12), (-0.6, -90.3, 5.5, -25), (8.1, -89.3, 7.5, 12), (-14.2, -94.5, 6.5, 24), (-5.6, -96.0, 5.5, 11), (3.1, -95.0, 7.5, -2)],
+    'wine': [(-18, -84, 14, -6), (2, -86, 14, 5), (-8, -101, 14, 8), (-15, -72, 13, 3), (4, -72, 13, -5)],
     'copper-mug': [(-21, -80, 13, -8), (-4, -82, 13, 6), (12, -79, 12, -5)],   # only their tops show, in the mouth of the mug
     'highball': [(-17.5, -23, 15, -6), (1.5, -22.5, 15, 5), (-12, -39, 15, 8), (3, -38.5, 15, -4), (-16, -55, 15, 3), (1, -54, 15, -7), (-8, -71, 15, 6)],
 }
@@ -58,8 +71,8 @@ def cube(x, y, w, rot=0, cls=''):
                     f'<path d="M{f(x + w * .22)} {f(y + w * .3)} h{f(w * .3)}" stroke="#fffaf1" stroke-width="2"/>', boil=False) + '</g></g>')
 
 
-def ice(kind):
-    return ''.join(cube(x, y, w, r) for x, y, w, r in ICE.get(kind, []))
+def ice(kind, crushed=False):
+    return ''.join(cube(x, y, w, r) for x, y, w, r in ICE.get(kind + ('-crushed' if crushed else ''), ICE.get(kind, [])))
 
 
 # ---------------------------------------------------------------- garnishes (each at its own (0, 0))
@@ -143,7 +156,7 @@ def garnish(kind, glass):
     g = GLASS[glass]
     ry, hw = g['rim']
     if kind == 'cherry':
-        spot = {'coupe': (5, -69), 'martini': (4, -76), 'rocks': (9, -42), 'highball': (7, -95), 'flute': (0, -103)}[glass]
+        spot = {'coupe': (5, -69), 'martini': (4, -76), 'rocks': (9, -42), 'highball': (7, -95), 'flute': (0, -103), 'wine': (6, -99), 'mug': (8, -64), 'copper-mug': (8, -72)}[glass]
         return at(*spot, cherry())
     if kind == 'olives':
         return at(6, ry + 18, olives())
@@ -294,6 +307,12 @@ ING = {
     'dark-rum':       ('dark rum', 'bottle', '#5a2e14', ('spirit', '#6b3a1c', 'dark rum')),
     'tequila':        ('tequila', 'bottle', '#f3efd9', ('tall', '#e3eedd', 'tequila')),
     'vodka':          ('vodka', 'bottle', '#eef2f4', ('tall', '#e4ecf1', 'vodka')),
+    'aged-rum':       ('aged rum', 'bottle', '#b8742e', ('spirit', '#b8742e', 'aged rum')),
+    'aperol':         ('Aperol', 'bottle', '#f26b21', ('tall', '#f26b21', 'Aperol')),
+    'prosecco':       ('prosecco', 'bottle', '#f3ecc0', ('wine', '#5f7f3c', 'prosecco')),
+    'orgeat':         ('orgeat', 'jigger', '#f0e3c8', None),
+    'water':          ('cold water', 'jigger', '#e8f3f7', None),
+    'hot-water':      ('hot water', 'kettle', '#f2ece4', None),
     'applejack':      ('applejack', 'bottle', '#d39a4a', ('spirit', '#d8a256', 'applejack')),
     'sweet-vermouth': ('sweet vermouth', 'bottle', '#7a2a2a', ('wine', '#6b3326', 'sweet vermouth')),
     'dry-vermouth':   ('dry vermouth', 'bottle', '#f2ecc8', ('wine', '#a9c49a', 'dry vermouth')),
@@ -332,7 +351,7 @@ def bottle_height(key):
 
 
 # ---------------------------------------------------------------- a finished drink, in one piece (heroes, icons)
-def glass(kind, uid, color, garnish_kinds=(), iced=False, foam=False, layers=None, bubbles=False, top=None, cls_bubble='bub'):
+def glass(kind, uid, color, garnish_kinds=(), iced=False, foam=False, layers=None, bubbles=False, top=None, cls_bubble='bub', crushed=False, hot=False):
     """A full glass with its foot at (0, 0). layers: [(from_frac, to_frac, color)] of the fill (0 = bottom, 1 = full line), drawn over color."""
     g = GLASS[kind]
     top = g['top'] if top is None else top
@@ -343,13 +362,30 @@ def glass(kind, uid, color, garnish_kinds=(), iced=False, foam=False, layers=Non
     bub = ''
     if bubbles:
         bub = bubbles_in(kind, top)
-    inside = f'<clipPath id="{uid}"><path d="{g["inner"]}"/></clipPath><g clip-path="url(#{uid})">{wash(fill)}{bub}{ice(kind) if iced else ""}</g>'
+    inside = f'<clipPath id="{uid}"><path d="{g["inner"]}"/></clipPath><g clip-path="url(#{uid})">{wash(fill)}{bub}{ice(kind, crushed) if iced else ""}</g>'
     out = wash(g['back']) + inside + (wash(g['front']) if 'front' in g else '')
     if foam and 'foam' in g:
         out += foam_on(kind)
     out += lines(g['out'], boil=False)
     out += garnishes(garnish_kinds, kind)
+    if hot:
+        out += steam(0, g['rim'][0] - 4)
     return out
+
+
+def steam(x, y, s=1.0):
+    """Three wisps rising off a hot drink (they drift on their own: STEAM_CSS)."""
+    w = ''.join(f'<path class="steam s{i}" d="M{f(x + dx)} {f(y)} q-5 -7 0 -14 q5 -7 0 -14" stroke="#b9a8ad" stroke-width="{f(2 * s)}" fill="none" stroke-linecap="round" opacity=".8"/>'
+                for i, dx in enumerate((-9 * s, 0, 9 * s)))
+    return w
+
+
+def kettle():
+    """A kettle, centered at (0, 0), spout to the right (tip at 26, -10)."""
+    body = 'M-17 12 L-14 -5 Q0 -13 14 -5 L17 12Z'
+    return (wash(f'<path d="{body}" fill="#c9c3b8"/><path d="M14 1 Q24 -2 26 -10 L22 -10 Q20 -4 14 -3Z" fill="#c9c3b8"/>')
+            + lines(f'<path d="{body}" stroke-width="2"/><path d="M14 1 Q24 -2 26 -10 M14 -3 Q20 -4 22 -10" stroke-width="1.8"/>'
+                    '<path d="M-10 -8 Q0 -24 10 -8" stroke-width="2.4" stroke="#5a4a44"/><circle cx="0" cy="-12" r="2.2" fill="#5a4a44"/><path d="M-11 3 L-9 -2" stroke="#f4f4f2" stroke-width="2.4"/>', boil=False))
 
 
 def foam_on(kind):
@@ -361,7 +397,7 @@ def foam_on(kind):
 def bubbles_in(kind, top, cls='bub'):
     """Little bubbles rising through the drink (they loop on their own)."""
     g = GLASS[kind]
-    hw = {'highball': 15, 'flute': 6, 'coupe': 16, 'rocks': 22, 'martini': 12, 'copper-mug': 22}[kind]
+    hw = {'highball': 15, 'flute': 6, 'coupe': 16, 'rocks': 22, 'martini': 12, 'copper-mug': 22, 'wine': 16, 'mug': 18}[kind]
     out = ''
     for i, (fx, fy) in enumerate(((-.7, .15), (.1, .55), (.6, .3), (-.3, .8), (.35, .9), (-.55, .45))):
         x, y = fx * hw, max(g['bottom'] - (g['bottom'] - top) * fy * .6 - 3, top + 36)
@@ -385,5 +421,7 @@ def countertop(y, mat=None):
 
 BUBBLE_CSS = ('.bub{animation:bub 2.4s linear infinite}.bub.u1{animation-delay:-.8s}.bub.u2{animation-delay:-1.6s}\n'
               '@keyframes bub{0%{transform:translateY(0);opacity:0}15%{opacity:.9}85%{opacity:.9}100%{transform:translateY(-34px);opacity:0}}')
+STEAM_CSS = ('.steam{animation:steam 2.6s ease-in-out infinite}.steam.s1{animation-delay:-.9s}.steam.s2{animation-delay:-1.7s}\n'
+             '@keyframes steam{0%{transform:translateY(4px);opacity:0}30%{opacity:.8}100%{transform:translateY(-10px);opacity:0}}')
 TWINKLE_CSS = ('.twinkle{animation:twinkle 1.6s ease-in-out infinite}\n.twinkle.d2{animation-delay:-.55s}.twinkle.d3{animation-delay:-1.1s}\n'
                '@keyframes twinkle{0%,100%{transform:scale(.55) rotate(0);opacity:.35}50%{transform:scale(1.15) rotate(20deg);opacity:1}}')

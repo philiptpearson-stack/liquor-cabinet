@@ -4,5 +4,7 @@
 @keyframes twinkle{0%,100%{transform:scale(.55) rotate(0);opacity:.35}50%{transform:scale(1.15) rotate(20deg);opacity:1}}
 .bub{animation:bub 2.4s linear infinite}.bub.u1{animation-delay:-.8s}.bub.u2{animation-delay:-1.6s}
 @keyframes bub{0%{transform:translateY(0);opacity:0}15%{opacity:.9}85%{opacity:.9}100%{transform:translateY(-34px);opacity:0}}
+.steam{animation:steam 2.6s ease-in-out infinite}.steam.s1{animation-delay:-.9s}.steam.s2{animation-delay:-1.7s}
+@keyframes steam{0%{transform:translateY(4px);opacity:0}30%{opacity:.8}100%{transform:translateY(-10px);opacity:0}}
 .flow .doors .door-icon{width:104px;height:104px}
 .flow .doors .door{min-height:10.5rem}

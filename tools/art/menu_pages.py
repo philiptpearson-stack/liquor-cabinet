@@ -6,7 +6,7 @@ The words live in menu_drinks.py; copy.md is written from the page so the build'
 starts out in step. Once Philip edits a page's words by hand, take that drink out of REWRITE below
 (or edit menu_drinks.py and rerun), so his edits are never overwritten.
 """
-import html, json, pathlib, re, sys
+import html, json, math, pathlib, re, sys
 from art import *
 from menu_art import *
 from menu_build import Build, oz_text, BAR
@@ -25,10 +25,10 @@ GENRE_NAME = {'classics': 'Classics', **dict(SOON)}   # the parts of the menu, b
 
 def genre(d):
     return d.get('genre', 'classics')
-GLASS_WORD = {'coupe': 'coupe', 'martini': 'martini glass', 'rocks': 'rocks glass', 'highball': 'tall glass of ice', 'flute': 'Champagne flute', 'copper-mug': 'copper mug'}
-HERO_SCALE = {'coupe': 1.8, 'martini': 1.55, 'rocks': 1.45, 'highball': 1.3, 'flute': 1.25, 'copper-mug': 1.3}
-ICON_SCALE = {'coupe': 1.35, 'martini': 1.18, 'rocks': 1.3, 'highball': .93, 'flute': .87, 'copper-mug': 1.2}
-GARNISH_WORD = {'salt-rim': 'a salted rim', 'sugar-rim': 'a sugared rim', 'lime-wheel': 'a lime wheel', 'lemon-wheel': 'a lemon wheel', 'lime-wedge': 'a lime wedge', 'grapefruit-wedge': 'a grapefruit wedge',
+GLASS_WORD = {'coupe': 'coupe', 'martini': 'martini glass', 'rocks': 'rocks glass', 'highball': 'tall glass of ice', 'flute': 'Champagne flute', 'copper-mug': 'copper mug', 'wine': 'wine glass', 'mug': 'warm mug'}
+HERO_SCALE = {'coupe': 1.8, 'martini': 1.55, 'rocks': 1.45, 'highball': 1.3, 'flute': 1.25, 'copper-mug': 1.3, 'wine': 1.15, 'mug': 1.35}
+ICON_SCALE = {'coupe': 1.35, 'martini': 1.18, 'rocks': 1.3, 'highball': .93, 'flute': .87, 'copper-mug': 1.2, 'wine': .9, 'mug': 1.25}
+GARNISH_WORD = {'orange-wheel': 'an orange slice', 'salt-rim': 'a salted rim', 'sugar-rim': 'a sugared rim', 'lime-wheel': 'a lime wheel', 'lemon-wheel': 'a lemon wheel', 'lime-wedge': 'a lime wedge', 'grapefruit-wedge': 'a grapefruit wedge',
                 'lemon-twist': 'a lemon twist', 'orange-twist': 'an orange twist', 'orange-peel': 'an orange peel', 'cherry': 'a cherry',
                 'olives': 'olives', 'mint': 'a sprig of mint', 'flower': 'an edible flower'}
 
@@ -58,6 +58,10 @@ def prop(spec):
         return at(0, 0, bottle('tall', '#f4ecd0', 'simple syrup', cap='#c25c86'), 1.5), 'a bottle of simple syrup'
     if spec == 'pear':
         return at(0, 0, pear(), 1.4), 'a pear'
+    if spec == 'orgeat':
+        return at(0, 0, bottle('tall', '#f2e8d2', 'orgeat', cap='#a87b4a'), 1.5), 'a bottle of orgeat'
+    if spec == 'kettle':
+        return at(0, -12 * 1.6, kettle(), 1.6), 'a kettle'
     return at(0, 0, ing_bottle(spec), 1.55), f'a bottle of {ING[spec][0]}'
 
 
@@ -85,7 +89,7 @@ def hero(d):
     if d['slug'] == 'dark-and-stormy':
         layers = [(.68, 1, '#5a2e14')]
     drink = glass(d['glass'], f'{d["slug"]}-hero', d['color'], d['garnish'], iced=served_iced, foam=d.get('foam', False), layers=layers, bubbles=fizzy,
-                  top=d.get('level'))
+                  top=d.get('level'), crushed=d.get('crushed', False), hot=d.get('hot', False))
     out += f'<g transform="translate({d.get("hero_x", 200)} 184) scale({HERO_SCALE[d["glass"]]})">{drink}</g>'   # hero_x: a glass with a handle sits a little left
     out += sparkle(150, 46, 6, 'twinkle') + sparkle(258, 40, 5, 'twinkle d2') + sparkle(246, 100, 4, 'twinkle d3')
     g = ' and '.join(GARNISH_WORD[k] for k in d['garnish'])
@@ -97,8 +101,8 @@ def hero(d):
 def icon(d):
     served_iced = iced(d)
     layers = [(.68, 1, '#5a2e14')] if d['slug'] == 'dark-and-stormy' else None
-    return at(60, 112, glass(d['glass'], f'{d["slug"]}-ic', d['color'], d['garnish'], iced=served_iced, foam=d.get('foam', False), layers=layers, top=d.get('level')),
-              ICON_SCALE[d['glass']])
+    return at(60, 112, glass(d['glass'], f'{d["slug"]}-ic', d['color'], d['garnish'], iced=served_iced, foam=d.get('foam', False), layers=layers, top=d.get('level'),
+                             crushed=d.get('crushed', False)), ICON_SCALE[d['glass']])
 
 
 # ---------------------------------------------------------------- the rest of the menu: icons for the doors still to come
@@ -330,7 +334,7 @@ def write_drink(d):
         'description': f'How to make {a_an(html.unescape(d["name"]))}: the recipe, a step-by-step how-to, and a little history.',
         'label': f'The Cocktail Menu / {html.unescape(d["name"])}'}, indent=2, ensure_ascii=False) + '\n')
     (folder / 'page.css').write_text(f'/* The Cocktail Menu / {html.unescape(d["name"])}: scene motion. Written by tools/art/menu_pages.py; edit it there. */\n'
-                                     + TWINKLE_CSS + '\n' + BUBBLE_CSS + '\n' + b.page_css() + '\n')
+                                     + TWINKLE_CSS + '\n' + BUBBLE_CSS + '\n' + (STEAM_CSS + '\n' if d.get('hot') else '') + b.page_css() + '\n')
     return b.T
 
 
@@ -465,6 +469,88 @@ def modern_scene():
                     'with a jar of honey and a lemon beside it', '62 14 276 174')
 
 
+def tiki_scene():
+    """Tiki & Tropical: a bamboo bar under a thatched roof, two torches flickering, the Mai Tai out front."""
+    COUNTER = 168
+    wall = wash('<rect x="0" y="0" width="400" height="236" fill="#4a2f22"/><rect x="40" y="10" width="320" height="150" fill="#6a4430" opacity=".6"/>')
+    bamboo = ''.join(wash(f'<rect x="{x}" y="20" width="11" height="150" rx="3" fill="#c9a25a"/>')
+                     + lines(f'<rect x="{x}" y="20" width="11" height="150" rx="3" stroke-width="1.8"/>' + ''.join(f'<path d="M{x} {y} h11" stroke-width="1.6"/>' for y in (58, 98, 138)), boil=False)
+                     for x in (58, 331))
+    thatch = (wash('<path d="M0 0 H400 V30 ' + ' '.join(f'L{400 - i * 16} {30 if i % 2 else 42}' for i in range(26)) + ' L0 30Z" fill="#c9a25a"/>')
+              + lines('<path d="' + ' '.join(f'M{x} 0 L{x + 4} 34' for x in range(8, 400, 16)) + '" stroke="#8a6a3c" stroke-width="1.4"/>', boil=False))
+    def torch(x):
+        flame = (f'<g class="flick" style="transform-origin:{x}px 74px">' + wash(f'<path d="M{x - 9} 74 Q{x - 12} 56 {x} 44 Q{x + 12} 56 {x + 9} 74Z" fill="#f2a23a"/>'
+                 f'<path d="M{x - 4} 74 Q{x - 6} 64 {x} 56 Q{x + 6} 64 {x + 4} 74Z" fill="#f6d36a"/>') + '</g>')
+        return (wash(f'<path d="M{x - 10} 74 L{x + 10} 74 L{x + 6} 90 L{x - 6} 90Z" fill="#8a5a2a"/>') + lines(f'<path d="M{x} 90 V168 M{x - 10} 74 L{x + 10} 74 L{x + 6} 90 L{x - 6} 90Z" stroke-width="2.2"/>', boil=False) + flame)
+    mug = 'M-16 0 L-19 -50 Q0 -56 19 -50 L16 0Z'
+    tiki_mug = at(136, COUNTER, wash(f'<path d="{mug}" fill="#a0673a"/>') + lines(f'<path d="{mug}" stroke-width="2.2"/><path d="M-11 -36 h7 M4 -36 h7 M-9 -22 q9 6 18 0 M-14 -44 h28 M-12 -12 h24" stroke-width="2"/>', boil=False), 1.2)
+    d = BY_SLUG['mai-tai']
+    drink = f'<g transform="translate(206 {COUNTER}) scale(1.4)">{glass("rocks", "tiki-mt", d["color"], d["garnish"], iced=True, crushed=True)}</g>'
+    props = at(268, COUNTER, fruit('lime'), 1.4) + at(296, COUNTER, fruit('orange'), 1.3)
+    return svg_view(wall + bamboo + thatch + torch(96) + torch(304) + countertop(COUNTER) + tiki_mug + props + drink + sparkle(170, 70, 5, 'twinkle') + sparkle(250, 64, 4.5, 'twinkle d2'),
+                    'A tiki bar: bamboo posts, a thatched roof and two flickering torches. On the bar: a carved tiki mug, a lime, an orange, '
+                    'and a Mai Tai over crushed ice with mint and a lime wedge', '52 0 296 196')
+
+
+def lowno_scene():
+    """Low & No-Proof: a sunny cafe table under a striped awning, an Aperol Spritz on it."""
+    TABLE = 168
+    sky = wash('<rect x="0" y="0" width="400" height="236" fill="#d6ebf0"/><circle cx="312" cy="70" r="26" fill="#f6d36a"/>')
+    rays = (f'<g class="spin" style="transform-origin:312px 70px">' + lines(''.join(f'<path d="M{f(312 + 33 * math.cos(a * math.pi / 6))} {f(70 + 33 * math.sin(a * math.pi / 6))} L{f(312 + 41 * math.cos(a * math.pi / 6))} {f(70 + 41 * math.sin(a * math.pi / 6))}"/>' for a in range(12)),
+                                                                                  boil=False, color='#e9b949', width=2.6) + '</g>')
+    stripes = ''.join(f'<rect x="{x}" y="0" width="24" height="34" fill="{"#f26b21" if i % 2 else "#fbf3e3"}"/>' for i, x in enumerate(range(0, 400, 24)))
+    scallop = 'M0 34 ' + ' '.join(f'Q{x + 12} 46 {x + 24} 34' for x in range(0, 400, 24))
+    awning = wash(stripes + f'<path d="{scallop} V30 H0Z" fill="#f26b21"/>') + lines(f'<path d="{scallop}" stroke-width="2"/>', boil=False)
+    table = (wash(f'<ellipse cx="200" cy="{TABLE}" rx="96" ry="9" fill="#fbf3e3"/><rect x="194" y="{TABLE + 6}" width="12" height="62" fill="#8a7a74"/>')
+             + lines(f'<ellipse cx="200" cy="{TABLE}" rx="96" ry="9" stroke-width="2.2"/><path d="M194 {TABLE + 8} V236 M206 {TABLE + 8} V236" stroke-width="2"/>', boil=False))
+    ground = wash('<rect x="0" y="196" width="400" height="40" fill="#c9b8a2"/>')
+    d = BY_SLUG['aperol-spritz']
+    drink = f'<g transform="translate(206 {TABLE + 2}) scale(1.1)">{glass("wine", "low-sp", d["color"], d["garnish"], iced=True)}</g>'
+    props = at(146, TABLE + 2, fruit('orange', half=True), 1.3)
+    return svg_view(sky + rays + ground + table + awning + props + drink + sparkle(110, 70, 5, 'twinkle') + sparkle(262, 52, 4.5, 'twinkle d2'),
+                    'A sunny cafe table under an orange-and-white striped awning, the sun shining. On the table: half an orange and an Aperol Spritz in a big wine glass of ice',
+                    '52 0 296 196')
+
+
+def warm_scene():
+    """Warm & Cozy: snow falling past a window at night; a Hot Toddy steaming on the bar."""
+    COUNTER = 168
+    wall = wash('<rect x="0" y="0" width="400" height="236" fill="#6a4038"/>')
+    win = (wash('<rect x="112" y="18" width="176" height="112" rx="4" fill="#2f3f5a"/>') + '<clipPath id="warm-win"><rect x="112" y="18" width="176" height="112" rx="4"/></clipPath>'
+           + '<g clip-path="url(#warm-win)">' + ''.join(f'<circle class="snow n{i % 3}" cx="{x}" cy="{y}" r="{2.2 if i % 2 else 1.6}" fill="#f4f4f2"/>'
+                                                  for i, (x, y) in enumerate(((128, 30), (150, 60), (172, 22), (196, 48), (220, 30), (244, 66), (262, 24), (278, 52), (138, 90), (186, 96), (232, 102), (268, 92))))
+           + '</g>' + lines('<rect x="112" y="18" width="176" height="112" rx="4" stroke="#c9a27a" stroke-width="6"/><path d="M200 18 V130 M112 74 H288" stroke="#c9a27a" stroke-width="4"/>', boil=False))
+    d = BY_SLUG['hot-toddy']
+    drink = f'<g transform="translate(200 {COUNTER}) scale(1.35)">{glass("mug", "warm-td", d["color"], d["garnish"], hot=True)}</g>'
+    props = at(132, COUNTER, honey_jar(), 1.3) + at(270, COUNTER, fruit('lemon'), 1.3)
+    return svg_view(wall + win + countertop(COUNTER) + props + drink + sparkle(90, 50, 5, 'twinkle') + sparkle(318, 40, 4.5, 'twinkle d2'),
+                    'Snow falling past a window at night. On the bar: a jar of honey, a lemon, and a Hot Toddy steaming in a glass mug', '52 0 296 196')
+
+
+def punch_scene():
+    """Punches for a Crowd: a punch bowl and its cups under a string of lights."""
+    COUNTER = 168
+    wall = wash('<rect x="0" y="0" width="400" height="236" fill="#ead9cb"/>')
+    string = lines('<path d="M20 22 Q110 58 200 30 Q290 58 380 22" stroke-width="1.6"/>', boil=False)
+    bulbs = ''.join(f'<circle class="twinkle{" d2" if i % 3 == 1 else " d3" if i % 3 == 2 else ""}" style="transform-origin:{x}px {y}px" cx="{x}" cy="{y}" r="4.5" fill="{c}"/>'
+                    for i, (x, y, c) in enumerate(((60, 36, '#f6d36a'), (104, 46, '#e8737a'), (150, 42, '#8ecae6'), (200, 30, '#f6d36a'), (250, 42, '#e8737a'), (296, 46, '#8ecae6'), (340, 36, '#f6d36a'))))
+    bowl = 'M-62 -44 Q-60 0 0 0 Q60 0 62 -44Z'
+    punch = 'M-58 -34 Q-55 -4 0 -4 Q55 -4 58 -34Z'
+    big = at(200, COUNTER, wash(f'<path d="{bowl}" fill="#e7f1fb" opacity=".55"/><path d="{punch}" fill="#d9713a"/><rect x="-6" y="0" width="12" height="4" fill="#c9c3b8"/>')
+             + ''.join(wheel('orange', 7).join([f'<g transform="translate({x} -36)">', '</g>']) for x in (-30, 10, 34))
+             + lines(f'<path d="{bowl}" stroke-width="2.4"/><path d="M-62 -44 Q0 -50 62 -44" stroke-width="1.6"/>', boil=False)
+             + lines('<path d="M30 -40 L58 -96" stroke="#a9a29a" stroke-width="3.2"/><ellipse cx="26" cy="-38" rx="9" ry="4" fill="#c9c3b8"/>', boil=False), 1.0)
+    def cup(x):
+        return at(x, COUNTER, glass('rocks', f'pc-{x}', '#d9713a', [], iced=True), .7)
+    return svg_view(wall + string + bulbs + countertop(COUNTER) + big + cup(112) + cup(288),
+                    'A glass punch bowl full of red-orange punch with orange slices and a ladle, a cup on each side, under a string of colored lights', '52 0 296 196')
+
+FLICK_CSS = '.flick{animation:flick .8s ease-in-out infinite alternate}@keyframes flick{from{transform:scaleY(.88) skewX(-4deg)}to{transform:scaleY(1.08) skewX(4deg)}}'
+SPIN_CSS = '.spin{animation:spin 24s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}'
+SNOW_CSS = ('.snow{animation:snow 5s linear infinite}.snow.n1{animation-delay:-1.7s}.snow.n2{animation-delay:-3.3s}'
+            '@keyframes snow{0%{transform:translate(0,-30px);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translate(6px,90px);opacity:0}}')
+
+
 # the parts of the menu after Classics: each gets a page as soon as a drink is in it
 GENRE_PAGES = {
     'modern-variations': dict(scene=modern_scene, svg='modern', intro='These are the <em>Modern Variations.</em>', more='More modern variations',
@@ -473,14 +559,27 @@ GENRE_PAGES = {
     'arcane-oddities': dict(scene=oddities_scene, svg='oddities', intro='These are the <em>Arcane Oddities.</em>', more='More oddities',
                             description='The odd ones on the menu, each with its recipe and a step-by-step how-to.',
                             note="Nov 3 2026: Philip moved the Dark and Stormy here, so Arcane Oddities opened."),
+    'tiki-and-tropical': dict(scene=tiki_scene, svg='tiki', intro=None, more='More tropical drinks', css=FLICK_CSS,
+                              description='Tiki classics and the national drinks of hot places, each with its recipe and a step-by-step how-to.',
+                              note="Nov 10 2026: the Mai Tai opened Tiki & Tropical."),
+    'low-and-no-proof': dict(scene=lowno_scene, svg='spritz', intro=None, more='More low &amp; no-proof drinks', css=SPIN_CSS,
+                             description='Aperitivo drinks and no-proof ones, light on alcohol and big on flavor, each with its recipe and a step-by-step how-to.',
+                             note="Nov 10 2026: the Aperol Spritz opened Low & No-Proof."),
+    'warm-and-cozy': dict(scene=warm_scene, svg='warm', intro=None, more='More warm drinks', css=STEAM_CSS + '\n' + SNOW_CSS,
+                          description='Hot drinks for cold nights, each with its recipe and a step-by-step how-to.',
+                          note="Nov 10 2026: the Hot Toddy opened Warm & Cozy."),
+    'punches': dict(scene=punch_scene, svg='punch', intro=None, more='More punches',
+                    description='Drinks for a crowd, by the glass or by the bowl, each with its recipe and a step-by-step how-to.',
+                    note="Nov 10 2026: the Rum Punch opened Punches for a Crowd."),
 }
+
 
 
 def write_genre(key):
     """A part of the menu after Classics: its drawing, two lines, a door per drink, and room for more."""
     cfg = GENRE_PAGES[key]
     name = html.unescape(GENRE_NAME[key])
-    first, last = name.rsplit(' ', 1)
+    first, last = (html.escape(x, quote=False) for x in name.rsplit(' ', 1))
     C = MENU / key
     (C / 'scenes').mkdir(parents=True, exist_ok=True)
     (C / 'scenes' / f"{cfg['svg']}.svg").write_text(cfg['scene']() + '\n')
@@ -492,21 +591,23 @@ def write_genre(key):
         f'<h1><small class="h1-lead">The Cocktail Menu:</small> {first} <span>{last}.</span></h1>', '',
         '<div class="flow">',
         f'  <figure class="fig" id="s-{cfg["svg"]}"><div class="sheet"><!--scene:{cfg["svg"]}--></div></figure>',
-        f'  <p class="t">{cfg["intro"]}</p>',
+        ] + ([f'  <p class="t">{cfg["intro"]}</p>'] if cfg.get('intro') else []) + [
         '  <p class="t">Tap any drink for its recipe and step-by-step, animated how-to.</p>', '',
-        f'  <nav class="doors" aria-label="The {name}">'] + doors + ['  </nav>', '',
+        f'  <nav class="doors" aria-label="The {html.escape(name)}">'] + doors + ['  </nav>', '',
         '  <nav class="end-doors" aria-label="Where next">',
         '    <p class="back"><a href="../index.html">← Back to the Cocktail Menu</a></p>',
         '  </nav>', '</div>', ''])
     (C / 'story.html').write_text(story)
     write_copy(C / 'copy.md', f'The Cocktail Menu / {name}', story,
-               cfg['note'] + f" CLAUDE'S DRAFT, waiting on Philip: the page follows Classics (\"{html.unescape(cfg['intro']).replace('<em>', '*').replace('</em>', '*')}\"; "
+               cfg['note'] + (f" CLAUDE'S DRAFT, waiting on Philip: the page follows Classics (\"{html.unescape(cfg['intro']).replace('<em>', '*').replace('</em>', '*')}\"; "
+                              if cfg.get('intro') else " CLAUDE'S DRAFT, waiting on Philip: the page follows Classics (") +
                f"\"Tap any drink...\" is Philip's line from Classics), and \"{cfg['more']}\".")
     (C / 'page.json').write_text(json.dumps({
         'title': f'{name} · The Cocktail Menu · The Bottle and the Bartender',
         'description': cfg['description'],
         'label': f'The Cocktail Menu / {name}'}, indent=2, ensure_ascii=False) + '\n')
     (C / 'page.css').write_text(f'/* The Cocktail Menu / {name}: scene motion. Written by tools/art/menu_pages.py; edit it there. */\n' + TWINKLE_CSS + '\n' + BUBBLE_CSS + '\n'
+                                + (cfg['css'] + '\n' if cfg.get('css') else '') + STEAM_CSS + '\n'
                                 '.flow .doors .door-icon{width:104px;height:104px}\n.flow .doors .door{min-height:10.5rem}\n')
 
 

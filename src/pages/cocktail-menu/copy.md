@@ -12,11 +12,7 @@ Classics
 Modern Variations
 Arcane Oddities
 Tiki & Tropical
-Coming soon
 Low & No-Proof
-Coming soon
 Warm & Cozy
-Coming soon
 Punches for a Crowd
-Coming soon
 ← Back to The Bar
