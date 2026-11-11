@@ -7,7 +7,8 @@
 
 The Cocktail Menu: Warm & ***Cozy.***
 Tap any drink for its recipe and step-by-step, animated how-to.
+Hot Buttered Rum
 Hot Toddy
-More warm drinks
-Coming soon
+Irish Coffee
+Tom and Jerry
 ← Back to the Cocktail Menu

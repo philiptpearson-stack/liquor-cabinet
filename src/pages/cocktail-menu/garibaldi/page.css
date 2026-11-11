@@ -1,0 +1,33 @@
+/* The Cocktail Menu / Garibaldi: scene motion. Written by tools/art/menu_pages.py; edit it there. */
+.twinkle{animation:twinkle 1.6s ease-in-out infinite}
+.twinkle.d2{animation-delay:-.55s}.twinkle.d3{animation-delay:-1.1s}
+@keyframes twinkle{0%,100%{transform:scale(.55) rotate(0);opacity:.35}50%{transform:scale(1.15) rotate(20deg);opacity:1}}
+.bub{animation:bub 2.4s linear infinite}.bub.u1{animation-delay:-.8s}.bub.u2{animation-delay:-1.6s}
+@keyframes bub{0%{transform:translateY(0);opacity:0}15%{opacity:.9}85%{opacity:.9}100%{transform:translateY(-34px);opacity:0}}
+/* the build, step by step (9.2 s). Still frame: the finished drink. */
+.cap13,.btl14,.pour15,.cap16,.jig17,.pour18,.cap19,.cheer21{opacity:0}
+.band1{animation:band1 9.2s linear infinite}@keyframes band1{0%{transform:scaleY(0)}26.63%{transform:scaleY(0)}31.52%{transform:scaleY(1)}100%{transform:scaleY(1)}}
+.band2{animation:band2 9.2s linear infinite}@keyframes band2{0%{transform:scaleY(0)}39.67%{transform:scaleY(0)}52.17%{transform:scaleY(1)}100%{transform:scaleY(1)}}
+.mixd3{animation:mixd3 9.2s linear infinite}@keyframes mixd3{0%{opacity:0}53.26%{opacity:0}58.7%{opacity:1}100%{opacity:1}}
+.gice4{animation:gice4 9.2s linear infinite}@keyframes gice4{0%{opacity:0;transform:translateY(-130px)}5.43%{opacity:0;transform:translateY(-130px)}5.98%{opacity:1;transform:translateY(-130px)}10.33%{opacity:1;transform:translateY(0)}100%{opacity:1;transform:translateY(0)}}
+.gice5{animation:gice5 9.2s linear infinite}@keyframes gice5{0%{opacity:0;transform:translateY(-130px)}6.74%{opacity:0;transform:translateY(-130px)}7.28%{opacity:1;transform:translateY(-130px)}11.63%{opacity:1;transform:translateY(0)}100%{opacity:1;transform:translateY(0)}}
+.gice6{animation:gice6 9.2s linear infinite}@keyframes gice6{0%{opacity:0;transform:translateY(-130px)}8.04%{opacity:0;transform:translateY(-130px)}8.59%{opacity:1;transform:translateY(-130px)}12.93%{opacity:1;transform:translateY(0)}100%{opacity:1;transform:translateY(0)}}
+.gice7{animation:gice7 9.2s linear infinite}@keyframes gice7{0%{opacity:0;transform:translateY(-130px)}9.35%{opacity:0;transform:translateY(-130px)}9.89%{opacity:1;transform:translateY(-130px)}14.24%{opacity:1;transform:translateY(0)}100%{opacity:1;transform:translateY(0)}}
+.gice8{animation:gice8 9.2s linear infinite}@keyframes gice8{0%{opacity:0;transform:translateY(-130px)}10.65%{opacity:0;transform:translateY(-130px)}11.2%{opacity:1;transform:translateY(-130px)}15.54%{opacity:1;transform:translateY(0)}100%{opacity:1;transform:translateY(0)}}
+.gice9{animation:gice9 9.2s linear infinite}@keyframes gice9{0%{opacity:0;transform:translateY(-130px)}11.96%{opacity:0;transform:translateY(-130px)}12.5%{opacity:1;transform:translateY(-130px)}16.85%{opacity:1;transform:translateY(0)}100%{opacity:1;transform:translateY(0)}}
+.gice10{animation:gice10 9.2s linear infinite}@keyframes gice10{0%{opacity:0;transform:translateY(-130px)}13.26%{opacity:0;transform:translateY(-130px)}13.8%{opacity:1;transform:translateY(-130px)}18.15%{opacity:1;transform:translateY(0)}100%{opacity:1;transform:translateY(0)}}
+.gc11{animation:gc11 9.2s linear infinite}@keyframes gc11{0%{opacity:1}91.3%{opacity:1}97.28%{opacity:0}100%{opacity:0}}
+.garn12{animation:garn12 9.2s linear infinite}@keyframes garn12{0%{opacity:0;transform:translateY(-60px)}56.52%{opacity:0;transform:translateY(-60px)}57.07%{opacity:1;transform:translateY(-60px)}63.04%{opacity:1;transform:translateY(0)}91.3%{opacity:1;transform:translateY(0)}97.28%{opacity:0;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
+.cap13{animation:cap13 9.2s linear infinite}@keyframes cap13{0%{opacity:0}4.67%{opacity:0}5.98%{opacity:1}20.65%{opacity:1}21.96%{opacity:0}100%{opacity:0}}
+.btl14{animation:btl14 9.2s linear infinite}@keyframes btl14{0%{opacity:0;transform:rotate(25deg)}21.74%{opacity:0;transform:rotate(25deg)}22.28%{opacity:1;transform:rotate(25deg)}25.54%{opacity:1;transform:rotate(0)}31.52%{opacity:1;transform:rotate(0)}33.91%{opacity:1;transform:rotate(25deg)}34.78%{opacity:0;transform:rotate(25deg)}100%{opacity:0;transform:rotate(25deg)}}
+.pour15{animation:pour15 9.2s linear infinite}@keyframes pour15{0%{opacity:0}24.57%{opacity:0}25.87%{opacity:1}31.52%{opacity:1}32.83%{opacity:0}100%{opacity:0}}
+.cap16{animation:cap16 9.2s linear infinite}@keyframes cap16{0%{opacity:0}20.98%{opacity:0}22.28%{opacity:1}33.7%{opacity:1}35%{opacity:0}100%{opacity:0}}
+.jig17{animation:jig17 9.2s linear infinite}@keyframes jig17{0%{opacity:0;transform:rotate(0)}34.78%{opacity:0;transform:rotate(0)}35.33%{opacity:1;transform:rotate(0)}38.59%{opacity:1;transform:rotate(100deg)}51.63%{opacity:1;transform:rotate(100deg)}54.35%{opacity:1;transform:rotate(0)}55.43%{opacity:0;transform:rotate(0)}100%{opacity:0;transform:rotate(0)}}
+.pour18{animation:pour18 9.2s linear infinite}@keyframes pour18{0%{opacity:0}37.61%{opacity:0}38.91%{opacity:1}51.3%{opacity:1}52.61%{opacity:0}100%{opacity:0}}
+.cap19{animation:cap19 9.2s linear infinite}@keyframes cap19{0%{opacity:0}34.02%{opacity:0}35.33%{opacity:1}54.35%{opacity:1}55.65%{opacity:0}100%{opacity:0}}
+.cap20{animation:cap20 9.2s linear infinite}@keyframes cap20{0%{opacity:0}63.04%{opacity:0}64.13%{opacity:1}93.48%{opacity:1}95.11%{opacity:0}100%{opacity:0}}
+.cheer21{animation:cheer21 9.2s linear infinite}@keyframes cheer21{0%{opacity:0}61.74%{opacity:0}63.04%{opacity:1}94.57%{opacity:1}95.87%{opacity:0}100%{opacity:0}}
+.howto-steps li.s1{animation:hs1 9.2s linear infinite}@keyframes hs1{0%{background-color:transparent}4.83%{background-color:transparent}5.43%{background-color:var(--step-hl)}21.74%{background-color:var(--step-hl)}22.34%{background-color:transparent}100%{background-color:transparent}}
+.howto-steps li.s2{animation:hs2 9.2s linear infinite}@keyframes hs2{0%{background-color:transparent}21.14%{background-color:transparent}21.74%{background-color:var(--step-hl)}34.78%{background-color:var(--step-hl)}35.38%{background-color:transparent}100%{background-color:transparent}}
+.howto-steps li.s3{animation:hs3 9.2s linear infinite}@keyframes hs3{0%{background-color:transparent}34.18%{background-color:transparent}34.78%{background-color:var(--step-hl)}55.43%{background-color:var(--step-hl)}56.03%{background-color:transparent}100%{background-color:transparent}}
+.howto-steps li.s4{animation:hs4 9.2s linear infinite}@keyframes hs4{0%{background-color:transparent}54.83%{background-color:transparent}55.43%{background-color:var(--step-hl)}69.57%{background-color:var(--step-hl)}70.17%{background-color:transparent}100%{background-color:transparent}}

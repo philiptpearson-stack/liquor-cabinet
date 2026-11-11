@@ -340,6 +340,7 @@ ING = {
     'whiskey':        ('whiskey', 'bottle', '#c9782c', ('spirit', '#c98a3c', 'whiskey')),
     'scotch':         ('Scotch', 'bottle', '#d08a34', ('spirit', '#d49a48', 'Scotch')),
     'cognac':         ('cognac', 'bottle', '#b8621f', ('liqueur', '#b8621f', 'cognac')),
+    'brandy':         ('brandy', 'bottle', '#b8621f', ('spirit', '#b8692a', 'brandy')),
     'gin':            ('gin', 'bottle', '#eef3f0', ('tall', '#cfe6df', 'gin')),
     'white-rum':      ('white rum', 'bottle', '#f1ecd8', ('tall', '#e3eee6', 'white rum')),
     'dark-rum':       ('dark rum', 'bottle', '#5a2e14', ('spirit', '#6b3a1c', 'dark rum')),

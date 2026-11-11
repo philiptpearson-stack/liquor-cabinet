@@ -62,6 +62,12 @@ def prop(spec):
         return at(0, 0, pear(), 1.4), 'a pear'
     if spec == 'orgeat':
         return at(0, 0, bottle('tall', '#f2e8d2', 'orgeat', cap='#a87b4a'), 1.5), 'a bottle of orgeat'
+    if spec == 'grenadine':   # the Shirley Temple
+        return at(0, 0, bottle('tall', '#b3202a', 'grenadine', cap='#6f9e4a'), 1.5), 'a bottle of grenadine'
+    if spec == 'butter':      # a stick of it, half unwrapped (the Hot Buttered Rum)
+        return at(0, 0, wash('<rect x="-17" y="-11" width="34" height="11" rx="1.5" fill="#f6e08a"/><path d="M2 -11 H17 V0 H2Z" fill="#fbf6ea"/>')
+                  + lines('<rect x="-17" y="-11" width="34" height="11" rx="1.5" stroke-width="1.8"/><path d="M2 -11 V0" stroke-width="1.3"/>'
+                          '<path d="M6 -7 H14 M6 -4 H12" stroke="#c9a25a" stroke-width="1"/>', boil=False), 1.4), 'a stick of butter'
     if spec == 'pineapple':   # a whole one (the Piña Colada, the Jungle Bird)
         body = '<ellipse cx="0" cy="-15" rx="11" ry="14" fill="#e8b64a"/>'
         crown = '<path d="M-1 -28 L-10 -42 L-3 -34 L-1 -50 L2 -34 L10 -44 L3 -28Z" fill="#6f9e4a"/>'
@@ -106,7 +112,8 @@ def hero(d):
     g = ' and '.join(GARNISH_WORD[k] for k in d['garnish'])
     g = f', garnished with {g}' if g else ''      # the Ramos Gin Fizz and the Trinidad Sour have none
     beside = ', '.join(words[:-1]) + (' and ' if len(words) > 1 else '') + words[-1]
-    alt = f'{a_an(d["name"])} in {a_an(GLASS_WORD[d["glass"]])}{g}, next to {beside}'
+    gw = 'tall glass' if d['glass'] == 'highball' and not served_iced else GLASS_WORD[d['glass']]   # the Ramos Gin Fizz has no ice
+    alt = f'{a_an(d["name"])} in {a_an(gw)}{g}, next to {beside}'
     return svg_view(out, alt, '52 24 296 180')
 
 
@@ -230,7 +237,7 @@ def amt(q, u, text):
     elif u == '':
         shown, us = qs, ''
     else:
-        plural = {'pinch': 'pinches', 'tsp': 'tsp'}.get(u, u + 's')
+        plural = {'pinch': 'pinches', 'tsp': 'tsp', 'tbsp': 'tbsp'}.get(u, u + 's')
         shown = f'{qs} {u if q == 1 else plural}'
         us = f' data-us="{plural}"' if plural != u + 's' else ''
     du = f' data-u="{u}"' if u else ''

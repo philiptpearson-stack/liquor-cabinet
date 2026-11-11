@@ -208,7 +208,7 @@ class Build:
         foam_svg = ''
         if d.get('foam'):
             c = self.cls('foam')
-            sa = next(a for a in acts if a[2] in ('strain', 'dump'))
+            sa = next((a for a in acts if a[2] in ('strain', 'dump')), None) or [a for a in acts if a[2] in ('top', 'pour')][-1]   # built drinks (the Garibaldi): after the last pour
             foam_svg = f'<g class="{c}">{foam_on(self.kind, d["foam"] if isinstance(d["foam"], str) else "#fff8e6")}</g>'
             self.emit(c, [(0, {'opacity': 0}), (sa[-1] - .5, {'opacity': 0}), (sa[-1] - .1, {'opacity': 1})], base=None)
         contents_c = self.cls('gc')
@@ -444,8 +444,8 @@ class Build:
             stream = lines(f'<path d="M{f(px + 26)} {f(py + 12)} Q{f(rx - 8)} {f(ry)} {f(rx - 2)} {f(by - 10)}" stroke="{"#d9e8ee" if a[3] == "hot-water" else ING[a[3]][2]}" stroke-width="3.2"/>', boil=False, extra=f' class="{sc}"')
             self.window(sc, t0 + .42, t1 - .42)
             return body + stream
-        if kind in ('pour', 'top', 'float'):   # a jigger: juice, syrup (or cream, floated)
-            px, py = rx - 40, max(ry - 38, 36)
+        if kind in ('pour', 'top', 'float', 'sink'):   # a jigger: juice, syrup (or cream, floated; or grenadine, sunk)
+            px, py = rx - 40, max(ry - 38, 56)   # (56: clear of the caption, over a tall glass)
             c, sc = self.cls('jig'), self.cls('pour')
             body = f'<g class="{c}" style="transform-origin:{f(px)}px {f(py)}px"><g transform="translate({f(px)} {f(py)})">{jigger()}</g></g>'
             self.emit(c, [(0, {'opacity': 0, 'transform': 'rotate(0)'}), (t0, {'opacity': 0, 'transform': 'rotate(0)'}), (t0 + .05, {'opacity': 1}), (t0 + .35, {'transform': 'rotate(100deg)'}),

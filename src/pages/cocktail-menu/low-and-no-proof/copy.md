@@ -7,7 +7,11 @@
 
 The Cocktail Menu: Low & ***No-Proof.***
 Tap any drink for its recipe and step-by-step, animated how-to.
+Americano
 Aperol Spritz
+Garibaldi
+Sherry Cobbler
+Shirley Temple
 More low & no-proof drinks
 Coming soon
 ← Back to the Cocktail Menu
