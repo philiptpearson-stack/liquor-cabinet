@@ -6,6 +6,7 @@ Each step is (words under the drawing, [actions]). Actions, in order:
   ('ice', 'mix' | 'glass')   ('dry',) dry shake   ('shake',)   ('stir',)   ('strain',)
   ('swirl',) a gentle swirl of the mixing glass   ('dump',) pour it all, ice and all, into the glass (no strainer)
   ('top', ingredient, oz)    ('float', ingredient, oz)   ('sink', ingredient, oz)   ('garnish',)
+  ('rim',) salt or sugar the rim (the drink's garnish says which)   ('muddle',) press the mint, in the glass
 The still frame (reduced motion, and what the poster shows) is the finished drink; everything
 that moves is hidden there. All motion is CSS keyframes, timed in seconds and written as percents.
 """
@@ -16,9 +17,9 @@ MX, MRIM, MBOT = 190, 96, 189                      # the mixing glass: rim centr
 G_MIX = 'M160 96 L220 96 L214 196 L166 196Z'
 G_MIX_IN = 'M162.4 99 L217.6 99 L212.3 189 L167.7 189Z'
 TIN = 'M154 114 L226 114 L220 58 L160 58Z'
-BUILD_SCALE = {'highball': 1.2, 'rocks': 1.38, 'coupe': 1.5, 'flute': 1.0, 'martini': 1.3}
+BUILD_SCALE = {'highball': 1.2, 'rocks': 1.38, 'coupe': 1.5, 'flute': 1.0, 'martini': 1.3, 'copper-mug': 1.35}
 DUR = {'pour': 1.2, 'jigger': 1.15, 'dash': 1.2, 'egg': 1.3, 'mint': 1.0, 'salt': 1.0, 'ice': 1.0, 'ice-glass': 1.5,
-       'dry': 2.4, 'shake': 2.9, 'stir': 2.8, 'strain': 2.5, 'dump': 2.4, 'swirl': 1.7, 'top': 1.9, 'float': 1.9, 'sink': 1.9, 'garnish': 1.3}
+       'dry': 2.4, 'shake': 2.9, 'stir': 2.8, 'strain': 2.5, 'dump': 2.4, 'swirl': 1.7, 'top': 1.9, 'float': 1.9, 'sink': 1.9, 'garnish': 1.3, 'rim': 1.5, 'muddle': 2.0}
 LEAD, HOLD = .5, 2.8
 VIEW = '104 14 240 204'
 
@@ -115,6 +116,8 @@ class Build:
         if into == 'mix':
             return MX, MRIM, MBOT
         rx, ry = self.G(0, self.g['rim'][0])
+        if self.g.get('opaque'):
+            return rx, ry, ry + 8
         return rx, ry, self.G(0, self.g['bottom'])[1]
 
     # ------------------------------------------------------------ the scene
@@ -210,11 +213,18 @@ class Build:
         self.emit(contents_c, [(0, {'opacity': 1}), (self.T - .8, {'opacity': 1}), (self.T - .25, {'opacity': 0})], base=None)
         gl = (wash(g['back']) + f'<g class="{contents_c}"><clipPath id="{uid}"><path d="{g["inner"]}"/></clipPath>'
               f'<g clip-path="url(#{uid})"><g filter="url(#wash)">{under_svg}</g>{overlay}<g filter="url(#wash)">{float_svg}</g>{sink_svg}{ice_svg}</g>{foam_svg}</g>'
-              + lines(g['out'], boil=False))
+              + (wash(g['front']) if 'front' in g else '') + lines(g['out'], boil=False))
+        rims = [k for k in d['garnish'] if k in RIMS]
+        if rims:
+            rc = self.cls('rim')
+            ra = next((a for a in acts if a[2] == 'rim'), None)
+            gl += f'<g class="{rc}">{rim(rims[0], self.kind)}</g>'
+            on = [(0, {'opacity': 0}), (ra[-2] + .5, {'opacity': 0}), (ra[-1] - .3, {'opacity': 1})] if ra else [(0, {'opacity': 1})]
+            self.emit(rc, on + [(self.T - .8, {'opacity': 1}), (self.T - .25, {'opacity': 0})], base=None)
         # garnish
         gc = self.cls('garn')
         gt = self.garnish_t
-        garn = f'<g class="{gc}">{garnishes(d["garnish"], self.kind)}</g>'
+        garn = f'<g class="{gc}">{garnishes([k for k in d["garnish"] if k not in RIMS], self.kind)}</g>'
         self.emit(gc, [(0, {'opacity': 0, 'transform': 'translateY(-60px)'}), (gt + .1, {'opacity': 0, 'transform': 'translateY(-60px)'}), (gt + .15, {'opacity': 1}),
                        (gt + .7, {'transform': 'translateY(0)'}), (self.T - .8, {'opacity': 1}), (self.T - .25, {'opacity': 0})], base=None)
         glass_svg = f'<g transform="translate({f(self.gx)} {BAR}) scale({f(self.gs)})">{gl}{garn}</g>'
@@ -455,8 +465,30 @@ class Build:
             self.emit(wh, [(0, {'opacity': 0, 'transform': 'translateY(0)'}), (t0 + .5, {'opacity': 0, 'transform': 'translateY(0)'}), (t0 + .55, {'opacity': 1}),
                            (t1 - .2, {'opacity': 1, 'transform': f'translateY({f(by - ey - 22)}px)'}), (t1 - .15, {'opacity': 0})])
             return body
+        if kind == 'mint' and into == 'glass':
+            out = ''
+            for k, (dx, dy, r) in enumerate(((-9, -4, -30), (2, -2, 20), (9, -5, 70), (-3, -9, -80))):
+                c = self.cls('gleaf')
+                out += f'<g class="{c}">{mint_leaf(rx + dx, by + dy, r)}</g>'
+                tt = t0 + .15 + k * .12
+                self.emit(c, [(0, {'opacity': 0, 'transform': 'translateY(-110px)'}), (tt, {'opacity': 0, 'transform': 'translateY(-110px)'}), (tt + .05, {'opacity': 1}),
+                              (tt + .5, {'transform': 'translateY(0)'}), (self.T - .8, {'opacity': 1}), (self.T - .25, {'opacity': 0})])
+            return out
         if kind == 'mint':
             return ''   # the leaves themselves live in the mixing glass
+        if kind == 'muddle':
+            c, w = self.cls('mud'), self.cls('mudw')
+            body = (f'<g class="{w}"><g class="{c}">' + wash(f'<rect x="{f(rx - 4.5)}" y="{f(by - 92)}" width="9" height="88" rx="4.5" fill="#c99a62"/>')
+                    + lines(f'<rect x="{f(rx - 4.5)}" y="{f(by - 92)}" width="9" height="88" rx="4.5" stroke-width="2"/><path d="M{f(rx - 2)} {f(by - 84)} V{f(by - 40)}" stroke="#e6c28e" stroke-width="2"/>', boil=False)
+                    + '</g></g>')
+            self.window(w, t0 + .05, t1 - .1)
+            st = [(0, {'transform': 'translateY(-34px)'}), (t0 + .2, {'transform': 'translateY(-34px)'})]
+            for i in range(3):
+                tt = t0 + .3 + i * (t1 - t0 - .6) / 3
+                st += [(tt + .2, {'transform': 'translateY(0px)'}), (tt + .45, {'transform': 'translateY(-22px)'})]
+            st += [(t1, {'transform': 'translateY(-40px)'})]
+            self.emit(c, st, base=None)
+            return body
         if kind == 'salt':
             out = ''
             for i, (dx, dy) in enumerate(((-4, 0), (2, -3), (6, 2), (-1, 5))):
@@ -502,7 +534,9 @@ class Build:
         if kind == 'dash':
             n = int(a[4])
             return f'{n} dash{"es" if n > 1 else ""} {ING[a[3]][0].replace(" bitters", "")} bitters'
-        return {'egg': '1 egg white', 'mint': 'fresh mint', 'salt': 'a pinch of salt', 'ice': 'ice', 'dry': 'dry shake', 'shake': 'shake!', 'stir': 'stir, stir, stir', 'strain': 'strain', 'swirl': 'swirl', 'dump': 'pour it all in'}.get(kind)
+        if kind == 'rim':
+            return 'salt the rim' if 'salt-rim' in self.d['garnish'] else 'sugar the rim'
+        return {'muddle': 'muddle, gently', 'egg': '1 egg white', 'mint': 'fresh mint', 'salt': 'a pinch of salt', 'ice': 'ice', 'dry': 'dry shake', 'shake': 'shake!', 'stir': 'stir, stir, stir', 'strain': 'strain', 'swirl': 'swirl', 'dump': 'pour it all in'}.get(kind)
 
     def step_css(self):
         out = []

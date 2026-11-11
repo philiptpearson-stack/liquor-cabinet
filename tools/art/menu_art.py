@@ -32,11 +32,19 @@ GLASS = {
         out='<path d="M-12 -112 Q-14 -64 0 -46 Q14 -64 12 -112" stroke-width="2.2"/><path d="M-12 -112 Q0 -114 12 -112" stroke-width="1.4"/><path d="M0 -46 V-4 M-15 0 Q0 -5 15 0" stroke-width="2.2"/>',
         back='<path d="M-12 -112 Q-14 -64 0 -46 Q14 -64 12 -112Z" fill="#e7f1fb" opacity=".35"/>',
         inner='M-10.4 -110 Q-12.2 -64 0 -48.6 Q12.2 -64 10.4 -110Z', bottom=-49, top=-100, rim=(-112, 12)),
+    'copper-mug': dict(
+        out='<path d="M-32 -70 Q0 -79 32 -70 Q0 -61 -32 -70Z" stroke-width="2.2"/><path d="M-32 -70 L-31 -7 Q0 1 31 -7 L32 -70" stroke-width="2.4"/>'
+            '<path d="M32 -60 Q49 -59 49 -40 Q49 -21 32 -20" stroke-width="5.5" stroke="#8a4a22"/><path d="M32 -60 Q49 -59 49 -40 Q49 -21 32 -20" stroke-width="2"/>'
+            '<path d="M-24 -56 L-23.4 -16" stroke="#f6c89a" stroke-width="3"/><circle cx="26" cy="-58" r="1.4" fill="#8a4a22"/><circle cx="26" cy="-22" r="1.4" fill="#8a4a22"/>',
+        back='<path d="M-32 -70 Q0 -79 32 -70 Q0 -61 -32 -70Z" fill="#7a3f1e"/>',
+        front='<path d="M-32 -70 Q0 -61 32 -70 L31 -7 Q0 1 -31 -7Z" fill="#c46a32"/>',
+        inner='M-31 -76 L31 -76 L31 -6 L-31 -6Z', bottom=-6, top=-71, rim=(-70, 32), opaque=True),
 }
 
 # ice, inside the glass: one big cube in a rocks glass, a stack in a highball
 ICE = {
     'rocks': [(-14, -37, 28, 0)],
+    'copper-mug': [(-21, -80, 13, -8), (-4, -82, 13, 6), (12, -79, 12, -5)],   # only their tops show, in the mouth of the mug
     'highball': [(-17.5, -23, 15, -6), (1.5, -22.5, 15, 5), (-12, -39, 15, 8), (3, -38.5, 15, -4), (-16, -55, 15, 3), (1, -54, 15, -7), (-8, -71, 15, 6)],
 }
 
@@ -151,7 +159,25 @@ def garnish(kind, glass):
         return at(hw - 3, ry, twist(kind.split('-')[0]))
     if kind.endswith('-peel'):
         return at(hw - 8, ry + 6, peel(kind.split('-')[0]), 1, -8)
+    if kind in ('salt-rim', 'sugar-rim'):
+        return rim(kind, glass)
     raise ValueError(kind)
+
+
+RIMS = ('salt-rim', 'sugar-rim')
+
+
+def rim(kind, glass):
+    """Salt (or sugar) crusted on the outside of the rim, a band you can see from the side."""
+    g = GLASS[glass]
+    ry, hw = g['rim']
+    dip = 0 if glass in ('rocks', 'highball') else 4
+    path = f'M{-hw - .5} {ry + 1} Q0 {ry + 1 - dip} {hw + .5} {ry + 1}'
+    grain = '#a9a29a' if kind == 'salt-rim' else '#d9b44a'
+    dots = ''.join(f'<circle cx="{f(x * hw)}" cy="{f(ry + 1 + dy - dip * (1 - x * x) * .5)}" r=".9" fill="{grain}"/>'
+                   for x, dy in ((-.85, 1.2), (-.6, -.6), (-.35, 1.4), (-.1, -.4), (.15, 1.1), (.4, -.7), (.62, 1.3), (.85, -.2)))
+    return (lines(f'<path d="{path}"/>', boil=False, width=5.2, color='#fbfaf4') + lines(f'<path d="{path}" stroke-dasharray="1.2 2.6"/>', boil=False, width=1.4, color=grain)
+            + dots)
 
 
 def garnishes(kinds, glass):
@@ -267,6 +293,7 @@ ING = {
     'white-rum':      ('white rum', 'bottle', '#f1ecd8', ('tall', '#e3eee6', 'white rum')),
     'dark-rum':       ('dark rum', 'bottle', '#5a2e14', ('spirit', '#6b3a1c', 'dark rum')),
     'tequila':        ('tequila', 'bottle', '#f3efd9', ('tall', '#e3eedd', 'tequila')),
+    'vodka':          ('vodka', 'bottle', '#eef2f4', ('tall', '#e4ecf1', 'vodka')),
     'applejack':      ('applejack', 'bottle', '#d39a4a', ('spirit', '#d8a256', 'applejack')),
     'sweet-vermouth': ('sweet vermouth', 'bottle', '#7a2a2a', ('wine', '#6b3326', 'sweet vermouth')),
     'dry-vermouth':   ('dry vermouth', 'bottle', '#f2ecc8', ('wine', '#a9c49a', 'dry vermouth')),
@@ -317,7 +344,7 @@ def glass(kind, uid, color, garnish_kinds=(), iced=False, foam=False, layers=Non
     if bubbles:
         bub = bubbles_in(kind, top)
     inside = f'<clipPath id="{uid}"><path d="{g["inner"]}"/></clipPath><g clip-path="url(#{uid})">{wash(fill)}{bub}{ice(kind) if iced else ""}</g>'
-    out = wash(g['back']) + inside
+    out = wash(g['back']) + inside + (wash(g['front']) if 'front' in g else '')
     if foam and 'foam' in g:
         out += foam_on(kind)
     out += lines(g['out'], boil=False)
@@ -334,7 +361,7 @@ def foam_on(kind):
 def bubbles_in(kind, top, cls='bub'):
     """Little bubbles rising through the drink (they loop on their own)."""
     g = GLASS[kind]
-    hw = {'highball': 15, 'flute': 6, 'coupe': 16, 'rocks': 22, 'martini': 12}[kind]
+    hw = {'highball': 15, 'flute': 6, 'coupe': 16, 'rocks': 22, 'martini': 12, 'copper-mug': 22}[kind]
     out = ''
     for i, (fx, fy) in enumerate(((-.7, .15), (.1, .55), (.6, .3), (-.3, .8), (.35, .9), (-.55, .45))):
         x, y = fx * hw, max(g['bottom'] - (g['bottom'] - top) * fy * .6 - 3, top + 36)

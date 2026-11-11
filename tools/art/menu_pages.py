@@ -25,10 +25,10 @@ GENRE_NAME = {'classics': 'Classics', **dict(SOON)}   # the parts of the menu, b
 
 def genre(d):
     return d.get('genre', 'classics')
-GLASS_WORD = {'coupe': 'coupe', 'martini': 'martini glass', 'rocks': 'rocks glass', 'highball': 'tall glass of ice', 'flute': 'Champagne flute'}
-HERO_SCALE = {'coupe': 1.8, 'martini': 1.55, 'rocks': 1.45, 'highball': 1.3, 'flute': 1.25}
-ICON_SCALE = {'coupe': 1.35, 'martini': 1.18, 'rocks': 1.3, 'highball': .93, 'flute': .87}
-GARNISH_WORD = {'lime-wheel': 'a lime wheel', 'lemon-wheel': 'a lemon wheel', 'lime-wedge': 'a lime wedge', 'grapefruit-wedge': 'a grapefruit wedge',
+GLASS_WORD = {'coupe': 'coupe', 'martini': 'martini glass', 'rocks': 'rocks glass', 'highball': 'tall glass of ice', 'flute': 'Champagne flute', 'copper-mug': 'copper mug'}
+HERO_SCALE = {'coupe': 1.8, 'martini': 1.55, 'rocks': 1.45, 'highball': 1.3, 'flute': 1.25, 'copper-mug': 1.3}
+ICON_SCALE = {'coupe': 1.35, 'martini': 1.18, 'rocks': 1.3, 'highball': .93, 'flute': .87, 'copper-mug': 1.2}
+GARNISH_WORD = {'salt-rim': 'a salted rim', 'sugar-rim': 'a sugared rim', 'lime-wheel': 'a lime wheel', 'lemon-wheel': 'a lemon wheel', 'lime-wedge': 'a lime wedge', 'grapefruit-wedge': 'a grapefruit wedge',
                 'lemon-twist': 'a lemon twist', 'orange-twist': 'an orange twist', 'orange-peel': 'an orange peel', 'cherry': 'a cherry',
                 'olives': 'olives', 'mint': 'a sprig of mint', 'flower': 'an edible flower'}
 
@@ -86,7 +86,7 @@ def hero(d):
         layers = [(.68, 1, '#5a2e14')]
     drink = glass(d['glass'], f'{d["slug"]}-hero', d['color'], d['garnish'], iced=served_iced, foam=d.get('foam', False), layers=layers, bubbles=fizzy,
                   top=d.get('level'))
-    out += f'<g transform="translate(200 184) scale({HERO_SCALE[d["glass"]]})">{drink}</g>'
+    out += f'<g transform="translate({d.get("hero_x", 200)} 184) scale({HERO_SCALE[d["glass"]]})">{drink}</g>'   # hero_x: a glass with a handle sits a little left
     out += sparkle(150, 46, 6, 'twinkle') + sparkle(258, 40, 5, 'twinkle d2') + sparkle(246, 100, 4, 'twinkle d3')
     g = ' and '.join(GARNISH_WORD[k] for k in d['garnish'])
     beside = ', '.join(words[:-1]) + (' and ' if len(words) > 1 else '') + words[-1]

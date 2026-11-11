@@ -309,7 +309,88 @@ DRINKS = [
                 ('<strong>Serve up.</strong> Strain into a chilled coupe, no ice, and top with a cherry.', [('strain',), ('garnish',)])],
          extra=[('makers-mark/bartender', "The Bartender's Perspective: Maker's Mark")],
          related=['gold-rush', 'daiquiri'], hero=(['bourbon'], ['egg', 'fruit:lemon'])),
+    # ---------------------------------------------------------------- batch 1, Nov 10 2026 (Claude's drafts, waiting on Philip)
+    dict(slug='margarita', name='Margarita', glass='coupe', color='#e4e7b2', garnish=['salt-rim', 'lime-wheel'],
+         recipe=[(2, 'oz', 'tequila (blanco)'), (1, 'oz', 'orange liqueur'), (1, 'oz', 'lime juice (fresh squeezed)')],
+         glass_line=('coupe, with a salted rim (or on the rocks)', 'lime wheel'),
+         note='Salt the rim with coarse salt. Salt just half of it, if you like, so every sip can be your choice.',
+         punch=['<em>Margarita</em> means “daisy” in Spanish.', "That's not a coincidence."],
+         lines=['In the late 1800s, a Daisy was a whole family of drinks: a spirit, fresh citrus and something sweet, often orange liqueur.',
+                'By 1936, newspapers were writing about the Tequila Daisy at bars in Tijuana.',
+                'Say that in Spanish, and you get a Margarita. The name first showed up in print in 1953, and two years later a tequila importer was pushing it all across the country.',
+                "It's also the Golden Ratio, plain as day: two parts tequila, one part orange liqueur, one part lime.",
+                'The salt rim earns its place. A little salt makes the lime taste brighter and tames the bite of the tequila.'],
+         lead="Here's how you make a <em>great</em> Margarita:",
+         gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
+         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Difford's): the Tequila Daisy in 1936 newspapers (Tijuana); "
+                    "\"Margarita\" first in print in 1953 (Esquire printed a recipe that December); Cuervo's US distributor's national push from 1955. "
+                    "Margarita = daisy in Spanish. Recipe: the Golden Ratio, as on The Golden Ratio page."),
+         steps=[('<strong>Salt the rim.</strong> Rub a lime wedge around the outside of the rim of a chilled coupe, then roll it in coarse salt.', [('rim',)]),
+                ('<strong>Combine ingredients.</strong> Add the tequila, orange liqueur and lime juice to your shaker.', [('pour', 'tequila', 2), ('pour', 'orange-liqueur', 1), ('pour', 'lime', 1)]),
+                ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
+                ('<strong>Strain.</strong> Strain into the salted coupe.', [('strain',)]),
+                ('<strong>Garnish.</strong> A lime wheel on the rim.', [('garnish',)])],
+         related=['paloma', 'el-diablo'], hero=(['orange-liqueur', 'tequila'], ['fruit:lime', 'half:lime'])),
+
+    dict(slug='mojito', name='Mojito', genre='modern-variations', glass='highball', color='#e6efcf', garnish=['mint', 'lime-wheel'],
+         recipe=[(2, 'oz', 'white rum'), (1, 'oz', 'lime juice (fresh squeezed)'), (1, 'oz', 'simple syrup'), (8, '', 'mint leaves'), (2, 'oz', 'soda water')],
+         glass_line=('highball, over ice', 'mint sprig and a lime wheel'),
+         punch='It took about 75 years to become an overnight sensation.',
+         lines=["The first known Mojito recipe was printed in Havana in 1927. A few years later, it was on the menu at Sloppy Joe's, a Havana bar famous with American tourists.",
+                'Its ancestor is older still: the Draque, a Cuban mix of cane spirit, lime, sugar and mint, around since at least the 1830s. Legend names it for Sir Francis Drake.',
+                'Then, in the early 2000s, the Mojito went everywhere. Even James Bond ordered one, in Cuba, in <em>Die Another Day</em> (2002).',
+                'The secret is the mint. Press it gently with the lime and sugar, just enough to wake it up. Shred it, and it turns bitter.'],
+         gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
+         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Philip: a Modern Variation (its moment came after 1950). Facts checked (Difford's): "
+                    "first known recipe 1927 (El Arte de Hacer un Cocktail y Algo Más, Havana), the name on Sloppy Joe's 1931-32 menu, the Draque documented from 1833; "
+                    "Bond's Mojito in Die Another Day (The James Bond Dossier). Recipe: the Golden Ratio, topped with soda."),
+         steps=[('<strong>Mint, lime and sugar.</strong> Add the mint leaves, lime juice and simple syrup to a tall glass.', [('mint',), ('pour', 'lime', 1), ('pour', 'simple', 1)]),
+                ("<strong>Muddle, gently.</strong> Press the mint a few times, just enough to wake it up. Don't shred it.", [('muddle',)]),
+                ('<strong>Rum and ice.</strong> Pour in the rum, then fill the glass with ice (crushed, if you have it).', [('pour', 'white-rum', 2), ('ice', 'glass')]),
+                ('<strong>Top with soda.</strong> A splash of soda water, then a quick stir, bottom to top.', [('top', 'soda', 2), ('stir',)]),
+                ('<strong>Garnish.</strong> A sprig of mint and a lime wheel.', [('garnish',)])],
+         related=['southside-fizz', 'daiquiri'], hero=(['syrup', 'white-rum'], ['mint', 'fruit:lime'])),
+
+    dict(slug='moscow-mule', name='Moscow Mule', glass='copper-mug', color='#e6dca6', base='#eef0d6', garnish=['lime-wedge'], hero_x=194,
+         recipe=[(1.5, 'oz', 'vodka'), (.75, 'oz', 'lime juice'), (.75, 'oz', 'simple syrup'), (4, 'oz', 'ginger beer')],
+         glass_line=('copper mug, over ice', 'lime wedge'),
+         punch='The drink that sold America on vodka.',
+         lines=['In 1941, vodka was a hard sell in America.',
+                "As the story goes, a liquor executive with a vodka nobody wanted met the owner of Hollywood's Cock 'n' Bull, who had a ginger beer nobody wanted.",
+                'Add lime and a copper mug, and the Moscow Mule was born.',
+                'Then the vodka man went bar to bar with a Polaroid camera. He snapped each bartender holding a Mule, left one photo behind for the wall, and took the other to show the next bar.',
+                "Sound familiar? It's our Mamie Taylor, with vodka in place of Scotch. So we build them the same way.",
+                'Why copper? It looks great, and the mug turns ice-cold in your hand.'],
+         gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
+         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Built like Philip's Mamie Taylor (and El Diablo): shaken with simple syrup, topped with ginger beer "
+                    "in the shaker, swirled, poured in ice and all. Facts checked (Wikipedia, from the 1948 Herald Tribune account): 1941; Jack Morgan's Cock 'n' Bull ginger beer, "
+                    "John G. Martin of Heublein (Smirnoff); Martin's Polaroid photos (one left with the bar, one kept to show the next). A later account credits the bar's bartender."),
+         steps=[('<strong>Combine ingredients.</strong> Add the vodka, lime juice and simple syrup to your shaker.', [('pour', 'vodka', 1.5), ('pour', 'lime', .75), ('pour', 'simple', .75)]),
+                ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
+                ('<strong>Top with ginger beer.</strong> Pour it right into the shaker, and give it a gentle swirl.', [('top', 'ginger-beer', 4), ('swirl',)]),
+                ('<strong>Pour it all in.</strong> Pour everything, ice and all, into a copper mug. The drink is already chilling on that ice.', [('dump',)]),
+                ('<strong>Garnish.</strong> A lime wedge on the rim.', [('garnish',)])],
+         related=['mamie-taylor', 'el-diablo'], hero=(['syrup', 'vodka'], ['ginger-beer', 'fruit:lime'])),
+
+    dict(slug='lemon-drop', name='Lemon Drop', genre='modern-variations', glass='martini', color='#f3eaa2', garnish=['sugar-rim', 'lemon-twist'],
+         recipe=[(2, 'oz', 'vodka'), (1, 'oz', 'simple syrup'), (1, 'oz', 'lemon juice (fresh squeezed)')],
+         glass_line=('martini glass, with a sugared rim', 'lemon twist'),
+         note='Superfine sugar sticks to the rim best.',
+         punch=["It's named after the candy.", 'And it tastes like it, too.'],
+         lines=["It was born in 1970s San Francisco, at Henry Africa's, the original “fern bar”: all hanging ferns and Tiffany lamps.",
+                "Under the sugar, it's the Golden Ratio at its simplest: two parts vodka, one part simple syrup, one part lemon.",
+                'The sugared rim is what makes it a Lemon Drop: sweet on your lips, tart in the glass, just like the candy.'],
+         gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
+         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Wikipedia): invented in the 1970s by Norman Jay Hobday at Henry Africa's, "
+                    "a fern bar in San Francisco that opened in 1969. Recipe: the Golden Ratio, as on The Golden Ratio page (the classic uses citrus vodka and triple sec)."),
+         steps=[('<strong>Sugar the rim.</strong> Rub a lemon wedge around the outside of the rim of a chilled martini glass, then roll it in sugar.', [('rim',)]),
+                ('<strong>Combine ingredients.</strong> Add the vodka, simple syrup and lemon juice to your shaker.', [('pour', 'vodka', 2), ('pour', 'simple', 1), ('pour', 'lemon', 1)]),
+                ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
+                ('<strong>Strain.</strong> Strain into the sugared glass.', [('strain',)]),
+                ('<strong>Garnish.</strong> A lemon twist.', [('garnish',)])],
+         related=['daiquiri', 'whiskey-sour'], hero=(['syrup', 'vodka'], ['fruit:lemon', 'half:lemon'])),
 ]
+DRINKS.sort(key=lambda d: d['slug'])   # the menu lists them A to Z
 
 BY_SLUG = {d['slug']: d for d in DRINKS}
 

@@ -15,7 +15,9 @@ El Diablo
 French 75
 Mamie Taylor
 Manhattan
+Margarita
 Martini
+Moscow Mule
 Negroni
 Old Fashioned
 Pink Lady
