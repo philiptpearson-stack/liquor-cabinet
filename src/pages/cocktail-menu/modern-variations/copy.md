@@ -8,8 +8,15 @@
 The Cocktail Menu: Modern ***Variations.***
 These are the *Modern Variations.*
 Tap any drink for its recipe and step-by-step, animated how-to.
+Cosmopolitan
+Espresso Martini
 Gold Rush
 Lemon Drop
 Mojito
+Oaxaca Old Fashioned
 Paloma
+Paper Plane
+Penicillin
+More modern variations
+Coming soon
 ← Back to the Cocktail Menu
