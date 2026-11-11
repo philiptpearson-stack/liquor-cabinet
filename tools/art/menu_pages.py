@@ -98,8 +98,9 @@ def hero(d):
     out += f'<g transform="translate({d.get("hero_x", 200)} 184) scale({HERO_SCALE[d["glass"]]})">{drink}</g>'   # hero_x: a glass with a handle sits a little left
     out += sparkle(150, 46, 6, 'twinkle') + sparkle(258, 40, 5, 'twinkle d2') + sparkle(246, 100, 4, 'twinkle d3')
     g = ' and '.join(GARNISH_WORD[k] for k in d['garnish'])
+    g = f', garnished with {g}' if g else ''      # the Ramos Gin Fizz and the Trinidad Sour have none
     beside = ', '.join(words[:-1]) + (' and ' if len(words) > 1 else '') + words[-1]
-    alt = f'{a_an(d["name"])} in {a_an(GLASS_WORD[d["glass"]])}, garnished with {g}, next to {beside}'
+    alt = f'{a_an(d["name"])} in {a_an(GLASS_WORD[d["glass"]])}{g}, next to {beside}'
     return svg_view(out, alt, '52 24 296 180')
 
 

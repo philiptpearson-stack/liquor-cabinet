@@ -562,6 +562,8 @@ class Build:
         if kind in ('pour', 'top', 'float', 'sink'):
             q = a[4]
             word = ING[a[3]][0]
+            if q and q < .2 and kind == 'pour':   # a bar spoon (agave in the Oaxaca Old Fashioned, Fernet in the Hanky Panky)
+                return f'a bar spoon of {word}'
             return f'{oz_text(q)} {word}' if q and kind != 'top' else (f'{word}' if kind != 'top' else f'top with {word}')
         if kind == 'dash':
             n = int(a[4])
