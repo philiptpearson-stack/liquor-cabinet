@@ -39,7 +39,7 @@ Makes − 1 + drink
 **Combine ingredients.** Add the vodka, tomato juice, lemon juice and horseradish to your shaker.
 **Season it.** Worcestershire, Tabasco, a pinch of salt and a grind of pepper.
 **Shake.** Add ice and shake hard, until frosty cold.
-**Strain over ice.** Strain into a tall glass full of fresh ice.
+**Pour it all in.** Pour everything, ice and all, into a tall glass.
 **Garnish.** A celery stalk and a lemon wedge.
 Keep exploring
 → Moscow Mule

@@ -550,7 +550,7 @@ DRINKS = [
                  [('pour', 'vodka', 1.5), ('pour', 'tomato', 4), ('pour', 'lemon', .5), ('spoon', 'horseradish')]),
                 ('<strong>Season it.</strong> Worcestershire, Tabasco, a pinch of salt and a grind of pepper.', [('dash', 'worcestershire', 2), ('dash', 'hot-sauce', 2), ('salt',)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
-                ('<strong>Strain over ice.</strong> Strain into a tall glass full of fresh ice.', [('ice', 'glass'), ('strain',)]),
+                ('<strong>Pour it all in.</strong> Pour everything, ice and all, into a tall glass.', [('dump',)]),
                 ('<strong>Garnish.</strong> A celery stalk and a lemon wedge.', [('garnish',)])],
          related=['moscow-mule', 'paloma'], hero=(['vodka', 'tomato'], ['fruit:lemon'])),
 
