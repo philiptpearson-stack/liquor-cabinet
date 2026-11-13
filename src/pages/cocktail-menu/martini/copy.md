@@ -19,7 +19,7 @@ Probably the most confusing of history's great Cocktails.
 Why did James Bond want it shaken when it has no citrus?
 Why do so many people leave out the bitters (wrongly!) when it's clearly a variation on the original Cocktail Formula?
 → Old Fashioned — The Original Cocktail
-Is it just a cold shot of vodka (or gin) in a fancy glass?
+Is it REALLY just a cold shot of vodka (or gin) in a fancy glass?
 Well, here's what you need to know:
 The Martini used to be half** vermouth.
 Seriously.

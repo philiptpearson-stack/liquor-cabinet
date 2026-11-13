@@ -158,7 +158,7 @@ DRINKS = [
                 'Why did James Bond want it shaken when it has no citrus?',
                 "Why do so many people leave out the bitters (wrongly!) when it's clearly a variation on the original Cocktail Formula?",
                 ('go', '→ Old Fashioned — The Original Cocktail', 'cocktail-menu/old-fashioned'),
-                'Is it just a cold shot of vodka (or gin) in a fancy glass?',
+                'Is it REALLY just a cold shot of vodka (or gin) in a fancy glass?',
                 ('scene', 'chalkboard'),
                 ('h2', "Well, here's what you need to know:"),
                 ('punch', 'The Martini used to be <strong class="hl">half</strong> vermouth.'),
