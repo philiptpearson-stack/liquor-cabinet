@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Built like Philip's Mamie Taylor (and El Diablo): shaken with simple syrup, topped with ginger beer in the shaker, swirled, poured in ice and all. Facts checked (Wikipedia, from the 1948 Herald Tribune account): 1941; Jack Morgan's Cock 'n' Bull ginger beer, John G. Martin of Heublein (Smirnoff); Martin's Polaroid photos (one left with the bar, one kept to show the next). A later account credits the bar's bartender. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 13 2026: Philip's copy (Cock ’n’ Bull spelled the same both times). Recipe and steps: built like Philip's Mamie Taylor (and El Diablo): shaken with simple syrup, topped with ginger beer in the shaker, swirled, poured in ice and all. Facts checked (Wikipedia, from the 1948 Herald Tribune account): 1941; Jack Morgan's Cock 'n' Bull ginger beer, John G. Martin of Heublein (Smirnoff); Martin's Polaroid photos (one left with the bar, one kept to show the next). A later account credits the bar's bartender. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Moscow ***Mule.***
 Moscow Mule Recipe
@@ -15,13 +15,11 @@ Makes − 1 + drink
 ¾ oz simple syrup
 4 oz ginger beer
 **Glass:** copper mug, over ice · **Garnish:** lime wedge
-The drink that sold America on vodka.
-In 1941, vodka was a hard sell in America.
-As the story goes, a liquor executive with a vodka nobody wanted met the owner of Hollywood's Cock 'n' Bull, who had a ginger beer nobody wanted.
-Add lime and a copper mug, and the Moscow Mule was born.
-Then the vodka man went bar to bar with a Polaroid camera. He snapped each bartender holding a Mule, left one photo behind for the wall, and took the other to show the next bar.
-Sound familiar? It's our Mamie Taylor, with vodka in place of Scotch. So we build them the same way.
-Why copper? It looks great, and the mug turns ice-cold in your hand.
+Introducing...vodka!
+Before 1941, vodka was a hard sell in America.
+Then, Smirnoff promoter John Martin met Jack Morgan, owner of Hollywood's Cock ’n’ Bull bar, and the rest was history.
+The Cock ’n’ Bull was a British-style pub on L.A.’s Sunset Strip. Jack Morgan owned it, and also sold a ginger beer under the same name.
+Put it in those fun copper mugs — and by 1947 the Moscow Mule was a fad drink from New York to LA.
 Here's how you make one:
 The Cocktail Menu · Classics
 Moscow Mule
