@@ -12,7 +12,7 @@ Hot Toddy
 Makes − 1 + drink
 1 ½ oz whiskey (bourbon, rye or Scotch)
 ¾ oz honey syrup
-½ oz lemon juice (fresh squeezed)
+½ oz lemon juice
 4 oz hot water
 **Glass:** a warm mug · **Garnish:** lemon wheel (and a cinnamon stick, if you like)
 Honey syrup is honey and hot water, half and half, stirred until smooth.
@@ -28,7 +28,7 @@ Hot Toddy
 Makes − 1 + drink
 1 ½ oz whiskey (bourbon, rye or Scotch)
 ¾ oz honey syrup
-½ oz lemon juice (fresh squeezed)
+½ oz lemon juice
 4 oz hot water
 **Glass:** a warm mug · **Garnish:** lemon wheel (and a cinnamon stick, if you like)
 Honey syrup is honey and hot water, half and half, stirred until smooth.

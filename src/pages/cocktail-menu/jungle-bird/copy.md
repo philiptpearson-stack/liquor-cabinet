@@ -13,7 +13,7 @@ Makes − 1 + drink
 1 ½ oz dark rum (blackstrap, if you can find it)
 ¾ oz Campari
 1 ½ oz pineapple juice
-½ oz lime juice (fresh squeezed)
+½ oz lime juice
 ½ oz demerara syrup
 **Glass:** rocks, over ice · **Garnish:** a pineapple wedge
 A tiki drink with a bitter streak.
@@ -28,7 +28,7 @@ Makes − 1 + drink
 1 ½ oz dark rum (blackstrap, if you can find it)
 ¾ oz Campari
 1 ½ oz pineapple juice
-½ oz lime juice (fresh squeezed)
+½ oz lime juice
 ½ oz demerara syrup
 **Glass:** rocks, over ice · **Garnish:** a pineapple wedge
 **Combine ingredients.** Add the rum, Campari, pineapple juice, lime juice and demerara syrup to your shaker.

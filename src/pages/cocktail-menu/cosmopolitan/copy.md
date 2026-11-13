@@ -12,7 +12,7 @@ Cosmopolitan
 Makes − 1 + drink
 1 ½ oz citrus vodka
 ¾ oz orange liqueur
-¾ oz lime juice (fresh squeezed)
+¾ oz lime juice
 ½ oz cranberry juice
 **Glass:** martini glass · **Garnish:** orange twist
 Yes, it's that pink drink.
@@ -26,7 +26,7 @@ Cosmopolitan
 Makes − 1 + drink
 1 ½ oz citrus vodka
 ¾ oz orange liqueur
-¾ oz lime juice (fresh squeezed)
+¾ oz lime juice
 ½ oz cranberry juice
 **Glass:** martini glass · **Garnish:** orange twist
 **Combine ingredients.** Add the citrus vodka, orange liqueur, lime juice and cranberry juice to your shaker.

@@ -13,7 +13,7 @@ Makes − 1 + drink
 1 ½ oz gin
 ½ oz applejack (apple brandy)
 1 oz grenadine
-1 oz lemon juice (fresh squeezed)
+1 oz lemon juice
 1 egg white (optional)
 **Glass:** coupe · **Garnish:** cherry
 Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.
@@ -28,7 +28,7 @@ Makes − 1 + drink
 1 ½ oz gin
 ½ oz applejack (apple brandy)
 1 oz grenadine
-1 oz lemon juice (fresh squeezed)
+1 oz lemon juice
 1 egg white (optional)
 **Glass:** coupe · **Garnish:** cherry
 Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.

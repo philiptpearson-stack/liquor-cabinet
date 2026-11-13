@@ -12,7 +12,7 @@ Daiquiri
 Makes − 1 + drink
 2 oz white rum
 1 oz simple syrup
-1 oz lime juice (fresh squeezed)
+1 oz lime juice
 **Glass:** coupe · **Garnish:** lime wheel
 Simple and sublime.
 The original Daiquiri was just three ingredients: rum, lime and sugar.
@@ -25,7 +25,7 @@ Daiquiri
 Makes − 1 + drink
 2 oz white rum
 1 oz simple syrup
-1 oz lime juice (fresh squeezed)
+1 oz lime juice
 **Glass:** coupe · **Garnish:** lime wheel
 **Combine ingredients.** Add the rum, simple syrup and lime juice to your shaker.
 **Shake.** Add ice and shake hard, until the shaker is frosty cold.

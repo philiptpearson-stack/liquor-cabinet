@@ -11,8 +11,8 @@ The Cocktail Menu · Tiki & Tropical
 Hemingway Daiquiri
 Makes − 1 + drink
 2 oz white rum
-¾ oz lime juice (fresh squeezed)
-½ oz grapefruit juice (fresh squeezed)
+¾ oz lime juice
+½ oz grapefruit juice
 ¼ oz maraschino liqueur
 **Glass:** coupe · **Garnish:** a lime wheel
 Less sugar.
@@ -26,8 +26,8 @@ The Cocktail Menu · Tiki & Tropical
 Hemingway Daiquiri
 Makes − 1 + drink
 2 oz white rum
-¾ oz lime juice (fresh squeezed)
-½ oz grapefruit juice (fresh squeezed)
+¾ oz lime juice
+½ oz grapefruit juice
 ¼ oz maraschino liqueur
 **Glass:** coupe · **Garnish:** a lime wheel
 **Combine ingredients.** Add the rum, lime juice, grapefruit juice and maraschino to your shaker.

@@ -12,7 +12,7 @@ Southside Fizz
 Makes − 1 + drink
 2 oz gin
 1 oz simple syrup
-1 oz lime juice (fresh squeezed)
+1 oz lime juice
 6 mint leaves
 2 oz soda water
 **Glass:** highball, over ice · **Garnish:** mint sprig
@@ -27,7 +27,7 @@ Southside Fizz
 Makes − 1 + drink
 2 oz gin
 1 oz simple syrup
-1 oz lime juice (fresh squeezed)
+1 oz lime juice
 6 mint leaves
 2 oz soda water
 **Glass:** highball, over ice · **Garnish:** mint sprig

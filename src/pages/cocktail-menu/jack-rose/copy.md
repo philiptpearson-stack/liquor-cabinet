@@ -11,7 +11,7 @@ The Cocktail Menu · Classics
 Jack Rose
 Makes − 1 + drink
 2 oz applejack
-¾ oz lemon juice (fresh squeezed)
+¾ oz lemon juice
 ¾ oz grenadine
 **Glass:** coupe · **Garnish:** lemon twist
 Pink, tart and very 1920s Paris.
@@ -24,7 +24,7 @@ The Cocktail Menu · Classics
 Jack Rose
 Makes − 1 + drink
 2 oz applejack
-¾ oz lemon juice (fresh squeezed)
+¾ oz lemon juice
 ¾ oz grenadine
 **Glass:** coupe · **Garnish:** lemon twist
 **Combine ingredients.** Add the applejack, lemon juice and grenadine to your shaker.

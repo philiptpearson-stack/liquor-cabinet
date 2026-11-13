@@ -12,7 +12,7 @@ Sidecar
 Makes − 1 + drink
 2 oz cognac (or another brandy)
 1 oz orange liqueur
-1 oz lemon juice (fresh squeezed)
+1 oz lemon juice
 **Glass:** coupe · **Garnish:** orange twist
 Brandy's best sour.
 The Sidecar showed up around the end of World War I. Paris and London both claim it.
@@ -25,7 +25,7 @@ Sidecar
 Makes − 1 + drink
 2 oz cognac (or another brandy)
 1 oz orange liqueur
-1 oz lemon juice (fresh squeezed)
+1 oz lemon juice
 **Glass:** coupe · **Garnish:** orange twist
 **Combine ingredients.** Add the cognac, orange liqueur and lemon juice to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.

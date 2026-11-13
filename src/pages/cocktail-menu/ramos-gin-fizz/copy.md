@@ -11,8 +11,8 @@ The Cocktail Menu · Arcane Oddities
 Ramos Gin Fizz
 Makes − 1 + drink
 2 oz gin
-½ oz lemon juice (fresh squeezed)
-½ oz lime juice (fresh squeezed)
+½ oz lemon juice
+½ oz lime juice
 ¾ oz simple syrup
 1 oz heavy cream
 1 egg white
@@ -31,8 +31,8 @@ The Cocktail Menu · Arcane Oddities
 Ramos Gin Fizz
 Makes − 1 + drink
 2 oz gin
-½ oz lemon juice (fresh squeezed)
-½ oz lime juice (fresh squeezed)
+½ oz lemon juice
+½ oz lime juice
 ¾ oz simple syrup
 1 oz heavy cream
 1 egg white

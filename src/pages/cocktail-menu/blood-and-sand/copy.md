@@ -13,7 +13,7 @@ Makes − 1 + drink
 ¾ oz Scotch
 ¾ oz sweet vermouth
 ¾ oz cherry liqueur (like Cherry Heering)
-¾ oz orange juice (fresh squeezed)
+¾ oz orange juice
 **Glass:** coupe · **Garnish:** an orange twist
 Named after a silent movie.
 Scotch and orange juice. *Trust us.*
@@ -27,7 +27,7 @@ Makes − 1 + drink
 ¾ oz Scotch
 ¾ oz sweet vermouth
 ¾ oz cherry liqueur (like Cherry Heering)
-¾ oz orange juice (fresh squeezed)
+¾ oz orange juice
 **Glass:** coupe · **Garnish:** an orange twist
 **Combine ingredients.** Equal parts Scotch, sweet vermouth, cherry liqueur and orange juice, into your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.

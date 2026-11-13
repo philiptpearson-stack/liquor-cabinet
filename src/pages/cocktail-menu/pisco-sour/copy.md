@@ -11,7 +11,7 @@ The Cocktail Menu · Tiki & Tropical
 Pisco Sour
 Makes − 1 + drink
 2 oz pisco
-1 oz lime juice (fresh squeezed)
+1 oz lime juice
 ¾ oz simple syrup
 1 egg white
 3 drops Angostura bitters, on top
@@ -28,7 +28,7 @@ The Cocktail Menu · Tiki & Tropical
 Pisco Sour
 Makes − 1 + drink
 2 oz pisco
-1 oz lime juice (fresh squeezed)
+1 oz lime juice
 ¾ oz simple syrup
 1 egg white
 3 drops Angostura bitters, on top

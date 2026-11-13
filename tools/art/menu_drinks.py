@@ -24,7 +24,7 @@ DRINKS = [
          related=['negroni', 'manhattan'], hero=(['sweet-vermouth', 'bourbon'], ['campari', 'fruit:orange'])),
 
     dict(slug='daiquiri', name='Daiquiri', glass='coupe', color='#e3eab4', garnish=['lime-wheel'],
-         recipe=[(2, 'oz', 'white rum'), (1, 'oz', 'simple syrup'), (1, 'oz', 'lime juice (fresh squeezed)')],
+         recipe=[(2, 'oz', 'white rum'), (1, 'oz', 'simple syrup'), (1, 'oz', 'lime juice')],
          glass_line=('coupe', 'lime wheel'),
          punch='Simple and sublime.',
          lines=['The original Daiquiri was just three ingredients: rum, lime and sugar.',
@@ -72,7 +72,7 @@ DRINKS = [
          related=['paloma', 'dark-and-stormy'], hero=(['cassis', 'tequila'], ['ginger-beer', 'fruit:lime'])),
 
     dict(slug='french-75', name='French 75', glass='flute', color='#f1e19c', base='#ece3b0', garnish=['lemon-twist'],
-         recipe=[(1, 'oz', 'gin'), (.5, 'oz', 'simple syrup'), (.5, 'oz', 'lemon juice (fresh squeezed)'), (3, 'oz', 'Champagne, or another dry sparkling wine')],
+         recipe=[(1, 'oz', 'gin'), (.5, 'oz', 'simple syrup'), (.5, 'oz', 'lemon juice'), (3, 'oz', 'Champagne, or another dry sparkling wine')],
          glass_line=('Champagne flute', 'lemon twist'),
          punch=['The French 75 is a little gin sour, with bubbles on top!', '<span class="hl"><em>Seriously.</em></span>'],   # big type; Seriously. on its own, in plum (Philip, Nov 6)
          lines=[],
@@ -88,7 +88,7 @@ DRINKS = [
          related=['tom-collins', 'violet-hour'], hero=(['syrup', 'gin'], ['champagne', 'fruit:lemon'])),
 
     dict(slug='gold-rush', name='Gold Rush', genre='modern-variations', glass='rocks', color='#e0a443', garnish=['lemon-wheel'], level=-42,
-         recipe=[(2, 'oz', 'bourbon'), (1, 'oz', 'honey syrup'), (1, 'oz', 'lemon juice (fresh squeezed)')],
+         recipe=[(2, 'oz', 'bourbon'), (1, 'oz', 'honey syrup'), (1, 'oz', 'lemon juice')],
          glass_line=('rocks, over one big ice cube', 'lemon wheel'),
          punch='The new kid on the menu.',
          lines=['Born around 2000 at Milk &amp; Honey in New York, the Gold Rush is a whiskey sour sweetened with honey.',
@@ -235,7 +235,7 @@ DRINKS = [
          related=['el-diablo', 'daiquiri'], hero=(['tequila'], ['grapefruit-soda', 'fruit:grapefruit'])),
 
     dict(slug='pink-lady', name='Pink Lady', glass='coupe', color='#ee9fa8', base='#ef9aa4', garnish=['cherry'], foam=True,
-         recipe=[(1.5, 'oz', 'gin'), (.5, 'oz', 'applejack (apple brandy)'), (1, 'oz', 'grenadine'), (1, 'oz', 'lemon juice (fresh squeezed)'), (1, 'egg white', '(optional)')],
+         recipe=[(1.5, 'oz', 'gin'), (.5, 'oz', 'applejack (apple brandy)'), (1, 'oz', 'grenadine'), (1, 'oz', 'lemon juice'), (1, 'egg white', '(optional)')],
          glass_line=('coupe', 'cherry'),
          note='Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.',
          punch='Pretty in pink. Stronger than it looks.',
@@ -248,7 +248,7 @@ DRINKS = [
          related=['whiskey-sour', 'sidecar'], hero=(['applejack', 'gin'], ['egg', 'fruit:lemon'])),
 
     dict(slug='sidecar', name='Sidecar', glass='coupe', color='#e09d3f', garnish=['orange-twist'],
-         recipe=[(2, 'oz', 'cognac (or another brandy)'), (1, 'oz', 'orange liqueur'), (1, 'oz', 'lemon juice (fresh squeezed)')],
+         recipe=[(2, 'oz', 'cognac (or another brandy)'), (1, 'oz', 'orange liqueur'), (1, 'oz', 'lemon juice')],
          glass_line=('coupe', 'orange twist'),
          punch="Brandy's best sour.",
          lines=['The Sidecar showed up around the end of World War I. Paris and London both claim it.',
@@ -262,7 +262,7 @@ DRINKS = [
          related=['daiquiri', 'pink-lady'], hero=(['cognac'], ['orange-liqueur', 'fruit:lemon'])),
 
     dict(slug='southside-fizz', name='Southside Fizz', glass='highball', color='#d9e9a9', base='#cfe39a', garnish=['mint'],
-         recipe=[(2, 'oz', 'gin'), (1, 'oz', 'simple syrup'), (1, 'oz', 'lime juice (fresh squeezed)'), (6, '', 'mint leaves'), (2, 'oz', 'soda water')],
+         recipe=[(2, 'oz', 'gin'), (1, 'oz', 'simple syrup'), (1, 'oz', 'lime juice'), (6, '', 'mint leaves'), (2, 'oz', 'soda water')],
          glass_line=('highball, over ice', 'mint sprig'),
          punch='Think of it as a gin Mojito, with fizz.',
          lines=["Legend ties the Southside to Chicago's South Side during Prohibition. Nobody's proven it, but it's a good story.",
@@ -276,7 +276,7 @@ DRINKS = [
          related=['tom-collins', 'daiquiri'], hero=(['gin'], ['mint', 'fruit:lime'])),
 
     dict(slug='tom-collins', name='Tom Collins', glass='highball', color='#efedd2', garnish=['lemon-wheel', 'cherry'],
-         recipe=[(2, 'oz', 'gin'), (1, 'oz', 'lemon juice (fresh squeezed)'), (1, 'oz', 'simple syrup'), (2, 'oz', 'soda water')],
+         recipe=[(2, 'oz', 'gin'), (1, 'oz', 'lemon juice'), (1, 'oz', 'simple syrup'), (2, 'oz', 'soda water')],
          glass_line=('highball, over ice', 'lemon wheel and a cherry'),
          punch='Have you seen Tom Collins?',
          lines=['In 1874, a prank swept New York: friends told each other that a man named Tom Collins was going around town, talking about them.',
@@ -313,7 +313,7 @@ DRINKS = [
          related=['french-75', 'pink-lady'], hero=(['violette'], ['champagne', 'pear'])),
 
     dict(slug='whiskey-sour', name='Whiskey Sour', glass='coupe', color='#ddb064', garnish=['cherry'], foam=True,
-         recipe=[(2, 'oz', 'bourbon'), (1, 'oz', 'simple syrup'), (1, 'oz', 'lemon juice (fresh squeezed)'), (1, 'egg white', '(optional)')],
+         recipe=[(2, 'oz', 'bourbon'), (1, 'oz', 'simple syrup'), (1, 'oz', 'lemon juice'), (1, 'egg white', '(optional)')],
          glass_line=('coupe', 'cherry'),
          note='Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.',
          punch='Where it all starts.',
@@ -328,7 +328,7 @@ DRINKS = [
          related=['gold-rush', 'daiquiri'], hero=(['bourbon'], ['egg', 'fruit:lemon'])),
     # ---------------------------------------------------------------- batch 1, Nov 10 2026 (Claude's drafts, waiting on Philip)
     dict(slug='margarita', name='Margarita', glass='coupe', color='#e4e7b2', garnish=['salt-rim', 'lime-wheel'],
-         recipe=[(2, 'oz', 'tequila (blanco)'), (1, 'oz', 'orange liqueur'), (1, 'oz', 'lime juice (fresh squeezed)')],
+         recipe=[(2, 'oz', 'tequila (blanco)'), (1, 'oz', 'orange liqueur'), (1, 'oz', 'lime juice')],
          glass_line=('coupe, with a salted rim (or on the rocks)', 'lime wheel'),
          note='Salt the rim with coarse salt. Salt just half of it, if you like, so every sip can be your choice.',
          punch=['<em>Margarita</em> means “daisy” in Spanish.', "That's not a coincidence."],
@@ -350,7 +350,7 @@ DRINKS = [
          related=['paloma', 'el-diablo'], hero=(['orange-liqueur', 'tequila'], ['fruit:lime', 'half:lime'])),
 
     dict(slug='mojito', name='Mojito', genre='modern-variations', glass='highball', color='#e6efcf', garnish=['mint', 'lime-wheel'],
-         recipe=[(2, 'oz', 'white rum'), (1, 'oz', 'lime juice (fresh squeezed)'), (1, 'oz', 'simple syrup'), (8, '', 'mint leaves'), (2, 'oz', 'soda water')],
+         recipe=[(2, 'oz', 'white rum'), (1, 'oz', 'lime juice'), (1, 'oz', 'simple syrup'), (8, '', 'mint leaves'), (2, 'oz', 'soda water')],
          glass_line=('highball, over ice', 'mint sprig and a lime wheel'),
          punch='It took about 75 years to become an overnight sensation.',
          lines=["The first known Mojito recipe was printed in Havana in 1927. A few years later, it was on the menu at Sloppy Joe's, a Havana bar famous with American tourists.",
@@ -390,7 +390,7 @@ DRINKS = [
          related=['mamie-taylor', 'el-diablo'], hero=(['syrup', 'vodka'], ['ginger-beer', 'fruit:lime'])),
 
     dict(slug='lemon-drop', name='Lemon Drop', genre='modern-variations', glass='martini', color='#f3eaa2', garnish=['sugar-rim', 'lemon-twist'],
-         recipe=[(2, 'oz', 'vodka'), (1, 'oz', 'simple syrup'), (1, 'oz', 'lemon juice (fresh squeezed)')],
+         recipe=[(2, 'oz', 'vodka'), (1, 'oz', 'simple syrup'), (1, 'oz', 'lemon juice')],
          glass_line=('martini glass, with a sugared rim', 'lemon twist'),
          note='Superfine sugar sticks to the rim best.',
          punch=["It's named after the candy.", 'And it tastes like it, too.'],
@@ -408,7 +408,7 @@ DRINKS = [
          related=['daiquiri', 'whiskey-sour'], hero=(['syrup', 'vodka'], ['fruit:lemon', 'half:lemon'])),
     # ---------------------------------------------------------------- batch 2, Nov 10 2026: one drink to open each closed part of the menu (Claude's drafts)
     dict(slug='mai-tai', name='Mai Tai', genre='tiki-and-tropical', glass='rocks', color='#d39a4c', base='#d8a85c', garnish=['mint', 'lime-wedge'], crushed=True,
-         recipe=[(2, 'oz', 'aged rum (Jamaican, if you can find it)'), (1, 'oz', 'lime juice (fresh squeezed)'), (.5, 'oz', 'orange liqueur (orange curaçao)'),
+         recipe=[(2, 'oz', 'aged rum (Jamaican, if you can find it)'), (1, 'oz', 'lime juice'), (.5, 'oz', 'orange liqueur (orange curaçao)'),
                  (.5, 'oz', 'orgeat (almond syrup)'), (.25, 'oz', 'simple syrup')],
          glass_line=('rocks, over crushed ice', 'mint sprig and a lime wedge'),
          punch=['“<em>Maita’i roa aé!</em>”', 'That’s Tahitian for “out of this world, the best.”'],
@@ -444,7 +444,7 @@ DRINKS = [
          related=['negroni', 'french-75'], hero=(['aperol', 'prosecco'], ['soda', 'fruit:orange'])),
 
     dict(slug='hot-toddy', name='Hot Toddy', genre='warm-and-cozy', glass='mug', color='#d9a44e', garnish=['lemon-wheel'], hot=True,
-         recipe=[(1.5, 'oz', 'whiskey (bourbon, rye or Scotch)'), (.75, 'oz', 'honey syrup'), (.5, 'oz', 'lemon juice (fresh squeezed)'), (4, 'oz', 'hot water')],
+         recipe=[(1.5, 'oz', 'whiskey (bourbon, rye or Scotch)'), (.75, 'oz', 'honey syrup'), (.5, 'oz', 'lemon juice'), (4, 'oz', 'hot water')],
          glass_line=('a warm mug', 'lemon wheel (and a cinnamon stick, if you like)'),
          note='Honey syrup is honey and hot water, half and half, stirred until smooth.',
          punch=['It started out in India.', 'And it was served cold.'],
@@ -461,7 +461,7 @@ DRINKS = [
          related=['old-fashioned', 'gold-rush'], hero=(['honey', 'whiskey'], ['kettle', 'fruit:lemon'])),
 
     dict(slug='rum-punch', name='Rum Punch', genre='punches', glass='rocks', color='#c98a4a', garnish=['lime-wheel'],
-         recipe=[(.5, 'oz', 'lime juice (fresh squeezed)'), (1, 'oz', 'simple syrup'), (1.5, 'oz', 'dark rum (Jamaican, if you can find it)'), (2, 'oz', 'cold water'),
+         recipe=[(.5, 'oz', 'lime juice'), (1, 'oz', 'simple syrup'), (1.5, 'oz', 'dark rum (Jamaican, if you can find it)'), (2, 'oz', 'cold water'),
                  (2, 'dash', 'Angostura bitters')],
          glass_line=('rocks, over ice', 'lime wheel, and a little grated nutmeg'),
          note='For a crowd, measure in cups: 1 cup lime juice, 2 cups simple syrup, 3 cups rum, 4 cups cold water, and a good shake of bitters. Serve over ice.',
@@ -518,7 +518,7 @@ DRINKS = [
          related=['vieux-carre', 'old-fashioned'], hero=(['absinthe', 'rye'], ['bitters', 'fruit:lemon'])),
 
     dict(slug='gimlet', name='Gimlet', glass='coupe', color='#dfe6b4', garnish=['lime-wheel'],
-         recipe=[(2, 'oz', 'gin'), (1, 'oz', 'lime juice (fresh squeezed)'), (1, 'oz', 'simple syrup')],
+         recipe=[(2, 'oz', 'gin'), (1, 'oz', 'lime juice'), (1, 'oz', 'simple syrup')],
          glass_line=('coupe', 'lime wheel'),
          punch="“A real gimlet is half gin and half Rose's Lime Juice and nothing else.”",
          lines=["That's detective Philip Marlowe, in Raymond Chandler's 1953 novel <em>The Long Goodbye</em>.",
@@ -534,7 +534,7 @@ DRINKS = [
          related=['daiquiri', 'southside-fizz'], hero=(['syrup', 'gin'], ['fruit:lime', 'half:lime'])),
 
     dict(slug='bloody-mary', name='Bloody Mary', glass='highball', color='#c0392b', garnish=['celery', 'lemon-wedge'],
-         recipe=[(1.5, 'oz', 'vodka'), (4, 'oz', 'tomato juice'), (.5, 'oz', 'lemon juice (fresh squeezed)'), (2, 'dash', 'Worcestershire sauce'), (2, 'dash', 'hot sauce'),
+         recipe=[(1.5, 'oz', 'vodka'), (4, 'oz', 'tomato juice'), (.5, 'oz', 'lemon juice'), (2, 'dash', 'Worcestershire sauce'), (2, 'dash', 'hot sauce'),
                  (1, 'pinch', 'salt and pepper (and celery salt, if you have it)')],
          glass_line=('highball, over ice', 'celery stalk and a lemon wedge'),
          punch=['Nobody agrees who invented it.', 'Everybody agrees it fixes brunch.'],
@@ -553,16 +553,15 @@ DRINKS = [
          related=['moscow-mule', 'paloma'], hero=(['vodka', 'tomato'], ['fruit:lemon'])),
 
     dict(slug='bees-knees', name="Bee's Knees", glass='coupe', color='#ecd277', garnish=['lemon-twist'],
-         recipe=[(2, 'oz', 'gin'), (1, 'oz', 'honey syrup'), (1, 'oz', 'lemon juice (fresh squeezed)')],
+         recipe=[(2, 'oz', 'gin'), (1, 'oz', 'honey syrup'), (1, 'oz', 'lemon juice')],
          glass_line=('coupe', 'lemon twist'),
          note='Honey syrup is honey and hot water, half and half, stirred until smooth.',
-         punch=["In the 1920s, “the bee's knees” meant the very best.", 'That’s a lot to live up to.'],
-         lines=['It\'s a Prohibition-era drink: gin, lemon and honey. Back then, the honey and lemon did a lot of work covering up the taste of bathtub gin.',
-                'Frank Meier, head bartender at the Ritz in Paris, printed it in 1936.',
-                "With good gin, it's simply the Golden Ratio with honey: the Gold Rush's older, gin-drinking cousin."],
+         punch="In the 1920s, “the bee's knees” meant the very best.",
+         lines=["It's a Prohibition-era drink: gin, lemon and honey. A 1929 Brooklyn newspaper credited it to the Unsinkable Molly Brown. Yes, the Titanic Molly Brown. (!!!)",
+                "Swap the gin for bourbon and you've got a Gold Rush."],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Paste): the phrase came to mean the height of excellence; honey and lemon "
-                    "to mask bathtub gin; Frank Meier's The Artistry of Mixing Drinks (1936); maybe in print earlier (Boothby, 1930, unconfirmed)."),
+         copy_note=("Nov 12 2026: Philip's copy. Facts checked (Oxford Companion): first in print during Prohibition, credited to Margaret \"The Unsinkable Molly\" Brown "
+                    "(Brooklyn Standard Union, April 23, 1929). The recipe and steps are Claude's, from Nov 10."),
          steps=[('<strong>Combine ingredients.</strong> Add the gin, honey syrup and lemon juice to your shaker.', [('pour', 'gin', 2), ('pour', 'honey', 1), ('pour', 'lemon', 1)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
                 ('<strong>Strain.</strong> Strain into a chilled coupe.', [('strain',)]),
@@ -570,7 +569,7 @@ DRINKS = [
          related=['gold-rush', 'french-75'], hero=(['honey', 'gin'], ['fruit:lemon', 'half:lemon'])),
 
     dict(slug='jack-rose', name='Jack Rose', glass='coupe', color='#e58a8a', garnish=['lemon-twist'],
-         recipe=[(2, 'oz', 'applejack'), (.75, 'oz', 'lemon juice (fresh squeezed)'), (.75, 'oz', 'grenadine')],
+         recipe=[(2, 'oz', 'applejack'), (.75, 'oz', 'lemon juice'), (.75, 'oz', 'grenadine')],
          glass_line=('coupe', 'lemon twist'),
          punch='Pink, tart and very 1920s Paris.',
          lines=['In <em>The Sun Also Rises</em> (1926), Hemingway\'s Jake waits for Brett at the Hôtel Crillon: “about quarter to six I went down to the bar and had a Jack Rose with George the barman.”',
@@ -587,7 +586,7 @@ DRINKS = [
          related=['pink-lady', 'sidecar'], hero=(['applejack'], ['fruit:lemon', 'half:lemon'])),
     # ---------------------------------------------------------------- batch 4, Nov 10 2026: Modern Variations (Claude's drafts)
     dict(slug='penicillin', name='Penicillin', genre='modern-variations', glass='rocks', color='#e2b452', garnish=['candied-ginger'], layers=[(.86, 1, '#b98a4a')],
-         recipe=[(2, 'oz', 'blended Scotch'), (.75, 'oz', 'lemon juice (fresh squeezed)'), (.75, 'oz', 'honey-ginger syrup'), (.25, 'oz', 'Islay Scotch, to float')],
+         recipe=[(2, 'oz', 'blended Scotch'), (.75, 'oz', 'lemon juice'), (.75, 'oz', 'honey-ginger syrup'), (.25, 'oz', 'Islay Scotch, to float')],
          glass_line=('rocks, over one big ice cube', 'candied ginger'),
          note='Honey-ginger syrup: simmer equal parts honey and water with a few slices of fresh ginger, then strain. (Or use ½ oz honey syrup and ¼ oz fresh ginger juice.)',
          punch=['The name is a joke.', 'The drink is not.'],
@@ -605,7 +604,7 @@ DRINKS = [
          related=['gold-rush', 'whiskey-sour'], hero=(['islay', 'scotch'], ['honey', 'fruit:lemon'])),
 
     dict(slug='paper-plane', name='Paper Plane', genre='modern-variations', glass='coupe', color='#e8894a', garnish=['paper-plane'],
-         recipe=[(.75, 'oz', 'bourbon'), (.75, 'oz', 'Aperol'), (.75, 'oz', 'Amaro Nonino'), (.75, 'oz', 'lemon juice (fresh squeezed)')],
+         recipe=[(.75, 'oz', 'bourbon'), (.75, 'oz', 'Aperol'), (.75, 'oz', 'Amaro Nonino'), (.75, 'oz', 'lemon juice')],
          glass_line=('coupe', 'none (or a tiny paper plane)'),
          punch=['Named after an M.I.A. song.', 'Four bottles, equal parts.'],
          lines=['Sam Ross, who also made the Penicillin, created it in the summer of 2008 for The Violet Hour, a bar in Chicago, and named it after M.I.A.\'s hit “Paper Planes.”',
@@ -638,7 +637,7 @@ DRINKS = [
          related=['martini', 'cosmopolitan'], hero=(['coffee-liqueur', 'vodka'], ['syrup'])),
 
     dict(slug='cosmopolitan', name='Cosmopolitan', genre='modern-variations', glass='martini', color='#e8768a', garnish=['orange-twist'],
-         recipe=[(1.5, 'oz', 'citrus vodka'), (.75, 'oz', 'orange liqueur'), (.75, 'oz', 'lime juice (fresh squeezed)'), (.5, 'oz', 'cranberry juice')],
+         recipe=[(1.5, 'oz', 'citrus vodka'), (.75, 'oz', 'orange liqueur'), (.75, 'oz', 'lime juice'), (.5, 'oz', 'cranberry juice')],
          glass_line=('martini glass', 'orange twist'),
          punch=["Yes, it's that pink drink.", "<em>And it's good.</em>"],
          lines=["In 1988, bartender Toby Cecchini at the Odeon in New York rebuilt a sticky version he'd heard about from San Francisco: citrus vodka, orange liqueur, fresh lime and a splash of cranberry.",
@@ -672,7 +671,7 @@ DRINKS = [
          related=['old-fashioned', 'margarita'], hero=(['mezcal', 'reposado'], ['bitters', 'fruit:orange'])),
     # ---------------------------------------------------------------- batch 5, Nov 10 2026: Arcane Oddities (Claude's drafts)
     dict(slug='last-word', name='Last Word', genre='arcane-oddities', glass='coupe', color='#cbd98e', garnish=['cherry'],
-         recipe=[(.75, 'oz', 'gin'), (.75, 'oz', 'green Chartreuse'), (.75, 'oz', 'maraschino liqueur'), (.75, 'oz', 'lime juice (fresh squeezed)')],
+         recipe=[(.75, 'oz', 'gin'), (.75, 'oz', 'green Chartreuse'), (.75, 'oz', 'maraschino liqueur'), (.75, 'oz', 'lime juice')],
          glass_line=('coupe', 'a cherry'),
          punch=['Lost for most of a century.', 'Found in Seattle.'],
          lines=['The Detroit Athletic Club had it on the menu in 1916, at twice the price of a Manhattan. Then Prohibition came, and it all but disappeared.',
@@ -690,7 +689,7 @@ DRINKS = [
          related=['paper-plane', 'aviation'], hero=(['chartreuse', 'gin'], ['maraschino', 'fruit:lime'])),
 
     dict(slug='aviation', name='Aviation', genre='arcane-oddities', glass='coupe', color='#c9c3e6', garnish=['cherry'],
-         recipe=[(2, 'oz', 'gin'), (.75, 'oz', 'lemon juice (fresh squeezed)'), (.5, 'oz', 'maraschino liqueur'), (.25, 'oz', 'crème de violette')],
+         recipe=[(2, 'oz', 'gin'), (.75, 'oz', 'lemon juice'), (.5, 'oz', 'maraschino liqueur'), (.25, 'oz', 'crème de violette')],
          glass_line=('coupe', 'a cherry'),
          punch=['A drink the color of the sky.', 'If you can find the violette.'],
          lines=['New York bartender Hugo Ensslin printed it in 1916, when airplanes were still a thrill: gin, lemon, maraschino and a little crème de violette, a purple liqueur made from violets.',
@@ -708,7 +707,7 @@ DRINKS = [
          related=['last-word', 'gimlet'], hero=(['violette', 'gin'], ['maraschino', 'fruit:lemon'])),
 
     dict(slug='corpse-reviver-no-2', name='Corpse Reviver No. 2', genre='arcane-oddities', glass='coupe', color='#efe3a4', garnish=['orange-twist'],
-         recipe=[(.75, 'oz', 'gin'), (.75, 'oz', 'orange liqueur'), (.75, 'oz', 'Lillet Blanc'), (.75, 'oz', 'lemon juice (fresh squeezed)'), (.25, 'oz', 'absinthe, to rinse the glass')],
+         recipe=[(.75, 'oz', 'gin'), (.75, 'oz', 'orange liqueur'), (.75, 'oz', 'Lillet Blanc'), (.75, 'oz', 'lemon juice'), (.25, 'oz', 'absinthe, to rinse the glass')],
          glass_line=('coupe, rinsed with absinthe', 'an orange twist'),
          punch=['A hangover cure.', '<em>Supposedly.</em>'],
          lines=['“Corpse revivers” were a whole family of morning-after drinks. This is the one that lived, printed by Harry Craddock in <cite>The Savoy Cocktail Book</cite> in 1930, along with a warning:',
@@ -727,7 +726,7 @@ DRINKS = [
          related=['sazerac', 'french-75'], hero=(['lillet', 'gin'], ['absinthe', 'fruit:lemon'])),
 
     dict(slug='ramos-gin-fizz', name='Ramos Gin Fizz', genre='arcane-oddities', glass='highball', color='#f6f1e4', foam=True, garnish=[],
-         recipe=[(2, 'oz', 'gin'), (.5, 'oz', 'lemon juice (fresh squeezed)'), (.5, 'oz', 'lime juice (fresh squeezed)'), (.75, 'oz', 'simple syrup'),
+         recipe=[(2, 'oz', 'gin'), (.5, 'oz', 'lemon juice'), (.5, 'oz', 'lime juice'), (.75, 'oz', 'simple syrup'),
                  (1, 'oz', 'heavy cream'), (1, 'egg white', ''), (3, 'dash', 'orange flower water'), (1, 'oz', 'soda water, to top')],
          glass_line=('highball, no ice', 'none (the foam is the show)'),
          note='Pasteurized egg whites (from a carton) work just as well as fresh. Chill the soda water: the colder it is, the higher the foam.',
@@ -786,7 +785,7 @@ DRINKS = [
          related=['martini', 'corpse-reviver-no-2'], hero=(['lillet', 'gin'], ['vodka', 'fruit:lemon'])),
 
     dict(slug='trinidad-sour', name='Trinidad Sour', genre='arcane-oddities', glass='coupe', color='#7c2a1c', foam='#c48a76', garnish=[],
-         recipe=[(1.5, 'oz', 'Angostura bitters'), (1, 'oz', 'orgeat (almond syrup)'), (.75, 'oz', 'lemon juice (fresh squeezed)'), (.5, 'oz', 'rye')],
+         recipe=[(1.5, 'oz', 'Angostura bitters'), (1, 'oz', 'orgeat (almond syrup)'), (.75, 'oz', 'lemon juice'), (.5, 'oz', 'rye')],
          glass_line=('coupe', 'none'),
          punch=['An ounce and a half of bitters.', '<em>On purpose.</em>'],
          lines=['Most recipes call for Angostura bitters by the dash. This one uses it as the base spirit. (Angostura is about as strong as whiskey, after all.)',
@@ -802,7 +801,7 @@ DRINKS = [
          related=['whiskey-sour', 'mai-tai'], hero=(['angostura-oz', 'rye'], ['orgeat', 'fruit:lemon'])),
 
     dict(slug='blood-and-sand', name='Blood and Sand', genre='arcane-oddities', glass='coupe', color='#c2512e', garnish=['orange-twist'],
-         recipe=[(.75, 'oz', 'Scotch'), (.75, 'oz', 'sweet vermouth'), (.75, 'oz', 'cherry liqueur (like Cherry Heering)'), (.75, 'oz', 'orange juice (fresh squeezed)')],
+         recipe=[(.75, 'oz', 'Scotch'), (.75, 'oz', 'sweet vermouth'), (.75, 'oz', 'cherry liqueur (like Cherry Heering)'), (.75, 'oz', 'orange juice')],
          glass_line=('coupe', 'an orange twist'),
          punch=['Named after a silent movie.', 'Scotch and orange juice. <em>Trust us.</em>'],
          lines=['In 1922, Rudolph Valentino starred as a bullfighter in <i>Blood and Sand</i>, and somebody named a drink after it. Nobody knows who.',
@@ -820,7 +819,7 @@ DRINKS = [
          related=['penicillin', 'manhattan'], hero=(['cherry-liqueur', 'scotch'], ['sweet-vermouth', 'fruit:orange'])),
     # ---------------------------------------------------------------- batch 6, Nov 10 2026: Tiki & Tropical (Claude's drafts)
     dict(slug='pina-colada', name='Piña Colada', genre='tiki-and-tropical', glass='highball', color='#f1dc9e', garnish=['pineapple', 'cherry'], crushed=True,
-         recipe=[(2, 'oz', 'white rum'), (1.5, 'oz', 'cream of coconut (like Coco López)'), (2, 'oz', 'pineapple juice'), (.5, 'oz', 'lime juice (fresh squeezed)')],
+         recipe=[(2, 'oz', 'white rum'), (1.5, 'oz', 'cream of coconut (like Coco López)'), (2, 'oz', 'pineapple juice'), (.5, 'oz', 'lime juice')],
          glass_line=('highball, over crushed ice', 'a pineapple wedge and a cherry'),
          punch=["Puerto Rico's national drink.", '<em>Officially.</em>'],
          lines=['Bartender Ramón “Monchito” Marrero says he created it in 1954 at the Caribe Hilton in San Juan: rum, cream of coconut and pineapple juice, shaken and poured over ice.',
@@ -838,7 +837,7 @@ DRINKS = [
          related=['mai-tai', 'daiquiri'], hero=(['pineapple', 'white-rum'], ['half:lime'])),
 
     dict(slug='jungle-bird', name='Jungle Bird', genre='tiki-and-tropical', glass='rocks', color='#c5482e', garnish=['pineapple'],
-         recipe=[(1.5, 'oz', 'dark rum (blackstrap, if you can find it)'), (.75, 'oz', 'Campari'), (1.5, 'oz', 'pineapple juice'), (.5, 'oz', 'lime juice (fresh squeezed)'), (.5, 'oz', 'demerara syrup')],
+         recipe=[(1.5, 'oz', 'dark rum (blackstrap, if you can find it)'), (.75, 'oz', 'Campari'), (1.5, 'oz', 'pineapple juice'), (.5, 'oz', 'lime juice'), (.5, 'oz', 'demerara syrup')],
          glass_line=('rocks, over ice', 'a pineapple wedge'),
          punch='A tiki drink with a bitter streak.',
          lines=['It was born around 1978 at the Kuala Lumpur Hilton, in Malaysia: dark rum, Campari, pineapple juice, lime and sugar.',
@@ -856,7 +855,7 @@ DRINKS = [
          related=['negroni', 'mai-tai'], hero=(['campari', 'dark-rum'], ['pineapple', 'fruit:lime'])),
 
     dict(slug='hemingway-daiquiri', name='Hemingway Daiquiri', genre='tiki-and-tropical', glass='coupe', color='#ecead0', garnish=['lime-wheel'],
-         recipe=[(2, 'oz', 'white rum'), (.75, 'oz', 'lime juice (fresh squeezed)'), (.5, 'oz', 'grapefruit juice (fresh squeezed)'), (.25, 'oz', 'maraschino liqueur')],
+         recipe=[(2, 'oz', 'white rum'), (.75, 'oz', 'lime juice'), (.5, 'oz', 'grapefruit juice'), (.25, 'oz', 'maraschino liqueur')],
          glass_line=('coupe', 'a lime wheel'),
          punch=['Less sugar.', 'More rum.'],
          lines=['In the early 1930s, Ernest Hemingway stopped into El Floridita in Havana, known as “the cradle of the Daiquiri.” He liked his first one, and asked for another with less sugar and more rum.',
@@ -891,7 +890,7 @@ DRINKS = [
          related=['mojito', 'ti-punch'], hero=(['cachaca'], ['half:lime', 'fruit:lime'])),
 
     dict(slug='pisco-sour', name='Pisco Sour', genre='tiki-and-tropical', glass='coupe', color='#efe7c2', foam=True, garnish=['bitters-drops'],
-         recipe=[(2, 'oz', 'pisco'), (1, 'oz', 'lime juice (fresh squeezed)'), (.75, 'oz', 'simple syrup'), (1, 'egg white', ''), (3, 'drop', 'Angostura bitters, on top')],
+         recipe=[(2, 'oz', 'pisco'), (1, 'oz', 'lime juice'), (.75, 'oz', 'simple syrup'), (1, 'egg white', ''), (3, 'drop', 'Angostura bitters, on top')],
          glass_line=('coupe', 'a few drops of Angostura bitters on the foam'),
          note='Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.',
          punch=["Peru's national drink.", 'Invented by a guy from Utah.'],
@@ -958,23 +957,23 @@ DRINKS = [
          related=['mint-julep', 'americano'], hero=(['syrup', 'sherry'], ['half:orange', 'fruit:orange'])),
 
     dict(slug='garibaldi', name='Garibaldi', genre='low-and-no-proof', glass='highball', color='#e8743a', layers=[(.86, 1, '#f6c27e')], garnish=['orange-wedge'],
-         recipe=[(1.5, 'oz', 'Campari'), (4, 'oz', 'orange juice (fresh squeezed, and fluffed)')],
+         recipe=[(1.5, 'oz', 'Campari'), (4, 'oz', 'orange juice (fluffed)')],
          glass_line=('tall glass, over ice', 'an orange wedge'),
          punch=['Two ingredients.', 'One <em>very</em> good trick.'],
          lines=['It\'s named for Giuseppe Garibaldi, the general who helped unite Italy in the 1800s: red Campari for his red-shirted volunteers in the north, orange juice for the oranges of Sicily in the south.',
                 'For a long time, it was just Campari and orange juice. Then Dante, a bar in New York, started making it with “fluffy” orange juice, squeezed fresh and whipped full of air, and turned it into a modern classic.',
-                "You can fluff it at home: blend fresh orange juice for a few seconds, or shake it hard without ice. It comes out light and silky, with a foamy orange head."],
+                "You can fluff it at home: blend orange juice for a few seconds, or shake it hard without ice. It comes out light and silky, with a foamy orange head."],
          copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch): named for Giuseppe Garibaldi; red for his red shirts, orange for Sicily; "
                     "Dante (West Village, NYC) and its fluffy juice from a Breville juicer, under Naren Young. Blending is our home version."),
          steps=[('<strong>Ice.</strong> Fill a tall glass with ice.', [('ice', 'glass')]),
                 ('<strong>Campari.</strong>', [('pour', 'campari', 1.5)]),
-                ("<strong>Top with fluffy orange juice.</strong> Blend fresh-squeezed juice for a few seconds (or shake it hard, without ice) until it's light and foamy. Then pour it in.",
+                ("<strong>Top with fluffy orange juice.</strong> Blend the juice for a few seconds (or shake it hard, without ice) until it's light and foamy. Then pour it in.",
                  [('top', 'orange-juice', 4)]),
                 ('<strong>Garnish.</strong> An orange wedge.', [('garnish',)])],
          related=['americano', 'aperol-spritz'], hero=(['campari'], ['half:orange', 'fruit:orange'])),
 
     dict(slug='shirley-temple', name='Shirley Temple', genre='low-and-no-proof', glass='highball', color='#f2d79a', garnish=['cherry'], layers=[(0, .28, '#c8303f')],
-         recipe=[(6, 'oz', 'ginger ale'), (.5, 'oz', 'lime juice (fresh squeezed)'), (.5, 'oz', 'grenadine')],
+         recipe=[(6, 'oz', 'ginger ale'), (.5, 'oz', 'lime juice'), (.5, 'oz', 'grenadine')],
          glass_line=('tall glass, over ice', 'a cherry (or three)'),
          punch=["A drink for the kids' table.", 'No alcohol at all.'],
          lines=["It's named for Shirley Temple, the biggest child star of the 1930s. Restaurants from Hollywood to Honolulu claim they made the first one, so the young star would have something fancy to drink at the grown-ups' table.",
@@ -1039,7 +1038,7 @@ DRINKS = [
          related=['hot-buttered-rum', 'irish-coffee'], hero=(['brandy', 'aged-rum'], ['kettle', 'egg'])),
 
     dict(slug='fish-house-punch', name='Fish House Punch', genre='punches', glass='rocks', color='#dfa356', garnish=['lemon-wheel', 'nutmeg'],
-         recipe=[(1.5, 'oz', 'aged Jamaican rum'), (.75, 'oz', 'cognac'), (.25, 'oz', 'peach brandy'), (.5, 'oz', 'lemon juice (fresh squeezed)'), (.5, 'oz', 'simple syrup'),
+         recipe=[(1.5, 'oz', 'aged Jamaican rum'), (.75, 'oz', 'cognac'), (.25, 'oz', 'peach brandy'), (.5, 'oz', 'lemon juice'), (.5, 'oz', 'simple syrup'),
                  (1.5, 'oz', 'cold black tea (or water)')],
          glass_line=('rocks, over one big ice cube', 'a lemon wheel and grated nutmeg'),
          note=('For a crowd (about 20 cups): rub 1 cup sugar with the peels of 4 lemons and let it sit for 30 minutes, so the sugar pulls out the oils. (That\'s called an oleo saccharum.) '
@@ -1059,7 +1058,7 @@ DRINKS = [
          related=['rum-punch', 'sangria'], hero=(['peach-brandy', 'aged-rum'], ['cognac', 'fruit:lemon'])),
 
     dict(slug='sangria', name='Sangria', genre='punches', glass='wine', color='#7a1f30', garnish=['orange-wheel', 'berries'],
-         recipe=[(4, 'oz', 'Spanish red wine (like a Garnacha or Tempranillo)'), (1, 'oz', 'brandy'), (.5, 'oz', 'orange liqueur'), (1, 'oz', 'orange juice (fresh squeezed)'),
+         recipe=[(4, 'oz', 'Spanish red wine (like a Garnacha or Tempranillo)'), (1, 'oz', 'brandy'), (.5, 'oz', 'orange liqueur'), (1, 'oz', 'orange juice'),
                  (.5, 'oz', 'simple syrup'), (1, 'oz', 'soda water, to top (optional)')],
          glass_line=('wine glass, over ice', 'an orange wheel and fresh berries'),
          note=('For a pitcher (about 6): one bottle of red wine, ¾ cup brandy, ⅓ cup orange liqueur, ¾ cup orange juice and ⅓ cup simple syrup, plus a sliced orange, apple and lemon. '

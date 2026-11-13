@@ -11,7 +11,7 @@ The Cocktail Menu · Modern Variations
 Mojito
 Makes − 1 + drink
 2 oz white rum
-1 oz lime juice (fresh squeezed)
+1 oz lime juice
 1 oz simple syrup
 8 mint leaves
 2 oz soda water
@@ -26,7 +26,7 @@ The Cocktail Menu · Modern Variations
 Mojito
 Makes − 1 + drink
 2 oz white rum
-1 oz lime juice (fresh squeezed)
+1 oz lime juice
 1 oz simple syrup
 8 mint leaves
 2 oz soda water

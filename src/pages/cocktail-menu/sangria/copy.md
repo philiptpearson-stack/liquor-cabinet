@@ -13,7 +13,7 @@ Makes − 1 + drink
 4 oz Spanish red wine (like a Garnacha or Tempranillo)
 1 oz brandy
 ½ oz orange liqueur
-1 oz orange juice (fresh squeezed)
+1 oz orange juice
 ½ oz simple syrup
 1 oz soda water, to top (optional)
 **Glass:** wine glass, over ice · **Garnish:** an orange wheel and fresh berries
@@ -30,7 +30,7 @@ Makes − 1 + drink
 4 oz Spanish red wine (like a Garnacha or Tempranillo)
 1 oz brandy
 ½ oz orange liqueur
-1 oz orange juice (fresh squeezed)
+1 oz orange juice
 ½ oz simple syrup
 1 oz soda water, to top (optional)
 **Glass:** wine glass, over ice · **Garnish:** an orange wheel and fresh berries

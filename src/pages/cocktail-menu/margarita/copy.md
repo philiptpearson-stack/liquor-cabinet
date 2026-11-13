@@ -12,7 +12,7 @@ Margarita
 Makes − 1 + drink
 2 oz tequila (blanco)
 1 oz orange liqueur
-1 oz lime juice (fresh squeezed)
+1 oz lime juice
 **Glass:** coupe, with a salted rim (or on the rocks) · **Garnish:** lime wheel
 Salt the rim with coarse salt. Salt just half of it, if you like, so every sip can be your choice.
 *Margarita* means “daisy” in Spanish.
@@ -28,7 +28,7 @@ Margarita
 Makes − 1 + drink
 2 oz tequila (blanco)
 1 oz orange liqueur
-1 oz lime juice (fresh squeezed)
+1 oz lime juice
 **Glass:** coupe, with a salted rim (or on the rocks) · **Garnish:** lime wheel
 Salt the rim with coarse salt. Salt just half of it, if you like, so every sip can be your choice.
 **Salt the rim.** Rub a lime wedge around the outside of the rim of a chilled coupe, then roll it in coarse salt.

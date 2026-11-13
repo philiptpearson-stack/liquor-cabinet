@@ -12,7 +12,7 @@ Bloody Mary
 Makes − 1 + drink
 1 ½ oz vodka
 4 oz tomato juice
-½ oz lemon juice (fresh squeezed)
+½ oz lemon juice
 2 dashes Worcestershire sauce
 2 dashes hot sauce
 1 pinch salt and pepper (and celery salt, if you have it)
@@ -29,7 +29,7 @@ Bloody Mary
 Makes − 1 + drink
 1 ½ oz vodka
 4 oz tomato juice
-½ oz lemon juice (fresh squeezed)
+½ oz lemon juice
 2 dashes Worcestershire sauce
 2 dashes hot sauce
 1 pinch salt and pepper (and celery salt, if you have it)

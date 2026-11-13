@@ -13,7 +13,7 @@ Makes − 1 + drink
 ¾ oz gin
 ¾ oz green Chartreuse
 ¾ oz maraschino liqueur
-¾ oz lime juice (fresh squeezed)
+¾ oz lime juice
 **Glass:** coupe · **Garnish:** a cherry
 Lost for most of a century.
 Found in Seattle.
@@ -28,7 +28,7 @@ Makes − 1 + drink
 ¾ oz gin
 ¾ oz green Chartreuse
 ¾ oz maraschino liqueur
-¾ oz lime juice (fresh squeezed)
+¾ oz lime juice
 **Glass:** coupe · **Garnish:** a cherry
 **Combine ingredients.** Equal parts gin, green Chartreuse, maraschino liqueur and lime juice, into your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.

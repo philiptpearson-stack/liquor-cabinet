@@ -13,7 +13,7 @@ Makes − 1 + drink
 1 ½ oz aged Jamaican rum
 ¾ oz cognac
 ¼ oz peach brandy
-½ oz lemon juice (fresh squeezed)
+½ oz lemon juice
 ½ oz simple syrup
 1 ½ oz cold black tea (or water)
 **Glass:** rocks, over one big ice cube · **Garnish:** a lemon wheel and grated nutmeg
@@ -31,7 +31,7 @@ Makes − 1 + drink
 1 ½ oz aged Jamaican rum
 ¾ oz cognac
 ¼ oz peach brandy
-½ oz lemon juice (fresh squeezed)
+½ oz lemon juice
 ½ oz simple syrup
 1 ½ oz cold black tea (or water)
 **Glass:** rocks, over one big ice cube · **Garnish:** a lemon wheel and grated nutmeg

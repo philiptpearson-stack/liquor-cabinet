@@ -13,7 +13,7 @@ Makes − 1 + drink
 2 oz white rum
 1 ½ oz cream of coconut (like Coco López)
 2 oz pineapple juice
-½ oz lime juice (fresh squeezed)
+½ oz lime juice
 **Glass:** highball, over crushed ice · **Garnish:** a pineapple wedge and a cherry
 Puerto Rico's national drink.
 *Officially.*
@@ -28,7 +28,7 @@ Makes − 1 + drink
 2 oz white rum
 1 ½ oz cream of coconut (like Coco López)
 2 oz pineapple juice
-½ oz lime juice (fresh squeezed)
+½ oz lime juice
 **Glass:** highball, over crushed ice · **Garnish:** a pineapple wedge and a cherry
 **Combine ingredients.** Add the rum, cream of coconut, pineapple juice and lime juice to your shaker.
 **Shake.** Add crushed ice and shake hard, until the cream of coconut is all mixed in.

@@ -13,7 +13,7 @@ Makes − 1 + drink
 ¾ oz bourbon
 ¾ oz Aperol
 ¾ oz Amaro Nonino
-¾ oz lemon juice (fresh squeezed)
+¾ oz lemon juice
 **Glass:** coupe · **Garnish:** none (or a tiny paper plane)
 Named after an M.I.A. song.
 Four bottles, equal parts.
@@ -28,7 +28,7 @@ Makes − 1 + drink
 ¾ oz bourbon
 ¾ oz Aperol
 ¾ oz Amaro Nonino
-¾ oz lemon juice (fresh squeezed)
+¾ oz lemon juice
 **Glass:** coupe · **Garnish:** none (or a tiny paper plane)
 **Combine ingredients.** Equal parts bourbon, Aperol, Amaro Nonino and lemon juice, into your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.

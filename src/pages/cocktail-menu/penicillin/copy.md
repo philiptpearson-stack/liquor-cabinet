@@ -11,7 +11,7 @@ The Cocktail Menu · Modern Variations
 Penicillin
 Makes − 1 + drink
 2 oz blended Scotch
-¾ oz lemon juice (fresh squeezed)
+¾ oz lemon juice
 ¾ oz honey-ginger syrup
 ¼ oz Islay Scotch, to float
 **Glass:** rocks, over one big ice cube · **Garnish:** candied ginger
@@ -26,7 +26,7 @@ The Cocktail Menu · Modern Variations
 Penicillin
 Makes − 1 + drink
 2 oz blended Scotch
-¾ oz lemon juice (fresh squeezed)
+¾ oz lemon juice
 ¾ oz honey-ginger syrup
 ¼ oz Islay Scotch, to float
 **Glass:** rocks, over one big ice cube · **Garnish:** candied ginger

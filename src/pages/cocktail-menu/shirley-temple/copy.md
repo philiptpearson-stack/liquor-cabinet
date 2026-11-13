@@ -11,7 +11,7 @@ The Cocktail Menu · Low & No-Proof
 Shirley Temple
 Makes − 1 + drink
 6 oz ginger ale
-½ oz lime juice (fresh squeezed)
+½ oz lime juice
 ½ oz grenadine
 **Glass:** tall glass, over ice · **Garnish:** a cherry (or three)
 A drink for the kids' table.
@@ -24,7 +24,7 @@ The Cocktail Menu · Low & No-Proof
 Shirley Temple
 Makes − 1 + drink
 6 oz ginger ale
-½ oz lime juice (fresh squeezed)
+½ oz lime juice
 ½ oz grenadine
 **Glass:** tall glass, over ice · **Garnish:** a cherry (or three)
 **Ice.** Fill a tall glass with ice.

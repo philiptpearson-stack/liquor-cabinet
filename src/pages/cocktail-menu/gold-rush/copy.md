@@ -12,7 +12,7 @@ Gold Rush
 Makes − 1 + drink
 2 oz bourbon
 1 oz honey syrup
-1 oz lemon juice (fresh squeezed)
+1 oz lemon juice
 **Glass:** rocks, over one big ice cube · **Garnish:** lemon wheel
 The new kid on the menu.
 Born around 2000 at Milk & Honey in New York, the Gold Rush is a whiskey sour sweetened with honey.
@@ -25,7 +25,7 @@ Gold Rush
 Makes − 1 + drink
 2 oz bourbon
 1 oz honey syrup
-1 oz lemon juice (fresh squeezed)
+1 oz lemon juice
 **Glass:** rocks, over one big ice cube · **Garnish:** lemon wheel
 **Combine ingredients.** Add the bourbon, honey syrup and lemon juice to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.

@@ -11,7 +11,7 @@ The Cocktail Menu · Tiki & Tropical
 Mai Tai
 Makes − 1 + drink
 2 oz aged rum (Jamaican, if you can find it)
-1 oz lime juice (fresh squeezed)
+1 oz lime juice
 ½ oz orange liqueur (orange curaçao)
 ½ oz orgeat (almond syrup)
 ¼ oz simple syrup
@@ -26,7 +26,7 @@ The Cocktail Menu · Tiki & Tropical
 Mai Tai
 Makes − 1 + drink
 2 oz aged rum (Jamaican, if you can find it)
-1 oz lime juice (fresh squeezed)
+1 oz lime juice
 ½ oz orange liqueur (orange curaçao)
 ½ oz orgeat (almond syrup)
 ¼ oz simple syrup

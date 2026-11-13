@@ -10,7 +10,7 @@ Rum Punch Recipe
 The Cocktail Menu · Punches for a Crowd
 Rum Punch
 Makes − 1 + drink
-½ oz lime juice (fresh squeezed)
+½ oz lime juice
 1 oz simple syrup
 1 ½ oz dark rum (Jamaican, if you can find it)
 2 oz cold water
@@ -27,7 +27,7 @@ Here's how you make a glass:
 The Cocktail Menu · Punches for a Crowd
 Rum Punch
 Makes − 1 + drink
-½ oz lime juice (fresh squeezed)
+½ oz lime juice
 1 oz simple syrup
 1 ½ oz dark rum (Jamaican, if you can find it)
 2 oz cold water

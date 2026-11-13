@@ -13,7 +13,7 @@ Makes − 1 + drink
 ¾ oz gin
 ¾ oz orange liqueur
 ¾ oz Lillet Blanc
-¾ oz lemon juice (fresh squeezed)
+¾ oz lemon juice
 ¼ oz absinthe, to rinse the glass
 **Glass:** coupe, rinsed with absinthe · **Garnish:** an orange twist
 A hangover cure.
@@ -30,7 +30,7 @@ Makes − 1 + drink
 ¾ oz gin
 ¾ oz orange liqueur
 ¾ oz Lillet Blanc
-¾ oz lemon juice (fresh squeezed)
+¾ oz lemon juice
 ¼ oz absinthe, to rinse the glass
 **Glass:** coupe, rinsed with absinthe · **Garnish:** an orange twist
 **Rinse the glass.** Pour a splash of absinthe into a chilled coupe, swirl it to coat, and pour out the rest.

@@ -11,7 +11,7 @@ The Cocktail Menu · Arcane Oddities
 Aviation
 Makes − 1 + drink
 2 oz gin
-¾ oz lemon juice (fresh squeezed)
+¾ oz lemon juice
 ½ oz maraschino liqueur
 ¼ oz crème de violette
 **Glass:** coupe · **Garnish:** a cherry
@@ -26,7 +26,7 @@ The Cocktail Menu · Arcane Oddities
 Aviation
 Makes − 1 + drink
 2 oz gin
-¾ oz lemon juice (fresh squeezed)
+¾ oz lemon juice
 ½ oz maraschino liqueur
 ¼ oz crème de violette
 **Glass:** coupe · **Garnish:** a cherry

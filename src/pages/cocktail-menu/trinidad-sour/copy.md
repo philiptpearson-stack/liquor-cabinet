@@ -12,7 +12,7 @@ Trinidad Sour
 Makes − 1 + drink
 1 ½ oz Angostura bitters
 1 oz orgeat (almond syrup)
-¾ oz lemon juice (fresh squeezed)
+¾ oz lemon juice
 ½ oz rye
 **Glass:** coupe · **Garnish:** none
 An ounce and a half of bitters.
@@ -26,7 +26,7 @@ Trinidad Sour
 Makes − 1 + drink
 1 ½ oz Angostura bitters
 1 oz orgeat (almond syrup)
-¾ oz lemon juice (fresh squeezed)
+¾ oz lemon juice
 ½ oz rye
 **Glass:** coupe · **Garnish:** none
 **Combine ingredients.** Yes, really: pour the Angostura by the jigger. Then the orgeat, lemon juice and rye.
