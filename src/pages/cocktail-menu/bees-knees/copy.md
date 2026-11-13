@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Paste): the phrase came to mean the height of excellence; honey and lemon to mask bathtub gin; Frank Meier's The Artistry of Mixing Drinks (1936); maybe in print earlier (Boothby, 1930, unconfirmed). Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Bee's ***Knees.***
-Just the recipe, please
+Bee's Knees Recipe
 The Cocktail Menu · Classics
 Bee's Knees
 Makes − 1 + drink

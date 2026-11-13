@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Oxford Companion: Planter's Punch): the 1:2:3:4 jingle, of uncertain origin; Jamaica's unofficial drink by the late 1800s; rum punch in communal bowls in the Caribbean by 1694. Recipe: the rhyme, by the glass (and by the cup in the note). Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Rum ***Punch.***
-Just the recipe, please
+Rum Punch Recipe
 The Cocktail Menu · Punches for a Crowd
 Rum Punch
 Makes − 1 + drink

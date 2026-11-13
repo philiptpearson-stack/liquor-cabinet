@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Oxford Companion to Spirits & Cocktails): the spritzer from the 1840s, Austro-Hungarian soldiers in northeast Italy adding sparkling water to local wine; Aperol made in Padua in 1919 by the Barbieri family. Recipe: the 3-2-1. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Aperol ***Spritz.***
-Just the recipe, please
+Aperol Spritz Recipe
 The Cocktail Menu · Low & No-Proof
 Aperol Spritz
 Makes − 1 + drink

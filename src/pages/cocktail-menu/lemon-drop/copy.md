@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Wikipedia): invented in the 1970s by Norman Jay Hobday at Henry Africa's, a fern bar in San Francisco that opened in 1969. Recipe: the Golden Ratio, as on The Golden Ratio page (the classic uses citrus vodka and triple sec). Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Lemon ***Drop.***
-Just the recipe, please
+Lemon Drop Recipe
 The Cocktail Menu · Modern Variations
 Lemon Drop
 Makes − 1 + drink

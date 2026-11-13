@@ -6,7 +6,7 @@
 # Nov 6 2026: Philip's copy from chat: the opener ("really." in plum, like "Seriously." and "Really."), the story and the quote box, "Here's how you make a *fantastic* Manhattan:", four dashes, and the Stirred Drinks link after the steps (the line is his, from the Boulevardier). Fixed and flagged: the quote is the 1806 definition from The Balance, and Columbian Repository (Philip had it as Jerry Thomas's); "curaçao". CLAUDE'S DRAFT, waiting on Philip: the steps (but the stir step is his), and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Manhattan.***
-Just the recipe, please
+Manhattan Recipe
 The Cocktail Menu · Classics
 Manhattan
 Makes − 1 + drink

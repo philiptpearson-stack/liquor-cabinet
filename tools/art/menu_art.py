@@ -280,11 +280,18 @@ def bottle(shape, glass_color, word, cap='#7a5f4a', foil=False):
     return fill + line + label_text(word, w, ly, lh)
 
 
-def bitters(word='bitters'):
-    """A dasher bottle of bitters (no brand), or of another sauce: the label says what's in it."""
-    return (wash('<path d="M-9 -8 Q-9 -14 -4 -14 L-4 -20 L4 -20 L4 -14 Q9 -14 9 -8 L9 18 L-9 18Z" fill="#7d2f2a"/><rect x="-11" y="-2" width="22" height="14" rx="1.5" fill="#fbf3e3"/><rect x="-2.5" y="-25" width="5" height="5" fill="#c9c3b8"/>')
+def bitters(word='bitters', color='#7d2f2a', two_lines=False):
+    """A dasher bottle of bitters (no brand), or of another sauce: the label says what's in it.
+    two_lines: a two-word label, a word a line (the Martini's orange bitters)."""
+    if two_lines:
+        a, b = word.split(' ', 1)
+        label = (f'<text class="letter" x="0" y="4.4" font-size="5.6" text-anchor="middle">{a}</text>'
+                 f'<text class="letter" x="0" y="10.2" font-size="5.6" text-anchor="middle">{b}</text>')
+    else:
+        label = f'<text class="letter" x="0" y="7.6" font-size="6.2" text-anchor="middle"' + (' textLength="19" lengthAdjust="spacingAndGlyphs"' if len(word) > 7 else '') + f'>{word}</text>'
+    return (wash(f'<path d="M-9 -8 Q-9 -14 -4 -14 L-4 -20 L4 -20 L4 -14 Q9 -14 9 -8 L9 18 L-9 18Z" fill="{color}"/><rect x="-11" y="-2" width="22" height="14" rx="1.5" fill="#fbf3e3"/><rect x="-2.5" y="-25" width="5" height="5" fill="#c9c3b8"/>')
             + lines('<path d="M-9 -8 Q-9 -14 -4 -14 L-4 -20 L4 -20 L4 -14 Q9 -14 9 -8 L9 18 L-9 18Z"/><rect x="-11" y="-2" width="22" height="14" rx="1.5" stroke-width="1.5"/><rect x="-2.5" y="-25" width="5" height="5" stroke-width="1.4"/>', boil=False, width=2)
-            + (f'<text class="letter" x="0" y="7.6" font-size="6.2" text-anchor="middle"' + (' textLength="19" lengthAdjust="spacingAndGlyphs"' if len(word) > 7 else '') + f'>{word}</text>'))
+            + label)
 
 
 def jigger():

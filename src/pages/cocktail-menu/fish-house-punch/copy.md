@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything except the stir step (Philip's). Facts checked (Punch): the Schuylkill Fishing Company / State in Schuylkill, a sovereign state with citizens (still); Punch's big-batch recipe (in the note). Founded 1732 (the club's own date). Washington's blank diary is told as legend. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Fish House ***Punch.***
-Just the recipe, please
+Fish House Punch Recipe
 The Cocktail Menu · Punches for a Crowd
 Fish House Punch
 Makes − 1 + drink

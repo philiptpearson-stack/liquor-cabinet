@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Atlas Obscura): Victor V. Morris, a Salt Lake City native, to Peru in 1902 for a railway; said he turned to pisco when the whiskey ran out (1904); Morris' Bar in Lima (closed 1929); Mario Bruiget likely added the egg white and bitters. The Chile claim is well known. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Pisco ***Sour.***
-Just the recipe, please
+Pisco Sour Recipe
 The Cocktail Menu · Tiki & Tropical
 Pisco Sour
 Makes − 1 + drink

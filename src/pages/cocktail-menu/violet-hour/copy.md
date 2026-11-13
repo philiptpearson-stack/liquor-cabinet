@@ -6,7 +6,7 @@
 # Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Violet ***Hour.***
-Just the recipe, please
+Violet Hour Recipe
 The Cocktail Menu · Classics
 Violet Hour
 Makes − 1 + drink

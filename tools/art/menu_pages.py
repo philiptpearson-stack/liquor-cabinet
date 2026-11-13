@@ -56,6 +56,8 @@ def prop(spec):
         return at(0, 0, mint_bunch(), 1.25), 'fresh mint'
     if spec == 'bitters':
         return at(0, -18 * 1.5, bitters(), 1.5), 'a bottle of bitters'
+    if spec == 'orange-bitters':   # the Martini (Philip, Nov 12: put the orange bitters in the illustration)
+        return at(0, -18 * 1.5, bitters('orange bitters', color='#b4561f', two_lines=True), 1.5), 'a bottle of orange bitters'
     if spec == 'syrup':   # a bottle of simple syrup (Philip, Nov 3: the Daiquiri should show one)
         return at(0, 0, bottle('tall', '#f4ecd0', 'simple syrup', cap='#c25c86'), 1.5), 'a bottle of simple syrup'
     if spec == 'pear':
@@ -268,20 +270,35 @@ def recipe_card(d):
     return c + ['  </section>']
 
 
+def story_line(t):
+    """One line of a drink's story: words, or a quote box, a big line, a link, a scene, a photo clipping, a section title."""
+    if isinstance(t, str):
+        return [f'  <p class="t">{t}</p>']
+    kind = t[0]
+    if kind == 'quote':     # a quote box, set like a clipping (Philip's Manhattan)
+        return ['  <figure class="quote">', f'    <blockquote><p>{t[1]}</p></blockquote>', f'    <figcaption>{t[2]}</figcaption>', '  </figure>']
+    if kind == 'punch':     # a line in the big type, mid-story
+        return [f'  <p class="punch">{t[1]}</p>']
+    if kind == 'go':        # a link line, in the story (not in a note box): ('go', words, '@page slug')
+        return [f'  <p class="go"><a href="@page:{t[2]}">{t[1]}</a></p>']
+    if kind == 'scene':     # one of the drink's own scenes (written by its d['scenes'] module)
+        return [f'  <figure class="fig" id="s-{t[1]}"><div class="sheet"><!--scene:{t[1]}--></div></figure>']
+    if kind == 'photo':     # a photo (src/photos/<name>), taped in like a clipping: ('photo', name, alt)
+        return [f'  <figure class="fig photo clipping" id="s-{t[1]}"><!--asset:{t[1]}|{t[2]}--></figure>']
+    if kind == 'h2':        # a section title
+        return [f'  <h2>{t[1]}</h2>']
+    raise ValueError(t)
+
+
 def drink_story(d):
     # right under the drawing, a drop-down with the recipe card in it: the recipe at a glance, without scrolling through
     # the story (Philip, Nov 10). The card itself still sits by the step-by-step, further down.
-    drop = (['  <details class="recipe-drop">', '    <summary>Just the recipe, please</summary>']
+    drop = (['  <details class="recipe-drop">', f'    <summary>{d["name"]} Recipe</summary>']
             + ['  ' + line for line in recipe_card(d)] + ['  </details>'])
     s = [h1_for(d['name']), '', '<div class="flow">', '  <figure class="fig" id="s-hero"><div class="sheet"><!--scene:hero--></div></figure>'] + drop
     s += [f'  <p class="punch">{x}</p>' for x in ([d['punch']] if isinstance(d.get('punch'), str) else (d.get('punch') or []))]   # one big line, or a few
     for t in d['lines']:
-        if isinstance(t, tuple) and t[0] == 'quote':   # a quote box, set like a clipping (Philip's Manhattan)
-            s += ['  <figure class="quote">', f'    <blockquote><p>{t[1]}</p></blockquote>', f'    <figcaption>{t[2]}</figcaption>', '  </figure>']
-        elif isinstance(t, tuple) and t[0] == 'punch':   # a line in the big type, mid-story
-            s += [f'  <p class="punch">{t[1]}</p>']
-        else:
-            s += [f'  <p class="t">{t}</p>']
+        s += story_line(t)
     if d.get('gr'):
         gr = d['gr'] if isinstance(d['gr'], list) else [d['gr']]   # one line, or a few short ones
         s += ['  <aside class="note">'] + [f'    <p><em>{g}</em></p>' for g in gr] + [f'    <p class="go"><a href="@page:cocktails-how-to/golden-ratio">{d.get("gr_link", "→ The Golden Ratio")}</a></p>', '  </aside>']
@@ -312,6 +329,8 @@ def drink_story(d):
     if d.get('note_go_end'):   # a pointer to another page, after the step-by-step (Philip's Manhattan: to Stirred Drinks)
         text, slug = d['note_go_end']
         s += ['  <aside class="note">', f'    <p class="go"><a href="@page:{slug}">{text}</a></p>', '  </aside>']
+    for t in d.get('after', []):   # more story after the step-by-step (Philip's Martini: "Speaking of James Bond")
+        s += story_line(t)
     s += ['', '  <nav class="end-doors" aria-label="Where next">', '    <h2>Keep exploring</h2>']
     for r in d['related']:
         s += [f'    <p class="go"><a href="../{r}/index.html">→ {BY_SLUG[r]["name"]}</a></p>']
@@ -352,8 +371,11 @@ def write_drink(d):
         'title': f'{html.unescape(d["name"])} · The Cocktail Menu · The Bottle and the Bartender',
         'description': f'How to make {a_an(html.unescape(d["name"]))}: the recipe, a step-by-step how-to, and a little history.',
         'label': f'The Cocktail Menu / {html.unescape(d["name"])}'}, indent=2, ensure_ascii=False) + '\n')
+    extra_css = ''
+    if d.get('scenes'):   # a drink with scenes of its own (the Martini: Phil at the chalkboard, Phil in a tux)
+        extra_css = __import__(d['scenes']).write(folder)
     (folder / 'page.css').write_text(f'/* The Cocktail Menu / {html.unescape(d["name"])}: scene motion. Written by tools/art/menu_pages.py; edit it there. */\n'
-                                     + TWINKLE_CSS + '\n' + BUBBLE_CSS + '\n' + (STEAM_CSS + '\n' if d.get('hot') else '') + b.page_css() + '\n')
+                                     + TWINKLE_CSS + '\n' + BUBBLE_CSS + '\n' + (STEAM_CSS + '\n' if d.get('hot') else '') + b.page_css() + '\n' + extra_css)
     return b.T
 
 

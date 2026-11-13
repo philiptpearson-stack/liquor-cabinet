@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (The Local, Germany): Roman spiced wine with honey; the Glühwein name (hot irons); keep it under 80°C (about 175°F), or the alcohol cooks off. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Mulled ***Wine.***
-Just the recipe, please
+Mulled Wine Recipe
 The Cocktail Menu · Punches for a Crowd
 Mulled Wine
 Makes − 1 + drink

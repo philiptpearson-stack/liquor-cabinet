@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything except the stir step (Philip's). A sequel to the Martini page's "Sorry, Mr. Bond." Facts: Casino Royale (1953), Bond's own recipe (3 gin, 1 vodka, ½ Kina Lillet, shaken, lemon peel), named for Vesper Lynd. Fleming's words paraphrased, not quoted. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Vesper.***
-Just the recipe, please
+Vesper Recipe
 The Cocktail Menu · Arcane Oddities
 Vesper
 Makes − 1 + drink

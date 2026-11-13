@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch, Ivy Mix): "Ti'" is Creole for petit; the official drink of the French Caribbean, Martinique and Guadeloupe; rhum agricole, a disc of lime, cane syrup; purists skip ice (none in the cane fields); "Chacun prépare sa propre mort." Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Ti’ ***Punch.***
-Just the recipe, please
+Ti’ Punch Recipe
 The Cocktail Menu · Tiki & Tropical
 Ti’ Punch
 Makes − 1 + drink

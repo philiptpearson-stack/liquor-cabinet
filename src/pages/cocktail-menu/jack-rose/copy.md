@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Barry Popik): National Police Gazette, April 22, 1905, "Frank J. May, better known as Jack Rose, is the inventor"; The Sun Also Rises (1926), the Crillon bar line; the color as the likeliest source of the name. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Jack ***Rose.***
-Just the recipe, please
+Jack Rose Recipe
 The Cocktail Menu · Classics
 Jack Rose
 Makes − 1 + drink

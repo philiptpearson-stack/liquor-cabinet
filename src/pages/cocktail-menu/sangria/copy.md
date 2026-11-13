@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (The Nibble): named for its blood-red color; the Spanish Pavilion, 1964 World's Fair, NYC; chill overnight. (Since 2014, only Spain and Portugal can sell it in the EU as "sangria", left out as trivia.) Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Sangria.***
-Just the recipe, please
+Sangria Recipe
 The Cocktail Menu · Punches for a Crowd
 Sangria
 Makes − 1 + drink

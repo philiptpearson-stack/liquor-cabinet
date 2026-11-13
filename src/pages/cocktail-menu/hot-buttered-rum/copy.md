@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. History kept general on purpose: rum and hot rum drinks in colonial America (The Takeout); nobody knows when the butter went in. The batter is the standard modern method. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Hot Buttered ***Rum.***
-Just the recipe, please
+Hot Buttered Rum Recipe
 The Cocktail Menu · Warm & Cozy
 Hot Buttered Rum
 Makes − 1 + drink

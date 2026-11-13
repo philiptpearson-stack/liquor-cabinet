@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Chilled Magazine): Rose's lime cordial on British warships against scurvy; first printed recipe in Harry MacElhone's ABC of Mixing Cocktails, 1923, equal parts gin and Rose's; Marlowe's line in The Long Goodbye (1953). Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Gimlet.***
-Just the recipe, please
+Gimlet Recipe
 The Cocktail Menu · Classics
 Gimlet
 Makes − 1 + drink

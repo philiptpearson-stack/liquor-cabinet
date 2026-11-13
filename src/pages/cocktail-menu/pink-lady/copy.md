@@ -6,7 +6,7 @@
 # Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Pink ***Lady.***
-Just the recipe, please
+Pink Lady Recipe
 The Cocktail Menu · Classics
 Pink Lady
 Makes − 1 + drink

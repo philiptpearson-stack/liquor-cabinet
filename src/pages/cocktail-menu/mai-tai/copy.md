@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Difford's, quoting Trader Vic's own account): 1944, Oakland; served to Ham and Carrie Guild, friends from Tahiti; "Mai Tai-Roa Aé" = "Out of this world - the best"; Don the Beachcomber's competing claim and Vic's "dirty stinker". Recipe: Trader Vic's (2 oz rum, juice of a lime, ½ oz orange curaçao, ½ oz orgeat, ¼ oz rock candy syrup). Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Mai ***Tai.***
-Just the recipe, please
+Mai Tai Recipe
 The Cocktail Menu · Tiki & Tropical
 Mai Tai
 Makes − 1 + drink

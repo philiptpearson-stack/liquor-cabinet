@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Paste): Caffè Campari, Milan, 1860s; the Milano-Torino; two name stories. Count Negroni, about 1919, as on our Negroni page. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Americano.***
-Just the recipe, please
+Americano Recipe
 The Cocktail Menu · Low & No-Proof
 Americano
 Makes − 1 + drink

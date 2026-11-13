@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (The Conversation): the Derby's traditional cocktail since the 1930s; John Davis, Travels of Four Years and a Half in the United States (1798-1802), "a dram of spirituous liquor that has mint steeped in it"; Persian roots. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Mint ***Julep.***
-Just the recipe, please
+Mint Julep Recipe
 The Cocktail Menu · Classics
 Mint Julep
 Makes − 1 + drink

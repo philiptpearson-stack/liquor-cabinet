@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Difford's): Joe Sheridan, Foynes, Pan Am flying-boat passengers, mid-1940s (Difford's says late 1944 or early 1945; others say 1943, hence "the 1940s"); "It's an Irish coffee"; Stanton Delaplane and Jack Koeppler, Buena Vista, 1952; the cream problem. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Irish ***Coffee.***
-Just the recipe, please
+Irish Coffee Recipe
 The Cocktail Menu · Warm & Cozy
 Irish Coffee
 Makes − 1 + drink

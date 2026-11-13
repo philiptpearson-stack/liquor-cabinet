@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (WNYC/Flatland, Hilary Hemingway and Philip Greene): early 1930s, "less sugar and more rum", Ribalaigua (at El Floridita from 1914, owner by 1918), the Papa Doble name, grapefruit and drops of maraschino; the 17-in-an-afternoon boast (1942) is Hemingway's own. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Hemingway ***Daiquiri.***
-Just the recipe, please
+Hemingway Daiquiri Recipe
 The Cocktail Menu · Tiki & Tropical
 Hemingway Daiquiri
 Makes − 1 + drink

@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Difford's): Henry C. Ramos bought the Imperial Cabinet saloon in 1887 (the fizz is usually dated 1888); 35 shaker boys at Mardi Gras, 1915; his last fizz at Prohibition, 1919. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Ramos Gin ***Fizz.***
-Just the recipe, please
+Ramos Gin Fizz Recipe
 The Cocktail Menu · Arcane Oddities
 Ramos Gin Fizz
 Makes − 1 + drink

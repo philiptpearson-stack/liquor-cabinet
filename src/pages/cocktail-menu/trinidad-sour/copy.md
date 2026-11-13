@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch, InsideHook): Giuseppe Gonzalez, Clover Club, Brooklyn, 2009; "nobody can imagine what it tastes like" (InsideHook); Punch's recipe (1½ Angostura, 1 orgeat, ¾ lemon, ½ rye), no garnish. Angostura is 44.7% ABV. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Trinidad ***Sour.***
-Just the recipe, please
+Trinidad Sour Recipe
 The Cocktail Menu · Arcane Oddities
 Trinidad Sour
 Makes − 1 + drink

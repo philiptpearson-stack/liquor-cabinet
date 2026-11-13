@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything except the stir step (Philip's). Facts checked (Punch): Phil Ward, Death & Co., 2007; 1½ oz reposado, ½ oz mezcal, a bar spoon of agave, 2 dashes Angostura, flamed orange twist; "gateway cocktail to mezcal" (a former PDT bartender). Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Oaxaca Old ***Fashioned.***
-Just the recipe, please
+Oaxaca Old Fashioned Recipe
 The Cocktail Menu · Modern Variations
 Oaxaca Old Fashioned
 Makes − 1 + drink

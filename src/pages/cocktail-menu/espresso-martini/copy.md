@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch): Dick Bradsell, Soho Brasserie, Old Compton Street, London, 1983 or around 1985; the customer's request (paraphrased here); Vodka Espresso, then Espresso Martini in the late 1990s; Pharmaceutical Stimulant 1998-2003 at Pharmacy. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Espresso ***Martini.***
-Just the recipe, please
+Espresso Martini Recipe
 The Cocktail Menu · Modern Variations
 Espresso Martini
 Makes − 1 + drink

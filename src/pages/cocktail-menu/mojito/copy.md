@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Philip: a Modern Variation (its moment came after 1950). Facts checked (Difford's): first known recipe 1927 (El Arte de Hacer un Cocktail y Algo Más, Havana), the name on Sloppy Joe's 1931-32 menu, the Draque documented from 1833; Bond's Mojito in Die Another Day (The James Bond Dossier). Recipe: the Golden Ratio, topped with soda. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Mojito.***
-Just the recipe, please
+Mojito Recipe
 The Cocktail Menu · Modern Variations
 Mojito
 Makes − 1 + drink

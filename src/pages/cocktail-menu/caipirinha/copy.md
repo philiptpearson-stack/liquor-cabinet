@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts: cachaça is distilled from fresh sugarcane juice; the origin is unknown, and the flu-remedy story (garlic, honey, lime, cachaça) is told as a story (makemeacocktail). Brazilian law defines it as cachaça, lime and sugar. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Caipirinha.***
-Just the recipe, please
+Caipirinha Recipe
 The Cocktail Menu · Tiki & Tropical
 Caipirinha
 Makes − 1 + drink

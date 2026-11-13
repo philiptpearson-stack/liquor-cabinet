@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Difford's): Detroit Athletic Club menu, July-August 1916, 35 cents, twice a Manhattan; Ted Saucier's Bottoms Up (1951) credits the DAC; Murray Stenson, Zig Zag Café, Seattle, 2003. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Last ***Word.***
-Just the recipe, please
+Last Word Recipe
 The Cocktail Menu · Arcane Oddities
 Last Word
 Makes − 1 + drink

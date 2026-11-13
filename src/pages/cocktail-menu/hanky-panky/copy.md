@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything except the stir step (Philip's). Facts checked (Punch): Ada Coleman at the Savoy, Charles Hawtrey (knighted later, in 1922), "a bit of a punch", a sweet Martini with Fernet-Branca, "the real hanky-panky" (Coleman's telling, 1925). Recipe: Punch, 1½ oz each, a bar spoon of Fernet. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Hanky ***Panky.***
-Just the recipe, please
+Hanky Panky Recipe
 The Cocktail Menu · Arcane Oddities
 Hanky Panky
 Makes − 1 + drink

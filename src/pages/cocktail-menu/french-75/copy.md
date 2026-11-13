@@ -6,7 +6,7 @@
 # Nov 6 2026: Philip's copy from chat (second round): the opener, "Seriously." and the Golden Ratio note (teach the formula; skip the trivia). Claude's, waiting on Philip: the recipe card, the steps, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: French ***75.***
-Just the recipe, please
+French 75 Recipe
 The Cocktail Menu · Classics
 French 75
 Makes − 1 + drink

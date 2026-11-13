@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Saveur): the 1840s; ice as the novelty, New England ice shipped year-round; Dickens after his 1842 tour, in Martin Chuzzlewit. The straw is the standard cocktail-history credit (Wondrich), not in Saveur. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Sherry ***Cobbler.***
-Just the recipe, please
+Sherry Cobbler Recipe
 The Cocktail Menu · Low & No-Proof
 Sherry Cobbler
 Makes − 1 + drink

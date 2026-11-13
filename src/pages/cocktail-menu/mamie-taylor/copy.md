@@ -6,7 +6,7 @@
 # Nov 6 2026: Philip's copy from chat: the opener ("Really." in plum, like the French 75's "Seriously."), the story, and the El Diablo's balance note, moved below the step-by-step so it doesn't interrupt the story. Fixed: "mid-2010s". Philip: simple syrup, built like the El Diablo (1 ½ : ¾ : ¾; topped with ginger beer in the shaker, swirled, then poured in ice and all); the steps follow his El Diablo. CLAUDE'S DRAFT, waiting on Philip: Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Mamie ***Taylor.***
-Just the recipe, please
+Mamie Taylor Recipe
 The Cocktail Menu · Classics
 Mamie Taylor
 Makes − 1 + drink

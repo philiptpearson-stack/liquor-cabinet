@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch): Sam Ross, Milk & Honey, 2005, a variation on the Gold Rush (T.J. Siegal, Milk & Honey, 2001); blended Scotch, ginger, honey and lemon with a float of peaty Scotch. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Penicillin.***
-Just the recipe, please
+Penicillin Recipe
 The Cocktail Menu · Modern Variations
 Penicillin
 Makes − 1 + drink

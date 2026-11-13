@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch): Cecchini's 1988 Odeon version (fresh lime, Cointreau, Absolut Citron, cranberry), after a San Francisco version; Sex and the City brought it back about ten years later (Samantha orders it). Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Cosmopolitan.***
-Just the recipe, please
+Cosmopolitan Recipe
 The Cocktail Menu · Modern Variations
 Cosmopolitan
 Makes − 1 + drink

@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts: the Savoy Cocktail Book (1930), Harry Craddock, with the "unrevive" line (the book is public domain in the US as of 2026). Craddock used Kina Lillet and a dash of absinthe; the rinse is the modern way. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Corpse Reviver No. ***2.***
-Just the recipe, please
+Corpse Reviver No. 2 Recipe
 The Cocktail Menu · Arcane Oddities
 Corpse Reviver No. 2
 Makes − 1 + drink

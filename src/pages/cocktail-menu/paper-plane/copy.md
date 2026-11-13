@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch): Sam Ross, summer 2008, for Toby Maloney at The Violet Hour, Chicago; named for M.I.A.'s "Paper Planes" (the menu printed "The Paper Airplane"); Campari first, Aperol two days later; equal parts, no garnish. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Paper ***Plane.***
-Just the recipe, please
+Paper Plane Recipe
 The Cocktail Menu · Modern Variations
 Paper Plane
 Makes − 1 + drink

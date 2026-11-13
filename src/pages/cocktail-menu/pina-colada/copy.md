@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch): Ramón "Monchito" Marrero, Caribe Hilton, 1954, shaken and served over ice; the blender version came later; Puerto Rico's national drink since July 10, 1978. (Barrachina, also in San Juan, has a rival 1963 claim.) Lime is a modern touch. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Piña ***Colada.***
-Just the recipe, please
+Piña Colada Recipe
 The Cocktail Menu · Tiki & Tropical
 Piña Colada
 Makes − 1 + drink

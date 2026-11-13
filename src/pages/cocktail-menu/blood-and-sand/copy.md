@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Difford's): named for the 1922 Valentino film; inventor unknown; first printed in the Savoy Cocktail Book (1930), equal parts; the blood and sand reading; Difford's ups the Scotch and juice for a drier drink. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Blood and ***Sand.***
-Just the recipe, please
+Blood and Sand Recipe
 The Cocktail Menu · Arcane Oddities
 Blood and Sand
 Makes − 1 + drink

@@ -6,7 +6,7 @@
 # Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Vieux ***Carré.***
-Just the recipe, please
+Vieux Carré Recipe
 The Cocktail Menu · Classics
 Vieux Carré
 Makes − 1 + drink

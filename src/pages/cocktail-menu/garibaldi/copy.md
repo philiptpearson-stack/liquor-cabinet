@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch): named for Giuseppe Garibaldi; red for his red shirts, orange for Sicily; Dante (West Village, NYC) and its fluffy juice from a Breville juicer, under Naren Young. Blending is our home version. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Garibaldi.***
-Just the recipe, please
+Garibaldi Recipe
 The Cocktail Menu · Low & No-Proof
 Garibaldi
 Makes − 1 + drink

@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Difford's): Petiot's Harry's New York Bar claim (often dated 1921, undocumented); Jessel's 1927 Palm Beach claim; Petiot at the St. Regis from 1934, the Red Snapper name (Vincent Astor objected to "Bloody Mary"); first "Bloody Mary" in print: Lucius Beebe's column, December 2, 1939. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Bloody ***Mary.***
-Just the recipe, please
+Bloody Mary Recipe
 The Cocktail Menu · Classics
 Bloody Mary
 Makes − 1 + drink

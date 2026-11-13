@@ -54,3 +54,41 @@
 .howto-steps li.s2{animation:hs2 14.5s linear infinite}@keyframes hs2{0%{background-color:transparent}27.68%{background-color:transparent}28.28%{background-color:var(--step-hl)}54.48%{background-color:var(--step-hl)}55.08%{background-color:transparent}100%{background-color:transparent}}
 .howto-steps li.s3{animation:hs3 14.5s linear infinite}@keyframes hs3{0%{background-color:transparent}53.88%{background-color:transparent}54.48%{background-color:var(--step-hl)}71.72%{background-color:var(--step-hl)}72.32%{background-color:transparent}100%{background-color:transparent}}
 .howto-steps li.s4{animation:hs4 14.5s linear infinite}@keyframes hs4{0%{background-color:transparent}71.12%{background-color:transparent}71.72%{background-color:var(--step-hl)}80.69%{background-color:var(--step-hl)}81.29%{background-color:transparent}100%{background-color:transparent}}
+/* 1. The chalkboard (9 s): the equation chalks on line by line, then "= Martini???"; Phil scratches his head, question marks bob over him. Still frame: the whole equation. */
+.eq0{animation:eq0 9.0s linear infinite}
+@keyframes eq0{0%{opacity:0}5%{opacity:0}6%{opacity:1}94%{opacity:1}95%{opacity:0}100%{opacity:0}}
+.eq1{animation:eq1 9.0s linear infinite}
+@keyframes eq1{0%{opacity:0}17%{opacity:0}18%{opacity:1}94%{opacity:1}95%{opacity:0}100%{opacity:0}}
+.eq2{animation:eq2 9.0s linear infinite}
+@keyframes eq2{0%{opacity:0}29%{opacity:0}30%{opacity:1}94%{opacity:1}95%{opacity:0}100%{opacity:0}}
+.eq3{animation:eq3 9.0s linear infinite}
+@keyframes eq3{0%{opacity:0}41%{opacity:0}42%{opacity:1}94%{opacity:1}95%{opacity:0}100%{opacity:0}}
+.eqx{animation:eqx 9.0s linear infinite}
+@keyframes eqx{0%{opacity:0}45%{opacity:0}46%{opacity:1}94%{opacity:1}95%{opacity:0}100%{opacity:0}}
+.eqm{animation:eqm 9.0s linear infinite}
+@keyframes eqm{0%{opacity:0}55%{opacity:0}56%{opacity:1}94%{opacity:1}95%{opacity:0}100%{opacity:0}}
+.qq{animation:qq .5s ease-in-out infinite alternate}
+@keyframes qq{0%{opacity:.55}100%{opacity:1}}
+.scratch{animation:scratch .32s ease-in-out infinite alternate}
+@keyframes scratch{0%{transform:rotate(0)}100%{transform:rotate(5deg)}}
+.huh{animation:huh 1.5s ease-in-out infinite alternate}.huh.h1{animation-delay:-.5s}.huh.h2{animation-delay:-1s}
+@keyframes huh{0%{transform:translateY(0)}100%{transform:translateY(-5px)}}
+/* 2. Phil, in a tux (8 s): pours a Martini from the shaker (8-38%), sets it down, then quick-draws (50%) and winks. Still frame: the pistol up, the Martini poured, the shaker on the bar. */
+.apour{opacity:0;animation:pour-on 8.0s linear infinite}
+@keyframes pour-on{0%{opacity:1}43.5%{opacity:1}44%{opacity:0}92%{opacity:0}92.5%{opacity:1}100%{opacity:1}}
+.hpour{opacity:0;animation:hpour 8.0s linear infinite}
+@keyframes hpour{0%{opacity:1}50%{opacity:1}50.5%{opacity:0}92%{opacity:0}92.5%{opacity:1}100%{opacity:1}}
+.arest{opacity:0;animation:arest 8.0s linear infinite}
+@keyframes arest{0%{opacity:0}43.5%{opacity:0}44%{opacity:1}50%{opacity:1}50.5%{opacity:0}100%{opacity:0}}
+.hdraw{animation:hdraw 8.0s linear infinite}
+@keyframes hdraw{0%{opacity:0}50%{opacity:0}50.5%{opacity:1}92%{opacity:1}92.5%{opacity:0}100%{opacity:0}}
+.adraw{animation:adraw 8.0s linear infinite}
+@keyframes adraw{0%{opacity:0;transform:rotate(40deg)}50%{opacity:0;transform:rotate(40deg)}50.5%{opacity:1;transform:rotate(40deg)}53%{opacity:1;transform:rotate(-6deg)}55%{opacity:1;transform:rotate(0)}92%{opacity:1;transform:rotate(0)}92.5%{opacity:0;transform:rotate(0)}100%{opacity:0;transform:rotate(40deg)}}
+.stream{opacity:0;animation:stream 8.0s linear infinite}
+@keyframes stream{0%{opacity:0}11%{opacity:0}12%{opacity:1}36%{opacity:1}37%{opacity:0}100%{opacity:0}}
+.full{animation:full 8.0s linear infinite}
+@keyframes full{0%{opacity:0}14%{opacity:0}38%{opacity:1}92%{opacity:1}93%{opacity:0}100%{opacity:0}}
+.tinbar{animation:tinbar 8.0s linear infinite}
+@keyframes tinbar{0%{opacity:0}43.5%{opacity:0}44%{opacity:1}92%{opacity:1}92.5%{opacity:0}100%{opacity:0}}
+.whoosh{opacity:0;animation:whoosh 8.0s linear infinite}
+@keyframes whoosh{0%{opacity:0}50%{opacity:0}51%{opacity:1}57%{opacity:1}58%{opacity:0}100%{opacity:0}}

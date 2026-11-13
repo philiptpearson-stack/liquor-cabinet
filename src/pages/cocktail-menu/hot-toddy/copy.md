@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (British Food History): "taddy", fermented palm sap, in India since at least the early 1600s; Grose's 1788 dictionary: "rum, water, sugar, and nutmeg", not hot. Who first served it hot isn't known. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Hot ***Toddy.***
-Just the recipe, please
+Hot Toddy Recipe
 The Cocktail Menu · Warm & Cozy
 Hot Toddy
 Makes − 1 + drink

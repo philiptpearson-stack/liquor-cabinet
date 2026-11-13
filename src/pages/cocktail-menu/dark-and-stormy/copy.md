@@ -6,7 +6,7 @@
 # Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Dark and ***Stormy.***
-Just the recipe, please
+Dark and Stormy Recipe
 The Cocktail Menu · Arcane Oddities
 Dark and Stormy
 Makes − 1 + drink

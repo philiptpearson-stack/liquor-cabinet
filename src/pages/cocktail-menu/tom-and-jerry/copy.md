@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Atlas Obscura): Pierce Egan's Life in London (1821), Jerry Hawthorn and Corinthian Tom (the Egan origin story is unverified, so we only say it's named for them); Jerry Thomas's 1862 recipe; bowl-and-mug sets, 1940s-60s; a Midwest Christmas staple. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Tom and ***Jerry.***
-Just the recipe, please
+Tom and Jerry Recipe
 The Cocktail Menu · Warm & Cozy
 Tom and Jerry
 Makes − 1 + drink

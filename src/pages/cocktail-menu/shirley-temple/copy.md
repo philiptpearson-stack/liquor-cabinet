@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Tasting Table): claims from the Brown Derby, Chasen's and the Royal Hawaiian; her "saccharine, icky drinks" (NPR, Scott Simon, mid-1980s). The lime is our addition. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Shirley ***Temple.***
-Just the recipe, please
+Shirley Temple Recipe
 The Cocktail Menu · Low & No-Proof
 Shirley Temple
 Makes − 1 + drink

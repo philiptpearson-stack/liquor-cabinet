@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch): Hugo Ensslin, Recipes for Mixed Drinks, 1916, with crème de violette; the Savoy Cocktail Book (1930) without it; Rothman & Winter violette imported by Haus Alpenz from about 2007; DeGroff's "like hand soap", 2012. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Aviation.***
-Just the recipe, please
+Aviation Recipe
 The Cocktail Menu · Arcane Oddities
 Aviation
 Makes − 1 + drink

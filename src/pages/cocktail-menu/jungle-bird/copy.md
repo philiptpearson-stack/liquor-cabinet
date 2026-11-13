@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch): Kuala Lumpur Hilton, circa 1978; found by Jeff Berry in a thrift-store paperback (Poister's New American Bartender's Guide) in the mid-1990s, printed in Intoxica (2002); Gonzalez at PKNY around 2010, 4 oz pineapple down to about 1.5, blackstrap rum. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Jungle ***Bird.***
-Just the recipe, please
+Jungle Bird Recipe
 The Cocktail Menu · Tiki & Tropical
 Jungle Bird
 Makes − 1 + drink

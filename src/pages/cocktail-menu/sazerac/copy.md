@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything except the stir step (Philip's). Facts checked (NPR, June 2008): the Louisiana House voted 62-33 to make it New Orleans' official cocktail; Antoine Peychaud, Creole apothecary, 1830s, his bitters with cognac. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Sazerac.***
-Just the recipe, please
+Sazerac Recipe
 The Cocktail Menu · Classics
 Sazerac
 Makes − 1 + drink

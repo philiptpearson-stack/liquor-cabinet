@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Built like Philip's Mamie Taylor (and El Diablo): shaken with simple syrup, topped with ginger beer in the shaker, swirled, poured in ice and all. Facts checked (Wikipedia, from the 1948 Herald Tribune account): 1941; Jack Morgan's Cock 'n' Bull ginger beer, John G. Martin of Heublein (Smirnoff); Martin's Polaroid photos (one left with the bar, one kept to show the next). A later account credits the bar's bartender. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Moscow ***Mule.***
-Just the recipe, please
+Moscow Mule Recipe
 The Cocktail Menu · Classics
 Moscow Mule
 Makes − 1 + drink

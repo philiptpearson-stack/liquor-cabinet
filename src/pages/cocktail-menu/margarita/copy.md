@@ -6,7 +6,7 @@
 # Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Difford's): the Tequila Daisy in 1936 newspapers (Tijuana); "Margarita" first in print in 1953 (Esquire printed a recipe that December); Cuervo's US distributor's national push from 1955. Margarita = daisy in Spanish. Recipe: the Golden Ratio, as on The Golden Ratio page. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Margarita.***
-Just the recipe, please
+Margarita Recipe
 The Cocktail Menu · Classics
 Margarita
 Makes − 1 + drink

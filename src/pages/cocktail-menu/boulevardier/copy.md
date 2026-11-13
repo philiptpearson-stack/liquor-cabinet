@@ -6,7 +6,7 @@
 # Nov 3 2026: Philip's copy from chat: the intro and the Golden Ratio note (second round, late), "Here's how you make one:" and the first two steps (he liked the recipe card as it was). Claude's, waiting on Philip: steps 3 and 4, and Keep exploring. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Boulevardier.***
-Just the recipe, please
+Boulevardier Recipe
 The Cocktail Menu · Classics
 Boulevardier
 Makes − 1 + drink
