@@ -397,7 +397,8 @@ ING = {
     'cane-syrup':     ('cane syrup', 'jigger', '#e9c97a', None),
     'batter':         ('batter', 'jigger', '#e9c98a', None),
     'worcestershire': ('Worcestershire sauce', 'dash', '#5a2e14', None),
-    'hot-sauce':      ('hot sauce', 'dash', '#c42f2f', None),
+    'hot-sauce':      ('Tabasco', 'dash', '#c42f2f', None),          # Philip, Nov 12: Tabasco, specifically
+    'horseradish':    ('prepared horseradish', 'spoon', '#efe7cf', None),
     'orange-flower':  ('orange flower water', 'dash', '#efe6d2', None),
     'applejack':      ('applejack', 'bottle', '#d39a4a', ('spirit', '#d8a256', 'applejack')),
     'sweet-vermouth': ('sweet vermouth', 'bottle', '#7a2a2a', ('wine', '#6b3326', 'sweet vermouth')),

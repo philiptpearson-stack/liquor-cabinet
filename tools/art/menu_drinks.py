@@ -534,21 +534,23 @@ DRINKS = [
          related=['daiquiri', 'southside-fizz'], hero=(['syrup', 'gin'], ['fruit:lime', 'half:lime'])),
 
     dict(slug='bloody-mary', name='Bloody Mary', glass='highball', color='#c0392b', garnish=['celery', 'lemon-wedge'],
-         recipe=[(1.5, 'oz', 'vodka'), (4, 'oz', 'tomato juice'), (.5, 'oz', 'lemon juice'), (2, 'dash', 'Worcestershire sauce'), (2, 'dash', 'hot sauce'),
-                 (1, 'pinch', 'salt and pepper (and celery salt, if you have it)')],
+         recipe=[(1.5, 'oz', 'vodka'), (4, 'oz', 'tomato juice'), (.5, 'oz', 'lemon juice'), (1, 'tsp', 'prepared horseradish'),
+                 (2, 'dash', 'Worcestershire sauce'), (2, 'dash', 'Tabasco'), (1, 'pinch', 'salt and pepper (and celery salt, if you have it)')],
          glass_line=('highball, over ice', 'celery stalk and a lemon wedge'),
-         punch=['Nobody agrees who invented it.', 'Everybody agrees it fixes brunch.'],
-         lines=["Bartender Fernand Petiot said he did, at Harry's New York Bar in Paris in the 1920s. Comedian George Jessel said he did, in Palm Beach in 1927.",
-                "Petiot certainly made it famous. In 1934 he brought it to the King Cole Bar at New York's St. Regis, where for a while it was called the Red Snapper. “Bloody Mary” seemed too rude.",
-                'The name first showed up in print in 1939.',
-                "It's the one cocktail you season like soup: taste it, then add more spice, salt or lemon until it's right."],
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Difford's): Petiot's Harry's New York Bar claim (often dated 1921, undocumented); "
-                    "Jessel's 1927 Palm Beach claim; Petiot at the St. Regis from 1934, the Red Snapper name (Vincent Astor objected to \"Bloody Mary\"); "
-                    "first \"Bloody Mary\" in print: Lucius Beebe's column, December 2, 1939."),
-         steps=[('<strong>Ice the glass.</strong> Fill a tall glass with ice.', [('ice', 'glass')]),
-                ('<strong>Vodka, tomato and lemon.</strong> Pour them in.', [('pour', 'vodka', 1.5), ('pour', 'tomato', 4), ('pour', 'lemon', .5)]),
-                ('<strong>Season it.</strong> Worcestershire, hot sauce, a pinch of salt and a grind of pepper.', [('dash', 'worcestershire', 2), ('dash', 'hot-sauce', 2), ('salt',)]),
-                ('<strong>Stir, and taste.</strong> Then adjust: more spice, salt or lemon.', [('stir',)]),
+         punch='“I need something to fix this <em>hangover</em>.”',
+         lines=['“Perfect! Can I introduce you to the Bloody Mary?”',
+                'Nobody agrees who invented it.',
+                'Comedian George Jessel said he mixed vodka and tomato juice in Palm Beach in 1927. Bartender Fernand Petiot said <em>he</em> was the one who spiced it into the drink we know today.',
+                "It doesn't really matter.",
+                "Whoever did, they improved a lot of people's mornings after over the years."],
+         copy_note=("Nov 12 2026: Philip's copy; the recipe and steps are Claude's (shaken, with horseradish and Tabasco, per Philip). Facts checked (Difford's): "
+                    "Jessel's 1927 Palm Beach claim (vodka and tomato juice); Petiot's claim that he seasoned it (salt, pepper, cayenne, Worcestershire, lemon), "
+                    "at the St. Regis from 1934, and he shook his."),
+         steps=[('<strong>Combine ingredients.</strong> Add the vodka, tomato juice, lemon juice and horseradish to your shaker.',
+                 [('pour', 'vodka', 1.5), ('pour', 'tomato', 4), ('pour', 'lemon', .5), ('spoon', 'horseradish')]),
+                ('<strong>Season it.</strong> Worcestershire, Tabasco, a pinch of salt and a grind of pepper.', [('dash', 'worcestershire', 2), ('dash', 'hot-sauce', 2), ('salt',)]),
+                ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
+                ('<strong>Strain over ice.</strong> Strain into a tall glass full of fresh ice.', [('ice', 'glass'), ('strain',)]),
                 ('<strong>Garnish.</strong> A celery stalk and a lemon wedge.', [('garnish',)])],
          related=['moscow-mule', 'paloma'], hero=(['vodka', 'tomato'], ['fruit:lemon'])),
 

@@ -2,7 +2,7 @@
 
 Each step is (words under the drawing, [actions]). Actions, in order:
   ('pour', ingredient, oz)   bottle or jigger, into the shaker (before a strain) or the glass
-  ('dash', ingredient, n)    ('egg',)   ('mint',)   ('salt',)
+  ('dash', ingredient, n)    ('egg',)   ('mint',)   ('salt',)   ('spoon', ingredient) a spoonful of it (horseradish)
   ('ice', 'mix' | 'glass')   ('dry',) dry shake   ('shake',)   ('stir',)   ('strain',)
   ('swirl',) a gentle swirl of the mixing glass   ('dump',) pour it all, ice and all, into the glass (no strainer)
   ('top', ingredient, oz)    ('float', ingredient, oz)   ('sink', ingredient, oz)   ('garnish',)
@@ -20,7 +20,7 @@ G_MIX_IN = 'M162.4 99 L217.6 99 L212.3 189 L167.7 189Z'
 TIN = 'M154 114 L226 114 L220 58 L160 58Z'
 BUILD_SCALE = {'highball': 1.2, 'rocks': 1.38, 'coupe': 1.5, 'flute': 1.0, 'martini': 1.3, 'copper-mug': 1.35, 'wine': 1.15, 'mug': 1.4, 'julep-cup': 1.35}
 DUR = {'pour': 1.2, 'jigger': 1.15, 'dash': 1.2, 'egg': 1.3, 'mint': 1.0, 'salt': 1.0, 'ice': 1.0, 'ice-glass': 1.5,
-       'dry': 2.4, 'shake': 2.9, 'stir': 2.8, 'strain': 2.5, 'dump': 2.4, 'swirl': 1.7, 'top': 1.9, 'float': 1.9, 'sink': 1.9, 'garnish': 1.3, 'rim': 1.5, 'muddle': 2.0, 'rinse': 2.2, 'sugar': 1.1, 'limes': 1.2}
+       'dry': 2.4, 'shake': 2.9, 'stir': 2.8, 'strain': 2.5, 'dump': 2.4, 'swirl': 1.7, 'top': 1.9, 'float': 1.9, 'sink': 1.9, 'garnish': 1.3, 'rim': 1.5, 'muddle': 2.0, 'rinse': 2.2, 'sugar': 1.1, 'limes': 1.2, 'spoon': 1.2}
 LEAD, HOLD = .5, 2.8
 VIEW = '104 14 240 204'
 
@@ -63,7 +63,7 @@ class Build:
                 dur = DUR[kind]
             a.append(t)            # a[-2] = start
             a.append(t + dur)      # a[-1] = end
-            a.insert(1, into if kind in ('pour', 'dash', 'egg', 'mint', 'salt', 'stir', 'top', 'swirl') else ('glass' if kind != 'ice' else a[2]))
+            a.insert(1, into if kind in ('pour', 'dash', 'egg', 'mint', 'salt', 'spoon', 'stir', 'top', 'swirl') else ('glass' if kind != 'ice' else a[2]))
             if kind in ('strain', 'dump'):
                 into = 'glass'
             t += dur
@@ -456,7 +456,7 @@ class Build:
         if kind == 'dash':
             bx, bby = rx + 22.5, max(ry - 37.5, 40)
             c, w = self.cls('dsh'), self.cls('dshw')
-            word = {'worcestershire': 'Worcester', 'hot-sauce': 'hot sauce', 'orange-flower': 'flower water'}.get(a[3], 'bitters')
+            word = {'worcestershire': 'Worcester', 'hot-sauce': 'Tabasco', 'orange-flower': 'flower water'}.get(a[3], 'bitters')
             body = (f'<g class="{w}"><g class="{c}" style="transform-origin:{f(bx)}px {f(bby)}px"><g transform="translate({f(bx)} {f(bby)}) rotate(200)">{bitters(word)}</g></g></g>')
             self.window(w, t0 + .05, t1 - .1)
             st = [(0, {'transform': 'rotate(0)'}), (t0 + .2, {'transform': 'rotate(0)'})]
@@ -522,11 +522,14 @@ class Build:
                 self.emit(c, [(0, {'opacity': 0, 'transform': 'translateY(-110px)'}), (tt, {'opacity': 0, 'transform': 'translateY(-110px)'}), (tt + .05, {'opacity': 1}),
                               (tt + .5, {'transform': 'translateY(0)'}), (self.T - .8, {'opacity': 1}), (self.T - .25, {'opacity': 0})])
             return out
-        if kind in ('salt', 'sugar'):
+        if kind in ('salt', 'sugar', 'spoon'):   # a spoonful (horseradish) falls in bigger, rounder lumps, in its own color
             out = ''
-            for i, (dx, dy) in enumerate(((-4, 0), (2, -3), (6, 2), (-1, 5)) + (((-6, 3), (4, 6), (0, -2)) if kind == 'sugar' else ())):
+            for i, (dx, dy) in enumerate(((-4, 0), (2, -3), (6, 2), (-1, 5)) + (((-6, 3), (4, 6), (0, -2)) if kind in ('sugar', 'spoon') else ())):
                 c = self.cls('salt')
-                out += f'<g class="{c}"><rect x="{f(rx + dx - 1.2)}" y="{f(ry - 30 + dy)}" width="2.4" height="2.4" fill="#fffaf1" stroke="#a9a29a" stroke-width=".6"/></g>'
+                if kind == 'spoon':
+                    out += f'<g class="{c}"><circle cx="{f(rx + dx)}" cy="{f(ry - 30 + dy)}" r="2.3" fill="{ING[a[3]][2]}" stroke="#a9a29a" stroke-width=".7"/></g>'
+                else:
+                    out += f'<g class="{c}"><rect x="{f(rx + dx - 1.2)}" y="{f(ry - 30 + dy)}" width="2.4" height="2.4" fill="#fffaf1" stroke="#a9a29a" stroke-width=".6"/></g>'
                 tt = t0 + .2 + i * .08
                 self.emit(c, [(0, {'opacity': 0, 'transform': 'translateY(0)'}), (tt, {'opacity': 0, 'transform': 'translateY(0)'}), (tt + .05, {'opacity': 1}),
                               (tt + .55, {'opacity': 1, 'transform': f'translateY({f(by - ry + 18)}px)'}), (tt + .6, {'opacity': 0})])
@@ -581,6 +584,8 @@ class Build:
             return f'rinse with {ING[a[3]][0]}'
         if kind == 'limes' and len(a) > 5 and a[3] == 1:
             return 'a coin of lime'
+        if kind == 'spoon':
+            return f'a spoonful of {ING[a[3]][0].replace("prepared ", "")}'
         return {'sugar': 'a spoon of sugar', 'limes': 'lime wedges', 'muddle': 'muddle, gently', 'egg': '1 egg white', 'mint': 'fresh mint', 'salt': 'a pinch of salt', 'ice': 'ice', 'dry': 'dry shake', 'shake': 'shake!', 'stir': 'stir, stir, stir', 'strain': 'strain', 'swirl': 'swirl', 'dump': 'pour it all in'}.get(kind)
 
     def step_css(self):
