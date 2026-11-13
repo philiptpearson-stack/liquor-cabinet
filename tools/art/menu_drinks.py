@@ -520,12 +520,12 @@ DRINKS = [
          recipe=[(2, 'oz', 'gin'), (1, 'oz', 'lime juice'), (1, 'oz', 'simple syrup')],
          glass_line=('coupe', 'lime wheel'),
          punch="“A real gimlet is half gin and half Rose's Lime Juice and nothing else.”",
-         lines=["That's detective Philip Marlowe, in Raymond Chandler's 1953 novel <em>The Long Goodbye</em>.",
-                "The British Navy had the lime juice first: preserved lime cordial kept sailors from getting scurvy. Adding gin made it go down easier.",
-                "The first printed recipe, in 1923, really was half and half. Today most bartenders use fresh lime and a little syrup, and so do we. It's the Golden Ratio, with gin."],
+         lines=["That's detective Philip Marlowe's friend Terry Lennox, in Raymond Chandler's 1953 novel <cite>The Long Goodbye</cite>.",
+                "You don't have to take cocktail advice from a crime novel. Today most bartenders use fresh lime and a little simple syrup, instead of sweetened lime cordial.",
+                "But it does tell you something useful: the lime is half the point!"],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Chilled Magazine): Rose's lime cordial on British warships against scurvy; "
-                    "first printed recipe in Harry MacElhone's ABC of Mixing Cocktails, 1923, equal parts gin and Rose's; Marlowe's line in The Long Goodbye (1953)."),
+         copy_note=("Nov 12 2026: Philip's copy, with one fix: in The Long Goodbye (1953) the gimlet line is Terry Lennox's, Marlowe's friend, not Marlowe's "
+                    "(Claude's Nov 10 draft had it wrong). The recipe and steps are Claude's."),
          steps=[('<strong>Combine ingredients.</strong> Add the gin, lime juice and simple syrup to your shaker.', [('pour', 'gin', 2), ('pour', 'lime', 1), ('pour', 'simple', 1)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
                 ('<strong>Strain.</strong> Strain into a chilled coupe.', [('strain',)]),

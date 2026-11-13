@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Chilled Magazine): Rose's lime cordial on British warships against scurvy; first printed recipe in Harry MacElhone's ABC of Mixing Cocktails, 1923, equal parts gin and Rose's; Marlowe's line in The Long Goodbye (1953). Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 12 2026: Philip's copy, with one fix: in The Long Goodbye (1953) the gimlet line is Terry Lennox's, Marlowe's friend, not Marlowe's (Claude's Nov 10 draft had it wrong). The recipe and steps are Claude's. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Gimlet.***
 Gimlet Recipe
@@ -15,9 +15,9 @@ Makes − 1 + drink
 1 oz simple syrup
 **Glass:** coupe · **Garnish:** lime wheel
 “A real gimlet is half gin and half Rose's Lime Juice and nothing else.”
-That's detective Philip Marlowe, in Raymond Chandler's 1953 novel *The Long Goodbye*.
-The British Navy had the lime juice first: preserved lime cordial kept sailors from getting scurvy. Adding gin made it go down easier.
-The first printed recipe, in 1923, really was half and half. Today most bartenders use fresh lime and a little syrup, and so do we. It's the Golden Ratio, with gin.
+That's detective Philip Marlowe's friend Terry Lennox, in Raymond Chandler's 1953 novel The Long Goodbye.
+You don't have to take cocktail advice from a crime novel. Today most bartenders use fresh lime and a little simple syrup, instead of sweetened lime cordial.
+But it does tell you something useful: the lime is half the point!
 Here's how you make one:
 The Cocktail Menu · Classics
 Gimlet
