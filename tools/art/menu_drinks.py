@@ -158,10 +158,10 @@ DRINKS = [
                 'Why did James Bond want it shaken when it has no citrus?',
                 "Why do so many people leave out the bitters (wrongly!) when it's clearly a variation on the original Cocktail Formula?",
                 ('go', '→ Old Fashioned — The Original Cocktail', 'cocktail-menu/old-fashioned'),
-                'Is it actually just a really cold shot of vodka or gin in a fancy glass?',
+                'Is it just a cold shot of vodka (or gin) in a fancy glass?',
                 ('scene', 'chalkboard'),
-                "Well, here's what you need to know:",
-                ('punch', 'The Martini used to be half vermouth.'),
+                ('h2', "Well, here's what you need to know:"),
+                ('punch', 'The Martini used to be <strong class="hl">half</strong> vermouth.'),
                 'Seriously.',
                 ("In the 1888 edition of <cite>New and Improved Illustrated Bartender's Manual; or, How to Mix Drinks of the Present Style</cite>, "
                  'the famous Harry Johnson made it like this:'),
@@ -169,9 +169,9 @@ DRINKS = [
                  "Harry Johnson's Martini Cocktail, 1888: Fill the glass up with ice; 2 or 3 dashes of Gum Syrup; 2 or 3 dashes of Bitters (Boker's genuine only); "
                  '1 dash of Curaçoa; ½ wine glassful of Old Tom Gin; ½ wine glassful of Vermouth; stir up well with a spoon, strain it into a fancy cocktail glass, '
                  'squeeze a piece of lemon peel on top, and serve.'),
-                'And get this: in 1904, Frank Newman printed a DRY Martini that was still half vermouth. He just used dry vermouth.',
+                'And get this: in 1904, Frank Newman printed a DRY Martini that was <strong class="ink">still <span class="hl">half</span> vermouth.</strong> He just used dry vermouth.',
                 'By the 1910s, a 2:1 ratio of gin to vermouth was standard.',
-                'By the time of WWII, it was 3:1.',
+                'By WWII, it was 3:1.',
                 ('And by the 1950s, the dryness of your Martini was a status symbol by itself. A dry Martini was fashionable. '
                  'An extra dry Martini made it sound like you had even better taste. And a Martini with no vermouth at all?'),
                 'Well, buddy.',
@@ -185,6 +185,7 @@ DRINKS = [
                 "In <i>Casino Royale</i>, 007 orders gin, vodka, and Kina Lillet. He wants it shaken ice-cold, with a big strip of lemon peel. He calls it a Vesper. It's a whole other drink!",
                 ('go', '→ The Vesper', 'cocktail-menu/vesper')],
          scenes='martini_scenes',
+         css='.t .hl{color:var(--accent)}.t strong.ink{color:var(--ink)}   /* bold in ink, with "half" in plum (Philip, Nov 12) */',
          copy_note=("Nov 12 2026: Philip's copy, every line. Facts checked: Johnson's 1888 Martini Cocktail, half Old Tom, half vermouth (his clipping, src/photos); "
                     "Newman's 1904 Dry Martini, equal gin and dry vermouth (Difford's); 2:1 the 1910s standard, 3:1 by WWII, the vermouth jokes from 1952, "
                     "an Extra Dry meaning no vermouth by 1954 (Oxford Companion); Connery's Bond first says it himself in Goldfinger, 1964. "

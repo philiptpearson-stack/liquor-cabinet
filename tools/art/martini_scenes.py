@@ -119,11 +119,20 @@ def tux_body():
     return part(fill, line)
 
 
-def shaker(tilt=0):
-    """A shaker tin, its mouth at (0, 0) pointing up before it tips."""
-    d = 'M-8 0 L8 0 L11 34 L-11 34Z'
-    return (f'<g transform="rotate({tilt})">' + wash(f'<path d="{d}" fill="#c9c3b8"/><rect x="-9" y="-3" width="18" height="4" rx="1.5" fill="#b8b1a5"/>')
-            + lines(f'<path d="{d}"/><rect x="-9" y="-3" width="18" height="4" rx="1.5" stroke-width="1.5"/><path d="M6 6 L8 28" stroke="#fffaf1" stroke-width="2.4"/>', boil=False, width=2.2)
+def shaker(tilt=0, cap=False):
+    """A cobbler shaker: the spout at (0, 0), then the strainer top, the collar and the body, its base 48 below.
+    Tipped (tilt in degrees), it pours from the spout. cap: the little cap on the spout (when it's sitting on the bar)."""
+    spout = 'M-3.5 0 L3.5 0 L3.5 6 L-3.5 6Z'
+    top = 'M-5 6 L5 6 L10 14 L-10 14Z'
+    collar = 'M-11 14 L11 14 L11 17.5 L-11 17.5Z'
+    body = 'M-11 17.5 L11 17.5 L13.5 45 L-13.5 45Z'
+    base = 'M-14 45 L14 45 L14 48 L-14 48Z'
+    capd = 'M-4.5 -5 Q0 -9 4.5 -5 L4 1 L-4 1Z'
+    parts = [spout, top, collar, body, base] + ([capd] if cap else [])
+    fills = ''.join(f'<path d="{d}" fill="{c}"/>' for d, c in zip(parts, ['#b8b1a5', '#cfc9be', '#b8b1a5', '#d4cec3', '#b8b1a5', '#cfc9be']))
+    return (f'<g transform="rotate({tilt})">' + wash(fills)
+            + lines(''.join(f'<path d="{d}"/>' for d in parts) + '<path d="M7 21 L9 41" stroke="#fffaf1" stroke-width="2.6"/><path d="M4 8 L6 12" stroke="#fffaf1" stroke-width="1.6"/>',
+                    boil=False, width=2)
             + '</g>')
 
 
@@ -168,8 +177,8 @@ def bond():
     # his right arm (viewer's right): out over the glass with the shaker, then back at his waist
     H = (80, -148)                                # the hand, over the glass
     arm_pour = tux_arm([(24, -110), (52, -124), H])
-    ts, th = 1.15, 118                            # the tin: its scale, and how far it tips
-    mid = (-17 * ts * math.sin(math.radians(th)), 17 * ts * math.cos(math.radians(th)))   # the middle of the tin (the hand) from its mouth, tipped
+    ts, th = .95, 122                             # the shaker: its scale, and how far it tips
+    mid = (-26 * ts * math.sin(math.radians(th)), 26 * ts * math.cos(math.radians(th)))   # where the hand holds it (the collar), from the spout, tipped
     mouth = (H[0] - mid[0], H[1] - mid[1])
     tin = (f'<g class="tilt" style="transform-origin:{f(H[0])}px {f(H[1])}px">'
            f'<g transform="translate({f(mouth[0])} {f(mouth[1])}) scale({ts})">{shaker(th)}</g></g>')
@@ -210,7 +219,7 @@ def bond():
                  + f'<clipPath id="bond-cone"><path d="{g["inner"]}"/></clipPath><g clip-path="url(#bond-cone)">{wash(liquid)}</g>'
                  + lines(g['out'], boil=False) + olive + '</g>')
     # the shaker, set down on the bar
-    tin_bar = f'<g class="tinbar" transform="translate(206 {gy - 34 * ts}) scale({ts})">{shaker(0)}</g>'
+    tin_bar = f'<g class="tinbar" transform="translate(206 {f(gy - 48 * ts)}) scale({ts})">{shaker(0, cap=True)}</g>'
     anim('tinbar', [(0, 'opacity:0'), (DOWN - .5, 'opacity:0'), (DOWN, 'opacity:1'), (BACK, 'opacity:1'), (BACK + .5, 'opacity:0'), (100, 'opacity:0')])
     # the draw: motion lines where the arm swept up, and a glint off the pistol
     gxs, gys = PX + G[0], PY + G[1]

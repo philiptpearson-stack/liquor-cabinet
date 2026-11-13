@@ -102,3 +102,4 @@
 @keyframes whoosh{0%{opacity:0}53%{opacity:0}54%{opacity:1}61%{opacity:1}62%{opacity:0}100%{opacity:0}}
 .ting{animation:ting 8.0s linear infinite}
 @keyframes ting{0%{opacity:0}56%{opacity:0}57%{opacity:1}69%{opacity:1}70%{opacity:0}100%{opacity:0}}
+.t .hl{color:var(--accent)}.t strong.ink{color:var(--ink)}   /* bold in ink, with "half" in plum (Philip, Nov 12) */

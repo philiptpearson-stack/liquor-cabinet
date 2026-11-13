@@ -382,6 +382,8 @@ def write_drink(d):
     extra_css = (RANGE_CSS + '\n') if any(isinstance(q, tuple) for q, _, _ in d['recipe']) else ''
     if d.get('scenes'):   # a drink with scenes of its own (the Martini: Phil at the chalkboard, Phil in a tux)
         extra_css += __import__(d['scenes']).write(folder)
+    if d.get('css'):      # a rule or two of the drink's own
+        extra_css += d['css'] + '\n'
     (folder / 'page.css').write_text(f'/* The Cocktail Menu / {html.unescape(d["name"])}: scene motion. Written by tools/art/menu_pages.py; edit it there. */\n'
                                      + TWINKLE_CSS + '\n' + BUBBLE_CSS + '\n' + (STEAM_CSS + '\n' if d.get('hot') else '') + b.page_css() + '\n' + extra_css)
     return b.T

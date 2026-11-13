@@ -19,14 +19,14 @@ Probably the most confusing of history's great Cocktails.
 Why did James Bond want it shaken when it has no citrus?
 Why do so many people leave out the bitters (wrongly!) when it's clearly a variation on the original Cocktail Formula?
 → Old Fashioned — The Original Cocktail
-Is it actually just a really cold shot of vodka or gin in a fancy glass?
+Is it just a cold shot of vodka (or gin) in a fancy glass?
 Well, here's what you need to know:
-The Martini used to be half vermouth.
+The Martini used to be half** vermouth.
 Seriously.
 In the 1888 edition of New and Improved Illustrated Bartender's Manual; or, How to Mix Drinks of the Present Style, the famous Harry Johnson made it like this:
-And get this: in 1904, Frank Newman printed a DRY Martini that was still half vermouth. He just used dry vermouth.
+And get this: in 1904, Frank Newman printed a DRY Martini that was still half vermouth.** He just used dry vermouth.
 By the 1910s, a 2:1 ratio of gin to vermouth was standard.
-By the time of WWII, it was 3:1.
+By WWII, it was 3:1.
 And by the 1950s, the dryness of your Martini was a status symbol by itself. A dry Martini was fashionable. An extra dry Martini made it sound like you had even better taste. And a Martini with no vermouth at all?
 Well, buddy.
 Now you're looking like James Bond his very own self.
