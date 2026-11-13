@@ -482,8 +482,8 @@ DRINKS = [
     dict(slug='mint-julep', name='Mint Julep', glass='julep-cup', color='#d9a85a', garnish=['mint', 'straw'], crushed=True,
          recipe=[(2.5, 'oz', 'bourbon'), (.5, 'oz', 'simple syrup'), (8, '', 'mint leaves')],
          glass_line=('julep cup (or a rocks glass), packed with crushed ice', 'a big bouquet of mint'),
-         punch="The Kentucky Derby's drink since the 1930s.",
-         lines=['But the julep is far older than the Derby.',
+         punch='The official drink of the Kentucky Derby since the 1930s.',   # Philip, Nov 13 wrote "unofficial"; it's been official since 1938, so fixed and flagged
+         lines=['But the Julep is LOTS older than the Derby.',
                 'English travelers in America were already writing home about it as early as 1800! One traveler described it in his letters as “a dram of spirituous liquor that has mint steeped in it.”',
                 'The trick is the ice. Pack the cup with <em>crushed ice</em> and stir until it frosts over.',
                 'If the first sip is STRONG, give it a minute. The ice is still finishing your drink.'],

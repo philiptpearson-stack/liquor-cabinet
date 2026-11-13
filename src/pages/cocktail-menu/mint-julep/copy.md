@@ -14,8 +14,8 @@ Makes − 1 + drink
 ½ oz simple syrup
 8 mint leaves
 **Glass:** julep cup (or a rocks glass), packed with crushed ice · **Garnish:** a big bouquet of mint
-The Kentucky Derby's drink since the 1930s.
-But the julep is far older than the Derby.
+The official drink of the Kentucky Derby since the 1930s.
+But the Julep is LOTS older than the Derby.
 English travelers in America were already writing home about it as early as 1800! One traveler described it in his letters as “a dram of spirituous liquor that has mint steeped in it.”
 The trick is the ice. Pack the cup with *crushed ice* and stir until it frosts over.
 If the first sip is STRONG, give it a minute. The ice is still finishing your drink.
