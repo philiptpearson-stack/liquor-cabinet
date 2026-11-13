@@ -14,7 +14,7 @@ Makes − 1 + drink
 1 oz sweet vermouth
 1 oz Campari
 **Glass:** rocks, over one big ice cube · **Garnish:** orange peel
-**Ever heard of a cocktail called Negroni?**
+Ever heard of a cocktail called Negroni?
 Well, the Boulevardier is Negroni's beefy American cousin. Same delightfully bitter formula. Just made with whiskey instead of gin.
 → Check out our Shaken or Stirred? How-To page for simple tips on balancing stirred cocktails!
 Here's how you make one:

@@ -11,9 +11,8 @@ DRINKS = [
     dict(slug='boulevardier', name='Boulevardier', glass='rocks', color='#a8262c', garnish=['orange-peel'],
          recipe=[(2, 'oz', 'bourbon or rye'), (1, 'oz', 'sweet vermouth'), (1, 'oz', 'Campari')],
          glass_line=('rocks, over one big ice cube', 'orange peel'),
-         punch=None,
-         lines=['<strong>Ever heard of a cocktail called Negroni?</strong>',
-                "Well, the Boulevardier is Negroni's beefy American cousin. Same delightfully bitter formula. Just made with whiskey instead of gin."],
+         punch='Ever heard of a cocktail called Negroni?',   # back in the big type (Philip, Nov 12)
+         lines=["Well, the Boulevardier is Negroni's beefy American cousin. Same delightfully bitter formula. Just made with whiskey instead of gin."],
          note_go=('→ Check out our Shaken or Stirred? How-To page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),   # Philip, Nov 6 (its own line; The Golden Ratio's stays as it was)
          steps=[('<strong>Combine ingredients.</strong> Add whiskey, sweet vermouth and Campari to a mixing glass.', [('pour', 'bourbon', 2), ('pour', 'sweet-vermouth', 1), ('pour', 'campari', 1)]),
                 ('<strong>Stir.</strong> Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into <strong>balance.</strong> <em>Dilution is part of the recipe.</em>)', [('ice', 'mix'), ('stir',)]),
