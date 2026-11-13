@@ -19,7 +19,7 @@ Makes − 1 + drink
 1 pinch salt and pepper (and celery salt, if you have it)
 **Glass:** highball, over ice · **Garnish:** celery stalk and a lemon wedge
 “I need something to fix this *hangover*.”
-“Perfect! Can I introduce you to the Bloody Mary?”
+Perfect! Can I introduce you to the Bloody Mary?
 Nobody agrees who invented it.
 Comedian George Jessel said he mixed vodka and tomato juice in Palm Beach in 1927. Bartender Fernand Petiot said *he* was the one who spiced it into the drink we know today.
 It doesn't really matter.

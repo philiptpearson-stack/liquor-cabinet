@@ -537,7 +537,7 @@ DRINKS = [
                  (2, 'dash', 'Worcestershire sauce'), (2, 'dash', 'Tabasco'), (1, 'pinch', 'salt and pepper (and celery salt, if you have it)')],
          glass_line=('highball, over ice', 'celery stalk and a lemon wedge'),
          punch='“I need something to fix this <em>hangover</em>.”',
-         lines=['“Perfect! Can I introduce you to the Bloody Mary?”',
+         lines=['Perfect! Can I introduce you to the Bloody Mary?',   # no quotes, like the El Diablo (Philip, Nov 12)
                 'Nobody agrees who invented it.',
                 'Comedian George Jessel said he mixed vodka and tomato juice in Palm Beach in 1927. Bartender Fernand Petiot said <em>he</em> was the one who spiced it into the drink we know today.',
                 "It doesn't really matter.",
