@@ -45,7 +45,7 @@ Makes − 1 + drink
 **Garnish.** Olives on a pick, or a lemon twist.
 → Check out our Shaken or Stirred? page for simple tips on balancing stirred cocktails!
 Speaking of James Bond
-In Casino Royale, 007 orders gin, vodka, and Kina Lillet. He wants it shaken ice-cold, with a big strip of lemon peel. He calls it a Vesper. It's a whole other drink!
+In Casino Royale, Bond orders gin, vodka, and Kina Lillet. He wants it shaken ice-cold, with a big strip of lemon peel. He calls it a Vesper. It's a whole other drink!
 → The Vesper
 Keep exploring
 → Manhattan

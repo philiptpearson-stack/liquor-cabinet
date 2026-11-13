@@ -182,7 +182,7 @@ DRINKS = [
          after=[('go', '→ Check out our Shaken or Stirred? page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
                 ('h2', 'Speaking of James Bond'),
                 ('scene', 'bond'),
-                "In <i>Casino Royale</i>, 007 orders gin, vodka, and Kina Lillet. He wants it shaken ice-cold, with a big strip of lemon peel. He calls it a Vesper. It's a whole other drink!",
+                "In <i>Casino Royale</i>, Bond orders gin, vodka, and Kina Lillet. He wants it shaken ice-cold, with a big strip of lemon peel. He calls it a Vesper. It's a whole other drink!",
                 ('go', '→ The Vesper', 'cocktail-menu/vesper')],
          scenes='martini_scenes',
          css='.t .hl{color:var(--accent)}.t strong.ink{color:var(--ink)}   /* bold in ink, with "half" in plum (Philip, Nov 12) */',
