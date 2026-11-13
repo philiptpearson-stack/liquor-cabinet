@@ -12,7 +12,7 @@ Martini
 Makes − 1 + drink
 2 ½ oz gin
 ½ oz dry vermouth
-1 dash orange bitters
+1–2 dashes orange bitters
 **Glass:** martini glass · **Garnish:** olives or a lemon twist
 Ah, the Martini!
 Probably the most confusing of history's great Cocktails.
@@ -37,7 +37,7 @@ Martini
 Makes − 1 + drink
 2 ½ oz gin
 ½ oz dry vermouth
-1 dash orange bitters
+1–2 dashes orange bitters
 **Glass:** martini glass · **Garnish:** olives or a lemon twist
 **Combine ingredients.** Add the gin, dry vermouth and bitters to a mixing glass.
 **Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)

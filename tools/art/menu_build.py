@@ -460,7 +460,7 @@ class Build:
             body = (f'<g class="{w}"><g class="{c}" style="transform-origin:{f(bx)}px {f(bby)}px"><g transform="translate({f(bx)} {f(bby)}) rotate(200)">{bitters(word)}</g></g></g>')
             self.window(w, t0 + .05, t1 - .1)
             st = [(0, {'transform': 'rotate(0)'}), (t0 + .2, {'transform': 'rotate(0)'})]
-            n = max(2, min(int(a[4]), 4))
+            n = max(2, min(int(a[4][-1] if isinstance(a[4], tuple) else a[4]), 4))   # a range of dashes: as many as the most
             for i in range(n):
                 tt = t0 + .25 + i * (t1 - t0 - .5) / n
                 st += [(tt, {'transform': 'rotate(-12deg)'}), (tt + .1, {'transform': 'rotate(4deg)'})]
@@ -567,11 +567,14 @@ class Build:
                 return f'a bar spoon of {word}'
             return f'{oz_text(q)} {word}' if q and kind != 'top' else (f'{word}' if kind != 'top' else f'top with {word}')
         if kind == 'dash':
-            n = int(a[4])
+            if isinstance(a[4], tuple):   # a range: "1–2 dashes orange bitters" (Philip's Martini)
+                n, many = '–'.join(str(x) for x in a[4]), True
+            else:
+                n = int(a[4]); many = n > 1
             name = ING[a[3]][0]
             if 'bitters' not in name:   # Worcestershire, hot sauce, orange flower water
-                return f'{n} dash{"es" if n > 1 else ""} {name}'
-            return f'{n} dash{"es" if n > 1 else ""} {name.replace(" bitters", "")} bitters'
+                return f'{n} dash{"es" if many else ""} {name}'
+            return f'{n} dash{"es" if many else ""} {name.replace(" bitters", "")} bitters'
         if kind == 'rim':
             return 'salt the rim' if 'salt-rim' in self.d['garnish'] else 'sugar the rim'
         if kind == 'rinse':

@@ -54,6 +54,7 @@
 .howto-steps li.s2{animation:hs2 14.5s linear infinite}@keyframes hs2{0%{background-color:transparent}27.68%{background-color:transparent}28.28%{background-color:var(--step-hl)}54.48%{background-color:var(--step-hl)}55.08%{background-color:transparent}100%{background-color:transparent}}
 .howto-steps li.s3{animation:hs3 14.5s linear infinite}@keyframes hs3{0%{background-color:transparent}53.88%{background-color:transparent}54.48%{background-color:var(--step-hl)}71.72%{background-color:var(--step-hl)}72.32%{background-color:transparent}100%{background-color:transparent}}
 .howto-steps li.s4{animation:hs4 14.5s linear infinite}@keyframes hs4{0%{background-color:transparent}71.12%{background-color:transparent}71.72%{background-color:var(--step-hl)}80.69%{background-color:var(--step-hl)}81.29%{background-color:transparent}100%{background-color:transparent}}
+.rc-range{font-weight:800;flex:none;min-width:5.2rem}   /* a range of dashes ("1–2 dashes"), each end scaling with the card */
 /* 1. The chalkboard (9 s): the equation chalks on line by line, then "= Martini???"; Phil scratches his head, question marks bob over him. Still frame: the whole equation. */
 .eq0{animation:eq0 9.0s linear infinite}
 @keyframes eq0{0%{opacity:0}5%{opacity:0}6%{opacity:1}94%{opacity:1}95%{opacity:0}100%{opacity:0}}
@@ -73,22 +74,31 @@
 @keyframes scratch{0%{transform:rotate(0)}100%{transform:rotate(5deg)}}
 .huh{animation:huh 1.5s ease-in-out infinite alternate}.huh.h1{animation-delay:-.5s}.huh.h2{animation-delay:-1s}
 @keyframes huh{0%{transform:translateY(0)}100%{transform:translateY(-5px)}}
-/* 2. Phil, in a tux (8 s): pours a Martini from the shaker (8-38%), sets it down, then quick-draws (50%) and winks. Still frame: the pistol up, the Martini poured, the shaker on the bar. */
-.apour{opacity:0;animation:pour-on 8.0s linear infinite}
-@keyframes pour-on{0%{opacity:1}43.5%{opacity:1}44%{opacity:0}92%{opacity:0}92.5%{opacity:1}100%{opacity:1}}
-.hpour{opacity:0;animation:hpour 8.0s linear infinite}
-@keyframes hpour{0%{opacity:1}50%{opacity:1}50.5%{opacity:0}92%{opacity:0}92.5%{opacity:1}100%{opacity:1}}
-.arest{opacity:0;animation:arest 8.0s linear infinite}
-@keyframes arest{0%{opacity:0}43.5%{opacity:0}44%{opacity:1}50%{opacity:1}50.5%{opacity:0}100%{opacity:0}}
+/* 2. Phil, in a tux (8 s): tips the shaker over the glass, pours (the stream runs, the Martini fills from the point up), sets it down, the olives go in, then he quick-draws (53%) and winks. Still frame: the pistol out, the Martini poured, the shaker on the bar. */
+.hpour,.apour,.lrest,.stream,.whoosh,.ting{opacity:0}
+.hpour{animation:hpour 8.0s linear infinite}
+@keyframes hpour{0%{opacity:1}53%{opacity:1}53.5%{opacity:0}93%{opacity:0}93.5%{opacity:1}100%{opacity:1}}
 .hdraw{animation:hdraw 8.0s linear infinite}
-@keyframes hdraw{0%{opacity:0}50%{opacity:0}50.5%{opacity:1}92%{opacity:1}92.5%{opacity:0}100%{opacity:0}}
-.adraw{animation:adraw 8.0s linear infinite}
-@keyframes adraw{0%{opacity:0;transform:rotate(40deg)}50%{opacity:0;transform:rotate(40deg)}50.5%{opacity:1;transform:rotate(40deg)}53%{opacity:1;transform:rotate(-6deg)}55%{opacity:1;transform:rotate(0)}92%{opacity:1;transform:rotate(0)}92.5%{opacity:0;transform:rotate(0)}100%{opacity:0;transform:rotate(40deg)}}
-.stream{opacity:0;animation:stream 8.0s linear infinite}
-@keyframes stream{0%{opacity:0}11%{opacity:0}12%{opacity:1}36%{opacity:1}37%{opacity:0}100%{opacity:0}}
-.full{animation:full 8.0s linear infinite}
-@keyframes full{0%{opacity:0}14%{opacity:0}38%{opacity:1}92%{opacity:1}93%{opacity:0}100%{opacity:0}}
+@keyframes hdraw{0%{opacity:0}52.5%{opacity:0}53%{opacity:1}93%{opacity:1}93.5%{opacity:0}100%{opacity:0}}
+.apour{animation:apour 8.0s linear infinite}
+@keyframes apour{0%{opacity:1}44%{opacity:1}44.5%{opacity:0}93%{opacity:0}93.5%{opacity:1}100%{opacity:1}}
+.arest{animation:arest 8.0s linear infinite}
+@keyframes arest{0%{opacity:0}43.5%{opacity:0}44%{opacity:1}93%{opacity:1}93.5%{opacity:0}100%{opacity:0}}
+.lrest{animation:lrest 8.0s linear infinite}
+@keyframes lrest{0%{opacity:1}53%{opacity:1}53.5%{opacity:0}93%{opacity:0}93.5%{opacity:1}100%{opacity:1}}
+.lgun{animation:lgun 8.0s linear infinite}
+@keyframes lgun{0%{opacity:0;transform:rotate(-70deg)}53%{opacity:0;transform:rotate(-70deg)}53.3%{opacity:1;transform:rotate(-70deg)}55.5%{opacity:1;transform:rotate(6deg)}57%{opacity:1;transform:rotate(0)}93%{opacity:1;transform:rotate(0)}93.5%{opacity:0;transform:rotate(0)}100%{opacity:0;transform:rotate(-70deg)}}
+.tilt{animation:tilt 8.0s linear infinite}
+@keyframes tilt{0%{transform:rotate(-75deg)}4%{transform:rotate(-75deg)}10%{transform:rotate(0)}36%{transform:rotate(0)}40%{transform:rotate(-75deg)}100%{transform:rotate(-75deg)}}
+.stream{animation:stream 8.0s linear infinite}
+@keyframes stream{0%{opacity:0}10.5%{opacity:0}11%{opacity:1}36%{opacity:1}36.5%{opacity:0}100%{opacity:0}}
+.liq{animation:liq 8.0s linear infinite}
+@keyframes liq{0%{transform:scale(0)}11%{transform:scale(0)}36%{transform:scale(1)}93%{transform:scale(1)}93.5%{transform:scale(0)}100%{transform:scale(0)}}
+.olv{animation:olv 8.0s linear infinite}
+@keyframes olv{0%{opacity:0;transform:translateY(-30px)}47%{opacity:0;transform:translateY(-30px)}47.5%{opacity:1;transform:translateY(-30px)}50%{opacity:1;transform:translateY(0)}93%{opacity:1;transform:translateY(0)}93.5%{opacity:0}100%{opacity:0}}
 .tinbar{animation:tinbar 8.0s linear infinite}
-@keyframes tinbar{0%{opacity:0}43.5%{opacity:0}44%{opacity:1}92%{opacity:1}92.5%{opacity:0}100%{opacity:0}}
-.whoosh{opacity:0;animation:whoosh 8.0s linear infinite}
-@keyframes whoosh{0%{opacity:0}50%{opacity:0}51%{opacity:1}57%{opacity:1}58%{opacity:0}100%{opacity:0}}
+@keyframes tinbar{0%{opacity:0}43.5%{opacity:0}44%{opacity:1}93%{opacity:1}93.5%{opacity:0}100%{opacity:0}}
+.whoosh{animation:whoosh 8.0s linear infinite}
+@keyframes whoosh{0%{opacity:0}53%{opacity:0}54%{opacity:1}61%{opacity:1}62%{opacity:0}100%{opacity:0}}
+.ting{animation:ting 8.0s linear infinite}
+@keyframes ting{0%{opacity:0}56%{opacity:0}57%{opacity:1}69%{opacity:1}70%{opacity:0}100%{opacity:0}}

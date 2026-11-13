@@ -230,7 +230,15 @@ def search_index():
 
 
 # ---------------------------------------------------------------- page writing
+RANGE_CSS = '.rc-range{font-weight:800;flex:none;min-width:5.2rem}   /* a range of dashes ("1–2 dashes"), each end scaling with the card */'
+
+
 def amt(q, u, text):
+    if isinstance(q, tuple):   # a range (Philip's Martini: 1-2 dashes of orange bitters): two amounts, so the card's script scales both
+        lo, hi = q
+        word = {'dash': 'dashes'}.get(u, u + 's')
+        return (f'<li><span class="rc-range"><span class="amt" data-q="{lo:g}">{lo:g}</span>–'
+                f'<span class="amt" data-q="{hi:g}" data-u="{u}">{hi:g} {word}</span></span> {text}</li>')
     qs = f'{q:g}'
     if u == 'oz':
         shown, us = oz_text(q), ''
@@ -371,9 +379,9 @@ def write_drink(d):
         'title': f'{html.unescape(d["name"])} · The Cocktail Menu · The Bottle and the Bartender',
         'description': f'How to make {a_an(html.unescape(d["name"]))}: the recipe, a step-by-step how-to, and a little history.',
         'label': f'The Cocktail Menu / {html.unescape(d["name"])}'}, indent=2, ensure_ascii=False) + '\n')
-    extra_css = ''
+    extra_css = (RANGE_CSS + '\n') if any(isinstance(q, tuple) for q, _, _ in d['recipe']) else ''
     if d.get('scenes'):   # a drink with scenes of its own (the Martini: Phil at the chalkboard, Phil in a tux)
-        extra_css = __import__(d['scenes']).write(folder)
+        extra_css += __import__(d['scenes']).write(folder)
     (folder / 'page.css').write_text(f'/* The Cocktail Menu / {html.unescape(d["name"])}: scene motion. Written by tools/art/menu_pages.py; edit it there. */\n'
                                      + TWINKLE_CSS + '\n' + BUBBLE_CSS + '\n' + (STEAM_CSS + '\n' if d.get('hot') else '') + b.page_css() + '\n' + extra_css)
     return b.T

@@ -8,7 +8,7 @@ Base styles are each scene's still frame (reduced motion); keyframes carry the m
 """
 import math
 from art import *
-from menu_art import glass, GLASS
+from menu_art import glass, garnishes, GLASS
 from bartender import bartender
 
 CHALK, GOLD = '#f4f1e6', '#f2c776'
@@ -74,11 +74,14 @@ def chalkboard():
 
 
 # ---------------------------------------------------------------- 2. bond: pour, then the quick-draw
-BT = 8.0             # seconds a loop
-POUR = (8, 38)       # the shaker pours (%)
-DOWN = 44            # the shaker's down on the bar
-DRAW = 50            # the quick-draw (%)
-BACK = 92            # everything back for the next loop
+BT = 8.0                 # seconds a loop
+TIP = (4, 10)            # the shaker tips over the glass (%)
+POUR = (11, 36)          # the pour: the stream runs and the glass fills
+UNTIP = (36, 40)
+DOWN = 44                # the shaker's down on the bar
+OLIVES = 47
+DRAW = 53                # the quick-draw
+BACK = 93                # everything back for the next loop
 
 
 def tux_arm(points):
@@ -125,68 +128,101 @@ def shaker(tilt=0):
 
 
 def pistol():
-    """A cartoon pistol, barrel up, its grip at (0, 0)."""
-    slide = 'M-4 -30 L4 -30 L4 2 L-4 2Z'
-    grip = 'M-4 0 L5 0 L7 13 L-2 13Z'
-    guard = 'M4 -6 q7 0 7 6 q0 5 -6 5'
-    return (wash(f'<path d="{slide}" fill="#3c3a44"/><path d="{grip}" fill="#2c2a33"/>')
-            + lines(f'<path d="{slide}"/><path d="{grip}"/><path d="{guard}" stroke-width="1.6"/><path d="M-1.5 -30 V-34 M1.5 -30 V-34" stroke-width="1.6"/>'
-                    '<path d="M-2 -24 H2 M-2 -19 H2" stroke="#6a6674" stroke-width="1.2"/>', boil=False, width=2))
+    """A cartoon pistol in profile, pointing right: the slide, a front sight, the hammer, the trigger guard and a wooden grip.
+    Its grip (where the hand goes) is at (0, 0)."""
+    slide = 'M-7 -14 L28 -14 L28 -5 L-7 -5Z'
+    frame = 'M-5 -5 L15 -5 L15 -2 L-5 -2Z'
+    grip = 'M-8 -5 L2 -5 L0 12 L-10 10Z'
+    guard = 'M3 -2 Q3 5 9 5 Q14 5 14 -2'
+    return (wash(f'<path d="{grip}" fill="#6b4630"/><path d="{frame}" fill="#34323b"/><path d="{slide}" fill="#3d3b46"/>'
+                 '<path d="M24 -14 L24 -17 L27 -17 L27 -14Z M-7 -14 L-10 -18 L-7 -19 L-4 -14Z" fill="#3d3b46"/>')
+            + lines(f'<path d="{slide}"/><path d="{frame}" stroke-width="1.6"/><path d="{grip}"/><path d="{guard}" stroke-width="1.8"/>'
+                    '<path d="M24 -14 L24 -17 L27 -17 L27 -14 M-7 -14 L-10 -18 L-7 -19 L-4 -14" stroke-width="1.5"/>'
+                    '<path d="M8 -2 q1 3 -1 5" stroke-width="1.5"/><path d="M-3 -11.5 H25" stroke="#9a96a8" stroke-width="1.4"/>'
+                    '<path d="M-6 0 L-8 8 M-3 0 L-5 8" stroke="#3a2418" stroke-width="1"/>', boil=False, width=2.2))
 
 
 def bond():
-    css = [f'/* 2. Phil, in a tux ({BT:g} s): pours a Martini from the shaker ({POUR[0]}-{POUR[1]}%), sets it down, then quick-draws ({DRAW}%) '
-           'and winks. Still frame: the pistol up, the Martini poured, the shaker on the bar. */']
-    wall = wash('<rect x="0" y="0" width="400" height="236" fill="#3e2c3d"/>') + wash('<ellipse cx="150" cy="96" rx="120" ry="82" fill="#6b4a63" opacity=".55"/>')
-    PX, PY, S = 136, 236, 1.0
-    gx, gy, gs = 252, 176, .55             # the Martini glass on the bar
-    # Phil's head, two ways: watching the pour (happy), then the wink
-    h_pour = bartender(eyes='happy', mood='smile', parts=True)['head']
-    h_draw = bartender(eyes='wink', mood='smug', parts=True)['head']
-    left = tux_arm([(-24, -110), (-32, -86), (-20, -70)])           # hand at his waist
-    # pouring arm: the hand out over the glass, the shaker tipped
-    hand_pour = (64, -122)
-    arm_pour = tux_arm([(24, -110), (46, -116), hand_pour])
-    tin_pour = f'<g transform="translate({hand_pour[0] + 6} {hand_pour[1] - 4})">{shaker(118)}</g>'
-    # the draw: the hand up by his face, the pistol pointing up
-    hand_gun = (34, -146)
-    arm_gun = tux_arm([(24, -110), (44, -122), hand_gun])
-    gun = f'<g transform="translate({hand_gun[0]} {hand_gun[1] + 4}) rotate(8)">{pistol()}</g>'
-
-    arm_rest = tux_arm([(24, -110), (32, -86), (22, -70)])        # the shaker's down: the hand back at his waist
-    phil = (left + tux_body()
-            + f'<g class="hpour">{h_pour}</g><g class="hdraw">{h_draw}</g>'
-            + f'<g class="apour">{arm_pour}{tin_pour}</g><g class="arest">{arm_rest}</g>'
-            + f'<g class="adraw" style="transform-origin:24px -110px">{gun}{arm_gun}</g>')
-    css += [f'.apour{{opacity:0;animation:pour-on {BT}s linear infinite}}', kf('pour-on', [(0, 'opacity:1'), (DOWN - .5, 'opacity:1'), (DOWN, 'opacity:0'), (BACK, 'opacity:0'), (BACK + .5, 'opacity:1'), (100, 'opacity:1')]),
-            f'.hpour{{opacity:0;animation:hpour {BT}s linear infinite}}', kf('hpour', [(0, 'opacity:1'), (DRAW, 'opacity:1'), (DRAW + .5, 'opacity:0'), (BACK, 'opacity:0'), (BACK + .5, 'opacity:1'), (100, 'opacity:1')]),
-            f'.arest{{opacity:0;animation:arest {BT}s linear infinite}}', kf('arest', [(0, 'opacity:0'), (DOWN - .5, 'opacity:0'), (DOWN, 'opacity:1'), (DRAW, 'opacity:1'), (DRAW + .5, 'opacity:0'), (100, 'opacity:0')]),
-            f'.hdraw{{animation:hdraw {BT}s linear infinite}}', kf('hdraw', [(0, 'opacity:0'), (DRAW, 'opacity:0'), (DRAW + .5, 'opacity:1'), (BACK, 'opacity:1'), (BACK + .5, 'opacity:0'), (100, 'opacity:0')]),
-            f'.adraw{{animation:adraw {BT}s linear infinite}}',
-            kf('adraw', [(0, 'opacity:0;transform:rotate(40deg)'), (DRAW, 'opacity:0;transform:rotate(40deg)'), (DRAW + .5, 'opacity:1;transform:rotate(40deg)'),
-                         (DRAW + 3, 'opacity:1;transform:rotate(-6deg)'), (DRAW + 5, 'opacity:1;transform:rotate(0)'), (BACK, 'opacity:1;transform:rotate(0)'),
-                         (BACK + .5, 'opacity:0;transform:rotate(0)'), (100, 'opacity:0;transform:rotate(40deg)')])]
-    # where the tin's mouth lands in the scene, for the stream
-    rim_y = gy + GLASS['martini']['rim'][0] * gs
-    tip = (PX + (hand_pour[0] + 6) * S + 30, PY + (hand_pour[1] - 4) * S + 4)
-    stream = lines(f'<path d="M{f(tip[0])} {f(tip[1])} Q{f(gx - 2)} {f(rim_y - 14)} {f(gx)} {f(gy - 50 * gs)}" stroke="#e8ecd8" stroke-width="3.2"/>', boil=False)
-    css += [f'.stream{{opacity:0;animation:stream {BT}s linear infinite}}', window('stream', POUR[0] + 4, POUR[1] - 2, 1)]
-    # the glass: empty, then full (fading in through the pour)
+    css = [f'/* 2. Phil, in a tux ({BT:g} s): tips the shaker over the glass, pours (the stream runs, the Martini fills from the point up), '
+           f'sets it down, the olives go in, then he quick-draws ({DRAW}%) and winks. Still frame: the pistol out, the Martini poured, the shaker on the bar. */']
+    wall = wash('<rect x="0" y="0" width="400" height="236" fill="#3e2c3d"/>') + wash('<ellipse cx="170" cy="96" rx="130" ry="84" fill="#6b4a63" opacity=".55"/>')
+    PX, PY = 150, 236
+    gx, gy, gs = 262, 176, .85                   # the Martini glass on the bar: rim at y 108, the bowl's point at y 136.5
     g = GLASS['martini']
-    empty = f'<g transform="translate({gx} {gy}) scale({gs})">' + wash(g['back']) + lines(g['out'], boil=False) + '</g>'
-    full = f'<g class="full" transform="translate({gx} {gy}) scale({gs})">{glass("martini", "bond-m", "#eef0dc", ["olives"])}</g>'
-    css += [f'.full{{animation:full {BT}s linear infinite}}', kf('full', [(0, 'opacity:0'), (POUR[0] + 6, 'opacity:0'), (POUR[1], 'opacity:1'), (BACK, 'opacity:1'), (BACK + 1, 'opacity:0'), (100, 'opacity:0')])]
+
+    def anim(cls, stops):
+        css.append(f'.{cls}{{animation:{cls} {BT}s linear infinite}}')
+        css.append(kf(cls, stops))
+
+    def shown(on, off, fade=.5):   # visible from on% to off% (on may be 0, off may be 100)
+        st = [(0, 'opacity:' + ('1' if on == 0 else '0'))]
+        if on:
+            st += [(on - fade, 'opacity:0'), (on, 'opacity:1')]
+        if off < 100:
+            st += [(off, 'opacity:1'), (off + fade, 'opacity:0')]
+        return st + [(100, 'opacity:' + ('1' if off == 100 else '0'))]
+
+    # heads: watching the pour, then the wink
+    h_pour = bartender(eyes='happy', mood='smile', parts=True)['head']
+    h_draw = bartender(eyes='wink', mood='smug', parts=True, head_tilt=-5)['head']
+    # his right arm (viewer's right): out over the glass with the shaker, then back at his waist
+    H = (80, -148)                                # the hand, over the glass
+    arm_pour = tux_arm([(24, -110), (52, -124), H])
+    ts, th = 1.15, 118                            # the tin: its scale, and how far it tips
+    mid = (-17 * ts * math.sin(math.radians(th)), 17 * ts * math.cos(math.radians(th)))   # the middle of the tin (the hand) from its mouth, tipped
+    mouth = (H[0] - mid[0], H[1] - mid[1])
+    tin = (f'<g class="tilt" style="transform-origin:{f(H[0])}px {f(H[1])}px">'
+           f'<g transform="translate({f(mouth[0])} {f(mouth[1])}) scale({ts})">{shaker(th)}</g></g>')
+    rest_r = tux_arm([(24, -110), (32, -86), (22, -70)])
+    # his left arm (viewer's left, the tattooed one): at his waist, then out straight with the pistol, aimed off to the left
+    rest_l = tux_arm([(-24, -110), (-32, -86), (-20, -70)])
+    G = (-80, -118)
+    gun_arm = (f'<g transform="translate({G[0] - 4} {G[1] - 3}) scale(-1 1)">{pistol()}</g>'
+               + tux_arm([(-24, -110), (-52, -115), G]))
+    phil = (f'<g class="lrest">{rest_l}</g>' + tux_body()
+            + f'<g class="hpour">{h_pour}</g><g class="hdraw">{h_draw}</g>'
+            + f'<g class="apour">{arm_pour}{tin}</g><g class="arest">{rest_r}</g>'
+            + f'<g class="lgun" style="transform-origin:-24px -110px">{gun_arm}</g>')
+    css += ['.hpour,.apour,.lrest,.stream,.whoosh,.ting{opacity:0}']
+    anim('hpour', shown(0, DRAW) [:-1] + [(BACK, 'opacity:0'), (BACK + .5, 'opacity:1'), (100, 'opacity:1')])
+    anim('hdraw', shown(DRAW, BACK))
+    anim('apour', shown(0, DOWN)[:-1] + [(BACK, 'opacity:0'), (BACK + .5, 'opacity:1'), (100, 'opacity:1')])
+    anim('arest', [(0, 'opacity:0'), (DOWN - .5, 'opacity:0'), (DOWN, 'opacity:1'), (BACK, 'opacity:1'), (BACK + .5, 'opacity:0'), (100, 'opacity:0')])
+    anim('lrest', shown(0, DRAW)[:-1] + [(BACK, 'opacity:0'), (BACK + .5, 'opacity:1'), (100, 'opacity:1')])
+    anim('lgun', [(0, 'opacity:0;transform:rotate(-70deg)'), (DRAW, 'opacity:0;transform:rotate(-70deg)'), (DRAW + .3, 'opacity:1;transform:rotate(-70deg)'),
+                  (DRAW + 2.5, 'opacity:1;transform:rotate(6deg)'), (DRAW + 4, 'opacity:1;transform:rotate(0)'), (BACK, 'opacity:1;transform:rotate(0)'),
+                  (BACK + .5, 'opacity:0;transform:rotate(0)'), (100, 'opacity:0;transform:rotate(-70deg)')])
+    anim('tilt', [(0, 'transform:rotate(-75deg)'), (TIP[0], 'transform:rotate(-75deg)'), (TIP[1], 'transform:rotate(0)'), (UNTIP[0], 'transform:rotate(0)'),
+                  (UNTIP[1], 'transform:rotate(-75deg)'), (100, 'transform:rotate(-75deg)')])
+    # the stream, outlined so it reads against the wall, from the tin's mouth into the bowl
+    mx, my = PX + mouth[0], PY + mouth[1]
+    apex = (gx, gy - 46.5 * gs)
+    path = f'M{f(mx)} {f(my + 2)} Q{f(apex[0] - 2)} {f(my + 6)} {f(apex[0])} {f(apex[1] - 2)}'
+    stream = (lines(f'<path d="{path}" stroke-width="6.4"/>', boil=False) + lines(f'<path d="{path}" stroke="#eef1dc" stroke-width="3.6"/>', boil=False))
+    anim('stream', shown(POUR[0], POUR[1]))
+    # the glass: the Martini fills it from the point up (a cone scaled from its point fills like a cone), then the olives drop in
+    liquid = f'<g class="liq" style="transform-origin:0px -46.5px"><path d="{g["inner"]}" fill="#e6eac2"/><path d="M-31 -78 H31" stroke="#c9cfa0" stroke-width="1.6"/></g>'
+    anim('liq', [(0, 'transform:scale(0)'), (POUR[0], 'transform:scale(0)'), (POUR[1], 'transform:scale(1)'), (BACK, 'transform:scale(1)'), (BACK + .5, 'transform:scale(0)'), (100, 'transform:scale(0)')])
+    olive = f'<g class="olv">{garnishes(["olives"], "martini")}</g>'
+    anim('olv', [(0, 'opacity:0;transform:translateY(-30px)'), (OLIVES, 'opacity:0;transform:translateY(-30px)'), (OLIVES + .5, 'opacity:1;transform:translateY(-30px)'),
+                 (OLIVES + 3, 'opacity:1;transform:translateY(0)'), (BACK, 'opacity:1;transform:translateY(0)'), (BACK + .5, 'opacity:0'), (100, 'opacity:0')])
+    the_glass = (f'<g transform="translate({gx} {gy}) scale({gs})">' + wash(g['back'])
+                 + f'<clipPath id="bond-cone"><path d="{g["inner"]}"/></clipPath><g clip-path="url(#bond-cone)">{wash(liquid)}</g>'
+                 + lines(g['out'], boil=False) + olive + '</g>')
     # the shaker, set down on the bar
-    tin_bar = f'<g class="tinbar" transform="translate(206 {gy - 34})">{shaker(0)}</g>'
-    css += [f'.tinbar{{animation:tinbar {BT}s linear infinite}}', kf('tinbar', [(0, 'opacity:0'), (DOWN - .5, 'opacity:0'), (DOWN, 'opacity:1'), (BACK, 'opacity:1'), (BACK + .5, 'opacity:0'), (100, 'opacity:0')])]
-    # a flash of motion lines at the draw, and a twinkle on the wink
-    whoosh = lines(f'<path d="M{PX + 50} {PY - 168} q10 -6 18 -2 M{PX + 56} {PY - 156} q10 -4 17 0 M{PX + 52} {PY - 180} q8 -7 16 -5" stroke="#f2c776" stroke-width="2"/>', boil=False)
-    css += [f'.whoosh{{opacity:0;animation:whoosh {BT}s linear infinite}}', window('whoosh', DRAW + 1, DRAW + 7, 1)]
-    inner = (wall + sparkle(44, 34, 6, 'twinkle') + sparkle(352, 40, 5, 'twinkle d2')
-             + place(phil, PX, PY, S) + counter_front() + empty + f'<g class="stream">{stream}</g>' + full + tin_bar
-             + f'<g class="whoosh">{whoosh}</g>' + sparkle(PX - 2, PY - 156, 5, 'twinkle d3'))
-    alt = ('Phil, the bartender, in a tuxedo and bow tie, pours a Martini from a shaker into a glass on the bar. '
-           'He sets the shaker down, then quick-draws a pistol, holds it up by his face like a movie spy, and winks.')
+    tin_bar = f'<g class="tinbar" transform="translate(206 {gy - 34 * ts}) scale({ts})">{shaker(0)}</g>'
+    anim('tinbar', [(0, 'opacity:0'), (DOWN - .5, 'opacity:0'), (DOWN, 'opacity:1'), (BACK, 'opacity:1'), (BACK + .5, 'opacity:0'), (100, 'opacity:0')])
+    # the draw: motion lines where the arm swept up, and a glint off the pistol
+    gxs, gys = PX + G[0], PY + G[1]
+    whoosh = lines(f'<path d="M{gxs + 6} {gys + 26} q-10 -8 -12 -20 M{gxs + 16} {gys + 30} q-9 -10 -10 -22 M{gxs + 26} {gys + 32} q-6 -10 -6 -20" stroke="#f2c776" stroke-width="2"/>', boil=False)
+    anim('whoosh', shown(DRAW + 1, DRAW + 8, 1))
+    ting = sparkle(gxs - 26, gys - 22, 7, '')
+    anim('ting', shown(DRAW + 4, DRAW + 16, 1))
+    inner = (wall + sparkle(352, 40, 5, 'twinkle d2') + sparkle(300, 24, 4, 'twinkle')
+             + place(phil, PX, PY) + counter_front() + the_glass + tin_bar + f'<g class="stream">{stream}</g>'
+             + f'<g class="whoosh">{whoosh}</g><g class="ting">{ting}</g>')
+    alt = ('Phil, the bartender, in a tuxedo and bow tie, tips a shaker over a Martini glass on the bar and pours; the glass fills. '
+           'He sets the shaker down, the olives drop in, then he quick-draws a pistol, aims it off to the side like a movie spy, and winks.')
     return svg_view(inner, alt, '20 6 360 200'), css
 
 

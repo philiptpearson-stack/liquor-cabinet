@@ -151,10 +151,11 @@ DRINKS = [
          related=['old-fashioned', 'vieux-carre'], hero=(['sweet-vermouth', 'rye'], ['bitters'])),
 
     dict(slug='martini', name='Martini', glass='martini', color='#f0f1e4', garnish=['olives'],
-         recipe=[(2.5, 'oz', 'gin'), (.5, 'oz', 'dry vermouth'), (1, 'dash', 'orange bitters')],
+         recipe=[(2.5, 'oz', 'gin'), (.5, 'oz', 'dry vermouth'), ((1, 2), 'dash', 'orange bitters')],
          glass_line=('martini glass', 'olives or a lemon twist'),
-         punch=['Ah, the Martini!', "Probably the most confusing of history's great Cocktails."],
-         lines=['Why did James Bond want it shaken when it has no citrus?',
+         punch='Ah, the Martini!',
+         lines=["Probably the most <i>confusing</i> of history's great Cocktails.",
+                'Why did James Bond want it shaken when it has no citrus?',
                 "Why do so many people leave out the bitters (wrongly!) when it's clearly a variation on the original Cocktail Formula?",
                 ('go', '→ Old Fashioned — The Original Cocktail', 'cocktail-menu/old-fashioned'),
                 'Is it actually just a really cold shot of vodka or gin in a fancy glass?',
@@ -179,8 +180,8 @@ DRINKS = [
                  "Americans had been making jokes about the Martini's vanishing vermouth for over a decade.")],
          lead="Here's how you make one today:",
          after=[('go', '→ Check out our Shaken or Stirred? page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
-                ('scene', 'bond'),
                 ('h2', 'Speaking of James Bond'),
+                ('scene', 'bond'),
                 "In <i>Casino Royale</i>, 007 orders gin, vodka, and Kina Lillet. He wants it shaken ice-cold, with a big strip of lemon peel. He calls it a Vesper. It's a whole other drink!",
                 ('go', '→ The Vesper', 'cocktail-menu/vesper')],
          scenes='martini_scenes',
@@ -188,7 +189,7 @@ DRINKS = [
                     "Newman's 1904 Dry Martini, equal gin and dry vermouth (Difford's); 2:1 the 1910s standard, 3:1 by WWII, the vermouth jokes from 1952, "
                     "an Extra Dry meaning no vermouth by 1954 (Oxford Companion); Connery's Bond first says it himself in Goldfinger, 1964. "
                     "Scenes: Phil at the chalkboard (= Martini???), Phil in a tux, pour then quick-draw (martini_scenes.py)."),
-         steps=[('<strong>Combine ingredients.</strong> Add the gin, dry vermouth and bitters to a mixing glass.', [('pour', 'gin', 2.5), ('pour', 'dry-vermouth', .5), ('dash', 'orange-bitters', 1)]),
+         steps=[('<strong>Combine ingredients.</strong> Add the gin, dry vermouth and bitters to a mixing glass.', [('pour', 'gin', 2.5), ('pour', 'dry-vermouth', .5), ('dash', 'orange-bitters', (1, 2))]),
                 ('<strong>Stir.</strong> Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into <strong>balance.</strong> <em>Dilution is part of the recipe.</em>)', [('ice', 'mix'), ('stir',)]),
                 ('<strong>Serve up.</strong> Strain into a chilled martini glass.', [('strain',)]),
                 ('<strong>Garnish.</strong> Olives on a pick, or a lemon twist.', [('garnish',)])],
