@@ -21,7 +21,7 @@ Why do so many people leave out the bitters (wrongly!) when it's clearly a varia
 → Old Fashioned — The Original Cocktail
 Is it REALLY just a cold shot of vodka (or gin) in a fancy glass?
 Well, here's what you need to know:
-The Martini used to be half** vermouth.
+The Martini used to be **half** vermouth.
 Seriously.
 In the 1888 edition of New and Improved Illustrated Bartender's Manual; or, How to Mix Drinks of the Present Style, the famous Harry Johnson made it like this:
 And get this: in 1904, Frank Newman printed a DRY Martini that was still half vermouth.** He just used dry vermouth.

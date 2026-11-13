@@ -161,7 +161,7 @@ DRINKS = [
                 'Is it REALLY just a cold shot of vodka (or gin) in a fancy glass?',
                 ('scene', 'chalkboard'),
                 ('h2', "Well, here's what you need to know:"),
-                ('punch', 'The Martini used to be <strong class="hl">half</strong> vermouth.'),
+                'The Martini used to be <strong>half</strong> vermouth.',   # body size (Philip, Nov 12); bold is plum in body text
                 'Seriously.',
                 ("In the 1888 edition of <cite>New and Improved Illustrated Bartender's Manual; or, How to Mix Drinks of the Present Style</cite>, "
                  'the famous Harry Johnson made it like this:'),
