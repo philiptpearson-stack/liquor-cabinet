@@ -284,7 +284,8 @@ def story_line(t):
         return [f'  <p class="t">{t}</p>']
     kind = t[0]
     if kind == 'quote':     # a quote box, set like a clipping (Philip's Manhattan)
-        return ['  <figure class="quote">', f'    <blockquote><p>{t[1]}</p></blockquote>', f'    <figcaption>{t[2]}</figcaption>', '  </figure>']
+        cap = [f'    <figcaption>{t[2]}</figcaption>'] if t[2] else []   # no caption when the line before says who (Philip's Jack Rose)
+        return ['  <figure class="quote">', f'    <blockquote><p>{t[1]}</p></blockquote>'] + cap + ['  </figure>']
     if kind == 'punch':     # a line in the big type, mid-story
         return [f'  <p class="punch">{t[1]}</p>']
     if kind == 'go':        # a link line, in the story (not in a note box): ('go', words, '@page slug')

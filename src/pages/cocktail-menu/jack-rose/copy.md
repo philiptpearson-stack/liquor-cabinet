@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Barry Popik): National Police Gazette, April 22, 1905, "Frank J. May, better known as Jack Rose, is the inventor"; The Sun Also Rises (1926), the Crillon bar line; the color as the likeliest source of the name. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 12 2026: Philip's copy. The quote checked against the 1926 text (Project Gutenberg; public domain): "...so about quarter to six I went down to the bar and had a Jack Rose with George the barman." The recipe and steps are Claude's. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Jack ***Rose.***
 Jack Rose Recipe
@@ -14,11 +14,10 @@ Makes − 1 + drink
 ¾ oz lemon juice
 ¾ oz grenadine
 **Glass:** coupe · **Garnish:** lemon twist
-Pink, tart and very 1920s Paris.
-In *The Sun Also Rises* (1926), Hemingway's Jake waits for Brett at the Hôtel Crillon: “about quarter to six I went down to the bar and had a Jack Rose with George the barman.”
-The drink is older than that. By 1905, the *National Police Gazette* was crediting a bartender known as Jack Rose with inventing it.
-The name most likely comes from the drink itself: applejack, turned rosy with grenadine.
-It's a sour at heart: spirit, citrus and something sweet, the same family as the Daiquiri.
+In Ernest Hemingway's The Sun Also Rises (1926), Jake has one as he waits for Brett at the Hôtel Crillon.
+“About quarter to six I went down to the bar and had a Jack Rose with George the barman.”
+And what did George make him?
+An apple brandy sour, sweetened up with grenadine!
 Here's how you make one:
 The Cocktail Menu · Classics
 Jack Rose
