@@ -197,11 +197,12 @@ class Build:
         ice_svg = ''
         ice_act = next((a for a in acts if a[2] == 'ice' and a[1] == 'glass'), None) or next((a[:-2] + [a[-2] + .7, a[-1]] for a in acts if a[2] == 'dump'), None)
         if ice_act is not None or d.get('served_on_ice'):
-            chips = ICE.get(self.kind + '-crushed', []) if d.get('crushed') else []
+            style = d.get('ice')   # 'cubes': the shaker's ice, poured in (the Margarita)
+            chips = ICE.get(self.kind + '-crushed', []) if d.get('crushed') else (ICE.get(f'{self.kind}-{style}', []) if style else [])
             for k, (x, y_, w, r) in enumerate(chips or ICE.get(self.kind, [])):
                 c = self.cls('gice')
                 ice_svg += f'<g class="{c}">{cube(x, y_, w, r)}</g>'
-                t0 = ice_act[-2] + (k * .025 if chips else k * (.12 if self.kind == 'highball' else 0))
+                t0 = ice_act[-2] + (k * (.025 if d.get('crushed') else .1) if chips else k * (.12 if self.kind == 'highball' else 0))
                 self.emit(c, [(0, {'opacity': 0, 'transform': 'translateY(-130px)'}), (t0, {'opacity': 0, 'transform': 'translateY(-130px)'}), (t0 + .05, {'opacity': 1}),
                               (t0 + .45, {'transform': 'translateY(0)'})], base=None)
         # foam (egg white drinks): on the drink, once it's poured

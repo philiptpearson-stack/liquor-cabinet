@@ -108,7 +108,7 @@ def hero(d):
     if d['slug'] == 'dark-and-stormy':
         layers = [(.68, 1, '#5a2e14')]
     drink = glass(d['glass'], f'{d["slug"]}-hero', d['color'], d['garnish'], iced=served_iced, foam=d.get('foam', False), layers=layers, bubbles=fizzy,
-                  top=d.get('level'), crushed=d.get('crushed', False), hot=d.get('hot', False))
+                  top=d.get('level'), crushed=d.get('ice') or d.get('crushed', False), hot=d.get('hot', False))
     out += f'<g transform="translate({d.get("hero_x", 200)} 184) scale({HERO_SCALE[d["glass"]]})">{drink}</g>'   # hero_x: a glass with a handle sits a little left
     out += sparkle(150, 46, 6, 'twinkle') + sparkle(258, 40, 5, 'twinkle d2') + sparkle(246, 100, 4, 'twinkle d3')
     g = ' and '.join(GARNISH_WORD[k] for k in d['garnish'])
@@ -123,7 +123,7 @@ def icon(d):
     served_iced = iced(d)
     layers = [(.68, 1, '#5a2e14')] if d['slug'] == 'dark-and-stormy' else d.get('layers')
     return at(60, 112, glass(d['glass'], f'{d["slug"]}-ic', d['color'], d['garnish'], iced=served_iced, foam=d.get('foam', False), layers=layers, top=d.get('level'),
-                             crushed=d.get('crushed', False)), ICON_SCALE[d['glass']])
+                             crushed=d.get('ice') or d.get('crushed', False)), ICON_SCALE[d['glass']])
 
 
 # ---------------------------------------------------------------- the rest of the menu: icons for the doors still to come
