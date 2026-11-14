@@ -414,8 +414,8 @@ def write_menu():
         '  <figure class="fig" id="s-menu"><div class="sheet"><!--scene:menu--></div></figure>',
         "  <p class=\"punch\">What'll it be?</p>",
         f'  <form class="search" role="search" data-search="{index}" data-none="Nothing on the menu like that yet. Try a drink, or just one ingredient.">',
-        '    <label for="menu-q">Looking for something?</label>',
-        '    <input id="menu-q" type="search" placeholder="Search a drink or ingredient" autocomplete="off" enterkeyhint="go">',
+        # no visible label: "What'll it be?" right above it asks the question (Philip, Nov 13); screen readers get one
+        '    <input id="menu-q" type="search" placeholder="Search a drink or ingredient" aria-label="Search the menu for a drink or ingredient" autocomplete="off" enterkeyhint="go">',
         '    <p class="search-count" aria-live="polite"></p>',
         '    <ul class="search-results"></ul>',
         '  </form>', '',
@@ -427,7 +427,7 @@ def write_menu():
     (MENU / 'story.html').write_text(story)
     write_copy(MENU / 'copy.md', 'The Cocktail Menu', story,
                "Nov 3 2026: the menu's front door (Philip: Classics is its own door, like the rest; and a search). \"What'll it be?\" is Philip's (moved here from Classics). "
-               "CLAUDE'S DRAFT, waiting on Philip: \"Looking for something?\" (and, not checked here because they aren't page text: the search box's hint, "
+               "Nov 13: Philip dropped \"Looking for something?\". CLAUDE'S DRAFT, waiting on Philip (not checked here because they aren't page text): the search box's hint, "
                "\"Search a drink or ingredient\" (Philip, Nov 13), and its no-match line, \"Nothing on the menu like that yet. Try a drink, or just one ingredient.\"), and the genres' working titles.")
     (MENU / 'page.json').write_text(json.dumps({
         'title': 'The Cocktail Menu · The Bottle and the Bartender',
