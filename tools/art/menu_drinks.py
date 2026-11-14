@@ -206,8 +206,8 @@ DRINKS = [
                 'The Negroni is named after an actual Italian cowboy!',
                 'Really. It is.',
                 'Count Camillo Negroni was a Florentine aristocrat who had spent time in America as a cowboy, gambler, and fencing instructor.',
-                'And when you think about it? It <em>is</em> the kind of drink a drunken Italian cowboy would invent.',
-                "It's an Americano — but with gin instead of soda. And it's surprisingly delightful."],
+                ('And when you think about it? It <em>is</em> the kind of drink a drunken Italian cowboy would invent. '
+                 'The story goes that he asked his bartender for an Americano — but with gin instead of soda.')],
          note_go_end=('→ Check out our Shaken or Stirred? page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
          copy_note=("Nov 13 2026: Philip's copy. The Golden Ratio note is gone (it broke up the story); the stirred-drinks link goes at the end, as on the Manhattan "
                     "and the Boulevardier. Steps: Philip's stir step; the rest Claude's. The cowboy, gambler and fencing-master story is the one Luca Picchi's research tells."),
