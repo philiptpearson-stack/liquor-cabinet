@@ -34,7 +34,7 @@ Makes − 1 + drink
 **Strain.** Strain into a chilled martini glass.
 **Garnish.** A long, thin strip of lemon peel.
 Bond's original is twice this size. We don't recommend it.
-→ Check out our Shaken or Stirred? page for simple tips on balancing stirred cocktails!
+→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!
 Keep exploring
 → Martini
 → Corpse Reviver No. 2

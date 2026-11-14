@@ -13,7 +13,7 @@ DRINKS = [
          glass_line=('rocks, over one big ice cube', 'orange peel'),
          punch='Ever heard of a cocktail called Negroni?',   # back in the big type (Philip, Nov 12)
          lines=["Well, the Boulevardier is Negroni's beefy American cousin. Same delightfully bitter formula. Just made with whiskey instead of gin."],
-         note_go=('→ Check out our Shaken or Stirred? page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),   # Philip, Nov 6 (its own line; The Golden Ratio's stays as it was)
+         note_go=('→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),   # Philip, Nov 6 (its own line; The Golden Ratio's stays as it was)
          steps=[('<strong>Combine ingredients.</strong> Add whiskey, sweet vermouth and Campari to a mixing glass.', [('pour', 'bourbon', 2), ('pour', 'sweet-vermouth', 1), ('pour', 'campari', 1)]),
                 ('<strong>Stir.</strong> Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into <strong>balance.</strong> <em>Dilution is part of the recipe.</em>)', [('ice', 'mix'), ('stir',)]),
                 ('<strong>Strain over a big cube.</strong> Strain into a rocks glass over one large ice cube.', [('ice', 'glass'), ('strain',)]),
@@ -138,7 +138,7 @@ DRINKS = [
                 "Drinkers who wanted a good ol' plain Whiskey Cocktail started asking for it “the Old Fashioned” way.",
                 'And the rest, as they say, is history.'],
          lead="Here's how you make a <em>fantastic</em> Manhattan:",
-         note_go_end=('→ Check out our Shaken or Stirred? page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
+         note_go_end=('→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
          copy_note=("Nov 6 2026: Philip's copy from chat: the opener (\"really.\" in plum, like \"Seriously.\" and \"Really.\"), the story and the quote box, "
                     "\"Here's how you make a *fantastic* Manhattan:\", four dashes, and the Stirred Drinks link after the steps (the line is his, from the Boulevardier). "
                     "Fixed and flagged: the quote is the 1806 definition from The Balance, and Columbian Repository (Philip had it as Jerry Thomas's); \"curaçao\". "
@@ -178,7 +178,7 @@ DRINKS = [
                 ('By the time Sean Connery gave his classic “shaken, not stirred” line in <i>Goldfinger</i> in 1964, '
                  "Americans had been making jokes about the Martini's vanishing vermouth for over a decade.")],
          lead="Here's how you make one today:",
-         after=[('go', '→ Check out our Shaken or Stirred? page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
+         after=[('go', '→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
                 ('h2', 'Speaking of James Bond'),
                 ('scene', 'bond'),
                 "In <i>Casino Royale</i>, Bond orders gin, vodka, and Kina Lillet. He wants it shaken ice-cold, with a big strip of lemon peel. He calls it a Vesper. It's a whole other drink!",
@@ -208,7 +208,7 @@ DRINKS = [
                 'And when you think about it?',
                 ('It <em>is</em> the kind of drink a drunken Italian cowboy would invent. '
                  'The story goes that he asked his bartender for an Americano — but with gin instead of soda.')],
-         note_go_end=('→ Check out our Shaken or Stirred? page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
+         note_go_end=('→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
          copy_note=("Nov 13 2026: Philip's copy. The Golden Ratio note is gone (it broke up the story); the stirred-drinks link goes at the end, as on the Manhattan "
                     "and the Boulevardier. Steps: Philip's stir step; the rest Claude's. The cowboy, gambler and fencing-master story is the one Luca Picchi's research tells."),
          steps=[('<strong>Combine ingredients.</strong> Add the gin, sweet vermouth and Campari to a mixing glass.', [('pour', 'gin', 2), ('pour', 'sweet-vermouth', 1), ('pour', 'campari', 1)]),
@@ -512,7 +512,7 @@ DRINKS = [
                 "Its roots go back to the 1830s, when a French Quarter apothecary named Antoine Peychaud mixed his family's bitters with cognac for his friends.",
                 "Today it's rye, a little sugar, Peychaud's bitters, and a glass rinsed with absinthe.",
                 "That rinse is the trick: pour in a splash of absinthe, swirl it to coat the glass, and pour out the rest. You'll smell it more than taste it."],
-         note_go_end=('→ Check out our Shaken or Stirred? page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
+         note_go_end=('→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
          copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything except the stir step (Philip's). Facts checked (NPR, June 2008): the Louisiana House "
                     "voted 62-33 to make it New Orleans' official cocktail; Antoine Peychaud, Creole apothecary, 1830s, his bitters with cognac."),
          steps=[('<strong>Rinse the glass.</strong> Pour a splash of absinthe into a chilled rocks glass, swirl it to coat, and pour out the rest.', [('rinse', 'absinthe')]),
@@ -667,7 +667,7 @@ DRINKS = [
          lines=['Bartender Phil Ward made it at Death & Co. in Manhattan in 2007: reposado tequila and a little smoky mezcal, built just like an Old Fashioned.',
                 'Back then, most bars only poured tequila as shots or in Margaritas, and hardly poured mezcal at all. One bartender called this drink a “gateway cocktail to mezcal.”',
                 'Agave syrup sweetens it, since it comes from agave, just like the spirits.'],
-         note_go_end=('→ Check out our Shaken or Stirred? page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
+         note_go_end=('→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
          copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything except the stir step (Philip's). Facts checked (Punch): Phil Ward, Death & Co., 2007; "
                     "1½ oz reposado, ½ oz mezcal, a bar spoon of agave, 2 dashes Angostura, flamed orange twist; \"gateway cocktail to mezcal\" (a former PDT bartender)."),
          steps=[('<strong>Combine ingredients.</strong> Add the tequila, mezcal, agave syrup and bitters to a mixing glass.',
@@ -761,7 +761,7 @@ DRINKS = [
                 'He came in tired one night and asked for something with a bit of punch. She stirred up a sweet Martini with a splash of Fernet-Branca, a dark, bitter Italian amaro. He took a sip and said:',
                 ('punch', '“By Jove! That is the real hanky-panky!”'),
                 "That splash of Fernet is all it takes. It's all booze, no citrus, so you stir it."],
-         note_go_end=('→ Check out our Shaken or Stirred? page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
+         note_go_end=('→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
          copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything except the stir step (Philip's). Facts checked (Punch): Ada Coleman at the Savoy, "
                     "Charles Hawtrey (knighted later, in 1922), \"a bit of a punch\", a sweet Martini with Fernet-Branca, \"the real hanky-panky\" (Coleman's telling, 1925). "
                     "Recipe: Punch, 1½ oz each, a bar spoon of Fernet."),
@@ -782,7 +782,7 @@ DRINKS = [
                 "And, of course, Bond tells the bartender to shake it. But it's all booze, no citrus. So by our rule of thumb, you <em>stir</em> it.",
                 ('punch', 'Sorry again, Mr. Bond.')],
          tip="Bond's original is twice this size. We don't recommend it.",
-         note_go_end=('→ Check out our Shaken or Stirred? page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
+         note_go_end=('→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
          copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything except the stir step (Philip's). A sequel to the Martini page's \"Sorry, Mr. Bond.\" "
                     "Facts: Casino Royale (1953), Bond's own recipe (3 gin, 1 vodka, ½ Kina Lillet, shaken, lemon peel), named for Vesper Lynd. Fleming's words paraphrased, not quoted."),
          steps=[('<strong>Combine ingredients.</strong> Add the gin, vodka and Lillet Blanc to a mixing glass.', [('pour', 'gin', 1.5), ('pour', 'vodka', .5), ('pour', 'lillet', .25)]),

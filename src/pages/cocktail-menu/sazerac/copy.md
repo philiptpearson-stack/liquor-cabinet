@@ -37,7 +37,7 @@ Makes − 1 + drink
 **Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)
 **Strain.** Strain into the rinsed glass, no ice.
 **Garnish.** Twist a lemon peel over the top.
-→ Check out our Shaken or Stirred? page for simple tips on balancing stirred cocktails!
+→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!
 Keep exploring
 → Vieux Carré
 → Old Fashioned
