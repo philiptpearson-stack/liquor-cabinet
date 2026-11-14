@@ -199,14 +199,14 @@ DRINKS = [
          recipe=[(2, 'oz', 'gin'), (1, 'oz', 'sweet vermouth'), (1, 'oz', 'Campari')],
          glass_line=('rocks, over one big ice cube', 'orange peel'),
          punch="It's...um...an <em>acquired taste.</em>",
-         lines=["But once you acquire it, there's no going back.",
-                'Bitter.',
+         lines=['Bitter.',
                 'Sweet.',
                 'And beautifully <strong>red.</strong>',
                 'The Negroni is named after an actual Italian cowboy!',
                 'Really. It is.',
                 'Count Camillo Negroni was a Florentine aristocrat who had spent time in America as a cowboy, gambler, and fencing instructor.',
-                ('And when you think about it? It <em>is</em> the kind of drink a drunken Italian cowboy would invent. '
+                'And when you think about it?',
+                ('It <em>is</em> the kind of drink a drunken Italian cowboy would invent. '
                  'The story goes that he asked his bartender for an Americano — but with gin instead of soda.')],
          note_go_end=('→ Check out our Shaken or Stirred? page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
          copy_note=("Nov 13 2026: Philip's copy. The Golden Ratio note is gone (it broke up the story); the stirred-drinks link goes at the end, as on the Manhattan "

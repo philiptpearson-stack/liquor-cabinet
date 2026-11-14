@@ -15,14 +15,14 @@ Makes − 1 + drink
 1 oz Campari
 **Glass:** rocks, over one big ice cube · **Garnish:** orange peel
 It's...um...an *acquired taste.*
-But once you acquire it, there's no going back.
 Bitter.
 Sweet.
 And beautifully **red.**
 The Negroni is named after an actual Italian cowboy!
 Really. It is.
 Count Camillo Negroni was a Florentine aristocrat who had spent time in America as a cowboy, gambler, and fencing instructor.
-And when you think about it? It *is* the kind of drink a drunken Italian cowboy would invent. The story goes that he asked his bartender for an Americano — but with gin instead of soda.
+And when you think about it?
+It *is* the kind of drink a drunken Italian cowboy would invent. The story goes that he asked his bartender for an Americano — but with gin instead of soda.
 Here's how you make one:
 The Cocktail Menu · Classics
 Negroni
