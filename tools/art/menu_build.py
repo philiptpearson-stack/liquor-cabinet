@@ -37,6 +37,14 @@ def oz_text(q):
     return (f'{w} {frac}' if w and frac else (str(w) if w else frac)) + ' oz'
 
 
+class Amount(float):
+    """A pour given as a range (the Old Fashioned's ¼-½ oz syrup, to taste): drawn at the middle, captioned as the range."""
+    def __new__(cls, lo, hi):
+        x = float.__new__(cls, (lo + hi) / 2)
+        x.lo, x.hi = lo, hi
+        return x
+
+
 class Build:
     def __init__(self, d):
         self.d, self.slug = d, d['slug']
@@ -47,7 +55,10 @@ class Build:
         acts = []
         for i, (_, actions) in enumerate(d['steps']):
             for a in actions:
-                acts.append([i] + list(a))
+                a = list(a)
+                if a[0] == 'pour' and isinstance(a[2], tuple):
+                    a[2] = Amount(*a[2])
+                acts.append([i] + a)
         self.uses_mix = any(a[1] in ('strain', 'dump') for a in acts)
         self.gx, self.gs = (290, 1.0) if self.uses_mix else (224, BUILD_SCALE[self.kind])
         # timing: every action gets a slot; a step spans its actions
@@ -567,6 +578,8 @@ class Build:
         if kind in ('pour', 'top', 'float', 'sink'):
             q = a[4]
             word = ING[a[3]][0]
+            if isinstance(q, Amount):   # "¼–½ oz demerara syrup"
+                return f'{oz_text(q.lo)[:-3]}–{oz_text(q.hi)} {word}'
             if q and q < .2 and kind == 'pour':   # a bar spoon (agave in the Oaxaca Old Fashioned, Fernet in the Hanky Panky)
                 return f'a bar spoon of {word}'
             return f'{oz_text(q)} {word}' if q and kind != 'top' else (f'{word}' if kind != 'top' else f'top with {word}')

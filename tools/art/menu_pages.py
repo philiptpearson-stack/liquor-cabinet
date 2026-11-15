@@ -236,6 +236,9 @@ RANGE_CSS = '.rc-range{font-weight:800;flex:none;min-width:5.2rem}   /* a range 
 def amt(q, u, text):
     if isinstance(q, tuple):   # a range (Philip's Martini: 1-2 dashes of orange bitters): two amounts, so the card's script scales both
         lo, hi = q
+        if u == 'oz':   # the Old Fashioned's syrup, "¼ oz–½ oz" (each end in quarter ounces, as the card's script writes them)
+            return (f'<li><span class="rc-range"><span class="amt" data-q="{lo:g}" data-u="oz">{oz_text(lo)}</span>–'
+                    f'<span class="amt" data-q="{hi:g}" data-u="oz">{oz_text(hi)}</span></span> {text}</li>')
         word = {'dash': 'dashes'}.get(u, u + 's')
         return (f'<li><span class="rc-range"><span class="amt" data-q="{lo:g}">{lo:g}</span>–'
                 f'<span class="amt" data-q="{hi:g}" data-u="{u}">{hi:g} {word}</span></span> {text}</li>')
