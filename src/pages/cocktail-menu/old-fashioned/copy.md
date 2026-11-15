@@ -23,10 +23,10 @@ And even by then, the formula was old.
 Like, OLD-old.
 By 1806, people had been sweetening their (harsh!) spirits with sugar and balancing them with bitters and water since the early 1700s!
 *But remember.*
-In those days, the word cocktail meant only that specific formula, and nothing else.
+In those days, the word *cocktail* meant only that specific formula, and nothing else.
 If you wanted a julep, you asked for a julep.
 And if you wanted a smash, a flip, a fizz, or a sling, well. You asked for that.
-So by the 1880s, when bartenders were using all sorts of new ingredients in their cocktails — curaçao, maraschino, and even vermouth (Manhattan! Martini!) — people who wanted it the way they'd always had it found a new way to order:
+So by the 1880s, when bartenders were using all sorts of new ingredients in their cocktails — curaçao, maraschino, and even *vermouth* (Manhattan! Martini!) — people who wanted it the way they'd always had it found a new way to order:
 *“Make my cocktail the Old Fashioned way.”*
 And it stuck.
 Here's how you make one:
