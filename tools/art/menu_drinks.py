@@ -226,17 +226,19 @@ DRINKS = [
                  '— <cite>The Balance, and Columbian Repository</cite>, Hudson, New York, 1806'),
                 'And even by then, the formula was old.',
                 'Like, OLD-old.',
-                'People were sweetening their (harsh!) spirits with sugar and balancing them with bitters and water by the early 1700s!',
-                'But remember! In those days, the word <em>cocktail</em> meant that specific formula, and not anything else.',
-                'If you wanted a cocktail, you asked for a cocktail.',
-                'But if you wanted a julep, you asked for that instead.',
-                'And...if you wanted a smash, a flip, a fizz, or a sling, well. You get it.',
-                ("So when the 1880s rolled around and bartenders started experimenting with all sorts of new ingredients in their cocktails — "
-                 "curaçao, maraschino, or even <em>vermouth</em> (Manhattan! Martini!) — people who wanted it the way they'd always had it found a new way to order:"),
+                'By 1806, people had been sweetening their (harsh!) spirits with sugar and balancing them with bitters and water since the early 1700s!',
+                '<em>But remember.</em>',
+                'In those days, the word cocktail meant only that specific formula, and nothing else.',
+                'If you wanted a julep, you asked for a julep.',
+                'And if you wanted a smash, a flip, a fizz, or a sling, well. You asked for that.',
+                ('scene', 'chalkboard'),
+                ("So by the 1880s, when bartenders were using all sorts of new ingredients in their cocktails — "
+                 "curaçao, maraschino, and even vermouth (Manhattan! Martini!) — people who wanted it the way they'd always had it found a new way to order:"),
                 ('punch', '<em>“Make my cocktail the Old Fashioned way.”</em>'),
                 'And it stuck.'],
          note_go_end=('→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
-         copy_note=("Nov 14 2026: Philip's copy; the 1806 quote box as on the Manhattan. Recipe and prep per Philip: demerara simple, ¼ to ½ oz to taste; "
+         scenes='old_fashioned_scenes',   # Phil, circa 1820, at the chalkboard: Julep, Smash, Flip, Fizz, Sling ≠ Cocktail (Philip, Nov 14)
+         copy_note=("Nov 14 2026: Philip's copy (second pass that evening: \"By 1806...\", \"But remember.\", the julep lines, the 1820 chalkboard); the 1806 quote box as on the Manhattan. Recipe and prep per Philip: demerara simple, ¼ to ½ oz to taste; "
                     "4 dashes Angostura and 2 of orange bitters; built in a mixing glass, stirred, strained over a big cube. The stir step is Philip's; "
                     "the stirred-drinks link at the end, as on the Manhattan."),
          steps=[('<strong>Combine ingredients.</strong> Add the whiskey, demerara simple and both bitters to a mixing glass.',

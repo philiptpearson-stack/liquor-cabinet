@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 14 2026: Philip's copy; the 1806 quote box as on the Manhattan. Recipe and prep per Philip: demerara simple, ¼ to ½ oz to taste; 4 dashes Angostura and 2 of orange bitters; built in a mixing glass, stirred, strained over a big cube. The stir step is Philip's; the stirred-drinks link at the end, as on the Manhattan. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 14 2026: Philip's copy (second pass that evening: "By 1806...", "But remember.", the julep lines, the 1820 chalkboard); the 1806 quote box as on the Manhattan. Recipe and prep per Philip: demerara simple, ¼ to ½ oz to taste; 4 dashes Angostura and 2 of orange bitters; built in a mixing glass, stirred, strained over a big cube. The stir step is Philip's; the stirred-drinks link at the end, as on the Manhattan. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Old ***Fashioned.***
 Old Fashioned Recipe
@@ -21,12 +21,12 @@ In 1806, a New York newspaper defined a “cock-tail” like this:
 — The Balance, and Columbian Repository, Hudson, New York, 1806
 And even by then, the formula was old.
 Like, OLD-old.
-People were sweetening their (harsh!) spirits with sugar and balancing them with bitters and water by the early 1700s!
-But remember! In those days, the word *cocktail* meant that specific formula, and not anything else.
-If you wanted a cocktail, you asked for a cocktail.
-But if you wanted a julep, you asked for that instead.
-And...if you wanted a smash, a flip, a fizz, or a sling, well. You get it.
-So when the 1880s rolled around and bartenders started experimenting with all sorts of new ingredients in their cocktails — curaçao, maraschino, or even *vermouth* (Manhattan! Martini!) — people who wanted it the way they'd always had it found a new way to order:
+By 1806, people had been sweetening their (harsh!) spirits with sugar and balancing them with bitters and water since the early 1700s!
+*But remember.*
+In those days, the word cocktail meant only that specific formula, and nothing else.
+If you wanted a julep, you asked for a julep.
+And if you wanted a smash, a flip, a fizz, or a sling, well. You asked for that.
+So by the 1880s, when bartenders were using all sorts of new ingredients in their cocktails — curaçao, maraschino, and even vermouth (Manhattan! Martini!) — people who wanted it the way they'd always had it found a new way to order:
 *“Make my cocktail the Old Fashioned way.”*
 And it stuck.
 Here's how you make one:

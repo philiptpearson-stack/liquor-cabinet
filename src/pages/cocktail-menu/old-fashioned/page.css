@@ -65,3 +65,16 @@
 .howto-steps li.s3{animation:hs3 16.65s linear infinite}@keyframes hs3{0%{background-color:transparent}53.75%{background-color:transparent}54.35%{background-color:var(--step-hl)}75.38%{background-color:var(--step-hl)}75.98%{background-color:transparent}100%{background-color:transparent}}
 .howto-steps li.s4{animation:hs4 16.65s linear infinite}@keyframes hs4{0%{background-color:transparent}74.78%{background-color:transparent}75.38%{background-color:var(--step-hl)}83.18%{background-color:var(--step-hl)}83.78%{background-color:transparent}100%{background-color:transparent}}
 .rc-range{font-weight:800;flex:none;min-width:5.2rem}   /* a range of dashes ("1–2 dashes"), each end scaling with the card */
+/* Old Fashioned: Phil, circa 1820, at the chalkboard (8 s): Julep, Smash, Flip, Fizz, Sling, each one ≠ Cocktail. Still frame: Julep ≠ Cocktail. */
+.w0{animation:w0 8.0s linear infinite}
+@keyframes w0{0%{opacity:1}18.5%{opacity:1}20%{opacity:0}98.5%{opacity:0}100%{opacity:1}}
+.w1{opacity:0;animation:w1 8.0s linear infinite}
+@keyframes w1{0%{opacity:0}18.5%{opacity:0}20%{opacity:1}38.5%{opacity:1}40%{opacity:0}100%{opacity:0}}
+.w2{opacity:0;animation:w2 8.0s linear infinite}
+@keyframes w2{0%{opacity:0}38.5%{opacity:0}40%{opacity:1}58.5%{opacity:1}60%{opacity:0}100%{opacity:0}}
+.w3{opacity:0;animation:w3 8.0s linear infinite}
+@keyframes w3{0%{opacity:0}58.5%{opacity:0}60%{opacity:1}78.5%{opacity:1}80%{opacity:0}100%{opacity:0}}
+.w4{opacity:0;animation:w4 8.0s linear infinite}
+@keyframes w4{0%{opacity:0}78.5%{opacity:0}80%{opacity:1}98.5%{opacity:1}100%{opacity:0}100%{opacity:0}}
+.tap{animation:tap 1.4s ease-in-out infinite}
+@keyframes tap{0%{transform:rotate(0)}50%{transform:rotate(-7deg)}100%{transform:rotate(0)}}
