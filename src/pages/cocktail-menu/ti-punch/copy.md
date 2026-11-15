@@ -13,7 +13,8 @@ Makes − 1 + drink
 2 oz rhum agricole blanc
 1 barspoon cane syrup
 1 coin of lime, with a little flesh on it
-**Glass:** small rocks glass, no ice · **Garnish:** a coin of lime, in the drink
+**Glass:** small rocks glass, no ice
+**Garnish:** a coin of lime, in the drink
 Make it yourself.
 *That's the tradition.*
 “Ti’” is Creole for “petit.” So: a little punch, the everyday drink of Martinique and Guadeloupe, in the French Caribbean.
@@ -26,7 +27,8 @@ Makes − 1 + drink
 2 oz rhum agricole blanc
 1 barspoon cane syrup
 1 coin of lime, with a little flesh on it
-**Glass:** small rocks glass, no ice · **Garnish:** a coin of lime, in the drink
+**Glass:** small rocks glass, no ice
+**Garnish:** a coin of lime, in the drink
 **Cut a lime coin.** Slice a coin from the side of a lime, about the size of a quarter, with a little flesh on it. Squeeze it into a small glass, and drop it in.
 **Add the cane syrup.** A bar spoon, or to taste.
 **Add the rhum.**

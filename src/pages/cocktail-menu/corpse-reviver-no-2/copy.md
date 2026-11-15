@@ -15,7 +15,8 @@ Makes − 1 + drink
 ¾ oz Lillet Blanc
 ¾ oz lemon juice
 ¼ oz absinthe, to rinse the glass
-**Glass:** coupe, rinsed with absinthe · **Garnish:** an orange twist
+**Glass:** coupe, rinsed with absinthe
+**Garnish:** an orange twist
 A hangover cure.
 *Supposedly.*
 “Corpse revivers” were a whole family of morning-after drinks. This is the one that lived, printed by Harry Craddock in The Savoy Cocktail Book in 1930, along with a warning:
@@ -32,7 +33,8 @@ Makes − 1 + drink
 ¾ oz Lillet Blanc
 ¾ oz lemon juice
 ¼ oz absinthe, to rinse the glass
-**Glass:** coupe, rinsed with absinthe · **Garnish:** an orange twist
+**Glass:** coupe, rinsed with absinthe
+**Garnish:** an orange twist
 **Rinse the glass.** Pour a splash of absinthe into a chilled coupe, swirl it to coat, and pour out the rest.
 **Combine ingredients.** Equal parts gin, orange liqueur, Lillet Blanc and lemon juice, into your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.

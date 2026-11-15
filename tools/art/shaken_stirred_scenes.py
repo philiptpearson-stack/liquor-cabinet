@@ -13,7 +13,7 @@ from art import *
 from menu_art import countertop, TWINKLE_CSS
 from bartender import bartender
 
-REPO = pathlib.Path('/home/claude/liquor-cabinet')
+REPO = pathlib.Path(__file__).resolve().parents[2]   # the repo, wherever it's checked out
 PAGE = REPO / 'src/pages/cocktails-how-to/shaken-or-stirred'
 (PAGE / 'scenes').mkdir(parents=True, exist_ok=True)
 CSS = ['/* Cocktails How-To / Shaken or Stirred?: scene motion. Written by tools/art/shaken_stirred_scenes.py; edit it there. */', TWINKLE_CSS.strip()]

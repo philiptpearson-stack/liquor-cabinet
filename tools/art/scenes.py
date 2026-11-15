@@ -2,7 +2,7 @@
 import math, pathlib
 from art import *
 
-REPO = pathlib.Path('/home/claude/liquor-cabinet')
+REPO = pathlib.Path(__file__).resolve().parents[2]   # the repo, wherever it's checked out
 D1 = REPO / 'src/pages/makers-mark/founders-gamble/scenes'
 D1.mkdir(parents=True, exist_ok=True)
 OUT = {}

@@ -14,7 +14,8 @@ Makes − 1 + drink
 ¾ oz orange liqueur
 ¾ oz lime juice
 ½ oz cranberry juice
-**Glass:** martini glass · **Garnish:** orange twist
+**Glass:** martini glass
+**Garnish:** orange twist
 Yes, it's that pink drink.
 *And it's good.*
 In 1988, bartender Toby Cecchini at the Odeon in New York rebuilt a sticky version he'd heard about from San Francisco: citrus vodka, orange liqueur, fresh lime and a splash of cranberry.
@@ -28,7 +29,8 @@ Makes − 1 + drink
 ¾ oz orange liqueur
 ¾ oz lime juice
 ½ oz cranberry juice
-**Glass:** martini glass · **Garnish:** orange twist
+**Glass:** martini glass
+**Garnish:** orange twist
 **Combine ingredients.** Add the citrus vodka, orange liqueur, lime juice and cranberry juice to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Strain.** Strain into a chilled martini glass.

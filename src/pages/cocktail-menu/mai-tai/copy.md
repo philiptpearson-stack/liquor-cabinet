@@ -15,7 +15,8 @@ Makes − 1 + drink
 ½ oz orange liqueur (orange curaçao)
 ½ oz orgeat (almond syrup)
 ¼ oz simple syrup
-**Glass:** rocks, over crushed ice · **Garnish:** mint sprig and a lime wedge
+**Glass:** rocks, over crushed ice
+**Garnish:** mint sprig and a lime wedge
 “*Maita’i roa aé!*”
 That’s Tahitian for “out of this world, the best.”
 That's what Trader Vic's friend Carrie Guild, visiting from Tahiti, said after her first sip in 1944, at his bar in Oakland, California. So that's what Vic named it.
@@ -30,7 +31,8 @@ Makes − 1 + drink
 ½ oz orange liqueur (orange curaçao)
 ½ oz orgeat (almond syrup)
 ¼ oz simple syrup
-**Glass:** rocks, over crushed ice · **Garnish:** mint sprig and a lime wedge
+**Glass:** rocks, over crushed ice
+**Garnish:** mint sprig and a lime wedge
 **Combine ingredients.** Add the rum, lime juice, orange liqueur, orgeat and simple syrup to your shaker.
 **Shake.** Add crushed ice (or cubes) and shake hard.
 **Pour it all in.** Pour everything, ice and all, into a rocks glass. Top it up with more crushed ice if it needs it.

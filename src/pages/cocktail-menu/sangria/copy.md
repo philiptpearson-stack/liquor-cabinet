@@ -16,7 +16,8 @@ Makes − 1 + drink
 1 oz orange juice
 ½ oz simple syrup
 1 oz soda water, to top (optional)
-**Glass:** wine glass, over ice · **Garnish:** an orange wheel and fresh berries
+**Glass:** wine glass, over ice
+**Garnish:** an orange wheel and fresh berries
 For a pitcher (about 6): one bottle of red wine, ¾ cup brandy, ⅓ cup orange liqueur, ¾ cup orange juice and ⅓ cup simple syrup, plus a sliced orange, apple and lemon. Chill it for a few hours, or overnight. Add ice and soda just before serving.
 Wine, fruit and a little brandy.
 Made for a crowd.
@@ -33,7 +34,8 @@ Makes − 1 + drink
 1 oz orange juice
 ½ oz simple syrup
 1 oz soda water, to top (optional)
-**Glass:** wine glass, over ice · **Garnish:** an orange wheel and fresh berries
+**Glass:** wine glass, over ice
+**Garnish:** an orange wheel and fresh berries
 For a pitcher (about 6): one bottle of red wine, ¾ cup brandy, ⅓ cup orange liqueur, ¾ cup orange juice and ⅓ cup simple syrup, plus a sliced orange, apple and lemon. Chill it for a few hours, or overnight. Add ice and soda just before serving.
 **Ice.** Fill a wine glass with ice.
 **Wine, brandy and orange.** Add the wine, brandy, orange liqueur, orange juice and simple syrup.

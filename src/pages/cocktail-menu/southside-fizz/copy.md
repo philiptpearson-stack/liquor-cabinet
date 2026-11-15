@@ -15,7 +15,8 @@ Makes − 1 + drink
 1 oz lime juice
 6 mint leaves
 2 oz soda water
-**Glass:** highball, over ice · **Garnish:** mint sprig
+**Glass:** highball, over ice
+**Garnish:** mint sprig
 Think of it as a gin Mojito, with fizz.
 Legend ties the Southside to Chicago's South Side during Prohibition. Nobody's proven it, but it's a good story.
 Gin, lime and fresh mint, shaken, then topped with soda water.
@@ -30,7 +31,8 @@ Makes − 1 + drink
 1 oz lime juice
 6 mint leaves
 2 oz soda water
-**Glass:** highball, over ice · **Garnish:** mint sprig
+**Glass:** highball, over ice
+**Garnish:** mint sprig
 **Combine ingredients.** Add the gin, simple syrup, lime juice and mint leaves to your shaker.
 **Shake.** Add ice and shake hard. It wakes up the mint.
 **Strain over ice.** Strain into a highball glass full of fresh ice.

@@ -13,7 +13,8 @@ Makes − 1 + drink
 1 oz crème de violette
 1 oz pear nectar (or purée)
 3 oz Champagne, or another dry sparkling wine
-**Glass:** coupe · **Garnish:** an edible flower (optional)
+**Glass:** coupe
+**Garnish:** an edible flower (optional)
 Named for that purple light, just after sunset.
 Floral violet liqueur, sweet pear, and a glass full of Champagne.
 No shaker needed. Just pour, top and serve.
@@ -24,7 +25,8 @@ Makes − 1 + drink
 1 oz crème de violette
 1 oz pear nectar (or purée)
 3 oz Champagne, or another dry sparkling wine
-**Glass:** coupe · **Garnish:** an edible flower (optional)
+**Glass:** coupe
+**Garnish:** an edible flower (optional)
 **Violette and pear.** Pour the crème de violette and pear nectar into a chilled coupe.
 **Top with Champagne.** Pour slowly, so it doesn't foam over.
 **Garnish.** An edible flower, if you have one.

@@ -10,7 +10,7 @@ Each page folder holds:
   page.css     that page's own scene motion (optional)
   copy.md      the approved copy, one line per line of text on the page
   scenes/      crayon scenes as .svg files, placed with <!--scene:name-->
-  cast.svg     character drawings (<symbol>s), shared with every page nested below
+  cast.svg     character drawings (<symbol>s), shared with every page nested below (a page carries only the ones it shows)
 
 Real photos (the Maker's Mark ad, product shots) live in src/photos/ and are baked into
 the page. Place one with <!--asset:name|alt text-->; if the file is missing, the page shows
@@ -132,6 +132,28 @@ def cast_for(d: Path) -> str:
     return '\n'.join(reversed(parts))
 
 
+def used_cast(cast: str, story: str) -> str:
+    """Only the cast drawings this page shows. A drawing counts when the page points at it (href="#id"),
+    when a kept drawing points at it, or when the page's search can list it (the Cocktail Menu's results
+    show each drink's "<slug>-icon"). The drink pages used to carry all of the menu's door icons, about
+    250 KB a page, and show none of them."""
+    symbols = {m.group(1): m.group(0) for m in re.finditer(r'[ \t]*<symbol id="([^"]+)".*?</symbol>\n?', cast, flags=re.S)}
+    want = set(re.findall(r'href="#([^"]+)"', story))
+    for data in re.findall(r'data-search="([^"]*)"', story):
+        want |= {it['s'] + '-icon' for it in json.loads(html.unescape(data))}
+    keep, todo = set(), [i for i in want if i in symbols]
+    while todo:
+        i = todo.pop()
+        if i in keep:
+            continue
+        keep.add(i)
+        todo += [j for j in re.findall(r'href="#([^"]+)"', symbols[i]) if j in symbols]
+    for i, text in symbols.items():
+        if i not in keep:
+            cast = cast.replace(text, '', 1)
+    return cast.strip() if '<symbol' in cast else ''
+
+
 def questions_for(slug: str, kit: dict) -> str:
     """The shared footer, minus this page's own entry; '' when nothing is left."""
     def own(m):   # only the page itself; a page inside a topic still lists the topic (Philip, Oct 31 2026)
@@ -180,7 +202,7 @@ def build_page(d: Path, template: str, kit: dict, home: str) -> list[str]:
     story, missing = place_scenes(story, d)
     if missing:
         problems.append(f'{slug}: missing scene file(s): {", ".join(missing)}')
-    cast = cast_for(d)
+    cast = used_cast(cast_for(d), story)
     defs = kit['defs']
     if cast:
         defs = defs.replace('  </defs>', cast + '\n  </defs>')

@@ -1,6 +1,6 @@
 import sys, pathlib, subprocess, json
 from PIL import Image, ImageDraw
-REPO = pathlib.Path('/home/claude/liquor-cabinet')
+REPO = pathlib.Path(__file__).resolve().parents[2]   # the repo, wherever it's checked out
 names = sys.argv[1].split(',')
 times = [int(t) for t in sys.argv[2].split(',')]
 css = (REPO / 'src/pages/makers-mark/wsj/page.css').read_text()

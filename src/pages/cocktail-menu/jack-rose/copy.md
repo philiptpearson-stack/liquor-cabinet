@@ -13,7 +13,8 @@ Makes − 1 + drink
 2 oz applejack
 ¾ oz lemon juice
 ¾ oz grenadine
-**Glass:** coupe · **Garnish:** lemon twist
+**Glass:** coupe
+**Garnish:** lemon twist
 In Ernest Hemingway's The Sun Also Rises (1926), Jake has one as he waits for Brett at the Hôtel Crillon.
 “About quarter to six I went down to the bar and had a Jack Rose with George the barman.”
 And what did George make him?
@@ -25,7 +26,8 @@ Makes − 1 + drink
 2 oz applejack
 ¾ oz lemon juice
 ¾ oz grenadine
-**Glass:** coupe · **Garnish:** lemon twist
+**Glass:** coupe
+**Garnish:** lemon twist
 **Combine ingredients.** Add the applejack, lemon juice and grenadine to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Strain.** Strain into a chilled coupe.

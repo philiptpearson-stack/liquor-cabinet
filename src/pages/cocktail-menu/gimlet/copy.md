@@ -13,7 +13,8 @@ Makes − 1 + drink
 2 oz gin
 1 oz lime juice
 1 oz simple syrup
-**Glass:** coupe · **Garnish:** lime wheel
+**Glass:** coupe
+**Garnish:** lime wheel
 “A real gimlet is half gin and half Rose's Lime Juice and nothing else.”
 That's detective Philip Marlowe's friend Terry Lennox, in Raymond Chandler's 1953 novel The Long Goodbye.
 You don't have to take cocktail advice from a crime novel. Today most bartenders use fresh lime and a little simple syrup, instead of sweetened lime cordial.
@@ -25,7 +26,8 @@ Makes − 1 + drink
 2 oz gin
 1 oz lime juice
 1 oz simple syrup
-**Glass:** coupe · **Garnish:** lime wheel
+**Glass:** coupe
+**Garnish:** lime wheel
 **Combine ingredients.** Add the gin, lime juice and simple syrup to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Strain.** Strain into a chilled coupe.

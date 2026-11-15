@@ -15,7 +15,8 @@ Makes − 1 + drink
 1 oz simple syrup
 8 mint leaves
 2 oz soda water
-**Glass:** highball, over ice · **Garnish:** mint sprig and a lime wheel
+**Glass:** highball, over ice
+**Garnish:** mint sprig and a lime wheel
 It took about 75 years to become an overnight sensation.
 The first known Mojito recipe was printed in Havana in 1927. A few years later, it was on the menu at Sloppy Joe's, a Havana bar famous with American tourists.
 Its ancestor is older still: the Draque, a Cuban mix of cane spirit, lime, sugar and mint, around since at least the 1830s. Legend names it for Sir Francis Drake.
@@ -30,7 +31,8 @@ Makes − 1 + drink
 1 oz simple syrup
 8 mint leaves
 2 oz soda water
-**Glass:** highball, over ice · **Garnish:** mint sprig and a lime wheel
+**Glass:** highball, over ice
+**Garnish:** mint sprig and a lime wheel
 **Mint, lime and sugar.** Add the mint leaves, lime juice and simple syrup to a tall glass.
 **Muddle, gently.** Press the mint a few times, just enough to wake it up. Don't shred it.
 **Rum and ice.** Pour in the rum, then fill the glass with ice (crushed, if you have it).

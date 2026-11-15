@@ -14,7 +14,8 @@ Makes − 1 + drink
 ¾ oz green Chartreuse
 ¾ oz maraschino liqueur
 ¾ oz lime juice
-**Glass:** coupe · **Garnish:** a cherry
+**Glass:** coupe
+**Garnish:** a cherry
 Lost for most of a century.
 Found in Seattle.
 The Detroit Athletic Club had it on the menu in 1916, at twice the price of a Manhattan. Then Prohibition came, and it all but disappeared.
@@ -29,7 +30,8 @@ Makes − 1 + drink
 ¾ oz green Chartreuse
 ¾ oz maraschino liqueur
 ¾ oz lime juice
-**Glass:** coupe · **Garnish:** a cherry
+**Glass:** coupe
+**Garnish:** a cherry
 **Combine ingredients.** Equal parts gin, green Chartreuse, maraschino liqueur and lime juice, into your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Strain.** Strain into a chilled coupe.

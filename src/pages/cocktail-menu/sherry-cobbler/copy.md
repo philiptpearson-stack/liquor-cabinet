@@ -13,7 +13,8 @@ Makes − 1 + drink
 3 oz amontillado sherry
 ½ oz simple syrup
 2 orange half-wheels
-**Glass:** tall glass, over crushed ice · **Garnish:** fresh berries and a straw
+**Glass:** tall glass, over crushed ice
+**Garnish:** fresh berries and a straw
 The hit drink of the 1840s.
 The new thing was the *ice.*
 In the 1840s, everybody was drinking Sherry Cobblers. Ice had just become something you could buy: cut from New England ponds in winter, packed away, and shipped all over the country.
@@ -27,7 +28,8 @@ Makes − 1 + drink
 3 oz amontillado sherry
 ½ oz simple syrup
 2 orange half-wheels
-**Glass:** tall glass, over crushed ice · **Garnish:** fresh berries and a straw
+**Glass:** tall glass, over crushed ice
+**Garnish:** fresh berries and a straw
 **Combine ingredients.** Add the sherry, simple syrup and two orange half-wheels to your shaker.
 **Shake.** Add ice and shake hard. It's fine to bruise the orange a little.
 **Strain over crushed ice.** Fill a tall glass with crushed ice, and strain the drink over it.

@@ -16,7 +16,8 @@ Makes − 1 + drink
 ¼ oz Bénédictine
 2 dashes Peychaud's bitters
 2 dashes Angostura bitters
-**Glass:** rocks, over one big ice cube · **Garnish:** lemon twist
+**Glass:** rocks, over one big ice cube
+**Garnish:** lemon twist
 New Orleans, stirred.
 *Vieux Carré* means old square: the old name for New Orleans' French Quarter. Walter Bergeron created this drink there in the 1930s, at the Hotel Monteleone.
 Rye, cognac, sweet vermouth, a little Bénédictine and two kinds of bitters. Rich, spicy and smooth.
@@ -31,7 +32,8 @@ Makes − 1 + drink
 ¼ oz Bénédictine
 2 dashes Peychaud's bitters
 2 dashes Angostura bitters
-**Glass:** rocks, over one big ice cube · **Garnish:** lemon twist
+**Glass:** rocks, over one big ice cube
+**Garnish:** lemon twist
 **Combine ingredients.** Add everything to a mixing glass.
 **Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)
 **Strain over a big cube.** Strain into a rocks glass over one large ice cube.

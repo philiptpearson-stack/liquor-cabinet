@@ -13,7 +13,8 @@ Makes − 1 + drink
 6 oz ginger ale
 ½ oz lime juice
 ½ oz grenadine
-**Glass:** tall glass, over ice · **Garnish:** a cherry (or three)
+**Glass:** tall glass, over ice
+**Garnish:** a cherry (or three)
 A drink for the kids' table.
 No alcohol at all.
 It's named for Shirley Temple, the biggest child star of the 1930s. Restaurants from Hollywood to Honolulu claim they made the first one, so the young star would have something fancy to drink at the grown-ups' table.
@@ -26,7 +27,8 @@ Makes − 1 + drink
 6 oz ginger ale
 ½ oz lime juice
 ½ oz grenadine
-**Glass:** tall glass, over ice · **Garnish:** a cherry (or three)
+**Glass:** tall glass, over ice
+**Garnish:** a cherry (or three)
 **Ice.** Fill a tall glass with ice.
 **Ginger ale and lime.**
 **Sink the grenadine.** Pour it in slowly. It's heavier than the ginger ale, so it sinks to the bottom.

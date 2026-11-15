@@ -13,7 +13,8 @@ Makes − 1 + drink
 3 oz prosecco
 2 oz Aperol
 1 oz soda water
-**Glass:** wine glass, over ice · **Garnish:** orange slice
+**Glass:** wine glass, over ice
+**Garnish:** orange slice
 It's as easy as three, two, one.
 Three parts prosecco, two parts Aperol, one part soda water. Pour it over ice in a big wine glass, and that's it.
 The spritz goes back to the 1800s, when Austrian soldiers stationed in northeast Italy started adding a splash (in German, a *spritz*) of sparkling water to the local wine.
@@ -26,7 +27,8 @@ Makes − 1 + drink
 3 oz prosecco
 2 oz Aperol
 1 oz soda water
-**Glass:** wine glass, over ice · **Garnish:** orange slice
+**Glass:** wine glass, over ice
+**Garnish:** orange slice
 **Ice the glass.** Fill a big wine glass with ice.
 **Prosecco, then Aperol.** Pour in the prosecco, then the Aperol.
 **Top with soda.** A splash of soda water, then one gentle stir.

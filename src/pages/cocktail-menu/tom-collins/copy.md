@@ -14,7 +14,8 @@ Makes − 1 + drink
 1 oz lemon juice
 1 oz simple syrup
 2 oz soda water
-**Glass:** highball, over ice · **Garnish:** lemon wheel and a cherry
+**Glass:** highball, over ice
+**Garnish:** lemon wheel and a cherry
 Have you seen Tom Collins?
 In 1874, a prank swept New York: friends told each other that a man named Tom Collins was going around town, talking about them.
 There was no Tom Collins. But there is this drink.
@@ -28,7 +29,8 @@ Makes − 1 + drink
 1 oz lemon juice
 1 oz simple syrup
 2 oz soda water
-**Glass:** highball, over ice · **Garnish:** lemon wheel and a cherry
+**Glass:** highball, over ice
+**Garnish:** lemon wheel and a cherry
 **Fill with ice.** Fill a highball glass with ice.
 **Gin, lemon and syrup.** Pour them right into the glass.
 **Top with soda water.** Give it a quick stir.

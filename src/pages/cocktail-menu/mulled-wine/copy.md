@@ -17,7 +17,8 @@ Makes − 1 + drink
 2 whole cloves
 1 star anise (optional)
 ½ oz brandy (optional)
-**Glass:** warm mug · **Garnish:** an orange wheel and a cinnamon stick
+**Glass:** warm mug
+**Garnish:** an orange wheel and a cinnamon stick
 Hot wine, spice and orange.
 Winter, in a mug.
 People have been warming wine with honey and spices since Roman times. In Germany it's *Glühwein,* “glow wine,” and it's the smell of every Christmas market.
@@ -34,7 +35,8 @@ Makes − 1 + drink
 2 whole cloves
 1 star anise (optional)
 ½ oz brandy (optional)
-**Glass:** warm mug · **Garnish:** an orange wheel and a cinnamon stick
+**Glass:** warm mug
+**Garnish:** an orange wheel and a cinnamon stick
 **Brandy first.** Add the brandy to a warm mug. (Or skip it.)
 **Add the mulled wine.** Warm the wine in a small pot with the honey, orange and spices, on low, for about 20 minutes: steaming, never boiling. Then ladle it in.
 **Garnish.** An orange wheel and a cinnamon stick.

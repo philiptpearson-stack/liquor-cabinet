@@ -14,7 +14,8 @@ Makes − 1 + drink
 1 oz orgeat (almond syrup)
 ¾ oz lemon juice
 ½ oz rye
-**Glass:** coupe · **Garnish:** none
+**Glass:** coupe
+**Garnish:** none
 An ounce and a half of bitters.
 *On purpose.*
 Most recipes call for Angostura bitters by the dash. This one uses it as the base spirit. (Angostura is about as strong as whiskey, after all.)
@@ -28,7 +29,8 @@ Makes − 1 + drink
 1 oz orgeat (almond syrup)
 ¾ oz lemon juice
 ½ oz rye
-**Glass:** coupe · **Garnish:** none
+**Glass:** coupe
+**Garnish:** none
 **Combine ingredients.** Yes, really: pour the Angostura by the jigger. Then the orgeat, lemon juice and rye.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Strain.** Strain into a chilled coupe. No garnish needed.

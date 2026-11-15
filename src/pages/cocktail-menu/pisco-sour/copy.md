@@ -15,7 +15,8 @@ Makes − 1 + drink
 ¾ oz simple syrup
 1 egg white
 3 drops Angostura bitters, on top
-**Glass:** coupe · **Garnish:** a few drops of Angostura bitters on the foam
+**Glass:** coupe
+**Garnish:** a few drops of Angostura bitters on the foam
 Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.
 Peru's national drink.
 Invented by a guy from Utah.
@@ -32,7 +33,8 @@ Makes − 1 + drink
 ¾ oz simple syrup
 1 egg white
 3 drops Angostura bitters, on top
-**Glass:** coupe · **Garnish:** a few drops of Angostura bitters on the foam
+**Glass:** coupe
+**Garnish:** a few drops of Angostura bitters on the foam
 Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.
 **Combine ingredients.** Add the pisco, lime juice, simple syrup and egg white to your shaker.
 **Dry shake.** Shake hard, without ice, for about 15 seconds. That's what whips the egg white into foam.

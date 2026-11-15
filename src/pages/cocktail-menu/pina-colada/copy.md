@@ -14,7 +14,8 @@ Makes − 1 + drink
 1 ½ oz cream of coconut (like Coco López)
 2 oz pineapple juice
 ½ oz lime juice
-**Glass:** highball, over crushed ice · **Garnish:** a pineapple wedge and a cherry
+**Glass:** highball, over crushed ice
+**Garnish:** a pineapple wedge and a cherry
 Puerto Rico's national drink.
 *Officially.*
 Bartender Ramón “Monchito” Marrero says he created it in 1954 at the Caribe Hilton in San Juan: rum, cream of coconut and pineapple juice, shaken and poured over ice.
@@ -29,7 +30,8 @@ Makes − 1 + drink
 1 ½ oz cream of coconut (like Coco López)
 2 oz pineapple juice
 ½ oz lime juice
-**Glass:** highball, over crushed ice · **Garnish:** a pineapple wedge and a cherry
+**Glass:** highball, over crushed ice
+**Garnish:** a pineapple wedge and a cherry
 **Combine ingredients.** Add the rum, cream of coconut, pineapple juice and lime juice to your shaker.
 **Shake.** Add crushed ice and shake hard, until the cream of coconut is all mixed in.
 **Pour it all in.** Pour everything, ice and all, into a tall glass. Top it up with more crushed ice if it needs it.

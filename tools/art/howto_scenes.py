@@ -3,7 +3,7 @@ import pathlib
 from art import *
 from bartender import bartender, PLAID
 
-REPO = pathlib.Path('/home/claude/liquor-cabinet')
+REPO = pathlib.Path(__file__).resolve().parents[2]   # the repo, wherever it's checked out
 HUB = REPO / 'src/pages/cocktails-how-to'
 GR = HUB / 'golden-ratio'
 for d in (HUB / 'scenes', GR / 'scenes'):

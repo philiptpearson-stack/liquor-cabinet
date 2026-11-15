@@ -13,7 +13,8 @@ Makes − 1 + drink
 2 oz bourbon or rye
 1 oz sweet vermouth
 1 oz Campari
-**Glass:** rocks, over one big ice cube · **Garnish:** orange peel
+**Glass:** rocks, over one big ice cube
+**Garnish:** orange peel
 Ever heard of a cocktail called Negroni?
 Well, the Boulevardier is Negroni's beefy American cousin. Same delightfully bitter formula. Just made with whiskey instead of gin.
 → Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!
@@ -24,7 +25,8 @@ Makes − 1 + drink
 2 oz bourbon or rye
 1 oz sweet vermouth
 1 oz Campari
-**Glass:** rocks, over one big ice cube · **Garnish:** orange peel
+**Glass:** rocks, over one big ice cube
+**Garnish:** orange peel
 **Combine ingredients.** Add whiskey, sweet vermouth and Campari to a mixing glass.
 **Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)
 **Strain over a big cube.** Strain into a rocks glass over one large ice cube.

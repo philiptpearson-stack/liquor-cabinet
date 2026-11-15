@@ -14,7 +14,8 @@ Makes − 1 + drink
 1 oz fresh espresso, cooled
 ½ oz coffee liqueur
 ¼ oz simple syrup
-**Glass:** coupe · **Garnish:** three coffee beans
+**Glass:** coupe
+**Garnish:** three coffee beans
 A customer asked for a drink to wake her up.
 And then knock her flat.
 So the story goes, anyway. Bartender Dick Bradsell made the first one at the Soho Brasserie in London in the 1980s: vodka, coffee liqueur, a little sugar and fresh espresso.
@@ -28,7 +29,8 @@ Makes − 1 + drink
 1 oz fresh espresso, cooled
 ½ oz coffee liqueur
 ¼ oz simple syrup
-**Glass:** coupe · **Garnish:** three coffee beans
+**Glass:** coupe
+**Garnish:** three coffee beans
 **Combine ingredients.** Add the vodka, espresso, coffee liqueur and simple syrup to your shaker.
 **Shake, hard.** Add ice and shake as hard as you can. That's what makes the foam.
 **Strain.** Strain into a chilled coupe, and let the foam settle on top.

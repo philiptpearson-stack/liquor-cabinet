@@ -18,7 +18,8 @@ Makes − 1 + drink
 1 egg white
 3 dashes orange flower water
 1 oz soda water, to top
-**Glass:** highball, no ice · **Garnish:** none (the foam is the show)
+**Glass:** highball, no ice
+**Garnish:** none (the foam is the show)
 Pasteurized egg whites (from a carton) work just as well as fresh. Chill the soda water: the colder it is, the higher the foam.
 Shake it.
 Then keep shaking.
@@ -38,7 +39,8 @@ Makes − 1 + drink
 1 egg white
 3 dashes orange flower water
 1 oz soda water, to top
-**Glass:** highball, no ice · **Garnish:** none (the foam is the show)
+**Glass:** highball, no ice
+**Garnish:** none (the foam is the show)
 Pasteurized egg whites (from a carton) work just as well as fresh. Chill the soda water: the colder it is, the higher the foam.
 **Combine ingredients.** Add everything except the soda water to your shaker.
 **Dry shake.** Shake hard, without ice, for about 15 seconds. That's what starts the foam.

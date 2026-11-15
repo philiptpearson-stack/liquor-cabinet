@@ -14,7 +14,8 @@ Makes − 1 + drink
 ½ oz simple syrup
 ½ oz lemon juice
 3 oz Champagne, or another dry sparkling wine
-**Glass:** Champagne flute · **Garnish:** lemon twist
+**Glass:** Champagne flute
+**Garnish:** lemon twist
 The French 75 is a little gin sour, with bubbles on top!
 *Seriously.*
 *It's the Golden Ratio, just smaller!*
@@ -27,7 +28,8 @@ Makes − 1 + drink
 ½ oz simple syrup
 ½ oz lemon juice
 3 oz Champagne, or another dry sparkling wine
-**Glass:** Champagne flute · **Garnish:** lemon twist
+**Glass:** Champagne flute
+**Garnish:** lemon twist
 **Combine ingredients.** Add the gin, simple syrup and lemon juice to your shaker.
 **Shake.** Add ice and shake until cold.
 **Strain into a flute.**

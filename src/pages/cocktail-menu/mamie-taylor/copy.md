@@ -14,7 +14,8 @@ Makes − 1 + drink
 ¾ oz lime juice
 ¾ oz simple syrup
 4 oz ginger beer
-**Glass:** highball, over ice · **Garnish:** lime wheel
+**Glass:** highball, over ice
+**Garnish:** lime wheel
 The original Moscow Mule!
 *Really.*
 Named for a popular opera singer of the 1890s, the Mamie Taylor was a full-blown national craze.
@@ -29,7 +30,8 @@ Makes − 1 + drink
 ¾ oz lime juice
 ¾ oz simple syrup
 4 oz ginger beer
-**Glass:** highball, over ice · **Garnish:** lime wheel
+**Glass:** highball, over ice
+**Garnish:** lime wheel
 **Combine ingredients.** Add the Scotch, lime juice and simple syrup to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Top with ginger beer.** Pour it right into the shaker, and give it a gentle swirl.

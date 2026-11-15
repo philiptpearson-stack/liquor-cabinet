@@ -14,7 +14,8 @@ Makes − 1 + drink
 ¾ oz Aperol
 ¾ oz Amaro Nonino
 ¾ oz lemon juice
-**Glass:** coupe · **Garnish:** none (or a tiny paper plane)
+**Glass:** coupe
+**Garnish:** none (or a tiny paper plane)
 Named after an M.I.A. song.
 Four bottles, equal parts.
 Sam Ross, who also made the Penicillin, created it in the summer of 2008 for The Violet Hour, a bar in Chicago, and named it after M.I.A.'s hit “Paper Planes.”
@@ -29,7 +30,8 @@ Makes − 1 + drink
 ¾ oz Aperol
 ¾ oz Amaro Nonino
 ¾ oz lemon juice
-**Glass:** coupe · **Garnish:** none (or a tiny paper plane)
+**Glass:** coupe
+**Garnish:** none (or a tiny paper plane)
 **Combine ingredients.** Equal parts bourbon, Aperol, Amaro Nonino and lemon juice, into your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Strain.** Strain into a chilled coupe.

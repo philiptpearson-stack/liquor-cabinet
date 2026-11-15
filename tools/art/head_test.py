@@ -2,7 +2,7 @@
 import sys, pathlib, subprocess, json, importlib
 from art import *
 import bartender as B
-REPO = pathlib.Path('/home/claude/liquor-cabinet')
+REPO = pathlib.Path(__file__).resolve().parents[2]   # the repo, wherever it's checked out
 variants = [dict(eyes='dot'), dict(eyes='dot', beard=None), dict(mood='smug', eyes='wink'), dict(mood='smug', eyes='wink', beard=None), dict(hat='bat')]
 inner = ''.join(place(B.bartender(**v, arm_l=[(-23, -110), (-29, -86), (-14, -70)]), 40 + i * 80, 236, 1.25) for i, v in enumerate(variants))
 s = f'<svg viewBox="0 10 400 140" role="img" aria-label="heads">{inner}</svg>'

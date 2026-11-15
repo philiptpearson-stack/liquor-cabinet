@@ -8,7 +8,7 @@ from menu_art import bottle, glass, jigger, wheel, at, TWINKLE_CSS
 from bartender import bartender
 from shelves import plain_bottle
 
-REPO = pathlib.Path('/home/claude/liquor-cabinet')
+REPO = pathlib.Path(__file__).resolve().parents[2]   # the repo, wherever it's checked out
 D = REPO / 'src/pages/bar'
 SL = REPO / 'src/pages/spirits-list'
 for _d in (D, SL):

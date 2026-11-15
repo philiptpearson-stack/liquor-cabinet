@@ -14,7 +14,8 @@ Makes − 1 + drink
 ½ oz orange liqueur
 ½ oz simple syrup
 1 oz lemon juice
-**Glass:** coupe, with a sugared rim · **Garnish:** orange twist
+**Glass:** coupe, with a sugared rim
+**Garnish:** orange twist
 According to famous 1920s bartender Frank Meier, it was the second most popular cocktail post-WWI.
 The Sidecar is your classic *brandy* sour. Rich, bright and dangerously easy to drink.
 Here's how you make one:
@@ -25,7 +26,8 @@ Makes − 1 + drink
 ½ oz orange liqueur
 ½ oz simple syrup
 1 oz lemon juice
-**Glass:** coupe, with a sugared rim · **Garnish:** orange twist
+**Glass:** coupe, with a sugared rim
+**Garnish:** orange twist
 **Sugar the rim.** Rub a lemon wedge around the outside of the rim of a chilled coupe, then roll it in sugar.
 **Combine ingredients.** Add the cognac, orange liqueur, simple syrup and lemon juice to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.

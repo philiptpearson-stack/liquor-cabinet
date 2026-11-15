@@ -14,7 +14,8 @@ Makes − 1 + drink
 1 oz simple syrup
 1 oz lemon juice
 1 egg white (optional)
-**Glass:** coupe · **Garnish:** cherry
+**Glass:** coupe
+**Garnish:** cherry
 Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.
 Where it all starts.
 The Whiskey Sour was already in print in 1862, in the very first American bartender's guide.
@@ -29,7 +30,8 @@ Makes − 1 + drink
 1 oz simple syrup
 1 oz lemon juice
 1 egg white (optional)
-**Glass:** coupe · **Garnish:** cherry
+**Glass:** coupe
+**Garnish:** cherry
 Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.
 **Combine ingredients.** Add everything to your shaker.
 **Dry shake.** Shake hard, without ice, for about 15 seconds. That's what whips the egg white into foam.

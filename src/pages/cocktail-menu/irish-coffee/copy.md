@@ -14,7 +14,8 @@ Makes − 1 + drink
 ½ oz demerara syrup (or 2 tsp brown sugar)
 4 oz hot coffee
 1 oz heavy cream, lightly whipped
-**Glass:** warm mug or Irish coffee glass · **Garnish:** none (the cream is the show)
+**Glass:** warm mug or Irish coffee glass
+**Garnish:** none (the cream is the show)
 Hot coffee, whiskey and a little sugar.
 Under a cap of cold cream.
 One cold, wet night in the 1940s, a flying boat full of shivering American passengers landed at Foynes, on the west coast of Ireland. Chef Joe Sheridan warmed them up with hot coffee, Irish whiskey and a cap of cream.
@@ -30,7 +31,8 @@ Makes − 1 + drink
 ½ oz demerara syrup (or 2 tsp brown sugar)
 4 oz hot coffee
 1 oz heavy cream, lightly whipped
-**Glass:** warm mug or Irish coffee glass · **Garnish:** none (the cream is the show)
+**Glass:** warm mug or Irish coffee glass
+**Garnish:** none (the cream is the show)
 **Whiskey and sugar.** Add them to a warm mug.
 **Add the coffee.** Hot and strong. Give it a quick stir.
 **Float the cream.** Whip the cream just until it thickens but still pours. Then pour it gently over the back of a spoon, so it floats on top.

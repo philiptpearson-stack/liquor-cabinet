@@ -13,7 +13,8 @@ Makes − 1 + drink
 2 oz dark rum
 1 oz buttered rum batter (about 2 tablespoons; see below)
 4 oz hot water
-**Glass:** warm mug · **Garnish:** a cinnamon stick
+**Glass:** warm mug
+**Garnish:** a cinnamon stick
 Batter (for about 12 drinks): beat ½ cup softened butter with ½ cup brown sugar, 1 tsp cinnamon, ½ tsp nutmeg, ¼ tsp ground cloves and a pinch of salt. It keeps in the fridge for a couple of weeks.
 Yes, there's butter in it.
 That's the point.
@@ -27,7 +28,8 @@ Makes − 1 + drink
 2 oz dark rum
 1 oz buttered rum batter (about 2 tablespoons; see below)
 4 oz hot water
-**Glass:** warm mug · **Garnish:** a cinnamon stick
+**Glass:** warm mug
+**Garnish:** a cinnamon stick
 Batter (for about 12 drinks): beat ½ cup softened butter with ½ cup brown sugar, 1 tsp cinnamon, ½ tsp nutmeg, ¼ tsp ground cloves and a pinch of salt. It keeps in the fridge for a couple of weeks.
 **Batter and rum.** Add a spoonful of batter and the rum to a warm mug.
 **Top with hot water.** Just off the boil.

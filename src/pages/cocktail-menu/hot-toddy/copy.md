@@ -14,7 +14,8 @@ Makes − 1 + drink
 ¾ oz honey syrup
 ½ oz lemon juice
 4 oz hot water
-**Glass:** a warm mug · **Garnish:** lemon wheel (and a cinnamon stick, if you like)
+**Glass:** a warm mug
+**Garnish:** lemon wheel (and a cinnamon stick, if you like)
 Honey syrup is honey and hot water, half and half, stirred until smooth.
 It started out in India.
 And it was served cold.
@@ -30,7 +31,8 @@ Makes − 1 + drink
 ¾ oz honey syrup
 ½ oz lemon juice
 4 oz hot water
-**Glass:** a warm mug · **Garnish:** lemon wheel (and a cinnamon stick, if you like)
+**Glass:** a warm mug
+**Garnish:** lemon wheel (and a cinnamon stick, if you like)
 Honey syrup is honey and hot water, half and half, stirred until smooth.
 **Whiskey, honey and lemon.** Add them to a warm mug.
 **Top with hot water.** Just off the boil, not boiling.

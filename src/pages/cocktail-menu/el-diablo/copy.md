@@ -14,7 +14,8 @@ Makes − 1 + drink
 ¾ oz lime juice
 ¾ oz crème de cassis
 4 oz ginger beer
-**Glass:** highball, over ice · **Garnish:** lime wedge
+**Glass:** highball, over ice
+**Garnish:** lime wedge
 *“I want a drink with tequila. But not a Margarita.”*
 Fantastic! Can I introduce you to the El Diablo?
 This tequila classic dates to 1946, and it's *perfect*.
@@ -26,7 +27,8 @@ Makes − 1 + drink
 ¾ oz lime juice
 ¾ oz crème de cassis
 4 oz ginger beer
-**Glass:** highball, over ice · **Garnish:** lime wedge
+**Glass:** highball, over ice
+**Garnish:** lime wedge
 **Combine ingredients.** Add the tequila, lime juice and crème de cassis to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Top with ginger beer.** Pour it right into the shaker, and give it a gentle swirl.

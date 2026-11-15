@@ -14,7 +14,8 @@ Makes − 1 + drink
 ¾ oz lime juice
 ½ oz grapefruit juice
 ¼ oz maraschino liqueur
-**Glass:** coupe · **Garnish:** a lime wheel
+**Glass:** coupe
+**Garnish:** a lime wheel
 Less sugar.
 More rum.
 In the early 1930s, Ernest Hemingway stopped into El Floridita in Havana, known as “the cradle of the Daiquiri.” He liked his first one, and asked for another with less sugar and more rum.
@@ -29,7 +30,8 @@ Makes − 1 + drink
 ¾ oz lime juice
 ½ oz grapefruit juice
 ¼ oz maraschino liqueur
-**Glass:** coupe · **Garnish:** a lime wheel
+**Glass:** coupe
+**Garnish:** a lime wheel
 **Combine ingredients.** Add the rum, lime juice, grapefruit juice and maraschino to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Strain.** Strain into a chilled coupe.

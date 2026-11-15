@@ -13,7 +13,8 @@ Makes − 1 + drink
 4 lime wedges (half a lime)
 2 tsp sugar
 2 oz cachaça
-**Glass:** rocks, over crushed ice · **Garnish:** a lime wedge
+**Glass:** rocks, over crushed ice
+**Garnish:** a lime wedge
 Brazil's national cocktail.
 Three ingredients. One glass.
 Cachaça is Brazil's sugarcane spirit. It's a lot like rum, but it's distilled from fresh cane juice instead of molasses, so it tastes grassier and a little funky.
@@ -26,7 +27,8 @@ Makes − 1 + drink
 4 lime wedges (half a lime)
 2 tsp sugar
 2 oz cachaça
-**Glass:** rocks, over crushed ice · **Garnish:** a lime wedge
+**Glass:** rocks, over crushed ice
+**Garnish:** a lime wedge
 **Limes and sugar.** Cut half a lime into wedges, and drop them into a rocks glass with the sugar.
 **Muddle.** Press the limes firmly into the sugar, to squeeze out the juice and the oils from the peel. Don't pulverize them.
 **Ice and cachaça.** Fill the glass with crushed ice, and pour in the cachaça.

@@ -14,7 +14,8 @@ Makes − 1 + drink
 ¾ oz lemon juice
 ¾ oz honey-ginger syrup
 ¼ oz Islay Scotch, to float
-**Glass:** rocks, over one big ice cube · **Garnish:** candied ginger
+**Glass:** rocks, over one big ice cube
+**Garnish:** candied ginger
 Honey-ginger syrup: simmer equal parts honey and water with a few slices of fresh ginger, then strain. (Or use ½ oz honey syrup and ¼ oz fresh ginger juice.)
 The name is a joke.
 The drink is not.
@@ -29,7 +30,8 @@ Makes − 1 + drink
 ¾ oz lemon juice
 ¾ oz honey-ginger syrup
 ¼ oz Islay Scotch, to float
-**Glass:** rocks, over one big ice cube · **Garnish:** candied ginger
+**Glass:** rocks, over one big ice cube
+**Garnish:** candied ginger
 Honey-ginger syrup: simmer equal parts honey and water with a few slices of fresh ginger, then strain. (Or use ½ oz honey syrup and ¼ oz fresh ginger juice.)
 **Combine ingredients.** Add the blended Scotch, lemon juice and honey-ginger syrup to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.

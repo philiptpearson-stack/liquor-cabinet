@@ -17,7 +17,8 @@ Makes − 1 + drink
 2 dashes Worcestershire sauce
 2 dashes Tabasco
 1 pinch salt and pepper (and celery salt, if you have it)
-**Glass:** highball, over ice · **Garnish:** celery stalk and a lemon wedge
+**Glass:** highball, over ice
+**Garnish:** celery stalk and a lemon wedge
 “I need something to fix this *hangover*.”
 Perfect! Can I introduce you to the Bloody Mary?
 Nobody agrees who invented it.
@@ -35,7 +36,8 @@ Makes − 1 + drink
 2 dashes Worcestershire sauce
 2 dashes Tabasco
 1 pinch salt and pepper (and celery salt, if you have it)
-**Glass:** highball, over ice · **Garnish:** celery stalk and a lemon wedge
+**Glass:** highball, over ice
+**Garnish:** celery stalk and a lemon wedge
 **Combine ingredients.** Add the vodka, tomato juice, lemon juice and horseradish to your shaker.
 **Season it.** Worcestershire, Tabasco, a pinch of salt and a grind of pepper.
 **Shake.** Add ice and shake hard, until frosty cold.

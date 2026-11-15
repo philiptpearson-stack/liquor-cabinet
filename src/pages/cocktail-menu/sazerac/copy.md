@@ -14,7 +14,8 @@ Makes − 1 + drink
 ¼ oz–½ oz simple syrup, to taste
 3 dashes Peychaud's bitters
 ¼ oz absinthe, to rinse the glass
-**Glass:** chilled rocks glass, no ice · **Garnish:** lemon peel
+**Glass:** chilled rocks glass, no ice
+**Garnish:** lemon peel
 The official cocktail of New Orleans.
 *By a vote of 62 to 33.*
 That was the Louisiana House of Representatives, in 2008. (It wasn't unanimous. We *cannot* understand how, or why.)
@@ -29,7 +30,8 @@ Makes − 1 + drink
 ¼ oz–½ oz simple syrup, to taste
 3 dashes Peychaud's bitters
 ¼ oz absinthe, to rinse the glass
-**Glass:** chilled rocks glass, no ice · **Garnish:** lemon peel
+**Glass:** chilled rocks glass, no ice
+**Garnish:** lemon peel
 **Rinse the glass.** Pour a splash of absinthe into a chilled rocks glass, swirl it to coat, and pour out the rest.
 **Combine ingredients.** Add the rye, simple syrup and Peychaud's bitters to a mixing glass.
 **Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)

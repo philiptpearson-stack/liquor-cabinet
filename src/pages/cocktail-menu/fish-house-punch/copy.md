@@ -16,7 +16,8 @@ Makes − 1 + drink
 ½ oz lemon juice
 ½ oz simple syrup
 1 ½ oz cold black tea (or water)
-**Glass:** rocks, over one big ice cube · **Garnish:** a lemon wheel and grated nutmeg
+**Glass:** rocks, over one big ice cube
+**Garnish:** a lemon wheel and grated nutmeg
 For a crowd (about 20 cups): rub 1 cup sugar with the peels of 4 lemons and let it sit for 30 minutes, so the sugar pulls out the oils. (That's called an oleo saccharum.) Dissolve it in 4 cups of warm black tea, then add 4 cups Jamaican rum, 2 cups cognac, 1 cup lemon juice and ½ cup peach brandy. Chill it with one big block of ice.
 Philadelphia, 1700s.
 A fishing club with its own punch.
@@ -34,7 +35,8 @@ Makes − 1 + drink
 ½ oz lemon juice
 ½ oz simple syrup
 1 ½ oz cold black tea (or water)
-**Glass:** rocks, over one big ice cube · **Garnish:** a lemon wheel and grated nutmeg
+**Glass:** rocks, over one big ice cube
+**Garnish:** a lemon wheel and grated nutmeg
 For a crowd (about 20 cups): rub 1 cup sugar with the peels of 4 lemons and let it sit for 30 minutes, so the sugar pulls out the oils. (That's called an oleo saccharum.) Dissolve it in 4 cups of warm black tea, then add 4 cups Jamaican rum, 2 cups cognac, 1 cup lemon juice and ½ cup peach brandy. Chill it with one big block of ice.
 **Combine ingredients.** Add the rum, cognac, peach brandy, lemon juice, simple syrup and tea to a mixing glass.
 **Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)

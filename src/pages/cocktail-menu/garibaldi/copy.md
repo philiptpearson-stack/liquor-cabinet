@@ -12,7 +12,8 @@ Garibaldi
 Makes − 1 + drink
 1 ½ oz Campari
 4 oz orange juice (fluffed)
-**Glass:** tall glass, over ice · **Garnish:** an orange wedge
+**Glass:** tall glass, over ice
+**Garnish:** an orange wedge
 Two ingredients.
 One *very* good trick.
 It's named for Giuseppe Garibaldi, the general who helped unite Italy in the 1800s: red Campari for his red-shirted volunteers in the north, orange juice for the oranges of Sicily in the south.
@@ -24,7 +25,8 @@ Garibaldi
 Makes − 1 + drink
 1 ½ oz Campari
 4 oz orange juice (fluffed)
-**Glass:** tall glass, over ice · **Garnish:** an orange wedge
+**Glass:** tall glass, over ice
+**Garnish:** an orange wedge
 **Ice.** Fill a tall glass with ice.
 **Campari.**
 **Top with fluffy orange juice.** Blend the juice for a few seconds (or shake it hard, without ice) until it's light and foamy. Then pour it in.

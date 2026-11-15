@@ -14,7 +14,7 @@ from menu_drinks import DRINKS, BY_SLUG, SOON
 from bartender import bartender
 from shelves import plain_bottle
 
-REPO = pathlib.Path('/home/claude/liquor-cabinet')
+REPO = pathlib.Path(__file__).resolve().parents[2]   # the repo, wherever it's checked out
 sys.path.insert(0, str(REPO / 'tools'))
 from build import page_words   # noqa: E402
 
@@ -275,7 +275,7 @@ def recipe_card(d):
          '    <ul class="rc-list">']
     c += ['      ' + amt(*r) for r in d['recipe']]
     gl, gn = d['glass_line']
-    c += ['    </ul>', f'    <p class="rc-glass"><b>Glass:</b> {gl} · <b>Garnish:</b> {gn}</p>']
+    c += ['    </ul>', f'    <p class="rc-glass"><b>Glass:</b> {gl}<br><b>Garnish:</b> {gn}</p>']
     if d.get('note'):
         c += [f'    <p class="rc-note">{d["note"]}</p>']
     return c + ['  </section>']

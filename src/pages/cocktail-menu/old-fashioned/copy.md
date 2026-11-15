@@ -14,7 +14,8 @@ Makes − 1 + drink
 ¼ oz–½ oz demerara simple, to taste
 4 dashes Angostura bitters
 2 dashes orange bitters
-**Glass:** rocks, over one big ice cube · **Garnish:** orange peel
+**Glass:** rocks, over one big ice cube
+**Garnish:** orange peel
 **It's what the word cocktail *used* to mean!**
 In 1806, a New York newspaper defined a “cock-tail” like this:
 “A stimulating liquor, composed of spirits of any kind, sugar, water, and bitters.”
@@ -37,7 +38,8 @@ Makes − 1 + drink
 ¼ oz–½ oz demerara simple, to taste
 4 dashes Angostura bitters
 2 dashes orange bitters
-**Glass:** rocks, over one big ice cube · **Garnish:** orange peel
+**Glass:** rocks, over one big ice cube
+**Garnish:** orange peel
 **Combine ingredients.** Add the whiskey, demerara simple and both bitters to a mixing glass.
 **Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)
 **Strain over a big cube.** Strain into a rocks glass over one large ice cube.

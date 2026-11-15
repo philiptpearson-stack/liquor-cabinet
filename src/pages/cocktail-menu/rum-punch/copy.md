@@ -15,7 +15,8 @@ Makes − 1 + drink
 1 ½ oz dark rum (Jamaican, if you can find it)
 2 oz cold water
 2 dashes Angostura bitters
-**Glass:** rocks, over ice · **Garnish:** lime wheel, and a little grated nutmeg
+**Glass:** rocks, over ice
+**Garnish:** lime wheel, and a little grated nutmeg
 For a crowd, measure in cups: 1 cup lime juice, 2 cups simple syrup, 3 cups rum, 4 cups cold water, and a good shake of bitters. Serve over ice.
 One of sour, two of sweet,
 three of strong and four of weak.
@@ -32,7 +33,8 @@ Makes − 1 + drink
 1 ½ oz dark rum (Jamaican, if you can find it)
 2 oz cold water
 2 dashes Angostura bitters
-**Glass:** rocks, over ice · **Garnish:** lime wheel, and a little grated nutmeg
+**Glass:** rocks, over ice
+**Garnish:** lime wheel, and a little grated nutmeg
 For a crowd, measure in cups: 1 cup lime juice, 2 cups simple syrup, 3 cups rum, 4 cups cold water, and a good shake of bitters. Serve over ice.
 **Sour, sweet, strong, weak.** Pour them into a glass, in the order of the rhyme.
 **Bitters.** A couple of dashes.

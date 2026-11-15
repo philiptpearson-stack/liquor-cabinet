@@ -13,7 +13,8 @@ Makes − 1 + drink
 1 ½ oz gin
 ½ oz vodka
 ¼ oz Lillet Blanc
-**Glass:** martini glass · **Garnish:** a long, thin lemon peel
+**Glass:** martini glass
+**Garnish:** a long, thin lemon peel
 James Bond invented a Martini.
 And named it after a woman.
 In Casino Royale, Ian Fleming's very first James Bond novel (1953), Bond orders a Martini of his own design: three parts gin, one part vodka and half a part Kina Lillet, with a long, thin strip of lemon peel.
@@ -28,7 +29,8 @@ Makes − 1 + drink
 1 ½ oz gin
 ½ oz vodka
 ¼ oz Lillet Blanc
-**Glass:** martini glass · **Garnish:** a long, thin lemon peel
+**Glass:** martini glass
+**Garnish:** a long, thin lemon peel
 **Combine ingredients.** Add the gin, vodka and Lillet Blanc to a mixing glass.
 **Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)
 **Strain.** Strain into a chilled martini glass.

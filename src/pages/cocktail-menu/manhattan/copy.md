@@ -13,7 +13,8 @@ Makes − 1 + drink
 2 oz rye whiskey (or bourbon)
 1 oz sweet vermouth
 4 dashes Angostura bitters
-**Glass:** coupe · **Garnish:** cherry
+**Glass:** coupe
+**Garnish:** cherry
 It's how the Old Fashioned got its name.
 No, *really.* It is.
 Born in New York in the 1880s, the Manhattan is a variation on the classic “Cocktail” formula of *Spirit, Sugar, Water and Bitters.*
@@ -35,7 +36,8 @@ Makes − 1 + drink
 2 oz rye whiskey (or bourbon)
 1 oz sweet vermouth
 4 dashes Angostura bitters
-**Glass:** coupe · **Garnish:** cherry
+**Glass:** coupe
+**Garnish:** cherry
 **Combine ingredients.** Add the whiskey, sweet vermouth and bitters to a mixing glass.
 **Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)
 **Serve up.** Strain into a chilled coupe, no ice.

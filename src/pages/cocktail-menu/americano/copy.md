@@ -13,7 +13,8 @@ Makes − 1 + drink
 1 ½ oz Campari
 1 ½ oz sweet vermouth
 3 oz soda water
-**Glass:** tall glass, over ice · **Garnish:** an orange wheel
+**Glass:** tall glass, over ice
+**Garnish:** an orange wheel
 Before the Negroni,
 there was the Americano.
 Gaspare Campari served it at his café in Milan in the 1860s. He called it the Milano-Torino: Campari from Milan, sweet vermouth from Turin, and a splash of soda.
@@ -27,7 +28,8 @@ Makes − 1 + drink
 1 ½ oz Campari
 1 ½ oz sweet vermouth
 3 oz soda water
-**Glass:** tall glass, over ice · **Garnish:** an orange wheel
+**Glass:** tall glass, over ice
+**Garnish:** an orange wheel
 **Ice.** Fill a tall glass with ice.
 **Campari and sweet vermouth.** Equal parts, right over the ice.
 **Top with soda water.** Then one gentle stir.

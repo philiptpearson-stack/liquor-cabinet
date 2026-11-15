@@ -14,7 +14,8 @@ Makes − 1 + drink
 ½ oz lime juice
 1 pinch salt
 4 oz grapefruit soda
-**Glass:** highball, over ice · **Garnish:** grapefruit wedge
+**Glass:** highball, over ice
+**Garnish:** grapefruit wedge
 Say hello to the dove.
 *Paloma* means dove in Spanish. In Mexico, it's an everyday favorite: tequila, lime and grapefruit soda, over ice.
 A pinch of salt makes the grapefruit pop.
@@ -26,7 +27,8 @@ Makes − 1 + drink
 ½ oz lime juice
 1 pinch salt
 4 oz grapefruit soda
-**Glass:** highball, over ice · **Garnish:** grapefruit wedge
+**Glass:** highball, over ice
+**Garnish:** grapefruit wedge
 **Fill with ice.** Fill a highball glass with ice.
 **Tequila, lime and salt.** Add the tequila, lime juice and a pinch of salt.
 **Top with grapefruit soda.** Give it a quick stir.

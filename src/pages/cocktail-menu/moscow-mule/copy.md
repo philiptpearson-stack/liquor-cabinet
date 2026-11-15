@@ -14,7 +14,8 @@ Makes − 1 + drink
 ¾ oz lime juice
 ¾ oz simple syrup
 4 oz ginger beer
-**Glass:** copper mug, over ice · **Garnish:** lime wedge
+**Glass:** copper mug, over ice
+**Garnish:** lime wedge
 Introducing...vodka!
 Before 1941, vodka was a hard sell in America.
 Then, Smirnoff promoter John Martin met Jack Morgan, owner of Hollywood's Cock ’n’ Bull bar, and the rest was history.
@@ -28,7 +29,8 @@ Makes − 1 + drink
 ¾ oz lime juice
 ¾ oz simple syrup
 4 oz ginger beer
-**Glass:** copper mug, over ice · **Garnish:** lime wedge
+**Glass:** copper mug, over ice
+**Garnish:** lime wedge
 **Combine ingredients.** Add the vodka, lime juice and simple syrup to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Top with ginger beer.** Pour it right into the shaker, and give it a gentle swirl.

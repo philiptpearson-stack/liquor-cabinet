@@ -14,7 +14,8 @@ Makes − 1 + drink
 1 oz brandy
 1 oz aged rum
 4 oz hot milk
-**Glass:** warm mug · **Garnish:** grated nutmeg
+**Glass:** warm mug
+**Garnish:** grated nutmeg
 Batter (for about 8 drinks): separate 4 eggs. Beat the whites to stiff peaks. Beat the yolks with ½ cup sugar, ½ tsp cinnamon, ¼ tsp each ground cloves and allspice, and a splash of rum. Gently fold the two together. Make it the day you serve it. (Pasteurized eggs work fine.)
 Hot eggnog, basically.
 But fluffier.
@@ -29,7 +30,8 @@ Makes − 1 + drink
 1 oz brandy
 1 oz aged rum
 4 oz hot milk
-**Glass:** warm mug · **Garnish:** grated nutmeg
+**Glass:** warm mug
+**Garnish:** grated nutmeg
 Batter (for about 8 drinks): separate 4 eggs. Beat the whites to stiff peaks. Beat the yolks with ½ cup sugar, ½ tsp cinnamon, ¼ tsp each ground cloves and allspice, and a splash of rum. Gently fold the two together. Make it the day you serve it. (Pasteurized eggs work fine.)
 **Batter in the mug.** Add a spoonful of batter to a warm mug.
 **Brandy and rum.** Stir them into the batter.

@@ -14,7 +14,8 @@ Makes − 1 + drink
 ½ oz mezcal
 1 barspoon agave syrup
 2 dashes Angostura bitters
-**Glass:** rocks, over one big ice cube · **Garnish:** orange peel (flamed, if you like)
+**Glass:** rocks, over one big ice cube
+**Garnish:** orange peel (flamed, if you like)
 The Old Fashioned, gone smoky.
 Bartender Phil Ward made it at Death & Co. in Manhattan in 2007: reposado tequila and a little smoky mezcal, built just like an Old Fashioned.
 Back then, most bars only poured tequila as shots or in Margaritas, and hardly poured mezcal at all. One bartender called this drink a “gateway cocktail to mezcal.”
@@ -27,7 +28,8 @@ Makes − 1 + drink
 ½ oz mezcal
 1 barspoon agave syrup
 2 dashes Angostura bitters
-**Glass:** rocks, over one big ice cube · **Garnish:** orange peel (flamed, if you like)
+**Glass:** rocks, over one big ice cube
+**Garnish:** orange peel (flamed, if you like)
 **Combine ingredients.** Add the tequila, mezcal, agave syrup and bitters to a mixing glass.
 **Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)
 **Strain over a big cube.** Strain into a rocks glass over one large ice cube.

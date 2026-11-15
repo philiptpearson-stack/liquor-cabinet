@@ -14,7 +14,8 @@ Makes − 1 + drink
 ¾ oz lemon juice
 ½ oz maraschino liqueur
 ¼ oz crème de violette
-**Glass:** coupe · **Garnish:** a cherry
+**Glass:** coupe
+**Garnish:** a cherry
 A drink the color of the sky.
 If you can find the violette.
 New York bartender Hugo Ensslin printed it in 1916, when airplanes were still a thrill: gin, lemon, maraschino and a little crème de violette, a purple liqueur made from violets.
@@ -29,7 +30,8 @@ Makes − 1 + drink
 ¾ oz lemon juice
 ½ oz maraschino liqueur
 ¼ oz crème de violette
-**Glass:** coupe · **Garnish:** a cherry
+**Glass:** coupe
+**Garnish:** a cherry
 **Combine ingredients.** Add the gin, lemon juice, maraschino and crème de violette to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Strain.** Strain into a chilled coupe.

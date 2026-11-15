@@ -4,7 +4,7 @@ from art import *
 from shelves import plain_bottle
 from bartender import bartender
 
-REPO = pathlib.Path('/home/claude/liquor-cabinet')
+REPO = pathlib.Path(__file__).resolve().parents[2]   # the repo, wherever it's checked out
 D = REPO / 'src/pages/makers-mark/bartender/scenes'
 D.mkdir(parents=True, exist_ok=True)
 OUT = {}

@@ -13,7 +13,8 @@ Makes − 1 + drink
 2 oz dark rum
 4 oz ginger beer
 ½ oz lime juice
-**Glass:** highball, over ice · **Garnish:** lime wedge
+**Glass:** highball, over ice
+**Garnish:** lime wedge
 Storm clouds, in a glass.
 Bermuda's unofficial national drink: spicy ginger beer, with dark rum floated on top like clouds rolling in.
 No shaker, no fuss. Just pour it in the right order.
@@ -24,7 +25,8 @@ Makes − 1 + drink
 2 oz dark rum
 4 oz ginger beer
 ½ oz lime juice
-**Glass:** highball, over ice · **Garnish:** lime wedge
+**Glass:** highball, over ice
+**Garnish:** lime wedge
 **Fill with ice.** Fill a highball glass with ice.
 **Ginger beer and lime.** Pour in the ginger beer, then the lime juice.
 **Float the rum.** Pour the dark rum slowly over the top, so it floats like a storm cloud.

@@ -14,7 +14,8 @@ Makes − 1 + drink
 ¾ oz sweet vermouth
 ¾ oz cherry liqueur (like Cherry Heering)
 ¾ oz orange juice
-**Glass:** coupe · **Garnish:** an orange twist
+**Glass:** coupe
+**Garnish:** an orange twist
 Named after a silent movie.
 Scotch and orange juice. *Trust us.*
 In 1922, Rudolph Valentino starred as a bullfighter in Blood and Sand, and somebody named a drink after it. Nobody knows who.
@@ -28,7 +29,8 @@ Makes − 1 + drink
 ¾ oz sweet vermouth
 ¾ oz cherry liqueur (like Cherry Heering)
 ¾ oz orange juice
-**Glass:** coupe · **Garnish:** an orange twist
+**Glass:** coupe
+**Garnish:** an orange twist
 **Combine ingredients.** Equal parts Scotch, sweet vermouth, cherry liqueur and orange juice, into your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Strain.** Strain into a chilled coupe.

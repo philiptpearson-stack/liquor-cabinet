@@ -4,7 +4,7 @@ from art import *
 from shelves import plain_bottle, decanter
 from bartender import bartender, PLAID
 
-REPO = pathlib.Path('/home/claude/liquor-cabinet')
+REPO = pathlib.Path(__file__).resolve().parents[2]   # the repo, wherever it's checked out
 
 # ---- 1. Welcome to my bar
 wall = wash('<rect x="0" y="0" width="400" height="236" fill="#6f5443"/><rect x="40" y="14" width="320" height="136" fill="#cfe0dc" opacity=".55"/>')

@@ -13,7 +13,8 @@ Makes − 1 + drink
 2 oz vodka
 1 oz simple syrup
 1 oz lemon juice
-**Glass:** martini glass, with a sugared rim · **Garnish:** lemon twist
+**Glass:** martini glass, with a sugared rim
+**Garnish:** lemon twist
 Superfine sugar sticks to the rim best.
 It's named after the candy.
 And it tastes like it, too.
@@ -27,7 +28,8 @@ Makes − 1 + drink
 2 oz vodka
 1 oz simple syrup
 1 oz lemon juice
-**Glass:** martini glass, with a sugared rim · **Garnish:** lemon twist
+**Glass:** martini glass, with a sugared rim
+**Garnish:** lemon twist
 Superfine sugar sticks to the rim best.
 **Sugar the rim.** Rub a lemon wedge around the outside of the rim of a chilled martini glass, then roll it in sugar.
 **Combine ingredients.** Add the vodka, simple syrup and lemon juice to your shaker.

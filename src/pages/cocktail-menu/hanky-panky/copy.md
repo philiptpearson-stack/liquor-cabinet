@@ -13,7 +13,8 @@ Makes − 1 + drink
 1 ½ oz gin
 1 ½ oz sweet vermouth
 1 barspoon Fernet-Branca
-**Glass:** coupe · **Garnish:** an orange twist
+**Glass:** coupe
+**Garnish:** an orange twist
 Half gin, half sweet vermouth.
 And one secret ingredient.
 In the early 1900s, Ada “Coley” Coleman was the head bartender at the American Bar in London's Savoy Hotel. One of her regulars was the stage star Charles Hawtrey.
@@ -27,7 +28,8 @@ Makes − 1 + drink
 1 ½ oz gin
 1 ½ oz sweet vermouth
 1 barspoon Fernet-Branca
-**Glass:** coupe · **Garnish:** an orange twist
+**Glass:** coupe
+**Garnish:** an orange twist
 **Combine ingredients.** Add the gin, sweet vermouth and Fernet-Branca to a mixing glass.
 **Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)
 **Strain.** Strain into a chilled coupe.

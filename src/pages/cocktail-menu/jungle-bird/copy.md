@@ -15,7 +15,8 @@ Makes − 1 + drink
 1 ½ oz pineapple juice
 ½ oz lime juice
 ½ oz demerara syrup
-**Glass:** rocks, over ice · **Garnish:** a pineapple wedge
+**Glass:** rocks, over ice
+**Garnish:** a pineapple wedge
 A tiki drink with a bitter streak.
 It was born around 1978 at the Kuala Lumpur Hilton, in Malaysia: dark rum, Campari, pineapple juice, lime and sugar.
 Then it all but vanished, until tiki historian Jeff “Beachbum” Berry spotted it in an old paperback bartender's guide from a thrift store, and put it in his own book in 2002.
@@ -30,7 +31,8 @@ Makes − 1 + drink
 1 ½ oz pineapple juice
 ½ oz lime juice
 ½ oz demerara syrup
-**Glass:** rocks, over ice · **Garnish:** a pineapple wedge
+**Glass:** rocks, over ice
+**Garnish:** a pineapple wedge
 **Combine ingredients.** Add the rum, Campari, pineapple juice, lime juice and demerara syrup to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Strain over ice.** Strain into a rocks glass filled with fresh ice.
