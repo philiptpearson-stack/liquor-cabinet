@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 16 2026: Philip's copy (Carré takes its accent, as in the page's name). Facts checked: Walter Bergeron, head bartender at the Hotel Monteleone, 1930s; Vieux Carré, "old square", is the French Quarter. The recipe and steps are Claude's; the stir step is Philip's. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Vieux ***Carré.***
 Vieux Carré Recipe
@@ -18,10 +18,12 @@ Makes − 1 + drink
 2 dashes Angostura bitters
 **Glass:** rocks, over one big ice cube
 **Garnish:** lemon twist
-New Orleans, stirred.
-*Vieux Carré* means old square: the old name for New Orleans' French Quarter. Walter Bergeron created this drink there in the 1930s, at the Hotel Monteleone.
-Rye, cognac, sweet vermouth, a little Bénédictine and two kinds of bitters. Rich, spicy and smooth.
-Think of it as a Manhattan with two spirits: two parts spirit (rye and cognac), one part sweet vermouth.
+*Another* New Orleans Classic??
+Seriously, how many all time classics does one city get?
+Well, here's another.
+Vieux Carré was the old name for the French Quarter, and it's where Walter Bergeron created this drink in the 1930s, at the Hotel Monteleone.
+It's basically a Manhattan, only *weirder*.
+Come to think of it, sort of like New Orleans.
 Here's how you make one:
 The Cocktail Menu · Classics
 Vieux Carré
@@ -38,6 +40,7 @@ Makes − 1 + drink
 **Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)
 **Strain over a big cube.** Strain into a rocks glass over one large ice cube.
 **Garnish.** A lemon twist.
+→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!
 Keep exploring
 → Manhattan
 → Old Fashioned
