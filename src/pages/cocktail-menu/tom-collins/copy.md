@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 16 2026: Philip's copy, with one typo fixed ("it's 1870s" is "it's the 1870s"). Fact checked: the Great Tom Collins Hoax swept New York in 1874. The recipe and steps are Claude's. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Tom ***Collins.***
 Tom Collins Recipe
@@ -16,11 +16,13 @@ Makes − 1 + drink
 2 oz soda water
 **Glass:** highball, over ice
 **Garnish:** lemon wheel and a cherry
-Have you seen Tom Collins?
-In 1874, a prank swept New York: friends told each other that a man named Tom Collins was going around town, talking about them.
-There was no Tom Collins. But there is this drink.
-*Remember: a Collins is just a sour with bubbles. The Golden Ratio, topped with soda water.*
-→ The Golden Ratio
+A drink named after a prank??
+Tom Collins.
+He was a guy who didn't even exist.
+But imagine it's the 1870s, and your friend just told you they heard a guy named Tom Collins saying some seriously nasty shit about you — and now he's drinking in that bar down the street.
+Well, off you go, marching down the street to set him straight.
+“Bartender, I'm looking for a Tom Collins.”
+And bang: you've got this cocktail in front of you.
 Here's how you make one:
 The Cocktail Menu · Classics
 Tom Collins
@@ -35,6 +37,8 @@ Makes − 1 + drink
 **Gin, lemon and syrup.** Pour them right into the glass.
 **Top with soda water.** Give it a quick stir.
 **Garnish.** A lemon wheel and a cherry.
+*Need a quick how-to on achieving balance in your at-home cocktails?*
+Click HERE.
 Keep exploring
 → French 75
 → Southside Fizz
