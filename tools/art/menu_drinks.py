@@ -350,13 +350,22 @@ DRINKS = [
          related=['manhattan', 'old-fashioned'], hero=(['cognac', 'rye'], ['benedictine', 'bitters'])),
 
     dict(slug='whiskey-sour', name='Whiskey Sour', glass='coupe', color='#ddb064', garnish=['cherry'], foam=True,
-         recipe=[(2, 'oz', 'bourbon'), (1, 'oz', 'simple syrup'), (1, 'oz', 'lemon juice'), (1, 'egg white', '(optional)')],
+         recipe=[(2, 'oz', 'bourbon'), (1, 'oz', 'simple syrup'), (1, 'oz', 'lemon juice'), (1, 'egg white', '')],   # not optional (Philip, Nov 16)
          glass_line=('coupe', 'cherry'),
          note='Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.',
-         punch='Where it all starts.',
-         lines=['The Whiskey Sour was already in print in 1862, in the very first American bartender\'s guide.',
-                'Bourbon, lemon and sugar, with an optional egg white for a silky foam on top.'],
-         gr="It's the Golden Ratio, the classic way: two parts bourbon, one part simple syrup, one part lemon.",
+         punch='The Golden Ratio in a glass.',
+         lines=['Two parts whiskey. One part sweetener. One part sour.',
+                'The simple syrup balances the harshness of the whiskey; while the lemon balances out the sweet.',
+                "Then there's the egg white. Some people say it's optional. To us, it's about as optional as the anchovy is optional in Caesar dressing.",
+                "It's not.",
+                "<em>But here's the really fun part:</em> once you learn this formula, you've learned most of the classics.",
+                "Swap the whiskey for rum and the lemon for lime? That's a Daiquiri.",
+                'Tequila, orange liqueur and lime? Margarita.',
+                'See the pattern?'],
+         gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
+         copy_note=("Nov 16 2026: written with Philip in chat, from his Golden Ratio page. Philip's: the title, the egg white lines (the anchovy), "
+                    "\"But here's the really fun part\", and (from The Golden Ratio) the formula, the balance line and \"See the pattern?\". "
+                    "Claude's, approved by Philip: the Daiquiri and Margarita swap lines. The egg white is not optional. The steps are Claude's."),
          steps=[('<strong>Combine ingredients.</strong> Add everything to your shaker.', [('pour', 'bourbon', 2), ('pour', 'simple', 1), ('pour', 'lemon', 1), ('egg',)]),
                 ("<strong>Dry shake.</strong> Shake hard, without ice, for about 15 seconds. That's what whips the egg white into foam.", [('dry',)]),
                 ('<strong>Wet shake.</strong> Add ice and shake again, until the shaker is frosty cold.', [('ice', 'mix'), ('shake',)]),
