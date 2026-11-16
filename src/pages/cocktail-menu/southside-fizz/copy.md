@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 1 2026: CLAUDE'S DRAFT, waiting on Philip: the recipe, every line, and the steps. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 16 2026: Philip's first run at the copy (not final yet), with the names spelled as they are: Chicago's South Side, and the South Side Sportsmen's Club (Philip wrote Southside and Sportsman's). The recipe and steps are Claude's. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Southside ***Fizz.***
 Southside Fizz Recipe
@@ -17,11 +17,12 @@ Makes − 1 + drink
 2 oz soda water
 **Glass:** highball, over ice
 **Garnish:** mint sprig
-Think of it as a gin Mojito, with fizz.
-Legend ties the Southside to Chicago's South Side during Prohibition. Nobody's proven it, but it's a good story.
-Gin, lime and fresh mint, shaken, then topped with soda water.
-*Under the bubbles, it's the Golden Ratio: two parts gin, one part simple syrup, one part lime.*
-→ The Golden Ratio
+Chicago's Prohibition Mojito?
+Maybe!!
+Legend ties this classic to Chicago's South Side (and to Al Capone!) during the 1920s.
+But legends are just that. Another ties it to the South Side Sportsmen's Club on Long Island, around the same time.
+It's basically a Tom Collins, with mint.
+And just like every other drink using the Golden Ratio, it's a sour — but with unique seasonings.
 Here's how you make one:
 The Cocktail Menu · Classics
 Southside Fizz
@@ -38,6 +39,8 @@ Makes − 1 + drink
 **Strain over ice.** Strain into a highball glass full of fresh ice.
 **Top with soda water.**
 **Garnish.** A sprig of mint.
+*Need a quick how-to on achieving balance in your at-home cocktails?*
+Click HERE.
 Keep exploring
 → Tom Collins
 → Daiquiri
