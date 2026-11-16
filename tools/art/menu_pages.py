@@ -419,6 +419,8 @@ def write_menu():
         f'  <form class="search" role="search" data-search="{index}" data-none="Nothing on the menu like that yet. Try a drink, or just one ingredient.">',
         # no visible label: "What'll it be?" right above it asks the question (Philip, Nov 13); screen readers get one
         '    <input id="menu-q" type="search" placeholder="Search a drink or ingredient" aria-label="Search the menu for a drink or ingredient" autocomplete="off" enterkeyhint="go">',
+        # Philip's line (Nov 16): the search is also "what can I make with what I've got"
+        "    <p class=\"search-hint\">Tell me what you've got on hand, and I'll suggest some drinks you can make. Got gin and limes? Got a bottle of bourbon and a bottle of Campari? Type it in and find out what you can make!</p>",
         '    <p class="search-count" aria-live="polite"></p>',
         '    <ul class="search-results"></ul>',
         '  </form>', '',

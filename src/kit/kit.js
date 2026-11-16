@@ -56,11 +56,15 @@
   // Search (the Cocktail Menu): type a drink, or what's in it, and the list narrows as you go.
   // Accents don't matter (vieux carre finds Vieux Carré) and every word has to match (gin lime).
   // Whole words count, so gin isn't ginger beer; the word still being typed can be a start (neg finds Negroni).
+  // People type the way they talk (Philip, Nov 16): plurals match (limes finds lime juice, eggs finds egg white)
+  // and filler is ignored ("a bottle of bourbon and a bottle of Campari" is just bourbon, Campari).
   document.querySelectorAll('form[data-search]').forEach(form => {
     try {
       const norm = t => t.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/['’]/g, '').toLowerCase();
-      const split = t => norm(t).split(/[^a-z0-9%]+/).filter(Boolean);
-      const skip = new Set(['and', 'or', 'with', 'a', 'an', 'the']);
+      // one form for singular and plural, used on both the menu's words and the typed ones
+      const stem = w => w.length < 4 || w === 'bitters' ? w : w.replace(/ies$/, 'y').replace(/(s|x|z|ch|sh|o)es$/, '$1').replace(/([^s])s$/, '$1');
+      const split = t => norm(t).split(/[^a-z0-9%]+/).filter(Boolean).map(stem);
+      const skip = new Set(['and', 'or', 'with', 'a', 'an', 'the', 'of', 'some', 'any', 'bottle', 'got', 'have', 'i', 'ive', 'my', 'drink', 'cocktail', 'fresh'].map(stem));
       const items = JSON.parse(form.dataset.search).map(it => Object.assign(it, { name: split(it.n), all: split([it.n, it.i, it.k].join(' ')) }));
       const input = form.querySelector('input'), list = form.querySelector('.search-results'), count = form.querySelector('.search-count');
       const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);

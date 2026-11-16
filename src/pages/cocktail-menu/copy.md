@@ -7,6 +7,7 @@
 
 The Cocktail ***Menu.***
 What'll it be?
+Tell me what you've got on hand, and I'll suggest some drinks you can make. Got gin and limes? Got a bottle of bourbon and a bottle of Campari? Type it in and find out what you can make!
 Classics
 Modern Variations
 Arcane Oddities
