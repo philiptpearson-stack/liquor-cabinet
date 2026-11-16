@@ -84,7 +84,7 @@ DRINKS = [
                 ('<strong>Strain into a flute.</strong>', [('strain',)]),
                 ("<strong>Top with Champagne.</strong> Pour slowly, so it doesn't foam over.", [('top', 'champagne', 3)]),
                 ('<strong>Garnish.</strong> A lemon twist.', [('garnish',)])],
-         related=['tom-collins', 'violet-hour'], hero=(['syrup', 'gin'], ['champagne', 'fruit:lemon'])),
+         related=['tom-collins', 'southside-fizz'], hero=(['syrup', 'gin'], ['champagne', 'fruit:lemon'])),
 
     dict(slug='gold-rush', name='Gold Rush', genre='modern-variations', glass='rocks', color='#e0a443', garnish=['lemon-wheel'], level=-42,
          recipe=[(2, 'oz', 'bourbon'), (1, 'oz', 'honey syrup'), (1, 'oz', 'lemon juice')],
@@ -348,17 +348,6 @@ DRINKS = [
                 ('<strong>Strain over a big cube.</strong> Strain into a rocks glass over one large ice cube.', [('ice', 'glass'), ('strain',)]),
                 ('<strong>Garnish.</strong> A lemon twist.', [('garnish',)])],
          related=['manhattan', 'old-fashioned'], hero=(['cognac', 'rye'], ['benedictine', 'bitters'])),
-
-    dict(slug='violet-hour', name='Violet Hour', glass='coupe', color='#cbb8de', garnish=['flower'],
-         recipe=[(1, 'oz', 'crème de violette'), (1, 'oz', 'pear nectar (or purée)'), (3, 'oz', 'Champagne, or another dry sparkling wine')],
-         glass_line=('coupe', 'an edible flower (optional)'),
-         punch='Named for that purple light, just after sunset.',
-         lines=['Floral violet liqueur, sweet pear, and a glass full of Champagne.',
-                'No shaker needed. Just pour, top and serve.'],
-         steps=[('<strong>Violette and pear.</strong> Pour the crème de violette and pear nectar into a chilled coupe.', [('pour', 'violette', 1), ('pour', 'pear', 1)]),
-                ("<strong>Top with Champagne.</strong> Pour slowly, so it doesn't foam over.", [('top', 'champagne', 3)]),
-                ('<strong>Garnish.</strong> An edible flower, if you have one.', [('garnish',)])],
-         related=['french-75', 'pink-lady'], hero=(['violette'], ['champagne', 'pear'])),
 
     dict(slug='whiskey-sour', name='Whiskey Sour', glass='coupe', color='#ddb064', garnish=['cherry'], foam=True,
          recipe=[(2, 'oz', 'bourbon'), (1, 'oz', 'simple syrup'), (1, 'oz', 'lemon juice'), (1, 'egg white', '(optional)')],

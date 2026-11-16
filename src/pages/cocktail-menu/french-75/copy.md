@@ -37,5 +37,5 @@ Makes − 1 + drink
 **Garnish.** A lemon twist.
 Keep exploring
 → Tom Collins
-→ Violet Hour
+→ Southside Fizz
 ← Back to Classics

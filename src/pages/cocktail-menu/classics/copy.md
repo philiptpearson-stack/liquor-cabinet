@@ -31,6 +31,5 @@ Sidecar
 Southside Fizz
 Tom Collins
 Vieux Carré
-Violet Hour
 Whiskey Sour
 ← Back to the Cocktail Menu
