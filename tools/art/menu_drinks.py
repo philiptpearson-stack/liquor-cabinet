@@ -301,8 +301,8 @@ DRINKS = [
          punch=["Chicago's Prohibition Mojito?", 'Maybe!!'],
          lines=["Legend ties this classic to Chicago's South Side (and to Al Capone!) during the 1920s.",
                 "But legends are just that. Another ties it to the South Side Sportsmen's Club on Long Island, around the same time.",
-                "It's basically a Tom Collins, with mint.",
-                "And just like every other drink using the Golden Ratio, it's a sour — but with unique seasonings."],
+                "It's basically a Tom Collins, with mint. It's also a Mojito, with gin.",
+                "Because just like every drink using the Golden Ratio, it's a sour — with tiny little goofy variations."],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          copy_note=("Nov 16 2026: Philip's first run at the copy (not final yet), with the names spelled as they are: Chicago's South Side, and the "
                     "South Side Sportsmen's Club (Philip wrote Southside and Sportsman's). The recipe and steps are Claude's."),

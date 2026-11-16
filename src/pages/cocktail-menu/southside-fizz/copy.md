@@ -21,8 +21,8 @@ Chicago's Prohibition Mojito?
 Maybe!!
 Legend ties this classic to Chicago's South Side (and to Al Capone!) during the 1920s.
 But legends are just that. Another ties it to the South Side Sportsmen's Club on Long Island, around the same time.
-It's basically a Tom Collins, with mint.
-And just like every other drink using the Golden Ratio, it's a sour — but with unique seasonings.
+It's basically a Tom Collins, with mint. It's also a Mojito, with gin.
+Because just like every drink using the Golden Ratio, it's a sour — with tiny little goofy variations.
 Here's how you make one:
 The Cocktail Menu · Classics
 Southside Fizz
