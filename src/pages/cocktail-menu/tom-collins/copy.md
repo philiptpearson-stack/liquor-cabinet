@@ -17,7 +17,6 @@ Makes − 1 + drink
 **Glass:** highball, over ice
 **Garnish:** lemon wheel and a cherry
 A drink named after a prank??
-Tom Collins.
 He was a guy who didn't even exist.
 But imagine it's the 1870s, and your friend just told you they heard a guy named Tom Collins saying some seriously nasty shit about you — and now he's drinking in that bar down the street.
 Well, off you go, marching down the street to set him straight.

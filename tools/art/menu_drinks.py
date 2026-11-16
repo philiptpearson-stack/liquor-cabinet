@@ -316,7 +316,7 @@ DRINKS = [
     dict(slug='tom-collins', name='Tom Collins', glass='highball', color='#efedd2', garnish=['lemon-wheel', 'cherry'],
          recipe=[(2, 'oz', 'gin'), (1, 'oz', 'lemon juice'), (1, 'oz', 'simple syrup'), (2, 'oz', 'soda water')],
          glass_line=('highball, over ice', 'lemon wheel and a cherry'),
-         punch=['A drink named after a prank??', 'Tom Collins.'],
+         punch='A drink named after a prank??',   # no "Tom Collins." under it: the name waits for the bartender line (Philip, Nov 16)
          lines=["He was a guy who didn't even exist.",
                 "But imagine it's the 1870s, and your friend just told you they heard a guy named Tom Collins saying some seriously nasty shit about you — and now he's drinking in that bar down the street.",
                 'Well, off you go, marching down the street to set him straight.',
