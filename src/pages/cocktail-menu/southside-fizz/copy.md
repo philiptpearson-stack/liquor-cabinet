@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 16 2026: Philip's first run at the copy (not final yet), with the names spelled as they are: Chicago's South Side, and the South Side Sportsmen's Club (Philip wrote Southside and Sportsman's). The recipe and steps are Claude's. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 16 2026: Philip's copy (two rounds in chat), with the names spelled as they are: Chicago's South Side, and the South Side Sportsmen's Club (Philip wrote Southside and Sportsman's). The recipe and steps are Claude's. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Southside ***Fizz.***
 Southside Fizz Recipe

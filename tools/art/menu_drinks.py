@@ -304,7 +304,7 @@ DRINKS = [
                 "It's basically a Tom Collins, with mint. It's also a Mojito, with gin.",
                 "Because just like every drink using the Golden Ratio, it's a sour — with tiny little goofy variations."],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 16 2026: Philip's first run at the copy (not final yet), with the names spelled as they are: Chicago's South Side, and the "
+         copy_note=("Nov 16 2026: Philip's copy (two rounds in chat), with the names spelled as they are: Chicago's South Side, and the "
                     "South Side Sportsmen's Club (Philip wrote Southside and Sportsman's). The recipe and steps are Claude's."),
          steps=[('<strong>Combine ingredients.</strong> Add the gin, simple syrup, lime juice and mint leaves to your shaker.', [('pour', 'gin', 2), ('pour', 'simple', 1), ('pour', 'lime', 1), ('mint',)]),
                 ('<strong>Shake.</strong> Add ice and shake hard. It wakes up the mint.', [('ice', 'mix'), ('shake',)]),

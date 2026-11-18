@@ -244,9 +244,13 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .recipe-drop summary:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
 .recipe-drop .recipe-card{margin-top:.9rem}
 .recipe-card{background:#fffaf1;color:#3a2532;border-radius:8px 6px 10px 7px;transform:rotate(.6deg);margin:.4rem 2px;padding:.9rem 1.05rem 1rem;
-  box-shadow:2px 3px 0 #4a342622;background-image:linear-gradient(#fffaf1 0 3.7rem,#d9867f 3.7rem 3.85rem,transparent 3.85rem),repeating-linear-gradient(#fffaf1 0 27px,#cfe0ea 27px 28px)}
-.rc-kicker{margin:0;font:800 .7rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#b14b45}
+  box-shadow:2px 3px 0 #4a342622;background-image:linear-gradient(#fffaf1 0 4.4rem,#d9867f 4.4rem 4.55rem,transparent 4.55rem),repeating-linear-gradient(#fffaf1 0 27px,#cfe0ea 27px 28px);
+  background-position:0 0,0 .7rem}
+/* the kicker always has room for two lines ("The Cocktail Menu · Modern Variations" wraps on a phone), sitting on the bottom one, so the name,
+   the red rule and the ruled lines land in the same place on every card (Nov 17: a wrapped kicker pushed the name onto the rule) */
+.rc-kicker{margin:0;font:800 .7rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#b14b45;min-height:1.4rem;display:flex;align-items:flex-end}
 .rc-name{margin:.25rem 0 .9rem;font-family:var(--hand);font-weight:700;font-size:1.7rem;line-height:1}
+@media (max-width:340px){.rc-name{font-size:1.45rem;margin-top:.5rem}}   /* the smallest phones: long names (Oaxaca Old Fashioned) stay on one line; same header height */
 .rc-serves{margin:0 0 .5rem;display:flex;align-items:center;gap:.45rem;font:800 .95rem/1 var(--body)}
 .rc-step{display:none;width:2rem;height:2rem;border-radius:50%;border:2px solid #3a2532;background:transparent;color:#3a2532;
   font:800 1.1rem/1 var(--body);cursor:pointer;place-items:center;padding:0}
