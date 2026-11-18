@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Philip: a Modern Variation (its moment came after 1950). Facts checked (Difford's): first known recipe 1927 (El Arte de Hacer un Cocktail y Algo Más, Havana), the name on Sloppy Joe's 1931-32 menu, the Draque documented from 1833; Bond's Mojito in Die Another Day (The James Bond Dossier). Recipe: the Golden Ratio, topped with soda. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 17 2026: Philip's copy. Facts checked: first known recipe 1927, Cuba (El Arte de Hacer un Cocktail y Algo Más); on Sloppy Joe's 1931-32 menu (Difford's); the mint story is Cielo Gold's, a San Francisco bartender, on her blog in May 2009 (about a nightclub she'd worked at). The recipe and steps are Claude's. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Mojito.***
 Mojito Recipe
@@ -17,12 +17,14 @@ Makes − 1 + drink
 2 oz soda water
 **Glass:** highball, over ice
 **Garnish:** mint sprig and a lime wheel
-It took about 75 years to become an overnight sensation.
-The first known Mojito recipe was printed in Havana in 1927. A few years later, it was on the menu at Sloppy Joe's, a Havana bar famous with American tourists.
-Its ancestor is older still: the Draque, a Cuban mix of cane spirit, lime, sugar and mint, around since at least the 1830s. Legend names it for Sir Francis Drake.
-Then, in the early 2000s, the Mojito went everywhere. Even James Bond ordered one, in Cuba, in *Die Another Day* (2002).
-The secret is the mint. Press it gently with the lime and sugar, just enough to wake it up. Shred it, and it turns bitter.
-Here's how you make one:
+Only took about 75 years to become an overnight sensation.
+The first known Mojito recipe was printed in Havana in 1927. By 1931, it was on the menu in Havana bars famous with American tourists.
+But it was just a cute drink in Cuba, way back then.
+And in the 50s.
+And in the 70s.
+It wasn't until the early 2000s that things got out of hand.
+By 2009, a San Francisco bartender was writing blog posts about coworkers who threw out the mint before the club opened. That way, when they told their customers they were out of mint, they wouldn’t even be lying.
+If you're not out of mint, here's how you make one:
 The Cocktail Menu · Modern Variations
 Mojito
 Makes − 1 + drink
