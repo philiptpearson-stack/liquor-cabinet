@@ -203,7 +203,7 @@ def search_index():
               'champagne': 'sparkling wine bubbly', 'campari': 'bitter aperitivo amaro', 'soda water': 'club soda bubbles', 'egg white': 'foam',
               'ginger beer': 'ginger', 'grapefruit soda': 'grapefruit bubbles', 'honey syrup': 'honey', 'crème de cassis': 'blackcurrant',
               'crème de violette': 'violet floral', 'orange liqueur': 'triple sec cointreau curacao', 'sweet vermouth': 'vermouth', 'dry vermouth': 'vermouth',
-              'angostura bitters': 'bitters', "peychaud's bitters": 'bitters', 'orange bitters': 'bitters'}
+              'angostura bitters': 'bitters', "peychaud's bitters": 'bitters', 'orange bitters': 'bitters', 'grind': 'coffee liqueur kahlua'}
     out = []
     for d in DRINKS:
         ings = []
@@ -224,7 +224,7 @@ def search_index():
         else:
             method = 'built'            # poured over ice and topped up, maybe a quick stir
         part = html.unescape(GENRE_NAME[genre(d)]).lower()
-        words = ' '.join(extra + [d['glass_line'][0], d['glass_line'][1], method, d['glass'], part, {'classics': 'classic', 'arcane-oddities': 'oddity odd', 'modern-variations': 'modern variation new'}.get(genre(d), '')])
+        words = ' '.join(extra + [d.get('aka', ''), d['glass_line'][0], d['glass_line'][1], method, d['glass'], part, {'classics': 'classic', 'arcane-oddities': 'oddity odd', 'modern-variations': 'modern variation new'}.get(genre(d), '')])
         out.append({'s': d['slug'], 'n': html.unescape(d['name']), 'h': d['slug'] + '/index.html', 'i': ' · '.join(ings), 'k': words})
     return out
 

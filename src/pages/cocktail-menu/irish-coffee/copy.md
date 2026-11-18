@@ -37,6 +37,6 @@ Makes − 1 + drink
 **Add the coffee.** Hot and strong. Give it a quick stir.
 **Float the cream.** Whip the cream just until it thickens but still pours. Then pour it gently over the back of a spoon, so it floats on top.
 Keep exploring
-→ Espresso Martini
+→ Espressotini
 → Hot Toddy
 ← Back to Warm & Cozy

@@ -375,6 +375,7 @@ ING = {
     'irish-whiskey':  ('Irish whiskey', 'bottle', '#c9963c', ('spirit', '#c9a25a', 'Irish whiskey')),
     'amaro':          ('Amaro Nonino', 'bottle', '#c46a2a', ('liqueur', '#b8621f', 'Amaro Nonino')),
     'coffee-liqueur': ('coffee liqueur', 'bottle', '#3a2416', ('liqueur', '#3a2416', 'coffee liqueur')),
+    'grind':          ('Grind', 'bottle', '#2e1d12', ('spirit', '#2e1d12', 'Grind')),   # Grind Espresso Liqueur (Philip's Espressotini)
     'citrus-vodka':   ('citrus vodka', 'bottle', '#f1efd8', ('tall', '#f0ead0', 'citrus vodka')),
     'mezcal':         ('mezcal', 'bottle', '#eef0e2', ('tall', '#dfe6d2', 'mezcal')),
     'reposado':       ('reposado tequila', 'bottle', '#e9d29a', ('tall', '#e9d29a', 'reposado tequila')),

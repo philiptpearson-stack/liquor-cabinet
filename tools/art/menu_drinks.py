@@ -665,21 +665,24 @@ DRINKS = [
                 ('<strong>Garnish.</strong> None needed. (A tiny paper plane, if you like.)', [('garnish',)])],
          related=['penicillin', 'negroni'], hero=(['aperol', 'bourbon'], ['amaro', 'fruit:lemon'])),
 
-    dict(slug='espresso-martini', name='Espresso Martini', genre='modern-variations', glass='coupe', color='#3a2416', foam='#c9a27a', garnish=['coffee-beans'],
-         recipe=[(2, 'oz', 'vodka'), (1, 'oz', 'fresh espresso, cooled'), (.5, 'oz', 'coffee liqueur'), (.25, 'oz', 'simple syrup')],
+    dict(slug='espresso-martini', name='Espressotini', aka='espresso martini', genre='modern-variations', glass='coupe', color='#3a2416', foam='#c9a27a', garnish=['coffee-beans'],
+         # Philip, Nov 17: "Espressotini" is what almost everyone calls it; the web address keeps espresso-martini so links don't break
+         recipe=[(2, 'oz', 'vodka'), (1, 'oz', 'fresh espresso, cooled'), (.75, 'oz', 'Grind Espresso Liqueur (or another coffee liqueur)')],
          glass_line=('coupe', 'three coffee beans'),
-         punch=['A customer asked for a drink to wake her up.', 'And then knock her flat.'],
-         lines=['So the story goes, anyway. Bartender Dick Bradsell made the first one at the Soho Brasserie in London in the 1980s: vodka, coffee liqueur, a little sugar and fresh espresso.',
-                'First it was the Vodka Espresso. By the late 1990s it was the Espresso Martini (and, for a few years at one London bar, the Pharmaceutical Stimulant).',
-                'The trick is the foam. Shake it as hard as you can, and the fresh espresso whips up a creamy tan head.'],
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch): Dick Bradsell, Soho Brasserie, Old Compton Street, London, 1983 or "
-                    "around 1985; the customer's request (paraphrased here); Vodka Espresso, then Espresso Martini in the late 1990s; Pharmaceutical Stimulant 1998-2003 at Pharmacy."),
-         steps=[('<strong>Combine ingredients.</strong> Add the vodka, espresso, coffee liqueur and simple syrup to your shaker.',
-                 [('pour', 'vodka', 2), ('pour', 'espresso', 1), ('pour', 'coffee-liqueur', .5), ('pour', 'simple', .25)]),
+         punch='Supposedly invented for a famous runway model.',
+         lines=['Her name is still a secret.',
+                "But her order isn't.",
+                'Give me a drink that will “wake me up and then fuck me up,” she said.',
+                'Presenting: the Espressotini.'],
+         copy_note=("Nov 17 2026: Philip's copy and recipe (Grind is the coffee liqueur, no simple syrup), worked through in chat. Facts checked: Dick Bradsell, "
+                    "Soho Brasserie, London, around 1983-85; the request as Tasting Table gives it; her name went to the grave with Bradsell (PUNCH). "
+                    "Grind is a Sazerac Company product. The steps are Claude's."),
+         steps=[('<strong>Combine ingredients.</strong> Add the vodka, espresso and Grind to your shaker.',
+                 [('pour', 'vodka', 2), ('pour', 'espresso', 1), ('pour', 'grind', .75)]),
                 ("<strong>Shake, hard.</strong> Add ice and shake as hard as you can. That's what makes the foam.", [('ice', 'mix'), ('shake',)]),
                 ('<strong>Strain.</strong> Strain into a chilled coupe, and let the foam settle on top.', [('strain',)]),
                 ('<strong>Garnish.</strong> Three coffee beans.', [('garnish',)])],
-         related=['martini', 'cosmopolitan'], hero=(['coffee-liqueur', 'vodka'], ['syrup'])),
+         related=['martini', 'cosmopolitan'], hero=(['vodka'], ['grind'])),
 
     dict(slug='cosmopolitan', name='Cosmopolitan', genre='modern-variations', glass='martini', color='#e8768a', garnish=['lime-wedge'],   # usually a lime wedge (Philip, Nov 17)
          recipe=[(1.5, 'oz', 'citrus vodka'), (.75, 'oz', 'orange liqueur'), (.75, 'oz', 'lime juice'), (.5, 'oz', 'cranberry juice')],
