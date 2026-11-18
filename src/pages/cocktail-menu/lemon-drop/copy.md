@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Wikipedia): invented in the 1970s by Norman Jay Hobday at Henry Africa's, a fern bar in San Francisco that opened in 1969. Recipe: the Golden Ratio, as on The Golden Ratio page (the classic uses citrus vodka and triple sec). Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 17 2026: Philip's copy, with two fixes (San Francisco; Sex and the City, as on the Cosmopolitan page). Facts checked: born in 1970s San Francisco (Henry Africa's). The recipe, steps and rim note are Claude's. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Lemon ***Drop.***
 Lemon Drop Recipe
@@ -16,11 +16,13 @@ Makes − 1 + drink
 **Glass:** martini glass, with a sugared rim
 **Garnish:** lemon twist
 Superfine sugar sticks to the rim best.
-It's named after the candy.
-And it tastes like it, too.
-It was born in 1970s San Francisco, at Henry Africa's, the original “fern bar”: all hanging ferns and Tiffany lamps.
-Under the sugar, it's the Golden Ratio at its simplest: two parts vodka, one part simple syrup, one part lemon.
-The sugared rim is what makes it a Lemon Drop: sweet on your lips, tart in the glass, just like the candy.
+The QUEEN of the 1990s (at TGI Friday's)
+Born in San Francisco in the 70s, by the year 2000 the Lemon Drop was making its name on cheeky lists of drinks that bartenders hate to make.
+(They didn't like having to bus the sticky glasses after the ladies had finished licking the sugar rims.)
+But they had no choice.
+It was ubiquitous.
+The Cosmo may have had Sex and the City.
+But the Lemon Drop had girls' night at every Friday's and Chili's and Applebee's in America for a decade.
 Here's how you make one:
 The Cocktail Menu · Modern Variations
 Lemon Drop
