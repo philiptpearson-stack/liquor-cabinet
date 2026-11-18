@@ -614,6 +614,9 @@ GENRE_PAGES = {
                               description='Newer classics and twists on the old ones, each with its recipe and a step-by-step how-to.',
                               note="Nov 6 2026: Philip moved the Gold Rush here, so Modern Variations opened."),
     'arcane-oddities': dict(scene=oddities_scene, svg='oddities', intro='These are the <em>Arcane Oddities.</em>', more='More oddities',
+                            # Philip, Nov 17: why they're oddities
+                            intro_more=["So categorized because each one calls for at least one bottle nobody's ever heard of (but definitely should!)."],
+                            final_note="Nov 17 2026: Philip's copy: \"These are the *Arcane Oddities.*\" and why. \"Tap any drink...\" is his line from Classics. \"More oddities\" is Claude's.",
                             description='The odd ones on the menu, each with its recipe and a step-by-step how-to.',
                             note="Nov 3 2026: Philip moved the Dark and Stormy here, so Arcane Oddities opened."),
     'tiki-and-tropical': dict(scene=tiki_scene, svg='tiki', intro=None, more='More tropical drinks', css=FLICK_CSS,
@@ -648,7 +651,7 @@ def write_genre(key):
         f'<h1><small class="h1-lead">The Cocktail Menu:</small> {first} <span>{last}.</span></h1>', '',
         '<div class="flow">',
         f'  <figure class="fig" id="s-{cfg["svg"]}"><div class="sheet"><!--scene:{cfg["svg"]}--></div></figure>',
-        ] + ([f'  <p class="t">{cfg["intro"]}</p>'] if cfg.get('intro') else []) + [
+        ] + ([f'  <p class="t">{cfg["intro"]}</p>'] if cfg.get('intro') else []) + [f'  <p class="t">{t}</p>' for t in cfg.get('intro_more', [])] + [
         '  <p class="t">Tap any drink for its recipe and step-by-step, animated how-to.</p>', '',
         f'  <nav class="doors" aria-label="The {html.escape(name)}">'] + doors + ['  </nav>', '',
         '  <nav class="end-doors" aria-label="Where next">',
@@ -656,7 +659,7 @@ def write_genre(key):
         '  </nav>', '</div>', ''])
     (C / 'story.html').write_text(story)
     write_copy(C / 'copy.md', f'The Cocktail Menu / {name}', story,
-               cfg['note'] + (f" CLAUDE'S DRAFT, waiting on Philip: the page follows Classics (\"{html.unescape(cfg['intro']).replace('<em>', '*').replace('</em>', '*')}\"; "
+               cfg['final_note'] if cfg.get('final_note') else cfg['note'] + (f" CLAUDE'S DRAFT, waiting on Philip: the page follows Classics (\"{html.unescape(cfg['intro']).replace('<em>', '*').replace('</em>', '*')}\"; "
                               if cfg.get('intro') else " CLAUDE'S DRAFT, waiting on Philip: the page follows Classics (") +
                f"\"Tap any drink...\" is Philip's line from Classics), and \"{cfg['more']}\".")
     (C / 'page.json').write_text(json.dumps({
