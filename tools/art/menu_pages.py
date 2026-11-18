@@ -490,7 +490,7 @@ def write_classics():
 
 
 def oddities_scene():
-    """Arcane Oddities: a dark back bar under a crescent moon, odd bottles on the shelf, the Dark and Stormy out front."""
+    """Arcane Oddities: a dark back bar under a crescent moon, odd bottles on the shelf, an Aviation out front (Philip, Nov 17: the Dark and Stormy moved to Tiki)."""
     COUNTER = 168
     wall = wash('<rect x="0" y="0" width="400" height="236" fill="#3b2a45"/><rect x="40" y="10" width="320" height="150" fill="#5a4468" opacity=".45"/>')
     shelf = wash('<rect x="40" y="96" width="320" height="4" fill="#8f7aa3"/>') + lines('<path d="M40 96 H360 M40 100 H360" stroke="#b9a3c8" stroke-width="1.6"/>', boil=False)
@@ -501,11 +501,12 @@ def oddities_scene():
     moon = lines('<path d="M318 30 a16 16 0 1 0 16 22 a12 12 0 1 1 -16 -22Z" fill="#f2c776" stroke="#f2c776"/>', boil=False)
     stars = (sparkle(70, 30, 4, 'twinkle') + sparkle(170, 22, 3.4, 'twinkle d2') + sparkle(230, 44, 4.4, 'twinkle d3') + sparkle(288, 70, 3.2, 'twinkle')
              + sparkle(120, 58, 3, 'twinkle d3'))
-    d = BY_SLUG['dark-and-stormy']
-    drink = f'<g transform="translate(205 {COUNTER}) scale(1.05)">{glass("highball", "odd-ds", d["color"], d["garnish"], iced=True, layers=[(.68, 1, "#5a2e14")], bubbles=True)}</g>'
+    d = BY_SLUG['aviation']
+    glow = wash(f'<ellipse cx="200" cy="{COUNTER - 52}" rx="62" ry="54" fill="#b9a3c8" opacity=".38"/>')   # so the coupe's lines read against the dark wall
+    drink = glow + f'<g transform="translate(200 {COUNTER}) scale(1.25)">{glass("coupe", "odd-av", d["color"], d["garnish"])}</g>'
     return svg_view(wall + moon + stars + shelf + odd + countertop(COUNTER) + drink,
                     'A dark back bar under a crescent moon and twinkling stars. Odd bottles line the shelf, one a round purple potion bottle. '
-                    'Out front on the bar: a Dark and Stormy, dark rum floating over ginger beer', '62 14 276 174')
+                    'Out front on the bar: an Aviation, pale sky-blue in a coupe, with a cherry', '62 14 276 174')
 
 
 def modern_scene():
