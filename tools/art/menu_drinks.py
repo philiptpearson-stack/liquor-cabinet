@@ -40,7 +40,7 @@ DRINKS = [
                 ('<strong>Garnish.</strong> A lime wheel on the rim.', [('garnish',)])],
          related=['whiskey-sour', 'dark-and-stormy'], hero=(['syrup', 'white-rum'], ['fruit:lime', 'half:lime'])),
 
-    dict(slug='dark-and-stormy', name='Dark and Stormy', genre='arcane-oddities', glass='highball', color='#e2c584', garnish=['lime-wedge'],
+    dict(slug='dark-and-stormy', name='Dark and Stormy', genre='tiki-and-tropical', glass='highball', color='#e2c584', garnish=['lime-wedge'],
          recipe=[(2, 'oz', 'dark rum'), (4, 'oz', 'ginger beer'), (.5, 'oz', 'lime juice')],
          glass_line=('highball, over ice', 'lime wedge'),
          punch='Storm clouds, in a glass.',

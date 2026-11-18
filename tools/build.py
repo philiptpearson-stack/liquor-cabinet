@@ -197,7 +197,7 @@ def build_page(d: Path, template: str, kit: dict, home: str) -> list[str]:
     m = re.search(r'<p class="back"><a ([^>]*)>(.*?)</a></p>', story, flags=re.S)
     bar_back = ''
     if m:
-        label = html.escape(re.sub(r'<[^>]+>|^\W+', '', m.group(2)).strip(), quote=True)
+        label = html.escape(html.unescape(re.sub(r'<[^>]+>|^\W+', '', m.group(2))).strip(), quote=True)   # the link text is already HTML (Tiki &amp; Tropical)
         bar_back = f'<a class="bar-back" {m.group(1)} aria-label="{label}" title="{label}"><span aria-hidden="true">←</span> Back</a>'
     story, missing = place_scenes(story, d)
     if missing:

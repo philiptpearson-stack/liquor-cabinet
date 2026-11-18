@@ -8,12 +8,11 @@
 The Cocktail Menu: Tiki & ***Tropical.***
 Tap any drink for its recipe and step-by-step, animated how-to.
 Caipirinha
+Dark and Stormy
 Hemingway Daiquiri
 Jungle Bird
 Mai Tai
 Piña Colada
 Pisco Sour
 Ti’ Punch
-More tropical drinks
-Coming soon
 ← Back to the Cocktail Menu

@@ -11,12 +11,9 @@ Tap any drink for its recipe and step-by-step, animated how-to.
 Aviation
 Blood and Sand
 Corpse Reviver No. 2
-Dark and Stormy
 Hanky Panky
 Last Word
 Ramos Gin Fizz
 Trinidad Sour
 Vesper
-More oddities
-Coming soon
 ← Back to the Cocktail Menu
