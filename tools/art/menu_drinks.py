@@ -648,17 +648,18 @@ DRINKS = [
          related=['pink-lady', 'sidecar'], hero=(['applejack'], ['fruit:lemon', 'half:lemon'])),
     # ---------------------------------------------------------------- batch 4, Nov 10 2026: Modern Variations (Claude's drafts)
     dict(slug='penicillin', name='Penicillin', genre='modern-variations', glass='rocks', color='#e2b452', garnish=['candied-ginger'], layers=[(.86, 1, '#b98a4a')],
-         recipe=[(2, 'oz', 'blended Scotch'), (.75, 'oz', 'lemon juice'), (.75, 'oz', 'honey-ginger syrup'), (.25, 'oz', 'Islay Scotch, to float')],
+         recipe=[(1.5, 'oz', 'blended Scotch'),   # a Golden Ratio fit (Philip, Nov 17)
+                 (.75, 'oz', 'lemon juice'), (.75, 'oz', 'honey-ginger syrup'), (.25, 'oz', 'Islay Scotch, to float')],
          glass_line=('rocks, over one big ice cube', 'candied ginger'),
          note='Honey-ginger syrup: simmer equal parts honey and water with a few slices of fresh ginger, then strain. (Or use ½ oz honey syrup and ¼ oz fresh ginger juice.)',
-         punch=['The name is a joke.', 'The drink is not.'],
-         lines=['Bartender Sam Ross made it in 2005 at Milk & Honey in New York, the same bar where the Gold Rush was born a few years earlier.',
-                "It's the Gold Rush's Scotch-drinking sibling: blended Scotch, lemon, and honey with a kick of fresh ginger.",
-                'Then comes the trick: a float of smoky Islay Scotch on top, so the smoke reaches your nose before the drink reaches your lips.'],
+         punch='Yet another Modern Classic from Milk &amp; Honey.',
+         lines=['(The Gold Rush and the Paper Plane are too.)',
+                "This one's from 2005, and it's a Scotch-y, ginger-y Gold Rush with a smoky Scotch float."],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch): Sam Ross, Milk & Honey, 2005, a variation on the Gold Rush "
-                    "(T.J. Siegal, Milk & Honey, 2001); blended Scotch, ginger, honey and lemon with a float of peaty Scotch."),
-         steps=[('<strong>Combine ingredients.</strong> Add the blended Scotch, lemon juice and honey-ginger syrup to your shaker.', [('pour', 'scotch', 2), ('pour', 'lemon', .75), ('pour', 'honey-ginger', .75)]),
+         copy_note=("Nov 17 2026: Philip's copy (Scotch capitalized, as on the recipe card) and recipe: 1½ oz blended Scotch, a Golden Ratio fit. "
+                    "Facts checked (PUNCH): Sam Ross, Milk & Honey, 2005; the Gold Rush, Milk & Honey, 2000. The Paper Plane was Ross's too, made in 2008 "
+                    "for The Violet Hour in Chicago; Philip's call: \"The recipe came from their guy. It's good enough for app readers.\" The steps are Claude's."),
+         steps=[('<strong>Combine ingredients.</strong> Add the blended Scotch, lemon juice and honey-ginger syrup to your shaker.', [('pour', 'scotch', 1.5), ('pour', 'lemon', .75), ('pour', 'honey-ginger', .75)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
                 ('<strong>Strain over a big cube.</strong> Strain into a rocks glass over one large ice cube.', [('ice', 'glass'), ('strain',)]),
                 ('<strong>Float the Islay.</strong> Pour it gently over the back of a spoon, so it sits on top.', [('float', 'islay', .25)]),
