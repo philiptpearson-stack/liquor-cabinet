@@ -6,6 +6,7 @@
 # Oct 31 2026: Philip's copy from chat, third round. Claude's, waiting on Philip: the recipe card's
 # kicker and "Makes 1 drink" line, the glass / garnish line and the egg-white note (Philip OK'd both, Oct 31), "→ Cocktails How-To", "→ The Cocktail Menu", and where the
 # "tasting the ingredients" shot sits (moved down the page, after the how-to).
+# Nov 17 2026: the Whiskey Sour card matches the Cocktail Menu's (Philip): the egg white isn't optional, plain "lemon juice", Glass and Garnish on their own lines.
 
 The Bartender's Perspective: Maker's ***Mark.***
 Hey there!
@@ -24,9 +25,10 @@ Classic Whiskey Sour
 Makes − 1 + drink
 2 oz Maker's Mark
 1 oz simple syrup
-1 oz lemon juice (fresh squeezed or pasteurized)
-1 egg white (optional)
-**Glass:** coupe · **Garnish:** cherry
+1 oz lemon juice
+1 egg white
+**Glass:** coupe
+**Garnish:** cherry
 Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.
 **Combine ingredients.** Add everything to your shaker.
 **Dry shake.** Shake hard, without ice, for about 15 seconds. That's what whips the egg white into foam.

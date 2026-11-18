@@ -637,14 +637,18 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
       const input = form.querySelector('input'), list = form.querySelector('.search-results'), count = form.querySelector('.search-count');
       const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
       const has = (ws, w, start) => ws.some(x => start ? x.startsWith(w) : x === w);
+      // halfway through typing a plural, the word is the start of neither form (cherri, tomatoe), so the word
+      // being typed also counts as the start of its singular: cherri(es) → cherry, tomatoe(s) → tomato
+      const partly = w => w.length < 4 ? [w] : [w, w.replace(/ie?$/, 'y'), w.replace(/e$/, '')];
+      const hasStart = (ws, w) => partly(w).some(p => has(ws, p, true));
       const run = () => {
         const words = split(input.value).filter(w => !skip.has(w));
         if (!words.length) { list.innerHTML = ''; count.textContent = ''; return; }
         const done = words.slice(0, -1), last = words[words.length - 1];
-        const find = start => items.filter(it => done.every(w => has(it.all, w, false)) && has(it.all, last, start));
+        const find = start => items.filter(it => done.every(w => has(it.all, w, false)) && (start ? hasStart(it.all, last) : has(it.all, last, false)));
         let hits = find(false);
         if (!hits.length) hits = find(true);
-        const named = it => words.every((w, i) => has(it.name, w, i === words.length - 1));
+        const named = it => words.every((w, i) => i === words.length - 1 ? hasStart(it.name, w) : has(it.name, w, false));
         hits.sort((a, b) => (named(b) - named(a)) || a.n.localeCompare(b.n));
         count.textContent = hits.length ? hits.length + (hits.length === 1 ? ' drink' : ' drinks') : (form.dataset.none || '');
         list.innerHTML = hits.map(it => '<li><a class="result" href="' + esc(it.h) + '"><svg class="result-icon" aria-hidden="true"><use href="#' + esc(it.s) + '-icon"/></svg>'
