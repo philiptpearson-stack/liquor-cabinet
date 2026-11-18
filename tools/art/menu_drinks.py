@@ -334,9 +334,11 @@ DRINKS = [
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          copy_note=("Nov 16 2026: Philip's copy, with one typo fixed (\"it's 1870s\" is \"it's the 1870s\"). Fact checked: the Great Tom Collins Hoax "
                     "swept New York in 1874. The recipe and steps are Claude's."),
-         steps=[('<strong>Fill with ice.</strong> Fill a highball glass with ice.', [('ice', 'glass')]),
-                ('<strong>Gin, lemon and syrup.</strong> Pour them right into the glass.', [('pour', 'gin', 2), ('pour', 'lemon', 1), ('pour', 'simple', 1)]),
-                ('<strong>Top with soda water.</strong> Give it a quick stir.', [('top', 'soda', 2), ('stir',)]),
+         # shaken and topped in the shaker, like every Collins-style drink on the menu (Philip, Nov 17)
+         steps=[('<strong>Combine ingredients.</strong> Add the gin, lemon juice and simple syrup to your shaker.', [('pour', 'gin', 2), ('pour', 'lemon', 1), ('pour', 'simple', 1)]),
+                ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
+                ('<strong>Top with soda water.</strong> Pour it right into the shaker, and give it a gentle swirl.', [('top', 'soda', 2), ('swirl',)]),
+                ('<strong>Pour it all in.</strong> Pour everything, ice and all, into a highball glass. The drink is already chilling on that ice.', [('dump',)]),
                 ('<strong>Garnish.</strong> A lemon wheel and a cherry.', [('garnish',)])],
          related=['french-75', 'southside-fizz'], hero=(['syrup', 'gin'], ['soda', 'fruit:lemon'])),   # the simple syrup bottle (Philip, Nov 16)
 

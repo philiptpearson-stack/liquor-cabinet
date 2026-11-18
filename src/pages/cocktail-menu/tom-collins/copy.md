@@ -32,9 +32,10 @@ Makes − 1 + drink
 2 oz soda water
 **Glass:** highball, over ice
 **Garnish:** lemon wheel and a cherry
-**Fill with ice.** Fill a highball glass with ice.
-**Gin, lemon and syrup.** Pour them right into the glass.
-**Top with soda water.** Give it a quick stir.
+**Combine ingredients.** Add the gin, lemon juice and simple syrup to your shaker.
+**Shake.** Add ice and shake hard, until frosty cold.
+**Top with soda water.** Pour it right into the shaker, and give it a gentle swirl.
+**Pour it all in.** Pour everything, ice and all, into a highball glass. The drink is already chilling on that ice.
 **Garnish.** A lemon wheel and a cherry.
 *Need a quick how-to on achieving balance in your at-home cocktails?*
 Click HERE.
