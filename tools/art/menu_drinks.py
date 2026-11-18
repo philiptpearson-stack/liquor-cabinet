@@ -681,21 +681,23 @@ DRINKS = [
                 ('<strong>Garnish.</strong> Three coffee beans.', [('garnish',)])],
          related=['martini', 'cosmopolitan'], hero=(['coffee-liqueur', 'vodka'], ['syrup'])),
 
-    dict(slug='cosmopolitan', name='Cosmopolitan', genre='modern-variations', glass='martini', color='#e8768a', garnish=['orange-twist'],
+    dict(slug='cosmopolitan', name='Cosmopolitan', genre='modern-variations', glass='martini', color='#e8768a', garnish=['lime-wedge'],   # usually a lime wedge (Philip, Nov 17)
          recipe=[(1.5, 'oz', 'citrus vodka'), (.75, 'oz', 'orange liqueur'), (.75, 'oz', 'lime juice'), (.5, 'oz', 'cranberry juice')],
-         glass_line=('martini glass', 'orange twist'),
-         punch=["Yes, it's that pink drink.", "<em>And it's good.</em>"],
-         lines=["In 1988, bartender Toby Cecchini at the Odeon in New York rebuilt a sticky version he'd heard about from San Francisco: citrus vodka, orange liqueur, fresh lime and a splash of cranberry.",
-                'About ten years later, <i>Sex and the City</i> put one in Samantha\'s hand, and the Cosmo came roaring back.',
-                "Under the pink, it's a sour: two parts vodka, one part sweet, one part sour. The cranberry is mostly there for the color."],
+         glass_line=('martini glass', 'lime wedge'),
+         punch='Believe it or not, the Cosmo actually had a life <strong class="hl">before</strong> <cite>Sex and the City</cite> made it a household name.',
+         lines=["It was invented in 1988 at the Odeon in Tribeca — the same bar that hosted Lorne Michaels' SNL after parties (<em>!!!</em>).",
+                'Why?',
+                'Bartender Toby Cecchini said he wanted <em>to impress the waitresses.</em>',
+                'We salute you, Toby.'],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch): Cecchini's 1988 Odeon version (fresh lime, Cointreau, Absolut Citron, "
-                    "cranberry), after a San Francisco version; Sex and the City brought it back about ten years later (Samantha orders it)."),
+         copy_note=("Nov 17 2026: Philip's copy, worked through in chat (Sex and the City set as a title). Facts checked: Cecchini dates it to 1988 at the "
+                    "Odeon (PUNCH, VinePair); \"I invented the drink to impress the waitresses\" (Difford's Guide); the SNL cast and Lorne Michaels were Odeon regulars. "
+                    "The recipe and steps are Claude's; the lime wedge is Philip's."),
          steps=[('<strong>Combine ingredients.</strong> Add the citrus vodka, orange liqueur, lime juice and cranberry juice to your shaker.',
                  [('pour', 'citrus-vodka', 1.5), ('pour', 'orange-liqueur', .75), ('pour', 'lime', .75), ('pour', 'cranberry', .5)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
                 ('<strong>Strain.</strong> Strain into a chilled martini glass.', [('strain',)]),
-                ('<strong>Garnish.</strong> An orange twist.', [('garnish',)])],
+                ('<strong>Garnish.</strong> A lime wedge on the rim.', [('garnish',)])],
          related=['lemon-drop', 'margarita'], hero=(['orange-liqueur', 'citrus-vodka'], ['fruit:lime', 'half:lime'])),
 
     dict(slug='oaxaca-old-fashioned', name='Oaxaca Old Fashioned', genre='modern-variations', glass='rocks', color='#d9a85a', garnish=['orange-peel'],
