@@ -236,7 +236,7 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
    the red rule and the ruled lines land in the same place on every card (Nov 17: a wrapped kicker pushed the name onto the rule) */
 .rc-kicker{margin:0;font:800 .7rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#b14b45;min-height:1.4rem;display:flex;align-items:flex-end}
 .rc-name{margin:.25rem 0 .9rem;font-family:var(--hand);font-weight:700;font-size:1.7rem;line-height:1}
-@media (max-width:340px){.rc-name{font-size:1.45rem;margin-top:.5rem}}   /* the smallest phones: long names (Oaxaca Old Fashioned) stay on one line; same header height */
+@media (max-width:340px){.rc-name{font-size:1.45rem;margin-top:.5rem}}   /* the smallest phones: long names (Corpse Reviver No. 2) stay on one line; same header height */
 .rc-serves{margin:0 0 .5rem;display:flex;align-items:center;gap:.45rem;font:800 .95rem/1 var(--body)}
 .rc-step{display:none;width:2rem;height:2rem;border-radius:50%;border:2px solid #3a2532;background:transparent;color:#3a2532;
   font:800 1.1rem/1 var(--body);cursor:pointer;place-items:center;padding:0}

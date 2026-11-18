@@ -712,23 +712,6 @@ DRINKS = [
                 ('<strong>Garnish.</strong> A lime wedge on the rim.', [('garnish',)])],
          related=['lemon-drop', 'margarita'], hero=(['orange-liqueur', 'citrus-vodka'], ['fruit:lime', 'half:lime'])),
 
-    dict(slug='oaxaca-old-fashioned', name='Oaxaca Old Fashioned', genre='modern-variations', glass='rocks', color='#d9a85a', garnish=['orange-peel'],
-         recipe=[(1.5, 'oz', 'reposado tequila'), (.5, 'oz', 'mezcal'), (1, 'barspoon', 'agave syrup'), (2, 'dash', 'Angostura bitters')],
-         glass_line=('rocks, over one big ice cube', 'orange peel (flamed, if you like)'),
-         punch='The Old Fashioned, gone smoky.',
-         lines=['Bartender Phil Ward made it at Death & Co. in Manhattan in 2007: reposado tequila and a little smoky mezcal, built just like an Old Fashioned.',
-                'Back then, most bars only poured tequila as shots or in Margaritas, and hardly poured mezcal at all. One bartender called this drink a “gateway cocktail to mezcal.”',
-                'Agave syrup sweetens it, since it comes from agave, just like the spirits.'],
-         note_go_end=('→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything except the stir step (Philip's). Facts checked (Punch): Phil Ward, Death & Co., 2007; "
-                    "1½ oz reposado, ½ oz mezcal, a bar spoon of agave, 2 dashes Angostura, flamed orange twist; \"gateway cocktail to mezcal\" (a former PDT bartender)."),
-         steps=[('<strong>Combine ingredients.</strong> Add the tequila, mezcal, agave syrup and bitters to a mixing glass.',
-                 [('pour', 'reposado', 1.5), ('pour', 'mezcal', .5), ('pour', 'agave', .15), ('dash', 'angostura', 2)]),
-                ('<strong>Stir.</strong> Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into <strong>balance.</strong> <em>Dilution is part of the recipe.</em>)', [('ice', 'mix'), ('stir',)]),
-                ('<strong>Strain over a big cube.</strong> Strain into a rocks glass over one large ice cube.', [('ice', 'glass'), ('strain',)]),
-                ('<strong>Garnish.</strong> Squeeze an orange peel over the top. (Hold a lit match under it as you squeeze, if you want a little show.)', [('garnish',)])],
-         related=['old-fashioned', 'margarita'], hero=(['mezcal', 'reposado'], ['bitters', 'fruit:orange'])),
-    # ---------------------------------------------------------------- batch 5, Nov 10 2026: Arcane Oddities (Claude's drafts)
     dict(slug='last-word', name='Last Word', genre='arcane-oddities', glass='coupe', color='#cbd98e', garnish=['cherry'],
          recipe=[(.75, 'oz', 'gin'), (.75, 'oz', 'green Chartreuse'), (.75, 'oz', 'maraschino liqueur'), (.75, 'oz', 'lime juice')],
          glass_line=('coupe', 'a cherry'),
