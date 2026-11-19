@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts: cachaça is distilled from fresh sugarcane juice; the origin is unknown, and the flu-remedy story (garlic, honey, lime, cachaça) is told as a story (makemeacocktail). Brazilian law defines it as cachaça, lime and sugar. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 19 2026: Philip's copy, with two fixes (about 235 million liters, not almost 240; cachaça lowercase mid-sentence). Facts checked: the name, the egg-white-and-gin "sophisticated" versions and the drinkers who rejected them (Oxford Companion); 2025: 234.4 million liters produced, 7.95 million exported (MAPA, Anuário da Cachaça 2026). The recipe and steps are Claude's. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Caipirinha.***
 Caipirinha Recipe
@@ -15,11 +15,13 @@ Makes − 1 + drink
 2 oz cachaça
 **Glass:** rocks, over crushed ice
 **Garnish:** a lime wedge
-Brazil's national cocktail.
-Three ingredients. One glass.
-Cachaça is Brazil's sugarcane spirit. It's a lot like rum, but it's distilled from fresh cane juice instead of molasses, so it tastes grassier and a little funky.
-Nobody knows exactly who invented the Caipirinha. One popular story says it started out as a home remedy for the flu, with garlic and honey. (The garlic didn't last.)
-The trick is muddling the limes *with* the sugar. The sugar grinds against the peel and pulls out the lime's oils. Press firmly, but don't pulverize them: crushing the white pith makes the drink bitter.
+The Little Hillbilly?
+Yup.
+Brazil's national cocktail roughly translates to “little hillbilly.”
+It's basically the same story as the Old Fashioned. Cachaça, Brazil's sugarcane spirit, is a lot like rum. But it's distilled from fresh cane juice instead of molasses, so it tastes grassier and a little funky. In the 1940s, city bartenders started dressing it up with “sophisticated” additions like egg white or a splash of gin.
+But Brazilians didn't like that.
+They liked their Caipirinha funky, like a little hillbilly.
+(Fun fact: in 2025 Brazil produced about 235 million liters of cachaça. And exported 8 million. 😳🤯😳 You know who drank the rest? Brazilians.)
 Here's how you make one:
 The Cocktail Menu · Tiki & Tropical
 Caipirinha

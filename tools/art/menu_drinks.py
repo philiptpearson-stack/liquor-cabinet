@@ -925,12 +925,16 @@ DRINKS = [
     dict(slug='caipirinha', name='Caipirinha', genre='tiki-and-tropical', glass='rocks', color='#eef0d4', garnish=['lime-wedge'], crushed=True,
          recipe=[(4, '', 'lime wedges (half a lime)'), (2, 'tsp', 'sugar'), (2, 'oz', 'cachaça')],
          glass_line=('rocks, over crushed ice', 'a lime wedge'),
-         punch=["Brazil's national cocktail.", 'Three ingredients. One glass.'],
-         lines=["Cachaça is Brazil's sugarcane spirit. It's a lot like rum, but it's distilled from fresh cane juice instead of molasses, so it tastes grassier and a little funky.",
-                "Nobody knows exactly who invented the Caipirinha. One popular story says it started out as a home remedy for the flu, with garlic and honey. (The garlic didn't last.)",
-                'The trick is muddling the limes <em>with</em> the sugar. The sugar grinds against the peel and pulls out the lime\'s oils. Press firmly, but don\'t pulverize them: crushing the white pith makes the drink bitter.'],
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts: cachaça is distilled from fresh sugarcane juice; the origin is unknown, and the flu-remedy "
-                    "story (garlic, honey, lime, cachaça) is told as a story (makemeacocktail). Brazilian law defines it as cachaça, lime and sugar."),
+         punch='The Little Hillbilly?',
+         lines=['Yup.',
+                "Brazil's national cocktail roughly translates to “little hillbilly.”",
+                "It's basically the same story as the Old Fashioned. Cachaça, Brazil's sugarcane spirit, is a lot like rum. But it's distilled from fresh cane juice instead of molasses, so it tastes grassier and a little funky. In the 1940s, city bartenders started dressing it up with “sophisticated” additions like egg white or a splash of gin.",
+                "But Brazilians didn't like that.",
+                'They liked their Caipirinha funky, like a little hillbilly.',
+                "(Fun fact: in 2025 Brazil produced about 235 million liters of cachaça. And exported 8 million. 😳🤯😳 You know who drank the rest? Brazilians.)"],
+         copy_note=("Nov 19 2026: Philip's copy, with two fixes (about 235 million liters, not almost 240; cachaça lowercase mid-sentence). Facts checked: the name, "
+                    "the egg-white-and-gin \"sophisticated\" versions and the drinkers who rejected them (Oxford Companion); 2025: 234.4 million liters produced, "
+                    "7.95 million exported (MAPA, Anuário da Cachaça 2026). The recipe and steps are Claude's."),
          steps=[('<strong>Limes and sugar.</strong> Cut half a lime into wedges, and drop them into a rocks glass with the sugar.', [('limes',), ('sugar',)]),
                 ("<strong>Muddle.</strong> Press the limes firmly into the sugar, to squeeze out the juice and the oils from the peel. Don't pulverize them.", [('muddle',)]),
                 ('<strong>Ice and cachaça.</strong> Fill the glass with crushed ice, and pour in the cachaça.', [('ice', 'glass'), ('pour', 'cachaca', 2)]),
