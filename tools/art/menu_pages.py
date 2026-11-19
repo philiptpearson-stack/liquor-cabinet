@@ -205,7 +205,7 @@ def search_index():
               'champagne': 'sparkling wine bubbly', 'campari': 'bitter aperitivo amaro', 'soda water': 'club soda bubbles', 'egg white': 'foam',
               'ginger beer': 'ginger', 'grapefruit soda': 'grapefruit bubbles', 'honey syrup': 'honey', 'crème de cassis': 'blackcurrant',
               'crème de violette': 'violet floral', 'orange liqueur': 'triple sec cointreau curacao', 'sweet vermouth': 'vermouth', 'dry vermouth': 'vermouth',
-              'angostura bitters': 'bitters', "peychaud's bitters": 'bitters', 'orange bitters': 'bitters', 'grind': 'coffee liqueur kahlua'}
+              'angostura bitters': 'bitters', "peychaud's bitters": 'bitters', 'orange bitters': 'bitters', 'grind': 'coffee liqueur kahlua', 'goslings': 'dark rum'}
     out = []
     for d in DRINKS:
         ings = []

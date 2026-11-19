@@ -369,6 +369,7 @@ ING = {
     'gin':            ('gin', 'bottle', '#eef3f0', ('tall', '#cfe6df', 'gin')),
     'white-rum':      ('white rum', 'bottle', '#f1ecd8', ('tall', '#e3eee6', 'white rum')),
     'dark-rum':       ('dark rum', 'bottle', '#5a2e14', ('spirit', '#6b3a1c', 'dark rum')),
+    'goslings':       ('Goslings', 'bottle', '#5a2e14', ('spirit', '#3a2216', 'Goslings')),   # the Dark and Stormy (Philip, Nov 19)
     'tequila':        ('tequila', 'bottle', '#f3efd9', ('tall', '#e3eedd', 'tequila')),
     'vodka':          ('vodka', 'bottle', '#eef2f4', ('tall', '#e4ecf1', 'vodka')),
     'aged-rum':       ('aged rum', 'bottle', '#b8742e', ('spirit', '#b8742e', 'aged rum')),

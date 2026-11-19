@@ -42,7 +42,7 @@ DRINKS = [
 
     dict(slug='dark-and-stormy', name='Dark and Stormy', genre='tiki-and-tropical', glass='highball', color='#e2c584', garnish=['lime-wedge'],
          # a Golden Ratio fit, like a Moscow Mule with dark rum, but the rum still floats: the storm cloud (Philip, Nov 19)
-         recipe=[(1.5, 'oz', 'dark rum'), (.75, 'oz', 'lime juice'), (.75, 'oz', 'simple syrup'), (4, 'oz', 'ginger beer')],
+         recipe=[(1.5, 'oz', "Goslings Black Seal rum (or another dark rum, but don't tell Goslings)"), (.75, 'oz', 'lime juice'), (.75, 'oz', 'simple syrup'), (4, 'oz', 'ginger beer')],
          glass_line=('highball, over ice', 'lime wedge'),
          punch='According to Goslings:',
          lines=["It's storm clouds in a glass.",
@@ -62,10 +62,10 @@ DRINKS = [
          steps=[('<strong>Fill with ice.</strong> Fill a highball glass with ice.', [('ice', 'glass')]),
                 ('<strong>Lime, simple and ginger beer.</strong> Pour in the lime juice and simple syrup, then top with the ginger beer.',
                  [('pour', 'lime', .75), ('pour', 'simple', .75), ('top', 'ginger-beer', 4)]),
-                ('<strong>Float the rum.</strong> Pour the dark rum slowly over the top, so it floats like a storm cloud.', [('float', 'dark-rum', 1.5)]),
+                ('<strong>Float the rum.</strong> Pour the Goslings slowly over the top, so it floats like a storm cloud.', [('float', 'goslings', 1.5)]),
                 ('<strong>Garnish.</strong> A lime wedge on the rim.', [('garnish',)])],
          tip="Pour the rum over the back of a spoon, and it'll sit right on top.",
-         related=['mamie-taylor', 'el-diablo'], hero=(['syrup', 'dark-rum'], ['ginger-beer', 'fruit:lime'])),
+         related=['mamie-taylor', 'el-diablo'], hero=(['syrup', 'goslings'], ['ginger-beer', 'fruit:lime'])),
 
     dict(slug='el-diablo', name='El Diablo', glass='highball', color='#c26f86', base='#9b3b62', garnish=['lime-wedge'],
          recipe=[(1.5, 'oz', 'tequila'), (.75, 'oz', 'lime juice'), (.75, 'oz', 'crème de cassis'), (4, 'oz', 'ginger beer')],
