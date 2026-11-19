@@ -47,13 +47,14 @@ DRINKS = [
          punch='According to Goslings:',
          lines=["It's storm clouds in a glass.",
                 'A sailor said so when he saw it.',
-                "(Goslings actually trademarked the name Dark 'n Stormy!)",
+                "<span class=\"tm\">(Goslings actually <span class=\"hl\">trademarked</span> the name Dark 'n Stormy!)</span>",
                 "It's basically a Moscow Mule but with dark rum.",
                 'We mean Goslings Black Seal rum!',
-                "(Goslings actually trademarked the name Dark 'n Stormy!)",
+                "<span class=\"tm\">(Goslings actually <span class=\"hl\">trademarked</span> the name Dark 'n Stormy!)</span>",
                 "It's a Bermuda drink, associated with British sailors and the island's ginger beer.",
                 'And Goslings Black Seal rum, of course!',
-                "(Goslings actually trademarked the name Dark 'n Stormy!)"],
+                "<span class=\"tm\">(Goslings actually <span class=\"hl\">trademarked</span> the name Dark 'n Stormy!)</span>"],
+         css='.t .tm{font-size:.86em;font-weight:800}.t .tm .hl{color:var(--accent)}   /* the trademark gag: small, bold, "trademarked" in plum (Philip, Nov 19) */',
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          copy_note=("Nov 19 2026: Philip's copy (the trademark spelled as Goslings spells it: Dark 'n Stormy) and recipe: simple syrup added for the Golden Ratio, "
                     "the rum still floated. Facts checked: the sailor and the storm cloud are Goslings' own story (goslings.com); Goslings holds the trademark "
