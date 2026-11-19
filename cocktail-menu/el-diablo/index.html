@@ -713,6 +713,9 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
     const t = Math.round(q * 4), w = Math.floor(t / 4), r = ['', '¼', '½', '¾'][t % 4];
     return w && r ? w + ' ' + r : (w ? String(w) : r || '0');
   };
+  // A drink page shows its card twice (the shortcut up top, and again by the step-by-step), so cards for the same
+  // recipe share one count: change either and both follow (Philip, Nov 19). Cards are matched by their label.
+  const counts = {};
   document.querySelectorAll('.recipe-card').forEach(card => {
     const n = card.querySelector('.rc-n'), unit = card.querySelector('.rc-unit');
     const less = card.querySelector('.rc-step[data-d="-1"]'), more = card.querySelector('.rc-step[data-d="1"]');
@@ -727,9 +730,13 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
           : u ? q + ' ' + (q === 1 ? u : (a.dataset.us || u + 's')) : String(q);   // "1 egg white", "2 egg whites"
       });
     };
-    let k = 1;
-    [less, more].forEach(b => b.addEventListener('click', () => { k = Math.min(12, Math.max(1, k + Number(b.dataset.d))); set(k); }));
-    set(k);
+    const g = counts[card.getAttribute('aria-label') || ''] || (counts[card.getAttribute('aria-label') || ''] = { k: 1, cards: [] });
+    g.cards.push(set);
+    [less, more].forEach(b => b.addEventListener('click', () => {
+      g.k = Math.min(12, Math.max(1, g.k + Number(b.dataset.d)));
+      g.cards.forEach(s => s(g.k));
+    }));
+    set(g.k);
   });
 
   // Pause / play everything, including the crayon line boil
