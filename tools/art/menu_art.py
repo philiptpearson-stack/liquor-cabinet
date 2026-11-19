@@ -331,6 +331,16 @@ def honey_jar():
             + '<text class="letter" x="0" y="-11.6" font-size="6.6" text-anchor="middle">honey</text>')
 
 
+def sugar_jar():
+    """A glass jar of sugar with a word on it (the Caipirinha: Philip, Nov 19)."""
+    jar = 'M-13 0 Q-15 -14 -12 -26 L12 -26 Q15 -14 13 0Z'
+    return (wash(f'<path d="{jar}" fill="#e6eef0" opacity=".75"/><path d="M-12.5 -2 Q-14 -12 -12 -21 Q0 -24 12 -21 Q14 -12 12.5 -2Z" fill="#fffaf1"/>'
+                 '<rect x="-13" y="-33" width="26" height="7" rx="2" fill="#9b7663"/><rect x="-9" y="-16" width="18" height="10" rx="1.5" fill="#fbf3e3"/>')
+            + lines(f'<path d="{jar}" stroke-width="2"/><rect x="-13" y="-33" width="26" height="7" rx="2" stroke-width="1.8"/><rect x="-9" y="-16" width="18" height="10" rx="1.5" stroke-width="1.4"/>'
+                    '<path d="M-7 -20 l1 -.8 M-1 -21.5 l1 .8 M5 -20 l1 -.8 M-10 -5 l.8 1 M8 -4 l.8 -1" stroke="#b9b2a8" stroke-width="1"/>', boil=False)
+            + '<text class="letter" x="0" y="-8.6" font-size="6.6" text-anchor="middle">sugar</text>')
+
+
 def egg():
     return (wash('<ellipse cx="0" cy="-12" rx="9.5" ry="12" fill="#f6ead2"/>') + lines('<ellipse cx="0" cy="-12" rx="9.5" ry="12" stroke-width="2"/><path d="M-4 -19 q2 -3 5 -3" stroke="#fffaf1" stroke-width="2"/>', boil=False))
 

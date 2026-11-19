@@ -936,7 +936,7 @@ DRINKS = [
                 ('<strong>Ice and cachaça.</strong> Fill the glass with crushed ice, and pour in the cachaça.', [('ice', 'glass'), ('pour', 'cachaca', 2)]),
                 ('<strong>Stir.</strong> Give it a good stir, bottom to top, so the sugar dissolves.', [('stir',)]),
                 ('<strong>Garnish.</strong> A lime wedge, if you like.', [('garnish',)])],
-         related=['mojito', 'ti-punch'], hero=(['cachaca'], ['half:lime', 'fruit:lime'])),
+         related=['mojito', 'ti-punch'], hero=(['sugar', 'cachaca'], ['half:lime', 'fruit:lime'])),   # the sugar, too (Philip, Nov 19)
 
     dict(slug='pisco-sour', name='Pisco Sour', genre='tiki-and-tropical', glass='coupe', color='#efe7c2', foam=True, garnish=['bitters-drops'],
          recipe=[(2, 'oz', 'pisco'), (1, 'oz', 'lime juice'), (.75, 'oz', 'simple syrup'), (1, 'egg white', ''), (3, 'drop', 'Angostura bitters, on top')],

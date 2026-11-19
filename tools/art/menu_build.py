@@ -534,6 +534,29 @@ class Build:
                 self.emit(c, [(0, {'opacity': 0, 'transform': 'translateY(-110px)'}), (tt, {'opacity': 0, 'transform': 'translateY(-110px)'}), (tt + .05, {'opacity': 1}),
                               (tt + .5, {'transform': 'translateY(0)'}), (self.T - .8, {'opacity': 1}), (self.T - .25, {'opacity': 0})])
             return out
+        if kind == 'sugar':   # a teaspoon of sugar tips into the glass, and the sugar stays: a white mound by the limes (Philip, Nov 19: "Where's the sugar?")
+            out = ''
+            sx, sy = rx + 2, ry - 12                  # the spoon's bowl, just over the rim
+            hx, hy = sx + 42, sy - 26                 # the end of the handle, where it pivots
+            sw, sp, heap = self.cls('tspw'), self.cls('tsp'), self.cls('heap')
+            spoon = (lines(f'<path d="M{f(sx + 7)} {f(sy - 3)} L{f(hx)} {f(hy)}" stroke="#a9a29a" stroke-width="3.2"/>', boil=False, width=2)
+                     + f'<ellipse cx="{f(sx)}" cy="{f(sy)}" rx="11" ry="5.6" fill="#c9c3b8" stroke="#7d756c" stroke-width="1.4"/>'
+                     + f'<g class="{heap}"><path d="M{f(sx - 9)} {f(sy - 1)} Q{f(sx)} {f(sy - 12)} {f(sx + 9)} {f(sy - 1)}Z" fill="#fffaf1" stroke="#9a9086" stroke-width="1.1"/></g>')
+            out += f'<g class="{sw}"><g class="{sp}" style="transform-origin:{f(hx)}px {f(hy)}px">{spoon}</g></g>'
+            self.window(sw, t0 + .02, t1 - .05)
+            self.emit(sp, [(0, {'transform': 'rotate(0deg)'}), (t0 + .2, {'transform': 'rotate(0deg)'}), (t0 + .4, {'transform': 'rotate(-20deg)'}), (t1, {'transform': 'rotate(-20deg)'})], base=None)
+            self.emit(heap, [(0, {'opacity': 1}), (t0 + .38, {'opacity': 1}), (t0 + .5, {'opacity': 0})], base=None)
+            for i, (dx, dy) in enumerate(((-4, 0), (2, -3), (5, 2), (-1, 5), (-6, 3), (3, 6), (0, -2), (-3, 8))):
+                c = self.cls('salt')
+                out += f'<g class="{c}"><rect x="{f(sx + 9 + dx - 1.8)}" y="{f(sy + 14 + dy)}" width="3.6" height="3.6" fill="#fffaf1" stroke="#8a8279" stroke-width=".9"/></g>'
+                tt = t0 + .4 + i * .05
+                self.emit(c, [(0, {'opacity': 0, 'transform': 'translateY(0)'}), (tt, {'opacity': 0, 'transform': 'translateY(0)'}), (tt + .04, {'opacity': 1}),
+                              (tt + .45, {'opacity': 1, 'transform': f'translateY({f(by - sy - 22)}px)'}), (tt + .5, {'opacity': 0})])
+            mound = self.cls('mound')
+            out += (f'<g class="{mound}"><path d="M{f(rx - 16)} {f(by)} Q{f(rx - 6)} {f(by - 11)} {f(rx + 4)} {f(by)}Z" fill="#fffaf1" stroke="#9a9086" stroke-width="1.2"/>'
+                    f'<path d="M{f(rx - 11)} {f(by - 3)} l1.5 -1 M{f(rx - 5)} {f(by - 5)} l1.5 1 M{f(rx - 1)} {f(by - 2)} l1.2 -1" stroke="#b9b2a8" stroke-width=".9"/></g>')
+            self.emit(mound, [(0, {'opacity': 0}), (t0 + .75, {'opacity': 0}), (t0 + .9, {'opacity': 1}), (self.T - .8, {'opacity': 1}), (self.T - .25, {'opacity': 0})])
+            return out
         if kind in ('salt', 'sugar', 'spoon'):   # a spoonful (horseradish) falls in bigger, rounder lumps, in its own color
             out = ''
             for i, (dx, dy) in enumerate(((-4, 0), (2, -3), (6, 2), (-1, 5)) + (((-6, 3), (4, 6), (0, -2)) if kind in ('sugar', 'spoon') else ())):
