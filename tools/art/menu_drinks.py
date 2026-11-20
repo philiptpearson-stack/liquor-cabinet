@@ -485,13 +485,15 @@ DRINKS = [
          recipe=[(2, 'oz', 'aged rum (Jamaican, if you can find it)'), (1, 'oz', 'lime juice'), (.5, 'oz', 'orange liqueur (orange curaçao)'),
                  (.5, 'oz', 'orgeat (almond syrup)'), (.25, 'oz', 'simple syrup')],
          glass_line=('rocks, over crushed ice', 'mint sprig and a lime wedge'),
-         punch=['“<em>Maita’i roa aé!</em>”', 'That’s Tahitian for “out of this world, the best.”'],
-         lines=["That's what Trader Vic's friend Carrie Guild, visiting from Tahiti, said after her first sip in 1944, at his bar in Oakland, California. So that's what Vic named it.",
-                "Don the Beachcomber, Hollywood's other tiki king, claimed he'd invented it first. Vic's answer: anybody who said so was a “dirty stinker.”",
-                "It's simpler than it looks: aged rum and lime, sweetened with orange liqueur and orgeat, an almond syrup. No pineapple, no grenadine, no paper umbrella."],
+         punch="Turns out, it's not that big pint of pineapple juice and grenadine people used to chug at TGI Friday's in the 90s.",
+         lines=["First, it was Trader Vic's signature drink!",
+                '(In the 1940s.)',
+                'And the original formulation is sublime.',
+                "It's aged rum and lime, sweetened with orange liqueur and orgeat, an almond syrup.",
+                'Which possibly qualifies it as the most ordered and least accurately made drink of all time.'],
          lead="Here's how you make the <em>original</em>:",
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Difford's, quoting Trader Vic's own account): 1944, Oakland; "
+         copy_note=("Nov 19 2026: Philip's copy (\"original\" kept in italics in the lead-in). Facts checked (Difford's, quoting Trader Vic's own account): 1944, Oakland; "
                     "served to Ham and Carrie Guild, friends from Tahiti; \"Mai Tai-Roa Aé\" = \"Out of this world - the best\"; Don the Beachcomber's competing claim and Vic's "
                     "\"dirty stinker\". Recipe: Trader Vic's (2 oz rum, juice of a lime, ½ oz orange curaçao, ½ oz orgeat, ¼ oz rock candy syrup)."),
          steps=[('<strong>Combine ingredients.</strong> Add the rum, lime juice, orange liqueur, orgeat and simple syrup to your shaker.',
