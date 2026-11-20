@@ -967,19 +967,21 @@ DRINKS = [
          related=['mojito', 'ti-punch'], hero=(['sugar', 'cachaca'], ['half:lime', 'fruit:lime'])),   # the sugar, too (Philip, Nov 19)
 
     dict(slug='pisco-sour', name='Pisco Sour', genre='tiki-and-tropical', glass='coupe', color='#efe7c2', foam=True, garnish=['bitters-drops'],
-         recipe=[(2, 'oz', 'pisco'), (1, 'oz', 'lime juice'), (.75, 'oz', 'simple syrup'), (1, 'egg white', ''), (3, 'drop', 'Angostura bitters, on top')],
+         recipe=[(2, 'oz', 'pisco'), (1, 'oz', 'lime juice'), (1, 'oz', 'simple syrup'), (1, 'egg white', ''), (3, 'drop', 'Angostura bitters, on top')],
          glass_line=('coupe', 'a few drops of Angostura bitters on the foam'),
          note='Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.',
-         punch=["Peru's national drink.", 'Invented by a guy from Utah.'],
-         lines=["Victor Morris left Salt Lake City for Peru in 1902, to work on a railroad. He stayed, married, and opened Morris' Bar in Lima.",
-                'He said he first made his sour with pisco, the local grape brandy, when the whiskey ran out at a party.',
-                "One of his bartenders, Mario Bruiget, is believed to have added the egg white and bitters. That's the version Peru drinks today.",
-                "Chile makes pisco, too, and claims the drink as its own. We're staying out of it."],
+         punch="It's a Whiskey Sour, with Peruvian brandy!",
+         lines=['Invented by a prominent Mormon from Utah.',
+                '<strong>For real!</strong>',
+                'In 1902 Victor Morris left Salt Lake City for Peru — where the story goes he made his first Pisco Sour at a party, <em>after the whiskey had run out.</em>',
+                "Eventually, that Pisco Sour became the signature drink at his bar, Morris' Bar, in Lima.",
+                "Then it became Peru's national drink."],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Atlas Obscura): Victor V. Morris, a Salt Lake City native, to Peru in 1902 for a railway; "
+         copy_note=("Nov 20 2026: Philip's copy (\"prominent Mormon\" is his joke: Morris came from a prominent Mormon family; the bar's name is Morris' Bar) and recipe: "
+                    "1 oz simple, the Golden Ratio. Facts checked (Atlas Obscura): Victor V. Morris, a Salt Lake City native, to Peru in 1902 for a railway; "
                     "said he turned to pisco when the whiskey ran out (1904); Morris' Bar in Lima (closed 1929); Mario Bruiget likely added the egg white and bitters. The Chile claim is well known."),
          steps=[('<strong>Combine ingredients.</strong> Add the pisco, lime juice, simple syrup and egg white to your shaker.',
-                 [('pour', 'pisco', 2), ('pour', 'lime', 1), ('pour', 'simple', .75), ('egg',)]),
+                 [('pour', 'pisco', 2), ('pour', 'lime', 1), ('pour', 'simple', 1), ('egg',)]),
                 ("<strong>Dry shake.</strong> Shake hard, without ice, for about 15 seconds. That's what whips the egg white into foam.", [('dry',)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
                 ('<strong>Strain.</strong> Strain into a chilled coupe, and let the foam settle on top.', [('strain',)]),
