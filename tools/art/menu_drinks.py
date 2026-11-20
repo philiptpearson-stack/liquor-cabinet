@@ -924,11 +924,12 @@ DRINKS = [
          lines=["That's what Ernest Hemingway asked for at Havana's El Floridita, back in the 1930s.",
                 'He wanted a regular old Daiquiri, but, you know, he wanted to get...<em>fucked up.</em>',
                 'A contemporary account describes his drink as two and a half jiggers of rum, two limes, half a grapefruit, and maraschino.',
-                'Hemingway later bragged about drinking 17 of them in one afternoon. (Bad idea.)',
+                '<strong class="ink">Hemingway later bragged about drinking <span class="hl">17</span> of them in one afternoon. (Bad idea.)</strong>',
                 '(Seriously.)',
                 "(Please don't.)",
                 "Today's version is...well...tastier than ol' Ernie's. And less likely to kill you from alcohol poisoning."],
          tip='Too tart? Add ¼ oz simple syrup. (Papa would never.)',
+         css='.t .hl{color:var(--accent)}.t strong.ink{color:var(--ink)}   /* the 17 line in bold ink, with 17 in plum (Philip, Nov 19) */',
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          copy_note=("Nov 19 2026: Philip's copy. Facts checked: the contemporary account is A. E. Hotchner's Papa Hemingway (\"two and a half jiggers of Bacardi White Label "
                     "Rum, the juice of two limes and half a grapefruit, and six drops of maraschino\"); the 17 is Hemingway's own, in a 1952 letter to Harvey Breit about a 1942 "
