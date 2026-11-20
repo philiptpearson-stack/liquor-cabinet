@@ -25,9 +25,9 @@ GENRE_NAME = {'classics': 'Classics', **dict(SOON)}   # the parts of the menu, b
 
 def genre(d):
     return d.get('genre', 'classics')
-GLASS_WORD = {'coupe': 'coupe', 'martini': 'martini glass', 'rocks': 'rocks glass', 'highball': 'tall glass of ice', 'flute': 'Champagne flute', 'copper-mug': 'copper mug', 'wine': 'wine glass', 'mug': 'warm mug', 'julep-cup': 'julep cup'}
-HERO_SCALE = {'coupe': 1.8, 'martini': 1.55, 'rocks': 1.45, 'highball': 1.3, 'flute': 1.25, 'copper-mug': 1.3, 'wine': 1.15, 'mug': 1.35, 'julep-cup': 1.4}
-ICON_SCALE = {'coupe': 1.35, 'martini': 1.18, 'rocks': 1.3, 'highball': .93, 'flute': .87, 'copper-mug': 1.2, 'wine': .9, 'mug': 1.25, 'julep-cup': 1.2}
+GLASS_WORD = {'coupe': 'coupe', 'martini': 'martini glass', 'rocks': 'rocks glass', 'highball': 'tall glass of ice', 'flute': 'Champagne flute', 'copper-mug': 'copper mug', 'wine': 'wine glass', 'mug': 'warm mug', 'hurricane': 'hurricane glass', 'julep-cup': 'julep cup'}
+HERO_SCALE = {'coupe': 1.8, 'martini': 1.55, 'rocks': 1.45, 'highball': 1.3, 'flute': 1.25, 'copper-mug': 1.3, 'wine': 1.15, 'mug': 1.35, 'julep-cup': 1.4, 'hurricane': 1.25}
+ICON_SCALE = {'coupe': 1.35, 'martini': 1.18, 'rocks': 1.3, 'highball': .93, 'flute': .87, 'copper-mug': 1.2, 'wine': .9, 'mug': 1.25, 'julep-cup': 1.2, 'hurricane': .9}
 GARNISH_WORD = {'lemon-wedge': 'a lemon wedge', 'orange-wedge': 'an orange wedge', 'lime-twist': 'a lime twist', 'lemon-peel': 'a lemon peel', 'grapefruit-twist': 'a grapefruit twist', 'celery': 'a celery stalk', 'candied-ginger': 'a piece of candied ginger', 'paper-plane': 'a little paper plane', 'coffee-beans': 'three coffee beans',
                 'pineapple': 'a pineapple wedge', 'bitters-drops': 'drops of bitters', 'straw': 'a straw', 'cinnamon': 'a cinnamon stick', 'nutmeg': 'grated nutmeg',
                 'berries': 'fresh berries', 'orange-wheel': 'an orange slice', 'salt-rim': 'a salted rim', 'sugar-rim': 'a sugared rim', 'lime-wheel': 'a lime wheel', 'lemon-wheel': 'a lemon wheel', 'lime-wedge': 'a lime wedge', 'grapefruit-wedge': 'a grapefruit wedge',
@@ -68,6 +68,8 @@ def prop(spec):
         return at(0, 0, pear(), 1.4), 'a pear'
     if spec == 'orgeat':
         return at(0, 0, bottle('tall', '#f2e8d2', 'orgeat', cap='#a87b4a'), 1.5), 'a bottle of orgeat'
+    if spec == 'passion':     # the Hurricane
+        return at(0, 0, bottle('tall', '#f0a83c', 'passion fruit syrup', cap='#7a3a6e'), 1.5), 'a bottle of passion fruit syrup'
     if spec == 'grenadine':   # the Shirley Temple
         return at(0, 0, bottle('tall', '#b3202a', 'grenadine', cap='#6f9e4a'), 1.5), 'a bottle of grenadine'
     if spec == 'butter':      # a stick of it, half unwrapped (the Hot Buttered Rum)

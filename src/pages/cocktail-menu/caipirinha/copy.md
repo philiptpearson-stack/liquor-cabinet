@@ -38,5 +38,5 @@ Makes − 1 + drink
 **Garnish.** A lime wedge, if you like.
 Keep exploring
 → Mojito
-→ Ti’ Punch
+→ Daiquiri
 ← Back to Tiki & Tropical

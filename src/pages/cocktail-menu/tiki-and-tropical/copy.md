@@ -10,9 +10,9 @@ Tap any drink for its recipe and step-by-step, animated how-to.
 Caipirinha
 Dark and Stormy
 Hemingway Daiquiri
+Hurricane
 Jungle Bird
 Mai Tai
 Piña Colada
 Pisco Sour
-Ti’ Punch
 ← Back to the Cocktail Menu

@@ -18,7 +18,7 @@ MX, MRIM, MBOT = 190, 96, 189                      # the mixing glass: rim centr
 G_MIX = 'M160 96 L220 96 L214 196 L166 196Z'
 G_MIX_IN = 'M162.4 99 L217.6 99 L212.3 189 L167.7 189Z'
 TIN = 'M154 114 L226 114 L220 58 L160 58Z'
-BUILD_SCALE = {'highball': 1.2, 'rocks': 1.38, 'coupe': 1.5, 'flute': 1.0, 'martini': 1.3, 'copper-mug': 1.35, 'wine': 1.15, 'mug': 1.4, 'julep-cup': 1.35}
+BUILD_SCALE = {'highball': 1.2, 'rocks': 1.38, 'coupe': 1.5, 'flute': 1.0, 'martini': 1.3, 'copper-mug': 1.35, 'wine': 1.15, 'mug': 1.4, 'julep-cup': 1.35, 'hurricane': 1.12}
 DUR = {'pour': 1.2, 'jigger': 1.15, 'dash': 1.2, 'egg': 1.3, 'mint': 1.0, 'salt': 1.0, 'ice': 1.0, 'ice-glass': 1.5,
        'dry': 2.4, 'shake': 2.9, 'stir': 2.8, 'strain': 2.5, 'dump': 2.4, 'swirl': 1.7, 'top': 1.9, 'float': 1.9, 'sink': 1.9, 'garnish': 1.3, 'rim': 1.5, 'muddle': 2.0, 'rinse': 2.2, 'sugar': 1.1, 'limes': 1.2, 'spoon': 1.2}
 LEAD, HOLD = .5, 2.8
@@ -526,7 +526,7 @@ class Build:
             return body
         if kind == 'limes':
             out = ''
-            n = a[3] if len(a) > 5 else 3          # ('limes', 1): one coin of lime (the Ti' Punch)
+            n = a[3] if len(a) > 5 else 3          # ('limes', 1): one coin of lime
             for k, (dx, dy, r) in enumerate(((-8, -5, -20), (6, -4, 25), (-1, -10, 70))[:n]):
                 c = self.cls('glime')
                 out += f'<g class="{c}">' + at(rx + dx, by + dy, wedge('lime'), 1, r) + '</g>'

@@ -964,7 +964,7 @@ DRINKS = [
                 ('<strong>Ice and cachaça.</strong> Fill the glass with crushed ice, and pour in the cachaça.', [('ice', 'glass'), ('pour', 'cachaca', 2)]),
                 ('<strong>Stir.</strong> Give it a good stir, bottom to top, so the sugar dissolves.', [('stir',)]),
                 ('<strong>Garnish.</strong> A lime wedge, if you like.', [('garnish',)])],
-         related=['mojito', 'ti-punch'], hero=(['sugar', 'cachaca'], ['half:lime', 'fruit:lime'])),   # the sugar, too (Philip, Nov 19)
+         related=['mojito', 'daiquiri'], hero=(['sugar', 'cachaca'], ['half:lime', 'fruit:lime'])),   # the sugar, too (Philip, Nov 19)
 
     dict(slug='pisco-sour', name='Pisco Sour', genre='tiki-and-tropical', glass='coupe', color='#efe7c2', foam=True, garnish=['bitters-drops'],
          recipe=[(2, 'oz', 'pisco'), (1, 'oz', 'lime juice'), (1, 'oz', 'simple syrup'), (1, 'egg white', ''), (3, 'drop', 'Angostura bitters, on top')],
@@ -988,20 +988,27 @@ DRINKS = [
                 ("<strong>Garnish.</strong> A few drops of Angostura on the foam. (Drag a toothpick through them, if you're feeling fancy.)", [('garnish',)])],
          related=['whiskey-sour', 'pink-lady'], hero=(['bitters', 'pisco'], ['egg', 'fruit:lime'])),
 
-    dict(slug='ti-punch', name='Ti’ Punch', genre='tiki-and-tropical', glass='rocks', color='#ebe3bd', garnish=['lime-wheel'],
-         recipe=[(2, 'oz', 'rhum agricole blanc'), (1, 'barspoon', 'cane syrup'), (1, '', 'coin of lime, with a little flesh on it')],
-         glass_line=('small rocks glass, no ice', 'a coin of lime, in the drink'),
-         punch=['Make it yourself.', "<em>That's the tradition.</em>"],
-         lines=['“Ti’” is Creole for “petit.” So: a little punch, the everyday drink of Martinique and Guadeloupe, in the French Caribbean.',
-                "It's just three things: rhum agricole (rum made from fresh sugarcane juice), a coin of lime and a little cane syrup. Traditionally, no ice. There was no ice in the cane fields.",
-                'In Martinique, the bottles go on the table and everybody makes their own, as strong or as sweet as they like. As the saying goes: <em>chacun prépare sa propre mort.</em> Everyone prepares their own death.'],
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch, Ivy Mix): \"Ti'\" is Creole for petit; the official drink of the French Caribbean, "
-                    "Martinique and Guadeloupe; rhum agricole, a disc of lime, cane syrup; purists skip ice (none in the cane fields); \"Chacun prépare sa propre mort.\""),
-         steps=[('<strong>Cut a lime coin.</strong> Slice a coin from the side of a lime, about the size of a quarter, with a little flesh on it. Squeeze it into a small glass, and drop it in.', [('limes', 1)]),
-                ('<strong>Add the cane syrup.</strong> A bar spoon, or to taste.', [('pour', 'cane-syrup', .15)]),
-                ('<strong>Add the rhum.</strong>', [('pour', 'rhum-agricole', 2)]),
-                ("<strong>Swizzle.</strong> Stir it together until the syrup dissolves. Add an ice cube if you like. (We won't tell.)", [('stir',)])],
-         related=['caipirinha', 'daiquiri'], hero=(['rhum-agricole'], ['half:lime', 'fruit:lime'])),
+    dict(slug='hurricane', name='Hurricane', genre='tiki-and-tropical', glass='hurricane', color='#e2783a', garnish=['orange-wheel', 'cherry'],
+         aka="pat o'brien's new orleans",
+         recipe=[(1, 'oz', 'white rum'), (1, 'oz', 'dark rum'), (1, 'oz', 'lemon juice'), (1, 'oz', 'passion fruit syrup')],
+         glass_line=('hurricane glass, over ice', 'an orange slice and a cherry'),
+         note="Can't find passion fruit syrup? Make it: stir equal parts passion fruit purée and sugar over low heat until the sugar dissolves. Let it cool.",
+         punch=['Got too much rum?', '<em>Make a Hurricane.</em>'],
+         lines=["Pat O'Brien's started out as a speakeasy in New Orleans' French Quarter. The password? “Storm's brewin'.”",
+                "In the 1940s, the story goes, liquor distributors made O'Brien buy cases and cases of rum before they'd sell him a few cases of whiskey.",
+                'So he had a <em>lot</em> of rum. He mixed it with passion fruit and lemon, poured it into tall glasses shaped like hurricane lamps, and gave it away to sailors.',
+                "It's been a French Quarter staple ever since."],
+         gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
+         copy_note=("Nov 20 2026: Philip swapped the Ti' Punch for the Hurricane (\"People actually know that one!\"). CLAUDE'S DRAFT, waiting on Philip: everything. "
+                    "Recipe: the Golden Ratio, 2:1:1 (two rums, lemon, passion fruit syrup), poured in ice and all. Facts checked (Wikipedia, Tasting Table): Pat O'Brien's, "
+                    "New Orleans, the 1940s; it began as a speakeasy (Mr. O'Brien's Club Tipperary, password \"storm's brewin'\"); distributors made bars take rum to get "
+                    "Scotch and whiskey; hurricane-lamp glasses, given away to sailors. A rival claim: Monte Proser's Hurricane Bar, 1939 New York World's Fair."),
+         steps=[('<strong>Combine ingredients.</strong> Add both rums, the lemon juice and the passion fruit syrup to your shaker.',
+                 [('pour', 'white-rum', 1), ('pour', 'dark-rum', 1), ('pour', 'lemon', 1), ('pour', 'passion', 1)]),
+                ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
+                ('<strong>Pour it all in.</strong> Pour everything, ice and all, into a hurricane glass.', [('dump',)]),
+                ('<strong>Garnish.</strong> An orange slice and a cherry.', [('garnish',)])],
+         related=['mai-tai', 'dark-and-stormy'], hero=(['white-rum', 'dark-rum'], ['passion', 'fruit:lemon'])),
     # ---------------------------------------------------------------- batch 7, Nov 10 2026: Low & No-Proof, Warm & Cozy, Punches (Claude's drafts)
     dict(slug='americano', name='Americano', genre='low-and-no-proof', glass='highball', color='#c8452f', garnish=['orange-wheel'],
          recipe=[(1.5, 'oz', 'Campari'), (1.5, 'oz', 'sweet vermouth'), (3, 'oz', 'soda water')],

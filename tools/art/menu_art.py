@@ -38,6 +38,11 @@ GLASS = {
             '<path d="M0 -56 V-4 M-18 0 Q0 -6 18 0" stroke-width="2.4"/><path d="M-20 -100 Q-23 -84 -16 -72" stroke="#fffaf1" stroke-width="2.6"/>',
         back='<path d="M-26 -112 Q-31 -80 -20 -64 Q-10 -56 0 -56 Q10 -56 20 -64 Q31 -80 26 -112Z" fill="#e7f1fb" opacity=".35"/>',
         inner='M-24.4 -110 Q-28.6 -80 -18.6 -65.4 Q-10 -58.4 0 -58.4 Q10 -58.4 18.6 -65.4 Q28.6 -80 24.4 -110Z', bottom=-59, top=-97, rim=(-112, 26)),
+    'hurricane': dict(   # shaped like a hurricane lamp: a flared mouth, a narrow waist, a round belly, a short foot (the Hurricane, Nov 20)
+        out='<path d="M-19 -110 C-13 -92 -11 -76 -13 -66 C-15 -56 -23 -46 -22 -32 C-21 -18 -12 -11 0 -11 C12 -11 21 -18 22 -32 C23 -46 15 -56 13 -66 C11 -76 13 -92 19 -110" stroke-width="2.4"/><path d="M-19 -110 Q0 -113 19 -110" stroke-width="1.6"/><path d="M0 -11 V-3 M-15 0 Q0 -5 15 0" stroke-width="2.4"/>'
+            '<path d="M-17.5 -46 Q-19 -32 -13 -22" stroke="#fffaf1" stroke-width="2.6"/><path d="M-14.5 -102 Q-11 -88 -10.5 -76" stroke="#fffaf1" stroke-width="2.2"/>',
+        back='<path d="M-19 -110 C-13 -92 -11 -76 -13 -66 C-15 -56 -23 -46 -22 -32 C-21 -18 -12 -11 0 -11 C12 -11 21 -18 22 -32 C23 -46 15 -56 13 -66 C11 -76 13 -92 19 -110Z" fill="#e7f1fb" opacity=".35"/>',
+        inner='M-17.4 -108 C-11.6 -92 -9.6 -76 -11.6 -66 C-13.6 -56 -21.4 -46 -20.4 -32 C-19.4 -19.6 -11.2 -12.6 0 -12.6 C11.2 -12.6 19.4 -19.6 20.4 -32 C21.4 -46 13.6 -56 11.6 -66 C9.6 -76 11.6 -92 17.4 -108Z', bottom=-13, top=-96, rim=(-110, 19)),
     'mug': dict(   # a clear glass mug, for hot drinks
         out='<path d="M-26 -78 L26 -78 L23 -5 Q0 1 -23 -5Z" stroke-width="2.4"/><path d="M25.6 -66 Q42 -65 42 -46 Q42 -28 24.2 -26" stroke-width="2.4"/>'
             '<path d="M-21.6 -6 H21.6" stroke-width="1.4"/><path d="M-20 -68 L-18.6 -18" stroke="#fffaf1" stroke-width="2.6"/>',
@@ -68,6 +73,7 @@ ICE = {
     'wine': [(-18, -84, 14, -6), (2, -86, 14, 5), (-8, -101, 14, 8), (-15, -72, 13, 3), (4, -72, 13, -5)],
     'julep-cup-crushed': [(-22.0, -17.5, 7.5, -25), (-13.3, -16.5, 6.5, 12), (-4.6, -15.5, 5.5, -1), (4.1, -17.0, 7.5, -14), (12.8, -16.0, 6.5, 23), (-18.2, -22.1, 6.5, -2), (-9.6, -23.6, 5.5, -15), (-0.9, -22.6, 7.5, 22), (7.8, -21.6, 6.5, 9), (-22.0, -29.3, 5.5, 21), (-13.3, -28.3, 7.5, 8), (-4.6, -29.8, 6.5, -5), (4.1, -28.8, 5.5, -18), (12.8, -27.8, 7.5, 19), (-18.2, -33.9, 7.5, -6), (-9.6, -35.4, 6.5, -19), (-0.9, -34.4, 5.5, 18), (7.8, -35.9, 7.5, 5), (-22.0, -41.1, 6.5, 17), (-13.3, -40.1, 5.5, 4), (-4.6, -41.6, 7.5, -9), (4.1, -40.6, 6.5, -22), (12.8, -42.1, 5.5, 15), (-18.2, -48.2, 5.5, -10), (-9.6, -47.2, 7.5, -23), (-0.9, -46.2, 6.5, 14), (7.8, -47.7, 5.5, 1), (-22.0, -52.9, 7.5, 13), (-13.3, -54.4, 6.5, 0), (-4.6, -53.4, 5.5, -13), (4.1, -52.4, 7.5, 24), (12.8, -53.9, 6.5, 11), (-18.2, -60.0, 6.5, -14), (-9.6, -59.0, 5.5, 23), (-0.9, -60.5, 7.5, 10), (7.8, -59.5, 6.5, -3), (-22.0, -64.7, 5.5, 9), (-13.3, -66.2, 7.5, -4), (-4.6, -65.2, 6.5, -17), (4.1, -66.7, 5.5, 20), (12.8, -65.7, 7.5, 7), (-18.2, -71.8, 7.5, -18), (-9.6, -70.8, 6.5, 19), (-0.9, -72.3, 5.5, 6), (7.8, -71.3, 7.5, -7), (-22.0, -79.0, 6.5, 5), (-13.3, -78.0, 5.5, -8), (-4.6, -77.0, 7.5, -21), (4.1, -78.5, 6.5, 16), (12.8, -77.5, 5.5, 3), (-18.2, -83.7, 5.5, -22), (-9.6, -85.2, 7.5, 15), (-0.9, -84.2, 6.5, 2), (7.8, -83.2, 5.5, -11)],
     'copper-mug': [(-21, -80, 13, -8), (-4, -82, 13, 6), (12, -79, 12, -5)],   # only their tops show, in the mouth of the mug
+    'hurricane': [(-13, -28, 13, -5), (1, -27, 13, 6), (-17, -43, 13, 8), (2, -42, 13, -4), (-11, -58, 11, 3), (1, -57, 11, -6), (-6, -74, 11, 5)],   # the shaker's ice, poured in
     'highball': [(-17.5, -23, 15, -6), (1.5, -22.5, 15, 5), (-12, -39, 15, 8), (3, -38.5, 15, -4), (-16, -55, 15, 3), (1, -54, 15, -7), (-8, -71, 15, 6)],
 }
 
@@ -168,7 +174,7 @@ def garnish(kind, glass):
     g = GLASS[glass]
     ry, hw = g['rim']
     if kind == 'cherry':
-        spot = {'coupe': (5, -69), 'martini': (4, -76), 'rocks': (9, -42), 'highball': (7, -95), 'flute': (0, -103), 'wine': (6, -99), 'mug': (8, -64), 'copper-mug': (8, -72),
+        spot = {'coupe': (5, -69), 'martini': (4, -76), 'rocks': (9, -42), 'highball': (7, -95), 'flute': (0, -103), 'wine': (6, -99), 'mug': (8, -64), 'copper-mug': (8, -72), 'hurricane': (8, -100),
                 'julep-cup': (8, -80)}[glass]
         return at(*spot, cherry())
     if kind == 'olives':
@@ -423,6 +429,7 @@ ING = {
     'demerara':       ('demerara syrup', 'jigger', '#d9a65a', None),
     'grapefruit-juice': ('grapefruit juice', 'jigger', '#f4b0a2', None),
     'cane-syrup':     ('cane syrup', 'jigger', '#e9c97a', None),
+    'passion':        ('passion fruit syrup', 'jigger', '#f0a83c', None),   # the Hurricane
     'batter':         ('batter', 'jigger', '#e9c98a', None),
     'worcestershire': ('Worcestershire sauce', 'dash', '#5a2e14', None),
     'hot-sauce':      ('Tabasco', 'dash', '#c42f2f', None),          # Philip, Nov 12: Tabasco, specifically
@@ -513,7 +520,7 @@ def foam_on(kind, color='#fff8e6'):
 def bubbles_in(kind, top, cls='bub'):
     """Little bubbles rising through the drink (they loop on their own)."""
     g = GLASS[kind]
-    hw = {'highball': 15, 'flute': 6, 'coupe': 16, 'rocks': 22, 'martini': 12, 'copper-mug': 22, 'wine': 16, 'mug': 18, 'julep-cup': 16}[kind]
+    hw = {'highball': 15, 'flute': 6, 'coupe': 16, 'rocks': 22, 'martini': 12, 'copper-mug': 22, 'wine': 16, 'mug': 18, 'julep-cup': 16, 'hurricane': 12}[kind]
     out = ''
     for i, (fx, fy) in enumerate(((-.7, .15), (.1, .55), (.6, .3), (-.3, .8), (.35, .9), (-.55, .45))):
         x, y = fx * hw, max(g['bottom'] - (g['bottom'] - top) * fy * .6 - 3, top + 36)
