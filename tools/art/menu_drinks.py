@@ -44,7 +44,7 @@ DRINKS = [
          # a Golden Ratio fit, like a Moscow Mule with dark rum, but the rum still floats: the storm cloud (Philip, Nov 19)
          recipe=[(1.5, 'oz', "Goslings Black Seal rum (or another dark rum, but don't tell Goslings)"), (.75, 'oz', 'lime juice'), (.75, 'oz', 'simple syrup'), (4, 'oz', 'ginger beer')],
          glass_line=('highball, over ice', 'lime wedge'),
-         punch='According to Goslings:',
+         punch='According to Goslings Rum Company:',
          lines=["It's storm clouds in a glass.",
                 'A sailor said so when he saw it.',
                 "<span class=\"tm\">(Goslings actually <span class=\"hl\">trademarked</span> the name Dark 'n Stormy!)</span>",

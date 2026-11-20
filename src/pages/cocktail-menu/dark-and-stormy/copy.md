@@ -16,7 +16,7 @@ Makes − 1 + drink
 4 oz ginger beer
 **Glass:** highball, over ice
 **Garnish:** lime wedge
-According to Goslings:
+According to Goslings Rum Company:
 It's storm clouds in a glass.
 A sailor said so when he saw it.
 (Goslings actually trademarked the name Dark 'n Stormy!)
