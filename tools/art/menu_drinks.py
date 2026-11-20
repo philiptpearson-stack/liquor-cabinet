@@ -899,21 +899,21 @@ DRINKS = [
                 ('<strong>Garnish.</strong> A pineapple wedge and a cherry.', [('garnish',)])],
          related=['mai-tai', 'daiquiri'], hero=(['pineapple', 'white-rum'], ['half:lime'])),
 
-    dict(slug='jungle-bird', name='Jungle Bird', genre='tiki-and-tropical', glass='rocks', color='#c5482e', garnish=['pineapple'],
+    dict(slug='jungle-bird', name='Jungle Bird', genre='tiki-and-tropical', glass='rocks', color='#c5482e', garnish=['pineapple'], ice='cubes',   # the shaker's ice, poured in
          recipe=[(1.5, 'oz', 'dark rum (blackstrap, if you can find it)'), (.75, 'oz', 'Campari'), (1.5, 'oz', 'pineapple juice'), (.5, 'oz', 'lime juice'), (.5, 'oz', 'demerara syrup')],
          glass_line=('rocks, over ice', 'a pineapple wedge'),
-         punch='A tiki drink with a bitter streak.',
-         lines=['It was born around 1978 at the Kuala Lumpur Hilton, in Malaysia: dark rum, Campari, pineapple juice, lime and sugar.',
-                "Then it all but vanished, until tiki historian Jeff “Beachbum” Berry spotted it in an old paperback bartender's guide from a thrift store, and put it in his own book in 2002.",
-                "Around 2010, Giuseppe González (of Trinidad Sour fame) cut way back on the pineapple and swapped in rich, dark blackstrap rum. That's the version most bartenders make now.",
-                'The Campari is the secret. Its bitterness keeps all that rum and pineapple from getting too sweet. <em>Balance!</em>'],
+         punch='Campari takes a tropical vacation!',
+         lines=['This little Malaysian ditty from the 1970s is surprisingly delightful.',
+                'The Campari is the secret.',
+                'Italian drinking bitters happens to pair unusually well with pineapple. What can we say?',
+                "It's like pizza that way."],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch): Kuala Lumpur Hilton, circa 1978; found by Jeff Berry in a thrift-store "
-                    "paperback (Poister's New American Bartender's Guide) in the mid-1990s, printed in Intoxica (2002); Gonzalez at PKNY around 2010, 4 oz pineapple down to about 1.5, blackstrap rum."),
+         copy_note=("Nov 19 2026: Philip's copy. Fact checked (PUNCH): born around 1978 at the Kuala Lumpur Hilton, Malaysia. Poured in, ice and all, like the rest "
+                    "of the menu (Philip). The recipe and steps are Claude's."),
          steps=[('<strong>Combine ingredients.</strong> Add the rum, Campari, pineapple juice, lime juice and demerara syrup to your shaker.',
                  [('pour', 'dark-rum', 1.5), ('pour', 'campari', .75), ('pour', 'pineapple', 1.5), ('pour', 'lime', .5), ('pour', 'demerara', .5)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
-                ('<strong>Strain over ice.</strong> Strain into a rocks glass filled with fresh ice.', [('ice', 'glass'), ('strain',)]),
+                ('<strong>Pour it all in.</strong> Pour everything, ice and all, into a rocks glass. The drink is already chilling on that ice.', [('dump',)]),
                 ('<strong>Garnish.</strong> A pineapple wedge.', [('garnish',)])],
          related=['negroni', 'mai-tai'], hero=(['campari', 'dark-rum'], ['pineapple', 'fruit:lime'])),
 
