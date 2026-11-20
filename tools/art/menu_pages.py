@@ -50,6 +50,8 @@ def prop(spec):
         return at(0, 0, fruit(k, half=True), 1.4), f'half {a_an(k)}'
     if spec == 'honey':
         return at(0, 0, honey_jar(), 1.45), 'a jar of honey'
+    if spec == 'coconut-half':   # the Piña Colada (Philip, Nov 20: no coconut in the illustration?)
+        return at(0, 0, coconut_half(), 1.45), 'half a coconut'
     if spec == 'sugar':   # the Caipirinha (Philip, Nov 19: where's the sugar?)
         return at(0, 0, sugar_jar(), 1.45), 'a jar of sugar'
     if spec == 'egg':

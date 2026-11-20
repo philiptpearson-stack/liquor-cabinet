@@ -331,6 +331,14 @@ def honey_jar():
             + '<text class="letter" x="0" y="-11.6" font-size="6.6" text-anchor="middle">honey</text>')
 
 
+def coconut_half():
+    """Half a coconut, cut side up: white flesh in a brown, hairy shell (the Piña Colada: Philip, Nov 20)."""
+    shell = 'M-17 -14 Q-17 2 0 3 Q17 2 17 -14Z'
+    return (wash(f'<path d="{shell}" fill="#7a4a2a"/><ellipse cx="0" cy="-14" rx="17" ry="5.5" fill="#fbf6ea"/><ellipse cx="0" cy="-14" rx="12" ry="3.4" fill="#f1ead8"/>')
+            + lines(f'<path d="{shell}" stroke-width="2"/><ellipse cx="0" cy="-14" rx="17" ry="5.5" stroke-width="1.8"/><ellipse cx="0" cy="-14" rx="12" ry="3.4" stroke="#d9cfb8" stroke-width="1.1"/>'
+                    '<path d="M-12 -7 l3 2 M-6 -3 l2 2.5 M2 -4 l3 1.5 M8 -7 l2.5 2 M-1 -9 l2 2" stroke="#4e2e18" stroke-width="1.1"/>', boil=False))
+
+
 def sugar_jar():
     """A glass jar of sugar with a word on it (the Caipirinha: Philip, Nov 19)."""
     jar = 'M-13 0 Q-15 -14 -12 -26 L12 -26 Q15 -14 13 0Z'

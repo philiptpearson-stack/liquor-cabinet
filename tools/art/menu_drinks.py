@@ -899,7 +899,7 @@ DRINKS = [
                 ('<strong>Shake.</strong> Add crushed ice and shake hard, until the cream of coconut is all mixed in.', [('ice', 'mix'), ('shake',)]),
                 ('<strong>Pour it all in.</strong> Pour everything, ice and all, into a tall glass. Top it up with more crushed ice if it needs it.', [('dump',)]),
                 ('<strong>Garnish.</strong> A pineapple wedge and a cherry.', [('garnish',)])],
-         related=['mai-tai', 'daiquiri'], hero=(['pineapple', 'white-rum'], ['half:lime'])),
+         related=['mai-tai', 'daiquiri'], hero=(['pineapple', 'white-rum'], ['coconut-half', 'half:lime'])),   # a coconut (Philip, Nov 20)
 
     dict(slug='jungle-bird', name='Jungle Bird', genre='tiki-and-tropical', glass='rocks', color='#c5482e', garnish=['pineapple'], ice='cubes',   # the shaker's ice, poured in
          recipe=[(1.5, 'oz', 'dark rum (blackstrap, if you can find it)'), (.75, 'oz', 'Campari'), (1.5, 'oz', 'pineapple juice'), (.5, 'oz', 'lime juice'), (.5, 'oz', 'demerara syrup')],
