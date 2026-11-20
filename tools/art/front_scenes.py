@@ -74,6 +74,14 @@ shelf_icon = (lines('<path d="M8 100 H112 M8 106 H112" stroke="#6aa59a" stroke-w
               + at(24, 100, bottle('tall', '#cfe6df', '?'), .95) + at(48, 100, bottle('spirit', '#c98a3c', '?'), 1.0) + at(73, 100, bottle('wine', '#6b3326', '?'), .95)
               + at(98, 100, bottle('liqueur', '#b8621f', '?'), .95) + sparkle(104, 18, 5.5) + sparkle(14, 30, 4))
 icons['spirits-icon'] = shelf_icon
+# Spirits 101: a bottle in a mortarboard, 101 on its label (Philip, Nov 20: the door to the basic spirits lessons)
+cap = 'M-26 -6 L0 -16 L26 -6 L0 4Z'
+icons['class-icon'] = (at(60, 114, bottle('spirit', '#c98a3c', '101'), 1.3)
+                       + at(60, 26, wash(f'<path d="M-13 -2 L-13 9 Q0 15 13 9 L13 -2Z" fill="#2f2630"/><path d="{cap}" fill="#3b2233"/>')
+                            + lines(f'<path d="M-13 -2 L-13 9 Q0 15 13 9 L13 -2" stroke-width="2"/><path d="{cap}" stroke-width="2"/>', boil=False)
+                            + lines('<path d="M0 -6 Q14 -6 22 -2 L22 14" stroke-width="1.8"/>', boil=False, color='#d9b44a')
+                            + '<path d="M19.5 13 h5 l1.5 9 h-8Z" fill="#d9b44a"/><circle cx="0" cy="-6" r="2" fill="#d9b44a"/>', 1, -8)
+                       + sparkle(100, 30, 5.5) + sparkle(18, 44, 4.5))
 more_bottles = (at(30, 108, bottle('tall', '#cfe6df', '?'), 1.15) + at(60, 112, bottle('spirit', '#c98a3c', '?'), 1.3)
                 + at(92, 108, bottle('liqueur', '#b8621f', '?'), 1.15))
 phone = 'M-24 -50 Q-24 -56 -18 -56 L18 -56 Q24 -56 24 -50 L24 50 Q24 56 18 56 L-18 56 Q-24 56 -24 50Z'

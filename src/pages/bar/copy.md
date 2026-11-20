@@ -5,13 +5,15 @@
 # Nov 3 2026: Philip's copy from chat (the greeting, second round), and the app's new name, The Bottle and the Bartender (his, the same day).
 # Nov 3 2026, late: the hello moves into the drawing, as Phil's speech bubble: "Hi there! I'm Phil!" (Philip OK'd). The page itself keeps just the question.
 # Nov 4 2026: the question moves into the drawing too, as a second bubble: "How can I help YOU?" (Philip). Both bubbles: ink letters, YOU in plum.
+# Nov 20 2026: Philip's new door, Spirits 101 (the basic spirits lessons), sits beside the Spirits List; the camera door moves to its own row underneath.
 # Dealer's Choice: a door that deals you a page picked for you (the deck is "dealers_choice" in src/site.json).
 
 The Bottle and the ***Bartender.***
 Peek at the Spirits List
-Point your camera at a bottle
-Coming soon!
+Spirits 101
 Check out the Cocktail Menu
 Cocktail Basics and How-To's
+Point your camera at a bottle
+Coming soon!
 *Just show me something FUN!*
 Dealer's Choice
