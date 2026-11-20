@@ -924,7 +924,7 @@ DRINKS = [
          lines=["That's what Ernest Hemingway asked for at Havana's El Floridita, back in the 1930s.",
                 'He wanted a regular old Daiquiri, but, you know, he wanted to get...<em>fucked up.</em>',
                 'A contemporary account describes his drink as two and a half jiggers of rum, two limes, half a grapefruit, and maraschino.',
-                '<strong class="ink">Hemingway later bragged about drinking <span class="hl">17</span> of them in one afternoon. (Bad idea.)</strong>',
+                '<strong class="ink">Hemingway later bragged about drinking <span class="hl">17</span> (<em>!!!!</em>) of them in one afternoon. (Bad idea.)</strong>',
                 '<strong class="ink">(Seriously.)</strong>',
                 "<strong class=\"ink\">(Please don't.)</strong>",
                 "Today's version is...well...tastier than ol' Ernie's. And less likely to kill you from alcohol poisoning."],

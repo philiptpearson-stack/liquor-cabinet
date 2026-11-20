@@ -20,7 +20,7 @@ Take out the sugar and double the rum.
 That's what Ernest Hemingway asked for at Havana's El Floridita, back in the 1930s.
 He wanted a regular old Daiquiri, but, you know, he wanted to get...*fucked up.*
 A contemporary account describes his drink as two and a half jiggers of rum, two limes, half a grapefruit, and maraschino.
-Hemingway later bragged about drinking 17 of them in one afternoon. (Bad idea.)**
+Hemingway later bragged about drinking 17 (*!!!!*) of them in one afternoon. (Bad idea.)**
 (Seriously.)**
 (Please don't.)**
 Today's version is...well...tastier than ol' Ernie's. And less likely to kill you from alcohol poisoning.
