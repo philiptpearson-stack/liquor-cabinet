@@ -970,14 +970,14 @@ DRINKS = [
          recipe=[(2, 'oz', 'pisco'), (1, 'oz', 'lime juice'), (1, 'oz', 'simple syrup'), (1, 'egg white', ''), (3, 'drop', 'Angostura bitters, on top')],
          glass_line=('coupe', 'a few drops of Angostura bitters on the foam'),
          note='Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.',
-         punch="It's a Whiskey Sour, with Peruvian brandy!",
+         punch="It's a Whiskey Sour, but Peru!",
          lines=['Invented by a prominent Mormon from Utah.',
                 '<strong>For real!</strong>',
-                'In 1902 Victor Morris left Salt Lake City for Peru — where the story goes he made his first Pisco Sour at a party, <em>after the whiskey had run out.</em>',
+                'In 1902 Victor Morris left Salt Lake City for Peru — where the story goes that he made his first Pisco Sour at a party, <em>after the whiskey had run out.</em>',
                 "Eventually, that Pisco Sour became the signature drink at his bar, Morris' Bar, in Lima.",
                 "Then it became Peru's national drink."],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 20 2026: Philip's copy (\"prominent Mormon\" is his joke: Morris came from a prominent Mormon family; the bar's name is Morris' Bar) and recipe: "
+         copy_note=("Nov 20 2026: Philip's copy, revised the same day (\"It's a Whiskey Sour, but Peru!\"; \"the story goes that he\") (\"prominent Mormon\" is his joke: Morris came from a prominent Mormon family; the bar's name is Morris' Bar) and recipe: "
                     "1 oz simple, the Golden Ratio. Facts checked (Atlas Obscura): Victor V. Morris, a Salt Lake City native, to Peru in 1902 for a railway; "
                     "said he turned to pisco when the whiskey ran out (1904); Morris' Bar in Lima (closed 1929); Mario Bruiget likely added the egg white and bitters. The Chile claim is well known."),
          steps=[('<strong>Combine ingredients.</strong> Add the pisco, lime juice, simple syrup and egg white to your shaker.',
