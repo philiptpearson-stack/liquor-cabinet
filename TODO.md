@@ -9,7 +9,8 @@ Open items that aren't today's work but mustn't get lost. Newest at the bottom.
 ## Pages waiting to be built (they show as "Coming soon" now)
 - [x] **Margie Samuels: One of Whiskey's Most Iconic Women** (Maker's Mark door): built Oct 27 2026
 - [x] **The Wall Street Journal Article that Changed *Everything*** (Maker's Mark door): built Oct 29 2026
-- [ ] **What IS bourbon, anyway** (shared; Door 1 links to it)
+- [ ] **Bourbon 101** (in Spirits 101; it's the page Door 1's "What IS bourbon, anyway" link was waiting for, so the link says Bourbon 101 now: Philip, Nov 20 2026)
+- [ ] **Spirits 101** (`spirits-101/`, opened Nov 20 2026): the hub is built; every lesson is coming soon. Whiskey 101, then Bourbon, Scotch, Irish Whiskey, Japanese Whisky and Canadian Whisky 101; Tequila / Mezcal, Gin, Vodka, Brandy / Cognac, Liqueur and Rum 101. Drawn by `tools/art/spirits101_scenes.py`; the Bar's door icon is in `front_scenes.py`.
 - [ ] **But how did HUMANS Harness Fermentation?** (the second fermentation story; the hub shows it as coming soon)
 - [ ] **Distillation hub**, built like the Fermentation hub, when we get there
 - [x] **WSJ page, premium shelf: real bottle photos.** Philip sent Blanton's, Booker's, Knob Creek and Woodford Reserve, cut out and on the shelf Oct 29 2026.

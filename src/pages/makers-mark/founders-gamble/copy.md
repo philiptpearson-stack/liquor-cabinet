@@ -4,6 +4,7 @@
 # The build refuses to publish the page if its words drift from this file.
 # From Philip's Word doc Makers_Founders_Gamble.docx, Oct 27 2026 (one typo fixed: "Th most" -> "The most").
 # The door links (bourbon refresher, WSJ, Keep exploring, Back) aren't in the Word doc; they're kept from before.
+# Nov 20 2026: the bourbon refresher is Bourbon 101 now, in Spirits 101 (Philip: it's the same page), so the link names it.
 # Bio Card, Oct 28 2026: years only, from the common record (died 1992 at 82; Hall of Fame 2002).
 
 The Founder's Gamble.
@@ -18,7 +19,7 @@ Experimenting with new recipes.
 And imagining the operation that would become Maker's Mark.
 What is a "Wheated" bourbon??
 Traditional bourbon is made of corn — plus a little rye for spice.
-→ Need a refresher on what makes a bourbon a bourbon? Visit our *What IS bourbon, anyway* page
+→ Need a refresher on what makes a bourbon a bourbon? Visit our *Bourbon 101* page
 Coming soon
 But Bill wanted something softer. Sweeter. More approachable.
 Because bourbon had a *reputation* problem. By the 1950s, it was widely considered a working man's drink. The bottom shelf. The most el-cheap-o of the cheap.
