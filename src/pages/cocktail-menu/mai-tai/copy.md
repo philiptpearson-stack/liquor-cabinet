@@ -17,7 +17,7 @@ Makes − 1 + drink
 ¼ oz simple syrup
 **Glass:** rocks, over crushed ice
 **Garnish:** mint sprig and a lime wedge
-Turns out, it's not that big pint of pineapple juice and grenadine people used to chug at TGI Friday's in the 90s.
+Turns out, it's not that big pint of pineapple juice and grenadine people used to chug in the 90s.
 First, it was Trader Vic's signature drink!
 (In the 1940s.)
 And the original formulation is sublime.

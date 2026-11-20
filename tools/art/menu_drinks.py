@@ -485,7 +485,7 @@ DRINKS = [
          recipe=[(2, 'oz', 'aged rum (Jamaican, if you can find it)'), (1, 'oz', 'lime juice'), (.5, 'oz', 'orange liqueur (orange curaçao)'),
                  (.5, 'oz', 'orgeat (almond syrup)'), (.25, 'oz', 'simple syrup')],
          glass_line=('rocks, over crushed ice', 'mint sprig and a lime wedge'),
-         punch="Turns out, it's not that big pint of pineapple juice and grenadine people used to chug at <span class=\"hl\">TGI Friday's</span> in the 90s.",
+         punch="Turns out, it's not that big pint of pineapple juice and grenadine people used to chug in the 90s.",
          lines=["First, it was Trader Vic's signature drink!",
                 '(In the 1940s.)',
                 'And the original formulation is sublime.',
