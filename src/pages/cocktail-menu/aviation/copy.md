@@ -3,30 +3,31 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch): Hugo Ensslin, Recipes for Mixed Drinks, 1916, with crème de violette; the Savoy Cocktail Book (1930) without it; Rothman & Winter violette imported by Haus Alpenz from about 2007; DeGroff's "like hand soap", 2012. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 24 2026: Philip's copy (crème de violette, accented and lowercase all three times: Philip OK'd) and recipe: 1½ oz gin, the Golden Ratio (maraschino and violette make the ¾ oz sweet). Facts checked (Punch): Hugo Ensslin, Recipes for Mixed Drinks, 1916, with crème de violette; the Savoy Cocktail Book (1930) without it; Rothman & Winter violette imported by Haus Alpenz from 2007. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Aviation.***
 Aviation Recipe
 The Cocktail Menu · Arcane Oddities
 Aviation
 Makes − 1 + drink
-2 oz gin
+1 ½ oz gin
 ¾ oz lemon juice
 ½ oz maraschino liqueur
 ¼ oz crème de violette
 **Glass:** coupe
 **Garnish:** a cherry
-A drink the color of the sky.
-If you can find the violette.
-New York bartender Hugo Ensslin printed it in 1916, when airplanes were still a thrill: gin, lemon, maraschino and a little crème de violette, a purple liqueur made from violets.
-Then the violette went missing. The Savoy Cocktail Book printed the Aviation without it in 1930, and for most of the century, that's how bartenders made it: no violette, no color.
-When crème de violette came back to American shelves in the late 2000s, the Aviation got its color back.
-Just go easy on it. A little violette is lovely. Too much, and, as bartender Dale DeGroff put it, it tastes “like hand soap.”
-Here's how you make one:
+Born in 1916, when airplanes were still a *thrill.*
+The signature ingredient is the crème de violette — a purple liqueur made from violets.
+When crème de violette dropped off American shelves for decades, the Aviation disappeared like a plane in the Bermuda Triangle.
+Or, sometimes, it was just made wrong.
+A sad, pale thing. The color of nothing.
+But the Aviation was too good to stay Bermuda Triangle'd forever.
+In 2007, Rothman & Winter brought crème de violette back to the American market, and gave the Aviation a new runway.
+Now, let's land this plane:
 The Cocktail Menu · Arcane Oddities
 Aviation
 Makes − 1 + drink
-2 oz gin
+1 ½ oz gin
 ¾ oz lemon juice
 ½ oz maraschino liqueur
 ¼ oz crème de violette
