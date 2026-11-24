@@ -759,7 +759,7 @@ DRINKS = [
          punch='Born in 1916, when airplanes were still a <em>thrill.</em>',
          lines=['The signature ingredient is the crème de violette — a purple liqueur made from violets.',
                 'When crème de violette dropped off American shelves for decades, the Aviation disappeared like a plane in the Bermuda Triangle.',
-                'Or, sometimes, it was just made wrong.',
+                'Or, sometimes, it just got made wrong.',
                 'A sad, pale thing. The color of nothing.',
                 "But the Aviation was too good to stay Bermuda Triangle'd forever.",
                 'In 2007, Rothman &amp; Winter brought crème de violette back to the American market, and gave the Aviation a new runway.'],
