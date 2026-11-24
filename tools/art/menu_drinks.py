@@ -763,7 +763,7 @@ DRINKS = [
                 'A sad, pale thing. The color of nothing.',
                 "But the Aviation was too good to stay Bermuda Triangle'd forever.",
                 'In 2007, Rothman &amp; Winter brought crème de violette back to the American market, and gave the Aviation a new runway.'],
-         lead="Now, let's land this plane:",
+         lead="Now, here's how you land this plane:",
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          copy_note=("Nov 24 2026: Philip's copy (crème de violette, accented and lowercase all three times: Philip OK'd) and recipe: 1½ oz gin, the Golden Ratio "
                     "(maraschino and violette make the ¾ oz sweet). Facts checked (Punch): Hugo Ensslin, Recipes for Mixed Drinks, 1916, with crème de violette; "

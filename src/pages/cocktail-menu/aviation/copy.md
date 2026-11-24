@@ -23,7 +23,7 @@ Or, sometimes, it just got made wrong.
 A sad, pale thing. The color of nothing.
 But the Aviation was too good to stay Bermuda Triangle'd forever.
 In 2007, Rothman & Winter brought crème de violette back to the American market, and gave the Aviation a new runway.
-Now, let's land this plane:
+Now, here's how you land this plane:
 The Cocktail Menu · Arcane Oddities
 Aviation
 Makes − 1 + drink
