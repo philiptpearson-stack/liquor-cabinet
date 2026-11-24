@@ -18,6 +18,7 @@ MX, MRIM, MBOT = 190, 96, 189                      # the mixing glass: rim centr
 G_MIX = 'M160 96 L220 96 L214 196 L166 196Z'
 G_MIX_IN = 'M162.4 99 L217.6 99 L212.3 189 L167.7 189Z'
 TIN = 'M154 114 L226 114 L220 58 L160 58Z'
+MIX_SCALE = {'hurricane': (306, 1.16)}   # the serving glass beside the shaker: (x, scale); the Hurricane's is a big glass (Philip, Nov 24), a step right so the bottles clear it
 BUILD_SCALE = {'highball': 1.2, 'rocks': 1.38, 'coupe': 1.5, 'flute': 1.0, 'martini': 1.3, 'copper-mug': 1.35, 'wine': 1.15, 'mug': 1.4, 'julep-cup': 1.35, 'hurricane': 1.12}
 DUR = {'pour': 1.2, 'jigger': 1.15, 'dash': 1.2, 'egg': 1.3, 'mint': 1.0, 'salt': 1.0, 'ice': 1.0, 'ice-glass': 1.5,
        'dry': 2.4, 'shake': 2.9, 'stir': 2.8, 'strain': 2.5, 'dump': 2.4, 'swirl': 1.7, 'top': 1.9, 'float': 1.9, 'sink': 1.9, 'garnish': 1.3, 'rim': 1.5, 'muddle': 2.0, 'rinse': 2.2, 'sugar': 1.1, 'limes': 1.2, 'spoon': 1.2}
@@ -60,7 +61,7 @@ class Build:
                     a[2] = Amount(*a[2])
                 acts.append([i] + a)
         self.uses_mix = any(a[1] in ('strain', 'dump') for a in acts)
-        self.gx, self.gs = (290, 1.0) if self.uses_mix else (224, BUILD_SCALE[self.kind])
+        self.gx, self.gs = MIX_SCALE.get(self.kind, (290, 1.0)) if self.uses_mix else (224, BUILD_SCALE[self.kind])
         # timing: every action gets a slot; a step spans its actions
         t, self.steps = LEAD, []
         into = 'mix' if self.uses_mix else 'glass'
@@ -266,7 +267,7 @@ class Build:
         # sparkles: two that always twinkle (so the scene never sits still), more for the finished drink
         rx, ry = self.G(0, g['rim'][0])
         ch = self.cls('cheer')
-        cheer = f'<g class="{ch}">{sparkle(rx - 40, ry + 4, 6, "twinkle")}{sparkle(rx + 40, ry - 4, 5.5, "twinkle d2")}{sparkle(rx + 34, BAR - 40, 4.5, "twinkle d3")}</g>'
+        cheer = f'<g class="{ch}">{sparkle(rx - 40, ry + 4, 6, "twinkle")}{sparkle(rx + 40, ry - 4, 5.5, "twinkle d2") if rx + 40 <= 334 else sparkle(334, ry - 26, 5.5, "twinkle d2")}{sparkle(min(rx + 34, 334), BAR - 40, 4.5, "twinkle d3")}</g>'   # kept inside the view (the Hurricane's glass sits further right)
         self.window(ch, gt + .7, self.T - .5)
         always = sparkle(330, 30, 4, 'twinkle d2') + sparkle(116, 186, 3.6, 'twinkle d3')
         mat = (146, 334) if self.uses_mix else (int(self.gx - 52), int(self.gx + 52))

@@ -990,25 +990,27 @@ DRINKS = [
 
     dict(slug='hurricane', name='Hurricane', genre='tiki-and-tropical', glass='hurricane', color='#e2783a', garnish=['orange-wheel', 'cherry'],
          aka="pat o'brien's new orleans",
-         recipe=[(1, 'oz', 'white rum'), (1, 'oz', 'dark rum'), (1, 'oz', 'lemon juice'), (1, 'oz', 'passion fruit syrup')],
+         recipe=[(4, 'oz', 'dark rum'), (2, 'oz', 'lemon juice'), (2, 'oz', 'passion fruit syrup')],
          glass_line=('hurricane glass, over ice', 'an orange slice and a cherry'),
          note="Can't find passion fruit syrup? Make it: stir equal parts passion fruit purée and sugar over low heat until the sugar dissolves. Let it cool.",
-         punch=['Got too much rum?', '<em>Make a Hurricane.</em>'],
-         lines=["Pat O'Brien's started out as a speakeasy in New Orleans' French Quarter. The password? “Storm's brewin'.”",
-                "In the 1940s, the story goes, liquor distributors made O'Brien buy cases and cases of rum before they'd sell him a few cases of whiskey.",
-                'So he had a <em>lot</em> of rum. He mixed it with passion fruit and lemon, poured it into tall glasses shaped like hurricane lamps, and gave it away to sailors.',
-                "It's been a French Quarter staple ever since."],
+         punch='It was a big ass drink meant to sell tourists a LOT of rum.',
+         lines=["That's why it goes in that crazy glass.",
+                "Imagine it's 1972 and you're sipping one as you stroll around the French Quarter.",
+                'The glass is shaped like a hurricane lantern.',
+                'The drink hits you like a hurricane.',
+                "But don't worry. It's <em>New Orleans</em>.",
+                "You'll fit right in."],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 20 2026: Philip swapped the Ti' Punch for the Hurricane (\"People actually know that one!\"). CLAUDE'S DRAFT, waiting on Philip: everything. "
-                    "Recipe: the Golden Ratio, 2:1:1 (two rums, lemon, passion fruit syrup), poured in ice and all. Facts checked (Wikipedia, Tasting Table): Pat O'Brien's, "
-                    "New Orleans, the 1940s; it began as a speakeasy (Mr. O'Brien's Club Tipperary, password \"storm's brewin'\"); distributors made bars take rum to get "
-                    "Scotch and whiskey; hurricane-lamp glasses, given away to sailors. A rival claim: Monte Proser's Hurricane Bar, 1939 New York World's Fair."),
-         steps=[('<strong>Combine ingredients.</strong> Add both rums, the lemon juice and the passion fruit syrup to your shaker.',
-                 [('pour', 'white-rum', 1), ('pour', 'dark-rum', 1), ('pour', 'lemon', 1), ('pour', 'passion', 1)]),
+         copy_note=("Nov 24 2026: Philip's copy and recipe, the original big one: 4 oz rum, 2 oz lemon, 2 oz passion fruit (the Golden Ratio, doubled). "
+                    "Checked: Difford's Guide's original recipe (from Beachbum Berry's Grog Log, after Pat O'Brien's head bartender Louis Culligan) is 4 oz Jamaican rum, "
+                    "2 oz passion fruit syrup, 2 oz lemon juice; the glass is named for the hurricane lamp (PUNCH). Pat O'Brien's, New Orleans, 1940s; "
+                    "made to move a surplus of rum. The Ti' Punch's place on the menu (Philip, Nov 20)."),
+         steps=[('<strong>Combine ingredients.</strong> Add the rum, lemon juice and passion fruit syrup to your shaker.',
+                 [('pour', 'dark-rum', 4), ('pour', 'lemon', 2), ('pour', 'passion', 2)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
                 ('<strong>Pour it all in.</strong> Pour everything, ice and all, into a hurricane glass.', [('dump',)]),
                 ('<strong>Garnish.</strong> An orange slice and a cherry.', [('garnish',)])],
-         related=['mai-tai', 'dark-and-stormy'], hero=(['white-rum', 'dark-rum'], ['passion', 'fruit:lemon'])),
+         related=['mai-tai', 'dark-and-stormy'], hero=(['dark-rum'], ['passion', 'fruit:lemon'])),
     # ---------------------------------------------------------------- batch 7, Nov 10 2026: Low & No-Proof, Warm & Cozy, Punches (Claude's drafts)
     dict(slug='americano', name='Americano', genre='low-and-no-proof', glass='highball', color='#c8452f', garnish=['orange-wheel'],
          recipe=[(1.5, 'oz', 'Campari'), (1.5, 'oz', 'sweet vermouth'), (3, 'oz', 'soda water')],
