@@ -508,10 +508,9 @@ DRINKS = [
          glass_line=('wine glass, over ice', 'orange slice'),
          punch="It's as easy as three, two, one.",
          lines=["Three parts prosecco, two parts Aperol, one part soda water. Pour it over ice in a big wine glass, and that's it.",
-                'The spritz goes back to the 1800s, when Austrian soldiers stationed in northeast Italy started adding a splash (in German, a <em>spritz</em>) of sparkling water to the local wine.',
-                'Aperol came later: a bright orange, gently bitter aperitivo first made in Padua in 1919.',
-                "Low in alcohol and just bitter enough to wake up your appetite, it's made for the hour before dinner. That's the whole idea of an aperitivo."],
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Oxford Companion to Spirits & Cocktails): the spritzer from the 1840s, "
+                'The spritz goes back to the 1800s, when Austrian soldiers stationed in northeast Italy started adding a spritz of sparkling water to the local wine.',
+                "Aperol came later: a bright orange, gently bitter aperitivo — it's low in alcohol and just bitter enough to wake up your appetite."],
+         copy_note=("Nov 24 2026: Philip's copy, his pass on Claude's draft. Facts checked (Oxford Companion to Spirits & Cocktails): the spritzer from the 1840s, "
                     "Austro-Hungarian soldiers in northeast Italy adding sparkling water to local wine; Aperol made in Padua in 1919 by the Barbieri family. Recipe: the 3-2-1."),
          steps=[('<strong>Ice the glass.</strong> Fill a big wine glass with ice.', [('ice', 'glass')]),
                 ('<strong>Prosecco, then Aperol.</strong> Pour in the prosecco, then the Aperol.', [('pour', 'prosecco', 3), ('pour', 'aperol', 2)]),
