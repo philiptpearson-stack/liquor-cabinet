@@ -604,7 +604,7 @@ class Build:
             word = ING[a[3]][0]
             if isinstance(q, Amount):   # "¼–½ oz demerara syrup"
                 return f'{oz_text(q.lo)[:-3]}–{oz_text(q.hi)} {word}'
-            if q and q < .2 and kind == 'pour':   # a bar spoon (Fernet in the Hanky Panky)
+            if q and q < .2 and kind == 'pour':   # a bar spoon
                 return f'a bar spoon of {word}'
             return f'{oz_text(q)} {word}' if q and kind != 'top' else (f'{word}' if kind != 'top' else f'top with {word}')
         if kind == 'dash':

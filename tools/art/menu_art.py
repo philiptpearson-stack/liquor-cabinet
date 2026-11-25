@@ -404,6 +404,8 @@ ING = {
     'citrus-vodka':   ('citrus vodka', 'bottle', '#f1efd8', ('tall', '#f0ead0', 'citrus vodka')),
     'mezcal':         ('mezcal', 'bottle', '#eef0e2', ('tall', '#dfe6d2', 'mezcal')),
     'reposado':       ('reposado tequila', 'bottle', '#e9d29a', ('tall', '#e9d29a', 'reposado tequila')),
+    'yellow-chartreuse': ('yellow Chartreuse', 'bottle', '#f0dc6a', ('liqueur', '#e9cf4a', 'yellow Chartreuse')),   # the Naked and Famous (Nov 24)
+    'averna':         ('Averna', 'bottle', '#3a2116', ('tall', '#2e1a12', 'Averna')),   # the Black Manhattan (Nov 24)
     'chartreuse':     ('green Chartreuse', 'bottle', '#a9cf6a', ('liqueur', '#8fbf5a', 'green Chartreuse')),
     'maraschino':     ('maraschino liqueur', 'bottle', '#eef2ea', ('tall', '#cfe0c8', 'maraschino')),
     'lillet':         ('Lillet Blanc', 'bottle', '#f0dfa0', ('wine', '#e9d48a', 'Lillet Blanc')),

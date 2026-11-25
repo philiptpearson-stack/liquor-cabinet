@@ -120,9 +120,9 @@ def hero(d):
     out += f'<g transform="translate({d.get("hero_x", 200)} 184) scale({HERO_SCALE[d["glass"]]})">{drink}</g>'   # hero_x: a glass with a handle sits a little left
     out += sparkle(150, 46, 6, 'twinkle') + sparkle(258, 40, 5, 'twinkle d2') + sparkle(246, 100, 4, 'twinkle d3')
     g = ' and '.join(GARNISH_WORD[k] for k in d['garnish'])
-    g = f', garnished with {g}' if g else ''      # the Ramos Gin Fizz has none
+    g = f', garnished with {g}' if g else ''      # a drink with no garnish (the Naked and Famous)
     beside = ', '.join(words[:-1]) + (' and ' if len(words) > 1 else '') + words[-1]
-    gw = 'tall glass' if d['glass'] == 'highball' and not served_iced else GLASS_WORD[d['glass']]   # the Ramos Gin Fizz has no ice
+    gw = 'tall glass' if d['glass'] == 'highball' and not served_iced else GLASS_WORD[d['glass']]   # a tall glass with no ice
     alt = f'{a_an(d["name"])} in {a_an(gw)}{g}, next to {beside}'
     return svg_view(out, alt, '52 24 296 180')
 
@@ -626,8 +626,8 @@ GENRE_PAGES = {
                               note="Nov 6 2026: Philip moved the Gold Rush here, so Modern Variations opened."),
     'arcane-oddities': dict(scene=oddities_scene, svg='oddities', intro='These are the <em>Arcane Oddities.</em>', more='More oddities',
                             # Philip, Nov 17: why they're oddities
-                            intro_more=["They're classics, but each one calls for a bottle nobody's ever heard of (but definitely should!)."],   # Philip, Nov 19; reworded Nov 24
-                            final_note="Nov 17 2026, revised Nov 19 and Nov 24: Philip's copy: \"These are the *Arcane Oddities.*\" and why. \"Tap any drink...\" is his line from Classics. \"More oddities\" is Claude's.",
+                            intro_more=["They're classics, or modern ones, but with ingredients nobody's ever heard of (and definitely should!)."],   # Philip, Nov 19; reworded Nov 24 (twice: the modern drinks came in)
+                            final_note="Nov 17 2026, revised Nov 19 and Nov 24 (when the Naked and Famous and the Black Manhattan joined): Philip's copy: \"These are the *Arcane Oddities.*\" and why. \"Tap any drink...\" is his line from Classics. \"More oddities\" is Claude's.",
                             description='The odd ones on the menu, each with its recipe and a step-by-step how-to.',
                             note="Nov 3 2026: Philip moved the Dark and Stormy here, so Arcane Oddities opened."),
     'tiki-and-tropical': dict(scene=tiki_scene, svg='tiki', intro=None, more='More tropical drinks', css=FLICK_CSS,
