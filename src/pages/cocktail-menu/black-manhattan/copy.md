@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 24 2026: Philip added it to Arcane Oddities. CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch): Todd Smith, San Francisco (Cortez), 2005; 2 oz rye, 1 oz Averna, a dash each of Angostura and orange bitters, stirred, a coupe, a cherry. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 24 2026: Philip added it to Arcane Oddities; his copy the same night (the bartender unnamed on the page: Todd Smith). Facts checked (Punch): Todd Smith, San Francisco (Cortez), 2005; 2 oz rye, 1 oz Averna, a dash each of Angostura and orange bitters, stirred, a coupe, a cherry. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Black ***Manhattan.***
 Black Manhattan Recipe
@@ -17,10 +17,11 @@ Makes − 1 + drink
 **Glass:** coupe
 **Garnish:** a cherry
 A Manhattan,
-*in the dark.*
-Swap the Manhattan's sweet vermouth for Averna, a bittersweet amaro from Sicily, and the drink goes darker, richer and a little herbal.
-San Francisco bartender Todd Smith came up with it in 2005. Now it shows up on cocktail menus everywhere.
-Here's how you make one:
+but *DARK.*
+It's a great example of swapping out a single ingredient in a drink and changing the outcome dramatically.
+In 2005, a San Francisco bartender swapped his Manhattan's sweet vermouth for Averna — a bittersweet amaro from Sicily — and the result was *magic*.
+Black magic.
+Here's how you make it:
 The Cocktail Menu · Arcane Oddities
 Black Manhattan
 Makes − 1 + drink

@@ -826,11 +826,13 @@ DRINKS = [
          aka='amaro',
          recipe=[(2, 'oz', 'rye whiskey'), (1, 'oz', 'Averna'), (1, 'dash', 'Angostura bitters'), (1, 'dash', 'orange bitters')],
          glass_line=('coupe', 'a cherry'),
-         punch=['A Manhattan,', '<em>in the dark.</em>'],
-         lines=["Swap the Manhattan's sweet vermouth for Averna, a bittersweet amaro from Sicily, and the drink goes darker, richer and a little herbal.",
-                'San Francisco bartender Todd Smith came up with it in 2005. Now it shows up on cocktail menus everywhere.'],
+         punch=['A Manhattan,', 'but <em>DARK.</em>'],
+         lines=["It's a great example of swapping out a single ingredient in a drink and changing the outcome dramatically.",
+                "In 2005, a San Francisco bartender swapped his Manhattan's sweet vermouth for Averna — a bittersweet amaro from Sicily — and the result was <em>magic</em>.",
+                'Black magic.'],
+         lead="Here's how you make it:",
          note_go_end=('→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
-         copy_note=("Nov 24 2026: Philip added it to Arcane Oddities. CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch): Todd Smith, "
+         copy_note=("Nov 24 2026: Philip added it to Arcane Oddities; his copy the same night (the bartender unnamed on the page: Todd Smith). Facts checked (Punch): Todd Smith, "
                     "San Francisco (Cortez), 2005; 2 oz rye, 1 oz Averna, a dash each of Angostura and orange bitters, stirred, a coupe, a cherry."),
          steps=[('<strong>Combine ingredients.</strong> Add the rye, Averna and both bitters to a mixing glass.',
                  [('pour', 'rye', 2), ('pour', 'averna', 1), ('dash', 'angostura', 1), ('dash', 'orange-bitters', 1)]),
