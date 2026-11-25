@@ -757,15 +757,15 @@ DRINKS = [
          recipe=[(1.5, 'oz', 'gin'), (.75, 'oz', 'lemon juice'), (.5, 'oz', 'maraschino liqueur'), (.25, 'oz', 'crème de violette')],
          glass_line=('coupe', 'a cherry'),
          punch='Born in 1916, when airplanes were still a <em>thrill.</em>',
-         lines=['The signature ingredient is the crème de violette — a purple liqueur made from violets.',
-                'When crème de violette dropped off American shelves for decades, the Aviation disappeared like a plane in the Bermuda Triangle.',
-                'Or, sometimes, it just got made wrong.',
-                'A sad, pale thing. The color of nothing.',
-                "But the Aviation was too good to stay Bermuda Triangle'd forever.",
+         lines=["The Aviation's signature ingredient is crème de violette — a purple liqueur made from violets.",
+                'When crème de violette dropped off American shelves for decades, the Aviation disappeared from drink menus like a plane in the Bermuda Triangle.',
+                'Or it just got made wrong.',
+                'A sad, pale thing. The color not of the sky on a clear day, but of nothing.',
+                "Lucky for us, the Aviation was too good to stay Bermuda Triangle'd forever.",
                 'In 2007, Rothman &amp; Winter brought crème de violette back to the American market, and gave the Aviation a new runway.'],
-         lead="Now, here's how you land this plane:",
+         lead="Here's how you land this plane:",
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 24 2026: Philip's copy (crème de violette, accented and lowercase all three times: Philip OK'd) and recipe: 1½ oz gin, the Golden Ratio "
+         copy_note=("Nov 24 2026: Philip's copy, with his second pass the same evening (one doubled \"of\" fixed) (crème de violette, accented and lowercase all three times: Philip OK'd) and recipe: 1½ oz gin, the Golden Ratio "
                     "(maraschino and violette make the ¾ oz sweet). Facts checked (Punch): Hugo Ensslin, Recipes for Mixed Drinks, 1916, with crème de violette; "
                     "the Savoy Cocktail Book (1930) without it; Rothman & Winter violette imported by Haus Alpenz from 2007."),
          steps=[('<strong>Combine ingredients.</strong> Add the gin, lemon juice, maraschino and crème de violette to your shaker.',
