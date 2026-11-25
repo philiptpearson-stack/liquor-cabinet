@@ -809,12 +809,13 @@ DRINKS = [
          aka='death & co mezcal smoky',
          recipe=[(.75, 'oz', 'mezcal'), (.75, 'oz', 'yellow Chartreuse'), (.75, 'oz', 'Aperol'), (.75, 'oz', 'lime juice')],
          glass_line=('coupe', 'none'),
-         punch=['Smoky, bitter, sweet and sour.', '<em>All at once.</em>'],
-         lines=['Joaquín Simó came up with it at Death &amp; Co in New York in 2011, and it took off fast.',
-                "It's built just like the Last Word: four ingredients, equal parts. Only here it's smoky mezcal, honeyed yellow Chartreuse, bittersweet Aperol and lime.",
-                "Every one of them is loud. Somehow they get along."],
+         punch="“It's my sluttiest recipe ever.”",
+         lines=["That's bartender Joaquín Simó's assessment of how widely his Naked and Famous has traveled, since he invented it in 2011 at New York's Death &amp; Co.",
+                'The drink is equal parts mezcal, Aperol, yellow Chartreuse, and lime.',
+                'Simó describes it as “a bastard love child of the Paper Plane and the Last Word.”',
+                "He's nothing if not a good quote."],
          copy_note=("Nov 24 2026: Philip added it to Arcane Oddities (with the Black Manhattan and the Toronto, in place of the Ramos Gin Fizz and the Hanky Panky). "
-                    "CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Difford's): Joaquín Simó, 2011, best known from Death & Co; equal parts mezcal, "
+                    "Philip's copy, the same night (Simó and Death & Co spelled right). Quotes: \"It's my sluttiest recipe ever.\" (VinePair, on how far the drink has spread); \"a bastard love child of the Paper Plane and the Last Word\" (Chilled magazine, Philip's source; InsideHook has \"the bastard love child of a classic Last Word and the Paper Plane, conceived in the mountains of Oaxaca\"). Facts checked (Difford's): Joaquín Simó, 2011, best known from Death & Co; equal parts mezcal, "
                     "yellow Chartreuse, aperitivo and lime, shaken, a coupe; the garnish optional."),
          steps=[('<strong>Combine ingredients.</strong> Equal parts mezcal, yellow Chartreuse, Aperol and lime juice, into your shaker.',
                  [('pour', 'mezcal', .75), ('pour', 'yellow-chartreuse', .75), ('pour', 'aperol', .75), ('pour', 'lime', .75)]),
