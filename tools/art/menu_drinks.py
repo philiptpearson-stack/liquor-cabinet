@@ -881,11 +881,11 @@ DRINKS = [
                 "It's a classic formula: like the Last Word, or the Paper Plane, it's a 1:1:1:1.",
                 'That makes it super easy to build.',
                 "It also makes it sort of...<em>bland</em>.",
-                'So this is what we do.',
+                "So here's what we do.",
                 'Add more whisky.'],
-         lead="Here's how you make it:",
+         lead="This is how you make it:",
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 24 2026: Philip's copy (a comma after \"Okay\"; his second pass: the punch takes its second line, \"So this is what we do.\"), \"Here's how you make it:\", and \"(or more!)\" on the card's Scotch line (Philip). "
+         copy_note=("Nov 24 2026: Philip's copy (a comma after \"Okay\"; his second pass: the punch takes its second line, \"So here's what we do.\"; \"This is how you make it:\"), and \"(or more!)\" on the card's Scotch line (Philip). "
                     "The draft's tip (more Scotch and orange juice) is gone: his copy says it. Checked: equal parts in the Savoy Cocktail Book (1930); the menu's Last Word "
                     "and Paper Plane are equal parts too. The Valentino film stays off the page (Philip: nobody knows it)."),
          steps=[('<strong>Combine ingredients.</strong> Equal parts Scotch, sweet vermouth, cherry liqueur and orange juice, into your shaker.',
