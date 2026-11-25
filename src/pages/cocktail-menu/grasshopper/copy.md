@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 24 2026: Philip swapped the Trinidad Sour for the Grasshopper (his rule: drinks people actually order across the bar; the Trinidad Sour, 2009, wasn't a classic either). CLAUDE'S DRAFT, waiting on Philip: everything. Recipe: equal parts, the standard one (Wikipedia). Facts checked: Tujague's (its own site) says Philibert Guichet made it for a 1918 New York cocktail competition, second place; popular in the South in the 1950s and '60s, blended with ice cream in Wisconsin (Wikipedia); Imbibe (Wayne Curtis) questions the Tujague's story, so it's told as theirs. "Crème" liqueurs are named for their sugar, not dairy. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 24 2026: Philip's copy (it replaces Claude's Tujague's draft). Philip swapped the Trinidad Sour for the Grasshopper the same day (his rule: drinks people actually order across the bar). Recipe: equal parts, the standard one (Wikipedia). Facts checked: Embury, The Fine Art of Mixing Drinks (1948): "as a cocktail it is strictly vile" (Cocktails With Suderman); popular in the 1950s and '60s; blended with ice cream in Wisconsin (Wikipedia). Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Grasshopper.***
 Grasshopper Recipe
@@ -15,11 +15,12 @@ Makes − 1 + drink
 1 oz heavy cream
 **Glass:** coupe
 **Garnish:** a sprig of mint
-Mint, chocolate and cream.
-*Dessert, in a coupe.*
-Tujague's, in New Orleans' French Quarter, says its owner Philibert Guichet came up with it for a cocktail competition in New York in 1918. It took second place.
-By the 1950s and '60s, it was everywhere in the South. In Wisconsin, they still blend it with ice cream.
-And no, there's no cream in crème de menthe or crème de cacao. “Crème” just means it's a sweet liqueur. The cream comes from the cream.
+Famous cocktail writer David Embury called it “strictly vile.”
+Seems kinda harsh for a mint chocolate dessert drink.
+But, then, it *was* a fad-drink of the 1950s, and bartenders often hate those. (This one later got an incredible second life as a Wisconsin boozy milkshake, which bartenders also hated. So there's that.)
+If you make yourself one, we recommend raising your glass and taking a nice little imagination-vacation:
+You're at a party in New York in the 1950s, and a bunch of ad-men in suits are smashing these little numbers by the coupe-ful. Do you join them?
+Of course you do.
 Here's how you make one:
 The Cocktail Menu · Arcane Oddities
 Grasshopper

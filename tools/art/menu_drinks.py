@@ -860,15 +860,15 @@ DRINKS = [
          aka="tujague's new orleans mint chocolate dessert",
          recipe=[(1, 'oz', 'green crème de menthe'), (1, 'oz', 'white crème de cacao'), (1, 'oz', 'heavy cream')],
          glass_line=('coupe', 'a sprig of mint'),
-         punch=['Mint, chocolate and cream.', '<em>Dessert, in a coupe.</em>'],
-         lines=["Tujague's, in New Orleans' French Quarter, says its owner Philibert Guichet came up with it for a cocktail competition in New York in 1918. It took second place.",
-                "By the 1950s and '60s, it was everywhere in the South. In Wisconsin, they still blend it with ice cream.",
-                "And no, there's no cream in crème de menthe or crème de cacao. “Crème” just means it's a sweet liqueur. The cream comes from the cream."],
-         copy_note=("Nov 24 2026: Philip swapped the Trinidad Sour for the Grasshopper (his rule: drinks people actually order across the bar; the Trinidad Sour, 2009, "
-                    "wasn't a classic either). CLAUDE'S DRAFT, waiting on Philip: everything. Recipe: equal parts, the standard one (Wikipedia). Facts checked: "
-                    "Tujague's (its own site) says Philibert Guichet made it for a 1918 New York cocktail competition, second place; popular in the South in the 1950s "
-                    "and '60s, blended with ice cream in Wisconsin (Wikipedia); Imbibe (Wayne Curtis) questions the Tujague's story, so it's told as theirs. "
-                    "\"Crème\" liqueurs are named for their sugar, not dairy."),
+         punch='Famous cocktail writer David Embury called it “strictly vile.”',
+         lines=['Seems kinda harsh for a mint chocolate dessert drink.',
+                "But, then, it <em>was</em> a fad-drink of the 1950s, and bartenders often hate those. (This one later got an incredible second life as a Wisconsin boozy milkshake, which bartenders also hated. So there's that.)",
+                'If you make yourself one, we recommend raising your glass and taking a nice little imagination-vacation:',
+                "You're at a party in New York in the 1950s, and a bunch of ad-men in suits are smashing these little numbers by the coupe-ful. Do you join them?",
+                'Of course you do.'],
+         copy_note=("Nov 24 2026: Philip's copy (it replaces Claude's Tujague's draft). Philip swapped the Trinidad Sour for the Grasshopper the same day (his rule: drinks "
+                    "people actually order across the bar). Recipe: equal parts, the standard one (Wikipedia). Facts checked: Embury, The Fine Art of Mixing Drinks (1948): "
+                    "\"as a cocktail it is strictly vile\" (Cocktails With Suderman); popular in the 1950s and '60s; blended with ice cream in Wisconsin (Wikipedia)."),
          steps=[('<strong>Combine ingredients.</strong> Add the crème de menthe, crème de cacao and cream to your shaker.',
                  [('pour', 'creme-de-menthe', 1), ('pour', 'creme-de-cacao', 1), ('pour', 'cream', 1)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
