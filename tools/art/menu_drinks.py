@@ -779,12 +779,15 @@ DRINKS = [
          recipe=[(.75, 'oz', 'gin'), (.75, 'oz', 'orange liqueur'), (.75, 'oz', 'Lillet Blanc'), (.75, 'oz', 'lemon juice'), (.25, 'oz', 'absinthe, to rinse the glass')],
          glass_line=('coupe, rinsed with absinthe', 'an orange twist'),
          punch=['A hangover cure.', '<em>Supposedly.</em>'],
-         lines=['“Corpse revivers” were a whole family of morning-after drinks. This is the one that lived, printed by Harry Craddock in <cite>The Savoy Cocktail Book</cite> in 1930, along with a warning:',
+         lines=['“Corpse revivers” were a whole family of morning-after drinks, going back to the 1800s.',
+                'Harry Craddock printed this one in his iconic <cite>The Savoy Cocktail Book</cite> in 1930, along with a warning:',
                 ('quote', '“Four of these taken in swift succession will unrevive the corpse again.”', '— Harry Craddock, <cite>The Savoy Cocktail Book</cite>, 1930'),
-                'Equal parts gin, orange liqueur, Lillet Blanc and lemon, in a glass rinsed with absinthe. Bright, tart and very easy to drink.',
-                'Which is exactly why Craddock warned you.'],
+                'Now, we do NOT recommend drinking four in a row.',
+                'Seriously.',
+                'But one of these bad boys in a glass rinsed with absinthe? That is bright, tart, and <em>very</em> easy to drink.'],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts: the Savoy Cocktail Book (1930), Harry Craddock, with the \"unrevive\" line "
+         copy_note=("Nov 24 2026: Philip's copy, his pass on Claude's draft (\"going back to the 1800s\": the term is in Punch by 1861, Wikipedia). "
+                    "Facts: the Savoy Cocktail Book (1930), Harry Craddock, with the \"unrevive\" line "
                     "(the book is public domain in the US as of 2026). Craddock used Kina Lillet and a dash of absinthe; the rinse is the modern way."),
          steps=[('<strong>Rinse the glass.</strong> Pour a splash of absinthe into a chilled coupe, swirl it to coat, and pour out the rest.', [('rinse', 'absinthe')]),
                 ('<strong>Combine ingredients.</strong> Equal parts gin, orange liqueur, Lillet Blanc and lemon juice, into your shaker.',
