@@ -471,18 +471,19 @@ def write_classics():
         '<h1><small class="h1-lead">The Cocktail Menu:</small> <span>Classics.</span></h1>', '',
         '<div class="flow">',
         '  <figure class="fig" id="s-classics"><div class="sheet"><!--scene:classics--></div></figure>',
-        '  <p class="t">Tap any drink for its recipe and step-by-step, animated how-to.</p>',
-        '  <aside class="note">',
+        '  <p class="t">These are the <em>Classics.</em></p>',   # led like the other parts of the menu (Philip, Nov 24)
+        '  <p class="t">Tap any drink for its recipe and step-by-step, animated how-to.</p>', '',
+        '  <nav class="doors" aria-label="The Classics">'] + doors + ['  </nav>', '',
+        '  <aside class="note">',   # below the drinks now (Philip, Nov 24)
         '    <p><em>New to mixing drinks?</em></p>',
         '    <p class="go"><a href="@page:cocktails-how-to">Check out our tips and tricks page for all the cocktail basics you need →</a></p>',
         '  </aside>', '',
-        '  <nav class="doors" aria-label="The Classics">'] + doors + ['  </nav>', '',
         '  <nav class="end-doors" aria-label="Where next">',
         '    <p class="back"><a href="../index.html">← Back to the Cocktail Menu</a></p>',
         '  </nav>', '</div>', ''])
     (C / 'story.html').write_text(story)
     write_copy(C / 'copy.md', 'The Cocktail Menu / Classics', story,
-               "Nov 6 2026: Philip dropped \"These are the *Classics.*\". Nov 3: Philip's copy from chat: the intro (third round), and the note (it goes to Cocktails How-To; the Golden Ratio is one step of many). "
+               "Nov 24 2026: \"These are the *Classics.*\" is back, leading the page like the other parts of the menu, and \"New to mixing drinks?\" moves below the drinks (Philip). Nov 6: Philip dropped \"These are the *Classics.*\". Nov 3: Philip's copy from chat: the intro (third round), and the note (it goes to Cocktails How-To; the Golden Ratio is one step of many). "
                "The drink list is Philip's (his Classics, Oct 31). Claude's: \"← Back to the Cocktail Menu\".")
     (C / 'page.json').write_text(json.dumps({
         'title': 'Classics · The Cocktail Menu · The Bottle and the Bartender',
