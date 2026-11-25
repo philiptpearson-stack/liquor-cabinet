@@ -876,17 +876,16 @@ DRINKS = [
     dict(slug='blood-and-sand', name='Blood and Sand', genre='arcane-oddities', glass='coupe', color='#c2512e', garnish=['orange-twist'],
          recipe=[(.75, 'oz', 'Scotch (or more!)'), (.75, 'oz', 'sweet vermouth'), (.75, 'oz', 'cherry liqueur (like Cherry Heering)'), (.75, 'oz', 'orange juice')],
          glass_line=('coupe', 'an orange twist'),
-         punch="Okay, here's the thing.",
-         lines=["People either like it, or they really don't.",
-                'And even the ones that like it usually want to fix it.',
+         punch=["Okay, here's the thing.", "People either like it, or they really don't."],
+         lines=['And even the ones that like it usually want to fix it.',
                 "It's a classic formula: like the Last Word, or the Paper Plane, it's a 1:1:1:1.",
                 'That makes it super easy to build.',
                 "It also makes it sort of...<em>bland</em>.",
-                "So if you're one of the ones who likes it but wants it fixed (like we are), do what we do.",
+                'So this is what we do.',
                 'Add more whisky.'],
          lead="Here's how you make it:",
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 24 2026: Philip's copy (a comma after \"Okay\"), \"Here's how you make it:\", and \"(or more!)\" on the card's Scotch line (Philip). "
+         copy_note=("Nov 24 2026: Philip's copy (a comma after \"Okay\"; his second pass: the punch takes its second line, \"So this is what we do.\"), \"Here's how you make it:\", and \"(or more!)\" on the card's Scotch line (Philip). "
                     "The draft's tip (more Scotch and orange juice) is gone: his copy says it. Checked: equal parts in the Savoy Cocktail Book (1930); the menu's Last Word "
                     "and Paper Plane are equal parts too. The Valentino film stays off the page (Philip: nobody knows it)."),
          steps=[('<strong>Combine ingredients.</strong> Equal parts Scotch, sweet vermouth, cherry liqueur and orange juice, into your shaker.',
