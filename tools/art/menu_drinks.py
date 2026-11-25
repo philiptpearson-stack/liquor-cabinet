@@ -1063,10 +1063,12 @@ DRINKS = [
          glass_line=('tall glass, over ice', 'an orange wheel'),
          punch=['Before the Negroni,', 'there was the Americano.'],
          lines=['Gaspare Campari served it at his café in Milan in the 1860s. He called it the Milano-Torino: Campari from Milan, sweet vermouth from Turin, and a splash of soda.',
-                "Nobody's sure where the name “Americano” came from. One story says American tourists loved it. Another says it comes from <em>amaro,</em> Italian for “bitter.”",
-                'Around 1919, a Count Negroni asked for his with gin instead of soda, and the Negroni was born.',
+                "Nobody's sure where the name “Americano” came from.",
+                'One story says American tourists loved it.',
+                'We buy that, because Americans have always loved to drink.',
+                'Around 1919, Count Negroni (an actual American cowboy, on top of being an actual Italian nobleman) (<em>!!!</em>) asked for his with gin instead of soda, and the Negroni was born.',
                 "Keep the soda, and you get the same bittersweet flavor at about half the strength. It's the perfect afternoon drink."],
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Paste): Caffè Campari, Milan, 1860s; the Milano-Torino; two name stories. "
+         copy_note=("Nov 24 2026: Philip's copy, his pass on Claude's draft (\"an actual American cowboy\" lowercase in the parentheses: Philip OK'd). Facts checked (Paste): Caffè Campari, Milan, 1860s; the Milano-Torino; two name stories. "
                     "Count Negroni, about 1919, as on our Negroni page."),
          steps=[('<strong>Ice.</strong> Fill a tall glass with ice.', [('ice', 'glass')]),
                 ('<strong>Campari and sweet vermouth.</strong> Equal parts, right over the ice.', [('pour', 'campari', 1.5), ('pour', 'sweet-vermouth', 1.5)]),
