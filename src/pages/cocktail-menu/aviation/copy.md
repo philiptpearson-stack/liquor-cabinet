@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 24 2026: Philip's copy, with his second pass the same evening (one doubled "of" fixed) (crème de violette, accented and lowercase all three times: Philip OK'd) and recipe: 1½ oz gin, the Golden Ratio (maraschino and violette make the ¾ oz sweet). Facts checked (Punch): Hugo Ensslin, Recipes for Mixed Drinks, 1916, with crème de violette; the Savoy Cocktail Book (1930) without it; Rothman & Winter violette imported by Haus Alpenz from 2007. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 24 2026: Philip's copy, with his second pass the same evening (the color line back to "The color of nothing.") (crème de violette, accented and lowercase all three times: Philip OK'd) and recipe: 1½ oz gin, the Golden Ratio (maraschino and violette make the ¾ oz sweet). Facts checked (Punch): Hugo Ensslin, Recipes for Mixed Drinks, 1916, with crème de violette; the Savoy Cocktail Book (1930) without it; Rothman & Winter violette imported by Haus Alpenz from 2007. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Aviation.***
 Aviation Recipe
@@ -20,7 +20,7 @@ Born in 1916, when airplanes were still a *thrill.*
 The Aviation's signature ingredient is crème de violette — a purple liqueur made from violets.
 When crème de violette dropped off American shelves for decades, the Aviation disappeared from drink menus like a plane in the Bermuda Triangle.
 Or it just got made wrong.
-A sad, pale thing. The color not of the sky on a clear day, but of nothing.
+A sad, pale thing. The color of nothing.
 Lucky for us, the Aviation was too good to stay Bermuda Triangle'd forever.
 In 2007, Rothman & Winter brought crème de violette back to the American market, and gave the Aviation a new runway.
 Here's how you land this plane:
