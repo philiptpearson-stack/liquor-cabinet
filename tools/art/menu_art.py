@@ -461,10 +461,11 @@ ING = {
     'salt':           ('a pinch of salt', 'salt', '#ffffff', None),
     'ginger-beer':    ('ginger beer', 'bottle', '#e9d49a', ('soda', '#b9783c', 'ginger beer')),
     'soda':           ('soda water', 'bottle', '#eaf6fb', ('soda', '#bfe0ea', 'soda water')),
+    '7up':            ('7UP', 'bottle', '#f1f6e2', ('soda', '#7fbf6a', '7UP')),   # the Ruby Slipper (Philip, Nov 25)
     'grapefruit-soda': ('grapefruit soda', 'bottle', '#f6d9cf', ('soda', '#f2b8a6', 'grapefruit soda')),
     'champagne':      ('Champagne', 'bottle', '#f3e6a6', ('wine', '#3f6b3a', 'Champagne')),
 }
-FIZZY = {'ginger-beer', 'soda', 'grapefruit-soda', 'champagne', 'ginger-ale', 'prosecco'}
+FIZZY = {'ginger-beer', 'soda', '7up', 'grapefruit-soda', 'champagne', 'ginger-ale', 'prosecco'}
 
 
 def ing_bottle(key):

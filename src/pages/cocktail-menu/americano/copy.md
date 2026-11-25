@@ -38,5 +38,5 @@ Makes − 1 + drink
 **Garnish.** An orange wheel.
 Keep exploring
 → Negroni
-→ Garibaldi
+→ Aperol Spritz
 ← Back to Low & No-Proof

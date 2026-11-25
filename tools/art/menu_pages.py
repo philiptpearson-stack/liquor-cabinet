@@ -635,7 +635,7 @@ GENRE_PAGES = {
                               note="Nov 10 2026: the Mai Tai opened Tiki & Tropical."),
     'low-and-no-proof': dict(scene=lowno_scene, svg='spritz', intro=None, more='More low &amp; no-proof drinks', css=SPIN_CSS,
                              description='Aperitivo drinks and no-proof ones, light on alcohol and big on flavor, each with its recipe and a step-by-step how-to.',
-                             note="Nov 10 2026: the Aperol Spritz opened Low & No-Proof."),
+                             note="Nov 10 2026: the Aperol Spritz opened Low & No-Proof. Nov 25: Philip swapped the Garibaldi, the Sherry Cobbler and the Shirley Temple for three no-proof drinks of his own, built on the formula."),
     'warm-and-cozy': dict(scene=warm_scene, svg='warm', intro=None, more='More warm drinks', css=STEAM_CSS + '\n' + SNOW_CSS,
                           description='Hot drinks for cold nights, each with its recipe and a step-by-step how-to.',
                           note="Nov 10 2026: the Hot Toddy opened Warm & Cozy."),
