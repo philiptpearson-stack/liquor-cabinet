@@ -70,6 +70,8 @@ def prop(spec):
         return at(0, 0, bottle('tall', '#f2e8d2', 'orgeat', cap='#a87b4a'), 1.5), 'a bottle of orgeat'
     if spec == 'passion':     # the Hurricane
         return at(0, 0, bottle('tall', '#f0a83c', 'passion fruit syrup', cap='#7a3a6e'), 1.5), 'a bottle of passion fruit syrup'
+    if spec == 'cream':       # a little bottle of heavy cream (the Grasshopper)
+        return at(0, 0, bottle('soda', '#fbf6ea', 'heavy cream', cap='#7fa3c9'), 1.5), 'a bottle of heavy cream'
     if spec == 'grenadine':   # the Shirley Temple
         return at(0, 0, bottle('tall', '#b3202a', 'grenadine', cap='#6f9e4a'), 1.5), 'a bottle of grenadine'
     if spec == 'butter':      # a stick of it, half unwrapped (the Hot Buttered Rum)
@@ -118,7 +120,7 @@ def hero(d):
     out += f'<g transform="translate({d.get("hero_x", 200)} 184) scale({HERO_SCALE[d["glass"]]})">{drink}</g>'   # hero_x: a glass with a handle sits a little left
     out += sparkle(150, 46, 6, 'twinkle') + sparkle(258, 40, 5, 'twinkle d2') + sparkle(246, 100, 4, 'twinkle d3')
     g = ' and '.join(GARNISH_WORD[k] for k in d['garnish'])
-    g = f', garnished with {g}' if g else ''      # the Ramos Gin Fizz and the Trinidad Sour have none
+    g = f', garnished with {g}' if g else ''      # the Ramos Gin Fizz has none
     beside = ', '.join(words[:-1]) + (' and ' if len(words) > 1 else '') + words[-1]
     gw = 'tall glass' if d['glass'] == 'highball' and not served_iced else GLASS_WORD[d['glass']]   # the Ramos Gin Fizz has no ice
     alt = f'{a_an(d["name"])} in {a_an(gw)}{g}, next to {beside}'
@@ -209,7 +211,8 @@ def search_index():
               'champagne': 'sparkling wine bubbly', 'campari': 'bitter aperitivo amaro', 'soda water': 'club soda bubbles', 'egg white': 'foam',
               'ginger beer': 'ginger', 'grapefruit soda': 'grapefruit bubbles', 'honey syrup': 'honey', 'crème de cassis': 'blackcurrant',
               'crème de violette': 'violet floral', 'orange liqueur': 'triple sec cointreau curacao', 'sweet vermouth': 'vermouth', 'dry vermouth': 'vermouth',
-              'angostura bitters': 'bitters', "peychaud's bitters": 'bitters', 'orange bitters': 'bitters', 'grind': 'coffee liqueur kahlua', 'goslings': 'dark rum'}
+              'angostura bitters': 'bitters', "peychaud's bitters": 'bitters', 'orange bitters': 'bitters', 'grind': 'coffee liqueur kahlua', 'goslings': 'dark rum',
+              'green crème de menthe': 'mint creme de menthe', 'white crème de cacao': 'chocolate creme de cacao', 'heavy cream': 'cream'}
     out = []
     for d in DRINKS:
         ings = []

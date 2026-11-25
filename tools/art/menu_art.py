@@ -442,6 +442,8 @@ ING = {
     'orange-liqueur': ('orange liqueur', 'bottle', '#f3e2b0', ('liqueur', '#f0d79a', 'orange liqueur')),
     'benedictine':    ('Bénédictine', 'bottle', '#d9a640', ('liqueur', '#8a5a2a', 'Bénédictine')),
     'cassis':         ('crème de cassis', 'bottle', '#5a1b3a', ('liqueur', '#4a1830', 'crème de cassis')),
+    'creme-de-menthe': ('green crème de menthe', 'bottle', '#5fb36a', ('tall', '#4fa860', 'green crème de menthe')),   # the Grasshopper (Philip, Nov 24)
+    'creme-de-cacao': ('white crème de cacao', 'bottle', '#f3efe2', ('liqueur', '#ece6d8', 'white crème de cacao')),
     'violette':       ('crème de violette', 'bottle', '#8a64b4', ('liqueur', '#7d5aa6', 'crème de violette')),
     'lemon':          ('lemon', 'jigger', '#f1e58a', None),
     'lime':           ('lime', 'jigger', '#cfe39a', None),

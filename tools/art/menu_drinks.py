@@ -853,21 +853,25 @@ DRINKS = [
                 ('<strong>Garnish.</strong> A long, thin strip of lemon peel.', [('garnish',)])],
          related=['martini', 'corpse-reviver-no-2'], hero=(['lillet', 'gin'], ['vodka', 'fruit:lemon'])),
 
-    dict(slug='trinidad-sour', name='Trinidad Sour', genre='arcane-oddities', glass='coupe', color='#7c2a1c', foam='#c48a76', garnish=[],
-         recipe=[(1.5, 'oz', 'Angostura bitters'), (1, 'oz', 'orgeat (almond syrup)'), (.75, 'oz', 'lemon juice'), (.5, 'oz', 'rye')],
-         glass_line=('coupe', 'none'),
-         punch=['An ounce and a half of bitters.', '<em>On purpose.</em>'],
-         lines=['Most recipes call for Angostura bitters by the dash. This one uses it as the base spirit. (Angostura is about as strong as whiskey, after all.)',
-                'Bartender Giuseppe González came up with it in 2009, at the Clover Club in Brooklyn. As he put it, “nobody can imagine what it tastes like.” So everybody wants to try one.',
-                'What it tastes like: rich, spicy and surprisingly smooth. The orgeat rounds off the bitters, the lemon keeps it bright, and a little rye backs it all up.'],
-         gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Punch, InsideHook): Giuseppe Gonzalez, Clover Club, Brooklyn, 2009; "
-                    "\"nobody can imagine what it tastes like\" (InsideHook); Punch's recipe (1½ Angostura, 1 orgeat, ¾ lemon, ½ rye), no garnish. Angostura is 44.7% ABV."),
-         steps=[('<strong>Combine ingredients.</strong> Yes, really: pour the Angostura by the jigger. Then the orgeat, lemon juice and rye.',
-                 [('pour', 'angostura-oz', 1.5), ('pour', 'orgeat', 1), ('pour', 'lemon', .75), ('pour', 'rye', .5)]),
+    dict(slug='grasshopper', name='Grasshopper', genre='arcane-oddities', glass='coupe', color='#b9dca4', foam='#d7ecc8', garnish=['mint'],
+         aka="tujague's new orleans mint chocolate dessert",
+         recipe=[(1, 'oz', 'green crème de menthe'), (1, 'oz', 'white crème de cacao'), (1, 'oz', 'heavy cream')],
+         glass_line=('coupe', 'a sprig of mint'),
+         punch=['Mint, chocolate and cream.', '<em>Dessert, in a coupe.</em>'],
+         lines=["Tujague's, in New Orleans' French Quarter, says its owner Philibert Guichet came up with it for a cocktail competition in New York in 1918. It took second place.",
+                "By the 1950s and '60s, it was everywhere in the South. In Wisconsin, they still blend it with ice cream.",
+                "And no, there's no cream in crème de menthe or crème de cacao. “Crème” just means it's a sweet liqueur. The cream comes from the cream."],
+         copy_note=("Nov 24 2026: Philip swapped the Trinidad Sour for the Grasshopper (his rule: drinks people actually order across the bar; the Trinidad Sour, 2009, "
+                    "wasn't a classic either). CLAUDE'S DRAFT, waiting on Philip: everything. Recipe: equal parts, the standard one (Wikipedia). Facts checked: "
+                    "Tujague's (its own site) says Philibert Guichet made it for a 1918 New York cocktail competition, second place; popular in the South in the 1950s "
+                    "and '60s, blended with ice cream in Wisconsin (Wikipedia); Imbibe (Wayne Curtis) questions the Tujague's story, so it's told as theirs. "
+                    "\"Crème\" liqueurs are named for their sugar, not dairy."),
+         steps=[('<strong>Combine ingredients.</strong> Add the crème de menthe, crème de cacao and cream to your shaker.',
+                 [('pour', 'creme-de-menthe', 1), ('pour', 'creme-de-cacao', 1), ('pour', 'cream', 1)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
-                ('<strong>Strain.</strong> Strain into a chilled coupe. No garnish needed.', [('strain',)])],
-         related=['whiskey-sour', 'mai-tai'], hero=(['angostura-oz', 'rye'], ['orgeat', 'fruit:lemon'])),
+                ('<strong>Strain.</strong> Strain into a chilled coupe.', [('strain',)]),
+                ('<strong>Garnish.</strong> A sprig of mint.', [('garnish',)])],
+         related=['ramos-gin-fizz', 'irish-coffee'], hero=(['creme-de-menthe', 'creme-de-cacao'], ['cream', 'mint'])),
 
     dict(slug='blood-and-sand', name='Blood and Sand', genre='arcane-oddities', glass='coupe', color='#c2512e', garnish=['orange-twist'],
          recipe=[(.75, 'oz', 'Scotch'), (.75, 'oz', 'sweet vermouth'), (.75, 'oz', 'cherry liqueur (like Cherry Heering)'), (.75, 'oz', 'orange juice')],
