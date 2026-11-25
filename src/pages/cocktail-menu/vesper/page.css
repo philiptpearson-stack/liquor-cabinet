@@ -52,3 +52,31 @@
 .howto-steps li.s2{animation:hs2 14.5s linear infinite}@keyframes hs2{0%{background-color:transparent}27.68%{background-color:transparent}28.28%{background-color:var(--step-hl)}54.48%{background-color:var(--step-hl)}55.08%{background-color:transparent}100%{background-color:transparent}}
 .howto-steps li.s3{animation:hs3 14.5s linear infinite}@keyframes hs3{0%{background-color:transparent}53.88%{background-color:transparent}54.48%{background-color:var(--step-hl)}71.72%{background-color:var(--step-hl)}72.32%{background-color:transparent}100%{background-color:transparent}}
 .howto-steps li.s4{animation:hs4 14.5s linear infinite}@keyframes hs4{0%{background-color:transparent}71.12%{background-color:transparent}71.72%{background-color:var(--step-hl)}80.69%{background-color:var(--step-hl)}81.29%{background-color:transparent}100%{background-color:transparent}}
+/* 2. Phil, in a tux (8 s): tips the shaker over the glass, pours (the stream runs, the Martini fills from the point up), sets it down, the olives go in, then he quick-draws (53%) and winks. Still frame: the pistol out, the Martini poured, the shaker on the bar. */
+.hpour,.apour,.lrest,.stream,.whoosh,.ting{opacity:0}
+.hpour{animation:hpour 8.0s linear infinite}
+@keyframes hpour{0%{opacity:1}53%{opacity:1}53.5%{opacity:0}93%{opacity:0}93.5%{opacity:1}100%{opacity:1}}
+.hdraw{animation:hdraw 8.0s linear infinite}
+@keyframes hdraw{0%{opacity:0}52.5%{opacity:0}53%{opacity:1}93%{opacity:1}93.5%{opacity:0}100%{opacity:0}}
+.apour{animation:apour 8.0s linear infinite}
+@keyframes apour{0%{opacity:1}44%{opacity:1}44.5%{opacity:0}93%{opacity:0}93.5%{opacity:1}100%{opacity:1}}
+.arest{animation:arest 8.0s linear infinite}
+@keyframes arest{0%{opacity:0}43.5%{opacity:0}44%{opacity:1}93%{opacity:1}93.5%{opacity:0}100%{opacity:0}}
+.lrest{animation:lrest 8.0s linear infinite}
+@keyframes lrest{0%{opacity:1}53%{opacity:1}53.5%{opacity:0}93%{opacity:0}93.5%{opacity:1}100%{opacity:1}}
+.lgun{animation:lgun 8.0s linear infinite}
+@keyframes lgun{0%{opacity:0;transform:rotate(-70deg)}53%{opacity:0;transform:rotate(-70deg)}53.3%{opacity:1;transform:rotate(-70deg)}55.5%{opacity:1;transform:rotate(6deg)}57%{opacity:1;transform:rotate(0)}93%{opacity:1;transform:rotate(0)}93.5%{opacity:0;transform:rotate(0)}100%{opacity:0;transform:rotate(-70deg)}}
+.tilt{animation:tilt 8.0s linear infinite}
+@keyframes tilt{0%{transform:rotate(-75deg)}4%{transform:rotate(-75deg)}10%{transform:rotate(0)}36%{transform:rotate(0)}40%{transform:rotate(-75deg)}100%{transform:rotate(-75deg)}}
+.stream{animation:stream 8.0s linear infinite}
+@keyframes stream{0%{opacity:0}10.5%{opacity:0}11%{opacity:1}36%{opacity:1}36.5%{opacity:0}100%{opacity:0}}
+.liq{animation:liq 8.0s linear infinite}
+@keyframes liq{0%{transform:scale(0)}11%{transform:scale(0)}36%{transform:scale(1)}93%{transform:scale(1)}93.5%{transform:scale(0)}100%{transform:scale(0)}}
+.olv{animation:olv 8.0s linear infinite}
+@keyframes olv{0%{opacity:0;transform:translateY(-30px)}47%{opacity:0;transform:translateY(-30px)}47.5%{opacity:1;transform:translateY(-30px)}50%{opacity:1;transform:translateY(0)}93%{opacity:1;transform:translateY(0)}93.5%{opacity:0}100%{opacity:0}}
+.tinbar{animation:tinbar 8.0s linear infinite}
+@keyframes tinbar{0%{opacity:0}43.5%{opacity:0}44%{opacity:1}93%{opacity:1}93.5%{opacity:0}100%{opacity:0}}
+.whoosh{animation:whoosh 8.0s linear infinite}
+@keyframes whoosh{0%{opacity:0}53%{opacity:0}54%{opacity:1}61%{opacity:1}62%{opacity:0}100%{opacity:0}}
+.ting{animation:ting 8.0s linear infinite}
+@keyframes ting{0%{opacity:0}56%{opacity:0}57%{opacity:1}69%{opacity:1}70%{opacity:0}100%{opacity:0}}

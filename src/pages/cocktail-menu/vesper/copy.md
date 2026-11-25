@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything except the stir step (Philip's). A sequel to the Martini page's "Sorry, Mr. Bond." Facts: Casino Royale (1953), Bond's own recipe (3 gin, 1 vodka, ½ Kina Lillet, shaken, lemon peel), named for Vesper Lynd. Fleming's words paraphrased, not quoted. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 24 2026: Philip's copy (Fleming spelled with one m; commas around "though": Philip OK'd), the sequel to the Martini page's "Speaking of James Bond", with its Bond scene (a lemon peel drops in here, not olives). The stir step is Philip's. Facts: Casino Royale (1953), Bond's own recipe (3 gin, 1 vodka, ½ Kina Lillet, shaken, lemon peel); one drink before dinner, "very large and very strong and very cold and very well-made" (paraphrased on the page); Fleming in the Manchester Guardian, 1958: he "sampled it several months later and found [it] unpalatable" (The James Bond Dossier). Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Vesper.***
 Vesper Recipe
@@ -15,13 +15,12 @@ Makes − 1 + drink
 ¼ oz Lillet Blanc
 **Glass:** martini glass
 **Garnish:** a long, thin lemon peel
-James Bond invented a Martini.
-And named it after a woman.
-In Casino Royale, Ian Fleming's very first James Bond novel (1953), Bond orders a Martini of his own design: three parts gin, one part vodka and half a part Kina Lillet, with a long, thin strip of lemon peel.
-Later, he names it after Vesper Lynd, the woman he's falling for.
-Kina Lillet isn't made anymore. Lillet Blanc is the easy stand-in.
-And, of course, Bond tells the bartender to shake it. But it's all booze, no citrus. So by our rule of thumb, you *stir* it.
-Sorry again, Mr. Bond.
+Speaking of James Bond:
+In Casino Royale, Bond orders gin, vodka, and Kina Lillet. He wants it shaken ice-cold, with a big strip of lemon peel. He calls it a Vesper.
+And it's not a Martini (although they sure LOOK alike!).
+Bond explains on the page that he only has one drink before dinner. He just wants that one to be enormous, strong, cold, and properly made.
+*Don't we all, James??*
+(The best part of this story, though, is that the novel really is the first reference to the drink. And when the author, Ian Fleming, eventually tried it in a bar somewhere, he *hated* it.)
 Here's how you make one:
 The Cocktail Menu · Arcane Oddities
 Vesper

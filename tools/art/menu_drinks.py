@@ -848,16 +848,20 @@ DRINKS = [
     dict(slug='vesper', name='Vesper', genre='arcane-oddities', glass='martini', color='#f1efd8', garnish=['lemon-peel'],
          recipe=[(1.5, 'oz', 'gin'), (.5, 'oz', 'vodka'), (.25, 'oz', 'Lillet Blanc')],
          glass_line=('martini glass', 'a long, thin lemon peel'),
-         punch=['James Bond invented a Martini.', 'And named it after a woman.'],
-         lines=["In <i>Casino Royale</i>, Ian Fleming's very first James Bond novel (1953), Bond orders a Martini of his own design: three parts gin, one part vodka and half a part Kina Lillet, with a long, thin strip of lemon peel.",
-                "Later, he names it after Vesper Lynd, the woman he's falling for.",
-                "Kina Lillet isn't made anymore. Lillet Blanc is the easy stand-in.",
-                "And, of course, Bond tells the bartender to shake it. But it's all booze, no citrus. So by our rule of thumb, you <em>stir</em> it.",
-                ('punch', 'Sorry again, Mr. Bond.')],
+         punch='Speaking of James Bond:',
+         lines=[('scene', 'bond'),
+                'In <cite>Casino Royale</cite>, Bond orders gin, vodka, and Kina Lillet. He wants it shaken ice-cold, with a big strip of lemon peel. He calls it a Vesper.',
+                "And it's not a Martini (although they sure LOOK alike!).",
+                'Bond explains on the page that he only has one drink before dinner. He just wants that one to be enormous, strong, cold, and properly made.',
+                "<em>Don't we all, James??</em>",
+                '(The best part of this story, though, is that the novel really is the first reference to the drink. And when the author, Ian Fleming, eventually tried it in a bar somewhere, he <em>hated</em> it.)'],
+         scenes='vesper_scenes',
          tip="Bond's original is twice this size. We don't recommend it.",
          note_go_end=('→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything except the stir step (Philip's). A sequel to the Martini page's \"Sorry, Mr. Bond.\" "
-                    "Facts: Casino Royale (1953), Bond's own recipe (3 gin, 1 vodka, ½ Kina Lillet, shaken, lemon peel), named for Vesper Lynd. Fleming's words paraphrased, not quoted."),
+         copy_note=("Nov 24 2026: Philip's copy (Fleming spelled with one m; commas around \"though\": Philip OK'd), the sequel to the Martini page's \"Speaking of James Bond\", "
+                    "with its Bond scene (a lemon peel drops in here, not olives). The stir step is Philip's. Facts: Casino Royale (1953), Bond's own recipe (3 gin, 1 vodka, "
+                    "½ Kina Lillet, shaken, lemon peel); one drink before dinner, \"very large and very strong and very cold and very well-made\" (paraphrased on the page); "
+                    "Fleming in the Manchester Guardian, 1958: he \"sampled it several months later and found [it] unpalatable\" (The James Bond Dossier)."),
          steps=[('<strong>Combine ingredients.</strong> Add the gin, vodka and Lillet Blanc to a mixing glass.', [('pour', 'gin', 1.5), ('pour', 'vodka', .5), ('pour', 'lillet', .25)]),
                 ('<strong>Stir.</strong> Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into <strong>balance.</strong> <em>Dilution is part of the recipe.</em>)', [('ice', 'mix'), ('stir',)]),
                 ('<strong>Strain.</strong> Strain into a chilled martini glass.', [('strain',)]),

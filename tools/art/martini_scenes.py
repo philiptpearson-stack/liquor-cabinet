@@ -151,7 +151,8 @@ def pistol():
                     '<path d="M-6 0 L-8 8 M-3 0 L-5 8" stroke="#3a2418" stroke-width="1"/>', boil=False, width=2.2))
 
 
-def bond():
+def bond(garnish='olives', drink='Martini'):
+    """garnish: what drops in at the end (the Vesper's is a lemon peel: Philip, Nov 24, its page borrows this scene)."""
     css = [f'/* 2. Phil, in a tux ({BT:g} s): tips the shaker over the glass, pours (the stream runs, the Martini fills from the point up), '
            f'sets it down, the olives go in, then he quick-draws ({DRAW}%) and winks. Still frame: the pistol out, the Martini poured, the shaker on the bar. */']
     wall = wash('<rect x="0" y="0" width="400" height="236" fill="#3e2c3d"/>') + wash('<ellipse cx="170" cy="96" rx="130" ry="84" fill="#6b4a63" opacity=".55"/>')
@@ -212,7 +213,7 @@ def bond():
     # the glass: the Martini fills it from the point up (a cone scaled from its point fills like a cone), then the olives drop in
     liquid = f'<g class="liq" style="transform-origin:0px -46.5px"><path d="{g["inner"]}" fill="#e6eac2"/><path d="M-31 -78 H31" stroke="#c9cfa0" stroke-width="1.6"/></g>'
     anim('liq', [(0, 'transform:scale(0)'), (POUR[0], 'transform:scale(0)'), (POUR[1], 'transform:scale(1)'), (BACK, 'transform:scale(1)'), (BACK + .5, 'transform:scale(0)'), (100, 'transform:scale(0)')])
-    olive = f'<g class="olv">{garnishes(["olives"], "martini")}</g>'
+    olive = f'<g class="olv">{garnishes([garnish], "martini")}</g>'
     anim('olv', [(0, 'opacity:0;transform:translateY(-30px)'), (OLIVES, 'opacity:0;transform:translateY(-30px)'), (OLIVES + .5, 'opacity:1;transform:translateY(-30px)'),
                  (OLIVES + 3, 'opacity:1;transform:translateY(0)'), (BACK, 'opacity:1;transform:translateY(0)'), (BACK + .5, 'opacity:0'), (100, 'opacity:0')])
     the_glass = (f'<g transform="translate({gx} {gy}) scale({gs})">' + wash(g['back'])
@@ -230,8 +231,10 @@ def bond():
     inner = (wall + sparkle(352, 40, 5, 'twinkle d2') + sparkle(300, 24, 4, 'twinkle')
              + place(phil, PX, PY) + counter_front() + the_glass + tin_bar + f'<g class="stream">{stream}</g>'
              + f'<g class="whoosh">{whoosh}</g><g class="ting">{ting}</g>')
-    alt = ('Phil, the bartender, in a tuxedo and bow tie, tips a shaker over a Martini glass on the bar and pours; the glass fills. '
-           'He sets the shaker down, the olives drop in, then he quick-draws a pistol, aims it off to the side like a movie spy, and winks.')
+    dropped = {'olives': 'the olives drop in', 'lemon-peel': 'a long strip of lemon peel drops in'}[garnish]
+    pours = 'pours' if drink == 'Martini' else f'pours a {drink}'
+    alt = (f'Phil, the bartender, in a tuxedo and bow tie, tips a shaker over a Martini glass on the bar and {pours}; the glass fills. '
+           f'He sets the shaker down, {dropped}, then he quick-draws a pistol, aims it off to the side like a movie spy, and winks.')
     return svg_view(inner, alt, '20 6 360 200'), css
 
 
