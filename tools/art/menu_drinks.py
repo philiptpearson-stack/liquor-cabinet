@@ -1099,10 +1099,10 @@ DRINKS = [
          recipe=[(1, 'oz', 'lime juice'), (1, 'oz', 'simple syrup'), (1, 'oz', 'cranberry juice'), (3, 'oz', '7UP')],
          glass_line=('cocktail glass', 'a sugared rim'),
          punch=['Click your heels', 'three times.'],
-         lines=['Lime, simple syrup and cranberry, an ounce each, with three ounces of 7UP, in a sugar-rimmed cocktail glass.',
-                "It's ruby red and looks a lot like a Cosmo. There's just no booze in it."],
+         lines=["It's ruby red and looks a lot like a Cosmo.",
+                "And since there's no booze in this one, you'll still be in Kansas when you finish it!"],
          copy_note=("Nov 25 2026: Philip's drink and recipe: lime, simple, cranberry and 7UP, 1:1:1:3, strained into a sugar-rimmed cocktail glass (from chat). "
-                    "The 7UP is swirled in the shaker after the shake, like the Collins drinks. CLAUDE'S DRAFT, waiting on Philip: the words."),
+                    "The 7UP is swirled in the shaker after the shake, like the Collins drinks. Nov 27: Philip's copy."),
          steps=[('<strong>Sugar the rim.</strong> Rub a lime wedge around the outside of the rim of a chilled cocktail glass, then roll it in sugar.', [('rim',)]),
                 ('<strong>Combine ingredients.</strong> Add the lime juice, simple syrup and cranberry juice to your shaker.', [('pour', 'lime', 1), ('pour', 'simple', 1), ('pour', 'cranberry', 1)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
