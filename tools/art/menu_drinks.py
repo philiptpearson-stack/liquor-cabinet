@@ -1078,12 +1078,14 @@ DRINKS = [
          recipe=[(1, 'oz', 'lemon juice'), (1, 'oz', 'homemade grenadine'), (3, 'oz', 'soda water (or your favorite fizzy water)')],
          glass_line=('collins glass, over ice', 'a lemon wheel'),
          note="Homemade grenadine: the recipe's on our syrups page. (Coming soon!)",
-         punch=['Pink lemonade,', '<em>all grown up.</em>'],
-         lines=['The Non-Collins, with homemade grenadine in place of the simple syrup.',
-                "Real grenadine is pomegranate syrup, tart and deep red. It's nothing like the neon stuff in the jar."],
-         copy_note=("Nov 25 2026: Philip's drink and recipe: lemon and homemade grenadine, 1 oz each, shaken, soda swirled in, poured into a collins glass (from chat). "
-                    "\"See recipe on our syrups page!\" waits on that page (the card says coming soon). CLAUDE'S DRAFT, waiting on Philip: the words, the lemon wheel, "
-                    "and the lemon wheel; 3 oz of soda is Philip's (Nov 25)."),
+         punch=['Pink Lemonade,', "the bartender's special."],
+         lines=["The key to a great mocktail isn't funky, expensive ingredients.",
+                "And it's not weird, herbaceous shrubs or tinctures.",
+                'Just like a great cocktail, the key to a great mocktail is simplicity, and balance.',
+                "This drink's got both. Bright lemon, deep and tart homemade grenadine (the recipe's on our syrups page, coming soon!)."],
+         copy_note=("Nov 25 2026: Philip's drink and recipe: lemon and homemade grenadine, 1 oz each, shaken, 3 oz of soda swirled in, poured into a collins glass. "
+                    "Nov 27: Philip's copy (\"key\" for \"ket\"; the syrups note flattened to one set of parentheses: Philip OK'd). The syrups page doesn't exist yet "
+                    "(the card says coming soon). The lemon wheel is Claude's."),
          steps=[('<strong>Combine ingredients.</strong> Add the lemon juice and grenadine to your shaker.', [('pour', 'lemon', 1), ('pour', 'grenadine', 1)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
                 ('<strong>Top with soda.</strong> Soda water, or your favorite fizzy water, right into the shaker. Give it a gentle swirl.', [('top', 'soda', 3), ('swirl',)]),

@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 25 2026: Philip's drink and recipe: lemon and homemade grenadine, 1 oz each, shaken, soda swirled in, poured into a collins glass (from chat). "See recipe on our syrups page!" waits on that page (the card says coming soon). CLAUDE'S DRAFT, waiting on Philip: the words, the lemon wheel, and the lemon wheel; 3 oz of soda is Philip's (Nov 25). Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 25 2026: Philip's drink and recipe: lemon and homemade grenadine, 1 oz each, shaken, 3 oz of soda swirled in, poured into a collins glass. Nov 27: Philip's copy ("key" for "ket"; the syrups note flattened to one set of parentheses: Philip OK'd). The syrups page doesn't exist yet (the card says coming soon). The lemon wheel is Claude's. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Bridge City ***Lemonade.***
 Bridge City Lemonade Recipe
@@ -16,10 +16,12 @@ Makes − 1 + drink
 **Glass:** collins glass, over ice
 **Garnish:** a lemon wheel
 Homemade grenadine: the recipe's on our syrups page. (Coming soon!)
-Pink lemonade,
-*all grown up.*
-The Non-Collins, with homemade grenadine in place of the simple syrup.
-Real grenadine is pomegranate syrup, tart and deep red. It's nothing like the neon stuff in the jar.
+Pink Lemonade,
+the bartender's special.
+The key to a great mocktail isn't funky, expensive ingredients.
+And it's not weird, herbaceous shrubs or tinctures.
+Just like a great cocktail, the key to a great mocktail is simplicity, and balance.
+This drink's got both. Bright lemon, deep and tart homemade grenadine (the recipe's on our syrups page, coming soon!).
 Here's how you make one:
 The Cocktail Menu · Low & No-Proof
 Bridge City Lemonade
