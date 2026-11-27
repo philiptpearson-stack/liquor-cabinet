@@ -1148,11 +1148,15 @@ DRINKS = [
          recipe=[(2, 'oz', 'dark rum'), (1, 'oz', 'buttered rum batter (about 2 tablespoons; see below)'), (4, 'oz', 'hot water')],
          glass_line=('warm mug', 'a cinnamon stick'),
          note='Batter (for about 12 drinks): beat ½ cup softened butter with ½ cup brown sugar, 1 tsp cinnamon, ½ tsp nutmeg, ¼ tsp ground cloves and a pinch of salt. It keeps in the fridge for a couple of weeks.',
-         punch=["Yes, there's butter in it.", "That's the point."],
-         lines=['In colonial America, rum was everywhere. On cold nights, people drank it hot, with sugar and spice, and sometimes a pat of butter.',
-                'The easy way today is a batter: butter, brown sugar and warm spices, beaten together and kept in the fridge. Drop a spoonful in a mug with rum and hot water, and stir.',
-                "The butter makes it rich and silky, and it carries the spice. Make a batch in December, and you're set for the season."],
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. History kept general on purpose: rum and hot rum drinks in colonial America (The Takeout); "
+         punch=["Yes, there's butter in it.", 'Yes, that might seem sort of yucky.'],
+         lines=["But it's actually the point!",
+                'In colonial America, rum was everywhere. On cold nights, people drank it hot, with sugar and spice, and sometimes a pat of butter.',
+                "We actually don't know why they would have wanted to do that.",
+                'With the butter.',
+                'Was it like that fad a few years back where people were putting butter in their coffee??',
+                "Believe it or not, though, in this drink? It's actually awesome. Just make yourself a batter: butter, brown sugar and warm spices, beaten together and kept in the fridge. Drop a spoonful in a mug with rum and hot water, and you've got the Holiday Season in a glass!"],
+         copy_note=("Nov 27 2026: Philip's copy, his pass on Claude's draft (\"that fad a few years back\" for \"that pandemic-era fad\": butter coffee, Bulletproof, "
+                    "peaked around 2014; Philip OK'd). History kept general on purpose: rum and hot rum drinks in colonial America (The Takeout); "
                     "nobody knows when the butter went in. The batter is the standard modern method."),
          steps=[('<strong>Batter and rum.</strong> Add a spoonful of batter and the rum to a warm mug.', [('pour', 'batter', 1), ('pour', 'dark-rum', 2)]),
                 ('<strong>Top with hot water.</strong> Just off the boil.', [('top', 'hot-water', 4)]),
