@@ -7,21 +7,21 @@
 .steam{animation:steam 2.6s ease-in-out infinite}.steam.s1{animation-delay:-.9s}.steam.s2{animation-delay:-1.7s}
 @keyframes steam{0%{transform:translateY(4px);opacity:0}30%{opacity:.8}100%{transform:translateY(-10px);opacity:0}}
 /* the build, step by step (12.8 s). Still frame: the finished drink. */
-.btl9,.pour10,.cap11,.jig12,.pour13,.cap14,.jig15,.pour16,.cap17,.ktl18,.pour19,.cap20,.spnw22,.cap23,.cheer25{opacity:0}
-.band1{animation:band1 12.8s linear infinite}@keyframes band1{0%{transform:scaleY(0)}7.42%{transform:scaleY(0)}10.94%{transform:scaleY(1)}100%{transform:scaleY(1)}}
-.band2{animation:band2 12.8s linear infinite}@keyframes band2{0%{transform:scaleY(0)}16.8%{transform:scaleY(0)}19.92%{transform:scaleY(1)}100%{transform:scaleY(1)}}
+.jig9,.pour10,.cap11,.btl12,.pour13,.cap14,.jig15,.pour16,.cap17,.ktl18,.pour19,.cap20,.spnw22,.cap23,.cheer25{opacity:0}
+.band1{animation:band1 12.8s linear infinite}@keyframes band1{0%{transform:scaleY(0)}7.42%{transform:scaleY(0)}10.55%{transform:scaleY(1)}100%{transform:scaleY(1)}}
+.band2{animation:band2 12.8s linear infinite}@keyframes band2{0%{transform:scaleY(0)}16.41%{transform:scaleY(0)}19.92%{transform:scaleY(1)}100%{transform:scaleY(1)}}
 .band3{animation:band3 12.8s linear infinite}@keyframes band3{0%{transform:scaleY(0)}25.78%{transform:scaleY(0)}28.91%{transform:scaleY(1)}100%{transform:scaleY(1)}}
 .band4{animation:band4 12.8s linear infinite}@keyframes band4{0%{transform:scaleY(0)}34.77%{transform:scaleY(0)}43.75%{transform:scaleY(1)}100%{transform:scaleY(1)}}
 .mixd5{animation:mixd5 12.8s linear infinite}@keyframes mixd5{0%{opacity:0}52.34%{opacity:0}56.25%{opacity:1}100%{opacity:1}}
 .gc6{animation:gc6 12.8s linear infinite}@keyframes gc6{0%{opacity:1}93.75%{opacity:1}98.05%{opacity:0}100%{opacity:0}}
 .garn7{animation:garn7 12.8s linear infinite}@keyframes garn7{0%{opacity:0;transform:translateY(-60px)}68.75%{opacity:0;transform:translateY(-60px)}69.14%{opacity:1;transform:translateY(-60px)}73.44%{opacity:1;transform:translateY(0)}93.75%{opacity:1;transform:translateY(0)}98.05%{opacity:0;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
 .hot8{animation:hot8 12.8s linear infinite}@keyframes hot8{0%{opacity:0}43.75%{opacity:0}48.44%{opacity:1}93.75%{opacity:1}98.05%{opacity:0}100%{opacity:0}}
-.btl9{animation:btl9 12.8s linear infinite}@keyframes btl9{0%{opacity:0;transform:rotate(25deg)}3.91%{opacity:0;transform:rotate(25deg)}4.3%{opacity:1;transform:rotate(25deg)}6.64%{opacity:1;transform:rotate(0)}10.94%{opacity:1;transform:rotate(0)}12.66%{opacity:1;transform:rotate(25deg)}13.28%{opacity:0;transform:rotate(25deg)}100%{opacity:0;transform:rotate(25deg)}}
-.pour10{animation:pour10 12.8s linear infinite}@keyframes pour10{0%{opacity:0}5.94%{opacity:0}6.87%{opacity:1}10.94%{opacity:1}11.88%{opacity:0}100%{opacity:0}}
-.cap11{animation:cap11 12.8s linear infinite}@keyframes cap11{0%{opacity:0}3.36%{opacity:0}4.3%{opacity:1}12.5%{opacity:1}13.44%{opacity:0}100%{opacity:0}}
-.jig12{animation:jig12 12.8s linear infinite}@keyframes jig12{0%{opacity:0;transform:rotate(0)}13.28%{opacity:0;transform:rotate(0)}13.67%{opacity:1;transform:rotate(0)}16.02%{opacity:1;transform:rotate(100deg)}19.53%{opacity:1;transform:rotate(100deg)}21.48%{opacity:1;transform:rotate(0)}22.27%{opacity:0;transform:rotate(0)}100%{opacity:0;transform:rotate(0)}}
-.pour13{animation:pour13 12.8s linear infinite}@keyframes pour13{0%{opacity:0}15.31%{opacity:0}16.25%{opacity:1}19.3%{opacity:1}20.23%{opacity:0}100%{opacity:0}}
-.cap14{animation:cap14 12.8s linear infinite}@keyframes cap14{0%{opacity:0}12.73%{opacity:0}13.67%{opacity:1}21.48%{opacity:1}22.42%{opacity:0}100%{opacity:0}}
+.jig9{animation:jig9 12.8s linear infinite}@keyframes jig9{0%{opacity:0;transform:rotate(0)}3.91%{opacity:0;transform:rotate(0)}4.3%{opacity:1;transform:rotate(0)}6.64%{opacity:1;transform:rotate(100deg)}10.16%{opacity:1;transform:rotate(100deg)}12.11%{opacity:1;transform:rotate(0)}12.89%{opacity:0;transform:rotate(0)}100%{opacity:0;transform:rotate(0)}}
+.pour10{animation:pour10 12.8s linear infinite}@keyframes pour10{0%{opacity:0}5.94%{opacity:0}6.87%{opacity:1}9.92%{opacity:1}10.86%{opacity:0}100%{opacity:0}}
+.cap11{animation:cap11 12.8s linear infinite}@keyframes cap11{0%{opacity:0}3.36%{opacity:0}4.3%{opacity:1}12.11%{opacity:1}13.05%{opacity:0}100%{opacity:0}}
+.btl12{animation:btl12 12.8s linear infinite}@keyframes btl12{0%{opacity:0;transform:rotate(25deg)}12.89%{opacity:0;transform:rotate(25deg)}13.28%{opacity:1;transform:rotate(25deg)}15.62%{opacity:1;transform:rotate(0)}19.92%{opacity:1;transform:rotate(0)}21.64%{opacity:1;transform:rotate(25deg)}22.27%{opacity:0;transform:rotate(25deg)}100%{opacity:0;transform:rotate(25deg)}}
+.pour13{animation:pour13 12.8s linear infinite}@keyframes pour13{0%{opacity:0}14.92%{opacity:0}15.86%{opacity:1}19.92%{opacity:1}20.86%{opacity:0}100%{opacity:0}}
+.cap14{animation:cap14 12.8s linear infinite}@keyframes cap14{0%{opacity:0}12.34%{opacity:0}13.28%{opacity:1}21.48%{opacity:1}22.42%{opacity:0}100%{opacity:0}}
 .jig15{animation:jig15 12.8s linear infinite}@keyframes jig15{0%{opacity:0;transform:rotate(0)}22.27%{opacity:0;transform:rotate(0)}22.66%{opacity:1;transform:rotate(0)}25%{opacity:1;transform:rotate(100deg)}28.52%{opacity:1;transform:rotate(100deg)}30.47%{opacity:1;transform:rotate(0)}31.25%{opacity:0;transform:rotate(0)}100%{opacity:0;transform:rotate(0)}}
 .pour16{animation:pour16 12.8s linear infinite}@keyframes pour16{0%{opacity:0}24.3%{opacity:0}25.23%{opacity:1}28.28%{opacity:1}29.22%{opacity:0}100%{opacity:0}}
 .cap17{animation:cap17 12.8s linear infinite}@keyframes cap17{0%{opacity:0}21.72%{opacity:0}22.66%{opacity:1}30.47%{opacity:1}31.41%{opacity:0}100%{opacity:0}}

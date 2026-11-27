@@ -31,7 +31,7 @@ ICON_SCALE = {'coupe': 1.35, 'martini': 1.18, 'rocks': 1.3, 'highball': .93, 'fl
 GARNISH_WORD = {'lemon-wedge': 'a lemon wedge', 'orange-wedge': 'an orange wedge', 'lime-twist': 'a lime twist', 'lemon-peel': 'a lemon peel', 'grapefruit-twist': 'a grapefruit twist', 'celery': 'a celery stalk', 'candied-ginger': 'a piece of candied ginger', 'paper-plane': 'a little paper plane', 'coffee-beans': 'three coffee beans',
                 'pineapple': 'a pineapple wedge', 'bitters-drops': 'drops of bitters', 'straw': 'a straw', 'cinnamon': 'a cinnamon stick', 'nutmeg': 'grated nutmeg',
                 'berries': 'fresh berries', 'orange-wheel': 'an orange slice', 'salt-rim': 'a salted rim', 'sugar-rim': 'a sugared rim', 'lime-wheel': 'a lime wheel', 'lemon-wheel': 'a lemon wheel', 'lime-wedge': 'a lime wedge', 'grapefruit-wedge': 'a grapefruit wedge',
-                'lemon-twist': 'a lemon twist', 'orange-twist': 'an orange twist', 'orange-peel': 'an orange peel', 'cherry': 'a cherry',
+                'lemon-twist': 'a lemon twist', 'orange-twist': 'an orange twist', 'orange-peel': 'an orange peel', 'clove-orange-peel': 'an orange peel studded with cloves', 'cherry': 'a cherry',
                 'olives': 'olives', 'mint': 'a sprig of mint', 'flower': 'an edible flower'}
 
 

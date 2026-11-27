@@ -189,6 +189,11 @@ def garnish(kind, glass):
         return at(hw - 3, ry - 1, wedge(kind.split('-')[0]))
     if kind.endswith('-twist'):
         return at(hw - 3, ry, twist(kind.split('-')[0]))
+    if kind == 'clove-orange-peel':   # an orange peel studded with cloves (the Hot Toddy: Philip, Nov 27)
+        cloves = ''.join(f'<circle cx="{x}" cy="{y}" r="2" fill="#4a2a18"/><path d="M{x - 2.2} {y} h4.4 M{x} {y - 2.2} v4.4" stroke="#4a2a18" stroke-width="1"/>'
+                         for x, y in ((-2, -6), (3, 1), (1, 9)))
+        # on the far side of the rim from the cinnamon stick, so the two don't pile up
+        return at(-(hw - 8), ry + 6, f'<g transform="scale(-1 1)">{peel("orange") + cloves}</g>', 1.1, 8)
     if kind.endswith('-peel'):
         return at(hw - 8, ry + 6, peel(kind.split('-')[0]), 1, -8)
     if kind in ('salt-rim', 'sugar-rim'):
@@ -451,6 +456,7 @@ ING = {
     'lime':           ('lime', 'jigger', '#cfe39a', None),
     'simple':         ('simple syrup', 'jigger', '#f3e9c4', None),
     'honey':          ('honey syrup', 'jigger', '#e9b949', None),
+    'raw-honey':      ('honey', 'jigger', '#e9b949', None),   # straight honey, into hot water (the Hot Toddy: Philip, Nov 27)
     'grenadine':      ('grenadine', 'jigger', '#b3202a', None),
     'pear':           ('pear nectar', 'jigger', '#e9df9f', None),
     'angostura':      ('Angostura bitters', 'dash', '#5a1f1a', None),
