@@ -1062,10 +1062,11 @@ DRINKS = [
          recipe=[(1, 'oz', 'lemon juice'), (1, 'oz', 'simple syrup'), (3, 'oz', 'soda water (or your favorite fizzy water)')],
          glass_line=('collins glass, over ice', 'a lemon wheel'),
          punch=['A Tom Collins,', '<em>minus the gin.</em>'],
-         lines=['Lemon and simple syrup, an ounce each, shaken hard and topped with soda.',
-                "It's the same formula as every sour on the menu, with the strong part left out. The sour and the sweet still balance each other, so it still tastes like a real drink."],
-         copy_note=("Nov 25 2026: Philip's drink and recipe: lemon and simple, 1 oz each, shaken, soda swirled in, poured into a collins glass (from chat). "
-                    "CLAUDE'S DRAFT, waiting on Philip: the words and the lemon wheel; 3 oz of soda is Philip's (Nov 25)."),
+         lines=['It\'s the same formula as every sour on the menu, with the strong part left out. The sour and the sweet still balance each other, so it still tastes like a real drink.',
+                "(Perfect for when you want a yummy cocktail but you've got an important client presentation at 8AM the next day.)",
+                '(Which is not something we bartenders face very often, but we believe you when you tell us it happens.)'],
+         copy_note=("Nov 25 2026: Philip's drink and recipe: lemon and simple, 1 oz each, shaken, 3 oz of soda swirled in, poured into a collins glass. "
+                    "Nov 27: Philip's copy (\"Tom Collins\" spelled with two l's). The lemon wheel is Claude's."),
          steps=[('<strong>Combine ingredients.</strong> Add the lemon juice and simple syrup to your shaker.', [('pour', 'lemon', 1), ('pour', 'simple', 1)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
                 ('<strong>Top with soda.</strong> Soda water, or your favorite fizzy water, right into the shaker. Give it a gentle swirl.', [('top', 'soda', 3), ('swirl',)]),

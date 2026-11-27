@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 25 2026: Philip's drink and recipe: lemon and simple, 1 oz each, shaken, soda swirled in, poured into a collins glass (from chat). CLAUDE'S DRAFT, waiting on Philip: the words and the lemon wheel; 3 oz of soda is Philip's (Nov 25). Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 25 2026: Philip's drink and recipe: lemon and simple, 1 oz each, shaken, 3 oz of soda swirled in, poured into a collins glass. Nov 27: Philip's copy ("Tom Collins" spelled with two l's). The lemon wheel is Claude's. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: ***Non-Collins.***
 Non-Collins Recipe
@@ -17,8 +17,9 @@ Makes − 1 + drink
 **Garnish:** a lemon wheel
 A Tom Collins,
 *minus the gin.*
-Lemon and simple syrup, an ounce each, shaken hard and topped with soda.
 It's the same formula as every sour on the menu, with the strong part left out. The sour and the sweet still balance each other, so it still tastes like a real drink.
+(Perfect for when you want a yummy cocktail but you've got an important client presentation at 8AM the next day.)
+(Which is not something we bartenders face very often, but we believe you when you tell us it happens.)
 Here's how you make one:
 The Cocktail Menu · Low & No-Proof
 Non-Collins
