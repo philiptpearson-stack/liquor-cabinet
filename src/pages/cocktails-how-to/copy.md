@@ -12,7 +12,6 @@ The Golden Ratio
 Shaken or Stirred?
 Homemade Syrups
 The Tools You Actually Need
-Coming soon
 **Choose your own adventure with our interactive cocktail menu:**
 → The Cocktail Menu
 ← Back to The Bar
