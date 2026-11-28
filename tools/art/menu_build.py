@@ -7,7 +7,7 @@ Each step is (words under the drawing, [actions]). Actions, in order:
   ('swirl',) a gentle swirl of the mixing glass   ('dump',) pour it all, ice and all, into the glass (no strainer)
   ('top', ingredient, oz)    ('float', ingredient, oz)   ('sink', ingredient, oz)   ('garnish',)
   ('rim',) salt or sugar the rim (the drink's garnish says which)   ('muddle',) press the mint, in the glass
-  ('rinse', ingredient) coat the glass, pour out the rest   ('sugar',) a spoon of sugar   ('limes',) lime wedges into the glass
+  ('rinse', ingredient) coat the glass, pour out the rest   ('sugar',) a spoon of sugar   ('cubes', n) sugar cubes, dropped in   ('limes',) lime wedges into the glass
 The still frame (reduced motion, and what the poster shows) is the finished drink; everything
 that moves is hidden there. All motion is CSS keyframes, timed in seconds and written as percents.
 """
@@ -19,9 +19,9 @@ G_MIX = 'M160 96 L220 96 L214 196 L166 196Z'
 G_MIX_IN = 'M162.4 99 L217.6 99 L212.3 189 L167.7 189Z'
 TIN = 'M154 114 L226 114 L220 58 L160 58Z'
 MIX_SCALE = {'hurricane': (306, 1.16)}   # the serving glass beside the shaker: (x, scale); the Hurricane's is a big glass (Philip, Nov 24), a step right so the bottles clear it
-BUILD_SCALE = {'highball': 1.2, 'rocks': 1.38, 'coupe': 1.5, 'flute': 1.0, 'martini': 1.3, 'copper-mug': 1.35, 'wine': 1.15, 'mug': 1.4, 'julep-cup': 1.35, 'hurricane': 1.12}
+BUILD_SCALE = {'highball': 1.2, 'rocks': 1.38, 'coupe': 1.5, 'flute': 1.0, 'martini': 1.3, 'copper-mug': 1.35, 'wine': 1.15, 'mug': 1.4, 'julep-cup': 1.35, 'hurricane': 1.12, 'buena-vista': 1.3}
 DUR = {'pour': 1.2, 'jigger': 1.15, 'dash': 1.2, 'egg': 1.3, 'mint': 1.0, 'salt': 1.0, 'ice': 1.0, 'ice-glass': 1.5,
-       'dry': 2.4, 'shake': 2.9, 'stir': 2.8, 'strain': 2.5, 'dump': 2.4, 'swirl': 1.7, 'top': 1.9, 'float': 1.9, 'sink': 1.9, 'garnish': 1.3, 'rim': 1.5, 'muddle': 2.0, 'rinse': 2.2, 'sugar': 1.1, 'limes': 1.2, 'spoon': 1.2}
+       'dry': 2.4, 'shake': 2.9, 'stir': 2.8, 'strain': 2.5, 'dump': 2.4, 'swirl': 1.7, 'top': 1.9, 'float': 1.9, 'sink': 1.9, 'garnish': 1.3, 'rim': 1.5, 'muddle': 2.0, 'rinse': 2.2, 'sugar': 1.1, 'limes': 1.2, 'spoon': 1.2, 'cubes': 1.1}
 LEAD, HOLD = .5, 2.8
 VIEW = '104 14 240 204'
 
@@ -535,6 +535,16 @@ class Build:
                 self.emit(c, [(0, {'opacity': 0, 'transform': 'translateY(-110px)'}), (tt, {'opacity': 0, 'transform': 'translateY(-110px)'}), (tt + .05, {'opacity': 1}),
                               (tt + .5, {'transform': 'translateY(0)'}), (self.T - .8, {'opacity': 1}), (self.T - .25, {'opacity': 0})])
             return out
+        if kind == 'cubes':   # sugar cubes drop in, sink and dissolve (the Irish Coffee, the Buena Vista's way: Philip, Nov 27)
+            out = ''
+            for i in range(a[3]):
+                c = self.cls('scube')
+                x = rx - 5 + i * 10
+                out += f'<g class="{c}"><rect x="{f(x - 3.6)}" y="{f(ry - 36)}" width="7.2" height="7.2" rx="1.2" fill="#fffaf1" stroke="#8a8279" stroke-width="1.1"/></g>'
+                tt = t0 + .1 + i * .28
+                self.emit(c, [(0, {'opacity': 0, 'transform': 'translateY(0)'}), (tt, {'opacity': 0, 'transform': 'translateY(0)'}), (tt + .05, {'opacity': 1}),
+                              (tt + .45, {'opacity': 1, 'transform': f'translateY({f(by - ry + 18)}px)'}), (tt + .75, {'opacity': 0, 'transform': f'translateY({f(by - ry + 24)}px)'})])
+            return out
         if kind == 'sugar':   # a teaspoon of sugar tips into the glass, and the sugar stays: a white mound by the limes (Philip, Nov 19: "Where's the sugar?")
             out = ''
             sx, sy = rx + 2, ry - 12                  # the spoon's bowl, just over the rim
@@ -622,6 +632,8 @@ class Build:
             return f'rinse with {ING[a[3]][0]}'
         if kind == 'limes' and len(a) > 5 and a[3] == 1:
             return 'a coin of lime'
+        if kind == 'cubes':
+            return f'{a[3]} sugar cubes'
         if kind == 'spoon':
             return f'a spoonful of {ING[a[3]][0].replace("prepared ", "")}'
         return {'sugar': 'a spoon of sugar', 'limes': 'lime wedges', 'muddle': 'muddle, gently', 'egg': '1 egg white', 'mint': 'fresh mint', 'salt': 'a pinch of salt', 'ice': 'ice', 'dry': 'dry shake', 'shake': 'shake!', 'stir': 'stir, stir, stir', 'strain': 'strain', 'swirl': 'swirl', 'dump': 'pour it all in'}.get(kind)

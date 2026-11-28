@@ -43,6 +43,11 @@ GLASS = {
             '<path d="M-17.5 -46 Q-19 -32 -13 -22" stroke="#fffaf1" stroke-width="2.6"/><path d="M-14.5 -102 Q-11 -88 -10.5 -76" stroke="#fffaf1" stroke-width="2.2"/>',
         back='<path d="M-19 -110 C-13 -92 -11 -76 -13 -66 C-15 -56 -23 -46 -22 -32 C-21 -18 -12 -11 0 -11 C12 -11 21 -18 22 -32 C23 -46 15 -56 13 -66 C11 -76 13 -92 19 -110Z" fill="#e7f1fb" opacity=".35"/>',
         inner='M-17.4 -108 C-11.6 -92 -9.6 -76 -11.6 -66 C-13.6 -56 -21.4 -46 -20.4 -32 C-19.4 -19.6 -11.2 -12.6 0 -12.6 C11.2 -12.6 19.4 -19.6 20.4 -32 C21.4 -46 13.6 -56 11.6 -66 C9.6 -76 11.6 -92 17.4 -108Z', bottom=-13, top=-96, rim=(-110, 19)),
+    'buena-vista': dict(   # the Buena Vista's Irish coffee glass: a 6 oz stemmed goblet (the Irish Coffee: Philip, Nov 27)
+        out='<path d="M-20 -100 L-16.5 -54 Q-15.5 -41 0 -41 Q15.5 -41 16.5 -54 L20 -100" stroke-width="2.4"/><path d="M-20 -100 Q0 -103 20 -100" stroke-width="1.6"/><path d="M0 -41 V-4 M-17 0 Q0 -6 17 0" stroke-width="2.4"/>'
+            '<path d="M-4 -24 Q0 -27 4 -24" stroke-width="2"/><path d="M-15.5 -92 L-12.6 -58" stroke="#fffaf1" stroke-width="2.6"/>',
+        back='<path d="M-20 -100 L-16.5 -54 Q-15.5 -41 0 -41 Q15.5 -41 16.5 -54 L20 -100Z" fill="#e7f1fb" opacity=".35"/>',
+        inner='M-18.4 -98 L-15 -54.5 Q-14.2 -43 0 -43 Q14.2 -43 15 -54.5 L18.4 -98Z', bottom=-43, top=-92, rim=(-100, 20)),
     'mug': dict(   # a clear glass mug, for hot drinks
         out='<path d="M-26 -78 L26 -78 L23 -5 Q0 1 -23 -5Z" stroke-width="2.4"/><path d="M25.6 -66 Q42 -65 42 -46 Q42 -28 24.2 -26" stroke-width="2.4"/>'
             '<path d="M-21.6 -6 H21.6" stroke-width="1.4"/><path d="M-20 -68 L-18.6 -18" stroke="#fffaf1" stroke-width="2.6"/>',
@@ -531,7 +536,7 @@ def foam_on(kind, color='#fff8e6'):
 def bubbles_in(kind, top, cls='bub'):
     """Little bubbles rising through the drink (they loop on their own)."""
     g = GLASS[kind]
-    hw = {'highball': 15, 'flute': 6, 'coupe': 16, 'rocks': 22, 'martini': 12, 'copper-mug': 22, 'wine': 16, 'mug': 18, 'julep-cup': 16, 'hurricane': 12}[kind]
+    hw = {'highball': 15, 'flute': 6, 'coupe': 16, 'rocks': 22, 'martini': 12, 'copper-mug': 22, 'wine': 16, 'mug': 18, 'julep-cup': 16, 'hurricane': 12, 'buena-vista': 14}[kind]
     out = ''
     for i, (fx, fy) in enumerate(((-.7, .15), (.1, .55), (.6, .3), (-.3, .8), (.35, .9), (-.55, .45))):
         x, y = fx * hw, max(g['bottom'] - (g['bottom'] - top) * fy * .6 - 3, top + 36)
