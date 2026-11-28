@@ -8,6 +8,7 @@
 # Claude's, OK'd by Philip with the rest ("Looks good. Go!", Nov 27): the recipes and keeping times, the cards' "In our..." lines, the demerara and passion fruit lines, the callout.
 # Nov 27, later: Philip's grenadine (POM, white sugar, ¼ tsp orange-blossom water, not optional, and 1 tbsp pomegranate molasses); the method warms the molasses in with the juice.
 # Nov 27, later still: Philip's honey line ("let's" fixed to "lets"), the grenadine lines moved under its card, and his same-method lines under the honey-ginger;
+# Nov 27: "That's the Honey-Ginger syrup." before them (Philip).
 # Claude's, OK'd by Philip ("Go!"): the end of the blueberry line ("Simmer the blueberries...") and "Cinnamon? Rosemary? Jalapeño? You guessed it: same method."
 
 Cocktail Basics and How-To's: Homemade Syrups.
@@ -89,6 +90,7 @@ Keeps: about two weeks in the fridge
 In our
 Penicillin
 . (No time? For one drink, use ½ oz honey syrup and ¼ oz fresh ginger juice.)
+That's the Honey-Ginger syrup.
 Want a raspberry syrup? Same method.
 Simmer the raspberries with sugar and water, let it cool, and strain.
 Want a BLUEBERRY syrup? Same method! Simmer the blueberries with sugar and water, let it cool, and strain.
