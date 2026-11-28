@@ -7,6 +7,7 @@
 # the shake-or-stir distinction). Its three illustrations are the ones he asked for: a shaker OR a mixing glass on Phil's chalkboard;
 # a shaker shaking and a mixing glass stirring, the ice melting and the level rising; and stir until cold, then stir longer.
 # Claude's: the Keep exploring links. Typography only: straight apostrophes, as on the rest of the site.
+# Nov 27 2026: the ice tip ("One more thing..."), Claude's, moved here from the All About Ice door Philip cut; Philip said yes to adding it.
 
 Cocktail Basics and How-To's: Shaken or ***Stirred?***
 The Short Version
@@ -37,6 +38,7 @@ For a stirred drink, it usually means stirring longer than you think.
 Fill your mixing glass with ice and stir until the drink is good and cold. Then, stir longer!
 *And taste it along the way.*
 Because shaken or stirred, dilution is how all those strong individual ingredients start tasting like one great drink.
+One more thing: if a drink goes over ice, fill the glass. A full glass of ice keeps it cold, and ends up less watery than a few lonely cubes.
 Keep exploring
 → The Golden Ratio
 → The Cocktail Menu
