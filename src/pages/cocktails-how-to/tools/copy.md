@@ -6,6 +6,7 @@
 # a Hawthorne strainer, ideally a mixing glass (a pint glass in a pinch), a decent shaker tin, "and that's pretty much it".
 # Claude's, to check: everything else, including the two-tin advice.
 # Nov 27, later: Philip added the citrus squeezer (the card's words are Claude's) and a Cocktail Kingdom link for each of the other five (his links).
+# Nov 28: no "We recommend Cocktail Kingdom's." on the bar spoon (Philip: the link says it).
 # Nov 27: no "it has to be fresh" (Philip: pasteurized juice is fine, as long as it's real juice and not some sweetened mess; the squeezer card's note is his: "No squeezer? Bottled juice works fine. Just look for a good, pasteurized option!").
 
 Cocktail Basics and How-To's: The Tools You Actually Need.
@@ -22,7 +23,7 @@ the Golden Ratio
 Shop jiggers at Cocktail Kingdom →
 Cocktail Basics · Tools
 A Good Bar Spoon
-Look for: a long one, with a twisted handle and a little weight on the end. We recommend Cocktail Kingdom's.
+Look for: a long one, with a twisted handle and a little weight on the end.
 Why: It spins smoothly around the glass, so you can stir a drink good and cold without splashing it everywhere.
 Shop bar spoons at Cocktail Kingdom →
 Cocktail Basics · Tools
