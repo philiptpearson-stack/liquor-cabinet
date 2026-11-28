@@ -12,7 +12,8 @@ Toronto
 Makes − 1 + drink
 2 oz rye whiskey
 ¼ oz Fernet-Branca
-¼ oz simple syrup
+¼ oz
+simple syrup
 2 dashes Angostura bitters
 **Glass:** coupe
 **Garnish:** an orange twist
@@ -30,7 +31,8 @@ Toronto
 Makes − 1 + drink
 2 oz rye whiskey
 ¼ oz Fernet-Branca
-¼ oz simple syrup
+¼ oz
+simple syrup
 2 dashes Angostura bitters
 **Glass:** coupe
 **Garnish:** an orange twist

@@ -11,7 +11,8 @@ The Cocktail Menu · Classics
 French 75
 Makes − 1 + drink
 1 oz gin
-½ oz simple syrup
+½ oz
+simple syrup
 ½ oz lemon juice
 3 oz Champagne, or another dry sparkling wine
 **Glass:** Champagne flute
@@ -25,7 +26,8 @@ The Cocktail Menu · Classics
 French 75
 Makes − 1 + drink
 1 oz gin
-½ oz simple syrup
+½ oz
+simple syrup
 ½ oz lemon juice
 3 oz Champagne, or another dry sparkling wine
 **Glass:** Champagne flute

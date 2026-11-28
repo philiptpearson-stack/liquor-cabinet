@@ -11,7 +11,8 @@ The Cocktail Menu · Classics
 Bee's Knees
 Makes − 1 + drink
 2 oz gin
-1 oz honey syrup
+1 oz
+honey syrup
 1 oz lemon juice
 **Glass:** coupe
 **Garnish:** lemon twist
@@ -26,7 +27,8 @@ The Cocktail Menu · Classics
 Bee's Knees
 Makes − 1 + drink
 2 oz gin
-1 oz honey syrup
+1 oz
+honey syrup
 1 oz lemon juice
 **Glass:** coupe
 **Garnish:** lemon twist

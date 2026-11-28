@@ -11,7 +11,8 @@ The Cocktail Menu · Classics
 Mint Julep
 Makes − 1 + drink
 2 ½ oz bourbon
-½ oz simple syrup
+½ oz
+simple syrup
 8 mint leaves
 **Glass:** julep cup (or a rocks glass), packed with crushed ice
 **Garnish:** a big bouquet of mint
@@ -25,7 +26,8 @@ The Cocktail Menu · Classics
 Mint Julep
 Makes − 1 + drink
 2 ½ oz bourbon
-½ oz simple syrup
+½ oz
+simple syrup
 8 mint leaves
 **Glass:** julep cup (or a rocks glass), packed with crushed ice
 **Garnish:** a big bouquet of mint

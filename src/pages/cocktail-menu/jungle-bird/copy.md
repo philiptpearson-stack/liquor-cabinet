@@ -14,9 +14,13 @@ Makes − 1 + drink
 ¾ oz Campari
 1 ½ oz pineapple juice
 ½ oz lime juice
-½ oz demerara syrup
+½ oz
+demerara syrup
 **Glass:** rocks, over ice
 **Garnish:** a pineapple wedge
+Demerara syrup: the recipe's on our
+syrups page
+.
 Campari takes a tropical vacation!
 This little Malaysian ditty from the 1970s is surprisingly delightful.
 The Campari is the secret.
@@ -30,9 +34,13 @@ Makes − 1 + drink
 ¾ oz Campari
 1 ½ oz pineapple juice
 ½ oz lime juice
-½ oz demerara syrup
+½ oz
+demerara syrup
 **Glass:** rocks, over ice
 **Garnish:** a pineapple wedge
+Demerara syrup: the recipe's on our
+syrups page
+.
 **Combine ingredients.** Add the rum, Campari, pineapple juice, lime juice and demerara syrup to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Pour it all in.** Pour everything, ice and all, into a rocks glass. The drink is already chilling on that ice.

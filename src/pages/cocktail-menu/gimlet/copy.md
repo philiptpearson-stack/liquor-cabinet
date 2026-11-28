@@ -12,7 +12,8 @@ Gimlet
 Makes − 1 + drink
 2 oz gin
 1 oz lime juice
-1 oz simple syrup
+1 oz
+simple syrup
 **Glass:** coupe
 **Garnish:** lime wheel
 “A real gimlet is half gin and half Rose's Lime Juice and nothing else.”
@@ -25,7 +26,8 @@ Gimlet
 Makes − 1 + drink
 2 oz gin
 1 oz lime juice
-1 oz simple syrup
+1 oz
+simple syrup
 **Glass:** coupe
 **Garnish:** lime wheel
 **Combine ingredients.** Add the gin, lime juice and simple syrup to your shaker.

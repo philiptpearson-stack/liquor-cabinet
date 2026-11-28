@@ -11,7 +11,8 @@ The Cocktail Menu · Modern Variations
 Lemon Drop
 Makes − 1 + drink
 2 oz vodka
-1 oz simple syrup
+1 oz
+simple syrup
 1 oz lemon juice
 **Glass:** martini glass, with a sugared rim
 **Garnish:** lemon twist
@@ -28,7 +29,8 @@ The Cocktail Menu · Modern Variations
 Lemon Drop
 Makes − 1 + drink
 2 oz vodka
-1 oz simple syrup
+1 oz
+simple syrup
 1 oz lemon juice
 **Glass:** martini glass, with a sugared rim
 **Garnish:** lemon twist

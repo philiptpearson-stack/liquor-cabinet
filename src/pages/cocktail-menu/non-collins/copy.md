@@ -11,7 +11,8 @@ The Cocktail Menu · Low & No-Proof
 Non-Collins
 Makes − 1 + drink
 1 oz lemon juice
-1 oz simple syrup
+1 oz
+simple syrup
 3 oz soda water (or your favorite fizzy water)
 **Glass:** collins glass, over ice
 **Garnish:** a lemon wheel
@@ -25,7 +26,8 @@ The Cocktail Menu · Low & No-Proof
 Non-Collins
 Makes − 1 + drink
 1 oz lemon juice
-1 oz simple syrup
+1 oz
+simple syrup
 3 oz soda water (or your favorite fizzy water)
 **Glass:** collins glass, over ice
 **Garnish:** a lemon wheel

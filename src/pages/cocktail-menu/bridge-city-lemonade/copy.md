@@ -11,7 +11,8 @@ The Cocktail Menu · Low & No-Proof
 Bridge City Lemonade
 Makes − 1 + drink
 1 oz lemon juice
-1 oz homemade grenadine
+1 oz
+homemade grenadine
 3 oz soda water (or your favorite fizzy water)
 **Glass:** collins glass, over ice
 **Garnish:** a lemon wheel
@@ -29,7 +30,8 @@ The Cocktail Menu · Low & No-Proof
 Bridge City Lemonade
 Makes − 1 + drink
 1 oz lemon juice
-1 oz homemade grenadine
+1 oz
+homemade grenadine
 3 oz soda water (or your favorite fizzy water)
 **Glass:** collins glass, over ice
 **Garnish:** a lemon wheel

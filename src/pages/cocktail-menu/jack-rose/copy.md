@@ -12,7 +12,8 @@ Jack Rose
 Makes − 1 + drink
 2 oz applejack
 1 oz lemon juice
-1 oz homemade grenadine
+1 oz
+homemade grenadine
 **Glass:** coupe
 **Garnish:** lemon twist
 Homemade grenadine: the recipe's on our
@@ -28,7 +29,8 @@ Jack Rose
 Makes − 1 + drink
 2 oz applejack
 1 oz lemon juice
-1 oz homemade grenadine
+1 oz
+homemade grenadine
 **Glass:** coupe
 **Garnish:** lemon twist
 Homemade grenadine: the recipe's on our

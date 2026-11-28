@@ -11,10 +11,14 @@ The Cocktail Menu · Modern Variations
 Gold Rush
 Makes − 1 + drink
 2 oz bourbon
-1 oz honey syrup
+1 oz
+honey syrup
 1 oz lemon juice
 **Glass:** rocks, over one big ice cube
 **Garnish:** lemon wheel
+Honey syrup: the recipe's on our
+syrups page
+.
 It's a Bee's Knees with bourbon.
 Or, it's a Whiskey Sour with honey.
 Either way, it's yummy!
@@ -24,10 +28,14 @@ The Cocktail Menu · Modern Variations
 Gold Rush
 Makes − 1 + drink
 2 oz bourbon
-1 oz honey syrup
+1 oz
+honey syrup
 1 oz lemon juice
 **Glass:** rocks, over one big ice cube
 **Garnish:** lemon wheel
+Honey syrup: the recipe's on our
+syrups page
+.
 **Combine ingredients.** Add the bourbon, honey syrup and lemon juice to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Strain over a big cube.** Strain into a rocks glass over one large ice cube.

@@ -272,6 +272,20 @@ def h1_for(name):
 LEAD = "Here's how you make one:"   # the line before the recipe card, unless a drink has its own
 
 
+# every syrup on a recipe card links to its recipe on Homemade Syrups (Philip, Nov 27); first match wins
+SYRUP_SPOTS = [('homemade grenadine', 'grenadine'), ('grenadine', 'grenadine'), ('honey-ginger syrup', 'honey-ginger-syrup'),
+               ('honey syrup', 'honey-syrup'), ('demerara simple', 'demerara-syrup'), ('demerara syrup', 'demerara-syrup'),
+               ('passion fruit syrup', 'passion-fruit-syrup'), ('simple syrup', 'simple-syrup')]
+
+
+def syrup_linked(text):
+    for words, spot in SYRUP_SPOTS:
+        if words in text:
+            # in a span, so the card's flex row keeps "demerara simple, to taste" as one piece of text
+            return '<span>' + text.replace(words, f'<a href="@page:cocktails-how-to/syrups#{spot}">{words}</a>', 1) + '</span>'
+    return text
+
+
 def recipe_card(d):
     """The recipe at a glance: amounts (scalable), glass and garnish."""
     c = [f'  <section class="recipe-card" aria-label="Recipe: {d["name"]}">',
@@ -279,7 +293,7 @@ def recipe_card(d):
          f'    <p class="rc-name">{d["name"]}</p>',
          '    <p class="rc-serves">Makes <button class="rc-step" type="button" data-d="-1" aria-label="One fewer drink">−</button> <b class="rc-n">1</b> <button class="rc-step" type="button" data-d="1" aria-label="One more drink">+</button> <span class="rc-unit">drink</span></p>',
          '    <ul class="rc-list">']
-    c += ['      ' + amt(*r) for r in d['recipe']]
+    c += ['      ' + amt(r[0], r[1], syrup_linked(r[2])) for r in d['recipe']]
     gl, gn = d['glass_line']
     c += ['    </ul>', f'    <p class="rc-glass"><b>Glass:</b> {gl}<br><b>Garnish:</b> {gn}</p>']
     if d.get('note'):   # one note, or a few (the Pink Lady: the grenadine, then the egg white)

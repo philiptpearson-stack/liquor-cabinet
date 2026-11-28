@@ -12,7 +12,8 @@ Sidecar
 Makes − 1 + drink
 2 oz cognac (or another brandy)
 ½ oz orange liqueur
-½ oz simple syrup
+½ oz
+simple syrup
 1 oz lemon juice
 **Glass:** coupe, with a sugared rim
 **Garnish:** orange twist
@@ -24,7 +25,8 @@ Sidecar
 Makes − 1 + drink
 2 oz cognac (or another brandy)
 ½ oz orange liqueur
-½ oz simple syrup
+½ oz
+simple syrup
 1 oz lemon juice
 **Glass:** coupe, with a sugared rim
 **Garnish:** orange twist

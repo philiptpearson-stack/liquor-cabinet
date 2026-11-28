@@ -12,7 +12,8 @@ Hurricane
 Makes − 1 + drink
 4 oz dark rum
 2 oz lemon juice
-2 oz passion fruit syrup
+2 oz
+passion fruit syrup
 **Glass:** hurricane glass, over ice
 **Garnish:** an orange slice and a cherry
 Can't find passion fruit syrup? Make your own: the recipe's on our
@@ -31,7 +32,8 @@ Hurricane
 Makes − 1 + drink
 4 oz dark rum
 2 oz lemon juice
-2 oz passion fruit syrup
+2 oz
+passion fruit syrup
 **Glass:** hurricane glass, over ice
 **Garnish:** an orange slice and a cherry
 Can't find passion fruit syrup? Make your own: the recipe's on our

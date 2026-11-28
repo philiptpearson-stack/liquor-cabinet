@@ -12,7 +12,8 @@ Moscow Mule
 Makes − 1 + drink
 1 ½ oz vodka
 ¾ oz lime juice
-¾ oz simple syrup
+¾ oz
+simple syrup
 4 oz ginger beer
 **Glass:** copper mug, over ice
 **Garnish:** lime wedge
@@ -27,7 +28,8 @@ Moscow Mule
 Makes − 1 + drink
 1 ½ oz vodka
 ¾ oz lime juice
-¾ oz simple syrup
+¾ oz
+simple syrup
 4 oz ginger beer
 **Glass:** copper mug, over ice
 **Garnish:** lime wedge

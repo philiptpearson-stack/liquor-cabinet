@@ -14,8 +14,8 @@ D = REPO / 'src/pages/cocktails-how-to/syrups'
 (D / 'scenes').mkdir(parents=True, exist_ok=True)
 
 # the syrups' colors, as the drink pages pour them (menu_art.ING)
-SYRUPS = [('simple', '#f3e9c4'), ('demerara', '#d9a65a'), ('honey', '#e9b949'), ('honey ginger', '#e2b452'),
-          ('grenadine', '#b3202a'), ('passion fruit', '#f0a83c'), ('orgeat', '#f0e3c8')]
+SYRUPS = [('simple', '#f3e9c4'), ('demerara', '#d9a65a'), ('honey', '#e9b949'),   # in the page's order (Philip, Nov 27: simplest first; no orgeat)
+          ('passion fruit', '#f0a83c'), ('grenadine', '#b3202a'), ('honey ginger', '#e2b452')]
 
 
 def syrup_bottle(word, color):
@@ -58,14 +58,14 @@ tiles = lines(''.join(f'<path d="M{x} 20 V178"/>' for x in range(30, 190, 32)) +
 counter = lines('<path d="M0 178 H400"/>', boil=False)
 shelf = (wash('<path d="M196 100 H364 V107 H196Z" fill="#9a6a4c"/>')
          + lines('<path d="M196 100 H364 V107 H196Z" stroke-width="1.8"/><path d="M208 107 L208 120 L222 107 M352 107 L352 120 L338 107" stroke-width="1.8"/>', boil=False))
-top_row = ''.join(at(x, 100, syrup_bottle(w, c), 1.25) for x, (w, c) in zip((217, 257, 297, 338), SYRUPS[:4]))
-bottom_row = ''.join(at(x, 178, syrup_bottle(w, c), 1.35) for x, (w, c) in zip((236, 287, 337), SYRUPS[4:]))
+top_row = ''.join(at(x, 100, syrup_bottle(w, c), 1.3) for x, (w, c) in zip((224, 280, 336), SYRUPS[:3]))
+bottom_row = ''.join(at(x, 178, syrup_bottle(w, c), 1.35) for x, (w, c) in zip((236, 287, 337), SYRUPS[3:]))
 hero = (wall + tiles + counter + shelf + top_row + bottom_row
         + at(108, 171, pot(), 1.15) + at(178, 178, sugar_bag(), 1.1)
         + steam(108, 128, 1.4)
         + sparkle(62, 48, 6, 'twinkle') + sparkle(176, 66, 5, 'twinkle d2') + sparkle(280, 40, 6, 'twinkle d3'))
 label = ('A pot of syrup steaming on the stove, a wooden spoon stirring it, and a bag of sugar beside it. '
-         'On the shelf and the counter, seven bottles of homemade syrup: simple, demerara, honey, honey ginger, grenadine, passion fruit and orgeat.')
+         'On the shelf and the counter, six bottles of homemade syrup: simple, demerara, honey, passion fruit, grenadine and honey ginger.')
 (D / 'scenes' / 'kitchen.svg').write_text(svg_view(hero, label, '30 20 340 196') + '\n')
 
 CSS = [

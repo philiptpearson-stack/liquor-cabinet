@@ -12,7 +12,8 @@ Paloma
 Makes − 1 + drink
 2 oz tequila
 ¾ oz lime juice
-¾ oz simple syrup
+¾ oz
+simple syrup
 1 pinch salt
 4 oz grapefruit soda
 **Glass:** highball, over ice
@@ -27,7 +28,8 @@ Paloma
 Makes − 1 + drink
 2 oz tequila
 ¾ oz lime juice
-¾ oz simple syrup
+¾ oz
+simple syrup
 1 pinch salt
 4 oz grapefruit soda
 **Glass:** highball, over ice

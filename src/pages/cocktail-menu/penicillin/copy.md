@@ -12,7 +12,8 @@ Penicillin
 Makes − 1 + drink
 1 ½ oz blended Scotch
 ¾ oz lemon juice
-¾ oz honey-ginger syrup
+¾ oz
+honey-ginger syrup
 ¼ oz Islay Scotch, to float
 **Glass:** rocks, over one big ice cube
 **Garnish:** candied ginger
@@ -28,7 +29,8 @@ Penicillin
 Makes − 1 + drink
 1 ½ oz blended Scotch
 ¾ oz lemon juice
-¾ oz honey-ginger syrup
+¾ oz
+honey-ginger syrup
 ¼ oz Islay Scotch, to float
 **Glass:** rocks, over one big ice cube
 **Garnish:** candied ginger

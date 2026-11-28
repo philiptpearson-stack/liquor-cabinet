@@ -12,7 +12,8 @@ Tom Collins
 Makes − 1 + drink
 2 oz gin
 1 oz lemon juice
-1 oz simple syrup
+1 oz
+simple syrup
 2 oz soda water
 **Glass:** highball, over ice
 **Garnish:** lemon wheel and a cherry
@@ -28,7 +29,8 @@ Tom Collins
 Makes − 1 + drink
 2 oz gin
 1 oz lemon juice
-1 oz simple syrup
+1 oz
+simple syrup
 2 oz soda water
 **Glass:** highball, over ice
 **Garnish:** lemon wheel and a cherry

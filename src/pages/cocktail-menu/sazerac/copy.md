@@ -11,7 +11,9 @@ The Cocktail Menu · Classics
 Sazerac
 Makes − 1 + drink
 2 oz rye whiskey
-¼ oz–½ oz simple syrup, to taste
+¼ oz–½ oz
+simple syrup
+, to taste
 3 dashes Peychaud's bitters
 ¼ oz absinthe, to rinse the glass
 **Glass:** chilled rocks glass, no ice
@@ -27,7 +29,9 @@ The Cocktail Menu · Classics
 Sazerac
 Makes − 1 + drink
 2 oz rye whiskey
-¼ oz–½ oz simple syrup, to taste
+¼ oz–½ oz
+simple syrup
+, to taste
 3 dashes Peychaud's bitters
 ¼ oz absinthe, to rinse the glass
 **Glass:** chilled rocks glass, no ice

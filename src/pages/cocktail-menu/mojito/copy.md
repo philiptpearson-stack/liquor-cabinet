@@ -12,7 +12,8 @@ Mojito
 Makes − 1 + drink
 2 oz white rum
 1 oz lime juice
-1 oz simple syrup
+1 oz
+simple syrup
 8 mint leaves
 2 oz soda water
 **Glass:** highball, over ice
@@ -30,7 +31,8 @@ Mojito
 Makes − 1 + drink
 2 oz white rum
 1 oz lime juice
-1 oz simple syrup
+1 oz
+simple syrup
 8 mint leaves
 2 oz soda water
 **Glass:** highball, over ice

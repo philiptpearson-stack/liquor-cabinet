@@ -11,7 +11,8 @@ The Cocktail Menu · Low & No-Proof
 Ruby Slipper
 Makes − 1 + drink
 1 oz lime juice
-1 oz simple syrup
+1 oz
+simple syrup
 1 oz cranberry juice
 3 oz 7UP
 **Glass:** cocktail glass
@@ -25,7 +26,8 @@ The Cocktail Menu · Low & No-Proof
 Ruby Slipper
 Makes − 1 + drink
 1 oz lime juice
-1 oz simple syrup
+1 oz
+simple syrup
 1 oz cranberry juice
 3 oz 7UP
 **Glass:** cocktail glass

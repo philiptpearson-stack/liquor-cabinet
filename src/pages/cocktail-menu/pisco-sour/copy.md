@@ -12,7 +12,8 @@ Pisco Sour
 Makes − 1 + drink
 2 oz pisco
 1 oz lime juice
-1 oz simple syrup
+1 oz
+simple syrup
 1 egg white
 3 drops Angostura bitters, on top
 **Glass:** coupe
@@ -28,7 +29,8 @@ Pisco Sour
 Makes − 1 + drink
 2 oz pisco
 1 oz lime juice
-1 oz simple syrup
+1 oz
+simple syrup
 1 egg white
 3 drops Angostura bitters, on top
 **Glass:** coupe

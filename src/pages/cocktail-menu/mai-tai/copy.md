@@ -14,9 +14,11 @@ Makes − 1 + drink
 1 oz lime juice
 ½ oz orange liqueur (orange curaçao)
 ½ oz orgeat (almond syrup)
-¼ oz simple syrup
+¼ oz
+simple syrup
 **Glass:** rocks, over crushed ice
 **Garnish:** mint sprig and a lime wedge
+Orgeat: grab a bottle at a good liquor store. Look for one made with real almonds.
 Turns out, it's not that big pint of pineapple juice and grenadine people used to chug in the '90s.
 First, it was Trader Vic's signature drink!
 (In the 1940s.)
@@ -31,9 +33,11 @@ Makes − 1 + drink
 1 oz lime juice
 ½ oz orange liqueur (orange curaçao)
 ½ oz orgeat (almond syrup)
-¼ oz simple syrup
+¼ oz
+simple syrup
 **Glass:** rocks, over crushed ice
 **Garnish:** mint sprig and a lime wedge
+Orgeat: grab a bottle at a good liquor store. Look for one made with real almonds.
 **Combine ingredients.** Add the rum, lime juice, orange liqueur, orgeat and simple syrup to your shaker.
 **Shake.** Add crushed ice (or cubes) and shake hard.
 **Pour it all in.** Pour everything, ice and all, into a rocks glass. Top it up with more crushed ice if it needs it.

@@ -11,7 +11,8 @@ The Cocktail Menu · Classics
 Whiskey Sour
 Makes − 1 + drink
 2 oz bourbon
-1 oz simple syrup
+1 oz
+simple syrup
 1 oz lemon juice
 1 egg white
 **Glass:** coupe
@@ -31,7 +32,8 @@ The Cocktail Menu · Classics
 Whiskey Sour
 Makes − 1 + drink
 2 oz bourbon
-1 oz simple syrup
+1 oz
+simple syrup
 1 oz lemon juice
 1 egg white
 **Glass:** coupe

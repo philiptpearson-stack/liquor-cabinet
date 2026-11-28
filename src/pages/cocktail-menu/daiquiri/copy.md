@@ -11,7 +11,8 @@ The Cocktail Menu · Classics
 Daiquiri
 Makes − 1 + drink
 2 oz white rum
-1 oz simple syrup
+1 oz
+simple syrup
 1 oz lime juice
 **Glass:** coupe
 **Garnish:** lime wheel
@@ -25,7 +26,8 @@ The Cocktail Menu · Classics
 Daiquiri
 Makes − 1 + drink
 2 oz white rum
-1 oz simple syrup
+1 oz
+simple syrup
 1 oz lime juice
 **Glass:** coupe
 **Garnish:** lime wheel

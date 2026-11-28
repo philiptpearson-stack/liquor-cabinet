@@ -12,7 +12,8 @@ Mamie Taylor
 Makes − 1 + drink
 1 ½ oz blended Scotch
 ¾ oz lime juice
-¾ oz simple syrup
+¾ oz
+simple syrup
 4 oz ginger beer
 **Glass:** highball, over ice
 **Garnish:** lime wheel
@@ -28,7 +29,8 @@ Mamie Taylor
 Makes − 1 + drink
 1 ½ oz blended Scotch
 ¾ oz lime juice
-¾ oz simple syrup
+¾ oz
+simple syrup
 4 oz ginger beer
 **Glass:** highball, over ice
 **Garnish:** lime wheel

@@ -12,7 +12,8 @@ Pink Lady
 Makes − 1 + drink
 1 ½ oz gin
 ½ oz applejack (apple brandy)
-1 oz homemade grenadine
+1 oz
+homemade grenadine
 1 oz lemon juice
 1 egg white
 **Glass:** coupe
@@ -32,7 +33,8 @@ Pink Lady
 Makes − 1 + drink
 1 ½ oz gin
 ½ oz applejack (apple brandy)
-1 oz homemade grenadine
+1 oz
+homemade grenadine
 1 oz lemon juice
 1 egg white
 **Glass:** coupe

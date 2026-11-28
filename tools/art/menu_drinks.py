@@ -109,6 +109,7 @@ DRINKS = [
     dict(slug='gold-rush', name='Gold Rush', genre='modern-variations', glass='rocks', color='#e0a443', garnish=['lemon-wheel'], level=-42,
          recipe=[(2, 'oz', 'bourbon'), (1, 'oz', 'honey syrup'), (1, 'oz', 'lemon juice')],
          glass_line=('rocks, over one big ice cube', 'lemon wheel'),
+          note=f"Honey syrup: the recipe's on our {SYRUPS_LINK('honey-syrup')}.",   # Philip, Nov 27: the syrup notes
          punch="It's a Bee's Knees with bourbon.",
          lines=["Or, it's a Whiskey Sour with honey.",
                 "Either way, it's yummy!",
@@ -243,6 +244,7 @@ DRINKS = [
     dict(slug='old-fashioned', name='Old Fashioned', glass='rocks', color='#b5601f', garnish=['orange-peel'],
          recipe=[(2, 'oz', 'bourbon or rye'), ((.25, .5), 'oz', 'demerara simple, to taste'), (4, 'dash', 'Angostura bitters'), (2, 'dash', 'orange bitters')],
          glass_line=('rocks, over one big ice cube', 'orange peel'),
+          note=f"Demerara simple: the recipe's on our {SYRUPS_LINK('demerara-syrup')}.",   # Philip, Nov 27
          punch="<strong>It's what the word Cocktail <em>used</em> to mean!</strong>",
          lines=['In 1806, a New York newspaper defined a “cock-tail” like this:',
                 ('quote', '“A stimulating liquor, composed of spirits of any kind, sugar, water, and bitters.”',
@@ -493,6 +495,7 @@ DRINKS = [
          recipe=[(2, 'oz', 'aged rum (Jamaican, if you can find it)'), (1, 'oz', 'lime juice'), (.5, 'oz', 'orange liqueur (orange curaçao)'),
                  (.5, 'oz', 'orgeat (almond syrup)'), (.25, 'oz', 'simple syrup')],
          glass_line=('rocks, over crushed ice', 'mint sprig and a lime wedge'),
+          note="Orgeat: grab a bottle at a good liquor store. Look for one made with real almonds.",   # Nov 27: not on the syrups page (Philip: nobody makes it from scratch)
          punch="Turns out, it's not that big pint of pineapple juice and grenadine people used to chug in the '90s.",
          lines=["First, it was Trader Vic's signature drink!",
                 '(In the 1940s.)',
@@ -949,6 +952,7 @@ DRINKS = [
     dict(slug='jungle-bird', name='Jungle Bird', genre='tiki-and-tropical', glass='rocks', color='#c5482e', garnish=['pineapple'], ice='cubes',   # the shaker's ice, poured in
          recipe=[(1.5, 'oz', 'dark rum (blackstrap, if you can find it)'), (.75, 'oz', 'Campari'), (1.5, 'oz', 'pineapple juice'), (.5, 'oz', 'lime juice'), (.5, 'oz', 'demerara syrup')],
          glass_line=('rocks, over ice', 'a pineapple wedge'),
+          note=f"Demerara syrup: the recipe's on our {SYRUPS_LINK('demerara-syrup')}.",   # Philip, Nov 27
          punch='Campari takes a tropical vacation!',
          lines=['This little Malaysian ditty from the 1970s is surprisingly delightful.',
                 'The Campari is the secret.',
