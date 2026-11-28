@@ -5,6 +5,7 @@
 # Nov 27 2026: CLAUDE'S DRAFT, from Philip's list in chat: a jigger with quarter-ounce lines, a good bar spoon (Cocktail Kingdom),
 # a Hawthorne strainer, ideally a mixing glass (a pint glass in a pinch), a decent shaker tin, "and that's pretty much it".
 # Claude's, to check: everything else, including the two-tin advice.
+# Nov 27, later: Philip added the citrus squeezer (the card's words are Claude's) and a Cocktail Kingdom link for each of the other five (his links).
 
 Cocktail Basics and How-To's: The Tools You Actually Need.
 Walk into any kitchen store, and you'll find a whole wall of bar gadgets.
@@ -17,23 +18,32 @@ Why: Every recipe on our menu is measured to the quarter ounce. Eyeball it, and 
 It's how you nail
 the Golden Ratio
 .
+Shop jiggers at Cocktail Kingdom →
 Cocktail Basics · Tools
 A Good Bar Spoon
 Look for: a long one, with a twisted handle and a little weight on the end. We recommend Cocktail Kingdom's.
 Why: It spins smoothly around the glass, so you can stir a drink good and cold without splashing it everywhere.
+Shop bar spoons at Cocktail Kingdom →
 Cocktail Basics · Tools
 A Hawthorne Strainer
 Look for: the flat one with the spring around its edge.
 Why: It fits over your shaker tin or mixing glass and holds back the ice while you pour.
+Shop strainers at Cocktail Kingdom →
 Cocktail Basics · Tools
 A Mixing Glass
 Look for: a heavy one, with a spout.
 Why: It's where your stirred drinks get made: your Old Fashioneds, Manhattans and Martinis.
 No mixing glass? A regular old pint glass works fine in a pinch.
+Shop mixing glasses at Cocktail Kingdom →
 Cocktail Basics · Tools
 A Decent Shaker Tin
 Look for: a two-piece set: a big tin, and a smaller one that fits inside it.
 Why: It's where your shaken drinks get made: your Margaritas, Daiquiris and Whiskey Sours. Two tins seal tight, and come apart with one good tap.
+Shop shakers at Cocktail Kingdom →
+Cocktail Basics · Tools
+A Citrus Squeezer
+Look for: a hinged hand press, the kind you squeeze like pliers.
+Why: Most of the drinks on our menu call for fresh lemon or lime juice. And it really does need to be fresh! The bottled stuff tastes flat.
 And that's pretty much it!
 Now put them to work with our interactive cocktail menu!
 → The Cocktail Menu

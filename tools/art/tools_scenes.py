@@ -1,4 +1,4 @@
-"""Cocktail Basics and How-To's / The Tools You Actually Need: the hero (the five tools on the bar) and a drawing of each tool for its card.
+"""Cocktail Basics and How-To's / The Tools You Actually Need: the hero (the six tools on the bar) and a drawing of each tool for its card.
 
     python3 tools/art/tools_scenes.py
 
@@ -74,6 +74,16 @@ def tins():
             + at(2, -46, wash(f'<path d="{small}" fill="#d8d3cb"/>') + lines(f'<path d="{small}" stroke-width="2"/><path d="M-6 -34 L-5 -6" stroke="{SHINE}" stroke-width="2.2"/>', boil=False), 1, 7))
 
 
+def squeezer(open_deg=-26):
+    """A hinged citrus squeezer, from the side, a little open: a cup on the bottom arm, a dome on the top one, the hinge at the left."""
+    yellow = '#f2d24a'
+    low = 'M-28 -6 Q-16 6 -4 -6Z M-4 -7 L36 -5 Q39 -3.5 36 -2 L-4 -3Z'
+    up = 'M-28 -9 Q-16 -21 -4 -9Z M-4 -10 L36 -12 Q39 -10.5 36 -9 L-4 -6Z'
+    return (wash(f'<path d="{low}" fill="{yellow}"/>') + lines(f'<path d="{low}" stroke-width="1.8"/>', boil=False)
+            + f'<g transform="rotate({open_deg} -30 -7)">' + wash(f'<path d="{up}" fill="{yellow}"/>') + lines(f'<path d="{up}" stroke-width="1.8"/>', boil=False) + '</g>'
+            + wash('<circle cx="-30" cy="-7" r="3.4" fill="#c9c3b8"/>') + lines('<circle cx="-30" cy="-7" r="3.4" stroke-width="1.5"/>', boil=False))
+
+
 # ---------------------------------------------------------------- a drawing per card (120 x 120, like the hub's door icons)
 icons = {
     'tool-jigger': at(60, 112, jigger(), 1.22),
@@ -81,6 +91,7 @@ icons = {
     'tool-strainer': at(44, 62, strainer(), 1.25, -18),
     'tool-mixing-glass': at(62, 114, mixing_glass(), 1.3),
     'tool-tins': at(58, 116, tins(), 1.18),
+    'tool-squeezer': at(52, 84, squeezer(), 1.35),
 }
 (D / 'cast.svg').write_text("    <!-- The Tools You Actually Need: a drawing of each tool, for its card -->\n"
                             + ''.join(f'    <symbol id="{k}" viewBox="0 0 120 120">{v}</symbol>\n' for k, v in icons.items()))
@@ -88,13 +99,14 @@ icons = {
 # ---------------------------------------------------------------- the hero: all five on the bar
 bar = wash('<rect x="0" y="0" width="400" height="236" fill="#efe3d0"/><rect x="0" y="178" width="400" height="58" fill="#7a5340"/>') + lines('<path d="M0 178 H400"/>', boil=False)
 hero = (bar
-        + at(84, 178, tins(), 1.45)
-        + at(160, 178, mixing_glass(), 1.3)
-        + at(228, 178, jigger(), .95)
-        + at(284, 186, strainer(.42), 1.15, -6)
-        + sparkle(52, 52, 7, 'twinkle') + sparkle(222, 46, 6, 'twinkle d2') + sparkle(338, 70, 6, 'twinkle d3'))
-label = ('The five tools on the bar: a two-piece shaker tin, a mixing glass with a stirred drink and a bar spoon in it, '
-         'a jigger, and a Hawthorne strainer lying flat.')
+        + at(68, 178, tins(), 1.35)
+        + at(134, 178, mixing_glass(), 1.2)
+        + at(192, 178, jigger(), .9)
+        + at(244, 178, squeezer(), 1.1)
+        + at(312, 186, strainer(.42), .85, -6)
+        + sparkle(48, 56, 7, 'twinkle') + sparkle(214, 50, 6, 'twinkle d2') + sparkle(334, 84, 6, 'twinkle d3'))
+label = ('The six tools on the bar: a two-piece shaker tin, a mixing glass with a stirred drink and a bar spoon in it, '
+         'a jigger, a citrus squeezer, and a Hawthorne strainer lying flat.')
 (D / 'scenes' / 'bartop.svg').write_text(svg_view(hero, label, '30 20 340 196') + '\n')
 
 CSS = [
@@ -104,6 +116,7 @@ CSS = [
     '.tool-card{display:flow-root;scroll-margin-top:5rem}',
     '.tool-pic{float:right;width:5.4rem;height:5.4rem;margin:.1rem -.2rem .2rem .5rem}',
     '.tool-card .rc-glass{line-height:28px}',
+    '.tool-card .rc-note a{white-space:nowrap}',
 ]
 (D / 'page.css').write_text('\n'.join(CSS) + '\n')
 print('wrote', D / 'scenes' / 'bartop.svg', 'cast.svg and page.css')

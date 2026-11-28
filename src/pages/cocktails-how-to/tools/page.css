@@ -6,3 +6,4 @@
 .tool-card{display:flow-root;scroll-margin-top:5rem}
 .tool-pic{float:right;width:5.4rem;height:5.4rem;margin:.1rem -.2rem .2rem .5rem}
 .tool-card .rc-glass{line-height:28px}
+.tool-card .rc-note a{white-space:nowrap}
