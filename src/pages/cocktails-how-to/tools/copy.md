@@ -6,7 +6,7 @@
 # a Hawthorne strainer, ideally a mixing glass (a pint glass in a pinch), a decent shaker tin, "and that's pretty much it".
 # Claude's, to check: everything else, including the two-tin advice.
 # Nov 27, later: Philip added the citrus squeezer (the card's words are Claude's) and a Cocktail Kingdom link for each of the other five (his links).
-# Nov 27: no "it has to be fresh" (Philip: pasteurized juice is fine, as long as it's real juice and not some sweetened mess; the squeezer card's note uses his words).
+# Nov 27: no "it has to be fresh" (Philip: pasteurized juice is fine, as long as it's real juice and not some sweetened mess; the squeezer card's note is his: "No squeezer? Bottled juice works fine. Just look for a good, pasteurized option!").
 
 Cocktail Basics and How-To's: The Tools You Actually Need.
 Walk into any kitchen store, and you'll find a whole wall of bar gadgets.
@@ -45,7 +45,7 @@ Cocktail Basics · Tools
 A Citrus Squeezer
 Look for: a hinged hand press, the kind you squeeze like pliers.
 Why: Most of the drinks on our menu call for lemon or lime juice, and squeezing your own is quick, cheap and easy.
-No squeezer? Bottled juice works fine, as long as it's real juice and not some sweetened mess.
+No squeezer? Bottled juice works fine. Just look for a good, pasteurized option!
 And that's pretty much it!
 Now put them to work with our interactive cocktail menu!
 → The Cocktail Menu
