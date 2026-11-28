@@ -4,7 +4,7 @@
 # The build refuses to publish the page if its words drift from this file.
 # Nov 27 2026: CLAUDE'S DRAFT, from Philip's list in chat: a jigger with quarter-ounce lines, a good bar spoon (Cocktail Kingdom),
 # a Hawthorne strainer, ideally a mixing glass (a pint glass in a pinch), a decent shaker tin, "and that's pretty much it".
-# Claude's, to check: everything else, including the two-tin advice.
+# Claude's, OK'd by Philip with the rest ("go!", Nov 28): everything else, including the two-tin advice.
 # Nov 27, later: Philip added the citrus squeezer (the card's words are Claude's) and a Cocktail Kingdom link for each of the other five (his links).
 # Nov 28: no "We recommend Cocktail Kingdom's." on the bar spoon (Philip: the link says it).
 # Nov 27: no "it has to be fresh" (Philip: pasteurized juice is fine, as long as it's real juice and not some sweetened mess; the squeezer card's note is his: "No squeezer? Bottled juice works fine. Just look for a good, pasteurized option!").
