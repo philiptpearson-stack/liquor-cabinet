@@ -654,7 +654,7 @@ DRINKS = [
          note='Honey-ginger syrup: simmer equal parts honey and water with a few slices of fresh ginger, then strain. (Or use ½ oz honey syrup and ¼ oz fresh ginger juice.)',
          punch='Yet another Modern Classic from Milk &amp; Honey.',
          lines=['(The Gold Rush is, and the Paper Plane is too, sort of.)',
-                "This one's from 2005, and it's a Scotch-y, ginger-y Gold Rush with a smoky Scotch float."],
+                "The Penicillin is from 2005, and it's a Scotch-y, ginger-y Gold Rush with a smoky Scotch float."],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          copy_note=("Nov 17 2026: Philip's copy (Scotch capitalized, as on the recipe card) and recipe: 1½ oz blended Scotch, a Golden Ratio fit. "
                     "Facts checked (PUNCH): Sam Ross, Milk & Honey, 2005; the Gold Rush, Milk & Honey, 2000. The Paper Plane was Ross's too, made in 2008 "

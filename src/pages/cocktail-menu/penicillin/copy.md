@@ -19,7 +19,7 @@ Makes − 1 + drink
 Honey-ginger syrup: simmer equal parts honey and water with a few slices of fresh ginger, then strain. (Or use ½ oz honey syrup and ¼ oz fresh ginger juice.)
 Yet another Modern Classic from Milk & Honey.
 (The Gold Rush is, and the Paper Plane is too, sort of.)
-This one's from 2005, and it's a Scotch-y, ginger-y Gold Rush with a smoky Scotch float.
+The Penicillin is from 2005, and it's a Scotch-y, ginger-y Gold Rush with a smoky Scotch float.
 Here's how you make one:
 The Cocktail Menu · Modern Variations
 Penicillin
