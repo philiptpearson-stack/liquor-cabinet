@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 27 2026: Philip's copy ("its" for "it's", "lemon-y" lowercase: Philip OK'd) and the modern recipe (his ingredients; the amounts Claude's, Philip OK'd: 2 oz bourbon, ½ oz straight honey, ½ oz lemon, 4 oz hot water; a cinnamon stick and a clove-studded orange peel). The old toddy, sugar, hot water and spirit, is Jerry Thomas's (via Wondrich's Imbibe!); old Scotch was smoky from peat-dried malt. "And we don't expect most of you to try it..." cut (Philip). Told Philip a 1760 American homestead would more likely have used rum; the scene is the reader's, with granddad's Laphroaig, and stays. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 27 2026: Philip's copy ("its" for "it's", "lemon-y" lowercase: Philip OK'd) and the modern recipe (his ingredients; the amounts Claude's, Philip OK'd: 2 oz bourbon, ½ oz straight honey, ½ oz lemon, 4 oz hot water; a cinnamon stick and a clove-studded orange peel). The old toddy, sugar, hot water and spirit, is Jerry Thomas's (via Wondrich's Imbibe!); old Scotch was smoky from peat-dried malt. "And we don't expect most of you to try it..." cut (Philip). Second pass the same day: the punch takes "The Hot Toddy was truly, sublimely simple." (the sentence ends in the big type), "teaspoon" spelled out, no "American" on the homestead, "Here's how you make (a modern) one:" (Philip). Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Hot ***Toddy.***
 Hot Toddy Recipe
@@ -17,16 +17,16 @@ Makes − 1 + drink
 **Glass:** a warm mug
 **Garnish:** a cinnamon stick and an orange peel studded with cloves
 Long before the Toddy was lemon-y,
-And *long* before it got its delightful cinnamon stick,
+And *long* before it got its cinnamon stick,
 The Hot Toddy was truly, sublimely simple.
-Hot water, heaping tsp of white sugar, and peated whisky.
+Hot water, a heaping teaspoon of white sugar, and peated whisky.
 Now, we don't expect you to believe us.
-But if you want to know what safety might have felt like at the end of a long, *long* day working your small, American homestead in 1760...
+But if you want to know what safety might have felt like at the end of a long, *long* day working your small homestead in 1760...
 With wind whipping in the eaves and an actual *blank space* on the map just past where you live...
-Fill your kettle, get out your granddad's bottle of Laphroaig, add that tsp of white sugar (and we do mean heaping!), and sip.
+Fill your kettle, get out your granddad's bottle of Laphroaig, add that teaspoon of white sugar (and we do mean heaping!), and sip.
 Sweet. Aromatic. Nectar.
 Or, have a modern one and feel great too!
-Here's how you make one:
+Here's how you make (a modern) one:
 The Cocktail Menu · Warm & Cozy
 Hot Toddy
 Makes − 1 + drink

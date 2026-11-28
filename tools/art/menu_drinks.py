@@ -521,19 +521,19 @@ DRINKS = [
     dict(slug='hot-toddy', name='Hot Toddy', genre='warm-and-cozy', glass='mug', color='#d9a04a', garnish=['cinnamon', 'clove-orange-peel'], hot=True,
          recipe=[(2, 'oz', 'bourbon'), (.5, 'oz', 'honey (about a tablespoon; not syrup)'), (.5, 'oz', 'lemon juice'), (4, 'oz', 'hot water')],
          glass_line=('a warm mug', 'a cinnamon stick and an orange peel studded with cloves'),
-         punch=['Long before the Toddy was lemon-y,', 'And <em>long</em> before it got its delightful cinnamon stick,'],
-         lines=['The Hot Toddy was truly, sublimely simple.',
-                'Hot water, heaping tsp of white sugar, and peated whisky.',
+         punch=['Long before the Toddy was lemon-y,', 'And <em>long</em> before it got its cinnamon stick,', 'The Hot Toddy was truly, sublimely simple.'],
+         lines=['Hot water, a heaping teaspoon of white sugar, and peated whisky.',
                 "Now, we don't expect you to believe us.",
-                'But if you want to know what safety might have felt like at the end of a long, <em>long</em> day working your small, American homestead in 1760...',
+                'But if you want to know what safety might have felt like at the end of a long, <em>long</em> day working your small homestead in 1760...',
                 'With wind whipping in the eaves and an actual <em>blank space</em> on the map just past where you live...',
-                "Fill your kettle, get out your granddad's bottle of Laphroaig, add that tsp of white sugar (and we do mean heaping!), and sip.",
+                "Fill your kettle, get out your granddad's bottle of Laphroaig, add that teaspoon of white sugar (and we do mean heaping!), and sip.",
                 'Sweet. Aromatic. Nectar.',
                 'Or, have a modern one and feel great too!'],
+         lead="Here's how you make (a modern) one:",
          copy_note=("Nov 27 2026: Philip's copy (\"its\" for \"it's\", \"lemon-y\" lowercase: Philip OK'd) and the modern recipe (his ingredients; the amounts Claude's, "
                     "Philip OK'd: 2 oz bourbon, ½ oz straight honey, ½ oz lemon, 4 oz hot water; a cinnamon stick and a clove-studded orange peel). The old toddy, "
-                    "sugar, hot water and spirit, is Jerry Thomas's (via Wondrich's Imbibe!); old Scotch was smoky from peat-dried malt. \"And we don't expect most of you to try it...\" cut (Philip). Told Philip a 1760 American "
-                    "homestead would more likely have used rum; the scene is the reader's, with granddad's Laphroaig, and stays."),
+                    "sugar, hot water and spirit, is Jerry Thomas's (via Wondrich's Imbibe!); old Scotch was smoky from peat-dried malt. \"And we don't expect most of you to try it...\" cut (Philip). Second pass the same day: the punch takes \"The Hot Toddy was truly, sublimely simple.\" (the "
+                    "sentence ends in the big type), \"teaspoon\" spelled out, no \"American\" on the homestead, \"Here's how you make (a modern) one:\" (Philip)."),
          steps=[('<strong>Honey, bourbon and lemon.</strong> Add them to a warm mug.', [('pour', 'raw-honey', .5), ('pour', 'bourbon', 2), ('pour', 'lemon', .5)]),
                 ('<strong>Top with hot water.</strong> Just off the boil.', [('top', 'hot-water', 4)]),
                 ('<strong>Stir.</strong> Until the honey dissolves.', [('stir',)]),
