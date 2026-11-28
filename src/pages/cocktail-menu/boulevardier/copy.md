@@ -17,7 +17,6 @@ Makes − 1 + drink
 **Garnish:** orange peel
 Ever heard of a cocktail called Negroni?
 Well, the Boulevardier is Negroni's beefy American cousin. Same delightfully bitter formula. Just made with whiskey instead of gin.
-→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!
 Here's how you make one:
 The Cocktail Menu · Classics
 Boulevardier
@@ -31,6 +30,7 @@ Makes − 1 + drink
 **Stir.** Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into **balance.** *Dilution is part of the recipe.*)
 **Strain over a big cube.** Strain into a rocks glass over one large ice cube.
 **Garnish.** Twist an orange peel over the drink, then drop it in.
+→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!
 Keep exploring
 → Negroni
 → Manhattan

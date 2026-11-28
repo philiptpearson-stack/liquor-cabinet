@@ -17,7 +17,7 @@ Makes − 1 + drink
 **Garnish:** lemon twist
 Honey syrup is honey and hot water, half and half, stirred until smooth.
 In the 1920s, “the bee's knees” meant the very best.
-It's a Prohibition-era drink: gin, lemon and honey. A 1929 Brooklyn newspaper credited it to the Unsinkable Molly Brown. Yes, the Titanic Molly Brown. (!!!)
+It's a Prohibition-era drink: gin, lemon and honey. A 1929 Brooklyn newspaper credited it to the Unsinkable Molly Brown. Yes, the Titanic Molly Brown. (*!!!*)
 Swap the gin for bourbon and you've got a Gold Rush.
 Here's how you make one:
 The Cocktail Menu · Classics

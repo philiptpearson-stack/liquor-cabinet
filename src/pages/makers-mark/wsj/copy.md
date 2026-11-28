@@ -6,7 +6,7 @@
 # The links at the end (Keep exploring, Back) aren't in the Word doc.
 # Oct 29 2026, afternoon: Philip's chat edits on top of the doc (two rounds).
 
-The WSJ article that changed ***EVERYTHING***
+The Wall Street Journal Article that Changed ***Everything***
 On August 1, 1980, Maker's Mark became a *real* company.
 At least, that's what company founder Bill Samuels Sr. said later on.
 Because August 1st, 1980, was the day *The Wall Street Journal* ran a **front-page feature** on Maker's Mark. And nothing was the same for the company, or the Samuels family, ever again.
@@ -36,14 +36,14 @@ But *this* might be Maker's Mark's most lasting impact of all.
 Remember how, before Maker's Mark, bourbon was considered the bottom of the bottom shelf?
 Well, after 1980, they'd ***proved*** people would pay more for bourbon if it actually *tasted good.* And the rest of the bourbon industry noticed.
 ***Fast.***
-1984: Blanton's, the first bourbon sold as "single barrel"
+1984: Blanton's, the first bourbon sold as “single barrel”
 1988: Booker's, bottled straight from the barrel at full strength
 1992: Jim Beam's Small Batch Bourbon Collection: Booker's, Baker's, Basil Hayden's and Knob Creek
 1996: Woodford Reserve
 Single barrel. Small batch. Barrel proof.
 Fancy bottles.
 Distillery tours.
-So much of what we think of as "premium bourbon" today started on the trail blazed by Maker's Mark.
+So much of what we think of as “premium bourbon” today started on the trail blazed by Maker's Mark.
 By a bottle dipped in red wax.
 Keep exploring
 → The Founder's Gamble

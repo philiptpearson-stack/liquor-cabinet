@@ -14,6 +14,6 @@ Spirits 101
 Check out the Cocktail Menu
 Cocktail Basics and How-To's
 Point your camera at a bottle
-Coming soon!
+Coming soon
 *Just show me something FUN!*
 Dealer's Choice

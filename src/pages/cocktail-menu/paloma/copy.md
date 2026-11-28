@@ -19,7 +19,7 @@ Makes − 1 + drink
 **Garnish:** grapefruit wedge
 “Tequila Has Appeala with Squirt.”
 Yep.
-That's an actual Squirt ad that ran in the LA Times in 1978.
+That's an actual Squirt ad that ran in the L.A. Times in 1978.
 And while most bars today will make you a fancy version with grapefruit juice, simple syrup and club soda — if you've got a Squirt, it's a more fun drink.
 Here's how you make one:
 The Cocktail Menu · Modern Variations

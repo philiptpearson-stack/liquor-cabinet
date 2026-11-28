@@ -19,7 +19,7 @@ Makes − 1 + drink
 Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.
 The Golden Ratio in a glass.
 Two parts whiskey. One part sweetener. One part sour.
-The simple syrup balances the harshness of the whiskey; while the lemon balances out the sweet.
+The simple syrup balances the harshness of the whiskey, while the lemon balances out the sweet.
 Then there's the egg white. Some people say it's optional. To us, it's about as optional as the anchovy is optional in Caesar dressing.
 It's not.
 *But here's the really fun part:* once you learn this formula, you've learned most of the classics.

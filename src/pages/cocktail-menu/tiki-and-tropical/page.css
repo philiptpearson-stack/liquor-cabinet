@@ -7,5 +7,5 @@
 .flick{animation:flick .8s ease-in-out infinite alternate}@keyframes flick{from{transform:scaleY(.88) skewX(-4deg)}to{transform:scaleY(1.08) skewX(4deg)}}
 .steam{animation:steam 2.6s ease-in-out infinite}.steam.s1{animation-delay:-.9s}.steam.s2{animation-delay:-1.7s}
 @keyframes steam{0%{transform:translateY(4px);opacity:0}30%{opacity:.8}100%{transform:translateY(-10px);opacity:0}}
-.flow .doors .door-icon{width:104px;height:104px}
+.flow .doors .door-icon{width:104px;height:104px}.flow .doors .door.wide .door-icon{width:96px;height:96px}
 .flow .doors .door{min-height:10.5rem}

@@ -20,7 +20,7 @@ It's *one* way to approach Fernet.
 You know Fernet, right?
 Fernet-Branca?
 The massively bitter Italian bitters that bartenders order to signal to other bartenders that they, too, are bartenders.
-(It's called a “bartender's handshake”) (!!)
+(It's called a “bartender's handshake”) (*!!*)
 Well, it's...blech-y.
 But in the Toronto, it's just a little bitter in an otherwise nice Old Fashioned.
 (Still blech-y. But less so. And we love Fernet!)

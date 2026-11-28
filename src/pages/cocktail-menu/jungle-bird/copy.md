@@ -20,7 +20,7 @@ Makes − 1 + drink
 Campari takes a tropical vacation!
 This little Malaysian ditty from the 1970s is surprisingly delightful.
 The Campari is the secret.
-Italian drinking bitters happens to pair unusually well with pineapple. What can we say?
+Italian drinking bitters happen to pair unusually well with pineapple. What can we say?
 It's like pizza that way.
 Here's how you make one:
 The Cocktail Menu · Tiki & Tropical

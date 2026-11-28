@@ -17,7 +17,7 @@ Makes − 1 + drink
 **Glass:** martini glass
 **Garnish:** lime wedge
 Believe it or not, the Cosmo actually had a life before** Sex and the City made it a household name.
-It was invented in 1988 at the Odeon in Tribeca — the same bar that hosted Lorne Michaels' SNL after parties (*!!!*).
+It was invented in 1988 at the Odeon in Tribeca — the same bar that hosted Lorne Michaels' SNL after-parties (*!!!*).
 Why?
 Bartender Toby Cecchini said he wanted *to impress the waitresses.*
 We salute you, Toby.

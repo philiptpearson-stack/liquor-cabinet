@@ -477,14 +477,14 @@ def write_classics():
         '  <nav class="doors" aria-label="The Classics">'] + doors + ['  </nav>', '',
         '  <aside class="note">',   # below the drinks now (Philip, Nov 24)
         '    <p><em>New to mixing drinks?</em></p>',
-        '    <p class="go"><a href="@page:cocktails-how-to">Check out our tips and tricks page for all the cocktail basics you need →</a></p>',
+        '    <p class="go"><a href="@page:cocktails-how-to">Check out our Cocktail Basics and How-To\'s page for everything you need →</a></p>',
         '  </aside>', '',
         '  <nav class="end-doors" aria-label="Where next">',
         '    <p class="back"><a href="../index.html">← Back to the Cocktail Menu</a></p>',
         '  </nav>', '</div>', ''])
     (C / 'story.html').write_text(story)
     write_copy(C / 'copy.md', 'The Cocktail Menu / Classics', story,
-               "Nov 24 2026: \"These are the *Classics.*\" is back, leading the page like the other parts of the menu, and \"New to mixing drinks?\" moves below the drinks (Philip). Nov 6: Philip dropped \"These are the *Classics.*\". Nov 3: Philip's copy from chat: the intro (third round), and the note (it goes to Cocktails How-To; the Golden Ratio is one step of many). "
+               "Nov 24 2026: \"These are the *Classics.*\" is back, leading the page like the other parts of the menu, and \"New to mixing drinks?\" moves below the drinks (Philip). Nov 27: the note names the page the way The Bar's door does, \"Cocktail Basics and How-To's\" (Philip: one name everywhere). Nov 6: Philip dropped \"These are the *Classics.*\". Nov 3: Philip's copy from chat: the intro (third round), and the note (it goes to Cocktails How-To; the Golden Ratio is one step of many). "
                "The drink list is Philip's (his Classics, Oct 31). Claude's: \"← Back to the Cocktail Menu\".")
     (C / 'page.json').write_text(json.dumps({
         'title': 'Classics · The Cocktail Menu · The Bottle and the Bartender',
@@ -607,16 +607,16 @@ GENRE_PAGES = {
     'arcane-oddities': dict(scene=oddities_scene, svg='oddities', intro='These are the <em>Arcane Oddities.</em>', more='More oddities',
                             # Philip, Nov 17: why they're oddities
                             intro_more=["They're classics, or modern ones, but with ingredients nobody's ever heard of (and definitely should!)."],   # Philip, Nov 19; reworded Nov 24 (twice: the modern drinks came in)
-                            final_note="Nov 17 2026, revised Nov 19 and Nov 24 (when the Naked and Famous and the Black Manhattan joined): Philip's copy: \"These are the *Arcane Oddities.*\" and why. \"Tap any drink...\" is his line from Classics. \"More oddities\" is Claude's.",
+                            final_note="Nov 17 2026, revised Nov 19 and Nov 24 (when the Naked and Famous and the Black Manhattan joined): Philip's copy: \"These are the *Arcane Oddities.*\" and why. \"Tap any drink...\" is his line from Classics. Nov 27: no \"coming soon\" door (Philip); the ninth drink takes the whole row.",
                             description='The odd ones on the menu, each with its recipe and a step-by-step how-to.',
                             note="Nov 3 2026: Philip moved the Dark and Stormy here, so Arcane Oddities opened."),
-    'tiki-and-tropical': dict(scene=tiki_scene, svg='tiki', intro=None, more='More tropical drinks', css=FLICK_CSS,
+    'tiki-and-tropical': dict(scene=tiki_scene, svg='tiki', intro='These are the <em>Tiki &amp; Tropical</em> drinks.', more='More tropical drinks', css=FLICK_CSS,
                               description='Tiki classics and the national drinks of hot places, each with its recipe and a step-by-step how-to.',
                               note="Nov 10 2026: the Mai Tai opened Tiki & Tropical."),
-    'low-and-no-proof': dict(scene=lowno_scene, svg='spritz', intro=None, more='More low &amp; no-proof drinks', css=SPIN_CSS,
+    'low-and-no-proof': dict(scene=lowno_scene, svg='spritz', intro='These are the <em>Low &amp; No-Proof</em> drinks.', more='More low &amp; no-proof drinks', css=SPIN_CSS,
                              description='Aperitivo drinks and no-proof ones, light on alcohol and big on flavor, each with its recipe and a step-by-step how-to.',
                              note="Nov 10 2026: the Aperol Spritz opened Low & No-Proof. Nov 25: Philip swapped the Garibaldi, the Sherry Cobbler and the Shirley Temple for three no-proof drinks of his own, built on the formula."),
-    'warm-and-cozy': dict(scene=warm_scene, svg='warm', intro=None, more='More warm drinks', css=STEAM_CSS + '\n' + SNOW_CSS,
+    'warm-and-cozy': dict(scene=warm_scene, svg='warm', intro='These are the <em>Warm &amp; Cozy</em> drinks.', more='More warm drinks', css=STEAM_CSS + '\n' + SNOW_CSS,
                           description='Hot drinks for cold nights, each with its recipe and a step-by-step how-to.',
                           note="Nov 10 2026: the Hot Toddy opened Warm & Cozy."),
 }
@@ -633,8 +633,9 @@ def write_genre(key):
     (C / 'scenes' / f"{cfg['svg']}.svg").write_text(cfg['scene']() + '\n')
     mine = [d for d in DRINKS if genre(d) == key]
     doors = [f'    <a class="door" href="../{d["slug"]}/index.html"><svg class="door-icon" aria-hidden="true"><use href="#{d["slug"]}-icon"/></svg><span class="door-label">{d["name"]}</span></a>' for d in mine]
-    if len(mine) % 2:   # an odd number of drinks: the last spot is a promise
-        doors.append(f'    <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#{key}-icon"/></svg><span class="door-label">{cfg["more"]}</span><span class="stamp">Coming soon</span></div>')
+    if len(mine) % 2:   # an odd number of drinks: the last one takes the whole row, like the Whiskey Sour on Classics (Philip, Nov 27: no "coming soon" doors on a finished menu)
+        d = mine[-1]
+        doors[-1] = f'    <a class="door wide" href="../{d["slug"]}/index.html"><svg class="door-icon" aria-hidden="true"><use href="#{d["slug"]}-icon"/></svg><span class="door-text"><span class="door-label">{d["name"]}</span></span></a>'
     story = '\n'.join([
         f'<h1><small class="h1-lead">The Cocktail Menu:</small> {first} <span>{last}.</span></h1>', '',
         '<div class="flow">',
@@ -649,14 +650,14 @@ def write_genre(key):
     write_copy(C / 'copy.md', f'The Cocktail Menu / {name}', story,
                cfg['final_note'] if cfg.get('final_note') else cfg['note'] + (f" CLAUDE'S DRAFT, waiting on Philip: the page follows Classics (\"{html.unescape(cfg['intro']).replace('<em>', '*').replace('</em>', '*')}\"; "
                               if cfg.get('intro') else " CLAUDE'S DRAFT, waiting on Philip: the page follows Classics (") +
-               f"\"Tap any drink...\" is Philip's line from Classics), and \"{cfg['more']}\".")
+               "\"Tap any drink...\" is Philip's line from Classics). Nov 27: Philip OK'd \"These are the...\" on every part of the menu, and dropped the \"coming soon\" doors.")
     (C / 'page.json').write_text(json.dumps({
         'title': f'{name} · The Cocktail Menu · The Bottle and the Bartender',
         'description': cfg['description'],
         'label': f'The Cocktail Menu / {name}'}, indent=2, ensure_ascii=False) + '\n')
     (C / 'page.css').write_text(f'/* The Cocktail Menu / {name}: scene motion. Written by tools/art/menu_pages.py; edit it there. */\n' + TWINKLE_CSS + '\n' + BUBBLE_CSS + '\n'
                                 + (cfg['css'] + '\n' if cfg.get('css') else '') + STEAM_CSS + '\n'
-                                '.flow .doors .door-icon{width:104px;height:104px}\n.flow .doors .door{min-height:10.5rem}\n')
+                                '.flow .doors .door-icon{width:104px;height:104px}.flow .doors .door.wide .door-icon{width:96px;height:96px}\n.flow .doors .door{min-height:10.5rem}\n')
 
 
 if __name__ == '__main__':

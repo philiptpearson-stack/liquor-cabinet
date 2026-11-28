@@ -34,6 +34,8 @@ Makes − 1 + drink
 **Top with soda.** Soda water, or your favorite fizzy water, right into the shaker. Give it a gentle swirl.
 **Pour it all in.** Pour everything, ice and all, into a collins glass.
 **Garnish.** A lemon wheel.
+*Need a quick how-to on achieving balance in your at-home cocktails?*
+Click HERE.
 Keep exploring
 → Tom Collins
 → Bridge City Lemonade

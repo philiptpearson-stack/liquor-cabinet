@@ -20,10 +20,10 @@ Makes − 1 + drink
 Only took about 75 years to become an overnight sensation.
 The first known Mojito recipe was printed in Havana in 1927. By 1931, it was on the menu in Havana bars famous with American tourists.
 But it was just a cute drink in Cuba, way back then.
-And in the 50s.
-And in the 70s.
+And in the '50s.
+And in the '70s.
 It wasn't until the early 2000s that things got out of hand.
-By 2009, a San Francisco bartender was writing blog posts about coworkers who threw out the mint before the club opened. That way, when they told their customers they were out of mint, they wouldn’t even be lying.
+By 2009, a San Francisco bartender was writing blog posts about coworkers who threw out the mint before the club opened. That way, when they told their customers they were out of mint, they wouldn't even be lying.
 If you're not out of mint, here's how you make one:
 The Cocktail Menu · Modern Variations
 Mojito

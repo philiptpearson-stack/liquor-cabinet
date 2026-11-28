@@ -13,7 +13,7 @@ DRINKS = [
          glass_line=('rocks, over one big ice cube', 'orange peel'),
          punch='Ever heard of a cocktail called Negroni?',   # back in the big type (Philip, Nov 12)
          lines=["Well, the Boulevardier is Negroni's beefy American cousin. Same delightfully bitter formula. Just made with whiskey instead of gin."],
-         note_go=('→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),   # Philip, Nov 6 (its own line; The Golden Ratio's stays as it was)
+         note_go_end=('→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),   # after the steps, like every stirred drink (Philip, Nov 27)
          steps=[('<strong>Combine ingredients.</strong> Add whiskey, sweet vermouth and Campari to a mixing glass.', [('pour', 'bourbon', 2), ('pour', 'sweet-vermouth', 1), ('pour', 'campari', 1)]),
                 ('<strong>Stir.</strong> Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into <strong>balance.</strong> <em>Dilution is part of the recipe.</em>)', [('ice', 'mix'), ('stir',)]),
                 ('<strong>Strain over a big cube.</strong> Strain into a rocks glass over one large ice cube.', [('ice', 'glass'), ('strain',)]),
@@ -237,7 +237,7 @@ DRINKS = [
     dict(slug='old-fashioned', name='Old Fashioned', glass='rocks', color='#b5601f', garnish=['orange-peel'],
          recipe=[(2, 'oz', 'bourbon or rye'), ((.25, .5), 'oz', 'demerara simple, to taste'), (4, 'dash', 'Angostura bitters'), (2, 'dash', 'orange bitters')],
          glass_line=('rocks, over one big ice cube', 'orange peel'),
-         punch="<strong>It's what the word cocktail <em>used</em> to mean!</strong>",
+         punch="<strong>It's what the word Cocktail <em>used</em> to mean!</strong>",
          lines=['In 1806, a New York newspaper defined a “cock-tail” like this:',
                 ('quote', '“A stimulating liquor, composed of spirits of any kind, sugar, water, and bitters.”',
                  '— <cite>The Balance, and Columbian Repository</cite>, Hudson, New York, 1806'),
@@ -245,13 +245,13 @@ DRINKS = [
                 'Like, OLD-old.',
                 'By 1806, people had been sweetening their (harsh!) spirits with sugar and balancing them with bitters and water since the early 1700s!',
                 '<em>But remember.</em>',
-                'In those days, the word <em>cocktail</em> meant only that specific formula, and nothing else.',
+                'In those days, the word <em>Cocktail</em> meant only that specific formula, and nothing else.',
                 'If you wanted a julep, you asked for a julep.',
                 'And if you wanted a smash, a flip, a fizz, or a sling, well. You asked for that.',
                 ('scene', 'chalkboard'),
                 ("So by the 1880s, when bartenders were using all sorts of new ingredients in their cocktails — "
                  "curaçao, maraschino, and even <em>vermouth</em> (Manhattan! Martini!) — people who wanted it the way they'd always had it found a new way to order:"),
-                ('punch', '<em>“Make my cocktail the Old Fashioned way.”</em>'),
+                ('punch', '<em>“Make my Cocktail the Old Fashioned way.”</em>'),
                 'And it stuck.'],
          note_go_end=('→ Check out our Shaken or Stirred page for simple tips on balancing stirred cocktails!', 'cocktails-how-to/shaken-or-stirred'),
          scenes='old_fashioned_scenes',   # Phil, circa 1820, at the chalkboard: Julep, Smash, Flip, Fizz, Sling ≠ Cocktail (Philip, Nov 14)
@@ -270,7 +270,7 @@ DRINKS = [
          glass_line=('highball, over ice', 'grapefruit wedge'),
          punch='“Tequila Has Appeala with Squirt.”',
          lines=['Yep.',
-                "That's an actual Squirt ad that ran in the <cite>LA Times</cite> in 1978.",
+                "That's an actual Squirt ad that ran in the <cite>L.A. Times</cite> in 1978.",
                 "And while most bars today will make you a fancy version with grapefruit juice, simple syrup and club soda — if you've got a Squirt, it's a more fun drink."],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          copy_note=("Nov 17 2026: Philip's copy and recipe (¾ oz lime, ¾ oz simple; shaken and topped in the shaker like the Mamie Taylor and Moscow Mule). "
@@ -360,7 +360,7 @@ DRINKS = [
          recipe=[(1, 'oz', 'rye whiskey'), (1, 'oz', 'cognac'), (1, 'oz', 'sweet vermouth'), (.25, 'oz', 'Bénédictine'), (2, 'dash', "Peychaud's bitters"), (2, 'dash', 'Angostura bitters')],
          glass_line=('rocks, over one big ice cube', 'lemon twist'),
          punch='<em>Another</em> New Orleans Classic??',
-         lines=['Seriously, how many all time classics does one city get?',
+         lines=['How many all-time classics does one city get?',
                 "Well, here's another.",
                 "Vieux Carré was the old name for the French Quarter, and it's where Walter Bergeron created this drink in the 1930s, at the Hotel Monteleone.",
                 "It's basically a Manhattan, only <em>weirder</em>.",
@@ -380,7 +380,7 @@ DRINKS = [
          note='Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.',
          punch='The Golden Ratio in a glass.',
          lines=['Two parts whiskey. One part sweetener. One part sour.',
-                'The simple syrup balances the harshness of the whiskey; while the lemon balances out the sweet.',
+                'The simple syrup balances the harshness of the whiskey, while the lemon balances out the sweet.',
                 "Then there's the egg white. Some people say it's optional. To us, it's about as optional as the anchovy is optional in Caesar dressing.",
                 "It's not.",
                 "<em>But here's the really fun part:</em> once you learn this formula, you've learned most of the classics.",
@@ -425,10 +425,10 @@ DRINKS = [
          punch='Only took about 75 years to become an overnight sensation.',
          lines=['The first known Mojito recipe was printed in Havana in 1927. By 1931, it was on the menu in Havana bars famous with American tourists.',
                 'But it was just a cute drink in Cuba, way back then.',
-                'And in the 50s.',
-                'And in the 70s.',
+                "And in the '50s.",
+                "And in the '70s.",
                 "It wasn't until the early 2000s that things got out of hand.",
-                "By 2009, a San Francisco bartender was writing blog posts about coworkers who threw out the mint before the club opened. That way, when they told their customers they were out of mint, they wouldn’t even be lying."],
+                "By 2009, a San Francisco bartender was writing blog posts about coworkers who threw out the mint before the club opened. That way, when they told their customers they were out of mint, they wouldn't even be lying."],
          lead="If you're not out of mint, here's how you make one:",
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          copy_note=("Nov 17 2026: Philip's copy. Facts checked: first known recipe 1927, Cuba (El Arte de Hacer un Cocktail y Algo Más); on Sloppy Joe's "
@@ -446,11 +446,11 @@ DRINKS = [
          glass_line=('copper mug, over ice', 'lime wedge'),
          punch='Introducing...vodka!',
          lines=['Before 1941, vodka was a hard sell in America.',
-                "Then, Smirnoff promoter John Martin met Jack Morgan, owner of Hollywood's Cock ’n’ Bull bar, and the rest was history.",
-                'The Cock ’n’ Bull was a British-style pub on L.A.’s Sunset Strip. Jack Morgan owned it, and also sold a ginger beer under the same name.',
+                "Then, Smirnoff promoter John Martin met Jack Morgan, owner of Hollywood's Cock 'n' Bull bar, and the rest was history.",
+                "The Cock 'n' Bull was a British-style pub on L.A.'s Sunset Strip. Jack Morgan owned it, and also sold a ginger beer under the same name.",
                 'Put it in those fun copper mugs — and by 1947 the Moscow Mule was a fad drink from New York to LA.'],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 13 2026: Philip's copy (Cock ’n’ Bull spelled the same both times). Recipe and steps: built like Philip's Mamie Taylor (and El Diablo): shaken with simple syrup, topped with ginger beer "
+         copy_note=("Nov 13 2026: Philip's copy (Cock 'n' Bull spelled the same both times). Recipe and steps: built like Philip's Mamie Taylor (and El Diablo): shaken with simple syrup, topped with ginger beer "
                     "in the shaker, swirled, poured in ice and all. Facts checked (Wikipedia, from the 1948 Herald Tribune account): 1941; Jack Morgan's Cock 'n' Bull ginger beer, "
                     "John G. Martin of Heublein (Smirnoff); Martin's Polaroid photos (one left with the bar, one kept to show the next). A later account credits the bar's bartender."),
          steps=[('<strong>Combine ingredients.</strong> Add the vodka, lime juice and simple syrup to your shaker.', [('pour', 'vodka', 1.5), ('pour', 'lime', .75), ('pour', 'simple', .75)]),
@@ -465,7 +465,7 @@ DRINKS = [
          glass_line=('martini glass, with a sugared rim', 'lemon twist'),
          note='Superfine sugar sticks to the rim best.',
          punch="The QUEEN of the 1990s (at TGI Friday's)",
-         lines=["Born in San Francisco in the 70s, by the year 2000 the Lemon Drop was making its name on cheeky lists of drinks that bartenders hate to make.",
+         lines=["Born in San Francisco in the '70s, by the year 2000 the Lemon Drop was making its name on cheeky lists of drinks that bartenders hate to make.",
                 "(They didn't like having to bus the sticky glasses after the ladies had finished licking the sugar rims.)",
                 'But they had no choice.',
                 'It was ubiquitous.',
@@ -485,7 +485,7 @@ DRINKS = [
          recipe=[(2, 'oz', 'aged rum (Jamaican, if you can find it)'), (1, 'oz', 'lime juice'), (.5, 'oz', 'orange liqueur (orange curaçao)'),
                  (.5, 'oz', 'orgeat (almond syrup)'), (.25, 'oz', 'simple syrup')],
          glass_line=('rocks, over crushed ice', 'mint sprig and a lime wedge'),
-         punch="Turns out, it's not that big pint of pineapple juice and grenadine people used to chug in the 90s.",
+         punch="Turns out, it's not that big pint of pineapple juice and grenadine people used to chug in the '90s.",
          lines=["First, it was Trader Vic's signature drink!",
                 '(In the 1940s.)',
                 'And the original formulation is sublime.',
@@ -620,7 +620,7 @@ DRINKS = [
          glass_line=('coupe', 'lemon twist'),
          note='Honey syrup is honey and hot water, half and half, stirred until smooth.',
          punch="In the 1920s, “the bee's knees” meant the very best.",
-         lines=["It's a Prohibition-era drink: gin, lemon and honey. A 1929 Brooklyn newspaper credited it to the Unsinkable Molly Brown. Yes, the Titanic Molly Brown. (!!!)",
+         lines=["It's a Prohibition-era drink: gin, lemon and honey. A 1929 Brooklyn newspaper credited it to the Unsinkable Molly Brown. Yes, the Titanic Molly Brown. <span class=\"hl\">(<em>!!!</em>)</span>",
                 "Swap the gin for bourbon and you've got a Gold Rush."],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          copy_note=("Nov 12 2026: Philip's copy. Facts checked (Oxford Companion): first in print during Prohibition, credited to Margaret \"The Unsinkable Molly\" Brown "
@@ -632,7 +632,7 @@ DRINKS = [
          related=['gold-rush', 'french-75'], hero=(['honey', 'gin'], ['fruit:lemon', 'half:lemon'])),
 
     dict(slug='jack-rose', name='Jack Rose', glass='coupe', color='#e58a8a', garnish=['lemon-twist'],
-         recipe=[(2, 'oz', 'applejack'), (.75, 'oz', 'lemon juice'), (.75, 'oz', 'grenadine')],
+         recipe=[(2, 'oz', 'applejack'), (1, 'oz', 'lemon juice'), (1, 'oz', 'grenadine')],   # the Golden Ratio (Philip, Nov 27)
          glass_line=('coupe', 'lemon twist'),
          punch="In Ernest Hemingway's <cite>The Sun Also Rises</cite> (1926), Jake has one as he waits for Brett at the Hôtel Crillon.",
          lines=[('quote', '“About quarter to six I went down to the bar and had a Jack Rose with George the barman.”', ''),
@@ -641,7 +641,7 @@ DRINKS = [
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          copy_note=("Nov 12 2026: Philip's copy. The quote checked against the 1926 text (Project Gutenberg; public domain): \"...so about quarter to six I went down "
                     "to the bar and had a Jack Rose with George the barman.\" The recipe and steps are Claude's."),
-         steps=[('<strong>Combine ingredients.</strong> Add the applejack, lemon juice and grenadine to your shaker.', [('pour', 'applejack', 2), ('pour', 'lemon', .75), ('pour', 'grenadine', .75)]),
+         steps=[('<strong>Combine ingredients.</strong> Add the applejack, lemon juice and grenadine to your shaker.', [('pour', 'applejack', 2), ('pour', 'lemon', 1), ('pour', 'grenadine', 1)]),
                 ('<strong>Shake.</strong> Add ice and shake hard, until frosty cold.', [('ice', 'mix'), ('shake',)]),
                 ('<strong>Strain.</strong> Strain into a chilled coupe.', [('strain',)]),
                 ('<strong>Garnish.</strong> A lemon twist.', [('garnish',)])],
@@ -704,7 +704,7 @@ DRINKS = [
          recipe=[(1.5, 'oz', 'citrus vodka'), (.75, 'oz', 'orange liqueur'), (.75, 'oz', 'lime juice'), (.5, 'oz', 'cranberry juice')],
          glass_line=('martini glass', 'lime wedge'),
          punch='Believe it or not, the Cosmo actually had a life <strong class="hl">before</strong> <cite>Sex and the City</cite> made it a household name.',
-         lines=["It was invented in 1988 at the Odeon in Tribeca — the same bar that hosted Lorne Michaels' SNL after parties (<em>!!!</em>).",
+         lines=["It was invented in 1988 at the Odeon in Tribeca — the same bar that hosted Lorne Michaels' SNL after-parties <span class=\"hl\">(<em>!!!</em>)</span>.",
                 'Why?',
                 'Bartender Toby Cecchini said he wanted <em>to impress the waitresses.</em>',
                 'We salute you, Toby.'],
@@ -798,6 +798,7 @@ DRINKS = [
                 'The drink is equal parts mezcal, Aperol, yellow Chartreuse, and lime.',
                 'Simó describes it as “a bastard love child of the Paper Plane and the Last Word.”',
                 "He's nothing if not a good quote."],
+         gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          copy_note=("Nov 24 2026: Philip added it to Arcane Oddities (with the Black Manhattan and the Toronto, in place of the Ramos Gin Fizz and the Hanky Panky). "
                     "Philip's copy, the same night (Simó and Death & Co spelled right). Quotes: \"It's my sluttiest recipe ever.\" (VinePair, on how far the drink has spread); \"a bastard love child of the Paper Plane and the Last Word\" (Chilled magazine, Philip's source; InsideHook has \"the bastard love child of a classic Last Word and the Paper Plane, conceived in the mountains of Oaxaca\"). Facts checked (Difford's): Joaquín Simó, 2011, best known from Death & Co; equal parts mezcal, "
                     "yellow Chartreuse, aperitivo and lime, shaken, a coupe; the garnish optional."),
@@ -834,7 +835,7 @@ DRINKS = [
          lines=['You know Fernet, right?',
                 'Fernet-Branca?',
                 'The massively bitter Italian bitters that bartenders order to signal to other bartenders that they, too, are bartenders.',
-                '(It\'s called a “bartender\'s handshake”) (!!)',
+                '(It\'s called a “bartender\'s handshake”) <span class="hl">(<em>!!</em>)</span>',
                 "Well, it's...blech-y.",
                 "But in the Toronto, it's just a little bitter in an otherwise nice Old Fashioned.",
                 '(Still blech-y. But less so. And we love Fernet!)'],
@@ -942,7 +943,7 @@ DRINKS = [
          punch='Campari takes a tropical vacation!',
          lines=['This little Malaysian ditty from the 1970s is surprisingly delightful.',
                 'The Campari is the secret.',
-                'Italian drinking bitters happens to pair unusually well with pineapple. What can we say?',
+                'Italian drinking bitters happen to pair unusually well with pineapple. What can we say?',
                 "It's like pizza that way."],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          copy_note=("Nov 19 2026: Philip's copy. Fact checked (PUNCH): born around 1978 at the Kuala Lumpur Hilton, Malaysia. Poured in, ice and all, like the rest "
@@ -1050,6 +1051,7 @@ DRINKS = [
          lines=['It\'s the same formula as every sour on the menu, with the strong part left out. The sour and the sweet still balance each other, so it still tastes like a real drink.',
                 "(Perfect for when you want a yummy cocktail but you've got an important client presentation at 8AM the next day.)",
                 '(Which is not something we bartenders face very often, but we believe you when you tell us it happens.)'],
+         gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          copy_note=("Nov 25 2026: Philip's drink and recipe: lemon and simple, 1 oz each, shaken, 3 oz of soda swirled in, poured into a collins glass. "
                     "Nov 27: Philip's copy (\"Tom Collins\" spelled with two l's). The lemon wheel is Claude's."),
          steps=[('<strong>Combine ingredients.</strong> Add the lemon juice and simple syrup to your shaker.', [('pour', 'lemon', 1), ('pour', 'simple', 1)]),
@@ -1069,6 +1071,7 @@ DRINKS = [
                 "And it's not weird, herbaceous shrubs or tinctures.",
                 'Just like a great cocktail, the key to a great mocktail is simplicity, and balance.',
                 "This drink's got both. Bright lemon, deep and tart homemade grenadine (the recipe's on our syrups page, coming soon!)."],
+         gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          copy_note=("Nov 25 2026: Philip's drink and recipe: lemon and homemade grenadine, 1 oz each, shaken, 3 oz of soda swirled in, poured into a collins glass. "
                     "Nov 27: Philip's copy (\"key\" for \"ket\"; the syrups note flattened to one set of parentheses: Philip OK'd). The syrups page doesn't exist yet "
                     "(the card says coming soon). The lemon wheel is Claude's."),
@@ -1086,6 +1089,7 @@ DRINKS = [
          punch=['Click your heels', 'three times.'],
          lines=["It's ruby red and looks a lot like a Cosmo.",
                 "And since there's no booze in this one, you'll still be in Kansas when you finish it!"],
+         gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          copy_note=("Nov 25 2026: Philip's drink and recipe: lime, simple, cranberry and 7UP, 1:1:1:3, strained into a sugar-rimmed cocktail glass (from chat). "
                     "The 7UP is swirled in the shaker after the shake, like the Collins drinks. Nov 27: Philip's copy."),
          steps=[('<strong>Sugar the rim.</strong> Rub a lime wedge around the outside of the rim of a chilled cocktail glass, then roll it in sugar.', [('rim',)]),
@@ -1103,7 +1107,7 @@ DRINKS = [
                 "Nobody's sure where the name “Americano” came from.",
                 'One story says American tourists loved it.',
                 'We buy that, because Americans have always loved to drink.',
-                'Around 1919, Count Negroni (an actual American cowboy, on top of being an actual Italian nobleman) (<em>!!!</em>) asked for his with gin instead of soda, and the Negroni was born.',
+                'Around 1919, Count Negroni (an actual American cowboy, on top of being an actual Italian nobleman) <span class="hl">(<em>!!!</em>)</span> asked for his with gin instead of soda, and the Negroni was born.',
                 "Keep the soda, and you get the same bittersweet flavor at about half the strength. It's the perfect afternoon drink."],
          copy_note=("Nov 24 2026: Philip's copy, his pass on Claude's draft (\"an actual American cowboy\" lowercase in the parentheses: Philip OK'd). Facts checked (Paste): Caffè Campari, Milan, 1860s; the Milano-Torino; two name stories. "
                     "Count Negroni, about 1919, as on our Negroni page."),
@@ -1120,12 +1124,11 @@ DRINKS = [
          punch="Look — there's a fun story about the origins of the Irish Coffee.",
          lines=['It involves the Irish coast and some American tourists and a guy named Sheridan and his little coffee experiment.',
                 'But the Irish Coffee became an American institution at the iconic Buena Vista Cafe, in San Francisco, where bartenders spend all day every day working an Irish-coffee production line with an audience watching.',
-                'Seriously.',
                 "It's a TikTok video waiting to happen. (And a TikTok video that does happen, every day, from open to close.)",
                 'They report doing roughly 2,000 a day.',
                 'With “monster days” of nearly 6,000.',
                 '6.', 'K.', 'Irish Coffees.', 'In a day.',
-                '(<em>!!!!!!!</em>)',
+                '<span class="hl">(<em>!!!!!!!</em>)</span>',
                 'Their longtime star bartender, Paul Nolan, estimates he made five million Irish Coffees during his career, two dozen at a time.',
                 'One guy.',
                 'Five million Irish Coffees.'],
@@ -1169,7 +1172,7 @@ DRINKS = [
                 'And we just have to say it: Huber\'s is awesome.',
                 "It's a small, windowless bar in a historic building downtown that's constantly crowded and always feels like 10PM.",
                 'The Spanish Coffee is the whole show — and little armies of white-shirted bartenders run around with trays of ingredients, periodically setting them ablaze in long, arcing pours.',
-                '(Seriously. The whole deal is they pour their bottles, tableside, from <em>really</em> high above the sugar-rimmed glass.)',
+                '(The whole deal is they pour their bottles, tableside, from <em>really</em> high above the sugar-rimmed glass.)',
                 'The flame caramelizes the sugar. Whipped cream and nutmeg go on top.',
                 'And the whole bar watches.'],
          css='.flick{animation:flick .5s ease-in-out infinite alternate}@keyframes flick{from{transform:scaleY(.86) skewX(-5deg)}to{transform:scaleY(1.1) skewX(5deg)}}',

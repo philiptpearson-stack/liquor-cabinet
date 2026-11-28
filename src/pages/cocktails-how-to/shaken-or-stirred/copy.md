@@ -8,12 +8,13 @@
 # a shaker shaking and a mixing glass stirring, the ice melting and the level rising; and stir until cold, then stir longer.
 # Claude's: the Keep exploring links. Typography only: straight apostrophes, as on the rest of the site.
 
-Cocktails How-To: Shaken or ***Stirred?***
+Cocktail Basics and How-To's: Shaken or ***Stirred?***
 The Short Version
 Stir Bitters. Shake Citrus.
 Dilute well!
 Here's the rule of thumb:
 Cocktails with bitters, you stir. Drinks with citrus (like lemon or lime juice), you shake.
+(Cream, egg and espresso drinks get shaken too.)
 And the reason why is surprisingly straightforward.
 **Shaking** gives you dilution + aeration. It's how you get balance AND the lovely, frothy texture of a Margarita or a Lemon Drop.
 **Stirring** gives you dilution + control. And for drinks with concentrated bitters, like an Old Fashioned or a Manhattan, control over *intensity of flavor* is the whole ballgame.
@@ -39,4 +40,4 @@ Because shaken or stirred, dilution is how all those strong individual ingredien
 Keep exploring
 → The Golden Ratio
 → The Cocktail Menu
-← Back to Cocktails How-To
+← Back to Cocktail Basics and How-To's

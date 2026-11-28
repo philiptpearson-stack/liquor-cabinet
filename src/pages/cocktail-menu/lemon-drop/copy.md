@@ -17,7 +17,7 @@ Makes − 1 + drink
 **Garnish:** lemon twist
 Superfine sugar sticks to the rim best.
 The QUEEN of the 1990s (at TGI Friday's)
-Born in San Francisco in the 70s, by the year 2000 the Lemon Drop was making its name on cheeky lists of drinks that bartenders hate to make.
+Born in San Francisco in the '70s, by the year 2000 the Lemon Drop was making its name on cheeky lists of drinks that bartenders hate to make.
 (They didn't like having to bus the sticky glasses after the ladies had finished licking the sugar rims.)
 But they had no choice.
 It was ubiquitous.

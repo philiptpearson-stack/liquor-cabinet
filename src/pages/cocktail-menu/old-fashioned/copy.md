@@ -16,7 +16,7 @@ Makes − 1 + drink
 2 dashes orange bitters
 **Glass:** rocks, over one big ice cube
 **Garnish:** orange peel
-**It's what the word cocktail *used* to mean!**
+**It's what the word Cocktail *used* to mean!**
 In 1806, a New York newspaper defined a “cock-tail” like this:
 “A stimulating liquor, composed of spirits of any kind, sugar, water, and bitters.”
 — The Balance, and Columbian Repository, Hudson, New York, 1806
@@ -24,11 +24,11 @@ And even by then, the formula was old.
 Like, OLD-old.
 By 1806, people had been sweetening their (harsh!) spirits with sugar and balancing them with bitters and water since the early 1700s!
 *But remember.*
-In those days, the word *cocktail* meant only that specific formula, and nothing else.
+In those days, the word *Cocktail* meant only that specific formula, and nothing else.
 If you wanted a julep, you asked for a julep.
 And if you wanted a smash, a flip, a fizz, or a sling, well. You asked for that.
 So by the 1880s, when bartenders were using all sorts of new ingredients in their cocktails — curaçao, maraschino, and even *vermouth* (Manhattan! Martini!) — people who wanted it the way they'd always had it found a new way to order:
-*“Make my cocktail the Old Fashioned way.”*
+*“Make my Cocktail the Old Fashioned way.”*
 And it stuck.
 Here's how you make one:
 The Cocktail Menu · Classics

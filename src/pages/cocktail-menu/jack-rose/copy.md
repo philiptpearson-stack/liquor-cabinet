@@ -11,8 +11,8 @@ The Cocktail Menu · Classics
 Jack Rose
 Makes − 1 + drink
 2 oz applejack
-¾ oz lemon juice
-¾ oz grenadine
+1 oz lemon juice
+1 oz grenadine
 **Glass:** coupe
 **Garnish:** lemon twist
 In Ernest Hemingway's The Sun Also Rises (1926), Jake has one as he waits for Brett at the Hôtel Crillon.
@@ -24,8 +24,8 @@ The Cocktail Menu · Classics
 Jack Rose
 Makes − 1 + drink
 2 oz applejack
-¾ oz lemon juice
-¾ oz grenadine
+1 oz lemon juice
+1 oz grenadine
 **Glass:** coupe
 **Garnish:** lemon twist
 **Combine ingredients.** Add the applejack, lemon juice and grenadine to your shaker.

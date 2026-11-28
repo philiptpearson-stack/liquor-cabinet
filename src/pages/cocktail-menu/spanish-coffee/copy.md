@@ -24,7 +24,7 @@ Huber's, Portland's oldest restaurant, has been setting these on fire tableside 
 And we just have to say it: Huber's is awesome.
 It's a small, windowless bar in a historic building downtown that's constantly crowded and always feels like 10PM.
 The Spanish Coffee is the whole show — and little armies of white-shirted bartenders run around with trays of ingredients, periodically setting them ablaze in long, arcing pours.
-(Seriously. The whole deal is they pour their bottles, tableside, from *really* high above the sugar-rimmed glass.)
+(The whole deal is they pour their bottles, tableside, from *really* high above the sugar-rimmed glass.)
 The flame caramelizes the sugar. Whipped cream and nutmeg go on top.
 And the whole bar watches.
 Here's how you make one:

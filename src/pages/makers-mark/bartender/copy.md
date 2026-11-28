@@ -4,7 +4,7 @@
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
 # Oct 31 2026: Philip's copy from chat, third round. Claude's, waiting on Philip: the recipe card's
-# kicker and "Makes 1 drink" line, the glass / garnish line and the egg-white note (Philip OK'd both, Oct 31), "→ Cocktails How-To", "→ The Cocktail Menu", and where the
+# kicker and "Makes 1 drink" line, the glass / garnish line and the egg-white note (Philip OK'd both, Oct 31), "→ Cocktail Basics and How-To's", "→ The Cocktail Menu", and where the
 # "tasting the ingredients" shot sits (moved down the page, after the how-to).
 # Nov 17 2026: the Whiskey Sour card matches the Cocktail Menu's (Philip): the egg white isn't optional, plain "lemon juice", Glass and Garnish on their own lines.
 
@@ -17,8 +17,8 @@ And for the recipe I want to show you today, playing nicely with other ingredien
 That's because tonight we're featuring Maker's Mark in a **Classic Whiskey Sour.**
 This cocktail is fun because it uses what's called *the Golden Ratio* for building balanced drinks.
 That means you start with a simple 2:1:1 ratio for your spirits, sweetener, and sour.
-*Check out our Cocktails How-To page for more details on building perfect mixed drinks right in your own kitchen, at home.*
-→ Cocktails How-To
+*Check out our Cocktail Basics and How-To's page for more details on building perfect mixed drinks right in your own kitchen, at home.*
+→ Cocktail Basics and How-To's
 So a Classic Whiskey Sour made with the Golden Ratio would look like this:
 From the Cocktail Menu
 Classic Whiskey Sour
@@ -35,7 +35,7 @@ Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan f
 **Wet shake.** Add ice and shake again, until the shaker is frosty cold.
 **Serve up** (with a nice egg white foam). Strain into a chilled coupe, no ice.
 And now for my favorite part. Tasting the ingredients!
-**Not in the mood for a whiskey sour? Choose your own adventure with our interactive cocktail menu:**
+**Not in the mood for a Whiskey Sour? Choose your own adventure with our interactive cocktail menu:**
 → The Cocktail Menu
 Want Some Other Bourbon Suggestions?
 Maker's fans should try **W.L. Weller** or **Larceny** for another excellent wheated bourbon.

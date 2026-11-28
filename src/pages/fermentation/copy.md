@@ -8,7 +8,7 @@ Fermentation.
 The Short Version
 Yeast + Sugar = CO₂ + Alcohol
 What happens
-A tiny microorganism called Yeast eats sugar and gives off alcohol, plus carbon dioxide (the bubbles).
+A tiny microorganism called yeast eats sugar and gives off alcohol, plus carbon dioxide (the bubbles).
 The sugar
 Comes from fruit, grain, honey, sugarcane, agave. Grapes make wine. Grain makes beer.
 How old?

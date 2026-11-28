@@ -19,7 +19,6 @@ Makes − 1 + drink
 Look — there's a fun story about the origins of the Irish Coffee.
 It involves the Irish coast and some American tourists and a guy named Sheridan and his little coffee experiment.
 But the Irish Coffee became an American institution at the iconic Buena Vista Cafe, in San Francisco, where bartenders spend all day every day working an Irish-coffee production line with an audience watching.
-Seriously.
 It's a TikTok video waiting to happen. (And a TikTok video that does happen, every day, from open to close.)
 They report doing roughly 2,000 a day.
 With “monster days” of nearly 6,000.

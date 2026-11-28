@@ -14,7 +14,7 @@ Before she married Bill Samuels Sr. in 1937, Margie Mattingly was a chemist!
 And when she and Bill bought the run-down distillery that would become Maker's Mark, Margie got to work.
 That iconic Maker's Mark flavor?
 That was Margie.
-Bill wanted their distillery to make a softer, "wheated" bourbon. But there was a problem. You can't just make a dozen test bourbons and wait years to taste them.
+Bill wanted their distillery to make a softer, “wheated” bourbon. But there was a problem. You can't just make a dozen test bourbons and wait years to taste them.
 So Margie ***baked bread.***
 Loaf after loaf. Each made with a different grain.
 Bill tasted them blind.
@@ -32,7 +32,7 @@ She sculpted the bottle's shape out of papier-mâché. She designed the label. S
 Then came the finishing touch.
 She took over the basement for her wax experiments.
 And in May of 1958, Margie melted red sealing wax in her deep fryer and dipped the very first bottle.
-(And we just want to say: we *love* the thought of Margie the chemist, experimenting away in her basement and inventing the identity of freaking *Maker's Mark.* (!!!))
+(And we just want to say: we *love* the thought of Margie the chemist, experimenting away in her basement and inventing the identity of freaking *Maker's Mark.* (*!!!*))
 Every bottle of Maker's Mark is still dipped by hand today.
 But Margie didn't stop at the bottle.
 That distillery in Loretto was old. *Victorian* old.
@@ -46,7 +46,7 @@ Some folks even say she planted the seed for the whole Kentucky Bourbon Trail.
 So next time you see that red wax creeping down the neck of a bottle...
 That's Margie's mark.
 Bio Card
-Marjorie "Margie" Mattingly Samuels
+Marjorie “Margie” Mattingly Samuels
 Born
 1913
 Died

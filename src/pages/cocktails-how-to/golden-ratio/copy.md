@@ -7,14 +7,14 @@
 # The Old Fashioned dash advice and "Bitter-bitter, stir-stir-stir makes a great drink!" are saved in TODO.md for the Stirred Drinks How-To page.
 # Claude's, to check: the callout's link name ("→ The Cocktail Menu"), and "Vieux Carré" with its accent (since cut).
 
-Cocktails How-To: The Golden ***Ratio.***
+Cocktail Basics and How-To's: The Golden ***Ratio.***
 The Short Version
 2 : 1 : 1 · spirit : sweet : sour
 Start here. Taste. Adjust.
 The formula
 Two parts spirit, one part sweetener, one part sour/bitter. It's the formula behind most of the classics.
 The goal
-To achieve perfect balance. The sweetener balances the harshness of the spirit; while the sour balances out the sweet.
+To achieve perfect balance. The sweetener balances the harshness of the spirit, while the sour balances out the sweet.
 Here's a little bartender secret:
 Cocktails are not just recipes.
 They're ***formulas*.**
@@ -64,4 +64,4 @@ Concentrated bitters, like Angostura, are different.
 → Check out our Shaken or Stirred page to learn the basics on Old Fashioneds, Manhattans, Martinis and all the rest!
 **Or, choose your own adventure with our interactive cocktail menu!**
 → The Cocktail Menu
-← Back to Cocktails How-To
+← Back to Cocktail Basics and How-To's

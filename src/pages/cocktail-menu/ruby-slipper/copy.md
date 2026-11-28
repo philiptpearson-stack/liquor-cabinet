@@ -35,6 +35,8 @@ Makes − 1 + drink
 **Shake.** Add ice and shake hard, until frosty cold.
 **Add the 7UP.** Right into the shaker. Give it a gentle swirl.
 **Strain.** Strain into the sugared glass.
+*Need a quick how-to on achieving balance in your at-home cocktails?*
+Click HERE.
 Keep exploring
 → Cosmopolitan
 → Bridge City Lemonade

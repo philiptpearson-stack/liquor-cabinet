@@ -19,7 +19,7 @@ Makes − 1 + drink
 **Glass:** rocks, over one big ice cube
 **Garnish:** lemon twist
 *Another* New Orleans Classic??
-Seriously, how many all time classics does one city get?
+How many all-time classics does one city get?
 Well, here's another.
 Vieux Carré was the old name for the French Quarter, and it's where Walter Bergeron created this drink in the 1930s, at the Hotel Monteleone.
 It's basically a Manhattan, only *weirder*.

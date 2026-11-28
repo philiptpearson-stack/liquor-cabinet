@@ -4,7 +4,7 @@
 # The build refuses to publish the page if its words drift from this file.
 # Oct 31 2026: CLAUDE'S DRAFT, waiting on Philip. The door names are working titles.
 
-Cocktails ***How-To.***
+Cocktail Basics and ***How-To's.***
 So what do you want to learn?
 The Golden Ratio
 Shaken or Stirred?
