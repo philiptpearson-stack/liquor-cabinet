@@ -5,7 +5,7 @@
 # Nov 27 2026: Claude's draft, then Philip's first pass in chat: no Short Version card, no section titles (the syrups run simplest first),
 # "Here's how you can make them at home:", "Just boil a little water, add your sugar, and stir.", his grenadine lines, and no orgeat
 # (nobody makes it from scratch; the Mai Tai's note says to buy a bottle). The simple and demerara cards boil the water to match.
-# Still Claude's, to check: the recipes and keeping times, the cards' "In our..." lines, the demerara and passion fruit lines, the callout.
+# Claude's, OK'd by Philip with the rest ("Looks good. Go!", Nov 27): the recipes and keeping times, the cards' "In our..." lines, the demerara and passion fruit lines, the callout.
 # Nov 27, later: Philip's grenadine (POM, white sugar, ¼ tsp orange-blossom water, not optional, and 1 tbsp pomegranate molasses); the method warms the molasses in with the juice.
 
 Cocktail Basics and How-To's: Homemade Syrups.
