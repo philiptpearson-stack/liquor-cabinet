@@ -3,7 +3,7 @@
 # One line per line of text on the page, in order. Illustrations are not included
 # (words written under one, like the how-to steps, are).
 # The build refuses to publish the page if its words drift from this file.
-# Nov 27 2026: Philip swapped the Tom and Jerry for the Spanish Coffee ("I don't know what a Tom and Jerry is"). CLAUDE'S DRAFT, waiting on Philip: the words. Facts checked: Huber's, Portland's oldest restaurant (founded 1879; Punch); Jim Louie put it on in 1975, borrowed from the Fernwood Inn in Milwaukie, and made it a show, the coffee poured from as high as three feet (Willamette Week). Recipe after Jeffrey Morgenthaler's (Portland): ¾ oz 151 rum, ¼ oz triple sec, 1½ oz Kahlúa, coffee, cream, nutmeg, a sugared rim; an Irish coffee glass. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
+# Nov 27 2026: Philip swapped the Tom and Jerry for the Spanish Coffee ("I don't know what a Tom and Jerry is"). Philip's copy, the same night ("sugar-rimmed" hyphenated: Philip OK'd). Facts checked: Huber's, Portland's oldest restaurant (founded 1879; Punch); Jim Louie put it on in 1975, borrowed from the Fernwood Inn in Milwaukie, and made it a show, the coffee poured from as high as three feet (Willamette Week). Recipe after Jeffrey Morgenthaler's (Portland): ¾ oz 151 rum, ¼ oz triple sec, 1½ oz Kahlúa, coffee, cream, nutmeg, a sugared rim; an Irish coffee glass. Written by tools/art/menu_pages.py from tools/art/menu_drinks.py.
 
 The Cocktail Menu: Spanish ***Coffee.***
 Spanish Coffee Recipe
@@ -21,9 +21,12 @@ Careful with the fire: light it on a flat, heatproof surface, away from anything
 Coffee, booze and fire.
 *Portland style.*
 Huber's, Portland's oldest restaurant, has been setting these on fire tableside since 1975.
-Owner Jim Louie borrowed the drink from a bar down the road and turned it into a show: overproof rum and triple sec, set ablaze in a sugar-rimmed glass, then coffee liqueur and hot coffee poured in from way up high.
-The flame caramelizes the sugar on the rim. Whipped cream and nutmeg go on top. And the whole bar watches.
-(Please don't try the three-foot pour at home.)
+And we just have to say it: Huber's is awesome.
+It's a small, windowless bar in a historic building downtown that's constantly crowded and always feels like 10PM.
+The Spanish Coffee is the whole show — and little armies of white-shirted bartenders run around with trays of ingredients, periodically setting them ablaze in long, arcing pours.
+(Seriously. The whole deal is they pour their bottles, tableside, from *really* high above the sugar-rimmed glass.)
+The flame caramelizes the sugar. Whipped cream and nutmeg go on top.
+And the whole bar watches.
 Here's how you make one:
 The Cocktail Menu · Warm & Cozy
 Spanish Coffee

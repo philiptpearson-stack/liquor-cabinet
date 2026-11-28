@@ -1186,12 +1186,15 @@ DRINKS = [
          note='Careful with the fire: light it on a flat, heatproof surface, away from anything that burns. And never pour more rum into a lit glass.',
          punch=['Coffee, booze and fire.', '<em>Portland style.</em>'],
          lines=["Huber's, Portland's oldest restaurant, has been setting these on fire tableside since 1975.",
-                'Owner Jim Louie borrowed the drink from a bar down the road and turned it into a show: overproof rum and triple sec, set ablaze in a sugar-rimmed glass, then coffee liqueur and hot coffee poured in from way up high.',
-                'The flame caramelizes the sugar on the rim. Whipped cream and nutmeg go on top. And the whole bar watches.',
-                "(Please don't try the three-foot pour at home.)"],
+                'And we just have to say it: Huber\'s is awesome.',
+                "It's a small, windowless bar in a historic building downtown that's constantly crowded and always feels like 10PM.",
+                'The Spanish Coffee is the whole show — and little armies of white-shirted bartenders run around with trays of ingredients, periodically setting them ablaze in long, arcing pours.',
+                '(Seriously. The whole deal is they pour their bottles, tableside, from <em>really</em> high above the sugar-rimmed glass.)',
+                'The flame caramelizes the sugar. Whipped cream and nutmeg go on top.',
+                'And the whole bar watches.'],
          css='.flick{animation:flick .5s ease-in-out infinite alternate}@keyframes flick{from{transform:scaleY(.86) skewX(-5deg)}to{transform:scaleY(1.1) skewX(5deg)}}',
-         copy_note=("Nov 27 2026: Philip swapped the Tom and Jerry for the Spanish Coffee (\"I don't know what a Tom and Jerry is\"). CLAUDE'S DRAFT, waiting on Philip: "
-                    "the words. Facts checked: Huber's, Portland's oldest restaurant (founded 1879; Punch); Jim Louie put it on in 1975, borrowed from the Fernwood Inn "
+         copy_note=("Nov 27 2026: Philip swapped the Tom and Jerry for the Spanish Coffee (\"I don't know what a Tom and Jerry is\"). Philip's copy, the same night "
+                    "(\"sugar-rimmed\" hyphenated: Philip OK'd). Facts checked: Huber's, Portland's oldest restaurant (founded 1879; Punch); Jim Louie put it on in 1975, borrowed from the Fernwood Inn "
                     "in Milwaukie, and made it a show, the coffee poured from as high as three feet (Willamette Week). Recipe after Jeffrey Morgenthaler's (Portland): "
                     "¾ oz 151 rum, ¼ oz triple sec, 1½ oz Kahlúa, coffee, cream, nutmeg, a sugared rim; an Irish coffee glass."),
          steps=[('<strong>Sugar the rim.</strong> Rub a lime wedge around the rim of an Irish coffee glass, then dip it in sugar.', [('rim',)]),
