@@ -8,7 +8,7 @@
 # Claude's, OK'd by Philip with the rest ("Looks good. Go!", Nov 27): the recipes and keeping times, the cards' "In our..." lines, the demerara and passion fruit lines, the callout.
 # Nov 27, later: Philip's grenadine (POM, white sugar, ¼ tsp orange-blossom water, not optional, and 1 tbsp pomegranate molasses); the method warms the molasses in with the juice.
 # Nov 27, later still: Philip's honey line ("let's" fixed to "lets"), the grenadine lines moved under its card, and his same-method lines under the honey-ginger;
-# CLAUDE'S, waiting on Philip: the end of the blueberry line ("Simmer the blueberries...") and "Cinnamon? Rosemary? Jalapeño? You guessed it: same method."
+# Claude's, OK'd by Philip ("Go!"): the end of the blueberry line ("Simmer the blueberries...") and "Cinnamon? Rosemary? Jalapeño? You guessed it: same method."
 
 Cocktail Basics and How-To's: Homemade Syrups.
 Almost every drink on our menu needs something sweet.
