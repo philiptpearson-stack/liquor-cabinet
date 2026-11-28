@@ -7,6 +7,12 @@ recipe rows: (amount, unit, ingredient)  unit: 'oz', 'dash', '' (a plain count) 
 
 GR_LINK = True
 
+
+def SYRUPS_LINK(spot):
+    """"syrups page", linked to one syrup's card on Cocktail Basics and How-To's / Homemade Syrups (Philip, Nov 27: the notes link there)."""
+    return f'<a href="@page:cocktails-how-to/syrups#{spot}">syrups page</a>'
+
+
 DRINKS = [
     dict(slug='boulevardier', name='Boulevardier', glass='rocks', color='#a8262c', garnish=['orange-peel'],
          recipe=[(2, 'oz', 'bourbon or rye'), (1, 'oz', 'sweet vermouth'), (1, 'oz', 'Campari')],
@@ -284,9 +290,11 @@ DRINKS = [
          related=['el-diablo', 'daiquiri'], hero=(['syrup', 'tequila'], ['grapefruit-soda', 'fruit:lime'])),   # a lime in the picture (Philip, Nov 17)
 
     dict(slug='pink-lady', name='Pink Lady', glass='coupe', color='#ee9fa8', base='#ef9aa4', garnish=['cherry'], foam=True,
-         recipe=[(1.5, 'oz', 'gin'), (.5, 'oz', 'applejack (apple brandy)'), (1, 'oz', 'grenadine'), (1, 'oz', 'lemon juice'), (1, 'egg white', '')],
+         recipe=[(1.5, 'oz', 'gin'), (.5, 'oz', 'applejack (apple brandy)'), (1, 'oz', 'homemade grenadine'),   # homemade (Philip, Nov 27)
+                 (1, 'oz', 'lemon juice'), (1, 'egg white', '')],
          glass_line=('coupe', 'cherry'),
-         note='Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.',
+         note=[f"Homemade grenadine: the recipe's on our {SYRUPS_LINK('grenadine')}.",
+               'Pasteurized egg whites (from a carton) work just as well as fresh. For a vegan foam, swap in ¾ oz aquafaba, the liquid from a can of chickpeas.'],
          punch="It's a frothy Jack Rose, with gin!",
          lines=['This fantastic egg-white sour is the perfect place to practice your egg shaking.',
                 'Dry shake. Wet shake.',
@@ -618,7 +626,7 @@ DRINKS = [
     dict(slug='bees-knees', name="Bee's Knees", glass='coupe', color='#ecd277', garnish=['lemon-twist'],
          recipe=[(2, 'oz', 'gin'), (1, 'oz', 'honey syrup'), (1, 'oz', 'lemon juice')],
          glass_line=('coupe', 'lemon twist'),
-         note='Honey syrup is honey and hot water, half and half, stirred until smooth.',
+         note=f"Honey syrup: the recipe's on our {SYRUPS_LINK('honey-syrup')}.",
          punch="In the 1920s, “the bee's knees” meant the very best.",
          lines=["It's a Prohibition-era drink: gin, lemon and honey. A 1929 Brooklyn newspaper credited it to the Unsinkable Molly Brown. Yes, the Titanic Molly Brown. <span class=\"hl\">(<em>!!!</em>)</span>",
                 "Swap the gin for bourbon and you've got a Gold Rush."],
@@ -632,8 +640,9 @@ DRINKS = [
          related=['gold-rush', 'french-75'], hero=(['honey', 'gin'], ['fruit:lemon', 'half:lemon'])),
 
     dict(slug='jack-rose', name='Jack Rose', glass='coupe', color='#e58a8a', garnish=['lemon-twist'],
-         recipe=[(2, 'oz', 'applejack'), (1, 'oz', 'lemon juice'), (1, 'oz', 'grenadine')],   # the Golden Ratio (Philip, Nov 27)
+         recipe=[(2, 'oz', 'applejack'), (1, 'oz', 'lemon juice'), (1, 'oz', 'homemade grenadine')],   # the Golden Ratio; homemade (Philip, Nov 27)
          glass_line=('coupe', 'lemon twist'),
+         note=f"Homemade grenadine: the recipe's on our {SYRUPS_LINK('grenadine')}.",
          punch="In Ernest Hemingway's <cite>The Sun Also Rises</cite> (1926), Jake has one as he waits for Brett at the Hôtel Crillon.",
          lines=[('quote', '“About quarter to six I went down to the bar and had a Jack Rose with George the barman.”', ''),
                 'And what did George make him?',
@@ -651,7 +660,7 @@ DRINKS = [
          recipe=[(1.5, 'oz', 'blended Scotch'),   # a Golden Ratio fit (Philip, Nov 17)
                  (.75, 'oz', 'lemon juice'), (.75, 'oz', 'honey-ginger syrup'), (.25, 'oz', 'Islay Scotch, to float')],
          glass_line=('rocks, over one big ice cube', 'candied ginger'),
-         note='Honey-ginger syrup: simmer equal parts honey and water with a few slices of fresh ginger, then strain. (Or use ½ oz honey syrup and ¼ oz fresh ginger juice.)',
+         note=f"Honey-ginger syrup: the recipe's on our {SYRUPS_LINK('honey-ginger-syrup')}.",
          punch='Yet another Modern Classic from Milk &amp; Honey.',
          lines=['(The Gold Rush is, and the Paper Plane is too, sort of.)',
                 "The Penicillin is from 2005, and it's a Scotch-y, ginger-y Gold Rush with a smoky Scotch float."],
@@ -1023,7 +1032,7 @@ DRINKS = [
          aka="pat o'brien's new orleans",
          recipe=[(4, 'oz', 'dark rum'), (2, 'oz', 'lemon juice'), (2, 'oz', 'passion fruit syrup')],
          glass_line=('hurricane glass, over ice', 'an orange slice and a cherry'),
-         note="Can't find passion fruit syrup? Make it: stir equal parts passion fruit purée and sugar over low heat until the sugar dissolves. Let it cool.",
+         note=f"Can't find passion fruit syrup? Make your own: the recipe's on our {SYRUPS_LINK('passion-fruit-syrup')}.",
          punch='It was a big ass drink meant to sell tourists a LOT of rum.',
          lines=["That's why it goes in that crazy glass.",
                 'The glass is shaped like a hurricane lantern.',
@@ -1065,12 +1074,12 @@ DRINKS = [
          aka='mocktail non-alcoholic no alcohol zero proof pink lemonade',
          recipe=[(1, 'oz', 'lemon juice'), (1, 'oz', 'homemade grenadine'), (3, 'oz', 'soda water (or your favorite fizzy water)')],
          glass_line=('collins glass, over ice', 'a lemon wheel'),
-         note="Homemade grenadine: the recipe's on our syrups page. (Coming soon!)",
+         note=f"Homemade grenadine: the recipe's on our {SYRUPS_LINK('grenadine')}.",
          punch=['Pink Lemonade,', "the bartender's special."],
          lines=["The key to a great mocktail isn't funky, expensive ingredients.",
                 "And it's not weird, herbaceous shrubs or tinctures.",
                 'Just like a great cocktail, the key to a great mocktail is simplicity, and balance.',
-                "This drink's got both. Bright lemon, deep and tart homemade grenadine (the recipe's on our syrups page, coming soon!)."],
+                "This drink's got both. Bright lemon, deep and tart homemade grenadine (the recipe's on our syrups page!)."],
          gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
          copy_note=("Nov 25 2026: Philip's drink and recipe: lemon and homemade grenadine, 1 oz each, shaken, 3 oz of soda swirled in, poured into a collins glass. "
                     "Nov 27: Philip's copy (\"key\" for \"ket\"; the syrups note flattened to one set of parentheses: Philip OK'd). The syrups page doesn't exist yet "

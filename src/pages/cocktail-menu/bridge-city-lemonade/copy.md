@@ -15,13 +15,15 @@ Makes − 1 + drink
 3 oz soda water (or your favorite fizzy water)
 **Glass:** collins glass, over ice
 **Garnish:** a lemon wheel
-Homemade grenadine: the recipe's on our syrups page. (Coming soon!)
+Homemade grenadine: the recipe's on our
+syrups page
+.
 Pink Lemonade,
 the bartender's special.
 The key to a great mocktail isn't funky, expensive ingredients.
 And it's not weird, herbaceous shrubs or tinctures.
 Just like a great cocktail, the key to a great mocktail is simplicity, and balance.
-This drink's got both. Bright lemon, deep and tart homemade grenadine (the recipe's on our syrups page, coming soon!).
+This drink's got both. Bright lemon, deep and tart homemade grenadine (the recipe's on our syrups page!).
 Here's how you make one:
 The Cocktail Menu · Low & No-Proof
 Bridge City Lemonade
@@ -31,7 +33,9 @@ Makes − 1 + drink
 3 oz soda water (or your favorite fizzy water)
 **Glass:** collins glass, over ice
 **Garnish:** a lemon wheel
-Homemade grenadine: the recipe's on our syrups page. (Coming soon!)
+Homemade grenadine: the recipe's on our
+syrups page
+.
 **Combine ingredients.** Add the lemon juice and grenadine to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Top with soda.** Soda water, or your favorite fizzy water, right into the shaker. Give it a gentle swirl.

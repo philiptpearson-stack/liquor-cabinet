@@ -15,7 +15,9 @@ Makes − 1 + drink
 2 oz passion fruit syrup
 **Glass:** hurricane glass, over ice
 **Garnish:** an orange slice and a cherry
-Can't find passion fruit syrup? Make it: stir equal parts passion fruit purée and sugar over low heat until the sugar dissolves. Let it cool.
+Can't find passion fruit syrup? Make your own: the recipe's on our
+syrups page
+.
 It was a big ass drink meant to sell tourists a LOT of rum.
 That's why it goes in that crazy glass.
 The glass is shaped like a hurricane lantern.
@@ -32,7 +34,9 @@ Makes − 1 + drink
 2 oz passion fruit syrup
 **Glass:** hurricane glass, over ice
 **Garnish:** an orange slice and a cherry
-Can't find passion fruit syrup? Make it: stir equal parts passion fruit purée and sugar over low heat until the sugar dissolves. Let it cool.
+Can't find passion fruit syrup? Make your own: the recipe's on our
+syrups page
+.
 **Combine ingredients.** Add the rum, lemon juice and passion fruit syrup to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Pour it all in.** Pour everything, ice and all, into a hurricane glass.

@@ -263,6 +263,7 @@ a.door:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .rc-glass{margin:.35rem 0 0;font-size:.95rem;line-height:28px;color:#6b5a62}
 .rc-glass b{color:#3a2532}
 .rc-note{margin:.35rem 0 0;font-size:.86rem;line-height:1.45;color:#6b5a62;font-style:italic}
+.rc-note a{color:inherit;font-weight:700}   /* a note's link, to a syrup's recipe (Nov 27) */
 ol.steps{list-style:none;counter-reset:step;margin:0;padding:0;display:flex;flex-direction:column;gap:.8rem}
 ol.steps li{counter-increment:step;position:relative;padding-left:2.6rem;font-size:1.12rem;line-height:1.55}
 ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;width:1.85rem;height:1.85rem;border-radius:50%;
@@ -433,7 +434,7 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
   <nav class="doors" aria-label="Pick a technique">
     <a class="door wide" href="golden-ratio/index.html"><svg class="door-icon" aria-hidden="true"><use href="#scale-icon"/></svg><span class="door-text"><span class="door-label">The Golden Ratio</span></span></a>
     <a class="door wide" href="shaken-or-stirred/index.html"><svg class="door-icon" aria-hidden="true"><use href="#shaker-icon"/></svg><span class="door-text"><span class="door-label">Shaken or Stirred?</span></span></a>
-    <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#syrup-icon"/></svg><span class="door-label">Simple Syrup in Two Minutes</span><span class="stamp">Coming soon</span></div>
+    <a class="door wide" href="syrups/index.html"><svg class="door-icon" aria-hidden="true"><use href="#syrup-icon"/></svg><span class="door-text"><span class="door-label">Homemade Syrups</span></span></a>
     <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#ice-icon"/></svg><span class="door-label">All About Ice</span><span class="stamp">Coming soon</span></div>
     <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#glasses-icon"/></svg><span class="door-label">Neat, Rocks or Up?</span><span class="stamp">Coming soon</span></div>
     <div class="door soon" aria-disabled="true"><svg class="door-icon" aria-hidden="true"><use href="#tools-icon"/></svg><span class="door-label">The Tools You Actually Need</span><span class="stamp">Coming soon</span></div>

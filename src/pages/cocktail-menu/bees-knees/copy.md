@@ -15,7 +15,9 @@ Makes − 1 + drink
 1 oz lemon juice
 **Glass:** coupe
 **Garnish:** lemon twist
-Honey syrup is honey and hot water, half and half, stirred until smooth.
+Honey syrup: the recipe's on our
+syrups page
+.
 In the 1920s, “the bee's knees” meant the very best.
 It's a Prohibition-era drink: gin, lemon and honey. A 1929 Brooklyn newspaper credited it to the Unsinkable Molly Brown. Yes, the Titanic Molly Brown. (*!!!*)
 Swap the gin for bourbon and you've got a Gold Rush.
@@ -28,7 +30,9 @@ Makes − 1 + drink
 1 oz lemon juice
 **Glass:** coupe
 **Garnish:** lemon twist
-Honey syrup is honey and hot water, half and half, stirred until smooth.
+Honey syrup: the recipe's on our
+syrups page
+.
 **Combine ingredients.** Add the gin, honey syrup and lemon juice to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Strain.** Strain into a chilled coupe.

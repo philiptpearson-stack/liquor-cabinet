@@ -184,7 +184,8 @@ def build_page(d: Path, template: str, kit: dict, home: str) -> list[str]:
             story = story[:i].rstrip() + '\n\n  ' + footer.strip() + '\n' + story[i:]
     # href="@home" = the page the site opens on (src/site.json); href="@page:<slug>" = that page
     story = story.replace('href="@home"', 'href="' + posixpath.relpath(home + '/index.html', slug) + '"')
-    story = re.sub(r'href="@page:([\w/-]+)"', lambda m: 'href="' + posixpath.relpath(m.group(1) + '/index.html', slug) + '"', story)
+    # (with an optional #spot on the page: "@page:cocktails-how-to/syrups#grenadine")
+    story = re.sub(r'href="@page:([\w/-]+)(#[\w-]+)?"', lambda m: 'href="' + posixpath.relpath(m.group(1) + '/index.html', slug) + (m.group(2) or '') + '"', story)
     # href="@deal" = Dealer's Choice: kit.js picks one of the pages in src/site.json's "dealers_choice" list
     # (never the page you're on, never one you were just dealt); with scripts off it goes to the first one
     if 'href="@deal"' in story:

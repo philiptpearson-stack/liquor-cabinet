@@ -3,13 +3,13 @@
 # One line per line of text on the page, in order. Illustrations are not included.
 # The build refuses to publish the page if its words drift from this file.
 # Oct 31 2026: CLAUDE'S DRAFT, waiting on Philip. The door names are working titles.
+# Nov 27 2026: "Homemade Syrups" replaces "Simple Syrup in Two Minutes" (Philip OK'd the swap; the name is Claude's).
 
 Cocktail Basics and ***How-To's.***
 So what do you want to learn?
 The Golden Ratio
 Shaken or Stirred?
-Simple Syrup in Two Minutes
-Coming soon
+Homemade Syrups
 All About Ice
 Coming soon
 Neat, Rocks or Up?

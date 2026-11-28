@@ -16,7 +16,9 @@ Makes − 1 + drink
 ¼ oz Islay Scotch, to float
 **Glass:** rocks, over one big ice cube
 **Garnish:** candied ginger
-Honey-ginger syrup: simmer equal parts honey and water with a few slices of fresh ginger, then strain. (Or use ½ oz honey syrup and ¼ oz fresh ginger juice.)
+Honey-ginger syrup: the recipe's on our
+syrups page
+.
 Yet another Modern Classic from Milk & Honey.
 (The Gold Rush is, and the Paper Plane is too, sort of.)
 The Penicillin is from 2005, and it's a Scotch-y, ginger-y Gold Rush with a smoky Scotch float.
@@ -30,7 +32,9 @@ Makes − 1 + drink
 ¼ oz Islay Scotch, to float
 **Glass:** rocks, over one big ice cube
 **Garnish:** candied ginger
-Honey-ginger syrup: simmer equal parts honey and water with a few slices of fresh ginger, then strain. (Or use ½ oz honey syrup and ¼ oz fresh ginger juice.)
+Honey-ginger syrup: the recipe's on our
+syrups page
+.
 **Combine ingredients.** Add the blended Scotch, lemon juice and honey-ginger syrup to your shaker.
 **Shake.** Add ice and shake hard, until frosty cold.
 **Strain over a big cube.** Strain into a rocks glass over one large ice cube.

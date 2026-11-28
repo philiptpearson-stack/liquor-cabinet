@@ -282,8 +282,8 @@ def recipe_card(d):
     c += ['      ' + amt(*r) for r in d['recipe']]
     gl, gn = d['glass_line']
     c += ['    </ul>', f'    <p class="rc-glass"><b>Glass:</b> {gl}<br><b>Garnish:</b> {gn}</p>']
-    if d.get('note'):
-        c += [f'    <p class="rc-note">{d["note"]}</p>']
+    if d.get('note'):   # one note, or a few (the Pink Lady: the grenadine, then the egg white)
+        c += [f'    <p class="rc-note">{n}</p>' for n in ([d['note']] if isinstance(d['note'], str) else d['note'])]
     return c + ['  </section>']
 
 
