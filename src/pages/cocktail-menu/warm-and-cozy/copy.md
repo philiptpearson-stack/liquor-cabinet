@@ -10,5 +10,5 @@ Tap any drink for its recipe and step-by-step, animated how-to.
 Hot Buttered Rum
 Hot Toddy
 Irish Coffee
-Tom and Jerry
+Spanish Coffee
 ← Back to the Cocktail Menu

@@ -40,5 +40,5 @@ Batter (for about 12 drinks): beat ½ cup softened butter with ½ cup brown suga
 **Garnish.** A cinnamon stick.
 Keep exploring
 → Hot Toddy
-→ Tom and Jerry
+→ Spanish Coffee
 ← Back to Warm & Cozy

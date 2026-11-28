@@ -1,0 +1,45 @@
+/* The Cocktail Menu / Spanish Coffee: scene motion. Written by tools/art/menu_pages.py; edit it there. */
+.twinkle{animation:twinkle 1.6s ease-in-out infinite}
+.twinkle.d2{animation-delay:-.55s}.twinkle.d3{animation-delay:-1.1s}
+@keyframes twinkle{0%,100%{transform:scale(.55) rotate(0);opacity:.35}50%{transform:scale(1.15) rotate(20deg);opacity:1}}
+.bub{animation:bub 2.4s linear infinite}.bub.u1{animation-delay:-.8s}.bub.u2{animation-delay:-1.6s}
+@keyframes bub{0%{transform:translateY(0);opacity:0}15%{opacity:.9}85%{opacity:.9}100%{transform:translateY(-34px);opacity:0}}
+.steam{animation:steam 2.6s ease-in-out infinite}.steam.s1{animation-delay:-.9s}.steam.s2{animation-delay:-1.7s}
+@keyframes steam{0%{transform:translateY(4px);opacity:0}30%{opacity:.8}100%{transform:translateY(-10px);opacity:0}}
+/* the build, step by step (15.7 s). Still frame: the finished drink. */
+.cap11,.btl12,.pour13,.cap14,.btl15,.pour16,.cap17,.fire18,.cap19,.btl20,.pour21,.cap22,.ktl23,.pour24,.cap25,.jig26,.pour27,.cap28,.cheer30{opacity:0}
+.band1{animation:band1 15.7s linear infinite}@keyframes band1{0%{transform:scaleY(0)}15.61%{transform:scaleY(0)}18.47%{transform:scaleY(1)}100%{transform:scaleY(1)}}
+.band2{animation:band2 15.7s linear infinite}@keyframes band2{0%{transform:scaleY(0)}23.25%{transform:scaleY(0)}26.11%{transform:scaleY(1)}100%{transform:scaleY(1)}}
+.band3{animation:band3 15.7s linear infinite}@keyframes band3{0%{transform:scaleY(0)}44.9%{transform:scaleY(0)}47.77%{transform:scaleY(1)}100%{transform:scaleY(1)}}
+.band4{animation:band4 15.7s linear infinite}@keyframes band4{0%{transform:scaleY(0)}52.55%{transform:scaleY(0)}59.87%{transform:scaleY(1)}100%{transform:scaleY(1)}}
+.band5{animation:band5 15.7s linear infinite}@keyframes band5{0%{transform:scaleY(0)}64.65%{transform:scaleY(0)}71.97%{transform:scaleY(1)}100%{transform:scaleY(1)}}
+.mixd6{animation:mixd6 15.7s linear infinite}@keyframes mixd6{0%{opacity:0}60.51%{opacity:0}63.69%{opacity:1}100%{opacity:1}}
+.gc7{animation:gc7 15.7s linear infinite}@keyframes gc7{0%{opacity:1}94.9%{opacity:1}98.41%{opacity:0}100%{opacity:0}}
+.rim8{animation:rim8 15.7s linear infinite}@keyframes rim8{0%{opacity:0}6.37%{opacity:0}10.83%{opacity:1}94.9%{opacity:1}98.41%{opacity:0}100%{opacity:0}}
+.garn9{animation:garn9 15.7s linear infinite}@keyframes garn9{0%{opacity:0;transform:translateY(-60px)}74.52%{opacity:0;transform:translateY(-60px)}74.84%{opacity:1;transform:translateY(-60px)}78.34%{opacity:1;transform:translateY(0)}94.9%{opacity:1;transform:translateY(0)}98.41%{opacity:0;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
+.hot10{animation:hot10 15.7s linear infinite}@keyframes hot10{0%{opacity:0}59.87%{opacity:0}63.69%{opacity:1}94.9%{opacity:1}98.41%{opacity:0}100%{opacity:0}}
+.cap11{animation:cap11 15.7s linear infinite}@keyframes cap11{0%{opacity:0}2.74%{opacity:0}3.5%{opacity:1}12.1%{opacity:1}12.87%{opacity:0}100%{opacity:0}}
+.btl12{animation:btl12 15.7s linear infinite}@keyframes btl12{0%{opacity:0;transform:rotate(25deg)}12.74%{opacity:0;transform:rotate(25deg)}13.06%{opacity:1;transform:rotate(25deg)}14.97%{opacity:1;transform:rotate(0)}18.47%{opacity:1;transform:rotate(0)}19.87%{opacity:1;transform:rotate(25deg)}20.38%{opacity:0;transform:rotate(25deg)}100%{opacity:0;transform:rotate(25deg)}}
+.pour13{animation:pour13 15.7s linear infinite}@keyframes pour13{0%{opacity:0}14.39%{opacity:0}15.16%{opacity:1}18.47%{opacity:1}19.24%{opacity:0}100%{opacity:0}}
+.cap14{animation:cap14 15.7s linear infinite}@keyframes cap14{0%{opacity:0}12.29%{opacity:0}13.06%{opacity:1}19.75%{opacity:1}20.51%{opacity:0}100%{opacity:0}}
+.btl15{animation:btl15 15.7s linear infinite}@keyframes btl15{0%{opacity:0;transform:rotate(25deg)}20.38%{opacity:0;transform:rotate(25deg)}20.7%{opacity:1;transform:rotate(25deg)}22.61%{opacity:1;transform:rotate(0)}26.11%{opacity:1;transform:rotate(0)}27.52%{opacity:1;transform:rotate(25deg)}28.03%{opacity:0;transform:rotate(25deg)}100%{opacity:0;transform:rotate(25deg)}}
+.pour16{animation:pour16 15.7s linear infinite}@keyframes pour16{0%{opacity:0}22.04%{opacity:0}22.8%{opacity:1}26.11%{opacity:1}26.88%{opacity:0}100%{opacity:0}}
+.cap17{animation:cap17 15.7s linear infinite}@keyframes cap17{0%{opacity:0}19.94%{opacity:0}20.7%{opacity:1}27.39%{opacity:1}28.15%{opacity:0}100%{opacity:0}}
+.fire18{animation:fire18 15.7s linear infinite}@keyframes fire18{0%{opacity:0}27.58%{opacity:0}28.34%{opacity:1}44.9%{opacity:1}45.67%{opacity:0}100%{opacity:0}}
+.cap19{animation:cap19 15.7s linear infinite}@keyframes cap19{0%{opacity:0}27.58%{opacity:0}28.34%{opacity:1}41.4%{opacity:1}42.17%{opacity:0}100%{opacity:0}}
+.btl20{animation:btl20 15.7s linear infinite}@keyframes btl20{0%{opacity:0;transform:rotate(25deg)}42.04%{opacity:0;transform:rotate(25deg)}42.36%{opacity:1;transform:rotate(25deg)}44.27%{opacity:1;transform:rotate(0)}47.77%{opacity:1;transform:rotate(0)}49.17%{opacity:1;transform:rotate(25deg)}49.68%{opacity:0;transform:rotate(25deg)}100%{opacity:0;transform:rotate(25deg)}}
+.pour21{animation:pour21 15.7s linear infinite}@keyframes pour21{0%{opacity:0}43.69%{opacity:0}44.46%{opacity:1}47.77%{opacity:1}48.54%{opacity:0}100%{opacity:0}}
+.cap22{animation:cap22 15.7s linear infinite}@keyframes cap22{0%{opacity:0}41.59%{opacity:0}42.36%{opacity:1}49.04%{opacity:1}49.81%{opacity:0}100%{opacity:0}}
+.ktl23{animation:ktl23 15.7s linear infinite}@keyframes ktl23{0%{opacity:0;transform:rotate(0)}49.68%{opacity:0;transform:rotate(0)}50%{opacity:1;transform:rotate(0)}52.23%{opacity:1;transform:rotate(42deg)}59.24%{opacity:1;transform:rotate(42deg)}61.15%{opacity:1;transform:rotate(0)}61.78%{opacity:0;transform:rotate(0)}100%{opacity:0;transform:rotate(0)}}
+.pour24{animation:pour24 15.7s linear infinite}@keyframes pour24{0%{opacity:0}51.59%{opacity:0}52.36%{opacity:1}59.11%{opacity:1}59.87%{opacity:0}100%{opacity:0}}
+.cap25{animation:cap25 15.7s linear infinite}@keyframes cap25{0%{opacity:0}49.24%{opacity:0}50%{opacity:1}61.15%{opacity:1}61.91%{opacity:0}100%{opacity:0}}
+.jig26{animation:jig26 15.7s linear infinite}@keyframes jig26{0%{opacity:0;transform:rotate(0)}61.78%{opacity:0;transform:rotate(0)}62.1%{opacity:1;transform:rotate(0)}64.01%{opacity:1;transform:rotate(100deg)}71.66%{opacity:1;transform:rotate(100deg)}73.25%{opacity:1;transform:rotate(0)}73.89%{opacity:0;transform:rotate(0)}100%{opacity:0;transform:rotate(0)}}
+.pour27{animation:pour27 15.7s linear infinite}@keyframes pour27{0%{opacity:0}63.44%{opacity:0}64.2%{opacity:1}71.46%{opacity:1}72.23%{opacity:0}100%{opacity:0}}
+.cap28{animation:cap28 15.7s linear infinite}@keyframes cap28{0%{opacity:0}61.34%{opacity:0}62.1%{opacity:1}73.25%{opacity:1}74.01%{opacity:0}100%{opacity:0}}
+.cap29{animation:cap29 15.7s linear infinite}@keyframes cap29{0%{opacity:0}78.34%{opacity:0}78.98%{opacity:1}96.18%{opacity:1}97.13%{opacity:0}100%{opacity:0}}
+.cheer30{animation:cheer30 15.7s linear infinite}@keyframes cheer30{0%{opacity:0}77.58%{opacity:0}78.34%{opacity:1}96.82%{opacity:1}97.58%{opacity:0}100%{opacity:0}}
+.howto-steps li.s1{animation:hs1 15.7s linear infinite}@keyframes hs1{0%{background-color:transparent}2.58%{background-color:transparent}3.18%{background-color:var(--step-hl)}12.74%{background-color:var(--step-hl)}13.34%{background-color:transparent}100%{background-color:transparent}}
+.howto-steps li.s2{animation:hs2 15.7s linear infinite}@keyframes hs2{0%{background-color:transparent}12.14%{background-color:transparent}12.74%{background-color:var(--step-hl)}42.04%{background-color:var(--step-hl)}42.64%{background-color:transparent}100%{background-color:transparent}}
+.howto-steps li.s3{animation:hs3 15.7s linear infinite}@keyframes hs3{0%{background-color:transparent}41.44%{background-color:transparent}42.04%{background-color:var(--step-hl)}61.78%{background-color:var(--step-hl)}62.38%{background-color:transparent}100%{background-color:transparent}}
+.howto-steps li.s4{animation:hs4 15.7s linear infinite}@keyframes hs4{0%{background-color:transparent}61.18%{background-color:transparent}61.78%{background-color:var(--step-hl)}82.17%{background-color:var(--step-hl)}82.77%{background-color:transparent}100%{background-color:transparent}}
+.flick{animation:flick .5s ease-in-out infinite alternate}@keyframes flick{from{transform:scaleY(.86) skewX(-5deg)}to{transform:scaleY(1.1) skewX(5deg)}}

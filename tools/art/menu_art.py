@@ -396,6 +396,7 @@ ING = {
     'goslings':       ('Goslings', 'bottle', '#5a2e14', ('spirit', '#3a2216', 'Goslings')),   # the Dark and Stormy (Philip, Nov 19)
     'tequila':        ('tequila', 'bottle', '#f3efd9', ('tall', '#e3eedd', 'tequila')),
     'vodka':          ('vodka', 'bottle', '#eef2f4', ('tall', '#e4ecf1', 'vodka')),
+    'overproof-rum':  ('overproof rum', 'bottle', '#d9a04a', ('spirit', '#c98a3c', 'overproof rum')),   # the Spanish Coffee (Philip, Nov 27)
     'aged-rum':       ('aged rum', 'bottle', '#b8742e', ('spirit', '#b8742e', 'aged rum')),
     'aperol':         ('Aperol', 'bottle', '#f26b21', ('tall', '#f26b21', 'Aperol')),
     'prosecco':       ('prosecco', 'bottle', '#f3ecc0', ('wine', '#5f7f3c', 'prosecco')),
