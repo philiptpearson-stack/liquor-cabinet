@@ -339,6 +339,8 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
 /* a syrup card: a recipe card with no drink count; the how-to and the drinks it goes in under the ingredients */
 .syrup-card .rc-glass{line-height:28px}
 .syrup-card{scroll-margin-top:5rem}
+/* a plum crayon line between one syrup and the next (Philip, Nov 27) */
+.syrup-rule{border:0;height:10px;margin:1.5rem 6%;background:var(--accent);opacity:.85;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 300 10%27 preserveAspectRatio=%27none%27%3E%3Cpath d=%27M3 5.5 Q40 2.5 85 5 T170 5.5 T255 4.5 T297 5%27 fill=%27none%27 stroke=%27%23000%27 stroke-width=%273%27 stroke-linecap=%27round%27/%3E%3C/svg%3E") center/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 300 10%27 preserveAspectRatio=%27none%27%3E%3Cpath d=%27M3 5.5 Q40 2.5 85 5 T170 5.5 T255 4.5 T297 5%27 fill=%27none%27 stroke=%27%23000%27 stroke-width=%273%27 stroke-linecap=%27round%27/%3E%3C/svg%3E") center/100% 100% no-repeat}
 
 </style>
 </head>
@@ -433,7 +435,7 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
 
   <p class="t">Almost every drink on our menu needs something sweet.</p>
   <p class="t">Usually, that's a syrup.</p>
-  <p class="t">Here's how you can make them at home:</p>
+  <p class="t"><strong>Here's how you can make them at home:</strong></p>
 
   <section class="recipe-card syrup-card" id="simple-syrup" aria-label="Recipe: Simple Syrup">
     <p class="rc-kicker">Cocktail Basics · Syrups</p>
@@ -447,6 +449,8 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
   </section>
   <p class="t">Just boil a little water, add your sugar, and stir.</p>
 
+  <hr class="syrup-rule">
+
   <section class="recipe-card syrup-card" id="demerara-syrup" aria-label="Recipe: Demerara Syrup">
     <p class="rc-kicker">Cocktail Basics · Syrups</p>
     <p class="rc-name">Demerara Syrup</p>
@@ -459,6 +463,8 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
   </section>
   <p class="t">It's richer, with a little caramel to it. Perfect with whiskey and dark rum.</p>
 
+  <hr class="syrup-rule">
+
   <section class="recipe-card syrup-card" id="honey-syrup" aria-label="Recipe: Honey Syrup">
     <p class="rc-kicker">Cocktail Basics · Syrups</p>
     <p class="rc-name">Honey Syrup</p>
@@ -469,6 +475,8 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
     <p class="rc-glass"><b>How:</b> Stir until smooth.<br><b>Keeps:</b> about a month in the fridge</p>
     <p class="rc-note">In our <a href="../../cocktail-menu/bees-knees/index.html">Bee's Knees</a> and <a href="../../cocktail-menu/gold-rush/index.html">Gold Rush</a>.</p>
   </section>
+
+  <hr class="syrup-rule">
 
   <section class="recipe-card syrup-card" id="passion-fruit-syrup" aria-label="Recipe: Passion Fruit Syrup">
     <p class="rc-kicker">Cocktail Basics · Syrups</p>
@@ -481,6 +489,8 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
     <p class="rc-note">In our <a href="../../cocktail-menu/hurricane/index.html">Hurricane</a>.</p>
   </section>
   <p class="t">Look for frozen passion fruit purée in the freezer aisle. (Sometimes it's labeled <em>maracuyá</em>.)</p>
+
+  <hr class="syrup-rule">
 
   <p class="t">Real grenadine is pomegranate syrup. The bright red stuff at the grocery store? It's sweet and colorful but not what these recipes are calling for.</p>
   <p class="t">That's the homemade stuff. Tart, deep, and delicious.</p>
@@ -496,6 +506,8 @@ ol.steps li::before{content:counter(step);position:absolute;left:0;top:-.1rem;wi
     <p class="rc-glass"><b>How:</b> Warm the juice, sugar and pomegranate molasses over low heat, stirring until the sugar dissolves. Don't let it boil. Let it cool, then stir in the orange-blossom water.<br><b>Keeps:</b> about two weeks in the fridge</p>
     <p class="rc-note">In our <a href="../../cocktail-menu/jack-rose/index.html">Jack Rose</a>, <a href="../../cocktail-menu/pink-lady/index.html">Pink Lady</a> and <a href="../../cocktail-menu/bridge-city-lemonade/index.html">Bridge City Lemonade</a>.</p>
   </section>
+
+  <hr class="syrup-rule">
 
   <section class="recipe-card syrup-card" id="honey-ginger-syrup" aria-label="Recipe: Honey-Ginger Syrup">
     <p class="rc-kicker">Cocktail Basics · Syrups</p>

@@ -11,7 +11,7 @@
 Cocktail Basics and How-To's: Homemade Syrups.
 Almost every drink on our menu needs something sweet.
 Usually, that's a syrup.
-Here's how you can make them at home:
+**Here's how you can make them at home:**
 Cocktail Basics · Syrups
 Simple Syrup
 1 cup sugar
