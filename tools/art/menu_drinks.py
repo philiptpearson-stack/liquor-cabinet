@@ -540,26 +540,6 @@ DRINKS = [
                 ('<strong>Garnish.</strong> A cinnamon stick, and an orange peel studded with cloves.', [('garnish',)])],
          related=['hot-buttered-rum', 'irish-coffee'], hero=(['honey', 'bourbon'], ['kettle', 'fruit:orange'])),
 
-    dict(slug='rum-punch', name='Rum Punch', genre='punches', glass='rocks', color='#c98a4a', garnish=['lime-wheel'],
-         recipe=[(.5, 'oz', 'lime juice'), (1, 'oz', 'simple syrup'), (1.5, 'oz', 'dark rum (Jamaican, if you can find it)'), (2, 'oz', 'cold water'),
-                 (2, 'dash', 'Angostura bitters')],
-         glass_line=('rocks, over ice', 'lime wheel, and a little grated nutmeg'),
-         note='For a crowd, measure in cups: 1 cup lime juice, 2 cups simple syrup, 3 cups rum, 4 cups cold water, and a good shake of bitters. Serve over ice.',
-         punch=['One of sour, two of sweet,', 'three of strong and four of weak.'],
-         lines=["That old rhyme is the whole recipe. Nobody knows who wrote it, but Jamaica's been making punch by it for well over a century.",
-                'Sour is lime. Sweet is sugar syrup. Strong is rum. Weak is water (and the ice melting into it).',
-                "It's a formula, just like our Golden Ratio. And since it's parts, not ounces, it works for one glass or a whole bowl.",
-                'Punch itself is older still: in the Caribbean, people were ladling it out of big shared bowls by the 1690s.'],
-         lead="Here's how you make a glass:",
-         gr_ask=('Need a quick how-to on achieving balance in your at-home cocktails?', 'Click HERE.'), gr_ask_end=True,
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (Oxford Companion: Planter's Punch): the 1:2:3:4 jingle, of uncertain origin; "
-                    "Jamaica's unofficial drink by the late 1800s; rum punch in communal bowls in the Caribbean by 1694. Recipe: the rhyme, by the glass (and by the cup in the note)."),
-         steps=[('<strong>Sour, sweet, strong, weak.</strong> Pour them into a glass, in the order of the rhyme.',
-                 [('pour', 'lime', .5), ('pour', 'simple', 1), ('pour', 'dark-rum', 1.5), ('pour', 'water', 2)]),
-                ('<strong>Bitters.</strong> A couple of dashes.', [('dash', 'angostura', 2)]),
-                ('<strong>Ice and stir.</strong> Fill with ice and give it a good stir.', [('ice', 'glass'), ('stir',)]),
-                ('<strong>Garnish.</strong> A lime wheel and a little grated nutmeg.', [('garnish',)])],
-         related=['daiquiri', 'mai-tai'], hero=(['syrup', 'dark-rum'], ['bitters', 'fruit:lime'])),
     # ---------------------------------------------------------------- batch 3, Nov 10 2026: the rest of the Classics (Claude's drafts)
     dict(slug='mint-julep', name='Mint Julep', glass='julep-cup', color='#d9a85a', garnish=['mint', 'straw'], crushed=True,
          recipe=[(2.5, 'oz', 'bourbon'), (.5, 'oz', 'simple syrup'), (8, '', 'mint leaves')],
@@ -1204,60 +1184,6 @@ DRINKS = [
                 ('<strong>Cream and nutmeg.</strong> Float the lightly whipped cream over the back of a spoon, and grate a little nutmeg on top.', [('float', 'cream', 1), ('garnish',)])],
          related=['irish-coffee', 'espresso-martini'], hero=(['overproof-rum', 'coffee-liqueur'], ['kettle', 'sugar'])),
 
-    dict(slug='fish-house-punch', name='Fish House Punch', genre='punches', glass='rocks', color='#dfa356', garnish=['lemon-wheel', 'nutmeg'],
-         recipe=[(1.5, 'oz', 'aged Jamaican rum'), (.75, 'oz', 'cognac'), (.25, 'oz', 'peach brandy'), (.5, 'oz', 'lemon juice'), (.5, 'oz', 'simple syrup'),
-                 (1.5, 'oz', 'cold black tea (or water)')],
-         glass_line=('rocks, over one big ice cube', 'a lemon wheel and grated nutmeg'),
-         note=('For a crowd (about 20 cups): rub 1 cup sugar with the peels of 4 lemons and let it sit for 30 minutes, so the sugar pulls out the oils. (That\'s called an oleo saccharum.) '
-               'Dissolve it in 4 cups of warm black tea, then add 4 cups Jamaican rum, 2 cups cognac, 1 cup lemon juice and ½ cup peach brandy. Chill it with one big block of ice.'),
-         punch=['Philadelphia, 1700s.', 'A fishing club with its own punch.'],
-         lines=['In 1732, a group of Philadelphia gentlemen started a fishing club on the Schuylkill River. They called it the State in Schuylkill, declared it a sovereign state, and called each other “citizens.” (It\'s still around.)',
-                'Their house punch: Jamaican rum, cognac, a little peach brandy, lemon and sugar, stretched with tea or water.',
-                'Legend says George Washington drank it there, and then left the next three days of his diary blank.',
-                "It's strong stuff, so the tea (and the melting ice) is there on purpose. Punch was made for sipping all afternoon."],
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything except the stir step (Philip's). Facts checked (Punch): the Schuylkill Fishing Company / State in Schuylkill, "
-                    "a sovereign state with citizens (still); Punch's big-batch recipe (in the note). Founded 1732 (the club's own date). Washington's blank diary is told as legend."),
-         steps=[('<strong>Combine ingredients.</strong> Add the rum, cognac, peach brandy, lemon juice, simple syrup and tea to a mixing glass.',
-                 [('pour', 'aged-rum', 1.5), ('pour', 'cognac', .75), ('pour', 'peach-brandy', .25), ('pour', 'lemon', .5), ('pour', 'simple', .5), ('pour', 'water', 1.5)]),
-                ('<strong>Stir.</strong> Fill with ice and stir until the drink is good and cold. Then, stir longer! (Seriously. You need some of that ice to melt. Water softens the alcohol-bite and brings the drink into <strong>balance.</strong> <em>Dilution is part of the recipe.</em>)', [('ice', 'mix'), ('stir',)]),
-                ('<strong>Strain over a big cube.</strong> Strain into a rocks glass over one large ice cube.', [('ice', 'glass'), ('strain',)]),
-                ('<strong>Garnish.</strong> A lemon wheel, and a little grated nutmeg.', [('garnish',)])],
-         related=['rum-punch', 'sangria'], hero=(['peach-brandy', 'aged-rum'], ['cognac', 'fruit:lemon'])),
-
-    dict(slug='sangria', name='Sangria', genre='punches', glass='wine', color='#7a1f30', garnish=['orange-wheel', 'berries'],
-         recipe=[(4, 'oz', 'Spanish red wine (like a Garnacha or Tempranillo)'), (1, 'oz', 'brandy'), (.5, 'oz', 'orange liqueur'), (1, 'oz', 'orange juice'),
-                 (.5, 'oz', 'simple syrup'), (1, 'oz', 'soda water, to top (optional)')],
-         glass_line=('wine glass, over ice', 'an orange wheel and fresh berries'),
-         note=('For a pitcher (about 6): one bottle of red wine, ¾ cup brandy, ⅓ cup orange liqueur, ¾ cup orange juice and ⅓ cup simple syrup, plus a sliced orange, apple and lemon. '
-               'Chill it for a few hours, or overnight. Add ice and soda just before serving.'),
-         punch=['Wine, fruit and a little brandy.', 'Made for a crowd.'],
-         lines=['The name comes from <em>sangre,</em> Spanish for “blood,” for its deep red color.',
-                "Spaniards were mixing wine and fruit for centuries before most Americans had heard of it. It caught on here after the Spanish Pavilion served it at the 1964 World's Fair in New York.",
-                'The secret is time. Make a pitcher a few hours ahead, and let the fruit soak into the wine.'],
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (The Nibble): named for its blood-red color; the Spanish Pavilion, 1964 World's Fair, NYC; "
-                    "chill overnight. (Since 2014, only Spain and Portugal can sell it in the EU as \"sangria\", left out as trivia.)"),
-         steps=[('<strong>Ice.</strong> Fill a wine glass with ice.', [('ice', 'glass')]),
-                ('<strong>Wine, brandy and orange.</strong> Add the wine, brandy, orange liqueur, orange juice and simple syrup.',
-                 [('pour', 'red-wine', 4), ('pour', 'brandy', 1), ('pour', 'orange-liqueur', .5), ('pour', 'orange-juice', 1), ('pour', 'simple', .5)]),
-                ('<strong>Top with soda.</strong> A splash, then a gentle stir.', [('top', 'soda', 1), ('stir',)]),
-                ('<strong>Garnish.</strong> An orange wheel and a few berries.', [('garnish',)])],
-         related=['mulled-wine', 'fish-house-punch'], hero=(['brandy', 'red-wine'], ['half:orange', 'fruit:orange'])),
-
-    dict(slug='mulled-wine', name='Mulled Wine', genre='punches', glass='mug', color='#7a1f2a', garnish=['orange-wheel', 'cinnamon'], hot=True,
-         recipe=[(5, 'oz', 'red wine'), (2, 'tsp', 'honey (or sugar)'), (1, '', 'orange slice'), (1, '', 'cinnamon stick'), (2, '', 'whole cloves'), (1, '', 'star anise (optional)'),
-                 (.5, 'oz', 'brandy (optional)')],
-         glass_line=('warm mug', 'an orange wheel and a cinnamon stick'),
-         punch=['Hot wine, spice and orange.', 'Winter, in a mug.'],
-         lines=['People have been warming wine with honey and spices since Roman times. In Germany it\'s <em>Glühwein,</em> “glow wine,” and it\'s the smell of every Christmas market.',
-                "The one rule: keep it steaming, never boiling. Boiling cooks off the alcohol and dulls the spice.",
-                "Making it for a crowd? It scales perfectly: a bottle of wine makes about five mugs. Keep the pot on the lowest heat, and let people help themselves."],
-         copy_note=("Nov 10 2026: CLAUDE'S DRAFT, waiting on Philip: everything. Facts checked (The Local, Germany): Roman spiced wine with honey; the Glühwein name (hot irons); "
-                    "keep it under 80°C (about 175°F), or the alcohol cooks off."),
-         steps=[('<strong>Brandy first.</strong> Add the brandy to a warm mug. (Or skip it.)', [('pour', 'brandy', .5)]),
-                ('<strong>Add the mulled wine.</strong> Warm the wine in a small pot with the honey, orange and spices, on low, for about 20 minutes: steaming, never boiling. Then ladle it in.',
-                 [('top', 'mulled', 5)]),
-                ('<strong>Garnish.</strong> An orange wheel and a cinnamon stick.', [('garnish',)])],
-         related=['sangria', 'hot-toddy'], hero=(['red-wine'], ['kettle', 'fruit:orange'])),
 ]
 DRINKS.sort(key=lambda d: d['slug'])   # the menu lists them A to Z
 
@@ -1272,5 +1198,4 @@ SOON = [
     ('tiki-and-tropical', 'Tiki &amp; Tropical'),
     ('low-and-no-proof', 'Low &amp; No-Proof'),
     ('warm-and-cozy', 'Warm &amp; Cozy'),
-    ('punches', 'Punches for a Crowd'),
 ]

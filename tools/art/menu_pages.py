@@ -155,9 +155,6 @@ def soon_icons():
                            + lines('<path d="M44 46 q-6 -8 0 -16 q6 -8 0 -16 M58 44 q-6 -8 0 -16 q6 -8 0 -16 M72 46 q-6 -8 0 -16 q6 -8 0 -16" stroke="#a9a29a" stroke-width="2.2"/>', boil=False)
                            + wash('<rect x="78" y="40" width="7" height="34" rx="2" fill="#8a5a2a" transform="rotate(18 81 57)"/>') + lines('<rect x="78" y="40" width="7" height="34" rx="2" transform="rotate(18 81 57)" stroke-width="1.6"/>', boil=False))
     bowl = 'M-46 -30 Q-44 0 0 2 Q44 0 46 -30Z'
-    ic['punches'] = (at(60, 100, wash(f'<path d="{bowl}" fill="#e7f1fb" opacity=".5"/><path d="M-44 -22 Q-40 0 0 1 Q40 0 44 -22Z" fill="#e8737a"/>') + lines(f'<path d="{bowl}" stroke-width="2.2"/><path d="M-20 2 L-14 14 L14 14 L20 2" stroke-width="2.2"/>', boil=False)
-                             + at(-20, -24, wheel('orange', 7)) + at(6, -22, wheel('lemon', 6.5)) + at(28, -25, wheel('lime', 6)), 1.15)
-                     + lines('<path d="M86 66 L104 18 M104 18 q6 -4 8 2" stroke="#a9a29a" stroke-width="3"/>', boil=False))
     return ic
 
 
@@ -434,7 +431,8 @@ def write_menu():
         '    <ul class="search-results"></ul>',
         '  </form>', '',
         '  <nav class="doors" aria-label="The menu">',
-        '    <a class="door wide" href="classics/index.html"><svg class="door-icon" aria-hidden="true"><use href="#classics-icon"/></svg><span class="door-text"><span class="door-label">Classics</span></span></a>'] + soon + ['  </nav>', '',
+        # Classics is a door like the others now: six parts of the menu, two by two (Philip, Nov 27, when the Punches came off)
+        '    <a class="door" href="classics/index.html"><svg class="door-icon" aria-hidden="true"><use href="#classics-icon"/></svg><span class="door-label">Classics</span></a>'] + soon + ['  </nav>', '',
         '  <nav class="end-doors" aria-label="Where next">',
         '    <p class="back"><a href="@home" data-back>← Back to The Bar</a></p>',
         '  </nav>', '</div>', ''])
@@ -595,24 +593,6 @@ def warm_scene():
                     'Snow falling past a window at night. On the bar: a jar of honey, a lemon, and a Hot Toddy steaming in a glass mug', '52 0 296 196')
 
 
-def punch_scene():
-    """Punches for a Crowd: a punch bowl and its cups under a string of lights."""
-    COUNTER = 168
-    wall = wash('<rect x="0" y="0" width="400" height="236" fill="#ead9cb"/>')
-    string = lines('<path d="M20 22 Q110 58 200 30 Q290 58 380 22" stroke-width="1.6"/>', boil=False)
-    bulbs = ''.join(f'<circle class="twinkle{" d2" if i % 3 == 1 else " d3" if i % 3 == 2 else ""}" style="transform-origin:{x}px {y}px" cx="{x}" cy="{y}" r="4.5" fill="{c}"/>'
-                    for i, (x, y, c) in enumerate(((60, 36, '#f6d36a'), (104, 46, '#e8737a'), (150, 42, '#8ecae6'), (200, 30, '#f6d36a'), (250, 42, '#e8737a'), (296, 46, '#8ecae6'), (340, 36, '#f6d36a'))))
-    bowl = 'M-62 -44 Q-60 0 0 0 Q60 0 62 -44Z'
-    punch = 'M-58 -34 Q-55 -4 0 -4 Q55 -4 58 -34Z'
-    big = at(200, COUNTER, wash(f'<path d="{bowl}" fill="#e7f1fb" opacity=".55"/><path d="{punch}" fill="#d9713a"/><rect x="-6" y="0" width="12" height="4" fill="#c9c3b8"/>')
-             + ''.join(wheel('orange', 7).join([f'<g transform="translate({x} -36)">', '</g>']) for x in (-30, 10, 34))
-             + lines(f'<path d="{bowl}" stroke-width="2.4"/><path d="M-62 -44 Q0 -50 62 -44" stroke-width="1.6"/>', boil=False)
-             + lines('<path d="M30 -40 L58 -96" stroke="#a9a29a" stroke-width="3.2"/><ellipse cx="26" cy="-38" rx="9" ry="4" fill="#c9c3b8"/>', boil=False), 1.0)
-    def cup(x):
-        return at(x, COUNTER, glass('rocks', f'pc-{x}', '#d9713a', [], iced=True), .7)
-    return svg_view(wall + string + bulbs + countertop(COUNTER) + big + cup(112) + cup(288),
-                    'A glass punch bowl full of red-orange punch with orange slices and a ladle, a cup on each side, under a string of colored lights', '52 0 296 196')
-
 FLICK_CSS = '.flick{animation:flick .8s ease-in-out infinite alternate}@keyframes flick{from{transform:scaleY(.88) skewX(-4deg)}to{transform:scaleY(1.08) skewX(4deg)}}'
 SPIN_CSS = '.spin{animation:spin 24s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}'
 SNOW_CSS = ('.snow{animation:snow 5s linear infinite}.snow.n1{animation-delay:-1.7s}.snow.n2{animation-delay:-3.3s}'
@@ -639,9 +619,6 @@ GENRE_PAGES = {
     'warm-and-cozy': dict(scene=warm_scene, svg='warm', intro=None, more='More warm drinks', css=STEAM_CSS + '\n' + SNOW_CSS,
                           description='Hot drinks for cold nights, each with its recipe and a step-by-step how-to.',
                           note="Nov 10 2026: the Hot Toddy opened Warm & Cozy."),
-    'punches': dict(scene=punch_scene, svg='punch', intro=None, more='More punches',
-                    description='Drinks for a crowd, by the glass or by the bowl, each with its recipe and a step-by-step how-to.',
-                    note="Nov 10 2026: the Rum Punch opened Punches for a Crowd."),
 }
 
 

@@ -14,5 +14,4 @@ Arcane Oddities
 Tiki & Tropical
 Low & No-Proof
 Warm & Cozy
-Punches for a Crowd
 ← Back to The Bar
